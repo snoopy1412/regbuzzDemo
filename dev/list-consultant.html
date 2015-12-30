@@ -1,0 +1,189 @@
+<!-- head.html -->
+<% include ../publicTpl/head.html %>
+<!-- head.html end-->
+<body>
+	<!-- header.html -->
+	<% include ../publicTpl/header.html %>
+	<!-- header.html end-->
+
+	<section class='com-main com-main--list'>
+		<div class='list-search-warp'>
+			<div class='container'>
+				<!-- 面包屑 -->
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Search</li>
+				</ol>
+			</div>		
+
+		</div>
+		
+		<div class="container" >	
+			<div class="row mt-10">
+
+				<!-- 侧边栏 -->
+				<!-- public-list.html -->
+				<% include ../publicTpl/public-list.html %>
+				<!-- public-list.html end-->
+
+				<!-- 主要内容部分 -->
+				<div class="col-md-9 com-content">
+					<!-- 搜索框 -->
+					<form class="list-search clearfix">
+						<div class="list-search-text-warp pull-left">
+							<i class="fa fa-search"></i>
+							<input type="text" name="" value="" placeholder="" class='form-control list-search-text'>
+						</div>
+						<div class="list-search-btn-warp pull-left">
+							<button type="submit" class='btn btn-primary list-search-btn'>
+								Search
+							</button>
+						</div>
+					</form>	
+					<article class='list-main'>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<section class='list-bar'>
+								<div class="row">
+									<div class="col-md-4">
+										<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
+									</div>
+									<div class="col-md-8">
+										<div class="select-menu form-inline">		
+											<label>
+												Sort by :
+											</label>
+											<select class="form-control">
+											  <option>Best match</option>
+											  <option>Newest</option>
+											  <option>Oldest</option>
+											  <option>Most Client Hours</option>
+											  <option>Least Client Hours</option>
+											  <option>Most Dollars Paid</option>
+											  <option>Least Dollars Paid</option>
+											  <option>Highest Feedback Score</option>
+											  <option>Lowest Feedback Score</option>
+											</select>
+									    </div>
+									</div>
+								</div>									
+							</section>
+						</div>
+						<div class="panel-body">
+							<section class="list-results clearfix">
+								<ul class="list-peoples list-unstyled">
+								<li class="list-results-item row list-peoples-item">
+									<div class="col-md-2 list-peoples-img">
+										<img src="img/index/servers/13.jpg" alt="">
+										<a href="" title="" class='btn btn-danger-outline btn--save'><i class="fa fa-heart-o"></i> Save</a>
+									</div>
+									<div class="col-md-8 list-peoples-info">
+										<h3 class='list-item-title list-peoples-item-title'>
+										<a href="" title="">Aaron Su</a>
+										</h3>
+										<p class='list-peoples-position'>
+											GHS Consultant in <a href="" title="">CIRS</a>
+										</p>
+										
+										<p class='list-peoples-item-bref'> Augmented reality app programmer for Android & iOS.</p>
+										<div class='list-peoples-item-grade clearfix'>
+											<span class="grade-item-name pull-left"></span>
+											<div class="grade-item pull-left" data-score='4.5'></div>
+											 <a href=''>33 Reviews</a>     			
+										</div>
+										<p class='list-peoples-item-skills'>
+											<a href="" title="" class='label label-bell'>GHS</a>
+											<a href='' class='label label-bell'>Chemical</a>
+											<a href='' class='label label-bell'>HSF</a>
+											<a href='' class='label label-bell'>REACH</a>
+											<a href='' class='label label-bell'>English</a>
+										</p>
+									</div>
+									<div class="col-md-2 list-peoples-item-aside">
+										<a href="" title="" class='btn btn-primary btn--hire'>Hire me </a>
+										<p class='charging-standard'>
+											<sup>$</sup>858
+											<span>USD/hour</span>
+										</p>
+									</div>
+								</li>
+								<li class="list-results-item row list-peoples-item">
+									<div class="col-md-2 list-peoples-img">
+										<img src="img/index/servers/16.jpg" alt="">
+										<a href="" title="" class='btn btn-danger-outline btn--save'><i class="fa fa-heart-o"></i> Save</a>
+									</div>
+									<div class="col-md-8 list-peoples-info">
+										<h3 class='list-item-title list-peoples-item-title'>
+										<a href="" title="">Steven Jobs</a>
+										</h3>
+										<p class='list-peoples-position'>
+											GHS Consultant in <a href="" title="">CIRS</a>
+										</p>
+										
+										<p class='list-peoples-item-bref'>I am in to design browser compatible SharePoint sites (Master Pages, CSS, Page Layouts), customizing (Content Management) and development of custom solutions for SharePoint (Web Parts, Events, Workflows etc). Experienced in all the SharePoint versions and find experience details below,1. SharePoint 2013 & Office 3 ...</p>
+										<div class='list-peoples-item-grade clearfix'>
+											<span class="grade-item-name pull-left"></span>
+											<div class="grade-item pull-left" data-score='3.5'></div>
+											 <a href=''>33 Reviews</a>     			
+										</div>
+										<p class='list-peoples-item-skills'>
+											<a href="" title="" class='label label-bell'>GHS</a>
+											<a href='' class='label label-bell'>Chemical</a>
+											<a href='' class='label label-bell'>HSF</a>
+											<a href='' class='label label-bell'>REACH</a>
+											
+										</p>
+									</div>
+									<div class="col-md-2 list-peoples-item-aside">
+										<a href="" title="" class='btn btn-primary btn--hire'>Hire me </a>
+										<p class='charging-standard'>
+											<sup>$</sup>858
+											<span>USD/hour</span>
+										</p>
+									</div>
+								</li>
+							</ul>
+							</section>
+						<nav class='text-center'>
+							<ul class="pagination">
+								<li class="disabled">
+									<a href="#" aria-label="Previous">
+										<span>&lt; Previous</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">5</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Next">
+										<span>Next &gt;</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						</div>
+					</div>
+
+					</article>
+				</div> 
+			</div>
+		</div>
+	</section>
+
+	<!-- footer.html -->
+	<% include ../publicTpl/footer.html %>
+	<!-- footer.html end-->
+</body>
+</html>

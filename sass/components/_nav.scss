@@ -1,0 +1,15 @@
+// 导航
+.nav{
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration: none
+        }
+    }    
+	&>li{
+		display: inline-block;
+	}
+}

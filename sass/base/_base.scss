@@ -1,0 +1,85 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Reset the box-sizing
+* {
+  box-sizing : border-box;
+}
+*:before,
+*:after {
+  box-sizing : border-box;
+}
+
+
+// Body reset
+// font-size = 10px for rem;
+html {
+  font-size: $font-size-html;  
+   \0font-size: 14px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    font-smoothing: antialiased;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $body-bg;
+    overflow-x: hidden;
+    min-width: 320px;   
+}
+
+html,body{
+    height: 100%;
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: $font-family-base;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+   
+  }
+}
+
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure {
+  margin: 0;
+}
+
+
+// Images
+
+img {
+  vertical-align: middle;
+}
+

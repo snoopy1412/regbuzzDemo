@@ -1,0 +1,133 @@
+﻿
+
+// pub-main
+.pub-main
+{
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    .radiobox-list{
+        .radiobox{
+            margin-right: 20px;
+        }
+    }
+}
+.pub-content .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.pub-item{
+
+    border: 1px solid #f1f1f1;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    position: relative;
+    padding: 20px;
+    padding-top: 80px;
+    label{
+        color:#999;
+        font-weight: 300;
+    }
+
+}
+.pub-item-title
+{   
+    position: absolute;
+    top:10px;
+    left: -10px;
+    height: 40px;
+    margin: 0;
+    padding: 10px;
+    font-size:16px;
+    font-size:1.6rem;
+    color:#fff;
+    background-color: lighten($palette-blue,15%);
+
+    &:before{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style:solid;
+        border-width: 5px;
+        border-color:  darken($palette-blue,20%) darken($palette-blue,20%) transparent transparent;
+        left: 0;
+        top:100%;
+    }
+}
+
+// base
+.pub-item-base{
+    
+}
+.pub-select-double{
+    padding-left: 0;
+    padding-right: 0;
+}
+// base end
+
+// customize
+.pub-customize
+{
+    .add-questions
+    {
+        display: block;
+
+        padding-top: 10px;
+    }
+}
+// customize
+// 
+
+
+// 侧边栏
+.pub-aside
+{
+    padding-left: 20px;
+    padding-top: 0;
+    // padding-left: 50px;
+
+
+    @media screen and (max-width: 768px)
+    {
+        padding-left: 20px;
+    }
+}
+.pub-aside-item
+{
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+
+}
+.pub-aside-item-title
+{
+    font-size: 16px;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #F2F2F5;
+    margin-top: 0;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.pub-aside-item-help
+{
+    .help-list
+    {
+        line-height: 30px;
+        a
+        {
+            color: #555;
+        }
+
+    }
+}
+.pub-aside-item-process{
+    .process-list{
+      color: #555;
+    }
+
+}

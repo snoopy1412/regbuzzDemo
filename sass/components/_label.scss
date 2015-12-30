@@ -1,0 +1,124 @@
+//
+// Labels
+// --------------------------------------------------
+
+.label {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: baseline;
+  margin: 0 .14285714rem;
+  background-color: #e8e8e8;
+  background-image: none;
+  padding: .3em .6em .4em; 
+  text-transform: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: 0 solid transparent;
+  border-radius: .28571429rem;
+  -webkit-transition: background .1s ease;
+  transition: background .1s ease;
+  // margin-left: 1rem;
+}
+
+// Add hover effects
+%hoverFont{
+  color: #fff;
+  &:hover,
+  &:focus {
+    color: $label-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+// Colors
+.label-default {
+  @include label-variant($gray-lighter);
+  // @extend %hoverFont;
+  color:#999;
+  &:hover,
+  &:focus {
+    color: #5e5e5e;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.label-primary {
+  @include label-variant($palette-blue);
+  @extend %hoverFont;
+}
+
+.label-success {
+  @include label-variant($palette-teal);
+  @extend %hoverFont;
+}
+
+.label-info {
+  @include label-variant($palette-olive);
+  @extend %hoverFont;
+}
+
+.label-warning {
+  @include label-variant($palette-orange);
+  @extend %hoverFont;
+}
+
+.label-danger {
+  @include label-variant($palette-red);
+  @extend %hoverFont;
+}
+.label-news {
+  @include label-variant(#f8ac59);
+  @extend %hoverFont;
+}
+.label-bell{
+  @include label-variant(#1ab394);
+  @extend %hoverFont;
+}
+.label-hotTags{
+  @include label-variant(#3DA9F7);
+  @extend %hoverFont;
+}
+
+
+// 图钉式的tags
+.label-tags{
+  position: relative;
+  padding: .5rem 1.5rem;
+  // color:#5e5e5e;
+  border-radius: 0 .28571429rem .28571429rem 0;
+  -webkit-transition: none;
+  transition: none;
+  margin-left: 1rem;
+}
+
+.label-tags-arrow{
+  position: relative;
+  &:before{
+    position: absolute;
+    -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    top: 50%;
+    right: 100%;
+    content: '';
+    background-color: inherit;
+    background-image: none;
+    width: 1.4rem;
+    height: 1.4rem;
+    -webkit-transition: none;
+    transition: none;
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -.25rem;
+    margin-top: -.25rem;
+    background-color: #fff!important;
+    width: .5rem;
+    height: .5rem;
+    box-shadow: 0 -1px 1px 0 rgba(0,0,0,.3);
+    border-radius: 500rem;
+  }
+}

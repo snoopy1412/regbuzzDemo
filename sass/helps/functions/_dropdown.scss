@@ -1,0 +1,19 @@
+@-webkit-keyframes dropdown-show{
+	0%{
+		will-change:transform,opacity;
+		-webkit-transform: translateY(-10px);
+		        transform: translateY(-10px);
+		opacity: 0;
+	}
+	100%{
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+		opacity: 1;
+	}
+}			
+.js-open>.js-dropdown-menu{
+
+	-webkit-animation:dropdown-show 0.2s linear;
+	        animation:dropdown-show 0.2s linear;
+	display: block !important;
+}

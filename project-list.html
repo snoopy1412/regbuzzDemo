@@ -1,0 +1,789 @@
+<!-- head.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
+	<title>Document</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src='./js/vendor/respond.min.js'></script>
+    <script type="text/javascript" src='./js/vendor/require.js' data-main='./js/main.js'></script>
+	<!--[if lt IE9]> 
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
+<!-- head.html end-->
+<body>
+<!-- header.html -->
+	<!-- /header -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+					<img src='img/header/logo4.png' height="32" width="123"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" >
+					<form class='navbar-form navbar-left search-form'>
+						<!-- <div class="search-dropdown pull-left dropdown">
+						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
+						</span>
+						<ul class='dropdown-menu'>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
+									<span>Search for people, projects, articles...</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-user"></i>
+									<span>Search peoples</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-briefcase"></i>
+									<span>Search projects</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-folder-open"></i>
+									<span>Search articles</span>
+								</a>
+							</li>
+						</ul>
+						</div>
+						-->
+						<div class='dropdown'>
+							<div class='form-group'>
+								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+								<div class='dropdown-menu search-text-response'>
+									<ul class='list-unstyled'>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-user"></i>
+											&nbsp;&nbsp; <strong>People</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-briefcase"></i>
+											&nbsp;&nbsp; <strong>Projects</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-folder-open"></i>
+											&nbsp;&nbsp;
+											<strong>Articles</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-secondary">Submit</button>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right header-utilities">
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle'  data-toggle="dropdown">
+								<i class='fa fa-book'></i>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities--helpCenter">
+								<div class="panel panel-default">
+									<!-- <div class="header-loading">
+										<i class="fa fa-spinner fa-pulse fa-2x"></i>
+									</div> -->
+									<div class="panel-heading">
+										<strong class='heading-title'>Help center</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">
+													<i class="fa fa-quote-left"></i>
+													<span>FAQs</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+	     											<i class="fa fa-book"></i>
+													<span>Guidance</span>
+													</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-usd"></i>
+													<span>Fees & Charges</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-cog"></i>
+													<span>How it works</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-info"></i>
+													<span>Feedback</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-envelope'></i>
+								<span class='label label-news inform'>8</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong class='heading-title'>Message</strong>
+								</div>
+								<div class="panel-body header-utilities-list">
+									<ul>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+									</ul>
+								</div>
+								<div class="panel-footer clearfix">
+									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+								</div>
+							</div>
+						</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-bell'></i>
+								<span class='label label-bell inform'>2</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<strong class='heading-title'>Notice</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+										</ul>
+									</div>
+									<div class="panel-footer clearfix">
+										<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle account' data-toggle="dropdown">
+								<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px"></a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--user">
+								<!-- <div class="dropdown-loading">
+								<i class="fa fa-spinner fa-pulse"></i>
+							</div>
+							-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="user-info">
+											<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px">
+											<h4 class='user-info-name'>Aaron Su</h4>
+											<a href="" title="" class='user-info-level'>Basic User</a>
+										</div>
+										<ul class='user-info-list'>
+											<li>
+												<a href="profile.html">
+													<i class="fa fa-newspaper-o"></i>
+													<span>Profile</span>
+												</a>
+											</li>
+											<li>
+												<a href="setting.html">
+													<i class="fa fa-cog"></i>
+													<span>Settings</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-sign-out"></i>
+													<span>logout</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 页面导航部分 -->
+		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+			<div class='container'>
+				<ul class='nav navbar-nav clearfix'>
+					<li>
+						<a href="" title="" class='active'>Home</a>
+					</li>
+					<li>
+						<a href="" title="">Needs</a>
+					</li>
+					<li>
+						<a href="" title="">Providers</a>
+					</li>
+					<li>
+						<a href="" title="">Connections</a>
+					</li>
+					<li>
+						<a href="" title="">Article</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+</header>
+<!-- header.html end-->
+
+<section class='com-main'>
+	
+<div class="container project-list-warp">
+		<!-- 调用module/projectList样式 -->
+	<div class="m-project-list">
+
+		<!-- 头部样式 -->
+		<div class='project-list-header'>
+			<ul class="nav nav-tabs">
+			  <li role="presentation" class="active"><a href="#">Accepted Project</a></li>
+			  <li role="presentation"><a href="#">Published Project</a></li>
+			</ul>
+		</div>
+
+		<!-- 主体内容 -->
+		<div class="project-list-content">
+			<div class='pure-g project-list-content-header'>
+				<div class="pure-u-1 clearfix">
+					<div class="project-filter pull-left">
+						<form action="" method="get" accept-charset="utf-8" class='form-inline'>
+							<div class="form-group">
+
+								<!-- 接受状态下的筛选条件 -->
+								<select class='form-control'>
+									<option value=""> - Choose State - </option>
+									<option value="">bidding</option>
+									<option value="">accepted</option>
+									<option value="">termination</option>
+									<option value="">cancel</option>
+								</select>
+
+								<!-- 发布状态下的筛选条件 -->
+								<select class='form-control' style="display:none">
+									<option value=""> - Choose State - </option>
+									<option value="">Progress</option>
+									<option value="">Finish</option>
+									<option value="">Invitation</option>
+									<option value="">Cancel</option>
+								</select>
+							</div>
+						</form>
+					</div>
+					<!-- 搜索 ajax调用方式-->
+					<div class="project-search pull-right">
+						<div class="form-search--hasbutton clearfix">
+						      <i class="fa fa-search form-search-icon"></i>
+						      <input type="text" placeholder="Search..." class='form-search-text project-search-text'>
+						      <div class="btn btn-primay form-btn">Search</div>
+					    </div>	
+					</div>	
+				</div>
+			</div>			
+			
+			<!-- 列表 -->
+
+			<!-- 发布任务的时候，分为几种状态？
+				1. 进行中 progress
+				2. 已完成 finished
+				3. 投标中 invitation
+				5. 已取消 canceled
+			 -->
+			<div class="project-list">
+
+				<!-- 接收的任务列表 -->
+				<table class='project-list-table project-list-accepted'  style='display: none'>
+					<thead>
+						<tr>
+							<th>	
+								<a href="javascript:;" title="hits are ordered">state</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">number</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">title</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">bids</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">progress</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">creation time</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">actions</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					   <tr>
+							<td class="project-status">
+	                            <span class="label label-warning">bidding</span>
+	                        </td>
+	                        <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">Globally Harmonized System (GHS)</a>
+	                            <br>
+	                            <small>
+	                            	10 bids
+	                            </small>
+	                        </td>
+	                        <td class='project-budget'>
+	                        	10,000$
+	                        </td>
+							<td class="project-completion">
+	                            <small>0</small>
+	                            <div class="progress progress-mini">
+	                                <div style="width: 0%;" class="progress-bar"></div>
+	                            </div>
+	                        </td>
+							<td class="project-time">
+	                           <small>2014.08.15</small>
+	                        </td>
+
+							<td class="project-actions">
+	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+	                           
+	                        </td>
+						</tr>
+						<tr>
+							<td class="project-status">
+                                <span class="label label-success">accepted</span>
+                            </td>
+                            <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">Why is global harmonization necessary?</a>
+                            </td>
+                            <td class='project-budget'>
+	                        	200$
+	                        </td>
+							<td class="project-completion">
+                                <small>48%</small>
+                                <div class="progress progress-mini">
+                                    <div style="width: 48%;" class="progress-bar"></div>
+                                </div>
+                            </td>
+							<td class="project-time">
+                               <small>2014.08.15</small>
+                            </td>
+
+							<td class="project-actions">
+                                <a href="projects.html#" class="btn btn-ghost-default  btn-small"><i class="fa fa-folder"></i> Detail </a>
+                                
+                            </td>
+							
+						</tr>
+						<tr class='project-termination'>
+							<td class="project-status">
+	                            <span class="label label-default">termination</span>
+	                        </td>
+	                        <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">What are the two major elements in GHS?</a>
+	                        </td>
+	                        <td class='project-budget'>
+	                        	21,121$
+	                        </td>
+							<td class="project-completion">
+	                            <small>0%</small>
+	                            <div class="progress progress-mini">
+	                                <div style="width:0" class="progress-bar"></div>
+	                            </div>
+	                        </td>
+							<td class="project-time">
+	                           <small>2014.08.15</small>
+	                        </td>
+
+							<td class="project-actions">
+	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+	                        </td>
+						</tr>
+						<tr class='project-cancel'>
+							<td class="project-status">
+                                <span class="label label-default">Canceled</span>
+                            </td>
+                            <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">What are some key terms in the GHS Vocabulary?</a>
+                            </td>
+                            <td class='project-budget project-bids-cancel'>
+	                        	12,111$
+	                        </td>
+							<td class="project-completion">
+                                <small>0</small>
+                                <div class="progress progress-mini">
+                                    <div style="width: 0" class="progress-bar"></div>
+                                </div>
+                            </td>
+							<td class="project-time">
+                               <small>2014.08.15</small>
+                            </td>
+
+							<td class="project-actions">
+                                <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+                               
+                            </td>
+							
+						</tr>
+					</tbody>
+				</table>	
+
+				<!-- 发布的任务列表 -->
+				<table class='project-list-table project-list-published'>
+					<thead>
+						<tr>
+							<th>	
+								<a href="javascript:;" title="hits are ordered">state</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">number</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">title</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">bids</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">progress</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">creation time</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">actions</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					   <tr>
+							<td class="project-status">
+	                            <span class="label label-warning">Invitation</span>
+	                        </td>
+	                        <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">Globally Harmonized System (GHS)</a>
+	                        </td>
+	                        <td class='project-bids'>
+	                        	82
+	                        </td>
+							<td class="project-completion">
+	                            <small>0</small>
+	                            <div class="progress progress-mini">
+	                                <div style="width: 0%;" class="progress-bar"></div>
+	                            </div>
+	                        </td>
+							<td class="project-time">
+	                           <small>2014.08.15</small>
+	                        </td>
+
+							<td class="project-actions">
+	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+	                           
+	                        </td>
+						</tr>
+						<tr>
+							<td class="project-status">
+                                <span class="label label-success">Progress</span>
+                            </td>
+                            <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">Why is global harmonization necessary?</a>
+                            </td>
+                            <td class='project-bids'>
+	                        	82
+	                        </td>
+							<td class="project-completion">
+                                <small>48%</small>
+                                <div class="progress progress-mini">
+                                    <div style="width: 48%;" class="progress-bar"></div>
+                                </div>
+                            </td>
+							<td class="project-time">
+                               <small>2014.08.15</small>
+                            </td>
+
+							<td class="project-actions">
+                                <a href="projects.html#" class="btn btn-ghost-default  btn-small"><i class="fa fa-folder"></i> Detail </a>
+                                
+                            </td>
+							
+						</tr>
+						<tr>
+							<td class="project-status">
+	                            <span class="label label-primary">Finished</span>
+	                        </td>
+	                        <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">What are the two major elements in GHS?</a>
+	                        </td>
+	                        <td class='project-bids'>
+	                        	82
+	                        </td>
+							<td class="project-completion">
+	                            <small>100%</small>
+	                            <div class="progress progress-mini">
+	                                <div style="width:100%;" class="progress-bar"></div>
+	                            </div>
+	                        </td>
+							<td class="project-time">
+	                           <small>2014.08.15</small>
+	                        </td>
+
+							<td class="project-actions">
+	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+	                        </td>
+						</tr>
+						<tr class='project-cancel'>
+							<td class="project-status">
+                                <span class="label label-default">Canceled</span>
+                            </td>
+                            <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">What are some key terms in the GHS Vocabulary?</a>
+                            </td>
+                            <td class='project-bids project-bids-cancel'>
+	                        	0
+	                        </td>
+							<td class="project-completion">
+                                <small>0</small>
+                                <div class="progress progress-mini">
+                                    <div style="width: 0" class="progress-bar"></div>
+                                </div>
+                            </td>
+							<td class="project-time">
+                               <small>2014.08.15</small>
+                            </td>
+
+							<td class="project-actions">
+                                <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+                               
+                            </td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		    
+		</div>
+		
+	</div>
+</div>
+	
+</section>
+
+<!-- footer.html -->
+<footer class='footer'>
+<div class="container-fluid">
+<div class="row footer-nav">
+	<div class="col-md-2 footer-nav-list">
+		<h4>Company</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+			<li>
+				<a href="">Jobs</a>
+			</li>
+			<li>
+				<a href="">Team</a>
+			</li>
+			<li>
+				<a href="">Press releases</a>
+			</li>
+			<li>
+				<a href="">Testimonials</a>
+			</li>
+			<li>
+				<a href="">Terms of Service</a>
+			</li>
+			<li>
+				<a href="">Privacy Policy</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Resource</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Videos</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Support</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Questions</a>
+			</li>
+			<li>
+				<a href="">Blogs</a>
+			</li>
+			<li>
+				<a href="">Language support</a>
+			</li>
+			<li>
+				<a href="">FAQ</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Social</h4>
+		<div class="footer-divider"></div>
+		<ul class='social-icon-list'>
+			<li class='social-icon'>
+				<span class='fa fa-linkedin'></span>
+				<a href="" title='Linkedin'>linkedin</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-twitter'></span>
+				<a href="" title='twitter'>twitter</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-facebook-official'></span>
+				<a href="" title='Facebook'>facebook</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-google-plus'></span>
+				<a href="" title='Google+'>google+</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4 footer-nav-list">
+		<h4>Message</h4>
+		<div class="footer-divider"></div>
+		<form action="" class='footer-contact'>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+			<div class="form-group">
+				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value='Submit' class='btn btn-secondary'></div>
+		</form>
+	</div>
+</div>
+<div class="footer-divider"></div>
+<div class="row footer-bottom">
+	<div class="col-md-6">
+		<ul class='footer-brand clearfix'>
+			<li class='footer-brand-logo'>
+				<img src="./img/index/footer-logo.png" alt=""></li>
+			<li class='footer-brand-content'>
+				<p>The best product compliance platform</p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<p class='text-right copyright'>
+			© Copyright 2015 - 2016
+			<a href="" title="">Regbuzz.com</a>
+		</p>
+	</div>
+</div>
+</div>
+</footer>
+<!-- footer.html end-->
+</body>
+</html>

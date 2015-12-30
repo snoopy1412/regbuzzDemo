@@ -1,0 +1,26 @@
+.panel{
+	// padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 20px;
+
+	.panel-header{
+		border-bottom: 1px solid #ccc;
+		border-radius: 4px 4px 0 0;
+		background-color: #f1f1f1;
+		margin: 0;
+		padding: 10px;
+		font-weight: 600;
+		
+		@include font-size(1.6);
+	}	
+	.panel-body{
+		padding: 10px;
+	}
+	.panel-footer{
+		border-top: 1px solid #ccc;
+		background-color: #f1f1f1;
+		padding: 10px;
+		border-radius: 0 0 4px 4px ;
+	}
+}

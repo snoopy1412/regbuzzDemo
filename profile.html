@@ -1,0 +1,887 @@
+<!-- head.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
+	<title>Document</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src='./js/vendor/respond.min.js'></script>
+    <script type="text/javascript" src='./js/vendor/require.js' data-main='./js/main.js'></script>
+	<!--[if lt IE9]> 
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
+<!-- head.html end-->
+<body>
+<!-- header.html -->
+	<!-- /header -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+					<img src='img/header/logo4.png' height="32" width="123"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" >
+					<form class='navbar-form navbar-left search-form'>
+						<!-- <div class="search-dropdown pull-left dropdown">
+						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
+						</span>
+						<ul class='dropdown-menu'>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
+									<span>Search for people, projects, articles...</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-user"></i>
+									<span>Search peoples</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-briefcase"></i>
+									<span>Search projects</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-folder-open"></i>
+									<span>Search articles</span>
+								</a>
+							</li>
+						</ul>
+						</div>
+						-->
+						<div class='dropdown'>
+							<div class='form-group'>
+								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+								<div class='dropdown-menu search-text-response'>
+									<ul class='list-unstyled'>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-user"></i>
+											&nbsp;&nbsp; <strong>People</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-briefcase"></i>
+											&nbsp;&nbsp; <strong>Projects</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-folder-open"></i>
+											&nbsp;&nbsp;
+											<strong>Articles</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-secondary">Submit</button>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right header-utilities">
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle'  data-toggle="dropdown">
+								<i class='fa fa-book'></i>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities--helpCenter">
+								<div class="panel panel-default">
+									<!-- <div class="header-loading">
+										<i class="fa fa-spinner fa-pulse fa-2x"></i>
+									</div> -->
+									<div class="panel-heading">
+										<strong class='heading-title'>Help center</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">
+													<i class="fa fa-quote-left"></i>
+													<span>FAQs</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+	     											<i class="fa fa-book"></i>
+													<span>Guidance</span>
+													</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-usd"></i>
+													<span>Fees & Charges</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-cog"></i>
+													<span>How it works</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-info"></i>
+													<span>Feedback</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-envelope'></i>
+								<span class='label label-news inform'>8</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong class='heading-title'>Message</strong>
+								</div>
+								<div class="panel-body header-utilities-list">
+									<ul>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+									</ul>
+								</div>
+								<div class="panel-footer clearfix">
+									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+								</div>
+							</div>
+						</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-bell'></i>
+								<span class='label label-bell inform'>2</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<strong class='heading-title'>Notice</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+										</ul>
+									</div>
+									<div class="panel-footer clearfix">
+										<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle account' data-toggle="dropdown">
+								<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px"></a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--user">
+								<!-- <div class="dropdown-loading">
+								<i class="fa fa-spinner fa-pulse"></i>
+							</div>
+							-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="user-info">
+											<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px">
+											<h4 class='user-info-name'>Aaron Su</h4>
+											<a href="" title="" class='user-info-level'>Basic User</a>
+										</div>
+										<ul class='user-info-list'>
+											<li>
+												<a href="profile.html">
+													<i class="fa fa-newspaper-o"></i>
+													<span>Profile</span>
+												</a>
+											</li>
+											<li>
+												<a href="setting.html">
+													<i class="fa fa-cog"></i>
+													<span>Settings</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-sign-out"></i>
+													<span>logout</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 页面导航部分 -->
+		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+			<div class='container'>
+				<ul class='nav navbar-nav clearfix'>
+					<li>
+						<a href="" title="" class='active'>Home</a>
+					</li>
+					<li>
+						<a href="" title="">Needs</a>
+					</li>
+					<li>
+						<a href="" title="">Providers</a>
+					</li>
+					<li>
+						<a href="" title="">Connections</a>
+					</li>
+					<li>
+						<a href="" title="">Article</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+</header>
+<!-- header.html end-->
+
+<section class='com-main'>
+	<div class="container profile">
+		<div class="row">
+			<div class="col-md-9 com-comment">
+
+			<!-- 档案 -->
+				<section class='profile-info profile-info--person'>
+					<div class='clearfix'>
+						 <div class="pull-left profile-info--person-img">
+						 	<!-- <div class="img"> -->
+						 		<img src="./img/index/servers/13.jpg" alt="Aaron Su" width="100%">
+						 	<!-- </div> -->
+						 	<section class='profile-info--person-register text-center'>
+						 		<p class='location'>Nanjing , China</p>
+						 		<p class='mb-0'> Registered on August, 2015</p>
+						 	</section>
+						 </div>
+						 <div class="pull-right profile-info--person-brief">
+						 	<ul>
+						 		<li class='clearfix'>
+						 			<h2 class=' name'>Aaron Su </h2>
+						 		</li>
+						 		<li class='js-edit-start'>
+							 		<div class='js-show'>
+							 			<strong class='major js-edit-text js-edit-edit'> Law Consultant </strong>
+							 			<a href="javascript:;" title="" class='edit js-edit-edit'><i class="fa fa-pencil"></i></a>
+							 		</div>
+							 		<div class='js-hide text-right'>
+							 			<textarea name="" class='js-edit-textarea form-control'></textarea>
+							 			<button type="button" class='js-edit-save btn btn-primary'>save</button>
+							 			<button type="button" class='js-edit-cancel btn btn-primary-outline'>cancel</button>
+							 		</div>
+						 		</li>
+						 		<li class='js-edit-start'>
+						 			<div class='js-show'>
+							 			<span class='summary js-edit-text js-edit-edit pull-left'>Compliance Consultant, Founder and CEO of ComplyEthic Consulting LLC, a firm dedicated to providing professional compliance support and cost-effective solutions tailored to meet company needs in a rapidly changing world. Leona led product compliance policy and process development for a Fortune 100 retailer. She's able to connect legal requirements to operational requirements by working with cross functional groups. </span>
+							 			<a href="javascript:;" title="" class='edit js-edit-edit pull-left'><i class="fa fa-pencil"></i></a>
+						 			</div>
+							 		<div class='js-hide text-right'>
+							 			<textarea name="" class='js-edit-textarea form-control' rows='10' palceholder='Best within 1000 words'></textarea>
+							 			<button type="button" class='js-edit-save btn btn-primary'>save</button>
+							 			<button type="button" class='js-edit-cancel btn btn-primary-outline'>cancel</button>
+							 		</div>							 			
+						 		</li>
+						 	</ul>
+						 </div>
+					</div>
+				</section>
+
+				<!-- 联系 -->
+				<section class='profile-info profile-info--contact'>
+						<h3 class='profile-info-title'>Contact</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="profile-info--contact-item js-edit-start">
+									<strong class='contact-title pull-left'><i class="fa fa-envelope"></i> Email</strong>
+									<div class='js-show clearfix pull-left'>
+										<p class='js-edit-text js-edit-edit pull-left'>szh@cirscn.com</p>
+										<a href="javascript:;" title="" class='edit js-edit-edit pull-right'><i class="fa fa-pencil"></i></a>
+									</div>	
+									<div class='js-hide text-right'>
+							 			<textarea name="" class='js-edit-textarea form-control' palceholder='Best within 1000 words'></textarea>
+							 			<button type="button" class='js-edit-save btn btn-primary'>save</button>
+							 			<button type="button" class='js-edit-cancel btn btn-primary-outline'>cancel</button>
+							 		</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="profile-info--contact-item js-edit-start">
+									<strong class='contact-title pull-left'><i class="fa fa-phone"></i> Phone</strong>
+									<div class='js-show clearfix pull-left'>
+										<p class='js-edit-text js-edit-edit pull-left'>+86 13770888273</p>
+										<a href="javascript:;" title="" class='edit js-edit-edit pull-right'><i class="fa fa-pencil"></i></a>
+									</div>	
+									<div class='js-hide text-right'>
+							 			<textarea name="" class='js-edit-textarea form-control' palceholder='Best within 1000 words'></textarea>
+							 			<button type="button" class='js-edit-save btn btn-primary'>save</button>
+							 			<button type="button" class='js-edit-cancel btn btn-primary-outline'>cancel</button>
+							 		</div>
+								</div>									
+							</div>
+							<div class="col-md-6">
+								<div class="profile-info--contact-item js-edit-start">
+									<strong class='contact-title pull-left'><i class="fa fa-skype"></i> Skype</strong>
+									<div class='js-show clearfix pull-left'>
+										<p class='js-edit-text js-edit-edit pull-left'>xxxxxxx</p>
+										<a href="javascript:;" title="" class='edit js-edit-edit pull-right'><i class="fa fa-pencil"></i></a>
+									</div>	
+									<div class='js-hide text-right'>
+							 			<textarea name="" class='js-edit-textarea form-control' palceholder='Best within 1000 words'></textarea>
+							 			<button type="button" class='js-edit-save btn btn-primary'>save</button>
+							 			<button type="button" class='js-edit-cancel btn btn-primary-outline'>cancel</button>
+							 		</div>
+								</div>									
+							</div>
+							<div class="col-md-6">
+								<div class="profile-info--contact-item js-edit-start">
+									<strong class='contact-title pull-left'><i class="fa fa-linkedin-square"></i> Linkedin</strong>
+									<div class='js-show clearfix pull-left'>
+										<p class='js-edit-text js-edit-edit pull-left'>szh@cirscn.com</p>
+										<a href="javascript:;" title="" class='edit js-edit-edit pull-right'><i class="fa fa-pencil"></i></a>
+									</div>	
+									<div class='js-hide text-right'>
+							 			<textarea name="" class='js-edit-textarea form-control' palceholder='Best within 1000 words'></textarea>
+							 			<button type="button" class='js-edit-save btn btn-primary'>save</button>
+							 			<button type="button" class='js-edit-cancel btn btn-primary-outline'>cancel</button>
+							 		</div>
+								</div>									
+							</div>
+						</div>
+				</section>
+
+				<!-- 服务 -->
+				<section class='profile-info profile-info--server'>
+						<h3 class='profile-info-title'>Services</h3>
+						<div class='pure-g'>
+							<section class='pure-u-1 profile-info-item profile-info--server-item'>
+							<div class="js-show">
+								<h4 class='profile-info-item-position'>Global GHS Compliance Services</h4>
+								<p>Price: <a href="" title="">100USD/H</a></p>
+								<p class='profile-info-item-brief'>
+									EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Ser
+								</p>		
+							</div>
+							<div class='js-hide'>
+								<input type="text" name="" value="" placeholder="">
+								<input type="text" name="" value="" placeholder="">
+								<textarea name=""></textarea>
+							</div>
+
+								<!-- 遮罩 -->
+								<div class='profile-info-item-mask'>
+									<a href="javascript:;" title="" class='js-mask-edit edit fa fa-pencil'></a>
+									<a href="javascript:;" class='js-mask-delete delete fa fa-trash-o'></a>
+								</div>
+							</section>
+							<section class='pure-u-1 profile-info-item profile-info--server-item'>
+								<h4 class='profile-info-item-position'>Global GHS Compliance Services</h4>
+									<p class='profile-info-item-brief'>
+										EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Ser
+									</p>
+									<div class='pure-g profile-info--server-condition'>
+										<span class='pure-u-1 pure-u-sm-1-3'>
+											<i class="fa fa-usd"></i> Price: <span>100USD/H</span>
+										</span>
+									</div>										
+								<!-- 遮罩 -->
+								<div class='profile-info-item-mask'>
+									<a href="javascript:;" title="" class='js-mask-edit edit fa fa-pencil'></a>
+									<a href="javascript:;" class='js-mask-delete delete fa fa-trash-o'></a>
+								</div>										
+							</section>								
+						</div>
+						<div class='profile-info-add'>
+							<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary'><i class="fa fa-plus"></i> Add Services</a>
+						</div>	
+				</section>
+
+				<!-- 技能 -->
+				<section class='profile-info profile-info--skills'>
+					<h3 class='profile-info-title'>Skills</h3>
+					<div class="pure-g">
+						<div class="pure-u-1">
+							<section class='skills'>
+								<a href='javascript:;' class='skills-item'>   
+									<span class='skills-title'>GHS</span>
+									<i class="remove fa fa-times"></i>
+								 </a>			
+								<a href='javascript:;' class='skills-item'> 
+									<span class='skills-title'>Chemical</span>
+									<i class="remove fa fa-times"></i>
+								 </a>
+								<a href='javascript:;' class='skills-item'> 
+									<span class='skills-title'>consult</span>
+									<i class="remove fa fa-times"></i>
+								</a>
+							</section>
+						</div>
+					</div>
+					<div class='profile-info-add'>
+						<a href="javascript:;" title="" class='profile-info-add js-profile-skills-add btn btn-primary'><i class="fa fa-plus"></i> Add Skills</a>
+					</div>							
+				</section>
+
+				<!-- 经验 -->
+				<section class='profile-info profile-info--experience'>
+					<h3 class='profile-info-title'>Experience</h3>
+					<div class='pure-g'>
+						<section class="pure-u-1 profile-info-item experience-item">
+							<h4 class='profile-info-item-position experience-item-position'>counselor</h4>
+							<strong class='profile-info-item-company experience-item-company'>Global GHS Comliance Service</strong>
+							<div class='profile-info-item-time experience-item-time'>
+								<time datetime="2011-01-12">2011-01-12</time> - <time datetime="2011-02-12">2011-02-12</time> 
+							</div>
+							<p class='profile-info-item-brief experience-item-brief'>EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Service</p>
+						</section>
+						<section class="pure-u-1 profile-info-item experience-item">
+							<h4 class='profile-info-item-position experience-item-position'>counselor</h4>
+							<strong class='profile-info-item-company experience-item-company'>Global GHS Comliance Service</strong>
+							<div class='profile-info-item-time experience-item-time'>
+								<time datetime="2011-01-12">2011-01-12</time> - <time datetime="2011-02-12">2011-02-12</time> 
+							</div>
+							<p class='profile-info-item-brief experience-item-brief'>EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Service</p>
+						</section>							
+					</div>
+					<div class='profile-info-add'>
+						<a href="javascript:;" title="" class='profile-info-add js-profile-experience-add btn btn-primary'><i class="fa fa-plus"></i> Add Experience</a>
+					</div>	
+				</section>
+
+				<!-- 教育 -->
+				<section class='profile-info profile-info--educations'>
+					<h3 class='profile-info-title'>Educations</h3>
+					<div class="pure-g">
+						<div class="pure-u-1">
+							<section class='profile-info-item'>
+								<h4 class='profile-info-item-position'>BE</h4>
+								<strong class='profile-info-item-company'>Punjab Engineering College, India</strong>
+								<div class='profile-info-item-time'>
+									<time datetime="2011-01-12">1992</time> - <time datetime="2011-01-12">1994</time> 
+								</div>
+							</section>
+						</div>
+					</div>
+					<div class='profile-info-add'>
+						<a href="javascript:;" title="" class='profile-info-add js-profile-educations-add btn btn-primary'><i class="fa fa-plus"></i> Add Educations</a>
+					</div>							
+				</section>
+
+				<!-- 证书 -->
+				<section class='profile-info'>
+					<h3 class='profile-info-title'>Certificate & Publish</h3>
+					<div class="pure-g">
+						<div class="pure-u-1">
+							<section class='profile-info-item'>
+								<h4 class='profile-info-item-position'>STRATEGIC MANAGEMENT (2012)</h4>
+								<strong class='profile-info-item-company'>IIM – Kozhikode</strong>
+								<div class='profile-info-item-time'>
+									<time datetime="2011-01-12">1998</time>
+								</div>
+							</section>
+							<section class='profile-info-item'>
+								<h4 class='profile-info-item-position'>Responsive website and its future</h4>
+								<strong class='profile-info-item-company'>Smashing Magazine</strong>
+								<div class='profile-info-item-time'>
+									<time datetime="2011-01-12">2008</time>
+								</div>
+							</section>								
+						</div>
+					</div>
+					<div class='profile-info-add'>
+						<a href="javascript:;" title="" class='profile-info-add js-profile-certificate-add btn btn-primary'><i class="fa fa-plus"></i> Add Certificate & Publish</a>
+					</div>							
+				</section>					
+			</div>
+			<div class="col-md-3 com-aside">
+				<section class='profile-info profile-info-aside'>
+					<div class='profile-info-aside-item hire'>
+						<a href="" title="" class='btn btn-primary' style='width:80%;'>&nbsp; <i class="fa fa-user-plus"></i>&nbsp; |&nbsp; Hire me</a>
+					</div>
+					<div class='profile-info-aside-item authentication'>
+						<h3 class='profile-info-aside-title'>Verifications</h3>
+						<a href="" title="Email authentication" class='icon icon--mail is-verified'>
+							<i class="fa fa-envelope-o"></i>
+						</a>
+						<a href="" title="Real name the authentication" class='icon icon--name'>
+							<i class="fa fa-user"></i>
+						</a>
+						<a href="" title="Phone authentication" class='icon icon--phone'>
+							<i class="fa fa-phone"></i>
+						</a>
+						<a href="" title="payment method" class='icon icon--credit'>
+							<i class="fa fa-credit-card"></i>
+						</a>
+					</div>
+					<div class='profile-info-aside-item evaluate'>
+						<h3 class='profile-info-aside-title'>Evaluate</h3>
+						<ul class="evaluate-stars">
+							<li class='clearfix'>
+								<span class="item-stats item-stats-quality pull-left">Quality</span>
+								<span class="item-stats-name item-stats-quality-name pull-left"></span>
+								<div class="star-quality pull-left"></div>			
+							</li>
+							<li class='clearfix'> 
+								<span class="item-stats item-stats-speed pull-left">Speed </span>
+								<span class="item-stats-name item-stats-speed-name pull-left"></span>
+								<div class="star-speed pull-left"></div>
+							</li>
+							<li class='clearfix'> 
+								<span class="item-stats item-stats-attitude pull-left">Attitude </span>
+								<span class="item-stats-name item-stats-attitude-name pull-left"></span> 
+								<div class="star-attitude pull-left"></div>
+							</li>
+						</ul>
+					</div>
+					<div class='profile-info-aside-item history'>
+					<h3 class='profile-info-aside-title'>Work History</h3>
+						<ul>
+							<li>
+								<span class="item-stats-name">jobs</span>
+								<a href='' class="item-stats-value">596 </a>	
+							</li>							
+							<li>
+								<span class="item-stats-name">Success</span>
+								<span class="item-stats-value">96% </span>				
+							</li>
+							<li>
+								<span class="item-stats-name">Income</span>
+								<span class="item-stats-value">$ 3,000 </span>
+							</li>
+						</ul>
+					</div>
+					<div class='profile-info-aside-item associated'>
+						<h3 class='profile-info-aside-title'>Associated with</h3>
+						<div class='clearfix'>
+						<a href="" title="" class='associated-img pull-left'>
+							<img src="img/profile/cirs.jpg"  width="100%" alt="">
+						</a>
+						<div class='associated-brief pull-right'>
+							<a href="" title="">
+								CIRS
+							</a>
+							<p>1200 Consultants belong</p>
+						</div>	
+						</div>
+						
+						
+					</div>
+					<div class='profile-info-aside-item blogs'>
+						<h3 class='profile-info-aside-title'>Blogs</h3>
+						<ul class='blogs-list'>
+							<li><a href="" title="How To Decide Whether You Need To Submit a SVHC Notification to ECHA?">How To Decide Whether You Need To Submit a SVHC Notification to ECHA?</a></li>
+							<li><a href="" title="Expert Interpretation of SMCR Regulatory Highlights">Expert Interpretation of SMCR Regulatory Highlights</a></li>
+							<li><a href="" title="The List of Unqualified Cosmetic Manufacturers (Jan-Sept, 2015)">The List of Unqualified Cosmetic Manufacturers (Jan-Sept, 2015)</a></li>
+							<li><a href="" title="SMCR 2015 Gallery">SMCR 2015 Gallery</a></li>
+							<li><a href="" title="Official Interpretation of the New Food Safety Law in China">Official Interpretation of the New Food Safety Law in China</a></li>
+						</ul>
+						<a href="" title="" class='pull-right'>see all</a>
+					</div>						
+				</section>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- footer.html -->
+<footer class='footer'>
+<div class="container-fluid">
+<div class="row footer-nav">
+	<div class="col-md-2 footer-nav-list">
+		<h4>Company</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+			<li>
+				<a href="">Jobs</a>
+			</li>
+			<li>
+				<a href="">Team</a>
+			</li>
+			<li>
+				<a href="">Press releases</a>
+			</li>
+			<li>
+				<a href="">Testimonials</a>
+			</li>
+			<li>
+				<a href="">Terms of Service</a>
+			</li>
+			<li>
+				<a href="">Privacy Policy</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Resource</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Videos</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Support</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Questions</a>
+			</li>
+			<li>
+				<a href="">Blogs</a>
+			</li>
+			<li>
+				<a href="">Language support</a>
+			</li>
+			<li>
+				<a href="">FAQ</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Social</h4>
+		<div class="footer-divider"></div>
+		<ul class='social-icon-list'>
+			<li class='social-icon'>
+				<span class='fa fa-linkedin'></span>
+				<a href="" title='Linkedin'>linkedin</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-twitter'></span>
+				<a href="" title='twitter'>twitter</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-facebook-official'></span>
+				<a href="" title='Facebook'>facebook</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-google-plus'></span>
+				<a href="" title='Google+'>google+</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4 footer-nav-list">
+		<h4>Message</h4>
+		<div class="footer-divider"></div>
+		<form action="" class='footer-contact'>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+			<div class="form-group">
+				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value='Submit' class='btn btn-secondary'></div>
+		</form>
+	</div>
+</div>
+<div class="footer-divider"></div>
+<div class="row footer-bottom">
+	<div class="col-md-6">
+		<ul class='footer-brand clearfix'>
+			<li class='footer-brand-logo'>
+				<img src="./img/index/footer-logo.png" alt=""></li>
+			<li class='footer-brand-content'>
+				<p>The best product compliance platform</p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<p class='text-right copyright'>
+			© Copyright 2015 - 2016
+			<a href="" title="">Regbuzz.com</a>
+		</p>
+	</div>
+</div>
+</div>
+</footer>
+<!-- footer.html end-->
+
+
+<!-- add的拓展 -->
+<!-- 服务拓展 -->
+<div id="js-profile-server" class='js-modal-content'>
+	<div class="form-group">
+	<label>
+		Service Name: 
+	</label>
+		<input type="text" class='form-control' placeholder ='Service Name'>	
+	</div>
+	<div class="form-group">
+		<label>
+			Price
+		</label>
+		<div class="input-group">
+			<span class='input-group-addon'><i class="fa fa-usd"></i></span>
+			<input type="text" class='form-control' placeholder ='Price'>
+		</div>	
+	</div>	
+	<div class="form-group">
+	<label>
+		Service brief 
+	</label>
+		<textarea class='form-control'></textarea>
+	</div>
+
+	<a href="" title="" class='btn btn-primay'>submit</a>
+</div>
+
+<!-- 技能 -->
+<div id="js-profile-skills" class='js-modal-content'>
+	<div class="form-group">
+		<label>
+			Skills
+		</label>
+			<input type="text" class='form-control' placeholder ='Skills Name'>	
+		</div>
+	<a href="" title="" class='btn btn-primay'>submit</a>
+</div>
+
+<!-- 经验 -->
+<div id="js-profile-experience" class='js-modal-content'>
+	<div class="form-group">
+	<label>
+		job title
+	</label>
+		<input type="text" class='form-control' placeholder ='job title'>	
+	</div>
+	<div class="form-group">
+	<label>
+		company name
+	</label>
+		<input type="text" class='form-control' placeholder ='company name'>	
+	</div>
+	<div class="form-group">
+		<label>
+			Time in position
+		</label>
+		<input type="text" class='form-control' placeholder ='Time in position'>
+	</div>
+	<div class="form-group">
+		<label>
+			Job profile
+		</label>
+		<textarea name="" class='form-control'></textarea>
+	</div>	
+	<a href="" title="" class='btn btn-primay'>submit</a>
+</div>
+
+<!-- 教育 -->
+<div id="js-profile-educations" class='js-modal-content'>
+	<div class="form-group">
+		<label>
+			Degree 
+		</label>
+		<input type="text" class='form-control' placeholder ='Degree'>	
+	</div>
+	<div class="form-group">
+		<label>
+			School name
+		</label>
+		<input type="text" class='form-control' placeholder ='School name'>	
+	</div>
+	<div class="form-group">
+		<label>
+			Time
+		</label>
+		<input type="text" class='form-control' placeholder ='School name'>	
+	</div>
+	<a href="" title="" class='btn btn-primay'>submit</a>
+</div>
+
+<!-- 出版 -->
+<div id="js-profile-certificate" class='js-modal-content'>
+	<div class="form-group">
+	<label>
+		Title
+	</label>
+		<input type="text" class='form-control' placeholder ='Service Name'>	
+	</div>
+	<div class="form-group">
+	<label>
+		certification body
+	</label>
+		<input type="text" class='form-control' placeholder ='certification body'>	
+	</div>
+	<div class="form-group">
+		<label>
+			Time
+		</label>
+		<input type="text" class='form-control' placeholder ='Time'>
+	</div>
+	<a href="" title="" class='btn btn-primay'>submit</a>
+</div>
+
+</body>
+</html>

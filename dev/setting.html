@@ -1,0 +1,182 @@
+<!-- head.html -->
+<% include ../publicTpl/head.html %>
+<!-- head.html end-->
+<body>
+<!-- header.html -->
+<% include ../publicTpl/header.html %>
+<!-- header.html end-->
+
+<section class='com-main'>
+<div class="container setting-container">
+<div class="row">
+	<div class="col-md-3 com-aside">
+		<div class="list-group setting-menu">
+			<a href="javascript:;" title="My Info" class='active list-group-item'>
+				<i class="fa fa-user"></i>
+				My Info
+			</a>
+			<!-- <a href="javascript:;" title="Preference" class='list-group-item'>
+				<i class="fa fa-user"></i>
+				Preference
+			</a> -->
+			<a href="javascript:;" title="Billing Methods"  class="list-group-item">
+				<i class="fa fa-credit-card"></i>
+				Billing Methods
+			</a>
+			<a href="javascript:;" title="Password &amp; Security"  class="list-group-item">
+				<i class="fa fa-lock"></i>
+				Password &amp; Security
+			</a>
+			<a href="javascript:;" title="Linked Accounts" class="list-group-item">
+				<i class="fa fa-link"></i>
+				Linked Accounts
+			</a>
+		</div>
+	</div>
+	<div class="col-md-9  com-content">
+		<div class="setting-content">
+			<section class="setting-section setting-section--Info active">
+					<div class="panel panel-default">
+						<div class="panel-heading">My Info</div>
+						<div class="panel-body">
+							<div class='setting-section-item'>
+								<div class="setting-edit">
+									<h3 class='setting-edit-title'><i class="fa fa-picture-o"></i><span>Profile Picture</span></h3>
+									<div class='clearfix'>
+										<img alt="@snoopy1412" class="avatar pull-left" height="70" src="https://avatars0.githubusercontent.com/u/13896109?v=3&amp;s=140" width="70" />
+										<div class="avatar-upload pull-left">
+											<a href="#" class="btn btn-primary file-upload">
+												Upload new picture
+												<input id="upload-profile-picture" type="file" class="manual-file-chooser js-manual-file-chooser js-avatar-field" />
+											</a>
+										</div>
+										<!-- /.avatar-upload -->
+									</div>
+								</div>
+								<div class="form-horizontal">
+									<div class="setting-edit setting-edit-name">
+										<h3 class='setting-edit-title'><i class="fa fa-user"></i><span>Name</span></h3>
+										<div class='form-group'>
+											<label for="user_profile_name" class='col-sm-2 control-label'>First Name：</label>
+											<div class="col-sm-10">
+												<p class="form-control-static">Aaron</p>
+											</div>
+											<!-- <input id="user_profile_name" class='form-control col-sm-10' size="30" type="text" value='Aaron'></div>
+										-->
+									</div>
+									<div class='form-group'>
+										<label for="user_profile_name" class='col-sm-2 control-label'>Last Name：</label>
+										<div class="col-sm-10">
+											<p class="form-control-static">Su</p>
+										</div>
+										<!-- <input id="user_profile_name" class='form-control col-sm-10' size="30" type="text" value='Su'>--></div>
+									<a href="" title="" class='btn btn-success-outline setting-edit-btn'>edit</a>
+								</div>
+								<div class="setting-edit setting-edit-name">
+									<h3 class='setting-edit-title'><i class="fa fa-envelope-o"></i><span>Email</span></h3>
+									<div class='form-group'>
+										<label for="user_profile_email" class='col-sm-2 control-label'>Public email：</label>
+										<div class="col-sm-10">
+											<p class="form-control-static">402090261@qq.com</p>
+										</div>
+										<!-- <input id="user_profile_email" class='form-control col-sm-10' size="30" type="text" value='402090261@qq.com'>--></div>
+									<a href="" title="" class='btn btn-success-outline setting-edit-btn'>edit</a>
+								</div>
+								<div class="setting-edit setting-edit-name">
+									<h3 class='setting-edit-title'><i class="fa fa-phone"></i><span>Phone</span></h3>
+									<div class='form-group'>
+										<label for="user_profile_email" class='col-sm-2 control-label'>Public phone：</label>
+										<div class="col-sm-10">
+											<p class="form-control-static">1100000000</p>
+										</div>
+										<!-- <input id="user_profile_email" class='form-control col-sm-10' size="30" type="text" value='1100000000'>--></div>
+									<a href="" title="" class='btn btn-success-outline setting-edit-btn'>edit</a>
+								</div>
+								<p class='pl-20'>
+									<button type="submit" class="btn btn-primary">Update profile</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <section class="setting-section setting-section--preference">
+				<div class="panel panel-default">
+					<div class="panel-heading">Preference Setting</div>
+					<div class="panel-body">
+						
+					</div>
+				</div>
+			</section> -->
+			<section class="setting-section setting-section--bills">
+				<div class="panel panel-default">
+					<div class="panel-heading">Billing Methods</div>
+					<div class="panel-body"></div>
+				</div>
+			</section>
+			<section class="setting-section setting-section--Password">
+				<div class="panel panel-default">
+					<div class="panel-heading">Password & Security</div>
+					<div class="panel-body">
+						<div class='setting-section-item'>
+							<div class="form-horizontal">
+								<div class="setting-edit setting-edit-name">
+									<h3 class='setting-edit-title'><i class="fa fa-lock"></i><span>Change password</span></h3>
+									<div class='form-group'>
+										<label for="user_profile_name" class='col-sm-3 control-label'>Old password：</label>
+										<input id="user_profile_name" class='form-control col-sm-9' size="30" type="text"  value=''></div>
+									<div class='form-group'>
+										<label for="user_profile_name" class='col-sm-3 control-label'>New password：</label>
+										<input id="user_profile_name" class='form-control col-sm-9' size="30" type="text"  value=''></div>
+									<div class='form-group'>
+										<label for="user_profile_name" class='col-sm-3 control-label'>Confirm new password：</label>
+										<input id="user_profile_name" class='form-control col-sm-9' size="30" type="text"  value=''></div>
+								</div>
+								<p>
+									<button type="submit" class="btn btn-primary">Update password</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="setting-section setting-section--Linked">
+				<div class="panel panel-default">
+					<div class="panel-heading">Linked Accounts</div>
+					<div class="panel-body">
+						<div class='setting-section-item'>
+							<div class="setting-edit setting-edit-name">
+								<h3 class='setting-edit-title'><i class="fa fa-link"></i><span>Linked Accounts</span></h3>
+								<p class='pb-10'>Manage your linked social accounts on Regbuzz.</p>
+								<div class="reg-social-link reg-social-link--setting text-center" >
+									<a href="" title="" class='reg-social-link-linkedin'>
+										<i class='fa fa-linkedin'></i>
+										Linkedin
+									</a>
+
+									<a href="" title="" class='reg-social-link-facebook'>
+										<i class='fa fa-facebook'></i>
+										Facebook
+									</a>
+
+									<a href="" title="" class='reg-social-link-google'>
+										<i class="fa fa-google-plus"></i>
+										google+
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+
+<!-- footer.html -->
+<% include ../publicTpl/footer.html %>
+<!-- footer.html end-->
+</body>
+</html>

@@ -1,0 +1,104 @@
+@mixin forNum($maxNum:6){
+	@for $i from 1 through $maxNum {
+		&.step-#{$i} {
+			&:before{
+	    		content:'#{$i}';
+	    	}
+		}
+	}
+}
+.steps
+{	
+	display: table;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-left: 0;
+    & > .step-item
+    {
+        position: relative;
+
+        display: table-cell;
+        float: none;
+
+        width: 1%;
+        margin-left: 2px;
+
+        counter-reset: section;
+        &.active
+        {
+            & > a
+            {
+                color:$palette-blue;
+                background-color: rgba(0, 0, 0, 0);
+                &:before
+                {
+                    color: $palette-blue;
+                    border-color: $palette-blue;
+                    background-color: #fff;
+                    box-shadow: 0 0 0 5px  $palette-blue;
+                }
+                &:after
+                {
+                    background-color: $palette-blue;
+                }
+            }
+        }
+        & > a
+        {
+            position: relative;
+
+            display: block;
+
+            margin-bottom: 0;
+            padding: 10px 15px;
+
+            text-align: center;
+            text-decoration: none;
+
+            color: #ccc;
+            border-radius: 4px;
+            background-color: transparent;
+            &:after
+            {
+                position: absolute;
+                z-index: 1;
+                top: -38%;
+                right: 0;
+                left: 0;
+
+                height: 8px;
+
+                content: '';
+
+                background-color: #ccc;
+            }
+            &:before
+            {
+                line-height: 2rem;
+
+                position: absolute;
+                z-index: 2;
+                top: -2rem;
+                right: 0;
+                left: 0;
+
+                width: 2rem;
+                height: 2rem;
+                margin: 0 auto;
+
+                content: counter(section);
+                counter-increment: section;
+
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: 0 0 0 5px #ccc;
+            }
+			@include forNum;
+        }
+    }
+}
+
+
+

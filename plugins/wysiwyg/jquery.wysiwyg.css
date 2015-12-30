@@ -1,0 +1,261 @@
+div.wysiwyg
+{
+    padding: 0;
+    border-radius: 4px;
+
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+       -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+            box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+}
+
+div.wysiwyg ul.toolbar li.jwysiwyg-custom-command
+{
+    overflow: hidden;
+}
+
+div.wysiwyg div.toolbar-wrap
+{
+    width: 100%;
+
+    border-bottom: 1px solid #ccc;
+}
+div.wysiwyg ul.toolbar
+{
+    float: left;
+
+    margin: 0; 
+    padding: 0 10px;
+
+}
+div.wysiwyg ul.toolbar li
+{	
+	position: relative;
+
+    display: block;
+    float: left;
+
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 3px 0 3px 0;
+    padding: 0;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none; 
+    text-indent: -5000px;
+
+    border: 1px solid transparent;
+}
+
+div.wysiwyg ul.toolbar li:after
+{
+    font-family: 'FontAwesome';
+
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    text-indent: 0;
+
+}
+div.wysiwyg ul.toolbar li.separator
+{
+    width: 1px;
+    height: 20px;
+    margin: 3px 4px 3px 5px;
+
+    border: none;
+    border-left: 1px solid #ccc; 
+    background: none;
+}
+div.wysiwyg ul.toolbar li.wysiwyg-button-hover,
+div.wysiwyg ul.toolbar li.active
+{
+	background-color: #f1f1f1;
+}
+div.wysiwyg ul.toolbar li.disabled
+{
+    cursor: auto; 
+
+    opacity: .5;
+    background-color: transparent;
+
+    filter: alpha(opacity=50);
+}
+
+
+div.wysiwyg ul.toolbar li.bold:after
+{
+    content: '\f032';
+}
+div.wysiwyg ul.toolbar li.italic:after{
+	content: '\f033';
+}
+
+div.wysiwyg ul.toolbar li.strikeThrough:after
+{
+    content: "\f0cc";
+}
+div.wysiwyg ul.toolbar li.underline:after
+{
+    content:'\f0cd';
+}
+
+div.wysiwyg ul.toolbar li.justifyLeft:after
+{
+     content:'\f036';
+}
+div.wysiwyg ul.toolbar li.justifyCenter:after
+{
+    content:'\f037';
+}
+div.wysiwyg ul.toolbar li.justifyRight:after
+{
+     content:'\f038';
+}
+div.wysiwyg ul.toolbar li.justifyFull:after
+{
+    content:'\f039';
+}
+
+div.wysiwyg ul.toolbar li.undo:after
+{
+    content:"\f0e2";
+}
+div.wysiwyg ul.toolbar li.redo:after
+{
+    content:"\f01e";
+}
+
+div.wysiwyg ul.toolbar li.insertOrderedList:after
+{
+    content:"\f0cb";
+}
+div.wysiwyg ul.toolbar li.insertUnorderedList:after
+{
+    content:"\f0ca";
+}
+
+div.wysiwyg ul.toolbar li.insertTable:after
+{
+   content:"\f0ce";
+}
+div.wysiwyg ul.toolbar li.removeFormat:after
+{
+   content:"\f12d";
+}
+div.wysiwyg ul.toolbar li.indent:after
+{
+   content:"\f03c";
+}
+div.wysiwyg ul.toolbar li.outdent:after
+{
+   content:"\f03b";
+}
+
+
+
+div.wysiwyg-dialogRow
+{
+
+    float: left;
+
+    width: 100%;
+}
+
+div.wysiwyg iframe
+{
+	display: block;
+
+    width: 100%;
+    margin: 0;
+    padding:5px 10px;
+}
+div.wysiwyg > textarea
+{
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+/* dialog */
+.wysiwyg-dialog
+{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+    width: 450px;
+    height: 300px;
+
+    background: transparent;
+    border-radius: 4px;
+}
+.wysiwyg-dialog .wysiwyg-dialog-topbar
+{
+    position: relative; 
+
+    padding:5px 10px;
+
+    color: #444;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+}
+.wysiwyg-dialog .wysiwyg-dialog-close-button
+{
+    position: absolute;
+    top: 50%;
+    right: 12px;
+
+    display: block;
+
+    height: 14px;
+    margin-top: -12px; 
+    padding: 6px 10px;
+
+    text-decoration: none;
+
+    color: #444;
+}
+
+.wysiwyg-dialog .wysiwyg-dialog-topbar .wysiwyg-dialog-title
+{
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+}
+.wysiwyg-dialog .wysiwyg-dialog-content
+{
+    padding: 10px 20px;
+	
+    border: 1px #ccc solid;
+    border-top: 0;
+    background: white;
+    border-radius: 0 0 4px 4px;
+}
+.wysiwyg-dialog-modal-div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(255,255,255);
+    background-color: rgba(0,0,0,.5); 
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)';filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+}
+

@@ -1,0 +1,97 @@
+﻿.b-list{
+	.b-list-media{
+		margin-bottom: 20px;
+		background-color: #fff;
+		padding:22px 30px 30px 10px;
+		border: 1px solid transparent;
+		-webkit-transition: border-color 0.75s;
+		-o-transition: border-color 0.75s;
+		transition: border-color 0.75s;
+		border-radius: 2px;
+		&:hover{
+			border:1px solid $palette-blue;
+		}
+		@media screen and (max-width: 768px){
+			padding-right: 10px;
+		}
+		&:first-child{
+			padding-top: 10px;
+		}		
+	}
+	.b-list-media--aside{
+		border-bottom: 0;
+		padding: 8px 10px;
+	}
+
+
+	// 左侧图片展示
+	.b-list-media-img{
+		img{
+			width: 100%;
+		}
+	}
+	/* 位于边栏的样式改变 */
+	.b-list-media-img--aside{
+		padding-right: 11px;
+	}
+	// 左侧图片展示 end
+
+	// 右侧内容展示
+	.b-list-media-content{
+		.author{
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
+		.meta-info-list-li{
+			margin-right: 10px;
+			span{
+				color:$palette-grey;
+			}
+			.fa-tags{
+
+			}
+
+		}
+	}
+	.b-list-media-title{
+		margin-top: 5px;
+		font-size: remToPx(1.8);
+		font-size: 1.8rem;
+		a{
+			color:#424242;
+			&:hover{
+				color:$palette-blue;
+			}
+		}
+	}
+	.b-list-media-title--aside{
+		font-size: remToPx(1.4);
+		font-size: 1.4rem;
+		@extend %ellipsis;
+	}
+	.author{
+		color:#aaa;
+	}
+	.author-name-warp{
+			position: relative;
+			padding:2px 3px 0;
+
+			display: inline-block;
+			&>a{
+				color:$palette-teal;
+				display: inline-block;
+			}
+		img{
+			border-radius: 50%;
+			            margin-top: -3px;
+		}
+		.author-name{
+			color:#555;
+		}
+	}
+	.b-list-media-brief{
+		color:#818181;
+	}	
+	// 右侧内容展示 end
+
+}

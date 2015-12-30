@@ -1,0 +1,57 @@
+#page{
+	font-size: 16px;
+	font-size: 1.6rem;
+	.page-title{
+		margin-bottom: 25px;
+		font-size: 24px;
+		font-size: 2.4rem;
+	}
+	.page-author{
+		text-align: center;
+		margin-bottom: 20px;
+		color : #5a5a5a;
+	}
+	.page-content{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		h3{
+			color:#333;
+		}
+		p{
+			padding-bottom: 10px;
+			color:#444;
+		}
+	}
+
+
+	.page-related{
+		padding: 10px 0;
+		h4{
+			color:#999999;
+		}
+		a{
+			display: block;
+			padding-bottom: 10px;
+			&:before{
+				display: inline-block;
+				content: '';
+				width:10px;
+				height: 10px;
+				border-radius: 50%;
+				border: 2px solid #ccc;
+				margin-right: 10px;
+			}
+		}
+	}
+
+
+	.page-share-support{
+		.fa-heart-o{
+			margin-right: 5px;
+		}	
+		.like-it{
+			margin-left: 5px;
+		}
+	}
+
+}

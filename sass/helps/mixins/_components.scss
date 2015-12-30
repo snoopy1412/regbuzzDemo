@@ -1,0 +1,74 @@
+﻿// btn文件
+// ------------------------------------------------------------------------------------------
+@mixin btn($bgColor:$btn-default-bg-color,$textColor:$btn-default-text-color){
+  background: $bgColor;
+  border: 1px solid $bgColor;
+  color: $textColor;
+  
+}
+@mixin btn_hover($hoverBgColor:$btn-default-hover-bg-color,$hoverTextColor:$btn-default-hover-text-color){
+  background-color: $hoverBgColor;
+  color: $hoverTextColor;
+ 
+}
+@mixin btn_active($activeBgColor:$btn-default-active-bg-color,$activeTextColor:$btn-default-active-text-color){
+  background-color: $activeBgColor;
+  color: $activeTextColor;	
+}
+
+// btn公共颜色部分
+
+// 橙色公共部分
+%orange{
+    @include btn($btn-orange-bg-color,$btn-orange-text-color);
+    &:hover{
+      @include btn_hover($btn-orange-hover-bg-color,$btn-orange-hover-text-color)
+    }
+    &:active{
+      @include btn_active($btn-orange-active-bg-color,$btn-orange-active-text-color);
+    }  
+}
+
+// 橙色公共部分
+%primay{
+    @include btn($btn-blue-bg-color,$btn-blue-text-color);
+    &:hover{
+    @include btn_hover($btn-blue-hover-bg-color,$btn-blue-hover-text-color)
+    }
+    &:active{
+      @include btn_active($btn-blue-active-bg-color,$btn-blue-active-text-color);
+    }  
+}
+
+// 橙色公共部分
+%primary{
+    @include btn($btn-blue-bg-color,$btn-blue-text-color);
+    &:hover{
+    @include btn_hover($btn-blue-hover-bg-color,$btn-blue-hover-text-color)
+    }
+    &:active{
+      @include btn_active($btn-blue-active-bg-color,$btn-blue-active-text-color);
+    }  
+}
+
+%success{
+    @include btn($btn-teal-bg-color,$btn-teal-text-color);
+    &:hover{
+    @include btn_hover($btn-teal-hover-bg-color,$btn-teal-hover-text-color)
+    }
+    &:active{
+      @include btn_active($btn-teal-active-bg-color,$btn-teal-active-text-color);
+    }  
+}
+
+
+// ul 去除样式，ul下的li去除list-style
+%noStyle{
+  ul{
+    padding-left: 0;
+    li{
+      list-style: none;
+    }
+  }
+}
+// btn文件结束------------------------------------------------------------------------------------------

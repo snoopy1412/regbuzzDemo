@@ -1,0 +1,37 @@
+.notice-main{
+	background-color: #fff;
+	min-height: 600px;
+	border-radius: 4px;
+}
+.notice-list{
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 4px;
+	border:1px solid #ccc;
+}
+.notice-content-list{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	.alert{
+		position: relative;
+		margin-bottom: 0;
+		border-bottom: 1px solid #f1f1f1;
+		&:hover{
+			background-color: #f1f1f1;		
+		}
+	}
+	.notice-title{
+		color:#666666;
+		font-size: 16px;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.notice-time{
+		position: absolute;
+		top:15px;
+		right: 60px;
+		display: inline-block;
+		color: #959595;
+	}
+}

@@ -1,0 +1,626 @@
+<!-- head.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
+	<title>Document</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src='./js/vendor/respond.min.js'></script>
+    <script type="text/javascript" src='./js/vendor/require.js' data-main='./js/main.js'></script>
+	<!--[if lt IE9]> 
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
+<!-- head.html end-->
+<body>
+	
+<!-- header.html -->
+	<!-- /header -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+					<img src='img/header/logo4.png' height="32" width="123"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" >
+					<form class='navbar-form navbar-left search-form'>
+						<!-- <div class="search-dropdown pull-left dropdown">
+						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
+						</span>
+						<ul class='dropdown-menu'>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
+									<span>Search for people, projects, articles...</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-user"></i>
+									<span>Search peoples</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-briefcase"></i>
+									<span>Search projects</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-folder-open"></i>
+									<span>Search articles</span>
+								</a>
+							</li>
+						</ul>
+						</div>
+						-->
+						<div class='dropdown'>
+							<div class='form-group'>
+								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+								<div class='dropdown-menu search-text-response'>
+									<ul class='list-unstyled'>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-user"></i>
+											&nbsp;&nbsp; <strong>People</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-briefcase"></i>
+											&nbsp;&nbsp; <strong>Projects</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-folder-open"></i>
+											&nbsp;&nbsp;
+											<strong>Articles</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-secondary">Submit</button>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right header-utilities">
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle'  data-toggle="dropdown">
+								<i class='fa fa-book'></i>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities--helpCenter">
+								<div class="panel panel-default">
+									<!-- <div class="header-loading">
+										<i class="fa fa-spinner fa-pulse fa-2x"></i>
+									</div> -->
+									<div class="panel-heading">
+										<strong class='heading-title'>Help center</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">
+													<i class="fa fa-quote-left"></i>
+													<span>FAQs</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+	     											<i class="fa fa-book"></i>
+													<span>Guidance</span>
+													</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-usd"></i>
+													<span>Fees & Charges</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-cog"></i>
+													<span>How it works</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-info"></i>
+													<span>Feedback</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-envelope'></i>
+								<span class='label label-news inform'>8</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong class='heading-title'>Message</strong>
+								</div>
+								<div class="panel-body header-utilities-list">
+									<ul>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+									</ul>
+								</div>
+								<div class="panel-footer clearfix">
+									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+								</div>
+							</div>
+						</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-bell'></i>
+								<span class='label label-bell inform'>2</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<strong class='heading-title'>Notice</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+										</ul>
+									</div>
+									<div class="panel-footer clearfix">
+										<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle account' data-toggle="dropdown">
+								<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px"></a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--user">
+								<!-- <div class="dropdown-loading">
+								<i class="fa fa-spinner fa-pulse"></i>
+							</div>
+							-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="user-info">
+											<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px">
+											<h4 class='user-info-name'>Aaron Su</h4>
+											<a href="" title="" class='user-info-level'>Basic User</a>
+										</div>
+										<ul class='user-info-list'>
+											<li>
+												<a href="profile.html">
+													<i class="fa fa-newspaper-o"></i>
+													<span>Profile</span>
+												</a>
+											</li>
+											<li>
+												<a href="setting.html">
+													<i class="fa fa-cog"></i>
+													<span>Settings</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-sign-out"></i>
+													<span>logout</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 页面导航部分 -->
+		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+			<div class='container'>
+				<ul class='nav navbar-nav clearfix'>
+					<li>
+						<a href="" title="" class='active'>Home</a>
+					</li>
+					<li>
+						<a href="" title="">Needs</a>
+					</li>
+					<li>
+						<a href="" title="">Providers</a>
+					</li>
+					<li>
+						<a href="" title="">Connections</a>
+					</li>
+					<li>
+						<a href="" title="">Article</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+</header>
+<!-- header.html end-->
+
+	<section class='com-main com-main--list'>
+		<div class='list-search-warp'>
+			<div class='container'>
+				<!-- 面包屑 -->
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Search</li>
+				</ol>
+			</div>		
+		</div>		
+		<div class="container" >	
+			<div class="row mt-10">
+				<!-- 侧边栏 -->
+				<!-- header.html -->
+				<div class="col-md-3 com-aside">
+	<aside class='list-aside'>
+		<section class='list-aside-item list-aside-item-method'>
+			<div class="list-group list-aside-item-method-list">
+			  <a href="#" class="list-group-item active">
+			   	<i class="fa fa-bars"></i><span>All</span>
+			  </a>
+			  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>People</span></a>
+			  <a href="#" class="list-group-item"><i class="fa fa-briefcase"></i><span>Projects</span></a>
+			  <a href="#" class="list-group-item"><i class="fa fa-folder-open"></i><span>Articles</span></a>
+			</div>						
+		</section>
+		<div class="list-aside-item panel panel-default">
+			<div class="panel-body">
+				<h4 class='list-aside-item-title'>Category</h4>
+				<select class='form-control'>
+				<option id="cn1-0" value="">All Categories</option>
+			</select>
+			</div>
+		</div>
+		<div class="list-aside-item list-aside-item-type panel panel-default">
+			<div class="panel-body">
+				<h4 class='list-aside-item-title'>Project Types</h4>
+				<ul class='checkbox-list list-unstyled'>
+				<li class="checkbox">
+					<input type="checkbox" value="" name="iCheck" id='hourly'>
+		        	<label for='hourly'>Hourly(8,380)</label>
+				</li>
+				<li class="checkbox">
+					<input type="checkbox" value="" name="iCheck" id='fixed-price'>
+		        	<label for='fixed-price'>Fixed Price(7,436)</label>
+				</li>
+			</ul>			
+			</div>
+		</div>
+		<div class="list-aside-item list-aside-item-type panel panel-default">
+			<div class="panel-body">
+				<h4 class='list-aside-item-title'>Publish type</h4>
+				<ul class='checkbox-list list-unstyled'>
+				<li class="checkbox">
+					<input type="checkbox" value="" name="iCheck" id='featured'>
+		        	<label for='featured'>Featured</label>
+				</li>
+				<li class="checkbox">
+					<input type="checkbox" value="" name="iCheck" id='sealed'>
+		        	<label for='sealed'>Sealed</label>
+				</li>
+				<li class="checkbox">
+					<input type="checkbox" value="" name="iCheck" id='NDA'>
+		        	<label for='NDA'>NDA</label>
+				</li>
+				<li class="checkbox">
+					<input type="checkbox" value="" name="iCheck" id='urgent'>
+		        	<label for='urgent'>Urgent</label>
+				</li>
+				<li class="checkbox">
+					<input type="checkbox" value="" name="iCheck" id='fulltime'>
+		        	<label for='fulltime'>Fulltime</label>
+				</li>
+				<li class="checkbox">
+					<input type="checkbox" value="" name="iCheck" id='Hourly'>
+		        	<label for='Hourly'>Hourly</label>
+				</li>
+			</ul>	
+			</div>
+		</div>
+		<div class="list-aside-item list-aside-item-fixed panel panel-default">
+			<div class="panel-body form-inline">
+				<h4 class='list-aside-item-title'>Budget (fixed price)</h4>
+				<div class='form-group' style='margin-bottom: 10px;'>
+					<span class='budget-modify-str'>$</span>
+					<input type="number" name="" id=""  value="100" class='form-control' style='width:90px;'>
+					<span class='budget-modify-str'>-</span>
+					<input type="number" name="" id=""  value="200" class='form-control' style='width:90px;'>
+				</div>
+				<a href="" class='btn btn-primary'>submit</a>
+			</div>
+		</div>
+	</aside>
+</div>
+				<!-- header.html end-->
+
+				<!-- 主要内容部分 -->
+				<div class="col-md-9 com-content">
+				<!-- 搜索框 -->
+				<form class="list-search clearfix">
+						<div class="list-search-text-warp pull-left">
+							<i class="fa fa-search"></i>
+							<input type="text" name="" value="" placeholder="" class='form-control list-search-text'>
+						</div>
+						<div class="list-search-btn-warp pull-left">
+							<button type="submit" class='btn btn-primary list-search-btn'>
+								Search
+							</button>
+						</div>
+				</form>	
+					<article class='list-main'>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<section class='list-bar'>
+									<div class="row">
+										<div class="col-md-4">
+											<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
+										</div>
+										<div class="col-md-8">
+											<div class="select-menu form-inline">		
+												<label>
+													Sort by :
+												</label>
+												<select class="form-control">
+												  <option>Best match</option>
+												  <option>Newest</option>
+												  <option>Oldest</option>
+												  <option>Most Client Hours</option>
+												  <option>Least Client Hours</option>
+												  <option>Most Dollars Paid</option>
+												  <option>Least Dollars Paid</option>
+												  <option>Highest Feedback Score</option>
+												  <option>Lowest Feedback Score</option>
+												</select>
+										    </div>
+										</div>
+									</div>									
+								</section>
+							</div>
+							<div class="panel-body">
+								<section class="list-results clearfix">
+									<ul class="list-articles list-unstyled">
+										<li class="list-results-item list-articles-item row" style='width:100%'>
+											<div class="col-md-3 list-articles-item-img">
+												<img src="img/blog/article-1.jpg" alt="">
+											</div>
+											<div class="col-md-9 list-articles-item-bref">
+												<h3 class='list-item-title'><a href="" title="">A Personal Request From Aaron</a></h3>
+												<div class="list-articles-scence">				
+													<a href="" title="" class="author-name"><img src="./img/index/servers/13.jpg" height="18" width="18" alt="">CIRS</a>		
+													 | <time datetime="2011-01-12">2015-10-20</time>
+												</div>
+												<p>I genuinely believe in my heart this is the MOST important post you can read today. I also KNOW FOR FACT that if you will implement these 12 Powerful Resolutions for 2015 your life will never be the same. I am grateful to each of you and look ...January 1, 201591 Views</p>
+												<div class="meta-info-list-li pull-left">
+													<span class="fa fa-tags"></span>
+													<a href="" title="" class="label label-hotTags">GHS</a>
+													<a href="" title="" class="label label-hotTags">Chemical</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</section>
+							<nav class='text-center'>
+								<ul class="pagination">
+									<li class="disabled">
+										<a href="#" aria-label="Previous">
+											<span>&lt; Previous</span>
+										</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span>Next &gt;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							</div>
+						</div>
+					</article>
+				</div> 
+			</div>
+		</div>
+	</section>
+	
+<!-- footer.html -->
+<footer class='footer'>
+<div class="container-fluid">
+<div class="row footer-nav">
+	<div class="col-md-2 footer-nav-list">
+		<h4>Company</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+			<li>
+				<a href="">Jobs</a>
+			</li>
+			<li>
+				<a href="">Team</a>
+			</li>
+			<li>
+				<a href="">Press releases</a>
+			</li>
+			<li>
+				<a href="">Testimonials</a>
+			</li>
+			<li>
+				<a href="">Terms of Service</a>
+			</li>
+			<li>
+				<a href="">Privacy Policy</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Resource</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Videos</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Support</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Questions</a>
+			</li>
+			<li>
+				<a href="">Blogs</a>
+			</li>
+			<li>
+				<a href="">Language support</a>
+			</li>
+			<li>
+				<a href="">FAQ</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Social</h4>
+		<div class="footer-divider"></div>
+		<ul class='social-icon-list'>
+			<li class='social-icon'>
+				<span class='fa fa-linkedin'></span>
+				<a href="" title='Linkedin'>linkedin</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-twitter'></span>
+				<a href="" title='twitter'>twitter</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-facebook-official'></span>
+				<a href="" title='Facebook'>facebook</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-google-plus'></span>
+				<a href="" title='Google+'>google+</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4 footer-nav-list">
+		<h4>Message</h4>
+		<div class="footer-divider"></div>
+		<form action="" class='footer-contact'>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+			<div class="form-group">
+				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value='Submit' class='btn btn-secondary'></div>
+		</form>
+	</div>
+</div>
+<div class="footer-divider"></div>
+<div class="row footer-bottom">
+	<div class="col-md-6">
+		<ul class='footer-brand clearfix'>
+			<li class='footer-brand-logo'>
+				<img src="./img/index/footer-logo.png" alt=""></li>
+			<li class='footer-brand-content'>
+				<p>The best product compliance platform</p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<p class='text-right copyright'>
+			© Copyright 2015 - 2016
+			<a href="" title="">Regbuzz.com</a>
+		</p>
+	</div>
+</div>
+</div>
+</footer>
+<!-- footer.html end-->
+</body>
+</html>

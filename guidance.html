@@ -1,0 +1,525 @@
+<!-- head.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
+	<title>Document</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src='./js/vendor/respond.min.js'></script>
+    <script type="text/javascript" src='./js/vendor/require.js' data-main='./js/main.js'></script>
+	<!--[if lt IE9]> 
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
+<!-- head.html end-->
+
+<body>
+<!-- header.html -->
+	<!-- /header -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+					<img src='img/header/logo4.png' height="32" width="123"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" >
+					<form class='navbar-form navbar-left search-form'>
+						<!-- <div class="search-dropdown pull-left dropdown">
+						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
+						</span>
+						<ul class='dropdown-menu'>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
+									<span>Search for people, projects, articles...</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-user"></i>
+									<span>Search peoples</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-briefcase"></i>
+									<span>Search projects</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-folder-open"></i>
+									<span>Search articles</span>
+								</a>
+							</li>
+						</ul>
+						</div>
+						-->
+						<div class='dropdown'>
+							<div class='form-group'>
+								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+								<div class='dropdown-menu search-text-response'>
+									<ul class='list-unstyled'>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-user"></i>
+											&nbsp;&nbsp; <strong>People</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-briefcase"></i>
+											&nbsp;&nbsp; <strong>Projects</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-folder-open"></i>
+											&nbsp;&nbsp;
+											<strong>Articles</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-secondary">Submit</button>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right header-utilities">
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle'  data-toggle="dropdown">
+								<i class='fa fa-book'></i>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities--helpCenter">
+								<div class="panel panel-default">
+									<!-- <div class="header-loading">
+										<i class="fa fa-spinner fa-pulse fa-2x"></i>
+									</div> -->
+									<div class="panel-heading">
+										<strong class='heading-title'>Help center</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">
+													<i class="fa fa-quote-left"></i>
+													<span>FAQs</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+	     											<i class="fa fa-book"></i>
+													<span>Guidance</span>
+													</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-usd"></i>
+													<span>Fees & Charges</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-cog"></i>
+													<span>How it works</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-info"></i>
+													<span>Feedback</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-envelope'></i>
+								<span class='label label-news inform'>8</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong class='heading-title'>Message</strong>
+								</div>
+								<div class="panel-body header-utilities-list">
+									<ul>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+									</ul>
+								</div>
+								<div class="panel-footer clearfix">
+									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+								</div>
+							</div>
+						</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-bell'></i>
+								<span class='label label-bell inform'>2</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<strong class='heading-title'>Notice</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+										</ul>
+									</div>
+									<div class="panel-footer clearfix">
+										<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle account' data-toggle="dropdown">
+								<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px"></a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--user">
+								<!-- <div class="dropdown-loading">
+								<i class="fa fa-spinner fa-pulse"></i>
+							</div>
+							-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="user-info">
+											<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px">
+											<h4 class='user-info-name'>Aaron Su</h4>
+											<a href="" title="" class='user-info-level'>Basic User</a>
+										</div>
+										<ul class='user-info-list'>
+											<li>
+												<a href="profile.html">
+													<i class="fa fa-newspaper-o"></i>
+													<span>Profile</span>
+												</a>
+											</li>
+											<li>
+												<a href="setting.html">
+													<i class="fa fa-cog"></i>
+													<span>Settings</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-sign-out"></i>
+													<span>logout</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 页面导航部分 -->
+		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+			<div class='container'>
+				<ul class='nav navbar-nav clearfix'>
+					<li>
+						<a href="" title="" class='active'>Home</a>
+					</li>
+					<li>
+						<a href="" title="">Needs</a>
+					</li>
+					<li>
+						<a href="" title="">Providers</a>
+					</li>
+					<li>
+						<a href="" title="">Connections</a>
+					</li>
+					<li>
+						<a href="" title="">Article</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+</header>
+<!-- header.html end-->
+
+<!-- /header -->
+<section class='com-main'>
+	<div class="container">
+		<ol class="breadcrumb">
+			<li>
+				<a href="#">Help Center</a>
+			</li>
+			<li class="active">Guidance</li>
+		</ol>
+		<div class="help-main">
+				<div class="help-content">
+				<div class='help-title'>
+					<h1 class='help-title-primary'>
+						Guidance
+					</h1>
+				</div>
+				<div>
+					<div class='guidance-content'>
+					    <ul class="nav nav-tabs">
+					        <li role="presentation" class="active">
+					            <a href="#home" data-toggle="tab">User guidance</a>
+					        </li>
+					        <li role="presentation">
+					            <a href="#tab" data-toggle="tab">Provider guidance</a>
+					        </li>
+					    </ul>
+					
+					    <!-- Tab panes -->
+					    <div class='tab-content'>
+					        <div role="tabpanel" class="tab-pane fade in active" id="home">
+					        	<div class="page">
+
+					        		<p>Get work done easily and on demand with these best practices for finding, engaging, and working with Product compliance professionals on Regbuzz.</p>
+					        		<h3>ACT PROFESSIONALLY TO ATTRACT PROFESSIONALS</h3>
+					        		<p>By representing yourself and your business in a way that is respectful and businesslike, you’re more likely to attract top talent. Write job posts that are complete and professional, and add a verified payment method to demonstrate your business’ legitimacy.</p>
+					        		<h3>A LITTLE EFFORT GOES A LONG WAY IN FINDING THE RIGHT Provider</h3>
+					        		<p>Hiring online is a lot like hiring offline—the right talent is out there, but finding them takes some initiative. These steps will help you search successfully, vet candidates effectively, and get your project off the ground with the right Provider  in place:</p>
+					        		<ul class='islisted'>
+					        			<li>Post a detailed description of your project with clear goals, realistic deliverables, and defined timeframes. Ask providers to answer a few key questions in their applications to help narrow down the field.</li>
+					        			<li>Set realistic rates. This will attract quality talent with the skills to deliver on your project in a professional, timely way. </li>
+					        			<li>Decline an applicant if they’re not the right fit. Providers  have a limited number of applications, so declining an application allows them to pursue other opportunities.</li>
+					        			<li>Once you have narrowed down the field, evaluate the top applications by considering all available information. Personally interview a few providers before making a hire.</li>
+					        			<li>An advantage of hiring online is the ability to “test drive” a provider. Set up a small project (you can limit the contract hours) to get a better sense of their skills before you hire for a larger project.</li>
+					        		</ul>
+					        		<h3>GREAT WORK BEGINS WITH GREAT COMMUNICATION</h3>
+					        		<p>Just as with any team, clear and straight forward communication is key to keeping a project on track.</p>
+					        		<p>Some options you may want to consider:</p>
+					        		<ul class='islisted'>
+					        			<li>Begin the project with a kick off meeting to introduce yourself and set mutual expectations. This is especially important if you’re working with a  provider for the first time. The more info you give your provider about the project and your business, the better.</li>
+					        			<li>Keep your timeline on track by responding promptly to requests for additional information.</li>
+					        			<li>Give kudos for a job well done or clearly communicate any changes you need to deliverables.</li>
+					        		</ul>
+					        		<h3>STAY ON TOP OF YOUR WEEKLY ROUTINE</h3>
+					        		<p>Check your provider’s Work Diary every week. At the end of each week, review the summary provided of all weekly work and payments. If there are discrepancies, try to work it out directly with your provider. If you are unable to come to a resolution, you may file a dispute through Regbuzz.</p>
+					        		<h3>LAST, BUT NOT LEAST…</h3>
+					        		<p>The entire Regbuzz community depends on honest and objective feedback. Once the contract is over, please take some time to share your experience with other clients using the Regbuzz marketplace.</p>
+					        	</div>
+					        	
+					        </div>
+					        <div role="tabpanel" class="tab-pane fade in " id="tab">
+						        <div class="page">
+						        	<p>Great providers are what make Regbuzz truly special. Below are some best practices to help you land engagements, grow your product compliance consulting business, and thrive in our provider community.</p>
+						        	<h3>ACT PROFESSIONALLY. ALWAYS</h3>			        	
+						        	<p>Regbuzz is a community of skilled product compliance professionals. Be polite, courteous, and respectful in everything you do here, from the content of your profile and proposals to your postings on our forum.</p>
+						        	<h3>COMMUNICATION IS THE KEY TO GETTING—AND KEEPING—CLIENTS!</h3>
+						        	<p>An informed client is a happy client. And, just as in the offline world, communicating early and clearly is key to keep satisfying your clients.</p>
+						        	<p>These are our top communications tips, from landing the job to finishing the project:</p>
+						        	<ul class='islisted'>
+						        		<li>Outline a few clear and realistic expectations for you and your client to agree upon before you start the project. Document the agreement, including deliverables, deadlines, availability, and communication.</li>
+						        		<li>Respond quickly to questions and messages.</li>
+						        		<li>Consider sending your client regular updates.</li>
+						        		<li>When in doubt, ask! Don’t be afraid to contact your client with project-related questions or concerns.</li>
+						        		<li>Use the Message Center to document all agreements and discussions between yourself and your client.</li>
+						        		<li>Be upfront about your availability. Let your client know when you’re online and when you’re unavailable.</li>
+						        		<li>If you’re going to miss a deliverable deadline, tell your client as soon as possible! Tell them why you can’t meet the deadline and propose a new date for delivery.</li>
+						        		<li>If you can’t complete a contract, tell your client and Customer Service immediately.</li>
+						        	</ul>
+						        	<h3>KICK START YOUR product compliance consulting business</h3>
+						        	<p>You’re your own boss on Regbuzz. It’s up to you to market your skills, advertise your services, set your rates and payment terms, find the right engagements, determine how to perform your work, and invest in your own success.</p>
+						        	<h3>STEP ONE: CREATE A GREAT provider PROFILE</h3>
+						        	<p>Your profile is the most important advertisement you have to show a potential client you’re right for the work. It’s your business card, resume, CV, portfolio, and references rolled into one!</p>
+						        	<p>How you complete your profile is up to you. A complete, professional-looking profile generally includes at least your full name, title, and photo. It can show off past successes (number of years of experience in an industry, education level, significant projects), highlights your skills, and showcases the results of your Regbuzz skills tests.</p>
+						        	<p>Consider linking images or examples of work you’ve accomplished. (But you’ll want to get permission from your client first.) Don’t have a portfolio? Upload recommendations from previous clients!</p>
+						        	<p>Finally, you’ll want to check for errors. The provider with a well-written, professional profile will always be a client’s first choice. Avoid using slang, ALL CAPS or text shortcuts, and double-check that everything is grammatically correct and spelled properly.</p>
+						        	<h3>STEP TWO: APPLY TO THE RIGHT PROJECT</h3>
+						        	<p>To increase your chances of getting hired and get set up for a successful project, only submit proposals for projects you have the skills to do well. This leads to a job well done, which leads to satisfied clients which leads to more jobs! Also, the number of applications you can submit without additional membership fees is limited, so choose your applications wisely.</p>
+						        </div>
+						       
+					        </div>
+					    </div>
+					</div>
+				</div>
+		</div>
+		</div>
+	</div>
+</section>
+
+<!-- 页脚部分 -->
+<!-- footer.html -->
+<footer class='footer'>
+<div class="container-fluid">
+<div class="row footer-nav">
+	<div class="col-md-2 footer-nav-list">
+		<h4>Company</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+			<li>
+				<a href="">Jobs</a>
+			</li>
+			<li>
+				<a href="">Team</a>
+			</li>
+			<li>
+				<a href="">Press releases</a>
+			</li>
+			<li>
+				<a href="">Testimonials</a>
+			</li>
+			<li>
+				<a href="">Terms of Service</a>
+			</li>
+			<li>
+				<a href="">Privacy Policy</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Resource</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Videos</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Support</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Questions</a>
+			</li>
+			<li>
+				<a href="">Blogs</a>
+			</li>
+			<li>
+				<a href="">Language support</a>
+			</li>
+			<li>
+				<a href="">FAQ</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Social</h4>
+		<div class="footer-divider"></div>
+		<ul class='social-icon-list'>
+			<li class='social-icon'>
+				<span class='fa fa-linkedin'></span>
+				<a href="" title='Linkedin'>linkedin</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-twitter'></span>
+				<a href="" title='twitter'>twitter</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-facebook-official'></span>
+				<a href="" title='Facebook'>facebook</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-google-plus'></span>
+				<a href="" title='Google+'>google+</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4 footer-nav-list">
+		<h4>Message</h4>
+		<div class="footer-divider"></div>
+		<form action="" class='footer-contact'>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+			<div class="form-group">
+				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value='Submit' class='btn btn-secondary'></div>
+		</form>
+	</div>
+</div>
+<div class="footer-divider"></div>
+<div class="row footer-bottom">
+	<div class="col-md-6">
+		<ul class='footer-brand clearfix'>
+			<li class='footer-brand-logo'>
+				<img src="./img/index/footer-logo.png" alt=""></li>
+			<li class='footer-brand-content'>
+				<p>The best product compliance platform</p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<p class='text-right copyright'>
+			© Copyright 2015 - 2016
+			<a href="" title="">Regbuzz.com</a>
+		</p>
+	</div>
+</div>
+</div>
+</footer>
+<!-- footer.html end-->
+</body>
+</html>

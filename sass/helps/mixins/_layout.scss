@@ -1,0 +1,16 @@
+﻿// layout 文件
+// ------------------------------------------------------------------------------------------
+//Centered container element
+%container-fixed{
+  margin-right: auto;
+  margin-left: auto;
+
+}
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  @extend %container-fixed;
+  @extend %clearfix;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+}
+// layout 文件结束------------------------------------------------------------------------------------------

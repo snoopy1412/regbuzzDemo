@@ -1,0 +1,70 @@
+﻿// tab切换区域
+.m-project-list{
+	background-color: #fff;
+	@extend %noStyle;
+
+	.project-list-content{
+		padding-top: 20px;
+	}
+	.project-list-content-header{
+		padding-top: 20px;
+		.project-refresh,.project-search{
+			margin-bottom: 10px;
+		}
+	}
+	.project-search{
+
+	}
+
+	.project-list{
+		padding-top: 10px;
+		.project-list-table{
+			text-align: center;
+			width: 100%;
+			th{
+				font-size: 16px;
+				font-size: 1.6rem;
+				background-color:  #f8f8f8;
+				padding: 15px 10px;
+				a{
+					color:#555;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		tr{
+			&:hover{
+				background-color: #fbfbfb;
+			}
+		}
+		td{
+			border-top: none;
+			border-bottom: 1px solid #E7EAEC;
+			padding: 15px 10px;
+			vertical-align: middle;
+
+		}
+
+		// 四种状态
+		// 普通状态
+		.project-title{
+			a {color:#444;
+				&:hover{
+				text-decoration: none;
+				}
+			}
+		}
+		.project-cancel,.project-termination{
+			.project-title{text-decoration: line-through;}
+		}
+	}
+
+	// 接受的任务
+	.project-list-accepted{
+		.project-title{
+			text-align: left;
+		}
+	}
+}

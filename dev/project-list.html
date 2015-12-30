@@ -1,0 +1,376 @@
+<!-- head.html -->
+<% include ../publicTpl/head.html %>
+<!-- head.html end-->
+<body>
+<!-- header.html -->
+<% include ../publicTpl/header.html %>
+<!-- header.html end-->
+
+<section class='com-main'>
+	
+<div class="container project-list-warp">
+		<!-- 调用module/projectList样式 -->
+	<div class="m-project-list">
+
+		<!-- 头部样式 -->
+		<div class='project-list-header'>
+			<ul class="nav nav-tabs">
+			  <li role="presentation" class="active"><a href="#">Accepted Project</a></li>
+			  <li role="presentation"><a href="#">Published Project</a></li>
+			</ul>
+		</div>
+
+		<!-- 主体内容 -->
+		<div class="project-list-content">
+			<div class='pure-g project-list-content-header'>
+				<div class="pure-u-1 clearfix">
+					<div class="project-filter pull-left">
+						<form action="" method="get" accept-charset="utf-8" class='form-inline'>
+							<div class="form-group">
+
+								<!-- 接受状态下的筛选条件 -->
+								<select class='form-control'>
+									<option value=""> - Choose State - </option>
+									<option value="">bidding</option>
+									<option value="">accepted</option>
+									<option value="">termination</option>
+									<option value="">cancel</option>
+								</select>
+
+								<!-- 发布状态下的筛选条件 -->
+								<select class='form-control' style="display:none">
+									<option value=""> - Choose State - </option>
+									<option value="">Progress</option>
+									<option value="">Finish</option>
+									<option value="">Invitation</option>
+									<option value="">Cancel</option>
+								</select>
+							</div>
+						</form>
+					</div>
+					<!-- 搜索 ajax调用方式-->
+					<div class="project-search pull-right">
+						<div class="form-search--hasbutton clearfix">
+						      <i class="fa fa-search form-search-icon"></i>
+						      <input type="text" placeholder="Search..." class='form-search-text project-search-text'>
+						      <div class="btn btn-primay form-btn">Search</div>
+					    </div>	
+					</div>	
+				</div>
+			</div>			
+			
+			<!-- 列表 -->
+
+			<!-- 发布任务的时候，分为几种状态？
+				1. 进行中 progress
+				2. 已完成 finished
+				3. 投标中 invitation
+				5. 已取消 canceled
+			 -->
+			<div class="project-list">
+
+				<!-- 接收的任务列表 -->
+				<table class='project-list-table project-list-accepted'  style='display: none'>
+					<thead>
+						<tr>
+							<th>	
+								<a href="javascript:;" title="hits are ordered">state</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">number</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">title</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">bids</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">progress</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">creation time</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">actions</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					   <tr>
+							<td class="project-status">
+	                            <span class="label label-warning">bidding</span>
+	                        </td>
+	                        <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">Globally Harmonized System (GHS)</a>
+	                            <br>
+	                            <small>
+	                            	10 bids
+	                            </small>
+	                        </td>
+	                        <td class='project-budget'>
+	                        	10,000$
+	                        </td>
+							<td class="project-completion">
+	                            <small>0</small>
+	                            <div class="progress progress-mini">
+	                                <div style="width: 0%;" class="progress-bar"></div>
+	                            </div>
+	                        </td>
+							<td class="project-time">
+	                           <small>2014.08.15</small>
+	                        </td>
+
+							<td class="project-actions">
+	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+	                           
+	                        </td>
+						</tr>
+						<tr>
+							<td class="project-status">
+                                <span class="label label-success">accepted</span>
+                            </td>
+                            <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">Why is global harmonization necessary?</a>
+                            </td>
+                            <td class='project-budget'>
+	                        	200$
+	                        </td>
+							<td class="project-completion">
+                                <small>48%</small>
+                                <div class="progress progress-mini">
+                                    <div style="width: 48%;" class="progress-bar"></div>
+                                </div>
+                            </td>
+							<td class="project-time">
+                               <small>2014.08.15</small>
+                            </td>
+
+							<td class="project-actions">
+                                <a href="projects.html#" class="btn btn-ghost-default  btn-small"><i class="fa fa-folder"></i> Detail </a>
+                                
+                            </td>
+							
+						</tr>
+						<tr class='project-termination'>
+							<td class="project-status">
+	                            <span class="label label-default">termination</span>
+	                        </td>
+	                        <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">What are the two major elements in GHS?</a>
+	                        </td>
+	                        <td class='project-budget'>
+	                        	21,121$
+	                        </td>
+							<td class="project-completion">
+	                            <small>0%</small>
+	                            <div class="progress progress-mini">
+	                                <div style="width:0" class="progress-bar"></div>
+	                            </div>
+	                        </td>
+							<td class="project-time">
+	                           <small>2014.08.15</small>
+	                        </td>
+
+							<td class="project-actions">
+	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+	                        </td>
+						</tr>
+						<tr class='project-cancel'>
+							<td class="project-status">
+                                <span class="label label-default">Canceled</span>
+                            </td>
+                            <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">What are some key terms in the GHS Vocabulary?</a>
+                            </td>
+                            <td class='project-budget project-bids-cancel'>
+	                        	12,111$
+	                        </td>
+							<td class="project-completion">
+                                <small>0</small>
+                                <div class="progress progress-mini">
+                                    <div style="width: 0" class="progress-bar"></div>
+                                </div>
+                            </td>
+							<td class="project-time">
+                               <small>2014.08.15</small>
+                            </td>
+
+							<td class="project-actions">
+                                <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+                               
+                            </td>
+							
+						</tr>
+					</tbody>
+				</table>	
+
+				<!-- 发布的任务列表 -->
+				<table class='project-list-table project-list-published'>
+					<thead>
+						<tr>
+							<th>	
+								<a href="javascript:;" title="hits are ordered">state</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">number</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">title</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">bids</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">progress</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">creation time</a>
+							</th>
+							<th>
+								<a href="javascript:;" title="hits are ordered">actions</a>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					   <tr>
+							<td class="project-status">
+	                            <span class="label label-warning">Invitation</span>
+	                        </td>
+	                        <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">Globally Harmonized System (GHS)</a>
+	                        </td>
+	                        <td class='project-bids'>
+	                        	82
+	                        </td>
+							<td class="project-completion">
+	                            <small>0</small>
+	                            <div class="progress progress-mini">
+	                                <div style="width: 0%;" class="progress-bar"></div>
+	                            </div>
+	                        </td>
+							<td class="project-time">
+	                           <small>2014.08.15</small>
+	                        </td>
+
+							<td class="project-actions">
+	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+	                           
+	                        </td>
+						</tr>
+						<tr>
+							<td class="project-status">
+                                <span class="label label-success">Progress</span>
+                            </td>
+                            <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">Why is global harmonization necessary?</a>
+                            </td>
+                            <td class='project-bids'>
+	                        	82
+	                        </td>
+							<td class="project-completion">
+                                <small>48%</small>
+                                <div class="progress progress-mini">
+                                    <div style="width: 48%;" class="progress-bar"></div>
+                                </div>
+                            </td>
+							<td class="project-time">
+                               <small>2014.08.15</small>
+                            </td>
+
+							<td class="project-actions">
+                                <a href="projects.html#" class="btn btn-ghost-default  btn-small"><i class="fa fa-folder"></i> Detail </a>
+                                
+                            </td>
+							
+						</tr>
+						<tr>
+							<td class="project-status">
+	                            <span class="label label-primary">Finished</span>
+	                        </td>
+	                        <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">What are the two major elements in GHS?</a>
+	                        </td>
+	                        <td class='project-bids'>
+	                        	82
+	                        </td>
+							<td class="project-completion">
+	                            <small>100%</small>
+	                            <div class="progress progress-mini">
+	                                <div style="width:100%;" class="progress-bar"></div>
+	                            </div>
+	                        </td>
+							<td class="project-time">
+	                           <small>2014.08.15</small>
+	                        </td>
+
+							<td class="project-actions">
+	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+	                        </td>
+						</tr>
+						<tr class='project-cancel'>
+							<td class="project-status">
+                                <span class="label label-default">Canceled</span>
+                            </td>
+                            <td>
+	                        	<span>281975</span>
+	                        </td>
+							<td class="project-title">
+	                            <a href="project_detail.html">What are some key terms in the GHS Vocabulary?</a>
+                            </td>
+                            <td class='project-bids project-bids-cancel'>
+	                        	0
+	                        </td>
+							<td class="project-completion">
+                                <small>0</small>
+                                <div class="progress progress-mini">
+                                    <div style="width: 0" class="progress-bar"></div>
+                                </div>
+                            </td>
+							<td class="project-time">
+                               <small>2014.08.15</small>
+                            </td>
+
+							<td class="project-actions">
+                                <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
+                               
+                            </td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		    
+		</div>
+		
+	</div>
+</div>
+	
+</section>
+
+<!-- footer.html -->
+<% include ../publicTpl/footer.html %>
+<!-- footer.html end-->
+</body>
+</html>

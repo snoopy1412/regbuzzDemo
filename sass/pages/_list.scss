@@ -1,0 +1,274 @@
+﻿// list-search
+
+.list-search-warp{
+
+}
+.list-search{
+    padding: 0px 0 20px 0;
+}
+.list-search-text-warp{
+        padding:0 10px;
+        margin-bottom: 10px;
+        width: 90%;
+        position: relative;
+        .fa-search{
+            position: absolute;
+            left: 20px;
+            top:12px;
+            color:#909090;
+        }
+    }
+.list-search-text{
+    padding-left:30px;
+}
+    .list-search-btn-warp{
+        padding-right:10px;
+        margin-bottom: 10px;
+        width: 10%;
+
+     .list-search-btn{
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px){
+        .list-search-text-warp{
+            clear:both;
+            width: 100%;
+        }
+        .list-search-btn-warp{
+            clear:both;
+            padding-left: 10px;
+            .list-search-btn{
+                width: auto;
+            }
+        }
+    }   
+  @media (min-width: $screen-sm-min) {
+    .list-search-text-warp{
+        width: 85%;
+    }
+    .list-search-btn-warp{
+        width: 15%;
+        .list-search-btn{
+            width: 100%;
+        }
+    }
+  }
+    @media (min-width: $screen-md-min){
+    .list-search-text-warp{
+        width: 90%;
+    }
+    .list-search-btn-warp{
+        width: 10%;
+        .list-search-btn{
+            width: 100%;
+        }
+    }
+  }
+
+// list-search
+
+// aside
+.list-aside-item{
+   .list-aside-item-title{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+   }
+}
+
+.list-aside-item-method-list{
+    a{
+        display:block;
+        i{
+            padding-right:30px;
+        }
+    }
+}
+.budget-modify-str{
+    display: inline-block;
+    padding:0 5px;
+}
+.btn--budget{
+    margin-left: 5px;
+    vertical-align:middle;
+}
+// aside
+
+.list-bar{
+    .result{
+        padding-top:7px;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+    .select-menu{
+        float: right;
+        @media screen and (max-width: 768px){
+            float: left;
+        }
+    }
+}
+
+// list
+.list-results
+{
+    padding-top: 0;
+    &>ul{
+        margin-bottom: 0;
+    }
+}
+
+// list公共部分
+// **************************************************************************************
+.list-results-item
+{
+    width: 100%;
+    margin-left: 0;
+    padding: 30px 20px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #eee;
+    -webkit-transition: border-color 0.75s;
+    -o-transition: border-color 0.75s;
+    transition: border-color 0.75s;
+    &:hover{
+        border:1px solid $palette-blue;
+    }
+   
+}   
+.list-item-title{
+    margin-top: 0;
+    a{
+        font-size: 18px;
+        font-size: 1.8rem;
+        font-weight: 600;
+
+        color:#333;
+        &:hover{
+            color:$palette-blue;
+        }
+    }
+} 
+
+// list公共部分*****************************************************************************
+
+/* search for peoples */
+.list-peoples{
+
+}
+.list-peoples-img{
+    padding: 4px;
+    text-align: center;
+    img{
+        max-width: 120px;
+        border-radius: 4px;
+    }
+    .btn--save{
+        margin-top: 10px;
+    }
+}
+.list-peoples-position{
+    color:#555;
+    font-size: 12px;
+}
+.list-peoples-info{
+    
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.list-peoples-item-bref{
+    // margin-bottom: 0;
+}
+.list-peoples-item-grade{
+    margin-bottom: 10px;
+    .grade-item-name{
+        display: inline-block;
+        padding: 2px 5px;
+        border-radius: 4px;
+        background-color: #fb8a12;
+        color:#fff;
+        font-weight: 600;
+        margin-right: 5px;
+    }
+}
+.list-peoples-item-skills{
+}
+.list-peoples-item-aside{
+    .btn--hire{
+        margin-top: 5px;
+    }
+    text-align: center;
+    .charging-standard{
+        font-size: 20px;
+         font-size: 2rem;
+         margin-top: 25px;
+         span{
+            font-size: 12px;
+         }
+    }
+}
+/* search for peoples end */
+
+
+/* search for projects */
+.list-peojects-item-user
+{
+    padding-bottom: 10px;
+    color:#b5b5b5;
+}
+
+.list-peojects-item-left
+{
+    padding-right: 20px;
+}
+.list-peojects-item-right
+{   
+    text-align: center;
+    @media screen and (max-width: 768px){
+        text-align: left;
+    }
+    .btn--bid
+    {   
+        margin-top: 5px;
+    }
+    .budget
+    {   
+        font-size: 20px;
+        font-size: 2rem;
+
+        margin: 25px 0;
+    }
+}
+/* search for projects end */
+
+/* search for articles */
+.list-articles-item-img{
+    overflow: hidden;
+    padding: 4px;
+    img{
+        max-width: 100%;
+        border-radius: 4px;
+    }
+}
+.list-articles-scence{
+    color:#b5b5b5;
+    padding-bottom:5px;
+    font-size:12px;
+    a{
+        img{
+            display:inline-block;
+            margin-right:5px;
+            border-radius:4px;
+        }
+    }
+}
+.list-articles-item-bref{
+    padding-left:20px;
+    padding-right:10px;
+}
+/* search for articles end*/
+

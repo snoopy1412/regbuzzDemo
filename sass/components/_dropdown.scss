@@ -1,0 +1,49 @@
+﻿// theme
+
+// 默认
+.dropdown-default{
+	position: relative;
+	@include dropdown(#fff,1);
+	.dropdown-menu--up{
+		@include dropdownPosition(50px,0,180px);
+	}
+	.dropdown-menu--left{
+		@include dropdownPosition(105%,0,300px);
+	}		
+}
+// 黑色
+.dropdown-black{	
+	@include dropdown($gray-darker,1,transparent,false,#f1f1f1,transparent,$gray,#ccc);
+}
+
+// 透明0.8
+.dropdown-opacity-default{
+
+}
+.dropdown-opacity-black{
+	@include dropdown($gray-darker,0.8,transparent,false,#f1f1f1,transparent,$gray,#ccc);
+}
+
+
+// 方向
+.dropdown-menu-up{
+	@include dropdownPosition(82px,0,180px);
+}	
+
+.dropdown-menu-left{
+	@include dropdownPosition(0,101%,300px);
+}
+
+// 带箭头
+.dropdown-menu-up-arrow{
+	&:after{
+		content: '';
+        position: absolute;
+        @include arrow(bottom,8px,rgba($gray-darker,0.8));
+        top:-16px;
+        left:20px;			
+	}		
+}
+
+
+

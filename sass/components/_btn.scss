@@ -1,0 +1,154 @@
+﻿.btn{
+  touch-action: manipulation;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  font-family: $font-family-base;
+  margin: 0em 0.25em 0em 0em;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  text-transform: none;
+  text-shadow: none;
+  line-height: remToPx(1);
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius:remToPx(0.28571429);
+  border-radius: 0.28571429rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+
+  &:hover{
+  background-image: none;
+  text-decoration: none;
+   box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  }
+
+  &:active{
+  background-image: '';
+  box-shadow: 0px 0px 0px 1px transparent inset, none;    
+  }
+}
+
+.btn-larger{
+  font-size: 1.3em;
+}
+.btn-small{
+  font-size: 13px;
+}
+
+// 普通按钮模式
+// -----------------------------------------------------------------------------
+  // 默认
+  .btn-default{
+    @include btn;
+    &:hover{
+        @include btn_hover;
+    }
+    &:active{
+        @include btn_active;
+    }
+  }
+
+  // 橙色
+  .btn-orange{
+    @extend %orange;
+  }
+
+  // 蓝色
+  .btn-primay{
+    @extend %primary;
+  }
+// 普通按钮结束
+
+  // 青色
+  .btn-success{
+    @extend %success;
+  }
+
+// 幽灵按钮
+// -----------------------------------------------------------------------------
+.btn-ghost-white{
+  @include btn(transparent,$gray-lighter);
+    border: 1px solid $gray-lighter;      
+    &:hover{
+      @include btn_hover($gray-lighter, #000)   
+    }
+}
+
+.btn-ghost-default{
+  @include btn(transparent,#aaa);
+    border: 1px solid #aaa;      
+    &:hover{
+      @include btn_hover(whiteSmoke, #444)   
+    }
+}
+
+.btn-ghost-orange{
+   @include btn(transparent,$palette-orange);
+    border: 1px solid $palette-orange;  
+     &:hover{
+      @include btn_hover($palette-orange, $gray-lighter)         
+    }     
+}
+
+.btn-ghost-primary{
+   @include btn(transparent,$palette-blue);
+    border: 1px solid $palette-blue;  
+     &:hover{
+      @include btn_hover($palette-blue, $gray-lighter)         
+    }     
+}
+
+.btn-ghost-red{
+   @include btn(transparent,$palette-red);
+    border: 1px solid $palette-red;  
+     &:hover{
+      @include btn_hover($palette-red, $gray-lighter)         
+    }     
+}
+
+.btn-ghost-success{
+   @include btn(transparent,$palette-teal);
+    border: 1px solid $palette-teal;  
+     &:hover{
+      @include btn_hover($palette-teal, $gray-lighter)         
+    }     
+}
+
+// 特殊
+.btn-ghost-special{
+  @include btn(transparent,$palette-blue);
+    border: 1px solid $palette-blue;      
+    &:hover{
+      @include btn_hover($palette-blue, #fff);
+         border: 1px solid $palette-blue;
+    }
+}
+// 幽灵按钮结束
+
+
+// 胶囊按钮
+// -----------------------------------------------------------------------------
+.btn-pill-white{
+  
+}
+.btn-pill-orange{ 
+    padding-left: remToPx(4);
+    padding-right:remToPx(4);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    border-radius: 200px;
+    @extend %orange;
+}
+// 胶囊按钮结束

@@ -1,0 +1,83 @@
+﻿// 注册步骤模块
+.m-steps{
+      width: 100%;
+      display: table;
+      margin: 30px auto 0;
+      padding: 0;
+      overflow: hidden;
+      list-style: none;
+      border: 1px solid #d4d4d5;
+      border-left:0;
+      border-radius: 4px 4px 0 0;
+  li{
+      position: relative;
+      display: table-cell;
+      width: 33.3%;
+      padding: 1.6em 2em;
+      color: #ccc;
+      cursor: default;
+      border-left: 1px solid #DDD;
+      background-color: #fff; 
+  }
+  li:after{
+    position: absolute;
+    z-index: 2;
+    content: '';
+    top: 50%;
+    right: 0;
+    border: solid;
+    background-color: #fff;
+    width: 1.14285714em;
+    height: 1.14285714em;
+    border-color: rgba(34,36,38,.15);
+    border-width: 0 1px 1px 0;
+    -webkit-transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+    transition: background-color .1s ease,opacity .1s ease,color .1s ease,box-shadow .1s ease;
+    -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    -ms-transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    transform: translateY(-50%) translateX(50%) rotate(-45deg);
+  }
+  li:last-child:after{
+      display: none;
+  }
+  .current{
+      cursor: pointer;
+      background-color: #f0f0f0;
+      color:#555;      
+        .m-steps-icon{
+          color:#555;
+        }
+      &:after{
+        background-color: #f0f0f0;
+      }
+  }
+  .done{
+        background-color: white;
+        color: #333;    
+        .m-steps-icon{
+          // color:#21ba45;
+        }
+  }
+
+  .m-steps-icon{
+      float: left;
+      margin-right: 15px;
+      margin-top:2px;
+      padding-bottom: 5px;
+      font-size: 40px;
+      font-size: 4rem;
+  }
+  .step{
+    display: block;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+
+  // 两边圆角
+  li:first-child{
+    border-radius: 4px 0 0 0;
+  }
+  li:last-child{
+    border-radius: 0 4px 0 0;
+  }
+}

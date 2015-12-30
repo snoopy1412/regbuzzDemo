@@ -1,0 +1,24 @@
+ul{
+	padding: 0;
+	margin: 0;
+	li{
+		list-style: none;
+	}
+}
+// Highlighting
+// -------------------------
+
+::-webkit-selection {
+  background-color: $palette-teal;
+  color: $state-selection-text;
+}
+
+::-moz-selection {
+  background-color: $palette-teal;
+  color: $state-selection-text;
+}
+
+::selection {
+  background-color:$palette-teal;
+  color: $state-selection-text;
+}

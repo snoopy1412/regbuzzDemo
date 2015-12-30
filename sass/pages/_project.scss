@@ -1,0 +1,91 @@
+.project-list-warp{
+	padding: 30px;
+	background-color: #fff;
+}
+.project-detail{
+
+}
+	.project-detail-content
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    border-radius: 4px;
+    background-color: #fff;
+}
+.project-detail-title
+{
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+
+    color: #676a6c;
+    .project-detail-title-detail{
+        font-size:14px;
+        font-style: 1.4rem;
+        text-align: right;
+        display: inline-block;
+        margin-left: 30px;
+
+    }
+}
+.project-detail-candidates{
+    .candidates{
+        margin-right: 4px;
+        img{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    }
+}
+.project-detail-bids
+{
+    padding-top: 24px;
+}
+
+
+.project-detail-aside
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.project-detail-aside-item
+{
+    margin-bottom: 30px;
+}
+.project-detail-aside-item-title
+{
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    margin: 20px 0 10px 0;
+
+    color: #676a6c;
+}
+.project-detail-aside-documents
+{
+    li
+    {
+        margin-bottom: 5px;
+        i,
+        a
+        {
+            color: #676a6c;
+        }
+    }
+}
+.project-detail-aside-documents
+{
+    ul
+    {
+        padding-left:0px;
+    }
+    .documents-name{
+        display: inline-block;
+        padding-left: 10px;
+    }
+}

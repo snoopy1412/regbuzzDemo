@@ -1,0 +1,136 @@
+.help-header{
+	padding-top: 30px;
+	padding-bottom: 70px;
+	background: url(https://cdn5.f-cdn.com/build/css/images/howitworks/howitworks-hero-bg.jpg?v=95073763e0ff82c98f0d547e41f59981&amp;m=6) no-repeat 50%;
+	text-align: center;
+	color:#fff;
+	h1{
+		font-size: 4rem;
+	}
+}
+.help-panel{
+	padding: 20px;
+}
+.help-panel-card{
+	display: block;
+	border-radius: 4px;
+	text-align: center;
+	padding: 20px;
+	margin: 20px;
+	color:#fff;
+	cursor: pointer;
+	h3{
+		font-size: 1.6rem;
+		margin-top: 10px;
+	}
+	&:hover{
+		color:#fff;
+	}
+}
+.help-panel-card-faqs{
+	background-color: #1bbc9d;
+}
+.help-panel-card-guidance{
+	background-color: #e84c3d;
+}
+.help-panel-card-fees{
+	background-color: #96a6a6;
+}
+.help-panel-card-works{
+	background-color: #3598dc;
+}
+.help-panel-card-feedback{
+	background-color: #9c59b8;
+}
+.help-panel-card-contact{
+	background-color: #34495d;
+}
+
+.help-main{
+	// guidance
+	.guidance-content{
+		h3{
+			font-size: 14px;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin-top: 30px;
+		}
+		.page{
+			padding:30px;
+		}
+		.islisted{
+			padding-left: 40px;
+			li{
+				list-style: disc;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	// fees
+	.fees-content{
+		background-color: #fff;
+		padding: 20px;
+	}
+	.fees-table{
+		text-align: center;
+		th{
+			text-align: center;
+		}
+		.fa-times{
+			color:#ccc;
+		}
+	}
+	.fees-table-title{
+		font-weight: 300;
+		.fees-number{
+			display: block;
+			font-size: 2.6rem;
+			margin: 10px 0;
+			sub{
+				font-size: 1.2rem;
+			}
+		}
+		.fees-time{
+			color:#767676;
+		}
+		.fees-level{
+			font-weight: 300;
+			font-size: 1.6rem;
+		}
+	}
+	.fees-advice{
+		cursor: pointer;
+		border-bottom:1px dotted #ccc;
+	}
+
+	// works
+	.works-tab-content{
+		h4{
+			font-size: 16px;
+			font-size: 1.6rem;
+			font-weight: 600;
+		}
+		li{
+			padding: 20px;
+			color:#fff;
+		}
+	}
+}
+.help-content{
+		border:1px solid #ccc;
+	border-radius: 4px;
+	padding: 20px;
+	background-color: #fff;
+}
+.help-title{
+	margin-bottom: 30px;
+	.help-title-primary{
+		font-size: 34px;
+		font-weight: 600;
+		border-bottom: 2px solid $palette-red;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+}

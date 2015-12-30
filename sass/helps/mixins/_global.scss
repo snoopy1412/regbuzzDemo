@@ -1,0 +1,140 @@
+﻿// 全局使用
+// -----------------------------------------------------------------------------------
+// 透明度 兼容ie8版本
+@mixin opacity($opacity:0.5) {
+  opacity: $opacity ;
+  filter: alpha(opacity=$opacity*100);
+}
+
+
+
+// Placeholder 样式兼容
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+// 响应式图片
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: 100%; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
+
+// 清除浮动
+%clearfix{
+    zoom:1;
+    &:before,
+    &:after {
+      content: " "; 
+      display: block; 
+    }
+    &:after {
+      clear: both;
+    }  
+}
+
+// 箭头函数
+%arrow{
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+}
+@mixin arrow($dir,$width,$color){
+    @extend %arrow;
+    border-#{$dir}-color:$color;
+    border-width:$width;
+}
+
+// 固定footer函数,为了简化操作，使用了固定的页面布局结构
+/*
+*<div class='com-stick-root'>
+*   <div class='com-stick-content'></div>
+*</div>
+*<div class='com-stick-footer'></div>
+*/
+%stick-root{
+    clear: both;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;    
+}
+%stick-footer{
+    clear: both;
+    position: relative;  
+}
+
+@mixin sticky-footer($footer-height) {
+  .com-stick-root {
+    @extend %stick-root;
+    margin-bottom: -$footer-height;
+    .com-stick-content {
+      // height: $footer-height;
+    }
+  }
+  .com-stick-footer {
+    @extend %stick-footer;
+    height: $footer-height;
+  }
+}
+
+// 不换行，溢出省略号
+ %ellipsis{
+    white-space:nowrap;  //不换行
+    overflow:hidden;
+    text-overflow:Ellipsis; // 溢出省略号
+ }
+
+ // 分割线
+ %divider{
+    height: 1px;
+    width:100%;
+    overflow: hidden;
+ }
+
+
+// rgba 的 ie 8 解决方案
+/*
+* 源于 http://www.cnblogs.com/huangxi/archive/2015/11/01/4928823.html
+* 
+ */
+
+//背景色半透明
+@mixin bgcolor-alpha($bgcolor: rgba(0,0,0,.5)){
+  filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#{ie-hex-str($bgcolor)}', endColorstr='#{ie-hex-str($bgcolor)}');
+  background-color:$bgcolor;
+}
+
+// ul 去除样式，ul下的li去除list-style
+%noStyle{
+  ul{
+    padding-left: 0;
+    li{
+      list-style: none;
+    }
+  }
+}
+
+// rem和px之间的转换，兼容ie8版本
+//-------------------------------
+@function pxToRem($px, $base:10) {
+  @return ($px / $base) * 1rem;
+}
+
+@function remToPx($rem, $base:10) {
+  @return ($rem * $base) * 1px;
+}
+
+// font-size
+@mixin font-size($rem:1){
+  font-size: $rem * 10px;
+  font-size: $rem * 1rem;
+}

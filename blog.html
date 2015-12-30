@@ -1,0 +1,733 @@
+<!-- head.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
+	<title>Document</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src='./js/vendor/respond.min.js'></script>
+    <script type="text/javascript" src='./js/vendor/require.js' data-main='./js/main.js'></script>
+	<!--[if lt IE9]> 
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
+<!-- head.html end-->
+
+<body>
+<!-- header.html -->
+	<!-- /header -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+					<img src='img/header/logo4.png' height="32" width="123"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" >
+					<form class='navbar-form navbar-left search-form'>
+						<!-- <div class="search-dropdown pull-left dropdown">
+						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
+						</span>
+						<ul class='dropdown-menu'>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
+									<span>Search for people, projects, articles...</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-user"></i>
+									<span>Search peoples</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-briefcase"></i>
+									<span>Search projects</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-folder-open"></i>
+									<span>Search articles</span>
+								</a>
+							</li>
+						</ul>
+						</div>
+						-->
+						<div class='dropdown'>
+							<div class='form-group'>
+								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+								<div class='dropdown-menu search-text-response'>
+									<ul class='list-unstyled'>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-user"></i>
+											&nbsp;&nbsp; <strong>People</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-briefcase"></i>
+											&nbsp;&nbsp; <strong>Projects</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-folder-open"></i>
+											&nbsp;&nbsp;
+											<strong>Articles</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-secondary">Submit</button>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right header-utilities">
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle'  data-toggle="dropdown">
+								<i class='fa fa-book'></i>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities--helpCenter">
+								<div class="panel panel-default">
+									<!-- <div class="header-loading">
+										<i class="fa fa-spinner fa-pulse fa-2x"></i>
+									</div> -->
+									<div class="panel-heading">
+										<strong class='heading-title'>Help center</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">
+													<i class="fa fa-quote-left"></i>
+													<span>FAQs</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+	     											<i class="fa fa-book"></i>
+													<span>Guidance</span>
+													</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-usd"></i>
+													<span>Fees & Charges</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-cog"></i>
+													<span>How it works</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-info"></i>
+													<span>Feedback</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-envelope'></i>
+								<span class='label label-news inform'>8</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong class='heading-title'>Message</strong>
+								</div>
+								<div class="panel-body header-utilities-list">
+									<ul>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+									</ul>
+								</div>
+								<div class="panel-footer clearfix">
+									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+								</div>
+							</div>
+						</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-bell'></i>
+								<span class='label label-bell inform'>2</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<strong class='heading-title'>Notice</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+										</ul>
+									</div>
+									<div class="panel-footer clearfix">
+										<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle account' data-toggle="dropdown">
+								<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px"></a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--user">
+								<!-- <div class="dropdown-loading">
+								<i class="fa fa-spinner fa-pulse"></i>
+							</div>
+							-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="user-info">
+											<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px">
+											<h4 class='user-info-name'>Aaron Su</h4>
+											<a href="" title="" class='user-info-level'>Basic User</a>
+										</div>
+										<ul class='user-info-list'>
+											<li>
+												<a href="profile.html">
+													<i class="fa fa-newspaper-o"></i>
+													<span>Profile</span>
+												</a>
+											</li>
+											<li>
+												<a href="setting.html">
+													<i class="fa fa-cog"></i>
+													<span>Settings</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-sign-out"></i>
+													<span>logout</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 页面导航部分 -->
+		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+			<div class='container'>
+				<ul class='nav navbar-nav clearfix'>
+					<li>
+						<a href="" title="" class='active'>Home</a>
+					</li>
+					<li>
+						<a href="" title="">Needs</a>
+					</li>
+					<li>
+						<a href="" title="">Providers</a>
+					</li>
+					<li>
+						<a href="" title="">Connections</a>
+					</li>
+					<li>
+						<a href="" title="">Article</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+</header>
+<!-- header.html end-->
+	
+<section class='com-main'>
+	<div class="container b-main">
+		<div class="row">
+		<article class="b-top">
+			<div class="col-md-6">
+				<div class="b-top-media b-top-media--1">
+					<figure class='b-top-media-figure hoverImg'>
+						<a href="" title="">
+							<img src="./img/blog/blog-1.jpg" alt="" width="100%" class='media-img'>
+							<h3 class='b-top-media-title'>Is Your Product Covered by EU Toy Safety Directive?</h3>								
+						</a>
+						<span class='hotTags hotTags--hot b-top-media-hotTags'>HOT</span>
+					</figure>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row" style='margin-left: 0;margin-right: 0'>
+					<div class="col-md-6">
+						<div class="b-top-media b-top-media--2">
+							<figure class='b-top-media-figure hoverImg'>
+								<a href="" title="">
+									<img src="./img/blog/blog-2.jpg" alt="" width="100%">
+									<h3 class='b-top-media-title'>Is Your Product Covered by EU Toy Safety Directive?</h3>		
+								</a>
+								<span class='hotTags hotTags--hot b-top-media-hotTags'>HOT</span>
+							</figure>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="b-top-media b-top-media--2">
+							<figure class='b-top-media-figure hoverImg'>
+								<a href="" title="">
+									<img src="./img/blog/blog-3.jpg" alt="" width="100%">
+									<h3 class='b-top-media-title'>Is Your Product Covered by EU Toy Safety Directive?</h3>		
+								</a>
+								<span class='hotTags hotTags--hot b-top-media-hotTags'>HOT</span>
+							</figure>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="b-top-media b-top-media--2">
+							<figure class='b-top-media-figure hoverImg'>
+								<a href="" title="">
+									<img src="./img/blog/blog-4.jpg" alt="" width="100%">
+									<h3 class='b-top-media-title'>Is Your Product Covered by EU Toy Safety Directive?</h3>		
+								</a>
+								<span class='hotTags hotTags--new b-top-media-hotTags'>NEW</span>
+							</figure>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="b-top-media b-top-media--2">
+							<figure class='b-top-media-figure hoverImg'>
+								<a href="" title="">
+									<img src="./img/blog/blog-5.jpg" alt="" width="100%">
+									<h3 class='b-top-media-title'>Is Your Product Covered by EU Toy Safety Directive?</h3>	
+								</a>
+								<span class='hotTags hotTags--new b-top-media-hotTags'>NEW</span>
+							</figure>
+						</div>
+					</div>							
+				</div>				
+			</div>				
+		</article>	
+		</div>	
+		<!-- 新闻主体 -->
+		<div class="row">
+		<div class="b-content">
+			<article class="col-md-9">
+				<div class='b-content-section b-content-section--last'>
+					<ul class="tabs-bar tabs-arrow mb-20">
+						<li class="active"><a href="">LATEST</a></li>
+						<li><a href="">RECOMMEND</a></li>
+						<li><a href="">HOT</a></li>
+					</ul>
+					<!-- <div class='divider'></div> -->
+					<!-- 组件 blogList -->
+					<ul class='b-list'>
+						<li class='b-list-media'>
+							<article class='row'>
+								<div class="col-md-4">
+									<div class='b-list-media-img hoverImg'>
+										<img src="./img/blog/article-1.jpg" alt="">
+									</div>
+								</div>
+								<div class='col-md-8 b-list-media-content'>
+									<h3 class='b-list-media-title'>
+										<a href="" title="">How To Decide Whether You Need To Submit a SVHC Notification to ECHA?</a>
+									</h3>
+									<div class="author clearfix">
+										<strong class='author-name-warp'> 
+										<a href="" title="" class='author-name'>
+										<img src="./img/index/servers/13.jpg" height="18" width="18" alt="">
+										CIRS</a>		
+										</strong> | <time datetime="2011-01-12">2015-10-20</time>	
+									</div>
+									<p class='b-list-media-brief'>Recently, an EU importer contacted CIRS for a question about whether they should notify SCCP and DEHP to ECHA. CIRS expert clarify their several questions in detail an EU importer contacted CIRS for a question about ....</p>
+									<div class="meta-info">
+										<ul class='meta-info-list-ul clearfix'>
+											<li class='meta-info-list-li pull-left'>
+												<span class='fa fa-tags'></span>
+												<a href="" title="" class='label label-hotTags'>GHS</a>
+												<a href="" title="" class='label label-hotTags'>Chemical</a>
+											</li>
+											<li class='meta-info-list-li pull-right'><span class='fa fa-commenting'>200</span></li>
+											<li class='meta-info-list-li pull-right'>
+												<span class='fa fa-eye'>100</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</article>
+						</li>
+						<li class='b-list-media'>
+							<article class='row'>
+								<div class="col-md-4">
+									<div class='b-list-media-img hoverImg'>
+										<img src="./img/blog/article-1.jpg" alt="">
+									</div>
+								</div>
+								<div class='col-md-8 b-list-media-content'>
+									<h3 class='b-list-media-title'>
+										<a href="" title="">How To Decide Whether You Need To Submit a SVHC Notification to ECHA?</a>
+									</h3>
+									<div class="author clearfix">
+										<strong class='author-name-warp'> 
+										<a href="" title="" class='author-name'>
+										<img src="./img/index/servers/13.jpg" height="18" width="18" alt="">
+										CIRS</a>		
+										</strong> | <time datetime="2011-01-12">2015-10-20</time>	
+									</div>
+									<p class='b-list-media-brief'>Recently, an EU importer contacted CIRS for a question about whether they should notify SCCP and DEHP to ECHA. CIRS expert clarify their several questions in detail an EU importer contacted CIRS for a question about ....</p>
+									<div class="meta-info">
+										<ul class='meta-info-list-ul clearfix'>
+											<li class='meta-info-list-li pull-left'>
+												<span class='fa fa-tags'></span>
+												<a href="" title="" class='label label-hotTags'>GHS</a>
+												<a href="" title="" class='label label-hotTags'>Chemical</a>
+											</li>
+											<li class='meta-info-list-li pull-right'><span class='fa fa-commenting'>200</span></li>
+											<li class='meta-info-list-li pull-right'>
+												<span class='fa fa-eye'>100</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</article>
+
+						</li>
+					</ul>
+					<nav class='text-center'>
+							<ul class="pagination">
+								<li class="disabled">
+									<a href="#" aria-label="Previous">
+										<span>&lt; Previous</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">5</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Next">
+										<span>Next &gt;</span>
+									</a>
+								</li>
+							</ul>
+						</nav>						
+					<!-- 组件 blogList -->
+				</div>
+			</article>
+			<aside class="col-md-3">
+
+						<section class='b-aside-section b-aside-section--tags'>
+							<h2 class='b-aside-section-title'>Hot Tags</h2>
+							
+							<ul class='clearfix'>
+								<li><a href="" title="" class='label label-hotTags'>GHS</a></li>
+								<li><a href="" title="" class='label label-hotTags'>Chemical</a></li>
+								<li><a href="" title="" class='label label-hotTags'>News</a></li>
+								<li><a href="" title="" class='label label-hotTags'>GHS</a></li>
+								<li><a href="" title="" class='label label-hotTags'>Chemical</a></li>
+								<li><a href="" title="" class='label label-hotTags'>News</a></li>
+								<li><a href="" title="" class='label label-hotTags'>GHS</a></li>
+								<li><a href="" title="" class='label label-hotTags'>Chemical</a></li>
+								<li><a href="" title="" class='label label-hotTags'>News</a></li>
+								<li><a href="" title="" class='label label-hotTags'>GHS</a></li>
+								<li><a href="" title="" class='label label-hotTags'>Chemical</a></li>
+								<li><a href="" title="" class='label label-hotTags'>News</a></li>
+							</ul>
+						</section>
+						<section class='b-aside-section b-aside-section--hots'>
+							<h2 class='b-aside-section-title'>Popular Authors</h2> 
+							<div class="b-aside-section-body">
+								<dl class='clearfix'>
+									<dt class='pull-left b-aside-section-left'>
+										<a href="" title="">
+											<img src="./img/index/servers/3.jpg"alt="" width='32px' height="32px">
+										</a>
+									</dt>
+									<dd class='pull-left b-aside-section-right'>
+										<a href='' data-id="6000" class="aw-user-name">Aaron Su</a>
+										<p class="signature"></p>
+										<p><b>88</b> articles , <b>141</b> thumbs</p>
+
+									</dd>
+								</dl>
+								<dl class='clearfix'>
+									<dt class='pull-left b-aside-section-left'>
+										<a href="" title="">
+											<img src="./img/index/servers/5.jpg"alt="" width='32px' height="32px">
+										</a>
+									</dt>
+									<dd class='pull-left b-aside-section-right'>
+										<a href='' data-id="6000" class="aw-user-name">Steve Jobs</a>
+										<p class="signature"></p>
+										<p><b>28</b> articles , <b>61</b> thumbs</p>
+
+									</dd>
+								</dl>
+								<dl class='clearfix'>
+									<dt class='pull-left b-aside-section-left'>
+										<a href="" title="">
+											<img src="./img/index/servers/6.jpg"alt="" width='32px' height="32px">
+										</a>
+									</dt>
+									<dd class='pull-left b-aside-section-right'>
+										<a href='' data-id="6000" class="aw-user-name">Jack Li</a>
+										<p class="signature"></p>
+										<p><b>12</b> articles , <b>133</b> thumbs</p>
+
+									</dd>
+								</dl>
+								<dl class='clearfix'>
+									<dt class='pull-left b-aside-section-left'>
+										<a href="" title="">
+											<img src="./img/index/servers/7.jpg"alt="" width='32px' height="32px">
+										</a>
+									</dt>
+									<dd class='pull-left b-aside-section-right'>
+										<a href='' data-id="6000" class="aw-user-name">Mary</a>
+										<p class="signature"></p>
+										<p><b>18</b> articles , <b>21</b> thumbs</p>
+
+									</dd>
+								</dl>
+
+							</div>
+							<div class="b-aside-section-footer">
+								<a href="http://zhuangbi.me/people/" class="interest-m">more authors...</a>
+							</div>
+
+													
+						</section>
+						<section class="ad">
+							<img src="./img/blog/ad-2.jpg" alt="" width="100%">
+						</section>
+						<section class="ad">
+							<img src="./img/blog/ad-1.jpg" alt="" width="100%">
+						</section>
+			</aside>				
+		</div>				
+		</div>
+	</div>
+		<!-- 新闻主体 -->
+
+</section>
+
+<!-- footer.html -->
+<footer class='footer'>
+<div class="container-fluid">
+<div class="row footer-nav">
+	<div class="col-md-2 footer-nav-list">
+		<h4>Company</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+			<li>
+				<a href="">Jobs</a>
+			</li>
+			<li>
+				<a href="">Team</a>
+			</li>
+			<li>
+				<a href="">Press releases</a>
+			</li>
+			<li>
+				<a href="">Testimonials</a>
+			</li>
+			<li>
+				<a href="">Terms of Service</a>
+			</li>
+			<li>
+				<a href="">Privacy Policy</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Resource</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Videos</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Support</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Questions</a>
+			</li>
+			<li>
+				<a href="">Blogs</a>
+			</li>
+			<li>
+				<a href="">Language support</a>
+			</li>
+			<li>
+				<a href="">FAQ</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Social</h4>
+		<div class="footer-divider"></div>
+		<ul class='social-icon-list'>
+			<li class='social-icon'>
+				<span class='fa fa-linkedin'></span>
+				<a href="" title='Linkedin'>linkedin</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-twitter'></span>
+				<a href="" title='twitter'>twitter</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-facebook-official'></span>
+				<a href="" title='Facebook'>facebook</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-google-plus'></span>
+				<a href="" title='Google+'>google+</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4 footer-nav-list">
+		<h4>Message</h4>
+		<div class="footer-divider"></div>
+		<form action="" class='footer-contact'>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+			<div class="form-group">
+				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value='Submit' class='btn btn-secondary'></div>
+		</form>
+	</div>
+</div>
+<div class="footer-divider"></div>
+<div class="row footer-bottom">
+	<div class="col-md-6">
+		<ul class='footer-brand clearfix'>
+			<li class='footer-brand-logo'>
+				<img src="./img/index/footer-logo.png" alt=""></li>
+			<li class='footer-brand-content'>
+				<p>The best product compliance platform</p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<p class='text-right copyright'>
+			© Copyright 2015 - 2016
+			<a href="" title="">Regbuzz.com</a>
+		</p>
+	</div>
+</div>
+</div>
+</footer>
+<!-- footer.html end-->
+
+<!-- hover时调入 -->
+	<div class='modal modal-author' style='display: none;'>
+		<div class="modal-header">
+			<a href="" title="" class='img'>
+				<img src="./img/index/servers/13.jpg" height="50" width="50" alt="">
+			</a>
+			<p class='title'>
+				<a href="" title="">CIRS</a>
+				<i></i>
+			</p>
+			<p>
+				<span>Articles: 81</span>&nbsp;&nbsp;&nbsp;&nbsp;
+				<span><i class="fa fa-thumbs-o-up"></i> 81</span>
+			</p>
+		</div>
+		<div class="modal-body">
+			<p>Nanjing CIRS is a well-known enterprise.</p>
+		</div>
+		<div class="modal-footer">
+			<span>
+				<a class="" href='javascript:;'><i class="fa fa-envelope-o"></i> direct message</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			</span>
+			<a class="btn btn-normal btn-primay pull-right"><span>follow</span> <em>|</em> <b>20</b></a>
+		</div>
+	</div>
+</body>
+</html>

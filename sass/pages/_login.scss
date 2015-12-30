@@ -1,0 +1,84 @@
+.login-body
+{
+    position: relative;
+
+    background: url(../img/index/bg54.jpg) repeat-y 50%;
+}
+.login-root
+{
+    position: relative;
+}
+
+.login-main
+{
+    position: absolute;
+    top: -100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    max-width: 300px;
+    height: 350px;
+    margin: auto;
+
+    border-radius: 2px;
+    .form--login
+    {
+        label
+        {
+            color: #f1f1f1;
+        }
+    }
+}
+.login-main-header
+{
+    font-size: 46px;
+    font-weight: 600;
+
+    margin-top: 0;
+
+    text-align: center;
+
+    color: #f1f1f1;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+}
+.login-main-slogan
+{
+    text-align: center;
+
+    color: #f1f1f1;
+}
+.login-social
+{
+    a
+    {
+        color: $palette-orange;
+    }
+}
+.login-more
+{
+    color: #f1f1f1;
+    a
+    {
+        color: lighten($gray-light,30%);
+        &:hover
+        {
+            color: #fff;
+        }
+    }
+}
+
+.login-footer
+{
+    padding-top: 26px;
+
+    background-color: #2d2d2d;
+}
+.login-copyright
+{
+    color: #f1f1f1;
+    a
+    {
+        color: #f1f1f1;
+    }
+}

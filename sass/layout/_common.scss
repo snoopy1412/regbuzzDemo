@@ -1,0 +1,28 @@
+﻿// 公共布局css
+
+.com-main{
+	background-color: #f1f1f1;
+	padding: 20px 0;
+}
+.com-content,.com-aside{
+	// background-color: #fff;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+// 
+@include sticky-footer(100px);
+// footer
+.com-policy{
+	a{
+		display: inline-block;
+		color:#96999C;
+		margin: 0 4px;
+	}
+}
+
+// .divider{
+// 	@extend %divider;
+// 	margin: 10px 0;
+// 	background-color: #eee;
+// }

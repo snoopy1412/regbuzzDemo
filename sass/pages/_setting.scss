@@ -1,0 +1,94 @@
+.setting-container{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.setting-menu{
+	margin-bottom: 0;
+	.setting-item{
+		a{
+			display: block;
+			padding: 10px;
+			color: $palette-blue;
+			border-top: 1px solid #eee;
+			border-left: 3px solid transparent;
+			border-bottom: 1px solid transparent;
+			&:hover,&.active{
+				color:#444;
+				border-left: 3px solid darken($palette-blue,10%);
+			}
+		}
+	}
+	.fa{
+		width:30px;
+		font-size: 16px;
+		text-align: center;
+	}
+}
+.setting-content{
+
+
+}
+.setting-section{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+
+.setting-section-item{
+	padding: 10px;
+	padding-top: 30px;
+	input{
+		width: auto;
+	}
+}
+.setting-edit{
+	margin-bottom: 20px;
+	padding:10px 20px;
+	border:1px solid #eee;
+	border-radius: 4px;
+	position: relative;
+	.setting-edit-title{
+		font-size: 14px;
+		font-weight: 600;
+		margin-top: 0;
+		margin-bottom: 20px;
+		padding-bottom: 15px;
+		padding-top: 5px;
+		color:#6d6c6c;
+		border-bottom: 1px solid #eee;
+		&>span{
+			padding-left: 10px;
+		}
+	}
+	.setting-edit-btn{
+		position: absolute;
+		right: 20px;
+		bottom: 25px;
+	}
+	.avatar-upload{
+		margin-left: 20px;
+	}
+}
+.setting-section--Linked{
+	.lined-accounts-item{
+		border: 1px solid #eee;
+		padding: 10px 30px;
+	}
+	.linked-icon{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: #ccc;
+		text-align: center;
+		line-height: 30px;
+	}
+}
+.reg-social-link--setting{
+	max-width: 100%;
+	.reg-social-link-linkedin,.reg-social-link-facebook,.reg-social-link-google{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}

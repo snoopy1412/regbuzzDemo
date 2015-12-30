@@ -1,0 +1,134 @@
+<!-- head.html -->
+<% include ../publicTpl/head.html %>
+<!-- head.html end-->
+<body>
+	
+<!-- header.html -->
+<% include ../publicTpl/header.html %>
+<!-- header.html end-->
+
+	<section class='com-main com-main--list'>
+		<div class='list-search-warp'>
+			<div class='container'>
+				<!-- 面包屑 -->
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Search</li>
+				</ol>
+			</div>		
+		</div>		
+		<div class="container" >	
+			<div class="row mt-10">
+				<!-- 侧边栏 -->
+				<!-- header.html -->
+				<% include ../publicTpl/public-list.html %>
+				<!-- header.html end-->
+
+				<!-- 主要内容部分 -->
+				<div class="col-md-9 com-content">
+				<!-- 搜索框 -->
+				<form class="list-search clearfix">
+						<div class="list-search-text-warp pull-left">
+							<i class="fa fa-search"></i>
+							<input type="text" name="" value="" placeholder="" class='form-control list-search-text'>
+						</div>
+						<div class="list-search-btn-warp pull-left">
+							<button type="submit" class='btn btn-primary list-search-btn'>
+								Search
+							</button>
+						</div>
+				</form>	
+					<article class='list-main'>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<section class='list-bar'>
+									<div class="row">
+										<div class="col-md-4">
+											<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
+										</div>
+										<div class="col-md-8">
+											<div class="select-menu form-inline">		
+												<label>
+													Sort by :
+												</label>
+												<select class="form-control">
+												  <option>Best match</option>
+												  <option>Newest</option>
+												  <option>Oldest</option>
+												  <option>Most Client Hours</option>
+												  <option>Least Client Hours</option>
+												  <option>Most Dollars Paid</option>
+												  <option>Least Dollars Paid</option>
+												  <option>Highest Feedback Score</option>
+												  <option>Lowest Feedback Score</option>
+												</select>
+										    </div>
+										</div>
+									</div>									
+								</section>
+							</div>
+							<div class="panel-body">
+								<section class="list-results clearfix">
+									<ul class="list-articles list-unstyled">
+										<li class="list-results-item list-articles-item row" style='width:100%'>
+											<div class="col-md-3 list-articles-item-img">
+												<img src="img/blog/article-1.jpg" alt="">
+											</div>
+											<div class="col-md-9 list-articles-item-bref">
+												<h3 class='list-item-title'><a href="" title="">A Personal Request From Aaron</a></h3>
+												<div class="list-articles-scence">				
+													<a href="" title="" class="author-name"><img src="./img/index/servers/13.jpg" height="18" width="18" alt="">CIRS</a>		
+													 | <time datetime="2011-01-12">2015-10-20</time>
+												</div>
+												<p>I genuinely believe in my heart this is the MOST important post you can read today. I also KNOW FOR FACT that if you will implement these 12 Powerful Resolutions for 2015 your life will never be the same. I am grateful to each of you and look ...January 1, 201591 Views</p>
+												<div class="meta-info-list-li pull-left">
+													<span class="fa fa-tags"></span>
+													<a href="" title="" class="label label-hotTags">GHS</a>
+													<a href="" title="" class="label label-hotTags">Chemical</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</section>
+							<nav class='text-center'>
+								<ul class="pagination">
+									<li class="disabled">
+										<a href="#" aria-label="Previous">
+											<span>&lt; Previous</span>
+										</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span>Next &gt;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							</div>
+						</div>
+					</article>
+				</div> 
+			</div>
+		</div>
+	</section>
+	
+<!-- footer.html -->
+<% include ../publicTpl/footer.html %>
+<!-- footer.html end-->
+</body>
+</html>
