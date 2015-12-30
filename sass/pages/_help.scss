@@ -130,6 +130,7 @@
 				width: 250px;
 			}
 		}
+
 		.panel-body-list{
 			li{
 				&>a{
@@ -148,6 +149,34 @@
 			.alert{
 				display: none
 			}
+		}	
+		
+
+			.faqs-result-header{
+				font-size: 20px;
+				font-size: 2rem;
+				font-weight: 300;
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+		.faqs-result-item{
+				&>a{
+					margin-bottom: 10px;
+				}
+			.faqs-result-category{
+				display: inline-block;
+				color:#ccc;
+				font-size: 12px;
+				i{
+					display: inline-block;
+					margin-right: 10px;
+				}
+			}
+			.faqs-result-title{
+				margin-top: 10px;
+				display: block;
+			}
+
 		}
 	}
 }

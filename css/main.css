@@ -9405,6 +9405,28 @@ ul {
 .help-main .faqs-content .panel-body-list .alert {
   display: none; }
 
+.help-main .faqs-content .faqs-result-header {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.help-main .faqs-content .faqs-result-item > a {
+  margin-bottom: 10px; }
+
+.help-main .faqs-content .faqs-result-item .faqs-result-category {
+  display: inline-block;
+  color: #ccc;
+  font-size: 12px; }
+  .help-main .faqs-content .faqs-result-item .faqs-result-category i {
+    display: inline-block;
+    margin-right: 10px; }
+
+.help-main .faqs-content .faqs-result-item .faqs-result-title {
+  margin-top: 10px;
+  display: block; }
+
 .help-content {
   border: 1px solid #ccc;
   border-radius: 4px;
