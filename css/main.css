@@ -6824,6 +6824,13 @@ ul {
   ul li {
     list-style: none; }
 
+.onStyled {
+  padding-left: 40px;
+  display: block;
+  margin: 1em 0; }
+  .onStyled li {
+    list-style: disc; }
+
 ::-webkit-selection {
   background-color: #00b5ad;
   color: white; }
@@ -7701,18 +7708,21 @@ ul {
         color: #fff; }
 
 .header .nav-side {
-  background-color: #1e77ba; }
+  background-color: #3f3f3f;
+  box-shadow: 0 5px 5px #1e77ba;
+  z-index: 2; }
   .header .nav-side a {
     height: 50px;
     display: block;
     padding: 15px 20px;
-    color: #fff;
+    color: #d7d7d7;
     border-bottom: 4px solid transparent;
     -webkit-transition: 0.25s;
     -o-transition: 0.25s;
     transition: 0.25s; }
     .header .nav-side a.active, .header .nav-side a:hover {
-      background-color: #1e77ba;
+      background-color: #3f3f3f;
+      color: #fff;
       border-bottom: 4px solid #db2828; }
 
 .footer {
@@ -9369,6 +9379,31 @@ ul {
 .help-main .works-tab-content li {
   padding: 20px;
   color: #fff; }
+
+.help-main .faqs-content .panel-heading--faqs {
+  font-weight: 600; }
+
+.help-main .faqs-content .form-control--search-faqs {
+  width: 200px;
+  -webkit-transition: width 0.25s linear;
+  -o-transition: width 0.25s linear;
+  transition: width 0.25s linear; }
+  .help-main .faqs-content .form-control--search-faqs:focus {
+    width: 250px; }
+
+.help-main .faqs-content .panel-body-list li > a {
+  display: block;
+  padding: 5px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  border-left: 4px solid transparent; }
+  .help-main .faqs-content .panel-body-list li > a:hover {
+    color: #444;
+    border-left: 4px solid #db2828; }
+
+.help-main .faqs-content .panel-body-list .alert {
+  display: none; }
 
 .help-content {
   border: 1px solid #ccc;

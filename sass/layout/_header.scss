@@ -207,15 +207,6 @@
             border: 0;
             width:400px;
             right:0px;
-            //  &:after{
-            //     position: absolute;
-            //     content: '';
-            //     border-style: solid;
-            //     border-width: 10px;
-            //     border-color: transparent transparent #f5f5f5 transparent;
-            //     right: 20px;
-            //     top:-19px;
-            // }
             .panel{
                 margin-bottom: 0;
             }
@@ -332,13 +323,15 @@
     }
     .nav-side
     {
-        background-color: darken($palette-blue,5%);
+        background-color: #3f3f3f;
+        box-shadow: 0 5px 5px darken($palette-blue,5%);
+        z-index: 2;
         a
         {
             height: 50px;
             display: block;       
             padding:15px 20px;
-            color: #fff;
+            color: #d7d7d7;
             border-bottom: 4px solid transparent;
             -webkit-transition: 0.25s;
             -o-transition: 0.25s;
@@ -346,8 +339,9 @@
             &.active,
             &:hover
             {       
-                background-color: darken($palette-blue,5%);
-                 border-bottom: 4px solid $palette-red;
+                background-color: #3f3f3f;
+                color:#fff;
+                border-bottom: 4px solid $palette-red;
             }
         }
     }

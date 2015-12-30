@@ -116,6 +116,40 @@
 			color:#fff;
 		}
 	}
+
+	.faqs-content{
+		.panel-heading--faqs{
+			font-weight: 600;
+		}
+		.form-control--search-faqs{
+			width: 200px;
+			-webkit-transition:width 0.25s linear;
+			-o-transition:width 0.25s linear;
+			transition:width 0.25s linear;
+			&:focus{
+				width: 250px;
+			}
+		}
+		.panel-body-list{
+			li{
+				&>a{
+					display: block;
+					padding: 5px;
+					-webkit-transition: 0.5s;
+					-o-transition: 0.5s;
+					transition: 0.5s;
+					border-left:4px solid transparent;
+					&:hover{
+						color:#444;
+						border-left:4px solid $palette-red;
+					}
+				}
+			}
+			.alert{
+				display: none
+			}
+		}
+	}
 }
 .help-content{
 		border:1px solid #ccc;
