@@ -9324,7 +9324,7 @@ ul {
 .help-panel-card-feedback {
   background-color: #9c59b8; }
 
-.help-panel-card-contact {
+.help-panel-card-agreement {
   background-color: #34495d; }
 
 .help-main .guidance-content h3 {
@@ -9406,9 +9406,11 @@ ul {
   display: none; }
 
 .help-main .faqs-content .faqs-result-header {
-  font-size: 16px;
-  font-size: 1.6rem;
-  font-weight: 300; }
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f2f2f2; }
 
 .help-main .faqs-content .faqs-result-item {
   border-bottom: 1px solid #f1f1f1; }
@@ -9425,6 +9427,20 @@ ul {
   .help-main .faqs-content .faqs-result-item .faqs-result-title {
     margin-top: 10px;
     display: block; }
+
+.help-main .faqs-content .faqs-result-aside-dl dt, .help-main .faqs-content .faqs-result-aside-dl dd {
+  margin-bottom: 10px; }
+
+.help-main .faqs-content .faqs-result-aside-dl dt {
+  padding-left: 10px; }
+
+.help-main .faqs-content .faqs-result-aside-dl dd {
+  padding-left: 20px; }
+
+.help-main .agreement-content h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-top: 20px; }
 
 .help-content {
   border: 1px solid #ccc;
