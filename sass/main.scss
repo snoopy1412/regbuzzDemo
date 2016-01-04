@@ -22,12 +22,8 @@
 @import "animate/index";
 
 // components
-// @import "components/btn";
-// @import "components/form";
 @import "components/dropdown";
-// @import "components/nav";
 @import "components/label";
-// @import "components/table";
 @import "components/star";
 @import "components/progress";
 @import "components/breadcrumb";
@@ -59,10 +55,10 @@
 @import "pages/notice";
 @import "pages/setting";
 @import "pages/help";
+@import "pages/account";
 
 // module
 @import "module/step";
-// @import "module/collapsed";
 @import "module/tags";
 @import "module/blogList";
 @import "module/hotTags";

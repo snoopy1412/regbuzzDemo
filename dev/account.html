@@ -1,0 +1,187 @@
+<!-- head.html -->
+<% include ../publicTpl/head.html %>
+<!-- head.html end-->
+
+<body>
+<!-- header.html -->
+<% include ../publicTpl/header.html %>
+<!-- header.html end-->
+
+<!-- /header -->
+<section class='com-main'>
+<div class="container">
+
+<div class="row">
+	<div class="col-md-3 com-aside">
+		<div class="account-aside">
+			<div class="account-aside-head">
+				<div class="account-name text-center">
+					<div class="account-img">
+						<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="80px" ></a>
+					</div>
+					<div class="account-call">
+						<a href="" title="" class='account-call-name'>Aaron Su</a>
+						<p class='account-call-des'>Law Consultant</p>
+					</div>
+				</div>
+				<div class="account-money">
+					<ul class='account-money-list'>
+						<li class='clearfix'>
+							<a href="" title="" class='pull-left'>income :</a>
+							<small class='pull-right'>900.00 USD</small>
+						</li>
+						<li class='clearfix'>
+							<a href="" title="" class='pull-left'>expenditure :</a>
+							<small class='pull-right'>900.00 USD</small>
+						</li>
+						<li class='clearfix'>
+							<a href="" title="" class='pull-left'>balance :</a>
+							<small class='pull-right'>900.00 USD</small>
+						</li>
+						<li class='text-center'>						
+							<a href="" title="" class="btn btn-sm btn-success">Withdraw</a>
+							<a href="" title="" class="btn btn-sm btn-warning">Top-up</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class='nav nav-pills nav-stacked'>
+						<li  class="active">
+							<a href="" title="">Transaction Management</a>
+						</li>
+						<li>
+							<a href="" title="">My Account Book</a>
+						</li>
+						<li>
+							<a href="" title="">Evaluation Management</a>
+						</li>
+						<li>
+							<a href="" title="">Invoice Management</a>
+						</li>
+						<li>
+							<a href="" title="">Arbitration Management</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9 com-content">
+		<div class="account-content">
+			<section class='account-section'>
+				<div class="account-section-header">
+					<h2>Payment details</h2>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading clearfix">
+						<form action="" method="POST" class="form-inline" role="form">
+						
+							<div class="form-group pull-left">
+								<label  for="">Trading hours: </label>
+								<div class="input-group date form_date">
+								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="">
+								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
+									 	
+								 </div>
+								-
+								<div class="input-group date form_date">
+								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="">
+								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
+								 </div>
+							</div>
+							<div class='form-group  pull-right'>
+								<label for="">Fund flow: </label>
+								<select name="" id="" class="form-control">
+									<option value="" selected>all</option>
+									<option value="">income</option>
+									<option value="">expenditure</option>
+								</select>
+							</div>
+							</form>
+					</div>	
+					<div class="panel-body">
+						<div class="form-inline" style='padding-bottom: 20px;'>
+							<div class="form-group pull-right" style='padding:30px 0;'>
+									<label for="">Order number: </label>
+									<input type="text" class='form-control' >
+									<button class="btn btn-primary">search</button>
+								</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th width="10%">
+										serial number
+									</th>
+									<th width="15%">
+										time
+									</th>
+									<th width="50%">
+										content
+									</th>
+									<th width="5%">
+										money($)
+									</th>
+									<th width="20%">
+										Payment channels
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										2015092300038507
+									</td>
+									<td>
+										<time datetime="2011-01-12">January 12th, 2011</time>
+									</td>
+									<td>
+										订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
+										<br>
+										托管赏金-服务 - 订单号 ：6250482
+									</td>
+									<td>
+										-3750
+									</td>
+									<td>
+										支付宝
+									</td>
+								</tr>
+								<tr>
+									<td>
+										2015092300038507
+									</td>
+									<td>
+										<time datetime="2011-01-12">January 12th, 2011</time>
+									</td>
+									<td>
+										订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
+										<br>
+										托管赏金-服务 - 订单号 ：6250482
+									</td>
+									<td>
+										-3750
+									</td>
+									<td>
+										支付宝
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</div>
+	
+</div>
+</div>
+</section>
+
+<!-- 页脚部分 -->
+<!-- footer.html -->
+<% include ../publicTpl/footer.html %>
+<!-- footer.html end-->
+</body>
+</html>

@@ -207,8 +207,13 @@
             border: 0;
             width:400px;
             right:0px;
-            .panel{
-                margin-bottom: 0;
+             .panel{
+                border:0;
+                border-radius: 0;
+                margin: 0;
+            }
+            .panel-body{
+                padding: 0;
             }
         }
 
@@ -274,21 +279,15 @@
                 content: '';
                 border-style: solid;
                 border-width: 10px;
-                border-color: transparent transparent darken($palette-teal,10%) transparent;
+                border-color: transparent transparent darken($palette-teal,5%) transparent;
                 right: 20px;
                 top:-20px;
             }
-            .panel{
-                border:0;
-                border-radius: 0;
-            }
-            .panel-body{
-                padding: 0;
-            }
+           
             
             .user-info{
                 text-align: center;
-                background-color: darken($palette-teal,10%);
+                background-color: darken($palette-teal,5%);
                 color:#fff;
                 padding: 10px;
                 margin-top: 0;
@@ -300,6 +299,31 @@
             .user-info-level{
                 color: #d1d2d3;
                 font-size: 1.2rem;
+            }
+            .row--user-money{
+                width:100%;
+                margin: 0;
+                text-align: center;
+               
+                padding-bottom: 10px;
+                .row--user-money-child{
+                     border-bottom: 1px solid #f1f1f1;
+                     padding: 6px 0;
+                     position: relative;
+                    dl{
+                        margin-bottom: 0;
+                    }
+                    dt{
+                        a{
+                            @include font-size(1.6);
+                        }
+                    }
+                    
+                }
+                .row--user-money-child-left{
+                    border-right: 1px solid #f1f1f1;
+                    
+                }
             }
             .user-info-list{
                 li{

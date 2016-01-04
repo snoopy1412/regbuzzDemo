@@ -1,0 +1,56 @@
+.account-aside{
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	.account-name{
+		border-bottom: 1px solid #f1f1f1;
+	}
+	.account-img{
+		img{
+			-webkit-transition: box-shadow 0.45s;
+			-o-transition: box-shadow 0.45s;
+			transition: box-shadow 0.45s;
+			&:hover{
+				box-shadow: 0 2px 10px rgba(0,0,0,.35);
+			}
+		}
+	}
+	.account-call-name{
+		color:#444;
+		display: block;
+		font-weight: 600;
+		padding-top: 10px;
+
+	}
+	.account-money-list{
+		border-bottom: 1px solid #f1f1f1;
+		padding: 20px;
+		&>li{
+			padding: 8px 0;
+			border-bottom: 1px dotted #f1f1f1;
+			small{
+				color:$palette-red;
+			}
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+	}
+}
+.account-content{
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.account-section-header{
+	h2{
+		@include font-size(2.4);
+		margin: 0;
+		margin-top: 10px;
+		color:$palette-blue;
+		border-bottom: 1px solid #EFEFEF;
+		padding-bottom: 10px;
+	}
+	margin-bottom: 10px;
+}
