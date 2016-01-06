@@ -1,6 +1,6 @@
 define(['validate'],function(validate) {
   
-  $('.reg-form').validate({
+$('.reg-form').validate({
     rules: {
       firstname: {
         required: true
@@ -27,6 +27,12 @@ define(['validate'],function(validate) {
     return this.optional(element) || (re.test(value));
   }, "at least one lowercase letter, one numeral");
 
+$(document).on('keydown',function(){ 
+  var r = $(".reg-form").valid();
+  if(r === true){
+    $('.btn--register').prop({'disabled':false});
+  }
+})
 
 
   // 点击切换step,仅作为模拟使用

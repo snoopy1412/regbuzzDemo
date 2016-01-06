@@ -7286,27 +7286,6 @@ ul {
   .divider-horizontal:after {
     margin-left: 1%; }
 
-.panel {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px; }
-  .panel .panel-header {
-    border-bottom: 1px solid #ccc;
-    border-radius: 4px 4px 0 0;
-    background-color: #f1f1f1;
-    margin: 0;
-    padding: 10px;
-    font-weight: 600;
-    font-size: 16px;
-    font-size: 1.6rem; }
-  .panel .panel-body {
-    padding: 10px; }
-  .panel .panel-footer {
-    border-top: 1px solid #ccc;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 0 0 4px 4px; }
-
 .steps {
   display: table;
   padding: 20px 0;
@@ -8248,7 +8227,7 @@ ul {
   padding-top: 60px;
   border: 1px solid #ddd;
   border-top: 0;
-  margin-bottom: 60px;
+  margin: 0 0 60px 0;
   border-radius: 0 0 4px 4px; }
 
 .reg-content {
@@ -8308,21 +8287,26 @@ ul {
   .reg-social-link-google:hover {
     background-color: #b03822; }
 
+.reg-form .has-feedback label ~ .form-control-feedback {
+  display: none; }
+
+.reg-form input.error {
+  border-color: #db2828; }
+  .reg-form input.error:focus {
+    border-color: #b21e1e;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ea7f7f; }
+  .reg-form input.error ~ .form-control-feedback {
+    display: inline-block;
+    color: #db2828; }
+
+.reg-form .error {
+  color: #db2828; }
+
 .form-control--register {
   height: 38px; }
 
 .privacy {
   padding: 10px 5px; }
-
-.btn--register {
-  width: 100%;
-  height: 40px;
-  color: #fff;
-  background-color: #2185d0; }
-  .btn--register:hover {
-    background-color: #1e77ba; }
-  .btn--register:active {
-    background-color: #1a69a4; }
 
 .reg-aside {
   padding: 5px 20px 0; }
@@ -9473,11 +9457,11 @@ ul {
     margin-bottom: 10px; }
 
 .account-aside {
-  padding: 10px;
   background-color: #fff;
   border: 1px solid #ccc; }
   .account-aside .account-name {
-    border-bottom: 1px solid #f1f1f1; }
+    border-bottom: 1px solid #f1f1f1;
+    padding: 10px; }
   .account-aside .account-img img {
     -webkit-transition: box-shadow 0.45s;
     -o-transition: box-shadow 0.45s;
@@ -9506,15 +9490,39 @@ ul {
   border: 1px solid #ccc; }
 
 .account-section-header {
-  margin-bottom: 10px; }
+  position: relative;
+  margin-bottom: 20px; }
   .account-section-header h2 {
-    font-size: 24px;
-    font-size: 2.4rem;
+    font-size: 20px;
+    font-size: 2rem;
     margin: 0;
     margin-top: 10px;
     color: #2185d0;
     border-bottom: 1px solid #EFEFEF;
     padding-bottom: 10px; }
+  .account-section-header .form-inline {
+    position: absolute;
+    right: 0;
+    top: 0px; }
+
+.table--account th {
+  background-color: #FBFBFB; }
+
+.table--account td {
+  font-size: 12px; }
+
+.account-content-footer .cost-statistics {
+  margin: 20px 0; }
+
+.account-content-footer .num {
+  color: #db2828; }
+
+.account-faqs h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 10px; }
 
 .m-steps {
   width: 100%;

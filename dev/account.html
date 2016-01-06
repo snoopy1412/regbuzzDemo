@@ -69,8 +69,17 @@
 	<div class="col-md-9 com-content">
 		<div class="account-content">
 			<section class='account-section'>
-				<div class="account-section-header">
+				<div class="account-section-header clearfix">
 					<h2>Payment details</h2>
+					<!-- <div class="form-inline">
+						<div class="form-group">
+							<select name="" id="" class="form-control">
+									<option value="" selected>all</option>
+									<option value="">income</option>
+									<option value="">expenditure</option>
+								</select>
+						</div>
+					</div> -->
 				</div>
 				<div class="panel panel-default">
 					<div class="panel-heading clearfix">
@@ -79,18 +88,17 @@
 							<div class="form-group pull-left">
 								<label  for="">Trading hours: </label>
 								<div class="input-group date form_date">
-								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="">
-								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
-									 	
+								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
+								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>	 	
 								 </div>
 								-
 								<div class="input-group date form_date">
-								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="">
+								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
 								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
 								 </div>
 							</div>
-							<div class='form-group  pull-right'>
-								<label for="">Fund flow: </label>
+							<div class='form-group  pull-right' >
+								<!-- <label for="">Fund flow: </label> -->
 								<select name="" id="" class="form-control">
 									<option value="" selected>all</option>
 									<option value="">income</option>
@@ -100,14 +108,13 @@
 							</form>
 					</div>	
 					<div class="panel-body">
-						<div class="form-inline" style='padding-bottom: 20px;'>
-							<div class="form-group pull-right" style='padding:30px 0;'>
-									<label for="">Order number: </label>
-									<input type="text" class='form-control' >
-									<button class="btn btn-primary">search</button>
-								</div>
+						<div class="form-inline clearfix" style='padding: 20px 0;'>			
+							<div class="form-group pull-right">
+								<input type="text" class='form-control' placeholder='input your order number'>
+								<button class="btn btn-primary">search</button>
+							</div>
 						</div>
-						<table class="table">
+						<table class="table table-hover table--account">
 							<thead>
 								<tr>
 									<th width="10%">
@@ -168,6 +175,48 @@
 								</tr>
 							</tbody>
 						</table>
+						<div class="account-content-footer clearfix">
+							<p class='pull-left cost-statistics'>
+								共一条数据，累计收入<span class='num'>0</span>元，累计支出<span class='num'>3750</span>元。
+							</p>
+							<nav class='pull-right'>
+							  <ul class="pagination">
+							    <li>
+							      <a href="#" aria-label="Previous">
+							        <span aria-hidden="true">&laquo;</span>
+							      </a>
+							    </li>
+							    <li><a href="#">1</a></li>
+							    <li><a href="#">2</a></li>
+							    <li><a href="#">3</a></li>
+							    <li><a href="#">4</a></li>
+							    <li><a href="#">5</a></li>
+							    <li>
+							      <a href="#" aria-label="Next">
+							        <span aria-hidden="true">&raquo;</span>
+							      </a>
+							    </li>
+							  </ul>
+							</nav>
+						</div>
+						<div class="account-faqs">
+							<h3>
+								FAQs
+							</h3>
+							<dl>
+								<dt>Trading a refund money, back to where go to?</dt>
+								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+							</dl>
+							<dl>
+								<dt>Trading a refund money, back to where go to?</dt>
+								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+							</dl>
+							<dl>
+								<dt>Trading a refund money, back to where go to?</dt>
+								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+							</dl>
+						</div>
+						
 					</div>
 				</div>
 
