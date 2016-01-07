@@ -18,6 +18,7 @@
 	<![endif]-->
 </head>
 <!-- head.html end-->
+
 <body>
 <!-- header.html -->
 	<!-- /header -->
@@ -331,339 +332,228 @@
 </header>
 <!-- header.html end-->
 
-	<section class='com-main'>
-		<div class="container">	
-			<!-- 面包屑 -->
-			<!-- <ol class="breadcrumb">
-				<li><a href="#">Home</a></li>
-				<li class="active">Post a Project</li>
-			</ol> -->
+<!-- /header -->
+<section class='com-main'>
+<div class="container">
 
-				<ul class="steps">
-					<li class='step-item active'>
-						<a href="" title="" class='step-1'>Post a project</a>
-
-					</li>
-					<li class='step-item'>
-						<a href="" title="" class='step-2'>Pay for it</a>
-					</li>
-					<li class='step-item'>
-						<a href="" title="" class='step-3'>Done</a>
-					</li>
-					
-				</ul>
-
-			<div class="row">
-				<div class="col-md-8">
-					<section class="pub-main">					
-						<div class='pub-content'>
-							<form class="form-horizontal">
-
-								<!-- 任务基本信息 -->
-								<div class="row pub-item pub-item-base">
-									<h3 class='pub-item-title col-md-12'> Base Information </h3>
-									<div class="form-group">
-										<label for="select-category" class='col-md-3'>Choose a category</label>
-										<div class="col-md-9" style='position: relative'>
-										<div class="row">
-										  <div class="col-md-6 pub-select-double">
-										   <select class='form-control pub-category-select js-dropdown-toggle' id='select-category'>
-												<option value="">Please select...</option>}
-											</select>
-										  </div>
-										  <div class="col-md-6 pub-select-double">
-										   <select class='form-control pub-category-select'>
-												<option value="">Please select...</option>}
-											</select>
-										  </div>
-										</div>
-											<div class="m-oFormHelp js-dropdown-menu">
-												<div class="dropdown-body">
-													<h4 class='m-oFormHelp-title'>First things first</h4>
-													<p class='m-oFormHelp-bref'>Choose the category and sub-category that best ﬁts your job.</p>
-												</div>
-											</div>
-										</div>							
-										
-									</div>
-									<div class="form-group">
-										<label for="job-name" class='col-md-3'>Give your job a name</label>
-										<div class="col-md-9 dropdown-default">
-											<input type="text" name="" value="" placeholder="" class='form-control js-dropdown-toggle' id='job-name'>
-											<div class="m-oFormHelp js-dropdown-menu">
-												<div class="dropdown-body">
-													<h4 class='m-oFormHelp-title'>What's in a name?</h4>
-													<p class='m-oFormHelp-bref'>A lot, actually. A concise, yet specific job name will help attract qualified applicants. For instance:</p>
-													<ul class="m-oFormHelp-list">
-													    <li>Writer Wanted for Travel Blog</li>
-													    <li>ActiveSync Integration for PHP</li>
-													    <li>Are You a Wordpress Wizard?</li>
-													</ul>
-												</div>
-											</div>
-										</div>						
-									</div>	
-									<div class="form-group">
-										<label for="" class='col-md-3'>Job Owner</label>
-										<div class="col-md-9 clearfix radiobox-list">
-											<div class='pull-left radiobox'>
-												<input type="radio" id="inlineRadio1" value="" checked class='iCheck' name='iCheck'>
-												<label for='inlineRadio1'>
-												   Post the job for meself!
-												</label>
-											</div>
-											 <div class='pull-left radiobox'>
-											 	<input type="radio" id="inlineRadio2" value=""  class='iCheck' name='iCheck'>
-												<label for='inlineRadio2'>
-												   Post the job for my company!
-												</label>
-											 </div>
-										</div>
-									</div>					
-									<div class="form-group">
-										<label for="pub-profile-txt" class='col-md-3'>Job profile</label>
-										<div class="col-md-9">
-											<textarea name="" value="" class='form-control'  rows="5" id='pub-profile-txt'></textarea>
-										</div>
-									</div>	
-
-									<!-- 按时收费 -->
-									<div class="form-group">
-										<label for="pub-budget-txt" class='col-md-3'>Budget</label>
-										<div class="col-md-9">
-										 <div class="input-group">
-
-									      <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
-									            <span class="input-group-addon">$</span>
-									    </div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="estimated" class='col-md-3'>Estimated Duration</label>
-										<div class="col-md-9">
-											<select class="form-control form-control-all" id='estimated'>
-											    <option value="" label="Please select...">Please select...</option>
-											    <option value="1" label="More than 6 months">More than 6 months</option>
-											    <option value="2" label="3 to 6 months">3 to 6 months</option>
-											    <option value="3" label="1 to 3 months">1 to 3 months</option>
-											    <option value="4" label="Less than 1 month">Less than 1 month</option>
-											    <option value="5" label="Less than 1 week">Less than 1 week</option>
-											    <option value="4" label="I don't know yet">I'm not sure</option>
-											</select>
-										</div>
-									</div>
-									
-									<div class='form-group'>
-										<label for="document" class='col-md-3'>Attach a document</label>
-										<div class="col-md-9">
-											<input type="file" id='document'>
-										</div>
-									</div>
-								</div>
-
-								<!-- 候选人资质 -->
-								<div class="row pub-item">
-									<h3 class='pub-item-title col-md-12'> Candidates Qualifications </h3>
-									<div class="form-group">
-										<label for="marketplace" class='col-md-3'>Marketplace Visibility</label>
-										<div class="col-md-9">
-											<select class='form-control form-control-all' id='marketplace'>
-										    <option value="public" label="All consultants can find this job">All consultants can find this job</option>
-										    <option value="private" label="Only people I have invited can find this job">Only people I have invited can find this job</option>
-										</select>
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="" class='col-md-3'>Verified</label>
-										<div class="col-md-9 clearfix radiobox-list">
-											<div class='pull-left radiobox'>
-												<input type="radio" id="inlineRadio1" value="" checked class='iCheck' name='iCheck2'>
-												<label for='inlineRadio1'>
-												   Name vified
-												</label>
-											</div>
-											 <div class='pull-left radiobox'>
-											 	<input type="radio" id="inlineRadio2" value="" checked class='iCheck' name='iCheck3'>
-												<label for='inlineRadio2'>
-												  Email vified
-												</label>
-											 </div>
-											  <div class='pull-left radiobox'>
-											 	<input type="radio" id="inlineRadio2" value="" checked class='iCheck' name='iCheck4'>
-												<label for='inlineRadio2'>
-												  Phone vified
-												</label>
-											 </div>
-										</div>
-									</div>	
-									<div class="form-group">
-										<label for="skills" class='col-md-3'>What skills are needed?</label>
-										<div class="col-md-9">
-											<div id="jellybean">
-												<ul class='jellybean-container clearfix'>
-													<li class="jellybean-container-item">
-														<span class="jellybean-suggest-input">
-															<input type="text" value="" class="jellybean-input" placeholder="输入地区">
-															<ul class='jellybean-result'></ul>
-														</span>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="location" class='col-md-3'>Location</label>
-										<div class="col-md-9">
-											<select class='form-control form-control-all' id='location'>
-											    <option value="" label="Any location">Any location</option>
-											    <option value="8" label="Australasia">Australasia</option>
-											    <option value="3" label="East Asia">East Asia</option>
-											    <option value="1" label="Eastern Europe">Eastern Europe</option>
-											    <option value="2" label="Latin America">Latin America</option>
-											    <option value="5" label="North America">North America</option>
-											    <option value="6" label="South Asia">South Asia</option>
-											    <option value="7" label="Western Europe">Western Europe</option>
-											</select>
-										</div>
-									</div>	
-									<div class='form-group'>
-										<label for="feedback-score" class='col-md-3'>Feedback Score</label>
-										<div class="col-md-9">
-											<select class='form-control form-control-all' id='feedback-score'>
-										    <option value="0" label="Any score" selected="selected">Any score</option>
-										    <option value="3" label="At least 3">At least 3</option>
-										    <option value="3.5" label="At least 3.5">At least 3.5</option>
-										    <option value="4" label="At least 4">At least 4</option>
-										    <option value="4.5" label="At least 4.5">At least 4.5</option>
-										</select>
-										</div>
-									</div>
-								</div>
-								
-								<!-- 自定义问题 -->
-								<div class="row pub-item pub-customize">
-									<h3 class='pub-item-title col-md-12'>Customize Requirements</h3>	
-									<div class='form-group'>
-										<label for="" class='col-md-3' style='padding-top: 0'>Screening Questions</label>
-										<div class="col-md-9">
-											<span>Add a few questions you'd like your candidates to answer when applying to your job</span>
-											<a href="javascript:;" title="" class='add-questions'>+ add questions</a>
-										</div>
-									</div>						
-									<div class='form-group'>
-										<label for="" class='col-md-3' style='padding-top: 0'>Cover Letter</label>
-										<div class="col-md-9">
-											<span>Ask applicants to write a cover letter introducing themselves.</span>
-											<div class="checkbox-list">
-												 <input type="checkbox" id="cover-letter" value="option1" checked class='iCheck'>
-												 <label for="cover-letter">Yes, require a cover letter</label>
-											</div>
-											
-										</div>
-
-									</div>
-									
-								</div>
-
-								<!-- 不公开问题 Private Job-->
-								<div class="row pub-item">
-									<h3 class='pub-item-title col-md-12'>Private Informations <sub>not public*</sub></h3>	
-									<div class='form-group'>
-										<label for="" class='col-md-3'>Desciption of Services</label>
-										<div class="col-md-9">
-											<textarea name="" class='form-control'></textarea>
-										</div>
-									</div>						
-									<div class='form-group'>
-										<label for="" class='col-md-3'>Deliverables</label>
-										<div class="col-md-9">
-											<textarea name="" class='form-control'></textarea>
-										</div>
-									</div>
-									<div class='form-group'>
-										<label for="" class='col-md-3'>Acceptance Criteria</label>
-										<div class="col-md-9">
-											<textarea name="" class='form-control'></textarea>
-										</div>
-									</div>
-									<div class='form-group'>
-										<label for="" class='col-md-3'>Document upload</label>
-										<div class="col-md-9">
-											<input type="file" name="" value="" placeholder="">
-										</div>
-									</div>
-								</div>
-
-								<div class='form-group mt-20'>
-									<div class='col-md-3'>
-										
-									</div>
-									<input type="submit" name="" value="Post Project Now" class='btn btn-primary'>
-								</div>
-								
-							</form>
-						</div>
-					</section>				
+<div class="row">
+	<div class="col-md-3 com-aside">
+		<div class="account-aside">
+			<div class="account-aside-head">
+				<div class="account-name text-center">
+					<div class="account-img">
+						<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="80px" ></a>
+					</div>
+					<div class="account-call">
+						<a href="" title="" class='account-call-name'>Aaron Su</a>
+						<p class='account-call-des'>Law Consultant</p>
+					</div>
 				</div>
-				<div class="col-md-4">
-					<aside class='pub-aside'>
-					<section class='pub-aside-item pub-aside-item-contact'>
-							<h3 class='pub-aside-item-title'>Contact</h3>
-							<p> Email: <a href="mailto:cxd@cirscn.com">cxd@cirscn.com</a> </p>
-							<p> Tell : 400-0303-200 </p>
-						</section>
-						<section class='pub-aside-item pub-aside-item-process'>
-							<h3 class='pub-aside-item-title'>Publish Process</h3>
-							<div class='process-list gradient-box'>
-								
-								<dl class='gradient-level gradient-level-1'>
-									<dt>Step 1</dt>
-									<dd>Fill in the content of the project</dd>
-								</dl>
-								<dl class='gradient-level gradient-level-2'>
-									<dt>Step 2</dt>
-									<dd>Hosting the bounty</dd>
-								</dl>
-								<dl class='gradient-level gradient-level-3'>
-									<dt>Step 3</dt>
-									<dd>Choose the candidates</dd>
-								</dl>
-								<dl class='gradient-level gradient-level-4'>
-									<dt>Step 4</dt>
-									<dd>Exchanges and cooperation</dd>
-								</dl>
-								<dl class='gradient-level gradient-level-5'>
-									<dt>Step 5</dt>
-									<dd>Satisfaction and payment</dd>
-								</dl>
-								
-								
-							</div>
-						</section>
-						<section class='pub-aside-item pub-aside-item-help'>
-							<h3 class='pub-aside-item-title'>FAQs</h3>
-							<ul class='help-list'>
-								<li>
-									<a href="" title="">What can I get done on Regbuzz?</a>
-								</li>
-								<li>
-									<a href="" title="">How do I know I'm protected?</a>
-								</li>
-								<li>
-									<a href="" title="">How do I pay?</a>
-								</li>
-								<li>
-									<a href="" title="">How do I get started?</a>
-								</li>
-							</ul>
-						</section>
-						
-					</aside>					
+				<div class="account-money">
+					<ul class='account-money-list'>
+						<li class='clearfix'>
+							<a href="" title="" class='pull-left'>income :</a>
+							<small class='pull-right'>900.00 USD</small>
+						</li>
+						<li class='clearfix'>
+							<a href="" title="" class='pull-left'>expenditure :</a>
+							<small class='pull-right'>900.00 USD</small>
+						</li>
+						<li class='clearfix'>
+							<a href="" title="" class='pull-left'>balance :</a>
+							<small class='pull-right'>900.00 USD</small>
+						</li>
+						<li class='text-center'>						
+							<a href="" title="" class="btn btn-sm btn-success">Withdraw</a>
+							<a href="" title="" class="btn btn-sm btn-warning">Top-up</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class='nav nav-pills nav-stacked'>
+						<li  class="active">
+							<a href="" title="">Transaction Management</a>
+						</li>
+						<li>
+							<a href="" title="">My Account Book</a>
+						</li>
+						<li>
+							<a href="" title="">Evaluation Management</a>
+						</li>
+						<li>
+							<a href="" title="">Invoice Management</a>
+						</li>
+						<li>
+							<a href="" title="">Arbitration Management</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
+	<div class="col-md-9 com-content">
+		<div class="account-content">
+			<section class='account-section'>
+				<div class="account-section-header clearfix">
+					<h2>Payment details</h2>
+					<!-- <div class="form-inline">
+						<div class="form-group">
+							<select name="" id="" class="form-control">
+									<option value="" selected>all</option>
+									<option value="">income</option>
+									<option value="">expenditure</option>
+								</select>
+						</div>
+					</div> -->
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading clearfix">
+						<form action="" method="POST" class="form-inline" role="form">
+						
+							<div class="form-group pull-left">
+								<label  for="">Trading hours: </label>
+								<div class="input-group date form_date">
+								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
+								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>	 	
+								 </div>
+								-
+								<div class="input-group date form_date">
+								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
+								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
+								 </div>
+							</div>
+							<div class='form-group  pull-right' >
+								<!-- <label for="">Fund flow: </label> -->
+								<select name="" id="" class="form-control">
+									<option value="" selected>all</option>
+									<option value="">income</option>
+									<option value="">expenditure</option>
+								</select>
+							</div>
+							</form>
+					</div>	
+					<div class="panel-body">
+						<div class="form-inline clearfix" style='padding: 20px 0;'>			
+							<div class="form-group pull-right">
+								<input type="text" class='form-control' placeholder='input your order number'>
+								<button class="btn btn-primary">search</button>
+							</div>
+						</div>
+						<table class="table table-hover table--account">
+							<thead>
+								<tr>
+									<th width="10%">
+										serial number
+									</th>
+									<th width="15%">
+										time
+									</th>
+									<th width="50%">
+										content
+									</th>
+									<th width="5%">
+										money($)
+									</th>
+									<th width="20%">
+										Payment channels
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										2015092300038507
+									</td>
+									<td>
+										<time datetime="2011-01-12">January 12th, 2011</time>
+									</td>
+									<td>
+										订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
+										<br>
+										托管赏金-服务 - 订单号 ：6250482
+									</td>
+									<td>
+										-3750
+									</td>
+									<td>
+										支付宝
+									</td>
+								</tr>
+								<tr>
+									<td>
+										2015092300038507
+									</td>
+									<td>
+										<time datetime="2011-01-12">January 12th, 2011</time>
+									</td>
+									<td>
+										订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
+										<br>
+										托管赏金-服务 - 订单号 ：6250482
+									</td>
+									<td>
+										-3750
+									</td>
+									<td>
+										支付宝
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="account-content-footer clearfix">
+							<p class='pull-left cost-statistics'>
+								共一条数据，累计收入<span class='num'>0</span>元，累计支出<span class='num'>3750</span>元。
+							</p>
+							<nav class='pull-right'>
+							  <ul class="pagination">
+							    <li>
+							      <a href="#" aria-label="Previous">
+							        <span aria-hidden="true">&laquo;</span>
+							      </a>
+							    </li>
+							    <li><a href="#">1</a></li>
+							    <li><a href="#">2</a></li>
+							    <li><a href="#">3</a></li>
+							    <li><a href="#">4</a></li>
+							    <li><a href="#">5</a></li>
+							    <li>
+							      <a href="#" aria-label="Next">
+							        <span aria-hidden="true">&raquo;</span>
+							      </a>
+							    </li>
+							  </ul>
+							</nav>
+						</div>
+						<div class="account-faqs">
+							<h3>
+								FAQs
+							</h3>
+							<dl>
+								<dt>Trading a refund money, back to where go to?</dt>
+								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+							</dl>
+							<dl>
+								<dt>Trading a refund money, back to where go to?</dt>
+								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+							</dl>
+							<dl>
+								<dt>Trading a refund money, back to where go to?</dt>
+								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+							</dl>
+						</div>
+						
+					</div>
+				</div>
 
+			</section>
+		</div>
+	</div>
+	
+</div>
+</div>
+</section>
+
+<!-- 页脚部分 -->
 <!-- footer.html -->
 <footer class='footer'>
 <div class="container-fluid">

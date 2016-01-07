@@ -14,7 +14,6 @@
         }
     }
    
-   
     .search-form
     {
         position: relative;
@@ -314,6 +313,7 @@
                         margin-bottom: 0;
                     }
                     dt{
+                        font-weight: 300;
                         a{
                             @include font-size(1.6);
                         }

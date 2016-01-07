@@ -6926,7 +6926,6 @@ ul {
   line-height: 1;
   vertical-align: baseline;
   margin: 0 .14285714rem;
-  background-color: #e8e8e8;
   background-image: none;
   padding: .3em .6em .4em;
   text-transform: none;
@@ -6937,9 +6936,9 @@ ul {
   -webkit-transition: background .1s ease;
   transition: background .1s ease; }
 
-.label-primary, .label-success, .label-info, .label-warning, .label-danger, .label-news, .label-bell, .label-hotTags {
+.label-news, .label-bell, .label-hotTags {
   color: #fff; }
-  .label-primary:hover, .label-success:hover, .label-info:hover, .label-warning:hover, .label-danger:hover, .label-news:hover, .label-bell:hover, .label-hotTags:hover, .label-primary:focus, .label-success:focus, .label-info:focus, .label-warning:focus, .label-danger:focus, .label-news:focus, .label-bell:focus, .label-hotTags:focus {
+  .label-news:hover, .label-bell:hover, .label-hotTags:hover, .label-news:focus, .label-bell:focus, .label-hotTags:focus {
     color: #fff;
     text-decoration: none;
     cursor: pointer; }
@@ -6953,31 +6952,6 @@ ul {
     color: #5e5e5e;
     text-decoration: none;
     cursor: pointer; }
-
-.label-primary {
-  background-color: #2185d0; }
-  .label-primary[href]:hover, .label-primary[href]:focus {
-    background-color: #1a69a4; }
-
-.label-success {
-  background-color: #00b5ad; }
-  .label-success[href]:hover, .label-success[href]:focus {
-    background-color: #00827c; }
-
-.label-info {
-  background-color: #b5cc18; }
-  .label-info[href]:hover, .label-info[href]:focus {
-    background-color: #8d9e13; }
-
-.label-warning {
-  background-color: #f2711c; }
-  .label-warning[href]:hover, .label-warning[href]:focus {
-    background-color: #cf590c; }
-
-.label-danger {
-  background-color: #db2828; }
-  .label-danger[href]:hover, .label-danger[href]:focus {
-    background-color: #b21e1e; }
 
 .label-news {
   background-color: #f8ac59; }
@@ -7684,9 +7658,11 @@ ul {
         position: relative; }
         .header .header-utilities .header-utilities-box--user .row--user-money .row--user-money-child dl {
           margin-bottom: 0; }
-        .header .header-utilities .header-utilities-box--user .row--user-money .row--user-money-child dt a {
-          font-size: 16px;
-          font-size: 1.6rem; }
+        .header .header-utilities .header-utilities-box--user .row--user-money .row--user-money-child dt {
+          font-weight: 300; }
+          .header .header-utilities .header-utilities-box--user .row--user-money .row--user-money-child dt a {
+            font-size: 16px;
+            font-size: 1.6rem; }
       .header .header-utilities .header-utilities-box--user .row--user-money .row--user-money-child-left {
         border-right: 1px solid #f1f1f1; }
     .header .header-utilities .header-utilities-box--user .user-info-list li .fa {
@@ -9456,11 +9432,19 @@ ul {
     padding-bottom: 10px;
     margin-bottom: 10px; }
 
-.account-aside {
+.account-aside, .account-content {
   background-color: #fff;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+
+.account-aside {
+  margin-bottom: 20px; }
+  .account-aside .account-aside-section {
+    min-height: 150px;
+    border-right: 1px solid #ddd; }
+    .account-aside .account-aside-section:last-child {
+      border-right: 0; }
   .account-aside .account-name {
-    border-bottom: 1px solid #f1f1f1;
     padding: 10px; }
   .account-aside .account-img img {
     -webkit-transition: box-shadow 0.45s;
@@ -9468,42 +9452,56 @@ ul {
     transition: box-shadow 0.45s; }
     .account-aside .account-img img:hover {
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
+  .account-aside .account-call {
+    padding-left: 20px; }
+  .account-aside .account-call-name, .account-aside .account-call-viewpro {
+    display: block; }
   .account-aside .account-call-name {
     color: #444;
-    display: block;
-    font-weight: 600;
-    padding-top: 10px; }
-  .account-aside .account-money-list {
-    border-bottom: 1px solid #f1f1f1;
-    padding: 20px; }
-    .account-aside .account-money-list > li {
-      padding: 8px 0;
-      border-bottom: 1px dotted #f1f1f1; }
-      .account-aside .account-money-list > li small {
-        color: #db2828; }
-      .account-aside .account-money-list > li:last-child {
-        border-bottom: 0; }
+    padding-top: 5px;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 600; }
+  .account-aside .account-call-des {
+    color: #999; }
+  .account-aside .account-call-grade {
+    color: #ffc600; }
+  .account-aside .account-call-viewpro {
+    margin-top: 10px; }
+  .account-aside .account-ibox {
+    padding: 10px; }
+    .account-aside .account-ibox .header {
+      position: relative;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      border-bottom: 1px solid #ddd; }
+    .account-aside .account-ibox .content .row {
+      width: 100%;
+      margin: 0; }
+    .account-aside .account-ibox .content .col-md-4 {
+      padding-left: 2px;
+      padding-right: 2px; }
+    .account-aside .account-ibox .item {
+      border: 1px solid #ccc;
+      border-radius: 4px; }
+    .account-aside .account-ibox .item-title {
+      margin: 0;
+      padding: 6px 10px;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ccc;
+      border-radius: 4px 4px 0 0; }
+    .account-aside .account-ibox .item-content {
+      padding: 10px;
+      word-break: break-all; }
 
 .account-content {
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ccc; }
+  padding: 20px; }
+  .account-content .panel {
+    border: 0; }
 
-.account-section-header {
-  position: relative;
-  margin-bottom: 20px; }
-  .account-section-header h2 {
-    font-size: 20px;
-    font-size: 2rem;
-    margin: 0;
-    margin-top: 10px;
-    color: #2185d0;
-    border-bottom: 1px solid #EFEFEF;
-    padding-bottom: 10px; }
-  .account-section-header .form-inline {
-    position: absolute;
-    right: 0;
-    top: 0px; }
+.account-section {
+  padding-top: 30px; }
 
 .table--account th {
   background-color: #FBFBFB; }
@@ -9512,7 +9510,8 @@ ul {
   font-size: 12px; }
 
 .account-content-footer .cost-statistics {
-  margin: 20px 0; }
+  margin: 20px 0;
+  padding-top: 8px; }
 
 .account-content-footer .num {
   color: #db2828; }
@@ -9521,7 +9520,7 @@ ul {
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: 600;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #ddd;
   padding-bottom: 10px; }
 
 .m-steps {

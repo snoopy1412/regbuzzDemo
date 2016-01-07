@@ -252,30 +252,31 @@
 										</div>
 										<div class="user-money">
 											<div class="row row--user-money">
-												<div class="col-md-6 row--user-money-child row--user-money-child-left">
+												<div class="col-md-4 row--user-money-child row--user-money-child-left">
 													<dl>
 														<dt><a href="" title="">income</a></dt>
 														<dd><small>900.00 USD</small></dd>
 													</dl>
 												</div>
-												<div class="col-md-6 row--user-money-child row--user-money-child-right">
+												<div class="col-md-4 row--user-money-child row--user-money-child-right">
 													<dl>
 														<dt><a href="" title="">expenditure</a></dt>
 														<dd><small>900.00 USD</small></dd>
 													</dl>
 												</div>
-												<div class="col-md-12 row--user-money-child">
-													<dl style='padding-bottom: 10px;'>
-														<dt><a href="" title=""><i class="fa fa-bar-chart"></i> balance</a></dt>
+												<div class="col-md-4 row--user-money-child">
+													<dl>
+														<dt><a href="" title="">balance</a></dt>
 														<dd><small>100.00 USD</small></dd>
 													</dl>
-													<div>
+												</div>
+													<div class="col-md-12" style='padding: 10px 0'>
 														<a href="" title="" class='btn btn-sm btn-success'>Withdraw</a>
 														<a href="" title="" class='btn btn-sm btn-warning'>Top-up</a>
 													</div>
 														
 														
-													</div>
+													
 											</div>
 										</div>
 										<ul class='user-info-list'>
@@ -333,110 +334,112 @@
 
 <!-- /header -->
 <section class='com-main'>
-<div class="container">
-
-<div class="row">
-	<div class="col-md-3 com-aside">
-		<div class="account-aside">
-			<div class="account-aside-head">
-				<div class="account-name text-center">
-					<div class="account-img">
-						<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="80px" ></a>
+	<div class="container">
+		<div class="row account-aside">
+			<div class="col-md-4 account-aside-section">
+				<div class="account-name clearfix">
+					<div class="account-img pull-left">
+						<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="120px" ></a>
 					</div>
-					<div class="account-call">
-						<a href="" title="" class='account-call-name'>Aaron Su</a>
-						<p class='account-call-des'>Law Consultant</p>
+					<div class="account-call pull-left">
+						<div class='account-call-name-warp'>
+							<a href="" title="" class='account-call-name'>Aaron Su</a>
+							<p class='account-call-des'>Current : Base User</p>
+							<p class='account-call-grade'><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+							<a href="" title="">93 commits</a>
+							</p>
+							<section class='account-call-viewpro'>
+								<a href="" title="" class='btn btn-info-outline btn-sm '>view profile</a>
+							<a href="" title="" class='btn btn-primary btn-sm'>Update account</a>
+							</section>
+							
+						</div>
 					</div>
-				</div>
-				<div class="account-money">
-					<ul class='account-money-list'>
-						<li class='clearfix'>
-							<a href="" title="" class='pull-left'>income :</a>
-							<small class='pull-right'>900.00 USD</small>
-						</li>
-						<li class='clearfix'>
-							<a href="" title="" class='pull-left'>expenditure :</a>
-							<small class='pull-right'>900.00 USD</small>
-						</li>
-						<li class='clearfix'>
-							<a href="" title="" class='pull-left'>balance :</a>
-							<small class='pull-right'>900.00 USD</small>
-						</li>
-						<li class='text-center'>						
-							<a href="" title="" class="btn btn-sm btn-success">Withdraw</a>
-							<a href="" title="" class="btn btn-sm btn-warning">Top-up</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<ul class='nav nav-pills nav-stacked'>
-						<li  class="active">
-							<a href="" title="">Transaction Management</a>
-						</li>
-						<li>
-							<a href="" title="">My Account Book</a>
-						</li>
-						<li>
-							<a href="" title="">Evaluation Management</a>
-						</li>
-						<li>
-							<a href="" title="">Invoice Management</a>
-						</li>
-						<li>
-							<a href="" title="">Arbitration Management</a>
-						</li>
-					</ul>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="col-md-9 com-content">
-		<div class="account-content">
-			<section class='account-section'>
-				<div class="account-section-header clearfix">
-					<h2>Payment details</h2>
-					<!-- <div class="form-inline">
-						<div class="form-group">
-							<select name="" id="" class="form-control">
-									<option value="" selected>all</option>
-									<option value="">income</option>
-									<option value="">expenditure</option>
-								</select>
+			<div class="col-md-8 account-aside-section">
+				<div class="account-ibox">
+					<div class='header clearfix'>
+							<div class="btn-group pull-left">
+								<a href="" title="" class='btn btn-secondary btn-sm active'>All</a>
+								<a href="" title="" class='btn btn-secondary btn-sm'>Day</a>
+								<a href="" title="" class='btn btn-secondary btn-sm'>Month</a>
+								<a href="" title="" class='btn btn-secondary btn-sm'>Year</a>
+							</div>
+							<div class='account-money pull-right'>
+								<a href="" title="" class='btn btn-sm btn-success'>Withdraw</a>
+								<a href="" title="" class='btn btn-sm btn-warning'>Top-up</a>
+							</div>
 						</div>
-					</div> -->
-				</div>
+						<div class="content">
+							<div class="row">
+								<section class='col-md-4'>
+									<div class='item item-income'>
+										<h5 class='item-title'>Income</h5>
+										<div class='item-content'>
+										<a href="" title="">900.00 $</a>
+										</div>
+									</div>			
+								</section>
+								<section class='col-md-4'>
+									<div class="item item-Cost">
+										<h5 class='item-title'>Cost</h5>
+										<div class='item-content'>
+											<a href="" title="">900.00 $</a>
+										</div>
+									</div>		
+								</section>
+								<section class='col-md-4'>
+									<div class="item item-balance">
+										<h5 class='item-title'>Balance</h5>
+										<div class='item-content'>
+										<a href="" title="">900.00 $</a>
+										</div>
+									</div>	
+								</section>
+							</div>
+						</div>
+				</div>		
+			</div>
+		</div>		
+		<div class="row account-content">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#account-statement" data-toggle="tab">Account Statement</a></li>
+				<li><a href="#scoring-rating" data-toggle="tab">Scoring & Rating</a></li>
+				<li><a href="#invoice-management" data-toggle="tab">Invoice Management</a></li>
+				<li><a href="#arbitration-management" data-toggle="tab">Arbitration Management</a></li>
+			</ul>
+			<div class='tab-content'>
+				<section class='account-section tab-pane fade in active'  id="account-statement">
 				<div class="panel panel-default">
-					<div class="panel-heading clearfix">
-						<form action="" method="POST" class="form-inline" role="form">
-						
-							<div class="form-group pull-left">
-								<label  for="">Trading hours: </label>
-								<div class="input-group date form_date">
-								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
-								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>	 	
-								 </div>
-								-
-								<div class="input-group date form_date">
-								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
-								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
-								 </div>
-							</div>
-							<div class='form-group  pull-right' >
-								<!-- <label for="">Fund flow: </label> -->
-								<select name="" id="" class="form-control">
-									<option value="" selected>all</option>
-									<option value="">income</option>
-									<option value="">expenditure</option>
-								</select>
-							</div>
-							</form>
-					</div>	
 					<div class="panel-body">
-						<div class="form-inline clearfix" style='padding: 20px 0;'>			
-							<div class="form-group pull-right">
-								<input type="text" class='form-control' placeholder='input your order number'>
-								<button class="btn btn-primary">search</button>
-							</div>
+						<div class="account-content-heading clearfix" style='margin-bottom: 20px;'>
+							<form action="" method="POST" class="form-inline clearfix">
+								<div class="form-group">
+									<label  for="">Trading hours: </label>
+									<div class="input-group date form_date">
+									 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
+									 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>	 	
+									 </div>
+									-
+									<div class="input-group date form_date">
+									 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
+									 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
+									 </div>
+								</div>
+								<div class='form-group' style='padding-left: 20px'>
+									<label for="">Fund flow: </label>
+									<select name="" id="" class="form-control">
+										<option value="" selected>all</option>
+										<option value="">income</option>
+										<option value="">cost</option>
+									</select>
+								</div>
+								<div class="form-group pull-right">
+									<input type="text" class='form-control' placeholder='input your order number'>
+									<button class="btn btn-primary">search</button>
+								</div>
+							</form>
 						</div>
 						<table class="table table-hover table--account">
 							<thead>
@@ -543,13 +546,19 @@
 						
 					</div>
 				</div>
-
-			</section>
-		</div>
+				</section>
+				<section class='account-section tab-pane fade in'  id="scoring-rating">
+				1
+				</section>
+				<section class='account-section tab-pane fade in'  id="invoice-management">
+				2
+				</section>
+				<section class='account-section tab-pane fade in'  id="arbitration-management">
+				3
+				</section>
+			</div>
+		</div>	
 	</div>
-	
-</div>
-</div>
 </section>
 
 <!-- 页脚部分 -->

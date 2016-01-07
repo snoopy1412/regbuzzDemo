@@ -7,7 +7,7 @@
   line-height: 1;
   vertical-align: baseline;
   margin: 0 .14285714rem;
-  background-color: #e8e8e8;
+
   background-image: none;
   padding: .3em .6em .4em; 
   text-transform: none;
@@ -44,30 +44,7 @@
   }
 }
 
-.label-primary {
-  @include label-variant($palette-blue);
-  @extend %hoverFont;
-}
 
-.label-success {
-  @include label-variant($palette-teal);
-  @extend %hoverFont;
-}
-
-.label-info {
-  @include label-variant($palette-olive);
-  @extend %hoverFont;
-}
-
-.label-warning {
-  @include label-variant($palette-orange);
-  @extend %hoverFont;
-}
-
-.label-danger {
-  @include label-variant($palette-red);
-  @extend %hoverFont;
-}
 .label-news {
   @include label-variant(#f8ac59);
   @extend %hoverFont;
