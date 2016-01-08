@@ -9440,18 +9440,24 @@ ul {
 .account-aside {
   margin-bottom: 20px; }
   .account-aside .account-aside-section {
-    min-height: 150px;
     border-right: 1px solid #ddd; }
     .account-aside .account-aside-section:last-child {
       border-right: 0; }
   .account-aside .account-name {
     padding: 10px; }
-  .account-aside .account-img img {
-    -webkit-transition: box-shadow 0.45s;
-    -o-transition: box-shadow 0.45s;
-    transition: box-shadow 0.45s; }
-    .account-aside .account-img img:hover {
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
+  .account-aside .account-img {
+    position: relative; }
+    .account-aside .account-img img {
+      -webkit-transition: box-shadow 0.45s;
+      -o-transition: box-shadow 0.45s;
+      transition: box-shadow 0.45s; }
+      .account-aside .account-img img:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
+    .account-aside .account-img .score {
+      position: absolute;
+      right: 10px;
+      bottom: 20px;
+      background-color: #00b0f0; }
   .account-aside .account-call {
     padding-left: 20px; }
   .account-aside .account-call-name, .account-aside .account-call-viewpro {
@@ -9474,26 +9480,71 @@ ul {
       position: relative;
       margin-bottom: 10px;
       padding-bottom: 10px;
-      padding-top: 10px;
-      border-bottom: 1px solid #ddd; }
-    .account-aside .account-ibox .content .row {
-      width: 100%;
-      margin: 0; }
-    .account-aside .account-ibox .content .col-md-4 {
-      padding-left: 2px;
-      padding-right: 2px; }
-    .account-aside .account-ibox .item {
-      border: 1px solid #ccc;
-      border-radius: 4px; }
-    .account-aside .account-ibox .item-title {
+      padding-top: 10px; }
+    .account-aside .account-ibox .account-ibox-title {
       margin: 0;
-      padding: 6px 10px;
-      background-color: #f5f5f5;
-      border-bottom: 1px solid #ccc;
-      border-radius: 4px 4px 0 0; }
-    .account-aside .account-ibox .item-content {
-      padding: 10px;
-      word-break: break-all; }
+      font-size: 16px;
+      font-size: 1.6rem;
+      font-weight: 600; }
+    .account-aside .account-ibox .account-ibox-more {
+      position: absolute;
+      right: 10px;
+      top: 10px; }
+    .account-aside .account-ibox .content {
+      position: relative; }
+      .account-aside .account-ibox .content .row {
+        width: 100%;
+        margin: 0; }
+      .account-aside .account-ibox .content .col-md-6 {
+        padding-left: 2px;
+        padding-right: 2px; }
+    .account-aside .account-ibox .item {
+      border-radius: 4px; }
+    .account-aside .account-ibox .panel {
+      margin-bottom: 0; }
+    .account-aside .account-ibox .p-states h4 {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0; }
+    .account-aside .account-ibox .p-states h3 {
+      font-size: 25px;
+      margin: 10px 0 0 0; }
+    .account-aside .account-ibox .chart-bar {
+      margin-top: 10px; }
+    .account-aside .account-ibox .green-box {
+      background-color: #6bc5a4;
+      color: #fff;
+      box-shadow: 0 5px 0 #5bb996; }
+      .account-aside .account-ibox .green-box h4, .account-aside .account-ibox .green-box h3 {
+        color: #fff; }
+    .account-aside .account-ibox .blue-box {
+      background-color: #2185d0;
+      color: #fff;
+      box-shadow: 0 5px 0 #1a69a4; }
+      .account-aside .account-ibox .blue-box h4, .account-aside .account-ibox .blue-box h3 {
+        color: #fff; }
+    .account-aside .account-ibox .dl-horizontal--balance {
+      margin-bottom: 5px; }
+      .account-aside .account-ibox .dl-horizontal--balance dt, .account-aside .account-ibox .dl-horizontal--balance dd {
+        display: inline-block; }
+      .account-aside .account-ibox .dl-horizontal--balance dt {
+        width: 100px;
+        text-align: right; }
+      .account-aside .account-ibox .dl-horizontal--balance dd {
+        padding-left: 20px; }
+    .account-aside .account-ibox .balance-value {
+      color: #db2828;
+      font-size: 24px;
+      font-weight: bold; }
+    .account-aside .account-ibox .frozen-value {
+      color: #db2828; }
+    .account-aside .account-ibox .account-money {
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+  .account-aside .account-ibox--account {
+    border-bottom: 1px solid #ddd; }
 
 .account-content {
   padding: 20px; }
