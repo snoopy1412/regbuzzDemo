@@ -252,31 +252,23 @@
 										</div>
 										<div class="user-money">
 											<div class="row row--user-money">
-												<div class="col-md-4 row--user-money-child row--user-money-child-left">
-													<dl>
-														<dt><a href="" title="">income</a></dt>
-														<dd><small>900.00 USD</small></dd>
-													</dl>
-												</div>
-												<div class="col-md-4 row--user-money-child row--user-money-child-right">
-													<dl>
-														<dt><a href="" title="">expenditure</a></dt>
-														<dd><small>900.00 USD</small></dd>
-													</dl>
-												</div>
-												<div class="col-md-4 row--user-money-child">
+												<div class="col-md-6 row--user-money-child row--user-money-child-left">
 													<dl>
 														<dt><a href="" title="">balance</a></dt>
-														<dd><small>100.00 USD</small></dd>
+														<dd><small>900.00 USD</small></dd>
 													</dl>
 												</div>
-													<div class="col-md-12" style='padding: 10px 0'>
+												<div class="col-md-6 row--user-money-child row--user-money-child-right">
+													<dl>
+														<dt><a href="" title="">frozen</a></dt>
+														<dd><small>900.00 USD</small></dd>
+													</dl>
+												</div>
+												
+													<div class="col-md-12" style='padding-top: 10px'>
 														<a href="" title="" class='btn btn-sm btn-success'>Withdraw</a>
 														<a href="" title="" class='btn btn-sm btn-warning'>Top-up</a>
 													</div>
-														
-														
-													
 											</div>
 										</div>
 										<ul class='user-info-list'>
@@ -340,33 +332,105 @@
 				<div class="account-name clearfix">
 					<div class="account-img pull-left">
 						<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="120px" ></a>
-						<i class="fa fa-trophy fa-2x score"></i>
+						<span class="level">1</span>
 					</div>
 					<div class="account-call pull-left">
 						<div class='account-call-name-warp'>
 							<a href="" title="" class='account-call-name'>Aaron Su</a>
 							<div class='account-call-des clearfix'>
-								<p class='pull-left'>Current : Base User</p>
-								<a href="" title="" class='btn btn-primary btn-sm pull-right' style='margin-left: 40px;margin-bottom: 10px;'>Update account</a>
+								<p class=''>Current : Base User <a href="" title="" class='btn btn-primary-outline btn-sm' style='margin-left: 60px'>Update account</a></p>
 							</div>
-							<p class='account-call-grade'><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							<a href="" title="">93 commits</a>
-							</p>
+							<div class="progress--small">
+							  <div class="progress-bar progress-bar-success" style="width: 40%">
+							  </div><label class='level-num'> 32/40 </label>
+							</div>
 							<section class='account-call-viewpro'>
 								<a href="" title="" class='btn btn-info-outline btn-sm '>view profile</a>
 							</section>
 						</div>
 					</div>
 				</div>
+				<div class="account-score clearfix">
+					<div class="left pull-left">
+						<p class='score-num'>4.98</p>
+						<p class='score-stars'><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i>
+						</p>
+						<p><a href="" title="">93 commits</a></p>
+					</div>
+					<div class="right pull-left">
+					<dl class='dl-horizontal--short score-detail'>
+						<dt>Quality : </dt>
+						<dd class='score-detail-num'><span><i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
+						</span>0.8</dd>
+					</dl>
+					<dl class='dl-horizontal--short score-detail'>
+						<dt>Speed : </dt>
+						<dd class='score-detail-num'><span><i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
+						</span>0.8</dd>
+					</dl>
+					<dl class='dl-horizontal--short score-detail'>
+						<dt>Attitude : </dt>
+						<dd class='score-detail-num'><span><i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
+						</span>0.8</dd>
+					</dl>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-6 account-aside-section">
-				<div class="account-ibox account-ibox--account">
+				<div class="account-ibox  account-ibox--income">
+						<div class='header clearfix'>
+							<div class="btn-group pull-right">
+								<a href="" title="" class='btn btn-secondary btn-sm active'>All</a>
+								<a href="" title="" class='btn btn-secondary btn-sm'>Dayly</a>
+								<a href="" title="" class='btn btn-secondary btn-sm'>Monthly</a>
+								<a href="" title="" class='btn btn-secondary btn-sm'>Yearly</a>
+							</div>
+							
+						</div>
+						<div class="content">
+							<div class="row">
+								<section class='col-md-6'>
+									<div class='item item-income'>
+										<div class="panel">
+			                                <div class="panel-body p-states blue-box">
+			                                    <div class="summary pull-left">
+			                                        <h4>INCOME</h4>
+			                                        <!-- <span>Monthly Summary</span> -->
+			                                        <h3>$ 5,600</h3>
+			                                    </div>
+			                                    <div id="expense" class="chart-bar pull-right">
+			                                    	<img src="./img/account/chart-white.png" height="35" width="68" alt="">
+			                                    </div>
+			                                </div>
+			                            </div>
+									</div>			
+								</section>
+								<section class='col-md-6'>
+									<div class="item item-cost">
+										<div class="panel">
+			                                <div class="panel-body p-states green-box">
+			                                    <div class="summary pull-left">
+			                                        <h4>COST</h4>
+			                                        <!-- <span>Monthly Summary</span> -->
+			                                        <h3>$ 5,600</h3>
+			                                    </div>
+			                                    <div id="expense" class="chart-bar pull-right">
+			                                    	<img src="./img/account/chart-white.png" height="35" width="68" alt="">
+			                                    </div>
+			                                </div>
+			                            </div>
+									</div>		
+								</section>
+							</div>
+						</div>
+				</div>
+				<div class="account-ibox">
 					<div class="content clearfix">
-						<dl class="dl-horizontal--balance">
+						<dl class="dl-horizontal--short">
 							<dt>BALANCE</dt>
 							<dd><span class="balance-value">$ 3,120.00</span></dd>
 						</dl>
-						<dl class="dl-horizontal--balance">
+						<dl class="dl-horizontal--short">
 							<dt>FROZEN</dt>
 							<dd><span class="frozen-value">$ 3,120.00</span></dd>
 						</dl>
@@ -375,65 +439,18 @@
 							<a href="" title="" class='btn btn-sm btn-primary'>Top-up</a>
 						</div>						
 					</div>
-				</div>	
-				<div class="account-ibox">
-					<div class='header clearfix'>
-						<div class="btn-group pull-right">
-							<a href="" title="" class='btn btn-secondary btn-sm active'>All</a>
-							<a href="" title="" class='btn btn-secondary btn-sm'>Day</a>
-							<a href="" title="" class='btn btn-secondary btn-sm'>Month</a>
-							<a href="" title="" class='btn btn-secondary btn-sm'>Year</a>
-						</div>
-						
-					</div>
-					<div class="content">
-						<div class="row">
-							<section class='col-md-6'>
-								<div class='item item-income'>
-									<div class="panel">
-		                                <div class="panel-body p-states blue-box">
-		                                    <div class="summary pull-left">
-		                                        <h4>INCOME</h4>
-		                                        <!-- <span>Monthly Summary</span> -->
-		                                        <h3>$ 5,600</h3>
-		                                    </div>
-		                                    <div id="expense" class="chart-bar pull-right">
-		                                    	<img src="./img/account/chart-white.png" height="35" width="68" alt="">
-		                                    </div>
-		                                </div>
-		                            </div>
-								</div>			
-							</section>
-							<section class='col-md-6'>
-								<div class="item item-cost">
-									<div class="panel">
-		                                <div class="panel-body p-states green-box">
-		                                    <div class="summary pull-left">
-		                                        <h4>COST</h4>
-		                                        <!-- <span>Monthly Summary</span> -->
-		                                        <h3>$ 5,600</h3>
-		                                    </div>
-		                                    <div id="expense" class="chart-bar pull-right">
-		                                    	<img src="./img/account/chart-white.png" height="35" width="68" alt="">
-		                                    </div>
-		                                </div>
-		                            </div>
-								</div>		
-							</section>
-						</div>
-					</div>
-				</div>		
+				</div>				
 			</div>
 		</div>		
 		<div class="row account-content">
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#account-statement" data-toggle="tab">Account Statement</a></li>
+				<li class="active"><a href="#transactions-statement" data-toggle="tab">Transactions Statement</a></li>
 				<li><a href="#scoring-rating" data-toggle="tab">Scoring & Rating</a></li>
 				<li><a href="#invoice-management" data-toggle="tab">Invoice Management</a></li>
 				<li><a href="#arbitration-management" data-toggle="tab">Arbitration Management</a></li>
 			</ul>
 			<div class='tab-content'>
-				<section class='account-section tab-pane fade in active'  id="account-statement">
+				<section class='account-section tab-pane fade in active' id="transactions-statement">
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="account-content-heading clearfix" style='margin-bottom: 20px;'>

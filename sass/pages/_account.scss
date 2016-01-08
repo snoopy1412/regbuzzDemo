@@ -3,7 +3,20 @@
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
-
+	.dl-horizontal--short{
+		text-align: left;
+		margin-bottom:5px;
+		dt,dd{
+			display: inline-block;
+		}
+		dt{
+			width: 100px;
+			text-align: right;
+		}
+		dd{
+			padding-left: 20px;
+		}
+	}
 // account-aside
 .account-aside{	
 	margin-bottom: 20px;
@@ -25,15 +38,33 @@
 				box-shadow: 0 2px 10px rgba(0,0,0,.35);
 			}
 		}
-		.score{
+		.level{
 			position: absolute;
-			right: 10px;
-			bottom:20px;
-			background-color: #00b0f0;
+			right: 0px;
+			bottom: 0px;
+			background:url(../img/account/level-bg.jpg) no-repeat 50%;
+			color:#fff;
+			width:30px;
+			height:30px;
+			text-align: center;
+			line-height: 30px;
+			@include font-size(2);
+			font-weight: bold;
 		}
 	}
 	.account-call{
 		padding-left: 20px;
+		
+		.progress--small{
+			position: relative;
+		}
+		.level-num{
+			position: absolute;
+			top:-9px;
+			right: -40px;
+			font-weight: 300;
+			color:#1ab394;
+		}
 	}
 	.account-call-name,.account-call-viewpro{
 		display: block;
@@ -47,12 +78,39 @@
 	.account-call-des{
 		color:#999;
 	}
-	.account-call-grade{
-		color:#ffc600;
-	}
+	
 	.account-call-viewpro{
-		margin-top:10px;
+		margin-top:15px;
 	}
+
+	// score
+	.account-score{
+		// margin-top: 20px;
+		border-top:1px solid #ddd;
+		padding:10px;
+		.left,.right{
+			width: 50%;
+			text-align: center;
+		}
+		.left{
+			border-right: 1px solid #ddd;
+		}
+		.right{
+			padding-top: 15px;
+		}
+		.score-num{
+			color:#ff9800;
+			font-size: 18px;
+		}
+		.score-stars,.score-detail-num{
+			color:#ff9800;
+		}
+		.score-detail{
+			color:#afafaf;
+		}
+	}
+
+// right
 	.account-ibox{
 		padding: 10px;
 		.header{
@@ -122,19 +180,7 @@
 			}
 		}
 		
-		.dl-horizontal--balance{
-			margin-bottom:5px;
-			dt,dd{
-				display: inline-block;
-			}
-			dt{
-				width: 100px;
-				text-align: right;
-			}
-			dd{
-				padding-left: 20px;
-			}
-		}
+
 		.balance-value {
 			color: $palette-red;
 			font-size: 24px;
@@ -149,7 +195,8 @@
 			bottom:0;
 		}
 	}
-	.account-ibox--account{
+	.account-ibox--income{
+		padding-bottom: 20px;
 		border-bottom: 1px solid #ddd;
 	}
 
