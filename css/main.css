@@ -9609,6 +9609,25 @@ ul {
   border-bottom: 1px dotted #ddd;
   padding-bottom: 10px; }
 
+.verify-sucess {
+  font-size: 20px;
+  font-size: 2rem; }
+  .verify-sucess i.fa {
+    color: #67a100; }
+  .verify-sucess span {
+    font-weight: 600; }
+
+.verify-mail-des {
+  background-color: #eee;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.verify-mail-handle {
+  color: #666;
+  font-size: 12px;
+  margin-left: 20px; }
+
 .m-steps {
   width: 100%;
   display: table;

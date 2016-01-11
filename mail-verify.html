@@ -1,4 +1,4 @@
-<!-- head.html -->
+ <!-- head.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +18,10 @@
 	<![endif]-->
 </head>
 <!-- head.html end-->
+
 <body>
-	<!-- header.html -->
-		<!-- /header -->
+<!-- header.html -->
+	<!-- /header -->
 	<header class="header">
 		<nav class="navbar">
 			<div class="container">
@@ -321,265 +322,45 @@
 			</div>
 		</nav>
 </header>
-	<!-- header.html end-->
+<!-- header.html end-->
 
-	<section class='com-main com-main--list'>
-		<div class='list-search-warp'>
-			<div class='container'>
-				<!-- 面包屑 -->
-				<ol class="breadcrumb">
-				  <li><a href="#">Home</a></li>
-				  <li class="active">Search</li>
-				</ol>
-			</div>		
 
-		</div>
-		
-		<div class="container" >	
-			<div class="row mt-10">
-
-				<!-- 侧边栏 -->
-				<!-- public-list.html -->
-				<div class="col-md-3 com-aside">
-	<aside class='list-aside'>
-		<section class='list-aside-item list-aside-item-method'>
-			<div class="list-group list-aside-item-method-list">
-			  <a href="#" class="list-group-item active">
-			   	<i class="fa fa-bars"></i><span>All</span>
-			  </a>
-			  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>People</span></a>
-			  <a href="#" class="list-group-item"><i class="fa fa-briefcase"></i><span>Projects</span></a>
-			  <a href="#" class="list-group-item"><i class="fa fa-folder-open"></i><span>Articles</span></a>
-			</div>						
-		</section>
-		<div class="list-aside-item panel panel-default">
-			<div class="panel-body">
-				<h4 class='list-aside-item-title'>Category</h4>
-				<select class='form-control'>
-				<option id="cn1-0" value="">All Categories</option>
-			</select>
-			</div>
-		</div>
-		<div class="list-aside-item list-aside-item-type panel panel-default">
-			<div class="panel-body">
-				<h4 class='list-aside-item-title'>Project Types</h4>
-				<ul class='checkbox-list list-unstyled'>
-				<li class="checkbox">
-					<input type="checkbox" value="" name="iCheck" id='hourly'>
-		        	<label for='hourly'>Hourly(8,380)</label>
-				</li>
-				<li class="checkbox">
-					<input type="checkbox" value="" name="iCheck" id='fixed-price'>
-		        	<label for='fixed-price'>Fixed Price(7,436)</label>
-				</li>
-			</ul>			
-			</div>
-		</div>
-		<div class="list-aside-item list-aside-item-type panel panel-default">
-			<div class="panel-body">
-				<h4 class='list-aside-item-title'>Publish type</h4>
-				<ul class='checkbox-list list-unstyled'>
-				<li class="checkbox">
-					<input type="checkbox" value="" name="iCheck" id='featured'>
-		        	<label for='featured'>Featured</label>
-				</li>
-				<li class="checkbox">
-					<input type="checkbox" value="" name="iCheck" id='sealed'>
-		        	<label for='sealed'>Sealed</label>
-				</li>
-				<li class="checkbox">
-					<input type="checkbox" value="" name="iCheck" id='NDA'>
-		        	<label for='NDA'>NDA</label>
-				</li>
-				<li class="checkbox">
-					<input type="checkbox" value="" name="iCheck" id='urgent'>
-		        	<label for='urgent'>Urgent</label>
-				</li>
-				<li class="checkbox">
-					<input type="checkbox" value="" name="iCheck" id='fulltime'>
-		        	<label for='fulltime'>Fulltime</label>
-				</li>
-				<li class="checkbox">
-					<input type="checkbox" value="" name="iCheck" id='Hourly'>
-		        	<label for='Hourly'>Hourly</label>
-				</li>
-			</ul>	
-			</div>
-		</div>
-		<div class="list-aside-item list-aside-item-fixed panel panel-default">
-			<div class="panel-body form-inline">
-				<h4 class='list-aside-item-title'>Budget (fixed price)</h4>
-				<div class='form-group' style='margin-bottom: 10px;'>
-					<span class='budget-modify-str'>$</span>
-					<input type="number" name="" id=""  value="100" class='form-control' style='width:90px;'>
-					<span class='budget-modify-str'>-</span>
-					<input type="number" name="" id=""  value="200" class='form-control' style='width:90px;'>
+<section class='com-main'>
+<div class="container setting-container" >
+<div class="row">
+	<div class="col-md-12 com-content">
+		<!-- 手机认证 -->
+		<section class="">
+			<div class="panel panel-default">
+				<div class="panel-heading">Mailbox verification</div>
+				<div class="panel-body">
+				<div class="text-center">
+                    <div class="verify-sucess">
+                        <i class="fa fa-check-circle"></i>
+                        <span>验证邮件已发送</span>
+                    </div>
+                    <div class="verify-mail-des">
+                        <p>验证邮件已发送至您的邮箱<a href="javascript:void(0);">402****@qq.com</a>，点击邮件中的链接完成操作。</p>
+                        <p>验证邮件24小时内有效，请尽快验证！</p>
+                    </div>
+                    <div class="verify-mail-send">
+                        <a class="btn btn-success">立即进入邮箱</a>
+                        <!-- <a class="reSent fs12" href="#" type="3" id="J_email-resendSubmit">重新发送</a> -->
+                        <a href="javascript:void(0)" class="verify-mail-handle">已发送 <span>59</span>秒后重新发送</a>
+                    </div>
+                </div>
 				</div>
-				<a href="" class='btn btn-primary'>submit</a>
 			</div>
-		</div>
-	</aside>
+		</section>
+	</div>
 </div>
-				<!-- public-list.html end-->
+</div>
+</section>
 
-				<!-- 主要内容部分 -->
-				<div class="col-md-9 com-content">
-					<!-- 搜索框 -->
-					<form class="list-search clearfix">
-						<div class="list-search-text-warp pull-left">
-							<i class="fa fa-search"></i>
-							<input type="text" name="" value="" placeholder="" class='form-control list-search-text'>
-						</div>
-						<div class="list-search-btn-warp pull-left">
-							<button type="submit" class='btn btn-primary list-search-btn'>
-								Search
-							</button>
-						</div>
-					</form>	
-					<article class='list-main'>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<section class='list-bar'>
-								<div class="row">
-									<div class="col-md-4">
-										<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
-									</div>
-									<div class="col-md-8">
-										<div class="select-menu form-inline">		
-											<label>
-												Sort by :
-											</label>
-											<select class="form-control">
-											  <option>Best match</option>
-											  <option>Newest</option>
-											  <option>Oldest</option>
-											  <option>Most Client Hours</option>
-											  <option>Least Client Hours</option>
-											  <option>Most Dollars Paid</option>
-											  <option>Least Dollars Paid</option>
-											  <option>Highest Feedback Score</option>
-											  <option>Lowest Feedback Score</option>
-											</select>
-									    </div>
-									</div>
-								</div>									
-							</section>
-						</div>
-						<div class="panel-body">
-							<section class="list-results clearfix">
-								<ul class="list-peoples list-unstyled">
-								<li class="list-results-item row list-peoples-item">
-									<div class="col-md-2 list-peoples-img">
-										<img src="img/index/servers/13.jpg" alt="">
-										<a href="" title="" class='btn btn-danger-outline btn--save'><i class="fa fa-heart-o"></i> Save</a>
-									</div>
-									<div class="col-md-8 list-peoples-info">
-										<h3 class='list-item-title list-peoples-item-title'>
-										<a href="" title="">Aaron Su</a>
-										</h3>
-										<p class='list-peoples-position'>
-											GHS Consultant in <a href="" title="">CIRS</a>
-										</p>
-										
-										<p class='list-peoples-item-bref'> Augmented reality app programmer for Android & iOS.</p>
-										<div class='list-peoples-item-grade clearfix'>
-											<span class="grade-item-name pull-left"></span>
-											<div class="grade-item pull-left" data-score='4.5'></div>
-											 <a href=''>33 Reviews</a>     			
-										</div>
-										<p class='list-peoples-item-skills'>
-											<a href="" title="" class='label label-bell'>GHS</a>
-											<a href='' class='label label-bell'>Chemical</a>
-											<a href='' class='label label-bell'>HSF</a>
-											<a href='' class='label label-bell'>REACH</a>
-											<a href='' class='label label-bell'>English</a>
-										</p>
-									</div>
-									<div class="col-md-2 list-peoples-item-aside">
-										<a href="" title="" class='btn btn-primary btn--hire'>Hire me </a>
-										<p class='charging-standard'>
-											<sup>$</sup>858
-											<span>USD/hour</span>
-										</p>
-									</div>
-								</li>
-								<li class="list-results-item row list-peoples-item">
-									<div class="col-md-2 list-peoples-img">
-										<img src="img/index/servers/16.jpg" alt="">
-										<a href="" title="" class='btn btn-danger-outline btn--save'><i class="fa fa-heart-o"></i> Save</a>
-									</div>
-									<div class="col-md-8 list-peoples-info">
-										<h3 class='list-item-title list-peoples-item-title'>
-										<a href="" title="">Steven Jobs</a>
-										</h3>
-										<p class='list-peoples-position'>
-											GHS Consultant in <a href="" title="">CIRS</a>
-										</p>
-										
-										<p class='list-peoples-item-bref'>I am in to design browser compatible SharePoint sites (Master Pages, CSS, Page Layouts), customizing (Content Management) and development of custom solutions for SharePoint (Web Parts, Events, Workflows etc). Experienced in all the SharePoint versions and find experience details below,1. SharePoint 2013 & Office 3 ...</p>
-										<div class='list-peoples-item-grade clearfix'>
-											<span class="grade-item-name pull-left"></span>
-											<div class="grade-item pull-left" data-score='3.5'></div>
-											 <a href=''>33 Reviews</a>     			
-										</div>
-										<p class='list-peoples-item-skills'>
-											<a href="" title="" class='label label-bell'>GHS</a>
-											<a href='' class='label label-bell'>Chemical</a>
-											<a href='' class='label label-bell'>HSF</a>
-											<a href='' class='label label-bell'>REACH</a>
-											
-										</p>
-									</div>
-									<div class="col-md-2 list-peoples-item-aside">
-										<a href="" title="" class='btn btn-primary btn--hire'>Hire me </a>
-										<p class='charging-standard'>
-											<sup>$</sup>858
-											<span>USD/hour</span>
-										</p>
-									</div>
-								</li>
-							</ul>
-							</section>
-						<nav class='text-center'>
-							<ul class="pagination">
-								<li class="disabled">
-									<a href="#" aria-label="Previous">
-										<span>&lt; Previous</span>
-									</a>
-								</li>
-								<li class="active">
-									<a href="#">1</a>
-								</li>
-								<li>
-									<a href="#">2</a>
-								</li>
-								<li>
-									<a href="#">3</a>
-								</li>
-								<li>
-									<a href="#">4</a>
-								</li>
-								<li>
-									<a href="#">5</a>
-								</li>
-								<li>
-									<a href="#" aria-label="Next">
-										<span>Next &gt;</span>
-									</a>
-								</li>
-							</ul>
-						</nav>
-						</div>
-					</div>
 
-					</article>
-				</div> 
-			</div>
-		</div>
-	</section>
-
-	<!-- footer.html -->
-	<footer class='footer'>
+<!-- 页脚部分 -->
+<!-- footer.html -->
+<footer class='footer'>
 <div class="container-fluid">
 <div class="row footer-nav">
 	<div class="col-md-2 footer-nav-list">
@@ -697,6 +478,4 @@
 </div>
 </div>
 </footer>
-	<!-- footer.html end-->
-</body>
-</html>
+<!-- footer.html end
