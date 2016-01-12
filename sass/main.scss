@@ -27,7 +27,7 @@
 @import "components/star";
 @import "components/progress";
 @import "components/breadcrumb";
-@import "components/modal";
+// @import "components/modal";
 @import "components/tabs-bar";
 @import "components/tabs";
 @import "components/page";
@@ -57,6 +57,9 @@
 @import "pages/help";
 @import "pages/account";
 @import "pages/verify";
+@import "pages/top-up";
+@import "pages/withdraw";
+@import "pages/evaluate";
 
 // module
 @import "module/step";

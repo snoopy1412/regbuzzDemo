@@ -1,0 +1,597 @@
+<!-- head.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
+	<title>Document</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src='./js/vendor/respond.min.js'></script>
+    <script type="text/javascript" src='./js/vendor/require.js' data-main='./js/main.js'></script>
+	<!--[if lt IE9]> 
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
+<!-- head.html end-->
+
+<body>
+<!-- header.html -->
+	<!-- /header -->
+	<header class="header">
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+					<img src='img/header/logo4.png' height="32" width="123"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" >
+					<form class='navbar-form navbar-left search-form'>
+						<!-- <div class="search-dropdown pull-left dropdown">
+						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
+						</span>
+						<ul class='dropdown-menu'>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
+									<span>Search for people, projects, articles...</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-user"></i>
+									<span>Search peoples</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-briefcase"></i>
+									<span>Search projects</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" title="" class='js-outbox'>
+									<i class="fa fa-folder-open"></i>
+									<span>Search articles</span>
+								</a>
+							</li>
+						</ul>
+						</div>
+						-->
+						<div class='dropdown'>
+							<div class='form-group'>
+								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+								<div class='dropdown-menu search-text-response'>
+									<ul class='list-unstyled'>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-user"></i>
+											&nbsp;&nbsp; <strong>People</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-briefcase"></i>
+											&nbsp;&nbsp; <strong>Projects</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-folder-open"></i>
+											&nbsp;&nbsp;
+											<strong>Articles</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<button type="submit" class="btn btn-secondary">Submit</button>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right header-utilities">
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle'  data-toggle="dropdown">
+								<i class='fa fa-book'></i>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow header-utilities--helpCenter">
+								<div class="panel panel-default">
+									<!-- <div class="header-loading">
+										<i class="fa fa-spinner fa-pulse fa-2x"></i>
+									</div> -->
+									<div class="panel-heading">
+										<strong class='heading-title'>Help center</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">
+													<i class="fa fa-quote-left"></i>
+													<span>FAQs</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+	     											<i class="fa fa-book"></i>
+													<span>Guidance</span>
+													</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-usd"></i>
+													<span>Fees & Charges</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-cog"></i>
+													<span>How it works</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-info"></i>
+													<span>Feedback</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-envelope'></i>
+								<span class='label label-news inform'>8</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong class='heading-title'>Message</strong>
+								</div>
+								<div class="panel-body header-utilities-list">
+									<ul>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="">A security question has been created for your account.</a>
+										</li>
+									</ul>
+								</div>
+								<div class="panel-footer clearfix">
+									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+								</div>
+							</div>
+						</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-bell'></i>
+								<span class='label label-bell inform'>2</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<strong class='heading-title'>Notice</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="">A security question has been created for your account.</a>
+											</li>
+										</ul>
+									</div>
+									<div class="panel-footer clearfix">
+										<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle account' data-toggle="dropdown">
+								<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px"></a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--user">
+								<!-- <div class="dropdown-loading">
+								<i class="fa fa-spinner fa-pulse"></i>
+							</div>
+							-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="user-info">
+											<img src="./img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px">
+											<h4 class='user-info-name'>Aaron Su</h4>
+											<a href="" title="" class='user-info-level'>Basic User</a>
+										</div>
+										<!-- <div class="user-money">
+											<div class="row row--user-money">
+												<div class="col-md-6 row--user-money-child row--user-money-child-left">
+													<dl>
+														<dt><a href="" title="">balance</a></dt>
+														<dd><small>900.00 USD</small></dd>
+													</dl>
+												</div>
+												<div class="col-md-6 row--user-money-child row--user-money-child-right">
+													<dl>
+														<dt><a href="" title="">frozen</a></dt>
+														<dd><small>900.00 USD</small></dd>
+													</dl>
+												</div>
+												
+													<div class="col-md-12" style='padding-top: 10px'>
+														<a href="" title="" class='btn btn-sm btn-success'>Withdraw</a>
+														<a href="" title="" class='btn btn-sm btn-warning'>Top-up</a>
+													</div>
+											</div>
+										</div> -->
+										<ul class='user-info-list'>
+											<li>
+												<a href="profile.html">
+													<i class="fa fa-newspaper-o"></i>
+													<span>Profile</span>
+												</a>
+											</li>
+											<li>
+												<a href="setting.html">
+													<i class="fa fa-cog"></i>
+													<span>Settings</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-sign-out"></i>
+													<span>logout</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 页面导航部分 -->
+		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+			<div class='container'>
+				<ul class='nav navbar-nav clearfix'>
+					<li>
+						<a href="" title="" class='active'>Home</a>
+					</li>
+					<li>
+						<a href="" title="">Needs</a>
+					</li>
+					<li>
+						<a href="" title="">Providers</a>
+					</li>
+					<li>
+						<a href="" title="">Connections</a>
+					</li>
+					<li>
+						<a href="" title="">Article</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+</header>
+<!-- header.html end-->
+
+<!-- /header -->
+<section class='com-main'>
+<div class="container wtrust-withdraw">
+ <section class='wtrust-main'>
+ 	<header class="wtrust-header">
+ 		<h1>设置安全电话</h1>
+ 		<span class="fa-stack fa-4x wtrust-header-icon">
+		  <i class="fa fa-square-o fa-stack-2x"></i>
+		  <i class="fa fa-usd fa-stack-1x"></i>
+		</span>
+ 	</header>
+ 	<div class="wtrust-content">
+ 		<h2>设置安全电话号码</h2>
+ 		<p>请提供一个长久的手机号码用以验证您的Freelancer账户。我们会不时通过给该手机号码发送验证码来验证您是否仍然持有您的账号。</p>
+ 		<div class="row">
+ 			<div class="col-md-6">
+ 				<form>
+ 			<div class="form-group">
+ 				<label>国家</label>
+ 				<select class='form-control'>
+ 				<option value="ABW" label="Aruba">Aruba</option>
+ 				<option value="AFG" label="Afghanistan">Afghanistan</option>
+ 				<option value="AGO" label="Angola">Angola</option>
+ 				<option value="AIA" label="Anguilla">Anguilla</option>
+ 				<option value="ALA" label="Aland Islands">Aland Islands</option>
+ 				<option value="ALB" label="Albania">Albania</option>
+ 				<option value="AND" label="Andorra">Andorra</option>
+ 				<option value="ARE" label="United Arab Emirates">United Arab Emirates</option>
+ 				<option value="ARG" label="Argentina">Argentina</option>
+ 				<option value="ARM" label="Armenia">Armenia</option>
+ 				<option value="ASM" label="American Samoa">American Samoa</option>
+ 				<option value="ATA" label="Antarctica">Antarctica</option>
+ 				<option value="ATF" label="French Southern Territories">French Southern Territories</option>
+ 				<option value="ATG" label="Antigua and Barbuda">Antigua and Barbuda</option>
+ 				<option value="AUS" label="Australia">Australia</option>
+ 				<option value="AUT" label="Austria">Austria</option>
+ 				<option value="AZE" label="Azerbaijan">Azerbaijan</option>
+ 				<option value="BDI" label="Burundi">Burundi</option>
+ 				<option value="BEL" label="Belgium">Belgium</option>
+ 				<option value="BEN" label="Benin">Benin</option>
+ 				<option value="BES" label="Bonaire, Saint Eustatius and Saba">Bonaire, Saint Eustatius and Saba</option>
+ 				<option value="BFA" label="Burkina Faso">Burkina Faso</option>
+ 				<option value="BGD" label="Bangladesh">Bangladesh</option>
+ 				<option value="BGR" label="Bulgaria">Bulgaria</option>
+ 				<option value="BHR" label="Bahrain">Bahrain</option>
+ 				<option value="BHS" label="Bahamas">Bahamas</option>
+ 				<option value="BIH" label="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+ 				<option value="BLM" label="Saint Barthelemy">Saint Barthelemy</option>
+ 				<option value="BLR" label="Belarus">Belarus</option>
+ 				<option value="BLZ" label="Belize">Belize</option>
+ 				<option value="BMU" label="Bermuda">Bermuda</option>
+ 				<option value="BOL" label="Bolivia">Bolivia</option>
+ 				<option value="BRA" label="Brazil">Brazil</option>
+ 				<option value="BRB" label="Barbados">Barbados</option>
+ 				<option value="BRN" label="Brunei Darussalam">Brunei Darussalam</option>
+ 				<option value="BTN" label="Bhutan">Bhutan</option>
+ 				<option value="BVT" label="Bouvet Island">Bouvet Island</option>
+ 				<option value="BWA" label="Botswana">Botswana</option>
+ 				<option value="CAF" label="Central African Republic">Central African Republic</option
+ 				>
+ 				<option value="CAN" label="Canada">Canada</option>
+ 				<option value="CCK" label="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+ 				<option value="CHE" label="Switzerland">Switzerland</option>
+ 				<option value="CHL" label="Chile">Chile</option>
+ 				<option value="CHN" label="China">China</option>
+ 				<option value="CIV" label="Cote D'Ivoire">Cote D'Ivoire</option>
+ 				<option value="CMR" label="Cameroon">Cameroon</option>
+ 				<option value="COD" label="Congo, The Democratic Republic of the">Congo, The Democratic Republic of the</option>
+ 				<option value="COG" label="Congo">Congo</option>
+ 				<option value="COK" label="Cook Islands">Cook Islands</option>
+ 				<option value="COL" label="Colombia">Colombia</option>
+ 				<option value="COM" label="Comoros">Comoros</option>
+ 				<option value="CPV" label="Cape Verde">Cape Verde</option>
+ 				<option value="CRI" label="Costa Rica">Costa Rica</option>
+ 				<option value="CUW" label="Curacao">Curacao</option>
+ 				<option value="CXR" label="Christmas Island">Christmas Island</option>
+ 				<option value="CYM" label="Cayman Islands">Cayman Islands</option>
+ 				<option value="CYP" label="Cyprus">Cyprus</option>
+ 				<option value="CZE" label="Czech Republic">Czech Republic</option>
+ 				<option value="DEU" label="Germany">Germany</option>
+ 				<option value="DJI" label="Djibouti">Djibouti</option>
+ 				<option value="DMA" label="Dominica">Dominica</option>
+ 				<option value="DNK" label="Denmark">Denmark</option>
+ 				<option value="DOM" label="Dominican Republic">Dominican Republic</option>
+ 				<option value="DZA" label="Algeria">Algeria</option>
+ 				<option value="ECU" label="Ecuador">Ecuador</option>
+ 				<option value="EGY" label="Egypt">Egypt</option>
+ 				<option value="ERI" label="Eritrea">Eritrea</option>
+ 				<option value="ESH" label="Western Sahara">Western Sahara</option>
+ 				<option value="ESP" label="Spain">Spain</option>
+ 				<option value="EST" label="Estonia">Estonia</option>
+ 				<option value="ETH" label="Ethiopia">Ethiopia</option>
+ 				<option value="FIN" label="Finland">Finland</option>
+ 				<option value="FJI" label="Fiji">Fiji</option>
+ 				<option value="FLK" label="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+ 				<option value="FRA" label="France">France</option>
+ 				<option value="FRO" label="Faroe Islands">Faroe Islands</option>
+ 				<option value="FSM" label="Micronesia, Federated States of">Micronesia, Federated States of</option>
+ 				<option value="GAB" label="Gabon">Gabon</option>
+ 				<option value="GBR" label="United Kingdom">United Kingdom</option>
+ 				<option value="GEO" label="Georgia">Georgia</option>
+ 				<option value="GGY" label="Guernsey">Guernsey</option>
+ 				<option value="GHA" label="Ghana">Ghana</option>
+ 				<option value="GIB" label="Gibraltar">Gibraltar</option><option value="GIN" label="Guinea">Guinea</option><option value="GLP" label="Guadeloupe">Guadeloupe</option><option value="GMB" label="Gambia">Gambia</option><option value="GNB" label="Guinea-Bissau">Guinea-Bissau</option><option value="GNQ" label="Equatorial Guinea">Equatorial Guinea</option><option value="GRC" label="Greece">Greece</option><option value="GRD" label="Grenada">Grenada</option><option value="GRL" label="Greenland">Greenland</option><option value="GTM" label="Guatemala">Guatemala</option><option value="GUF" label="French Guiana">French Guiana</option><option value="GUM" label="Guam">Guam</option><option value="GUY" label="Guyana">Guyana</option><option value="HKG" selected="selected" label="Hong Kong">Hong Kong</option><option value="HMD" label="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option><option value="HND" label="Honduras">Honduras</option><option value="HRV" label="Croatia">Croatia</option><option value="HTI" label="Haiti">Haiti</option><option value="HUN" label="Hungary">Hungary</option><option value="IDN" label="Indonesia">Indonesia</option><option value="IMN" label="Isle of Man">Isle of Man</option><option value="IND" label="India">India</option><option value="IOT" label="British Indian Ocean Territory">British Indian Ocean Territory</option><option value="IRL" label="Ireland">Ireland</option><option value="IRQ" label="Iraq">Iraq</option><option value="ISL" label="Iceland">Iceland</option><option value="ISR" label="Israel">Israel</option><option value="ITA" label="Italy">Italy</option><option value="JAM" label="Jamaica">Jamaica</option><option value="JEY" label="Jersey">Jersey</option><option value="JOR" label="Jordan">Jordan</option><option value="JPN" label="Japan">Japan</option><option value="KAZ" label="Kazakhstan">Kazakhstan</option><option value="KEN" label="Kenya">Kenya</option><option value="KGZ" label="Kyrgyzstan">Kyrgyzstan</option><option value="KHM" label="Cambodia">Cambodia</option><option value="KIR" label="Kiribati">Kiribati</option><option value="KNA" label="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="KOR" label="Korea, Republic of">Korea, Republic of</option><option value="KWT" label="Kuwait">Kuwait</option><option value="LAO" label="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="LBN" label="Lebanon">Lebanon</option><option value="LBR" label="Liberia">Liberia</option><option value="LBY" label="Libya">Libya</option><option value="LCA" label="Saint Lucia">Saint Lucia</option><option value="LIE" label="Liechtenstein">Liechtenstein</option><option value="LKA" label="Sri Lanka">Sri Lanka</option><option value="LSO" label="Lesotho">Lesotho</option><option value="LTU" label="Lithuania">Lithuania</option><option value="LUX" label="Luxembourg">Luxembourg</option><option value="LVA" label="Latvia">Latvia</option><option value="MAC" label="Macau">Macau</option><option value="MAF" label="Saint Martin">Saint Martin</option><option value="MAR" label="Morocco">Morocco</option><option value="MCO" label="Monaco">Monaco</option><option value="MDA" label="Moldova, Republic of">Moldova, Republic of</option><option value="MDG" label="Madagascar">Madagascar</option><option value="MDV" label="Maldives">Maldives</option><option value="MEX" label="Mexico">Mexico</option><option value="MHL" label="Marshall Islands">Marshall Islands</option><option value="MKD" label="Macedonia">Macedonia</option><option value="MLI" label="Mali">Mali</option><option value="MLT" label="Malta">Malta</option><option value="MMR" label="Myanmar">Myanmar</option><option value="MNE" label="Montenegro">Montenegro</option><option value="MNG" label="Mongolia">Mongolia</option><option value="MNP" label="Northern Mariana Islands">Northern Mariana Islands</option><option value="MOZ" label="Mozambique">Mozambique</option><option value="MRT" label="Mauritania">Mauritania</option><option value="MSR" label="Montserrat">Montserrat</option><option value="MTQ" label="Martinique">Martinique</option><option value="MUS" label="Mauritius">Mauritius</option><option value="MWI" label="Malawi">Malawi</option><option value="MYS" label="Malaysia">Malaysia</option><option value="MYT" label="Mayotte">Mayotte</option><option value="NAM" label="Namibia">Namibia</option><option value="NCL" label="New Caledonia">New Caledonia</option><option value="NER" label="Niger">Niger</option><option value="NFK" label="Norfolk Island">Norfolk Island</option><option value="NGA" label="Nigeria">Nigeria</option><option value="NIC" label="Nicaragua">Nicaragua</option><option value="NIU" label="Niue">Niue</option><option value="NLD" label="Netherlands">Netherlands</option><option value="NOR" label="Norway">Norway</option><option value="NPL" label="Nepal">Nepal</option><option value="NRU" label="Nauru">Nauru</option><option value="NTC" label="Northern Cyprus">Northern Cyprus</option><option value="NZL" label="New Zealand">New Zealand</option><option value="OMN" label="Oman">Oman</option><option value="PAK" label="Pakistan">Pakistan</option><option value="PAN" label="Panama">Panama</option><option value="PCN" label="Pitcairn Islands">Pitcairn Islands</option><option value="PER" label="Peru">Peru</option><option value="PHL" label="Philippines">Philippines</option><option value="PLW" label="Palau">Palau</option><option value="PNG" label="Papua New Guinea">Papua New Guinea</option><option value="POL" label="Poland">Poland</option><option value="PRI" label="Puerto Rico">Puerto Rico</option><option value="PRT" label="Portugal">Portugal</option><option value="PRY" label="Paraguay">Paraguay</option><option value="PSE" label="Palestinian Territory">Palestinian Territory</option><option value="PYF" label="French Polynesia">French Polynesia</option><option value="QAT" label="Qatar">Qatar</option><option value="REU" label="Reunion">Reunion</option><option value="ROU" label="Romania">Romania</option><option value="RUS" label="Russian Federation">Russian Federation</option><option value="RWA" label="Rwanda">Rwanda</option><option value="SAU" label="Saudi Arabia">Saudi Arabia</option><option value="SEN" label="Senegal">Senegal</option><option value="SGP" label="Singapore">Singapore</option><option value="SGS" label="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option><option value="SHN" label="Saint Helena">Saint Helena</option><option value="SJM" label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option><option value="SLB" label="Solomon Islands">Solomon Islands</option><option value="SLE" label="Sierra Leone">Sierra Leone</option><option value="SLV" label="El Salvador">El Salvador</option><option value="SMR" label="San Marino">San Marino</option><option value="SOM" label="Somalia">Somalia</option><option value="SPM" label="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option><option value="SRB" label="Serbia">Serbia</option><option value="STP" label="Sao Tome and Principe">Sao Tome and Principe</option><option value="SUR" label="Suriname">Suriname</option><option value="SVK" label="Slovakia">Slovakia</option><option value="SVN" label="Slovenia">Slovenia</option><option value="SWE" label="Sweden">Sweden</option><option value="SWZ" label="Swaziland">Swaziland</option><option value="SXM" label="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option><option value="SYC" label="Seychelles">Seychelles</option><option value="TCA" label="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="TCD" label="Chad">Chad</option><option value="TGO" label="Togo">Togo</option><option value="THA" label="Thailand">Thailand</option><option value="TJK" label="Tajikistan">Tajikistan</option><option value="TKL" label="Tokelau">Tokelau</option><option value="TKM" label="Turkmenistan">Turkmenistan</option><option value="TLS" label="Timor-Leste">Timor-Leste</option><option value="TON" label="Tonga">Tonga</option><option value="TTO" label="Trinidad and Tobago">Trinidad and Tobago</option><option value="TUN" label="Tunisia">Tunisia</option><option value="TUR" label="Turkey">Turkey</option><option value="TUV" label="Tuvalu">Tuvalu</option><option value="TWN" label="Taiwan">Taiwan</option><option value="TZA" label="Tanzania, United Republic of">Tanzania, United Republic of</option><option value="UGA" label="Uganda">Uganda</option><option value="UKR" label="Ukraine">Ukraine</option><option value="UMI" label="United States Minor Outlying Islands">United States Minor Outlying Islands</option><option value="UNK" label="Kosovo">Kosovo</option><option value="URY" label="Uruguay">Uruguay</option><option value="USA" label="United States">United States</option><option value="UZB" label="Uzbekistan">Uzbekistan</option><option value="VAT" label="Holy See (Vatican City State)">Holy See (Vatican City State)</option><option value="VCT" label="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="VEN" label="Venezuela">Venezuela</option><option value="VGB" label="Virgin Islands, British">Virgin Islands, British</option><option value="VIR" label="Virgin Islands, U.S.">Virgin Islands, U.S.</option><option value="VNM" label="Vietnam">Vietnam</option><option value="VUT" label="Vanuatu">Vanuatu</option><option value="WLF" label="Wallis and Futuna">Wallis and Futuna</option><option value="WSM" label="Samoa">Samoa</option><option value="YEM" label="Yemen">Yemen</option><option value="ZAF" label="South Africa">South Africa</option><option value="ZMB" label="Zambia">Zambia</option><option value="ZWE" label="Zimbabwe">Zimbabwe</option></select>
+ 			</div>
+ 			<div class="form-group">
+ 				<label>电话号码</label>
+ 				<div class="input-group">
+			      <div class="input-group-addon">+86</div>
+			      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+			    </div>
+ 			</div>
+ 			<div class="form-group">
+ 				<label>验证方式</label>
+ 				<div>
+ 					<label class="c-input c-radio">
+					  <input id="radio1" name="radio" type="radio" checked>
+					  <span class="c-indicator"></span>
+					  手机短信
+					</label>
+ 				</div>
+
+ 			</div>
+ 			<div class="form-group">
+ 				<!-- <input type="submit" class='btn btn-primary' value='提交'> -->
+ 				<button type='button' class='btn btn-primary'>发送</button>
+ 			</div>
+ 			
+ 			<!-- 上文发送后出现 -->
+ 			<div class="form-group" style='display:none'>	
+				<label>
+					输入验证码
+				</label>
+				<input type="text" class="form-control" />
+			</div>
+			<div class="form-group" style='display:none'>
+				<input type="submit" class='btn btn-primary' value='提交'>
+			</div>
+ 		</form>
+ 			</div>
+ 		</div>
+ 		
+ 	</div>
+ </section>
+
+</div>
+</section>
+
+<!-- 页脚部分 -->
+<!-- footer.html -->
+<footer class='footer'>
+<div class="container-fluid">
+<div class="row footer-nav">
+	<div class="col-md-2 footer-nav-list">
+		<h4>Company</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+			<li>
+				<a href="">Jobs</a>
+			</li>
+			<li>
+				<a href="">Team</a>
+			</li>
+			<li>
+				<a href="">Press releases</a>
+			</li>
+			<li>
+				<a href="">Testimonials</a>
+			</li>
+			<li>
+				<a href="">Terms of Service</a>
+			</li>
+			<li>
+				<a href="">Privacy Policy</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Resource</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Videos</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Support</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Questions</a>
+			</li>
+			<li>
+				<a href="">Blogs</a>
+			</li>
+			<li>
+				<a href="">Language support</a>
+			</li>
+			<li>
+				<a href="">FAQ</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Social</h4>
+		<div class="footer-divider"></div>
+		<ul class='social-icon-list'>
+			<li class='social-icon'>
+				<span class='fa fa-linkedin'></span>
+				<a href="" title='Linkedin'>linkedin</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-twitter'></span>
+				<a href="" title='twitter'>twitter</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-facebook-official'></span>
+				<a href="" title='Facebook'>facebook</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-google-plus'></span>
+				<a href="" title='Google+'>google+</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4 footer-nav-list">
+		<h4>Message</h4>
+		<div class="footer-divider"></div>
+		<form action="" class='footer-contact'>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+			<div class="form-group">
+				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value='Submit' class='btn btn-secondary'></div>
+		</form>
+	</div>
+</div>
+<div class="footer-divider"></div>
+<div class="row footer-bottom">
+	<div class="col-md-6">
+		<ul class='footer-brand clearfix'>
+			<li class='footer-brand-logo'>
+				<img src="./img/index/footer-logo.png" alt=""></li>
+			<li class='footer-brand-content'>
+				<p>The best product compliance platform</p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<p class='text-right copyright'>
+			© Copyright 2015 - 2016
+			<a href="" title="">Regbuzz.com</a>
+		</p>
+	</div>
+</div>
+</div>
+</footer>
+<!-- footer.html end-->
+</body>
+</html>

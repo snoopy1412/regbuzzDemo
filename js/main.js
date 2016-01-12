@@ -4,7 +4,7 @@ require.config({
     velocity: './vendor/velocity.min',
     validate: './vendor/jquery.validate.min',
     raty: './vendor/jquery.raty.min',
-    icheck: '../plugins/icheck/icheck.min',
+    // icheck: '../plugins/icheck/icheck.min',
     layer: '../plugins/layer/layer',
     popover: './components/popover',
     edit: './components/edit',

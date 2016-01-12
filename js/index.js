@@ -26,4 +26,11 @@ define(['dropdown','popover','revealOnScroll', 'hoverMask'],function( dropdown,p
 		}
 	})
 
+
+
+  // 为验证页面做
+ 	$('#verification-statement').modal({
+ 		show : true
+ 	});
+
 });
