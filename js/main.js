@@ -18,9 +18,9 @@ require.config({
     "velocity": {
       deps: ["jquery"]
     },
-    "icheck": {
-      deps: ["jquery"]
-    },
+    // "icheck": {
+    //   deps: ["jquery"]
+    // },
     "raty": {
       deps: ["jquery"]
     },

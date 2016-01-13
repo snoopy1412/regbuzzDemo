@@ -1,10 +1,4 @@
-define(['icheck', 'raty'], function(icheck, raty) {
-
-  $('input').iCheck({
-    checkboxClass: 'icheckbox_square-blue',
-    radioClass: 'iradio_square-blue',
-    increaseArea: '20%'
-  });
+define(['raty'], function(icheck, raty) {
 
   // 星星评级  
   $('.grade-item').each(function() {

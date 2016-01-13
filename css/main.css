@@ -5217,11 +5217,11 @@ button.close {
 
 .c-indicator {
   position: absolute;
-  top: 5px;
+  top: 2px;
   left: 0;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   font-size: 65%;
   line-height: 1rem;
   color: #eee;
@@ -9175,9 +9175,7 @@ ul {
       color: #444;
       border-left: 3px solid #1a69a4; }
   .setting-menu .fa {
-    width: 30px;
-    font-size: 16px;
-    text-align: center; }
+    margin-right: 10px; }
 
 .setting-section {
   display: none; }
@@ -10081,7 +10079,8 @@ ul {
   min-width: 280px;
   top: -40px;
   left: 102%;
-  padding: 10px 30px; }
+  padding: 10px 30px;
+  z-index: 100; }
   .m-oFormHelp:before, .m-oFormHelp:after {
     content: '';
     position: absolute;

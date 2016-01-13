@@ -8,6 +8,7 @@
 	top:-40px;
 	left: 102%;
 	padding: 10px 30px;
+	z-index: 100;
 	&:before,&:after{
 		content: '';
 		position: absolute;
