@@ -6346,8 +6346,8 @@ select[size] {
   margin-left: 0;
   margin-right: 0; }
   .row--no-padding > * {
-    padding-left: 0;
-    padding-right: 0; }
+    padding-left: 2px;
+    padding-right: 2px; }
 
 .bold {
   font-weight: 600; }
@@ -9214,6 +9214,10 @@ ul {
   .setting-edit .avatar-upload {
     margin-left: 20px; }
 
+.setting-verify-list > li {
+  border-bottom: 1px solid #eee;
+  padding: 20px 10px; }
+
 .setting-section--Linked .lined-accounts-item {
   border: 1px solid #eee;
   padding: 10px 30px; }
@@ -9775,6 +9779,20 @@ ul {
     font-weight: 700; }
   .wtrust-content h2, .wtrust-content p {
     margin-bottom: 20px; }
+
+.idverify-section {
+  margin-bottom: 50px; }
+
+.idverify-img-des {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #787878; }
+
+.idverify-img-warp {
+  margin-right: 100px; }
+
+.idverify-img {
+  margin-bottom: 10px; }
 
 .m-steps {
   width: 100%;

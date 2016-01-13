@@ -71,6 +71,17 @@
 		margin-left: 20px;
 	}
 }
+
+// setting-verify-list
+.setting-verify-list{
+	&>li{
+		border-bottom: 1px solid #eee;
+		padding: 20px 10px;
+	}
+}
+
+
+
 .setting-section--Linked{
 	.lined-accounts-item{
 		border: 1px solid #eee;

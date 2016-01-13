@@ -326,50 +326,184 @@
 
 <!-- /header -->
 <section class='com-main'>
-<div class="container">
-<div class="modal fade" id='verification-statement'>
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+<div class="container idverify-container">
+  <!-- <div class="modal fade" id='verification-statement'>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          内容
+        </div>
+        <div class="modal-footer">
+           <button type="button" class="btn btn-primary">Agree</button>
+  	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
-            <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
-          </div>
-          <div class="row">
-            <div class="col-sm-9">
-              Level 1: .col-sm-9
-              <div class="row">
-                <div class="col-xs-8 col-sm-6">
-                  Level 2: .col-xs-8 .col-sm-6
-                </div>
-                <div class="col-xs-4 col-sm-6">
-                  Level 2: .col-xs-4 .col-sm-6
-                </div>
+    </div>
+  </div> -->
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        个人认证
+    </div>
+    <div class="panel-body">
+      <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">联系人姓名：</label>
+            <div class="col-sm-10">
+              <div class="row row--no-padding">
+                  <div class="col-sm-6">
+                    <input type="text" class='form-control' placeholder='first name'>                    
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" class='form-control' placeholder='last name'>
+                  </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-         <button type="button" class="btn btn-primary">Agree</button>
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+          <div class="form-group">
+            <label class="col-sm-2 control-label">ID号码：</label>
+            <div class="col-sm-10">
+              <input type="text" class='form-control'>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">证件持照：</label>
+            <div class="col-sm-10">
+                <p class="form-control-static idverify-img-des">请确保证件和人脸同时能够看清楚，文件大小不超过5M</p>
+                <div class="clearfix idverify-section">
+                  <p class="idverify-img-des">1.正面照：</p>
+                  <div class="pull-left idverify-img-warp">
+                    <div class='idverify-img'>
+                      <a href="">
+                      <img src="https://static.qiniucdn.com/public/v28846/image/setting-certification/example.png">
+                    </a>
+                    </div>
+                    <button class='btn btn-primary'>选择文件</button>
+                  </div>
+                  <div class="pull-left">
+                        <small style='vertical-align: top'>示例：</small>
+                        <img src="https://static.qiniucdn.com/public/v28846/image/setting-certification/identity-personal.png" alt="">
+                  </div>
+                </div>
+                <div class="clearfix idverify-section">
+                  <div class="idverify-img-des">2.反面照：</div>
+                  <div class="pull-left idverify-img-warp">
+                    <div class='idverify-img'>
+                      <a href="">
+                      <img src="https://static.qiniucdn.com/public/v28846/image/setting-certification/example.png">
+                    </a>
+                    </div>
+                    <button class='btn btn-primary'>选择文件</button>
+                  </div>
+                  <div class="pull-left">
+                        <small class="tip" style='vertical-align: top'>示例：</small>
+                        <img src="https://static.qiniucdn.com/public/v28846/image/setting-certification/identity-personal-B.png" alt="">   
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">联系人国家：</label>
+            <div class="col-sm-10">
+              <select class="form-control">
+                  <option value="ABW" label="Aruba">Aruba</option>
+                  <option value="AFG" label="Afghanistan">Afghanistan</option>
+                  <option value="AGO" label="Angola">Angola</option>
+                  <option value="AIA" label="Anguilla">Anguilla</option>
+                  <option value="ALA" label="Aland Islands">Aland Islands</option>
+                  <option value="ALB" label="Albania">Albania</option>
+                  <option value="AND" label="Andorra">Andorra</option>
+                  <option value="ARE" label="United Arab Emirates">United Arab Emirates</option>
+                  <option value="ARG" label="Argentina">Argentina</option>
+                  <option value="ARM" label="Armenia">Armenia</option>
+                  <option value="ASM" label="American Samoa">American Samoa</option>
+                  <option value="ATA" label="Antarctica">Antarctica</option>
+                  <option value="ATF" label="French Southern Territories">French Southern Territories</option>
+                  <option value="ATG" label="Antigua and Barbuda">Antigua and Barbuda</option>
+                  <option value="AUS" label="Australia">Australia</option>
+                  <option value="AUT" label="Austria">Austria</option>
+                  <option value="AZE" label="Azerbaijan">Azerbaijan</option>
+                  <option value="BDI" label="Burundi">Burundi</option>
+                  <option value="BEL" label="Belgium">Belgium</option>
+                  <option value="BEN" label="Benin">Benin</option>
+                  <option value="BES" label="Bonaire, Saint Eustatius and Saba">Bonaire, Saint Eustatius and Saba</option>
+                  <option value="BFA" label="Burkina Faso">Burkina Faso</option>
+                  <option value="BGD" label="Bangladesh">Bangladesh</option>
+                  <option value="BGR" label="Bulgaria">Bulgaria</option>
+                  <option value="BHR" label="Bahrain">Bahrain</option>
+                  <option value="BHS" label="Bahamas">Bahamas</option>
+                  <option value="BIH" label="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                  <option value="BLM" label="Saint Barthelemy">Saint Barthelemy</option>
+                  <option value="BLR" label="Belarus">Belarus</option>
+                  <option value="BLZ" label="Belize">Belize</option>
+                  <option value="BMU" label="Bermuda">Bermuda</option>
+                  <option value="BOL" label="Bolivia">Bolivia</option>
+                  <option value="BRA" label="Brazil">Brazil</option>
+                  <option value="BRB" label="Barbados">Barbados</option>
+                  <option value="BRN" label="Brunei Darussalam">Brunei Darussalam</option>
+                  <option value="BTN" label="Bhutan">Bhutan</option>
+                  <option value="BVT" label="Bouvet Island">Bouvet Island</option>
+                  <option value="BWA" label="Botswana">Botswana</option>
+                  <option value="CAF" label="Central African Republic">Central African Republic</option>
+                  <option value="CAN" label="Canada">Canada</option>
+                  <option value="CCK" label="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                  <option value="CHE" label="Switzerland">Switzerland</option>
+                  <option value="CHL" label="Chile">Chile</option>
+                  <option value="CHN" label="China">China</option>
+                  <option value="CIV" label="Cote D'Ivoire">Cote D'Ivoire</option>
+                  <option value="CMR" label="Cameroon">Cameroon</option>
+                  <option value="COD" label="Congo, The Democratic Republic of the">Congo, The Democratic Republic of the</option>
+                  <option value="COG" label="Congo">Congo</option>
+                  <option value="COK" label="Cook Islands">Cook Islands</option>
+                  <option value="COL" label="Colombia">Colombia</option>
+                  <option value="COM" label="Comoros">Comoros</option>
+                  <option value="CPV" label="Cape Verde">Cape Verde</option>
+                  <option value="CRI" label="Costa Rica">Costa Rica</option>
+                  <option value="CUW" label="Curacao">Curacao</option>
+                  <option value="CXR" label="Christmas Island">Christmas Island</option>
+                  <option value="CYM" label="Cayman Islands">Cayman Islands</option>
+                  <option value="CYP" label="Cyprus">Cyprus</option>
+                  <option value="CZE" label="Czech Republic">Czech Republic</option>
+                  <option value="DEU" label="Germany">Germany</option>
+                  <option value="DJI" label="Djibouti">Djibouti</option>
+                  <option value="DMA" label="Dominica">Dominica</option>
+                  <option value="DNK" label="Denmark">Denmark</option>
+                  <option value="DOM" label="Dominican Republic">Dominican Republic</option>
+                  <option value="DZA" label="Algeria">Algeria</option>
+                  <option value="ECU" label="Ecuador">Ecuador</option>
+                  <option value="EGY" label="Egypt">Egypt</option>
+                  <option value="ERI" label="Eritrea">Eritrea</option>
+                  <option value="ESH" label="Western Sahara">Western Sahara</option>
+                  <option value="ESP" label="Spain">Spain</option>
+                  <option value="EST" label="Estonia">Estonia</option>
+                  <option value="ETH" label="Ethiopia">Ethiopia</option>
+                  <option value="FIN" label="Finland">Finland</option>
+                  <option value="FJI" label="Fiji">Fiji</option>
+                  <option value="FLK" label="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                  <option value="FRA" label="France">France</option>
+                  <option value="FRO" label="Faroe Islands">Faroe Islands</option>
+                  <option value="FSM" label="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                  <option value="GAB" label="Gabon">Gabon</option>
+                  <option value="GBR" label="United Kingdom">United Kingdom</option>
+                  <option value="GEO" label="Georgia">Georgia</option>
+                  <option value="GGY" label="Guernsey">Guernsey</option>
+                  <option value="GHA" label="Ghana">Ghana</option>
+                  <option value="GIB" label="Gibraltar">Gibraltar</option><option value="GIN" label="Guinea">Guinea</option><option value="GLP" label="Guadeloupe">Guadeloupe</option><option value="GMB" label="Gambia">Gambia</option><option value="GNB" label="Guinea-Bissau">Guinea-Bissau</option><option value="GNQ" label="Equatorial Guinea">Equatorial Guinea</option><option value="GRC" label="Greece">Greece</option><option value="GRD" label="Grenada">Grenada</option><option value="GRL" label="Greenland">Greenland</option><option value="GTM" label="Guatemala">Guatemala</option><option value="GUF" label="French Guiana">French Guiana</option><option value="GUM" label="Guam">Guam</option><option value="GUY" label="Guyana">Guyana</option><option value="HKG" selected="selected" label="Hong Kong">Hong Kong</option><option value="HMD" label="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option><option value="HND" label="Honduras">Honduras</option><option value="HRV" label="Croatia">Croatia</option><option value="HTI" label="Haiti">Haiti</option><option value="HUN" label="Hungary">Hungary</option><option value="IDN" label="Indonesia">Indonesia</option><option value="IMN" label="Isle of Man">Isle of Man</option><option value="IND" label="India">India</option><option value="IOT" label="British Indian Ocean Territory">British Indian Ocean Territory</option><option value="IRL" label="Ireland">Ireland</option><option value="IRQ" label="Iraq">Iraq</option><option value="ISL" label="Iceland">Iceland</option><option value="ISR" label="Israel">Israel</option><option value="ITA" label="Italy">Italy</option><option value="JAM" label="Jamaica">Jamaica</option><option value="JEY" label="Jersey">Jersey</option><option value="JOR" label="Jordan">Jordan</option><option value="JPN" label="Japan">Japan</option><option value="KAZ" label="Kazakhstan">Kazakhstan</option><option value="KEN" label="Kenya">Kenya</option><option value="KGZ" label="Kyrgyzstan">Kyrgyzstan</option><option value="KHM" label="Cambodia">Cambodia</option><option value="KIR" label="Kiribati">Kiribati</option><option value="KNA" label="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="KOR" label="Korea, Republic of">Korea, Republic of</option><option value="KWT" label="Kuwait">Kuwait</option><option value="LAO" label="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="LBN" label="Lebanon">Lebanon</option><option value="LBR" label="Liberia">Liberia</option><option value="LBY" label="Libya">Libya</option><option value="LCA" label="Saint Lucia">Saint Lucia</option><option value="LIE" label="Liechtenstein">Liechtenstein</option><option value="LKA" label="Sri Lanka">Sri Lanka</option><option value="LSO" label="Lesotho">Lesotho</option><option value="LTU" label="Lithuania">Lithuania</option><option value="LUX" label="Luxembourg">Luxembourg</option><option value="LVA" label="Latvia">Latvia</option><option value="MAC" label="Macau">Macau</option><option value="MAF" label="Saint Martin">Saint Martin</option><option value="MAR" label="Morocco">Morocco</option><option value="MCO" label="Monaco">Monaco</option><option value="MDA" label="Moldova, Republic of">Moldova, Republic of</option><option value="MDG" label="Madagascar">Madagascar</option><option value="MDV" label="Maldives">Maldives</option><option value="MEX" label="Mexico">Mexico</option><option value="MHL" label="Marshall Islands">Marshall Islands</option><option value="MKD" label="Macedonia">Macedonia</option><option value="MLI" label="Mali">Mali</option><option value="MLT" label="Malta">Malta</option><option value="MMR" label="Myanmar">Myanmar</option><option value="MNE" label="Montenegro">Montenegro</option><option value="MNG" label="Mongolia">Mongolia</option><option value="MNP" label="Northern Mariana Islands">Northern Mariana Islands</option><option value="MOZ" label="Mozambique">Mozambique</option><option value="MRT" label="Mauritania">Mauritania</option><option value="MSR" label="Montserrat">Montserrat</option><option value="MTQ" label="Martinique">Martinique</option><option value="MUS" label="Mauritius">Mauritius</option><option value="MWI" label="Malawi">Malawi</option><option value="MYS" label="Malaysia">Malaysia</option><option value="MYT" label="Mayotte">Mayotte</option><option value="NAM" label="Namibia">Namibia</option><option value="NCL" label="New Caledonia">New Caledonia</option><option value="NER" label="Niger">Niger</option><option value="NFK" label="Norfolk Island">Norfolk Island</option><option value="NGA" label="Nigeria">Nigeria</option><option value="NIC" label="Nicaragua">Nicaragua</option><option value="NIU" label="Niue">Niue</option><option value="NLD" label="Netherlands">Netherlands</option><option value="NOR" label="Norway">Norway</option><option value="NPL" label="Nepal">Nepal</option><option value="NRU" label="Nauru">Nauru</option><option value="NTC" label="Northern Cyprus">Northern Cyprus</option><option value="NZL" label="New Zealand">New Zealand</option><option value="OMN" label="Oman">Oman</option><option value="PAK" label="Pakistan">Pakistan</option><option value="PAN" label="Panama">Panama</option><option value="PCN" label="Pitcairn Islands">Pitcairn Islands</option><option value="PER" label="Peru">Peru</option><option value="PHL" label="Philippines">Philippines</option><option value="PLW" label="Palau">Palau</option><option value="PNG" label="Papua New Guinea">Papua New Guinea</option><option value="POL" label="Poland">Poland</option><option value="PRI" label="Puerto Rico">Puerto Rico</option><option value="PRT" label="Portugal">Portugal</option><option value="PRY" label="Paraguay">Paraguay</option><option value="PSE" label="Palestinian Territory">Palestinian Territory</option><option value="PYF" label="French Polynesia">French Polynesia</option><option value="QAT" label="Qatar">Qatar</option><option value="REU" label="Reunion">Reunion</option><option value="ROU" label="Romania">Romania</option><option value="RUS" label="Russian Federation">Russian Federation</option><option value="RWA" label="Rwanda">Rwanda</option><option value="SAU" label="Saudi Arabia">Saudi Arabia</option><option value="SEN" label="Senegal">Senegal</option><option value="SGP" label="Singapore">Singapore</option><option value="SGS" label="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option><option value="SHN" label="Saint Helena">Saint Helena</option><option value="SJM" label="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option><option value="SLB" label="Solomon Islands">Solomon Islands</option><option value="SLE" label="Sierra Leone">Sierra Leone</option><option value="SLV" label="El Salvador">El Salvador</option><option value="SMR" label="San Marino">San Marino</option><option value="SOM" label="Somalia">Somalia</option><option value="SPM" label="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option><option value="SRB" label="Serbia">Serbia</option><option value="STP" label="Sao Tome and Principe">Sao Tome and Principe</option><option value="SUR" label="Suriname">Suriname</option><option value="SVK" label="Slovakia">Slovakia</option><option value="SVN" label="Slovenia">Slovenia</option><option value="SWE" label="Sweden">Sweden</option><option value="SWZ" label="Swaziland">Swaziland</option><option value="SXM" label="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option><option value="SYC" label="Seychelles">Seychelles</option><option value="TCA" label="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="TCD" label="Chad">Chad</option><option value="TGO" label="Togo">Togo</option><option value="THA" label="Thailand">Thailand</option><option value="TJK" label="Tajikistan">Tajikistan</option><option value="TKL" label="Tokelau">Tokelau</option><option value="TKM" label="Turkmenistan">Turkmenistan</option><option value="TLS" label="Timor-Leste">Timor-Leste</option><option value="TON" label="Tonga">Tonga</option><option value="TTO" label="Trinidad and Tobago">Trinidad and Tobago</option><option value="TUN" label="Tunisia">Tunisia</option><option value="TUR" label="Turkey">Turkey</option><option value="TUV" label="Tuvalu">Tuvalu</option><option value="TWN" label="Taiwan">Taiwan</option><option value="TZA" label="Tanzania, United Republic of">Tanzania, United Republic of</option><option value="UGA" label="Uganda">Uganda</option><option value="UKR" label="Ukraine">Ukraine</option><option value="UMI" label="United States Minor Outlying Islands">United States Minor Outlying Islands</option><option value="UNK" label="Kosovo">Kosovo</option><option value="URY" label="Uruguay">Uruguay</option><option value="USA" label="United States">United States</option><option value="UZB" label="Uzbekistan">Uzbekistan</option><option value="VAT" label="Holy See (Vatican City State)">Holy See (Vatican City State)</option><option value="VCT" label="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="VEN" label="Venezuela">Venezuela</option><option value="VGB" label="Virgin Islands, British">Virgin Islands, British</option><option value="VIR" label="Virgin Islands, U.S.">Virgin Islands, U.S.</option><option value="VNM" label="Vietnam">Vietnam</option><option value="VUT" label="Vanuatu">Vanuatu</option><option value="WLF" label="Wallis and Futuna">Wallis and Futuna</option><option value="WSM" label="Samoa">Samoa</option><option value="YEM" label="Yemen">Yemen</option><option value="ZAF" label="South Africa">South Africa</option><option value="ZMB" label="Zambia">Zambia</option><option value="ZWE" label="Zimbabwe">Zimbabwe</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">提交</button>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
 </div>
 </section>
 
