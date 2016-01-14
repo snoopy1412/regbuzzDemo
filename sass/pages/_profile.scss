@@ -7,15 +7,7 @@
 
 .profile-info
 {
-    margin-bottom: 20px;
     padding-top: 10px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px #ccc;
 }
 
 .profile-info-title
@@ -54,8 +46,6 @@
     position: relative;
 
     margin-top: 0;
-    padding: 20px;
-    padding-left: 0;
 }
 
 
@@ -176,9 +166,6 @@
     li
     {
         margin-bottom: 16px;
-        // .pull-left{
-        // 	width:85%;
-        // }
     }
     .name
     {
@@ -316,18 +303,7 @@
 // 右侧
 .profile-info-aside
 {
-    background-color: #fff;
-    // 公共
-    .profile-info-aside-item
-    {
-        padding: 20px 0;
 
-        border-bottom: 1px solid #e3e5e8;
-        &:last-child
-        {
-            border-bottom: 0;
-        }
-    }
     // 雇佣我 
     .hire
     {

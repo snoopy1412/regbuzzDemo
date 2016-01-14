@@ -6803,8 +6803,7 @@ body {
 html, body {
   height: 100%; }
 
-html, button, input, select, textarea,
-.pure-g [class*="pure-u"] {
+html, button, input, select, textarea {
   /* Set your content font stack here: */
   font-family: "Lato", "Helvetica Neue", Arial, Helvetica, "Microsoft YaHei", "微软雅黑", sans-serif; }
 
@@ -6853,6 +6852,13 @@ ul {
 ::selection {
   background-color: #00b5ad;
   color: white; }
+
+.section {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 10px; }
 
 @keyframes around {
   0% {
@@ -7571,13 +7577,16 @@ ul {
     padding: 0; }
     .header .header-utilities .header-utilities-list li > a {
       display: block;
-      padding: 15px 20px;
+      padding: 10px 20px;
       color: #444;
+      font-size: 13px;
       border-bottom: 1px solid #e0e0e0; }
       .header .header-utilities .header-utilities-list li > a:hover {
         background-color: #f1f1f1; }
     .header .header-utilities .header-utilities-list li:last-child > a {
       border-bottom: 0; }
+    .header .header-utilities .header-utilities-list .label {
+      margin-right: 10px; }
   .header .header-utilities .header-utilities-box--arrow:before, .header .header-utilities .header-utilities-box--arrow:after {
     content: '';
     display: block;
@@ -8732,14 +8741,7 @@ ul {
   padding-top: 50px; }
 
 .profile-info {
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px #ccc; }
+  padding-top: 10px; }
 
 .profile-info-title {
   font-size: 20px;
@@ -8764,9 +8766,7 @@ ul {
   font-size: 1.6rem;
   font-weight: 600;
   position: relative;
-  margin-top: 0;
-  padding: 20px;
-  padding-left: 0; }
+  margin-top: 0; }
 
 .profile-info--contact,
 .profile-info--server {
@@ -8911,75 +8911,80 @@ ul {
   .profile-info--skills .skills-item:hover {
     text-decoration: none; }
 
-.profile-info-aside {
-  background-color: #fff; }
-  .profile-info-aside .profile-info-aside-item {
-    padding: 20px 0;
-    border-bottom: 1px solid #e3e5e8; }
-    .profile-info-aside .profile-info-aside-item:last-child {
-      border-bottom: 0; }
-  .profile-info-aside .hire {
-    text-align: center; }
-  .profile-info-aside .authentication .icon {
-    line-height: 30px;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin-right: 14px;
-    text-align: center;
-    border: 1px solid #e4e6e9;
-    border-radius: 50%; }
-    .profile-info-aside .authentication .icon i {
-      color: #e4e6e9; }
-    .profile-info-aside .authentication .icon:last-child {
-      margin-right: 0; }
-    .profile-info-aside .authentication .icon.is-verified {
-      border-color: #2185d0; }
-      .profile-info-aside .authentication .icon.is-verified i {
-        color: #2185d0; }
-  .profile-info-aside .evaluate .evaluate-stars li {
-    padding: 10px 0; }
-  .profile-info-aside .evaluate .item-stats {
-    font-weight: 600;
-    line-height: 26px;
-    width: 30px;
-    height: 26px;
-    margin-right: 26px; }
-  .profile-info-aside .evaluate .item-stats-name {
-    line-height: 26px;
-    display: inline-block;
-    width: 30px;
-    height: 26px;
-    margin-right: 10px;
-    text-align: center;
-    color: #fff;
-    border-radius: 2px;
-    background-color: #fb8a12; }
-  .profile-info-aside .history li {
-    padding: 10px 0; }
-  .profile-info-aside .history span,
-  .profile-info-aside .history a {
-    font-size: 16px;
-    font-size: 1.6rem;
-    display: inline-block; }
-  .profile-info-aside .history .item-stats-name {
-    width: 20%;
-    text-align: right; }
-  .profile-info-aside .history .item-stats-value {
-    width: 60%;
-    padding-left: 20px;
-    text-align: left;
-    color: #2185d0; }
-  .profile-info-aside .associated .associated-img {
-    width: 40%;
-    padding: 10px; }
-  .profile-info-aside .associated .associated-brief {
-    width: 60%;
-    padding: 10px; }
-  .profile-info-aside .blogs .blogs-list li {
-    padding: 5px 0; }
-  .profile-info-aside .blogs .blogs-list a {
-    color: #555; }
+.profile-info-aside .hire {
+  text-align: center; }
+
+.profile-info-aside .authentication .icon {
+  line-height: 30px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 14px;
+  text-align: center;
+  border: 1px solid #e4e6e9;
+  border-radius: 50%; }
+  .profile-info-aside .authentication .icon i {
+    color: #e4e6e9; }
+  .profile-info-aside .authentication .icon:last-child {
+    margin-right: 0; }
+  .profile-info-aside .authentication .icon.is-verified {
+    border-color: #2185d0; }
+    .profile-info-aside .authentication .icon.is-verified i {
+      color: #2185d0; }
+
+.profile-info-aside .evaluate .evaluate-stars li {
+  padding: 10px 0; }
+
+.profile-info-aside .evaluate .item-stats {
+  font-weight: 600;
+  line-height: 26px;
+  width: 30px;
+  height: 26px;
+  margin-right: 26px; }
+
+.profile-info-aside .evaluate .item-stats-name {
+  line-height: 26px;
+  display: inline-block;
+  width: 30px;
+  height: 26px;
+  margin-right: 10px;
+  text-align: center;
+  color: #fff;
+  border-radius: 2px;
+  background-color: #fb8a12; }
+
+.profile-info-aside .history li {
+  padding: 10px 0; }
+
+.profile-info-aside .history span,
+.profile-info-aside .history a {
+  font-size: 16px;
+  font-size: 1.6rem;
+  display: inline-block; }
+
+.profile-info-aside .history .item-stats-name {
+  width: 20%;
+  text-align: right; }
+
+.profile-info-aside .history .item-stats-value {
+  width: 60%;
+  padding-left: 20px;
+  text-align: left;
+  color: #2185d0; }
+
+.profile-info-aside .associated .associated-img {
+  width: 40%;
+  padding: 10px; }
+
+.profile-info-aside .associated .associated-brief {
+  width: 60%;
+  padding: 10px; }
+
+.profile-info-aside .blogs .blogs-list li {
+  padding: 5px 0; }
+
+.profile-info-aside .blogs .blogs-list a {
+  color: #555; }
 
 .pub-main {
   padding: 20px;
@@ -9069,13 +9074,6 @@ ul {
   padding: 30px;
   background-color: #fff; }
 
-.project-detail-content {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 4px;
-  background-color: #fff; }
-
 .project-detail-title {
   font-size: 20px;
   font-size: 2rem;
@@ -9130,12 +9128,6 @@ ul {
   background-color: #fff;
   min-height: 600px;
   border-radius: 4px; }
-
-.notice-list {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 4px;
-  border: 1px solid #ccc; }
 
 .notice-content-list {
   padding-top: 10px;
@@ -9393,12 +9385,6 @@ ul {
   font-size: 1.6rem;
   margin-top: 20px; }
 
-.help-content {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 20px;
-  background-color: #fff; }
-
 .help-title {
   margin-bottom: 30px; }
   .help-title .help-title-primary {
@@ -9407,11 +9393,6 @@ ul {
     border-bottom: 2px solid #db2828;
     padding-bottom: 10px;
     margin-bottom: 10px; }
-
-.account-aside, .account-content {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px; }
 
 .dl-horizontal--short {
   text-align: left;
@@ -9431,7 +9412,7 @@ ul {
     .account-aside .account-aside-section:last-child {
       border-right: 0; }
   .account-aside .account-name {
-    padding: 10px; }
+    padding-bottom: 10px; }
   .account-aside .account-img {
     position: relative; }
     .account-aside .account-img img {
@@ -9477,7 +9458,7 @@ ul {
     margin-top: 15px; }
   .account-aside .account-score {
     border-top: 1px solid #ddd;
-    padding: 10px; }
+    padding-top: 10px; }
     .account-aside .account-score .left, .account-aside .account-score .right {
       width: 50%;
       text-align: center; }
@@ -9485,81 +9466,72 @@ ul {
       border-right: 1px solid #ddd; }
     .account-aside .account-score .right {
       padding-top: 15px; }
-    .account-aside .account-score .score-num {
-      color: #ff9800;
-      font-size: 18px; }
-    .account-aside .account-score .score-stars, .account-aside .account-score .score-detail-num {
-      color: #ff9800; }
-    .account-aside .account-score .score-detail {
-      color: #afafaf; }
-  .account-aside .account-ibox {
-    padding: 10px; }
-    .account-aside .account-ibox .header {
-      position: relative;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      padding-top: 10px; }
-    .account-aside .account-ibox .account-ibox-title {
-      margin: 0;
-      font-size: 16px;
-      font-size: 1.6rem;
-      font-weight: 600; }
-    .account-aside .account-ibox .account-ibox-more {
-      position: absolute;
-      right: 10px;
-      top: 10px; }
-    .account-aside .account-ibox .content {
-      position: relative; }
-      .account-aside .account-ibox .content .row {
-        width: 100%;
-        margin: 0; }
-      .account-aside .account-ibox .content .col-md-6 {
-        padding-left: 2px;
-        padding-right: 2px; }
-    .account-aside .account-ibox .item {
-      border-radius: 4px; }
-    .account-aside .account-ibox .panel {
-      margin-bottom: 0; }
-    .account-aside .account-ibox .p-states h4 {
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
+    .account-aside .account-score .score-title {
+      font-weight: 300; }
+  .account-aside .account-ibox .header {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px; }
+  .account-aside .account-ibox .account-ibox-title {
+    margin: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 600; }
+  .account-aside .account-ibox .account-ibox-more {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+  .account-aside .account-ibox .content {
+    position: relative; }
+    .account-aside .account-ibox .content .row {
+      width: 100%;
       margin: 0; }
-    .account-aside .account-ibox .p-states h3 {
-      font-size: 25px;
-      margin: 10px 0 0 0; }
-    .account-aside .account-ibox .chart-bar {
-      margin-top: 10px; }
-    .account-aside .account-ibox .green-box {
-      background-color: #6bc5a4;
-      color: #fff;
-      box-shadow: 0 5px 0 #5bb996; }
-      .account-aside .account-ibox .green-box h4, .account-aside .account-ibox .green-box h3 {
-        color: #fff; }
-    .account-aside .account-ibox .blue-box {
-      background-color: #2185d0;
-      color: #fff;
-      box-shadow: 0 5px 0 #1a69a4; }
-      .account-aside .account-ibox .blue-box h4, .account-aside .account-ibox .blue-box h3 {
-        color: #fff; }
-    .account-aside .account-ibox .balance-value {
-      color: #db2828;
-      font-size: 24px;
-      font-weight: bold; }
-    .account-aside .account-ibox .frozen-value {
-      color: #db2828; }
-    .account-aside .account-ibox .account-money {
-      position: absolute;
-      right: 0;
-      bottom: 0; }
+    .account-aside .account-ibox .content .col-md-6 {
+      padding-left: 2px;
+      padding-right: 2px; }
+  .account-aside .account-ibox .item {
+    border-radius: 4px; }
+  .account-aside .account-ibox .panel {
+    margin-bottom: 0; }
+  .account-aside .account-ibox .p-states h4 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0; }
+  .account-aside .account-ibox .p-states h3 {
+    font-size: 25px;
+    margin: 10px 0 0 0; }
+  .account-aside .account-ibox .chart-bar {
+    margin-top: 10px; }
+  .account-aside .account-ibox .green-box {
+    background-color: #6bc5a4;
+    color: #fff;
+    box-shadow: 0 5px 0 #5bb996; }
+    .account-aside .account-ibox .green-box h4, .account-aside .account-ibox .green-box h3 {
+      color: #fff; }
+  .account-aside .account-ibox .blue-box {
+    background-color: #2185d0;
+    color: #fff;
+    box-shadow: 0 5px 0 #1a69a4; }
+    .account-aside .account-ibox .blue-box h4, .account-aside .account-ibox .blue-box h3 {
+      color: #fff; }
+  .account-aside .account-ibox .balance-value {
+    color: #db2828;
+    font-size: 24px;
+    font-weight: bold; }
+  .account-aside .account-ibox .frozen-value {
+    color: #db2828; }
+  .account-aside .account-ibox .account-money {
+    position: absolute;
+    right: 0;
+    bottom: 0; }
   .account-aside .account-ibox--income {
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd; }
 
-.account-content {
-  padding: 20px; }
-  .account-content .panel {
-    border: 0; }
+.account-content .panel {
+  border: 0; }
 
 .account-section {
   padding-top: 30px; }
@@ -9731,10 +9703,6 @@ ul {
   display: inline-block;
   vertical-align: top; }
 
-.container-withdraw {
-  background-color: #fff;
-  padding: 20px; }
-
 .withdraw-header h2 {
   font-size: 20px;
   font-size: 2rem;
@@ -9749,9 +9717,6 @@ ul {
 .table--withdraw thead {
   background-color: #008bcb;
   color: #fff; }
-
-.wtrust-withdraw {
-  background-color: #fff; }
 
 .wtrust-header {
   padding: 50px 80px;
@@ -9777,6 +9742,111 @@ ul {
     font-weight: 700; }
   .wtrust-content h2, .wtrust-content p {
     margin-bottom: 20px; }
+
+.score-warp {
+  margin-bottom: 10px; }
+
+.score-detail {
+  background-color: #fa8911;
+  display: inline-block;
+  width: 30px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  color: #fff;
+  border-radius: 2px; }
+
+.score-stars {
+  color: #fa8911; }
+
+.evaluate-section {
+  margin-bottom: 10px; }
+
+.evaluate-heading .user-img {
+  margin-right: 20px; }
+
+.evaluate-heading .user-modal-name {
+  display: block;
+  width: 85%;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700; }
+
+.evaluate-heading .user-modal-compact-feedback {
+  margin-top: 10px; }
+
+.evaluate-heading .user-modal-evaluate {
+  margin-top: 10px; }
+
+.evaluate-heading .user-modal-criteria-label {
+  color: #74777c;
+  display: block;
+  margin-bottom: 20px; }
+  .evaluate-heading .user-modal-criteria-label a {
+    margin-bottom: 23px;
+    font-weight: 700;
+    font-size: 18px; }
+
+.evaluate-heading .user-modal-fee-value {
+  font-size: 26px;
+  font-size: 2.6rem;
+  font-weight: 700; }
+
+.evaluate-heading-section {
+  border-right: 1px solid #ddd; }
+
+.evaluate-main-heading {
+  border-bottom: 1px solid #eee;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .evaluate-main-heading .title {
+    margin: 0;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    vertical-align: middle; }
+
+.evaluate-reviews-section {
+  border-bottom: 1px solid #ddd;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  position: relative; }
+  .evaluate-reviews-section:before, .evaluate-reviews-section:after {
+    content: " ";
+    display: table; }
+  .evaluate-reviews-section:after {
+    clear: both; }
+
+.evaluate-reviews {
+  border-top: 1px solid #ddd; }
+
+.evaluate-avatar {
+  position: absolute;
+  left: 0;
+  top: 35px; }
+  .evaluate-avatar img {
+    border-radius: 4px; }
+
+.evaluate-reviews-title {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  word-wrap: break-word; }
+
+.user-review-price {
+  margin-left: 40px; }
+
+.user-reviews-skills {
+  margin: 10px 0 0; }
+  .user-reviews-skills > li {
+    color: #75787d;
+    display: inline;
+    margin-right: 10px; }
 
 .idverify-section {
   margin-bottom: 50px; }

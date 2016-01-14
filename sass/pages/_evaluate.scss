@@ -1,0 +1,110 @@
+// public
+	.score-warp{
+		margin-bottom: 10px;
+	}
+	.score-detail{
+		background-color: #fa8911;
+		display: inline-block;
+		width: 30px;
+		height: 24px;
+		text-align: center;
+		line-height: 24px;
+		color:#fff;
+		border-radius: 2px;
+	}
+	.score-stars{
+		color:#fa8911;
+	}
+// public end
+.evaluate-section{
+	margin-bottom: 10px;
+}
+.evaluate-heading{
+	.user-img{
+		margin-right: 20px;
+	}
+	.user-modal-name{
+		display: block;
+		width: 85%;
+		margin-bottom: 5px;
+		@include font-size(1.8);
+		font-weight: 700;
+	}
+	.user-modal-compact-feedback{
+		margin-top: 10px;
+	}
+	.user-modal-evaluate{
+		margin-top: 10px;
+	}
+	.user-modal-criteria-label{
+		color:#74777c;
+		display: block;
+		margin-bottom: 20px;
+		a{
+			margin-bottom: 23px;
+			font-weight: 700;
+			font-size: 18px;
+		}
+	}
+	.user-modal-fee-value{
+		@include font-size(2.6);
+		font-weight: 700;
+	}
+}
+.evaluate-heading-section{
+	border-right: 1px solid #ddd;
+}
+.evaluate-main-heading{
+	border-bottom: 1px solid #eee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	.title{
+		margin: 0;
+		@include font-size(2);
+		font-weight: 600;
+		vertical-align: middle;
+	}
+}
+.evaluate-nav{
+	// border-bottom: 1px solid #ddd;
+}
+.evaluate-reviews-section{
+	border-bottom: 1px solid #ddd;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 100px;
+	position: relative;
+	@include clearfix;
+
+}
+.evaluate-reviews{
+	border-top: 1px solid #ddd;
+}
+.evaluate-avatar{
+	position: absolute;
+	left: 0;
+	top: 35px;
+	img{
+		border-radius: 4px;
+	}
+}
+.evaluate-reviews-title{
+	display: block;
+	margin-top: 0;
+	margin-bottom: 4px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+.user-review-price{
+	margin-left: 40px;
+}
+.user-reviews-skills{
+	margin: 10px 0 0;
+	&>li{
+		color: rgb(117, 120, 125);
+		display: inline;
+		margin-right: 10px;
+	}
+}

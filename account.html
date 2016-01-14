@@ -190,19 +190,22 @@
 								<div class="panel-body header-utilities-list">
 									<ul>
 										<li>
-											<a href="">A security question has been created for your account.</a>
+											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
 										</li>
 										<li>
-											<a href="">A security question has been created for your account.</a>
+											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
 										</li>
 										<li>
-											<a href="">A security question has been created for your account.</a>
+											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
+										</li>
+										<li>
+											<a href="" title="">See All Messages</a>
 										</li>
 									</ul>
 								</div>
-								<div class="panel-footer clearfix">
-									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
-								</div>
+								<!-- <div class="panel-footer clearfix">
+									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All Messages</a>
+								</div> -->
 							</div>
 						</div>
 						</li>
@@ -219,19 +222,21 @@
 									<div class="panel-body header-utilities-list">
 										<ul>
 											<li>
-												<a href="">A security question has been created for your account.</a>
+												<a href=""><span class="label label-success"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
 											</li>
 											<li>
-												<a href="">A security question has been created for your account.</a>
+												
+												<a href=""><span class="label label-success"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
 											</li>
 											<li>
-												<a href="">A security question has been created for your account.</a>
+												<a href=""><span class="label label-success"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="" title="">See All Notifications</a>
 											</li>
 										</ul>
 									</div>
-									<div class="panel-footer clearfix">
-										<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All</a>
-									</div>
+									
 								</div>
 							</div>
 						</li>
@@ -327,7 +332,7 @@
 <!-- /header -->
 <section class='com-main'>
 	<div class="container">
-		<div class="row account-aside">
+		<div class="row account-aside section">
 			<div class="col-md-6 account-aside-section">
 				<div class="account-name clearfix">
 					<div class="account-img pull-left">
@@ -358,21 +363,33 @@
 						<p><a href="" title="">93 commits</a></p>
 					</div>
 					<div class="right pull-left">
-					<dl class='dl-horizontal--short score-detail'>
-						<dt>Quality : </dt>
-						<dd class='score-detail-num'><span><i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
-						</span>0.8</dd>
-					</dl>
-					<dl class='dl-horizontal--short score-detail'>
-						<dt>Speed : </dt>
-						<dd class='score-detail-num'><span><i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
-						</span>0.8</dd>
-					</dl>
-					<dl class='dl-horizontal--short score-detail'>
-						<dt>Attitude : </dt>
-						<dd class='score-detail-num'><span><i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
-						</span>0.8</dd>
-					</dl>
+					<dl class="dl-horizontal--short score-warp">
+					<dt class='score-title'>工作质量</dt>
+					<dd>
+						<span class='score-detail'>4.8</span>
+						<span class='score-stars'>
+							<i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
+						</span>
+					</dd>
+				</dl>
+				<dl class="dl-horizontal--short score-warp">
+					<dt class='score-title'>沟通</dt>
+					<dd>
+						<span class='score-detail'>4.8</span>
+						<span class='score-stars'>
+							<i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
+						</span>
+					</dd>
+				</dl>
+				<dl class="dl-horizontal--short score-warp">
+					<dt class='score-title'>专业技能</dt>
+					<dd>
+						<span class='score-detail'>4.8</span>
+						<span class='score-stars'>
+							<i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
+						</span>
+					</dd>
+				</dl>
 					</div>
 				</div>
 			</div>
@@ -442,7 +459,7 @@
 				</div>				
 			</div>
 		</div>		
-		<div class="row account-content">
+		<div class="row account-content section">
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#transactions-statement" data-toggle="tab">Transactions Statement</a></li>
 				<li><a href="#scoring-rating" data-toggle="tab">Scoring & Rating</a></li>

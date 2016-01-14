@@ -1,8 +1,3 @@
-.account-aside,.account-content{
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-}
 	.dl-horizontal--short{
 		text-align: left;
 		margin-bottom:5px;
@@ -21,12 +16,11 @@
 .account-aside{	
 	margin-bottom: 20px;
 	.account-aside-section{
-		// min-height:150px;
 		border-right: 1px solid #ddd;
 		&:last-child{border-right: 0}
 	}
 	.account-name{
-		padding: 10px;
+		padding-bottom: 10px;
 	}
 	.account-img{
 		position: relative;
@@ -85,9 +79,8 @@
 
 	// score
 	.account-score{
-		// margin-top: 20px;
 		border-top:1px solid #ddd;
-		padding:10px;
+		padding-top:10px;
 		.left,.right{
 			width: 50%;
 			text-align: center;
@@ -98,21 +91,13 @@
 		.right{
 			padding-top: 15px;
 		}
-		.score-num{
-			color:#ff9800;
-			font-size: 18px;
-		}
-		.score-stars,.score-detail-num{
-			color:#ff9800;
-		}
-		.score-detail{
-			color:#afafaf;
+		.score-title{
+			font-weight: 300;
 		}
 	}
 
 // right
 	.account-ibox{
-		padding: 10px;
 		.header{
 			position: relative;
 			margin-bottom: 10px;
@@ -204,7 +189,6 @@
 
 // account-content
 .account-content{
-	padding: 20px;
 	.panel{
 		border: 0;
 	}

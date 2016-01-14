@@ -1,6 +1,6 @@
 .header
 {   
-   
+
     .navbar{
         margin-bottom: 0;
     }
@@ -221,8 +221,9 @@
             li{
                 &>a{
                     display: block;
-                    padding:15px 20px;
+                    padding:10px 20px;
                     color:#444;
+                    font-size: 13px;
                     border-bottom: 1px solid #e0e0e0;
                     &:hover{
                         background-color: #f1f1f1;
@@ -233,6 +234,9 @@
                         border-bottom: 0;
                     }
                 }
+            }
+            .label{
+                margin-right: 10px;
             }
         }
         // arrow
