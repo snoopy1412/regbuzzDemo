@@ -13,6 +13,22 @@ ul{
       list-style: disc;
   }
 }
+
+// dl
+.dl-horizontal--short{
+  text-align: left;
+  margin-bottom:5px;
+  dt,dd{
+    display: inline-block;
+  }
+  dt{
+    width: 100px;
+    text-align: right;
+  }
+  dd{
+    padding-left: 20px;
+  }
+}
 // Highlighting
 // -------------------------
 
