@@ -6098,12 +6098,12 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.tabs-bar, .container-fluid--4 {
+.tabs-bar, .container-fluid--4, .profile-info-aside .history li {
   zoom: 1; }
-  .tabs-bar:before, .container-fluid--4:before, .tabs-bar:after, .container-fluid--4:after {
+  .tabs-bar:before, .container-fluid--4:before, .profile-info-aside .history li:before, .tabs-bar:after, .container-fluid--4:after, .profile-info-aside .history li:after {
     content: " ";
     display: block; }
-  .tabs-bar:after, .container-fluid--4:after {
+  .tabs-bar:after, .container-fluid--4:after, .profile-info-aside .history li:after {
     clear: both; }
 
 .dropdown-menu-up-arrow:after, .header .search-form .search-text-response:before, .header .search-form .search-text-response:after, .m-oFormHelp:before, .m-oFormHelp:after {
@@ -8794,7 +8794,8 @@ ul {
   font-size: 1.6rem;
   font-weight: 600;
   position: relative;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 20px; }
 
 .profile-info--server {
   padding-bottom: 30px; }
@@ -8924,6 +8925,14 @@ ul {
 
 .profile-info-aside .hire {
   text-align: center; }
+  .profile-info-aside .hire .membership-plans-price {
+    font-size: 26px;
+    font-size: 2.6rem;
+    padding-top: 20px; }
+  .profile-info-aside .hire .price-unit {
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 10px; }
 
 .profile-info-aside .authentication .icon {
   line-height: 30px;
@@ -8943,13 +8952,20 @@ ul {
     .profile-info-aside .authentication .icon.is-verified i {
       color: #2185d0; }
 
-.profile-info-aside .evaluate .evaluate-stars li {
-  padding: 10px 0; }
+.profile-info-aside .evaluate .totalScore-warp {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd; }
+
+.profile-info-aside .evaluate .evaluate-stars {
+  font-size: 12px; }
+  .profile-info-aside .evaluate .evaluate-stars li {
+    padding: 5px 0; }
 
 .profile-info-aside .evaluate .item-stats {
   font-weight: 600;
   line-height: 26px;
-  width: 30px;
+  width: 35px;
   height: 26px;
   margin-right: 26px; }
 
@@ -8969,18 +8985,11 @@ ul {
 
 .profile-info-aside .history span,
 .profile-info-aside .history a {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   display: inline-block; }
 
-.profile-info-aside .history .item-stats-name {
-  width: 20%;
-  text-align: right; }
-
 .profile-info-aside .history .item-stats-value {
-  width: 60%;
-  padding-left: 20px;
-  text-align: left;
   color: #2185d0; }
 
 .profile-info-aside .associated .associated-img {

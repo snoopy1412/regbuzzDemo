@@ -1,6 +1,16 @@
 define(['raty','edit','layer'],function(raty,edit,layer) {
 
     // 星星评级
+    $('.totalScore').raty({
+        readOnly: true,
+        half: true,
+        score: 4.3,
+        precision: true,
+        hints: ['bad', 'poor', 'regular', 'good', 'gorgeous'],
+        path: './img/stars',
+        target: '.item-stats-totalScore-name',
+        targetKeep: true
+    });
     $('.star-quality').raty({
         readOnly: true,
         half: true,
