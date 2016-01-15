@@ -44,66 +44,12 @@ define(['raty','edit','layer'],function(raty,edit,layer) {
 
 
     // 编辑
-        $('.js-edit-start').edit({
-            hoverColor:'#dcf2fc',
-            isDelete:true
-        });
-
-    layer.config({
-        path: './plugins/layer/' //layer.js所在的目录，可以是绝对目录，也可以是相对目录
+    $('.js-edit-start').edit({
+        hoverColor:'#dcf2fc',
+        isDelete:true
     });
 
-
-    $('.js-profile-server-add').on('click', function(event) {
-        event.preventDefault();
-        layer.open({
-            type: 1,
-            title: 'Add your Service',
-            area: '500px',
-            shadeClose: true, //点击遮罩关闭
-            content: $('#js-profile-server')
-        });
-    });
-    $('.js-profile-skills-add').on('click', function(event) {
-        event.preventDefault();
-        layer.open({
-            type: 1,
-            title: 'Add your Service',
-            area: '500px',
-            shadeClose: true, //点击遮罩关闭
-            content: $('#js-profile-skills')
-        });
-    });
-    $('.js-profile-experience-add').on('click', function(event) {
-        event.preventDefault();
-        layer.open({
-            type: 1,
-            title: 'Add your Service',
-            area: '500px',
-            shadeClose: true, //点击遮罩关闭
-            content: $('#js-profile-experience')
-        });
-    });
-    $('.js-profile-educations-add').on('click', function(event) {
-        event.preventDefault();
-        layer.open({
-            type: 1,
-            title: 'Add your Service',
-            area: '500px',
-            shadeClose: true, //点击遮罩关闭
-            content: $('#js-profile-educations')
-        });
-    });
-    $('.js-profile-certificate-add').on('click', function(event) {
-        event.preventDefault();
-        layer.open({
-            type: 1,
-            title: 'Add your Service',
-            area: '500px',
-            shadeClose: true, //点击遮罩关闭
-            content: $('#js-profile-certificate')
-        });
-    });
+  
 
 $('.profile-info-item').each(function(){
     $(this).hover(function(){

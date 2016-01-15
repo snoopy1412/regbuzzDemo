@@ -336,9 +336,7 @@
 				<section class='profile-info profile-info--person section'>
 					<div class='clearfix'>
 						 <div class="pull-left profile-info--person-img">
-						 	<!-- <div class="img"> -->
 						 		<img src="./img/index/servers/13.jpg" alt="Aaron Su" width="100%">
-						 	<!-- </div> -->
 						 	<section class='profile-info--person-register text-center'>
 						 		<p class='location'>Nanjing , China</p>
 						 		<p class='mb-0'> Registered on August, 2015</p>
@@ -387,7 +385,7 @@
 						<section class='profile-info profile-info--skills section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Skills</h3>
-									<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary'><i class="fa fa-plus"></i> Add Skills</a>
+									<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-skills"><i class="fa fa-plus"></i> Add Skills</a>
 							</header><!-- /header -->
 							<section class='skills'>
 								<a href='javascript:;' class='skills-item'>   
@@ -408,7 +406,7 @@
 						<section class='profile-info profile-info--experience section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Experience</h3>
-								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary'><i class="fa fa-plus"></i> Add Experience</a>
+								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-experience"><i class="fa fa-plus"></i> Add Experience</a>
 							</header><!-- /header -->
 								<section class="profile-info-item experience-item">
 									<h4 class='profile-info-item-position experience-item-position'>counselor</h4>
@@ -427,11 +425,26 @@
 									<p class='profile-info-item-brief experience-item-brief'>EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Service</p>
 								</section>								
 						</section>
+						<!-- 语言 -->
+						<section class='profile-info profile-info--experience section'>
+							<header class='profile-info-heading'>
+								<h3 class='profile-info-title'>Language</h3>
+								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-language"><i class="fa fa-plus"></i> Add Language</a>
+							</header><!-- /header -->
+							<section class="profile-info-item language-item">
+								<h4 class='profile-info-item-position experience-item-position'>chinese</h4>
+								<strong class='profile-info-item-company experience-item-company'>Native or bilingual proficiency</strong>
+							</section>
+							<section class="profile-info-item language-item">
+								<h4 class='profile-info-item-position experience-item-position'>english</h4>
+								<strong class='profile-info-item-company experience-item-company'>Professional working proficiency</strong>
+							</section>								
+						</section>
 						<!-- 教育 -->
 						<section class='profile-info profile-info--educations section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Educations</h3>
-								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary'><i class="fa fa-plus"></i> Add Educations</a>
+								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-educations"><i class="fa fa-plus"></i> Add Educations</a>
 							</header><!-- /header -->
 							<section class='profile-info-item'>
 								<h4 class='profile-info-item-position'>BE</h4>
@@ -445,7 +458,7 @@
 						<section class='profile-info section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Certificate & Publish</h3>
-								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary'><i class="fa fa-plus"></i> Add Certificate & Publish</a>
+								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-certificate"><i class="fa fa-plus"></i> Add Certificate & Publish</a>
 							</header><!-- /header -->
 							<section class='profile-info-item'>
 								<h4 class='profile-info-item-position'>STRATEGIC MANAGEMENT (2012)</h4>
@@ -468,7 +481,7 @@
 						<section class='profile-info profile-info--server section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Services</h3>
-									<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary'><i class="fa fa-plus"></i> Add Services</a>
+									<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-services"><i class="fa fa-plus"></i> Add Services</a>
 							</header><!-- /header -->
 							<section class='profile-info-item profile-info--server-item'>
 								<div class="js-show">
@@ -901,10 +914,33 @@
 				<section class='profile-info-aside'>
 					<!-- 雇佣 -->
 					<div class='profile-info-aside-item hire section'>
-						<a href="" title="" class='btn btn-primary' style='width:80%;'>&nbsp; <i class="fa fa-user-plus"></i>&nbsp; |&nbsp; Hire me</a>
-						 <span class="membership-plans-price">
+				 		<div class='js-edit-start mb-5'>
+				 			<div class='js-show'>
+					 			<span class="membership-plans-price">$
+		                            <span class='js-edit-text js-edit-edit'>0</span><sup>.00</sup><span class='price-unit'>USD/hr</span>
+		                        </span>
+					 			<a href="javascript:;" title="" class='edit js-edit-edit'><i class="fa fa-pencil"></i></a>
+					 		</div>
+					 		<div class='js-hide text-right'>
+								<div class="form-group">
+								<div class="input-group">
+								  <div class="input-group-addon">$</div>
+								  <input type="text" class="form-control js-edit-textarea" placeholder="Amount">
+								  <div class="input-group-addon">.00</div>
+								</div>
+								</div>
+								<div class='form-group'>
+									<button type="button" class='js-edit-save btn btn-primary'>save</button>
+					 				<button type="button" class='js-edit-cancel btn btn-primary-outline'>cancel</button>
+								</div>
+					 			
+					 		</div>
+				 		</div>
+						<!-- <span class="membership-plans-price">
                             $0<sup>.00</sup><span class='price-unit'>USD/hr</span>
-                        </span>
+                        </span> -->
+						<a href="" title="" class='btn btn-primary' style='width:80%;'>&nbsp; <i class="fa fa-user-plus"></i>&nbsp; |&nbsp; Hire me</a>
+						 
 					</div>
 					<!-- 认证 -->
 					<div class='profile-info-aside-item authentication section'>
@@ -1134,75 +1170,148 @@
 
 <!-- add的拓展 -->
 <!-- 服务拓展 -->
-<div id="js-profile-server" class='js-modal-content'>
-	<div class="form-group">
-	<label>
-		Service Name: 
-	</label>
-		<input type="text" class='form-control' placeholder ='Service Name'>	
-	</div>
-	<div class="form-group">
-		<label>
-			Price
-		</label>
-		<div class="input-group">
-			<span class='input-group-addon'><i class="fa fa-usd"></i></span>
-			<input type="text" class='form-control' placeholder ='Price'>
-		</div>	
-	</div>	
-	<div class="form-group">
-	<label>
-		Service brief 
-	</label>
-		<textarea class='form-control'></textarea>
-	</div>
-
-	<a href="" title="" class='btn btn-primay'>submit</a>
+<div class="modal fade" id="js-profile-services" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Services</h4>
+      </div>
+      <div class="modal-body">
+		 	<div class="form-group">
+				<label>
+					Service Name: 
+				</label>
+				<input type="text" class='form-control' placeholder ='Service Name'>	
+			</div>
+			<div class="form-group">
+				<label>
+					Price
+				</label>
+				<div class="input-group">
+					<span class='input-group-addon'>$</span>
+					<input type="text" class='form-control' placeholder ='Price'>
+				</div>	
+			</div>	
+			<div class="form-group">
+				<label>
+					Service brief 
+				</label>
+				<textarea class='form-control'></textarea>
+			</div>
+      </div>
+      <div class="modal-footer">
+	      	<button type="button" class="btn btn-primary">Save</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
-
 <!-- 技能 -->
-<div id="js-profile-skills" class='js-modal-content'>
-	<div class="form-group">
-		<label>
-			Skills
-		</label>
-			<input type="text" class='form-control' placeholder ='Skills Name'>	
-		</div>
-	<a href="" title="" class='btn btn-primay'>submit</a>
+<div class="modal fade" id="js-profile-skills" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Skills</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+	<label>
+		Skills
+	</label>
+		<input type="text" class='form-control' placeholder ='Skills Name'>	
+	</div>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- 经验 -->
-<div id="js-profile-experience" class='js-modal-content'>
-	<div class="form-group">
-	<label>
-		job title
-	</label>
-		<input type="text" class='form-control' placeholder ='job title'>	
-	</div>
-	<div class="form-group">
-	<label>
-		company name
-	</label>
-		<input type="text" class='form-control' placeholder ='company name'>	
-	</div>
-	<div class="form-group">
+<div class="modal fade" id="js-profile-experience" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Experiences</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+			<label>
+				job title
+			</label>
+			<input type="text" class='form-control' placeholder ='job title'>	
+		</div>
+		<div class="form-group">
 		<label>
-			Time in position
+			company name
 		</label>
-		<input type="text" class='form-control' placeholder ='Time in position'>
-	</div>
-	<div class="form-group">
-		<label>
-			Job profile
-		</label>
-		<textarea name="" class='form-control'></textarea>
-	</div>	
-	<a href="" title="" class='btn btn-primay'>submit</a>
+			<input type="text" class='form-control' placeholder ='company name'>	
+		</div>
+		<div class="form-group">
+			<label>
+				Time in position
+			</label>
+			<input type="text" class='form-control' placeholder ='Time in position'>
+		</div>
+		<div class="form-group">
+			<label>
+				Job profile
+			</label>
+			<textarea name="" class='form-control'></textarea>
+		</div>	
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 语言 -->
+<div class="modal fade" id="js-profile-language" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Language</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+			<label>
+				Language
+			</label>
+			<input type="text" class='form-control' placeholder ='Language Name'>	
+		</div>
+		 <div class="form-group">
+			<select class='form-control'>
+				<option value="">Proficiency...</option>
+			</select>
+		</div>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- 教育 -->
-<div id="js-profile-educations" class='js-modal-content'>
-	<div class="form-group">
+<div class="modal fade" id="js-profile-educations" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add educations</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
 		<label>
 			Degree 
 		</label>
@@ -1220,11 +1329,24 @@
 		</label>
 		<input type="text" class='form-control' placeholder ='School name'>	
 	</div>
-	<a href="" title="" class='btn btn-primay'>submit</a>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- 出版 -->
-<div id="js-profile-certificate" class='js-modal-content'>
+<div class="modal fade" id="js-profile-certificate" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Certificate</h4>
+      </div>
+      <div class="modal-body">
 	<div class="form-group">
 	<label>
 		Title
@@ -1243,7 +1365,13 @@
 		</label>
 		<input type="text" class='form-control' placeholder ='Time'>
 	</div>
-	<a href="" title="" class='btn btn-primay'>submit</a>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>

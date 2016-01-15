@@ -8766,7 +8766,8 @@ ul {
 
 /* search for articles end*/
 .container-profile {
-  height: 100%; }
+  height: 100%;
+  margin-top: 20px; }
 
 .profile-info {
   padding-top: 10px; }
@@ -8928,7 +8929,8 @@ ul {
   .profile-info-aside .hire .membership-plans-price {
     font-size: 26px;
     font-size: 2.6rem;
-    padding-top: 20px; }
+    display: inline-block;
+    padding-bottom: 20px; }
   .profile-info-aside .hire .price-unit {
     font-size: 14px;
     display: inline-block;

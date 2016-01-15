@@ -2,6 +2,7 @@
 .container-profile
 {
     height: 100%;
+    margin-top: 20px;
 }
 
 .profile-info
@@ -261,14 +262,14 @@
 // 右侧
 .profile-info-aside
 {
-
     // 雇佣我 
     .hire
     {
         text-align: center;
         .membership-plans-price{
             @include font-size(2.6);
-            padding-top: 20px;
+            display: inline-block;
+            padding-bottom: 20px;
         }
         .price-unit{
             font-size: 14px;
