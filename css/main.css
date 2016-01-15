@@ -7065,11 +7065,7 @@ ul {
       padding: 0 14px;
       color: #666;
       position: relative;
-      -webkit-transition: all 0.4s ease;
-      transition: all 0.4s ease;
       border-radius: 0; }
-      .tabs-bar li > a:hover {
-        color: #3DA9F7; }
   .tabs-bar .active > a {
     color: white;
     background-color: #3DA9F7;
@@ -8769,30 +8765,29 @@ ul {
   padding-right: 10px; }
 
 /* search for articles end*/
-.profile {
-  height: 100%;
-  padding-top: 50px; }
+.container-profile {
+  height: 100%; }
 
 .profile-info {
   padding-top: 10px; }
 
+.profile-info-heading {
+  position: relative;
+  padding: 20px;
+  padding-left: 10px;
+  border-bottom: 1px solid #e3e5e8; }
+
 .profile-info-title {
+  margin: 0;
   font-size: 20px;
   font-size: 2rem;
   font-weight: 600;
-  position: relative;
-  margin-top: 0;
-  padding: 20px;
-  padding-left: 10px;
-  color: #7f7f7f;
-  border-bottom: 1px solid #e3e5e8; }
+  color: #7f7f7f; }
 
 .profile-info-add {
-  margin-top: 20px;
-  text-align: right;
-  border-top: 1px solid #e3e5e8; }
-  .profile-info-add a {
-    font-size: 1.4rem; }
+  position: absolute;
+  top: 15px;
+  right: 0; }
 
 .profile-info-aside-title {
   font-size: 16px;
@@ -9864,6 +9859,9 @@ ul {
 
 .idverify-img {
   margin-bottom: 10px; }
+
+.membership-heading {
+  padding-bottom: 40px; }
 
 .membership-title {
   margin-bottom: 26px;

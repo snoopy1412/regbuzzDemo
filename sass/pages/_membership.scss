@@ -1,3 +1,6 @@
+.membership-heading{
+	padding-bottom: 40px;
+}
 .membership-title{
 	margin-bottom: 26px;
 	@include font-size(4.8);
@@ -33,13 +36,7 @@
 	    display: block;
 	    content: "";
 	    width: 1px;
-	    // border-right: 1px dashed #BEC0C2;
 	}
-	// &:last-child{
-	// 	&:after{
-	// 		border-right: 0;
-	// 	}
-	// }
 	.is-hidden{
 		display: none;
 	}
