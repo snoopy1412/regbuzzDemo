@@ -13,21 +13,20 @@
 				<li><a href="#">Home</a></li>
 				<li class="active">Post a Project</li>
 			</ol> -->
-
-				<ul class="steps">
-					<li class='step-item active'>
-						<a href="" title="" class='step-1'>Post a project</a>
-
-					</li>
-					<li class='step-item'>
-						<a href="" title="" class='step-2'>Pay for it</a>
-					</li>
-					<li class='step-item'>
-						<a href="" title="" class='step-3'>Done</a>
-					</li>
-					
-				</ul>
-
+			<ul class="steps">
+				<li class='step-item active'>
+					<a href="" title="" class='step-1'>Describe your need</a>
+				</li>
+				<li class='step-item'>
+					<a href="" title="" class='step-2'>Choose a provider</a>
+				</li>
+				<li class='step-item'>
+					<a href="" title="" class='step-3'>Generate an order</a>
+				</li>
+				<li class='step-item'>
+					<a href="" title="" class='step-4'>Pay to Regbuzz</a>
+				</li>
+			</ul>
 			<div class="row">
 				<div class="col-md-8">
 					<section class="pub-main">					
@@ -36,19 +35,25 @@
 
 								<!-- 任务基本信息 -->
 								<div class="row pub-item pub-item-base">
-									<h3 class='pub-item-title col-md-12'> Base Information </h3>
+									<h3 class='pub-item-title col-md-12'> Project Basic Information </h3>
 									<div class="form-group">
 										<label for="select-category" class='col-md-3'>Choose a category</label>
 										<div class="col-md-9" style='position: relative'>
-										<div class="row">
-										  <div class="col-md-6 pub-select-double">
+										<div class="row row--no-padding">
+										  <div class="col-md-6">
 										   <select class='form-control pub-category-select js-dropdown-toggle' id='select-category'>
-												<option value="">Please select...</option>}
+												<option value="">Please select...</option>
+												<option value="">Chemicals</option>
+												<option value="">SDS/MSDS and labelling</option>
+												<option value="">Chemical Notification</option>
+												<option value="">Chemical Registration</option>
+												<option value="">Others</option>
+												option
 											</select>
 										  </div>
-										  <div class="col-md-6 pub-select-double">
+										  <div class="col-md-6">
 										   <select class='form-control pub-category-select'>
-												<option value="">Please select...</option>}
+												<option value="">Please select...</option>
 											</select>
 										  </div>
 										</div>
@@ -59,7 +64,6 @@
 												</div>
 											</div>
 										</div>							
-										
 									</div>
 									<div class="form-group">
 										<label for="job-name" class='col-md-3'>Give your job a name</label>
@@ -70,15 +74,15 @@
 													<h4 class='m-oFormHelp-title'>What's in a name?</h4>
 													<p class='m-oFormHelp-bref'>A lot, actually. A concise, yet specific job name will help attract qualified applicants. For instance:</p>
 													<ul class="m-oFormHelp-list">
-													    <li>Writer Wanted for Travel Blog</li>
-													    <li>ActiveSync Integration for PHP</li>
-													    <li>Are You a Wordpress Wizard?</li>
+													    <li>Author wanted for EU SDS</li>
 													</ul>
 												</div>
 											</div>
 										</div>						
 									</div>	
-									<div class="form-group">
+
+									<!-- 暂时取消 -->
+									<!-- <div class="form-group">
 										<label for="" class='col-md-3'>Job Owner</label>
 										<div class="col-md-9 clearfix radiobox-list">
 											 <label class="c-input c-radio">
@@ -92,25 +96,47 @@
 											   Post the job for my company!
 											</label>
 										</div>
-									</div>					
+									</div>		 -->		
+									
+									<!-- Job Description -->
 									<div class="form-group">
-										<label for="pub-profile-txt" class='col-md-3'>Job profile</label>
+										<label for="pub-profile-txt" class='col-md-3'>Job Description</label>
 										<div class="col-md-9">
 											<textarea name="" value="" class='form-control'  rows="5" id='pub-profile-txt'></textarea>
 										</div>
-									</div>	
-
-									<!-- 按时收费 -->
+									</div>		
+									
+									<!-- 预算 -->
 									<div class="form-group">
 										<label for="pub-budget-txt" class='col-md-3'>Budget</label>
 										<div class="col-md-9">
-										 <div class="input-group">
+								      		<select id="project-budget" name="budget" class='form-control'><option value="192">微项目 ($80-240 USD)</option><option value="25">简单的项目 ($240-2000 USD)</option><option value="26">非常小的项目 ($2000-6000 USD)</option><option value="27">小项目 ($6000-12000 USD)</option><option value="28" selected="selected">中等项目 ($12000-24000 USD)</option><option value="29">大项目 ($24000-40000 USD)</option><option value="30">较大项目 ($40000-80000 USD)</option><option value="233">非常大的项目 ($80000-160000 USD)</option><option value="252">大项目 ($160000-400000 USD)</option><option value="271">主要的项目 ($ &gt;400000 USD)</option><option value="custom">自定义预算</option></select>
+								      		<!-- 自定义预算 -->
+								      		<div class="pub-budget-custom">
+								      			<div class='budget-min'>
+								      				<label for="">最低收费</label>
+													<div class="input-group">
+														<div class="input-group-addon">$</div>
+														<input type="number" class='form-control' value='1'>
+														<div class="input-group-addon">USD</div>
+													</div>
 
-									      <input type="text" class="form-control" id="inputGroupSuccess3" aria-describedby="inputGroupSuccess3Status">
-									            <span class="input-group-addon">$</span>
-									    </div>
+								      				
+								      			</div>
+								      			<div class='budget-max'>
+								      				<label for="">最高收费</label>
+								      				<div class="input-group">
+														<div class="input-group-addon">$</div>
+														<input type="number" class='form-control' value='1'>
+														<div class="input-group-addon">USD</div>
+													</div>
+								      			</div>
+								      		</div>
+
 										</div>
 									</div>
+									
+									<!-- Estimated Duration -->
 									<div class="form-group">
 										<label for="estimated" class='col-md-3'>Estimated Duration</label>
 										<div class="col-md-9">
@@ -124,8 +150,9 @@
 											    <option value="4" label="I don't know yet">I'm not sure</option>
 											</select>
 										</div>
-									</div>
-									
+									</div>	
+
+									<!-- 附件 -->
 									<div class='form-group'>
 										<label for="document" class='col-md-3'>Attach a document</label>
 										<div class="col-md-9">
@@ -137,6 +164,8 @@
 								<!-- 候选人资质 -->
 								<div class="row pub-item">
 									<h3 class='pub-item-title col-md-12'> Candidates Qualifications </h3>
+
+									<!-- Marketplace Visibility -->
 									<div class="form-group">
 										<label for="marketplace" class='col-md-3'>Marketplace Visibility</label>
 										<div class="col-md-9">
@@ -146,8 +175,46 @@
 										</select>
 										</div>
 									</div>
+
+
+									<!-- skill -->
+									<!-- <div class="form-group">
+										<label for="skills" class='col-md-3'>What skills are needed?</label>
+										<div class="col-md-9">
+											<div id="jellybean">
+												<ul class='jellybean-container clearfix'>
+													<li class="jellybean-container-item">
+														<span class="jellybean-suggest-input">
+															<input type="text" value="" class="jellybean-input" placeholder="输入地区">
+															<ul class='jellybean-result'></ul>
+														</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div> -->
+
+									<!-- Location -->
 									<div class="form-group">
-										<label for="" class='col-md-3'>Verified</label>
+										<label for="location" class='col-md-3'>Location</label>
+										<div class="col-md-9">
+											<select class='form-control form-control-all' id='location'>
+											    <option value="" label="Any location">Any location</option>
+											    <option value="8" label="Australasia">Australasia</option>
+											    <option value="3" label="East Asia">East Asia</option>
+											    <option value="1" label="Eastern Europe">Eastern Europe</option>
+											    <option value="2" label="Latin America">Latin America</option>
+											    <option value="5" label="North America">North America</option>
+											    <option value="6" label="South Asia">South Asia</option>
+											    <option value="7" label="Western Europe">Western Europe</option>
+											</select>
+										</div>
+									</div>	
+
+
+									<!-- Verification -->
+									<div class="form-group">
+										<label for="" class='col-md-3'>Verification</label>
 										<div class="col-md-9 clearfix radiobox-list">
 											  <label class="c-input c-checkbox">
 											  <input id="radio1" name="checkbox" type="checkbox" checked>
@@ -166,37 +233,9 @@
 											</label>
 										</div>
 									</div>	
-									<div class="form-group">
-										<label for="skills" class='col-md-3'>What skills are needed?</label>
-										<div class="col-md-9">
-											<div id="jellybean">
-												<ul class='jellybean-container clearfix'>
-													<li class="jellybean-container-item">
-														<span class="jellybean-suggest-input">
-															<input type="text" value="" class="jellybean-input" placeholder="输入地区">
-															<ul class='jellybean-result'></ul>
-														</span>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="location" class='col-md-3'>Location</label>
-										<div class="col-md-9">
-											<select class='form-control form-control-all' id='location'>
-											    <option value="" label="Any location">Any location</option>
-											    <option value="8" label="Australasia">Australasia</option>
-											    <option value="3" label="East Asia">East Asia</option>
-											    <option value="1" label="Eastern Europe">Eastern Europe</option>
-											    <option value="2" label="Latin America">Latin America</option>
-											    <option value="5" label="North America">North America</option>
-											    <option value="6" label="South Asia">South Asia</option>
-											    <option value="7" label="Western Europe">Western Europe</option>
-											</select>
-										</div>
-									</div>	
-									<div class='form-group'>
+
+									<!-- feedback -->
+								<!-- 	<div class='form-group'>
 										<label for="feedback-score" class='col-md-3'>Feedback Score</label>
 										<div class="col-md-9">
 											<select class='form-control form-control-all' id='feedback-score'>
@@ -207,11 +246,11 @@
 										    <option value="4.5" label="At least 4.5">At least 4.5</option>
 										</select>
 										</div>
-									</div>
+									</div> -->
 								</div>
 								
 								<!-- 自定义问题 -->
-								<div class="row pub-item pub-customize">
+								<!-- <div class="row pub-item pub-customize">
 									<h3 class='pub-item-title col-md-12'>Customize Requirements</h3>	
 									<div class='form-group'>
 										<label for="" class='col-md-3' style='padding-top: 0'>Screening Questions</label>
@@ -236,10 +275,10 @@
 
 									</div>
 									
-								</div>
+								</div> -->
 
 								<!-- 不公开问题 Private Job-->
-								<div class="row pub-item">
+								<!-- <div class="row pub-item">
 									<h3 class='pub-item-title col-md-12'>Private Informations <sub>not public*</sub></h3>	
 									<div class='form-group'>
 										<label for="" class='col-md-3'>Desciption of Services</label>
@@ -265,13 +304,13 @@
 											<input type="file" name="" value="" placeholder="">
 										</div>
 									</div>
-								</div>
+								</div> -->
 
 								<div class='form-group mt-20'>
-									<div class='col-md-3'>
-										
+									<div class='col-sm-offset-3 col-md-3'>
+										<input type="submit" name="" value="Post Project Now" class='btn btn-primary'>
 									</div>
-									<input type="submit" name="" value="Post Project Now" class='btn btn-primary'>
+									
 								</div>
 								
 							</form>
@@ -280,12 +319,24 @@
 				</div>
 				<div class="col-md-4">
 					<aside class='pub-aside'>
-					<section class='pub-aside-item pub-aside-item-contact'>
+						<section class='pub-aside-item pub-aside-item-contact'>
 							<h3 class='pub-aside-item-title'>Contact</h3>
-							<p> Email: <a href="mailto:cxd@cirscn.com">cxd@cirscn.com</a> </p>
-							<p> Tell : 400-0303-200 </p>
+							<ul class='contact-list'>
+								<li>
+									<span class='contact-title'>HotLine</span>
+									<span class='contact-des'>400-0303-200</span>
+								</li>
+								<li>
+									<span class='contact-title'>Email</span>
+									<span class='contact-des'><a href="mailto:cxd@cirscn.com">cxd@cirscn.com</a></span>
+								</li>
+								<li>
+									<span class='contact-title'>Skype</span>
+									<span class='contact-des'>1234567</span>
+								</li>
+							</ul>
 						</section>
-						<section class='pub-aside-item pub-aside-item-process'>
+						<!-- <section class='pub-aside-item pub-aside-item-process'>
 							<h3 class='pub-aside-item-title'>Publish Process</h3>
 							<div class='process-list gradient-box'>
 								
@@ -312,7 +363,7 @@
 								
 								
 							</div>
-						</section>
+						</section> -->
 						<section class='pub-aside-item pub-aside-item-help'>
 							<h3 class='pub-aside-item-title'>FAQs</h3>
 							<ul class='help-list'>

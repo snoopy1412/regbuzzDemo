@@ -58,13 +58,6 @@
 }
 
 // base
-.pub-item-base{
-    
-}
-.pub-select-double{
-    padding-left: 0;
-    padding-right: 0;
-}
 // base end
 
 // customize
@@ -77,6 +70,14 @@
         padding-top: 10px;
     }
 }
+.pub-budget-custom{
+    display: none;
+    width: 60%;
+    padding-top: 20px;
+    .budget-min,.budget-max{
+        margin-bottom: 20px;
+    }
+}
 // customize
 // 
 
@@ -86,12 +87,26 @@
 {
     padding-left: 20px;
     padding-top: 0;
-    // padding-left: 50px;
-
 
     @media screen and (max-width: 768px)
     {
         padding-left: 20px;
+    }
+    
+    .contact-list{
+        padding-left: 10px;
+        &>li{
+            margin-bottom: 10px;
+        }
+    }
+    .contact-title{
+        display: inline-block;
+        width: 80px;
+        font-weight: 600;
+    }
+    .contact-des{
+        display: inline-block;
+
     }
 }
 .pub-aside-item

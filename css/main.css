@@ -9053,13 +9053,16 @@ ul {
     left: 0;
     top: 100%; }
 
-.pub-select-double {
-  padding-left: 0;
-  padding-right: 0; }
-
 .pub-customize .add-questions {
   display: block;
   padding-top: 10px; }
+
+.pub-budget-custom {
+  display: none;
+  width: 60%;
+  padding-top: 20px; }
+  .pub-budget-custom .budget-min, .pub-budget-custom .budget-max {
+    margin-bottom: 20px; }
 
 .pub-aside {
   padding-left: 20px;
@@ -9067,6 +9070,16 @@ ul {
   @media screen and (max-width: 768px) {
     .pub-aside {
       padding-left: 20px; } }
+  .pub-aside .contact-list {
+    padding-left: 10px; }
+    .pub-aside .contact-list > li {
+      margin-bottom: 10px; }
+  .pub-aside .contact-title {
+    display: inline-block;
+    width: 80px;
+    font-weight: 600; }
+  .pub-aside .contact-des {
+    display: inline-block; }
 
 .pub-aside-item {
   margin-bottom: 20px;
