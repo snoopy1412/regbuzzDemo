@@ -6299,6 +6299,9 @@ select[size] {
 .mt-0 {
   margin-top: 0; }
 
+.mt-10 {
+  margin-top: 10px; }
+
 .mt-20 {
   margin-top: 24px; }
 
@@ -9105,6 +9108,112 @@ ul {
 .pub-aside-item-process .process-list {
   color: #555; }
 
+.pubResault-header {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .pubResault-header .category {
+    margin-bottom: 10px; }
+
+.pubResault-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-size: 2.4rem;
+  font-weight: 600; }
+
+.table--pubResault {
+  width: 100%;
+  margin-bottom: 0; }
+  .table--pubResault th, .table--pubResault td {
+    padding: 5px;
+    vertical-align: middle;
+    text-align: left; }
+
+.table--center th, .table--center td {
+  text-align: center;
+  border-right: 1px solid #eee; }
+  .table--center th:last-child, .table--center td:last-child {
+    border-right: 0; }
+
+.pubResault-amount {
+  font-size: 22px;
+  font-size: 2.2rem;
+  color: #f2711c; }
+
+.detail-section {
+  margin-bottom: 10px;
+  padding: 10px; }
+  .detail-section .dl-horizontal > dt {
+    text-align: left; }
+  .detail-section .radiobox-list label {
+    font-weight: 300; }
+  .detail-section .documents-name {
+    color: #666;
+    font-size: 12px; }
+    .detail-section .documents-name:hover {
+      text-decoration: underline; }
+
+.detail-section-title {
+  margin-top: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 600; }
+
+.pubResault-body {
+  position: relative; }
+  .pubResault-body .ProjectReport {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 12px;
+    text-align: right; }
+    .pubResault-body .ProjectReport .ProjectReport-link {
+      display: block;
+      color: #db2828; }
+      .pubResault-body .ProjectReport .ProjectReport-link:hover {
+        text-decoration: underline; }
+
+.pubResault-list {
+  margin-top: 40px; }
+
+.table--list-pubResault {
+  width: 100%; }
+  .table--list-pubResault th, .table--list-pubResault td {
+    padding: 10px; }
+  .table--list-pubResault thead {
+    background-color: #4D525B;
+    padding: 5px 0;
+    color: #fff;
+    border-radius: 4px 4px 0 0; }
+  .table--list-pubResault tbody {
+    background-color: #fff; }
+    .table--list-pubResault tbody tr {
+      border: 1px solid #ccc; }
+
+.pubResault-list-item {
+  position: relative;
+  border-bottom: 1px solid #ddd; }
+  .pubResault-list-item .img img {
+    padding: 2px;
+    border: 1px solid #ccc; }
+  .pubResault-list-item .additional-information {
+    display: inline-block;
+    padding-left: 20px; }
+  .pubResault-list-item .user-des {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600; }
+    .pubResault-list-item .user-des i {
+      font-style: normal;
+      color: #666;
+      display: inline-block;
+      margin-right: 5px; }
+  .pubResault-list-item .amount-num {
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    display: block; }
+
 .project-list-warp {
   padding: 30px;
   background-color: #fff; }
@@ -9979,6 +10088,17 @@ ul {
   font-size: 1.3rem;
   line-height: 1.8;
   color: #1f2836; }
+
+.proposal-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 600; }
+
+.table--proposal {
+  width: 100%; }
+  .table--proposal th, .table--proposal td {
+    padding-top: 5px;
+    padding-bottom: 5px; }
 
 .m-steps {
   width: 100%;

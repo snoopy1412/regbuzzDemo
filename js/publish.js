@@ -67,4 +67,22 @@ define(['raty'],function(icheck,raty) {
        });
     }
   });
+
+
+
+
+
+  // star    
+    $('.star-bids-user').raty({
+        readOnly: true,
+        half: true,
+        score: 4.3,
+        precision: true,
+        hints: ['bad', 'poor', 'regular', 'good', 'gorgeous'],
+        path: './img/stars',
+        target: '.item-stats-bids-name',
+        targetKeep: true
+    });
+
+  // });
 });
