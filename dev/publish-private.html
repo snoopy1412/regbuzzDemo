@@ -28,7 +28,7 @@
 				</li>
 			</ul>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-9">
 					<section class="pub-main">					
 						<div class='pub-content'>
 							<form class="form-horizontal">
@@ -135,6 +135,30 @@
 										</div>
 									</div>
 									
+									<!-- 附件 -->
+									<div class='form-group'>
+										<label for="document" class='col-md-3'>Attach a document</label>
+										<div class="col-md-9">
+											<input type="file" id='document'>
+										</div>
+									</div>
+								</div>
+
+								<!-- 候选人资质 -->
+								<div class="row pub-item">
+									<h3 class='pub-item-title col-md-12'>Qualifications</h3>
+
+									<!-- Marketplace Visibility -->
+									<div class="form-group">
+										<label for="marketplace" class='col-md-3'>Marketplace Visibility</label>
+										<div class="col-md-9">
+											<select class='form-control form-control-all' id='marketplace'>
+										    <option value="public" label="All consultants can find this job">All consultants can find this job</option>
+										    <option value="private" label="Only people I have invited can find this job">Only people I have invited can find this job</option>
+										</select>
+										</div>
+									</div>
+									
 									<!-- Estimated Duration -->
 									<div class="form-group">
 										<label for="estimated" class='col-md-3'>Estimated Duration</label>
@@ -150,31 +174,6 @@
 											</select>
 										</div>
 									</div>	
-
-									<!-- 附件 -->
-									<div class='form-group'>
-										<label for="document" class='col-md-3'>Attach a document</label>
-										<div class="col-md-9">
-											<input type="file" id='document'>
-										</div>
-									</div>
-								</div>
-
-								<!-- 候选人资质 -->
-								<div class="row pub-item">
-									<h3 class='pub-item-title col-md-12'> Candidates Qualifications </h3>
-
-									<!-- Marketplace Visibility -->
-									<div class="form-group">
-										<label for="marketplace" class='col-md-3'>Marketplace Visibility</label>
-										<div class="col-md-9">
-											<select class='form-control form-control-all' id='marketplace'>
-										    <option value="public" label="All consultants can find this job">All consultants can find this job</option>
-										    <option value="private" label="Only people I have invited can find this job">Only people I have invited can find this job</option>
-										</select>
-										</div>
-									</div>
-
 
 									<!-- skill -->
 									<!-- <div class="form-group">
@@ -195,7 +194,7 @@
 
 									<!-- Location -->
 									<div class="form-group">
-										<label for="location" class='col-md-3'>Location</label>
+										<label for="location" class='col-md-3'>Candidates Location</label>
 										<div class="col-md-9">
 											<select class='form-control form-control-all' id='location'>
 											    <option value="" label="Any location">Any location</option>
@@ -213,7 +212,7 @@
 
 									<!-- Verification -->
 									<div class="form-group">
-										<label for="" class='col-md-3'>Verification</label>
+										<label for="" class='col-md-3'>Candidates Verification</label>
 										<div class="col-md-9 clearfix radiobox-list">
 											  <label class="c-input c-checkbox">
 											  <input id="radio1" name="checkbox" type="checkbox" checked>
@@ -316,7 +315,7 @@
 						</div>
 					</section>				
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<aside class='pub-aside'>
 						<section class='pub-aside-item pub-aside-item-contact'>
 							<h3 class='pub-aside-item-title'>Contact</h3>
