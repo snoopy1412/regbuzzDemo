@@ -306,3 +306,41 @@
 
     }
 }
+
+
+// popver
+    .authentication--provider
+    {   
+        margin-top: 8px;
+        .icon
+        {
+            line-height: 20px;
+
+            display: inline-block;
+
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+
+            text-align: center;
+
+            border: 1px solid #e4e6e9;
+            border-radius: 50%;
+            i
+            {
+                color: #e4e6e9;
+            }
+            &:last-child
+            {
+                margin-right: 0;
+            }
+            &.is-verified
+            {
+                border-color: $palette-blue;
+                i
+                {
+                    color: $palette-blue;
+                }
+            }
+        }
+    }

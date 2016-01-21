@@ -1,0 +1,82 @@
+.order-header{
+	h1{
+		margin-top: 0;
+		margin-bottom: 30px;
+		@include font-size(3.2);
+		// font-weight: 600;
+		text-transform: uppercase;
+		color:$palette-blue;
+	}
+	.due-warp{
+		margin-top: 20px;
+		.due-amount{
+			margin: 0;
+			color:#a4a4a4;
+		}
+	}
+	.cooperators{
+		color:#a4a4a4;
+	}
+	.t-due{
+		font-size: 22px;
+		color: $palette-blue;
+	}
+	.dd-fixed-width{
+		display: inline-block;
+		width: 80px;
+	}
+	.order-info-id,.order-info-date{
+		margin-bottom: 5px;
+		color:#a4a4a4;
+		span{
+			width: 100px;
+			display: inline-block;
+		}
+	}
+}
+
+.order-title-prefix{
+	display: inline-block;
+	color:#a4a4a4;
+	font-weight: 300;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+.order-title{
+	@include font-size(1.8);
+	font-weight: 600;
+	margin: 0;
+	color:#555;
+}
+
+// table--order
+.table--order{
+	&>thead{
+		background: #2a323f;
+		color: #fff;
+		&>tr>th{
+			border-bottom: none !important;
+			padding: 20px 10px !important;
+			border-color: #2a323f !important;
+		}
+	}
+	&>tbody{
+		&>tr{
+			&>td{
+				vertical-align: middle;
+			}
+		}
+	}
+	h4{
+		color: #2a323f;
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0 0 5px 0;
+	}
+}
+
+.responsibilities-list{
+	&>li{
+		padding: 5px 0;
+	}
+}

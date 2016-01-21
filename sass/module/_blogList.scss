@@ -26,6 +26,7 @@
 
 	// 左侧图片展示
 	.b-list-media-img{
+		overflow: hidden;
 		img{
 			width: 100%;
 		}

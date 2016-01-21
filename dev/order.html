@@ -9,223 +9,213 @@
 
 <!-- /header -->
 <section class='com-main'>
-<div class="container">
-
-<div class="row">
-	<div class="col-md-3 com-aside">
-		<div class="account-aside">
-			<div class="account-aside-head">
-				<div class="account-name text-center">
-					<div class="account-img">
-						<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="80px" ></a>
-					</div>
-					<div class="account-call">
-						<a href="" title="" class='account-call-name'>Aaron Su</a>
-						<p class='account-call-des'>Law Consultant</p>
-					</div>
+	<div class="container container--order">
+		<header class='order-header section'>
+			<h1>Order Confirmation</h1>
+			<div class="row">
+				<div class="col-md-7">
+					<dl>
+						<dt><span class="order-title-prefix">Project Title</span></dt>
+						<dd>
+							<h2 class="order-title">Need a logo about Children Association</h2>
+						</dd>
+					</dl>
+                    <div class='cooperators'>
+                    	<dt><span class="order-title-prefix">合作双方</span></dt>
+						<dd>
+							<span class='dd-fixed-width'>雇主：</span><a href="" title="">Aaron Su</a>
+						</dd>
+						<dd>
+							<span class='dd-fixed-width'>咨询师：</span><a href="" title="">Tom Jack</a>
+						</dd>
+                    </div>
 				</div>
-				<div class="account-money">
-					<ul class='account-money-list'>
-						<li class='clearfix'>
-							<a href="" title="" class='pull-left'>income :</a>
-							<small class='pull-right'>900.00 USD</small>
-						</li>
-						<li class='clearfix'>
-							<a href="" title="" class='pull-left'>expenditure :</a>
-							<small class='pull-right'>900.00 USD</small>
-						</li>
-						<li class='clearfix'>
-							<a href="" title="" class='pull-left'>balance :</a>
-							<small class='pull-right'>900.00 USD</small>
-						</li>
-						<li class='text-center'>						
-							<a href="" title="" class="btn btn-sm btn-success">Withdraw</a>
-							<a href="" title="" class="btn btn-sm btn-warning">Top-up</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<ul class='nav nav-pills nav-stacked'>
-						<li  class="active">
-							<a href="" title="">Transaction Management</a>
-						</li>
-						<li>
-							<a href="" title="">My Account Book</a>
-						</li>
-						<li>
-							<a href="" title="">Evaluation Management</a>
-						</li>
-						<li>
-							<a href="" title="">Invoice Management</a>
-						</li>
-						<li>
-							<a href="" title="">Arbitration Management</a>
-						</li>
-					</ul>
+				<div class="col-md-5">
+					<div class="order-info-id"><span>Project ID：</span> 9299728</div>
+                    <div class="order-info-date"><span>Project Date：</span> 22 March 2016</div>
+                    <div class='due-warp'>
+                    	<span class="t-due">TOTAL DUE</span>
+                    	<h2 class="due-amount">$ 3120.00</h2>
+                    </div>
+                    
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="col-md-9 com-content">
-		<div class="account-content">
-			<section class='account-section'>
-				<div class="account-section-header clearfix">
-					<h2>Payment details</h2>
-					<!-- <div class="form-inline">
-						<div class="form-group">
-							<select name="" id="" class="form-control">
-									<option value="" selected>all</option>
-									<option value="">income</option>
-									<option value="">expenditure</option>
-								</select>
-						</div>
-					</div> -->
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading clearfix">
-						<form action="" method="POST" class="form-inline" role="form">
-						
-							<div class="form-group pull-left">
-								<label  for="">Trading hours: </label>
-								<div class="input-group date form_date">
-								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
-								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>	 	
-								 </div>
-								-
-								<div class="input-group date form_date">
-								 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
-								 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
-								 </div>
-							</div>
-							<div class='form-group  pull-right' >
-								<!-- <label for="">Fund flow: </label> -->
-								<select name="" id="" class="form-control">
-									<option value="" selected>all</option>
-									<option value="">income</option>
-									<option value="">expenditure</option>
-								</select>
-							</div>
-							</form>
-					</div>	
-					<div class="panel-body">
-						<div class="form-inline clearfix" style='padding: 20px 0;'>			
-							<div class="form-group pull-right">
-								<input type="text" class='form-control' placeholder='input your order number'>
-								<button class="btn btn-primary">search</button>
-							</div>
-						</div>
-						<table class="table table-hover table--account">
-							<thead>
-								<tr>
-									<th width="10%">
-										serial number
-									</th>
-									<th width="15%">
-										time
-									</th>
-									<th width="50%">
-										content
-									</th>
-									<th width="5%">
-										money($)
-									</th>
-									<th width="20%">
-										Payment channels
-									</th>
-								</tr>
-							</thead>
+		</header>
+		<div class='panel panel-default'>
+			<div class="panel-heading">
+				Project Deliverables
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<label for="estimated" class='col-md-2'>Estimated Deliverables</label>
+					<div class="col-md-9">
+						<table class='table--proposal'>
 							<tbody>
 								<tr>
-									<td>
-										2015092300038507
+									<td width="80%" class='text-left'>
+										<input type="text" class='form-control' value='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' disabled="true">
 									</td>
-									<td>
-										<time datetime="2011-01-12">January 12th, 2011</time>
-									</td>
-									<td>
-										订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
-										<br>
-										托管赏金-服务 - 订单号 ：6250482
-									</td>
-									<td>
-										-3750
-									</td>
-									<td>
-										支付宝
+									<td width="20%" class='text-right'>
+										<button class='btn btn-primary btn-sm'><i class="fa fa-plus"></i></button>
+										<button class='btn btn-warning btn-sm'><i class="fa fa-pencil"></i></button>
+										<button class='btn btn-danger btn-sm'><i class="fa fa-trash"></i></button>
 									</td>
 								</tr>
 								<tr>
-									<td>
-										2015092300038507
+									<td class='text-left'>
+										<input type="text" class='form-control'  value='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' disabled="true">
 									</td>
-									<td>
-										<time datetime="2011-01-12">January 12th, 2011</time>
-									</td>
-									<td>
-										订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
-										<br>
-										托管赏金-服务 - 订单号 ：6250482
-									</td>
-									<td>
-										-3750
-									</td>
-									<td>
-										支付宝
+									<td class='text-right'>
+										<button class='btn btn-primary btn-sm'><i class="fa fa-plus"></i></button>
+										<button class='btn btn-warning btn-sm'><i class="fa fa-pencil"></i></button>
+										<button class='btn btn-danger btn-sm'><i class="fa fa-trash"></i></button>
 									</td>
 								</tr>
 							</tbody>
+							
 						</table>
-						<div class="account-content-footer clearfix">
-							<p class='pull-left cost-statistics'>
-								共一条数据，累计收入<span class='num'>0</span>元，累计支出<span class='num'>3750</span>元。
-							</p>
-							<nav class='pull-right'>
-							  <ul class="pagination">
-							    <li>
-							      <a href="#" aria-label="Previous">
-							        <span aria-hidden="true">&laquo;</span>
-							      </a>
-							    </li>
-							    <li><a href="#">1</a></li>
-							    <li><a href="#">2</a></li>
-							    <li><a href="#">3</a></li>
-							    <li><a href="#">4</a></li>
-							    <li><a href="#">5</a></li>
-							    <li>
-							      <a href="#" aria-label="Next">
-							        <span aria-hidden="true">&raquo;</span>
-							      </a>
-							    </li>
-							  </ul>
-							</nav>
-						</div>
-						<div class="account-faqs">
-							<h3>
-								FAQs
-							</h3>
-							<dl>
-								<dt>Trading a refund money, back to where go to?</dt>
-								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-							</dl>
-							<dl>
-								<dt>Trading a refund money, back to where go to?</dt>
-								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-							</dl>
-							<dl>
-								<dt>Trading a refund money, back to where go to?</dt>
-								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-							</dl>
-						</div>
-						
 					</div>
 				</div>
-
-			</section>
+			</div>
 		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Deadline
+			</div>
+			<div class="panel-body">
+			  	<div class="form-horizontal">
+			  		<div class="form-group">
+			  			<label for="" class='col-sm-2 control-label'>开始时间: </label>
+			  			<div class="col-sm-10">
+			  				<p class="form-control-static">
+			  					<time datetime="2011-01-12">January 12th, 2011</time>
+			  				</p>
+			  			</div>
+			  		</div>
+			  		<div class="form-group">
+			  			<label for="" class='col-sm-2 control-label'>Deadline: </label>
+			  			<div class="col-sm-3">
+				  			<div class="input-group">
+				  				<input type="date" name="" value="" placeholder="" class='form-control'>
+				  				<div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+				  				
+				  			</div>
+			  				
+			  			</div>
+			  		</div>
+			  	</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Price
+			</div>
+			<div class="panel-body">
+			   <table class="table table-bordered table--order">
+		            <thead>
+			            <tr>
+			                <th>#</th>
+			                <th>Item Description</th>
+			                <th class="text-center">Unit Cost</th>
+			                <th class="text-center">Quantity</th>
+			                <th class="text-center">Total</th>
+			            </tr>
+		            </thead>
+		            <tbody>
+			            <tr>
+			                <td>1</td>
+			                <td>
+			                    <h4>Service One</h4>
+			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
+			                </td>
+			                <td class="text-center"><strong>$ 599.00</strong></td>
+			                <td class="text-center"><strong>4</strong></td>
+			                <td class="text-center"><strong>$2396.00</strong></td>
+			            </tr>
+			            <tr>
+			                <td>2</td>
+			                <td>
+			                    <h4>Service Two</h4>
+			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
+			                </td>
+			                <td class="text-center"><strong>$ 599.00</strong>	</td>
+			                <td class="text-center"><strong>5</strong></td>
+			                <td class="text-center"><strong>$2995.00</strong></td>
+			            </tr>
+			            <tr>
+			                <td>3</td>
+			                <td>
+			                    <h4>Service Three</h4>
+			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
+			                </td>
+			                <td class="text-center"><strong>$ 599.00</strong>	</td>
+			                <td class="text-center"><strong>2</strong></td>
+			                <td class="text-center"><strong>$1198.00</strong></td>
+			            </tr>
+			            <tr>
+			                <td colspan="2" class="payment-method">
+			                    <h4>Payment Method</h4>
+			                </td>
+			                <td class="text-right" colspan="2">
+			                    <p>Sub Total</p>
+			                    <p>Tax (VAT 10%)</p>			                    
+			                    <p><strong>GRAND TOTAL</strong></p>
+			                </td>
+			                <td class="text-center">
+			                    <p>$ 6589.00</p>
+			                    <p>$ 120.00</p>			               
+			                    <p><strong>$ 6709.00</strong></p>
+			                </td>
+			            </tr>
+		            </tbody>
+	        </table>
+			</div>
+		</div>
+		<div class='panel panel-default'>
+			<div class="panel-heading">
+				Responsibilities
+			</div>
+			<div class="panel-body">
+				<ol class='responsibilities-list'>
+					<li>工作开始前，甲、乙双方应确认交付物、价格、工期计划，无异议后乙方开始工作。</li>
+					<li>乙方（服务商）完成工作后，甲方（雇主）应在3个工作日内予以验收和确认，验收合格后支付费用。</li>
+					<li>甲方（雇主）如需增加功能需求，应与乙方（服务商）进行协商，甲方（雇主）补足差额后，双方签署的补充订单生效。</li>
+					<li>如甲方（雇主）原因变更需求内容，双方意见未达成一致，可向Regbuzz发起争议或维权。Regbuzz以双方签署的订单作为调节判定的依据。</li>
+					<li>无需求变更要求时，乙方（服务商）未按项目时间表完成工作，甲方（雇主）有权要求退回款项。</li>
+					<li>甲方（雇主）提出的可能导致工期延后的修改意见，双方应及时签订补充合同并签字确认</li>
+					<li>在约定维护期间，乙方（服务商）未兑现售后维护承诺，Regbuzz有权根据网站规则进行处罚。</li>
+				</ol>
+			</div>
+		</div>
+		<div class="section">
+			<div class="row">
+				<div class="col-md-6">
+					<dl class="dl-horizontal">
+						<dt>甲方（雇主）：</dt>
+						<dd>Aaron Su</dd>
+					</dl>
+					<dl class="dl-horizontal">
+						<dt>签署时间：</dt>
+						<dd>2016年1月21日</dd>
+					</dl>
+				</div>
+				<div class="col-md-6">
+					<dl class="dl-horizontal">
+						<dt>乙方（服务商）：</dt>
+						<dd>富士康</dd>
+					</dl>
+					<dl class="dl-horizontal">
+						<dt>签署时间：</dt>
+						<dd>2016年1月21日</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	    <div class="text-center ">
+	        <a class="btn btn-success"><i class="fa fa-check"></i> Submit</a>
+	        <a class="btn btn-primary" target="_blank" href="invoice_print.html"><i class="fa fa-print"></i> Print </a>
+	    </div>
 	</div>
-	
-</div>
-</div>
 </section>
 
 <!-- 页脚部分 -->

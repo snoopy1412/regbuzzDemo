@@ -1,0 +1,174 @@
+<!-- head.html -->
+<% include ../publicTpl/head.html %>
+<!-- head.html end-->
+<body>
+<!-- header.html -->
+<% include ../publicTpl/header.html %>
+<!-- header.html end-->
+
+	<section class='com-main'>
+		<div class="container">	
+			<!-- 面包屑 -->
+			<!-- <ol class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li class="active">Post a Project</li>
+			</ol> -->
+			<ul class="steps">
+				<li class='step-item active'>
+					<a href="" title="" class='step-1'>Describe your need</a>
+				</li>
+				<li class='step-item'>
+					<a href="" title="" class='step-2'>Pay to Regbuzz</a>
+				</li>
+				<li class='step-item'>
+					<a href="" title="" class='step-3'>Choose favorite answer</a>
+				</li>
+				<li class='step-item'>
+					<a href="" title="" class='step-4'>Release the money</a>
+				</li>
+			</ul>
+			<div class="row">
+				<div class="col-md-9">
+					<section class="pub-main">					
+						<div class='pub-content'>
+							<form class="form-horizontal">
+								<!-- 任务基本信息 -->
+								<div class="row pub-item pub-item-base">
+									<h3 class='pub-item-title col-md-12'> Problem Description </h3>
+									
+									<div class="form-group">
+										<label for="select-category" class='col-md-3'>Choose a category</label>
+										<div class="col-md-9" style='position: relative'>
+										<div class="row row--no-padding">
+										  <div class="col-md-6">
+										   <select class='form-control pub-category-select js-dropdown-toggle' id='select-category'>
+												<option value="">Please select...</option>
+												<option value="">Chemicals</option>
+											</select>
+											
+										  </div>
+										  <div class="col-md-6">
+										   <select class='form-control pub-category-select'>
+												<option value="">Please select...</option>
+												<option value="">SDS/MSDS and labelling</option>
+												<option value="">Chemical Notification</option>
+												<option value="">Chemical Registration</option>
+												<option value="">Others</option>
+											</select>
+										  </div>
+										</div>
+											<div class="m-oFormHelp js-dropdown-menu">
+												<div class="dropdown-body">
+													<h4 class='m-oFormHelp-title'>First things first</h4>
+													<p class='m-oFormHelp-bref'>Choose the category and sub-category that best ﬁts your job.</p>
+												</div>
+											</div>
+										</div>							
+									</div>
+
+									<div class="form-group">
+										<label for="job-name" class='col-md-3'>Give your problem a name</label>
+										<div class="col-md-9 dropdown-default">
+											<input type="text" name="" value="" placeholder="" class='form-control js-dropdown-toggle' id='job-name'>
+											<div class="m-oFormHelp js-dropdown-menu">
+												<div class="dropdown-body">
+													<h4 class='m-oFormHelp-title'>What's in a name?</h4>
+													<p class='m-oFormHelp-bref'>A lot, actually. A concise, yet specific job name will help attract qualified applicants. For instance:</p>
+													<ul class="m-oFormHelp-list">
+													    <li>Author wanted for EU SDS</li>
+													</ul>
+												</div>
+											</div>
+										</div>						
+									</div>	
+	
+									<!-- Job Description -->
+									<div class="form-group">
+										<label for="pub-profile-txt" class='col-md-3'>Problem Description</label>
+										<div class="col-md-9">
+											<textarea name="" value="" class='form-control'  rows="5" id='pub-profile-txt'></textarea>
+										</div>
+									</div>		
+									
+									<!-- 预算 -->
+									<div class="form-group">
+										<label for="pub-budget-txt" class='col-md-3'>Rewards</label>
+										<div class="col-md-4">
+								      		
+											<div class="input-group">
+												<div class="input-group-addon">$</div>
+												<input type="number" class='form-control' value='1'>
+												<div class="input-group-addon">USD</div>
+											</div>
+										</div>
+									</div>
+									
+									<!-- 附件 -->
+									<div class='form-group'>
+										<label for="document" class='col-md-3'>Attach a document</label>
+										<div class="col-md-9">
+											<input type="file" id='document'>
+										</div>
+									</div>
+								</div>
+
+								<div class='form-group mt-20'>
+									<div class='col-sm-offset-3 col-md-3'>
+										<input type="submit" name="" value="Pay to Publish question" class='btn btn-primary'>
+									</div>
+									
+								</div>
+								
+							</form>
+						</div>
+					</section>				
+				</div>
+				<div class="col-md-3">
+					<aside class='pub-aside'>
+						<section class='pub-aside-item pub-aside-item-contact'>
+							<h3 class='pub-aside-item-title'>Contact</h3>
+							<ul class='contact-list'>
+								<li>
+									<span class='contact-title'>HotLine</span>
+									<span class='contact-des'>400-0303-200</span>
+								</li>
+								<li>
+									<span class='contact-title'>Email</span>
+									<span class='contact-des'><a href="mailto:cxd@cirscn.com">cxd@cirscn.com</a></span>
+								</li>
+								<li>
+									<span class='contact-title'>Skype</span>
+									<span class='contact-des'>1234567</span>
+								</li>
+							</ul>
+						</section>
+						
+						<section class='pub-aside-item pub-aside-item-help'>
+							<h3 class='pub-aside-item-title'>FAQs</h3>
+							<ul class='help-list'>
+								<li>
+									<a href="" title="">What can I get done on Regbuzz?</a>
+								</li>
+								<li>
+									<a href="" title="">How do I know I'm protected?</a>
+								</li>
+								<li>
+									<a href="" title="">How do I pay?</a>
+								</li>
+								<li>
+									<a href="" title="">How do I get started?</a>
+								</li>
+							</ul>
+						</section>
+						
+					</aside>					
+				</div>
+			</div>
+		</div>
+	</section>
+
+<!-- footer.html -->
+<% include ../publicTpl/footer.html %>
+<!-- footer.html end-->
+</body>
+</html>

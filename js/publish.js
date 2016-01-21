@@ -1,4 +1,4 @@
-define(['raty'],function(icheck,raty) {
+define(['jquery', 'popover','raty'],function($,popover,raty) {
 
   // 星星评级      
   $('.grade-item').each(function() {
@@ -84,5 +84,14 @@ define(['raty'],function(icheck,raty) {
         targetKeep: true
     });
 
-  // });
+
+
+
+// prover
+  $('.provider-name').popover({
+    method: 'hover',
+    defaultPosition : false,
+    content: $('.js-modal-author'),
+    dir:'down'
+  });
 });
