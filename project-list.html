@@ -352,32 +352,33 @@
 		</header>
 		<div class="proList-content">
 
-
-			<!--草稿  -->
-			<section>
-				<table class="table">
-					<thead>
-						<tr>
-							<th>草稿</th>
-							<th>项目类型</th>
-							<th>操作</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
-			</section>
+			
 
 			<!-- 主要内容 -->
 			<section class='section'>
 
 				<!-- 雇主身份 -->
-				<div class='employer-view' style='display: none'>
+				<div class='employer-view' >
+				<!--草稿  -->
+					<section class='setion'>
+						<table class="table table-bordered">
+							<thead>
+								<tr class='active'>
+									<th>草稿</th>
+									<th>项目类型</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan='3'>
+										没有草稿
+									</td>
+									
+								</tr>
+							</tbody>
+						</table>
+					</section>
 						<!-- Nav tabs -->
 					  <ul class="nav nav-tabs" role="tablist">
 						    <li role="presentation" class="active">
@@ -430,9 +431,9 @@
 					  <!-- Tab panes -->
 					  <div class="tab-content">
 						    <div role="tabpanel" class="tab-pane active" id="open-for-bidding">
-						    	<table class="table">
+						    	<table  class="table table-bordered">
 						    		<thead>
-						    			<tr>
+						    			<tr class='active'>
 						    				<th>名称</th>
 						    				<th>竞标</th>
 						    				<th>平均报价</th>
@@ -453,9 +454,9 @@
 						    	</table>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="work-in-progress">
-						    	<table class="table">
+						    	<table class="table table-bordered">
 						    		<thead>
-						    			<tr>
+						    			<tr class='active'>
 						    				<th>项目名称</th>
 						    				<th>自由职业者</th>
 						    				<th>被悬赏的竞标</th>
@@ -476,9 +477,9 @@
 						    	</table>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="past-project">
-						    	<table class="table">
+						    	<table  class="table table-bordered">
 						    		<thead>
-						    			<tr>
+						    			<tr class='active'>
 						    				<th>项目名称</th>
 						    				<th>竞标</th>
 						    				<th>自由职业者</th>
@@ -501,9 +502,9 @@
 						    	</table>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="open-question">
-						    	<table class="table">
+						    	<table class="table table-bordered">
 						    		<thead>
-							    		<tr>
+							    		<tr class='active'>
 							    			<th>竞赛名称</th>
 							    			<th>作品</th>
 							    			<th>奖金</th>
@@ -525,9 +526,9 @@
 						    	</table>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="past-question">
-						    	<table class="table">
+						    	<table class="table table-bordered">
 						    		<thead>
-							    		<tr>
+							    		<tr class='active'>
 							    			<th>竞赛名称</th>
 							    			<th>作品</th>
 							    			<th>奖金</th>
@@ -552,7 +553,7 @@
 				</div>
 
 				<!-- 威客身份 -->
-				<div class="provider-view">
+				<div class="provider-view" style='display: none'>
 						<!-- Nav tabs -->
 					  <ul class="nav nav-tabs" role="tablist">
 						    <li role="presentation" class="active">
@@ -605,9 +606,9 @@
 					  <!-- Tab panes -->
 					  <div class="tab-content">
 						    <div role="tabpanel" class="tab-pane active" id="active-bids">
-						    	<table class="table">
+						    	<table class="table table-bordered">
 						    		<thead>
-						    			<tr>
+						    			<tr class='active'>
 						    				<th>项目名称</th>
 						    				<th>竞标</th>
 						    				<th>我的竞标</th>
@@ -626,9 +627,9 @@
 						    	</table>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="current-work">
-						    	<table class="table">
+						    	<table class="table table-bordered">
 						    		<thead>
-						    			<tr>
+						    			<tr class='active'>
 						    				<th>项目名称</th>
 						    				<th>雇主</th>
 						    				<th>被悬赏的竞标</th>
@@ -646,9 +647,9 @@
 						    	</table>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="past-work">
-						    	<table class="table">
+						    	<table class="table table-bordered">
 						    		<thead>
-						    			<tr>
+						    			<tr class='active'>
 						    				<th>项目名称</th>
 						    				<th>竞标</th>
 						    				<th>雇主</th>
@@ -667,9 +668,9 @@
 						    	</table>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="active-question">
-						    	<table class="table">
+						    	<table class="table table-bordered">
 						    		<thead>
-							    		<tr>
+							    		<tr class='active'>
 							    			<th>问题名称</th>
 							    			<th>提问者</th>
 							    			<th>我的回答</th>
@@ -689,9 +690,9 @@
 						    	</table>
 						    </div>
 						    <div role="tabpanel" class="tab-pane" id="past-question">
-						    	<table class="table">
+						    	<table class="table table-bordered">
 						    		<thead>
-							    		<tr>
+							    		<tr class='active'>
 							    			<th>问题名称</th>
 							    			<th>提问者</th>
 							    			<th>我的回答</th>
