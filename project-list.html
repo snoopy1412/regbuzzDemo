@@ -314,19 +314,19 @@
 			<div class='container'>
 				<ul class='nav navbar-nav clearfix'>
 					<li>
-						<a href="" title="" class='active'>Home</a>
+						<a href="" title="" class='active'>Dashboard</a>
 					</li>
 					<li>
-						<a href="" title="">Needs</a>
+						<a href="" title="">My Projects</a>
 					</li>
 					<li>
-						<a href="" title="">Providers</a>
+						<a href="" title="">Discovery</a>
 					</li>
 					<li>
 						<a href="" title="">Connections</a>
 					</li>
 					<li>
-						<a href="" title="">Article</a>
+						<a href="" title="">Articles</a>
 					</li>
 				</ul>
 			</div>
@@ -336,364 +336,385 @@
 
 <section class='com-main'>
 	
-<div class="container project-list-warp">
-		<!-- 调用module/projectList样式 -->
-	<div class="m-project-list">
+	<div class="container container--proList">
+		<header class='proList-header'>
+			<h1>项目和竞赛</h1>
+			<div class="regbuzzToggle">
+		        <input id="employerView_option" type="radio" value="employer" name="usertype_option" checked="checked">
+		        <label for="employerView_option">
+		            Employer
+		        </label>
+		        <input id="providerView_option" type="radio" value="provider" name="usertype_option">
+		        <label for="providerView_option">
+		            Provider
+		        </label>
+		    </div>
+		</header>
+		<div class="proList-content">
 
-		<!-- 头部样式 -->
-		<div class='project-list-header'>
-			<ul class="nav nav-tabs">
-			  <li role="presentation" class="active"><a href="#">Accepted Project</a></li>
-			  <li role="presentation"><a href="#">Published Project</a></li>
-			</ul>
-		</div>
 
-		<!-- 主体内容 -->
-		<div class="project-list-content">
-			<div class='pure-g project-list-content-header'>
-				<div class="pure-u-1 clearfix">
-					<div class="project-filter pull-left">
-						<form action="" method="get" accept-charset="utf-8" class='form-inline'>
-							<div class="form-group">
-
-								<!-- 接受状态下的筛选条件 -->
-								<select class='form-control'>
-									<option value=""> - Choose State - </option>
-									<option value="">bidding</option>
-									<option value="">accepted</option>
-									<option value="">termination</option>
-									<option value="">cancel</option>
-								</select>
-
-								<!-- 发布状态下的筛选条件 -->
-								<select class='form-control' style="display:none">
-									<option value=""> - Choose State - </option>
-									<option value="">Progress</option>
-									<option value="">Finish</option>
-									<option value="">Invitation</option>
-									<option value="">Cancel</option>
-								</select>
-							</div>
-						</form>
-					</div>
-					<!-- 搜索 ajax调用方式-->
-					<div class="project-search pull-right">
-						<div class="form-search--hasbutton clearfix">
-						      <i class="fa fa-search form-search-icon"></i>
-						      <input type="text" placeholder="Search..." class='form-search-text project-search-text'>
-						      <div class="btn btn-primay form-btn">Search</div>
-					    </div>	
-					</div>	
-				</div>
-			</div>			
-			
-			<!-- 列表 -->
-
-			<!-- 发布任务的时候，分为几种状态？
-				1. 进行中 progress
-				2. 已完成 finished
-				3. 投标中 invitation
-				5. 已取消 canceled
-			 -->
-			<div class="project-list">
-
-				<!-- 接收的任务列表 -->
-				<table class='project-list-table project-list-accepted'  style='display: none'>
+			<!--草稿  -->
+			<section>
+				<table class="table">
 					<thead>
 						<tr>
-							<th>	
-								<a href="javascript:;" title="hits are ordered">state</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">number</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">title</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">bids</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">progress</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">creation time</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">actions</a>
-							</th>
+							<th>草稿</th>
+							<th>项目类型</th>
+							<th>操作</th>
 						</tr>
 					</thead>
 					<tbody>
-					   <tr>
-							<td class="project-status">
-	                            <span class="label label-warning">bidding</span>
-	                        </td>
-	                        <td>
-	                        	<span>281975</span>
-	                        </td>
-							<td class="project-title">
-	                            <a href="project_detail.html">Globally Harmonized System (GHS)</a>
-	                            <br>
-	                            <small>
-	                            	10 bids
-	                            </small>
-	                        </td>
-	                        <td class='project-budget'>
-	                        	10,000$
-	                        </td>
-							<td class="project-completion">
-	                            <small>0</small>
-	                            <div class="progress progress-mini">
-	                                <div style="width: 0%;" class="progress-bar"></div>
-	                            </div>
-	                        </td>
-							<td class="project-time">
-	                           <small>2014.08.15</small>
-	                        </td>
-
-							<td class="project-actions">
-	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
-	                           
-	                        </td>
-						</tr>
 						<tr>
-							<td class="project-status">
-                                <span class="label label-success">accepted</span>
-                            </td>
-                            <td>
-	                        	<span>281975</span>
-	                        </td>
-							<td class="project-title">
-	                            <a href="project_detail.html">Why is global harmonization necessary?</a>
-                            </td>
-                            <td class='project-budget'>
-	                        	200$
-	                        </td>
-							<td class="project-completion">
-                                <small>48%</small>
-                                <div class="progress progress-mini">
-                                    <div style="width: 48%;" class="progress-bar"></div>
-                                </div>
-                            </td>
-							<td class="project-time">
-                               <small>2014.08.15</small>
-                            </td>
-
-							<td class="project-actions">
-                                <a href="projects.html#" class="btn btn-ghost-default  btn-small"><i class="fa fa-folder"></i> Detail </a>
-                                
-                            </td>
-							
-						</tr>
-						<tr class='project-termination'>
-							<td class="project-status">
-	                            <span class="label label-default">termination</span>
-	                        </td>
-	                        <td>
-	                        	<span>281975</span>
-	                        </td>
-							<td class="project-title">
-	                            <a href="project_detail.html">What are the two major elements in GHS?</a>
-	                        </td>
-	                        <td class='project-budget'>
-	                        	21,121$
-	                        </td>
-							<td class="project-completion">
-	                            <small>0%</small>
-	                            <div class="progress progress-mini">
-	                                <div style="width:0" class="progress-bar"></div>
-	                            </div>
-	                        </td>
-							<td class="project-time">
-	                           <small>2014.08.15</small>
-	                        </td>
-
-							<td class="project-actions">
-	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
-	                        </td>
-						</tr>
-						<tr class='project-cancel'>
-							<td class="project-status">
-                                <span class="label label-default">Canceled</span>
-                            </td>
-                            <td>
-	                        	<span>281975</span>
-	                        </td>
-							<td class="project-title">
-	                            <a href="project_detail.html">What are some key terms in the GHS Vocabulary?</a>
-                            </td>
-                            <td class='project-budget project-bids-cancel'>
-	                        	12,111$
-	                        </td>
-							<td class="project-completion">
-                                <small>0</small>
-                                <div class="progress progress-mini">
-                                    <div style="width: 0" class="progress-bar"></div>
-                                </div>
-                            </td>
-							<td class="project-time">
-                               <small>2014.08.15</small>
-                            </td>
-
-							<td class="project-actions">
-                                <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
-                               
-                            </td>
-							
-						</tr>
-					</tbody>
-				</table>	
-
-				<!-- 发布的任务列表 -->
-				<table class='project-list-table project-list-published'>
-					<thead>
-						<tr>
-							<th>	
-								<a href="javascript:;" title="hits are ordered">state</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">number</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">title</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">bids</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">progress</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">creation time</a>
-							</th>
-							<th>
-								<a href="javascript:;" title="hits are ordered">actions</a>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-					   <tr>
-							<td class="project-status">
-	                            <span class="label label-warning">Invitation</span>
-	                        </td>
-	                        <td>
-	                        	<span>281975</span>
-	                        </td>
-							<td class="project-title">
-	                            <a href="project_detail.html">Globally Harmonized System (GHS)</a>
-	                        </td>
-	                        <td class='project-bids'>
-	                        	82
-	                        </td>
-							<td class="project-completion">
-	                            <small>0</small>
-	                            <div class="progress progress-mini">
-	                                <div style="width: 0%;" class="progress-bar"></div>
-	                            </div>
-	                        </td>
-							<td class="project-time">
-	                           <small>2014.08.15</small>
-	                        </td>
-
-							<td class="project-actions">
-	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
-	                           
-	                        </td>
-						</tr>
-						<tr>
-							<td class="project-status">
-                                <span class="label label-success">Progress</span>
-                            </td>
-                            <td>
-	                        	<span>281975</span>
-	                        </td>
-							<td class="project-title">
-	                            <a href="project_detail.html">Why is global harmonization necessary?</a>
-                            </td>
-                            <td class='project-bids'>
-	                        	82
-	                        </td>
-							<td class="project-completion">
-                                <small>48%</small>
-                                <div class="progress progress-mini">
-                                    <div style="width: 48%;" class="progress-bar"></div>
-                                </div>
-                            </td>
-							<td class="project-time">
-                               <small>2014.08.15</small>
-                            </td>
-
-							<td class="project-actions">
-                                <a href="projects.html#" class="btn btn-ghost-default  btn-small"><i class="fa fa-folder"></i> Detail </a>
-                                
-                            </td>
-							
-						</tr>
-						<tr>
-							<td class="project-status">
-	                            <span class="label label-primary">Finished</span>
-	                        </td>
-	                        <td>
-	                        	<span>281975</span>
-	                        </td>
-							<td class="project-title">
-	                            <a href="project_detail.html">What are the two major elements in GHS?</a>
-	                        </td>
-	                        <td class='project-bids'>
-	                        	82
-	                        </td>
-							<td class="project-completion">
-	                            <small>100%</small>
-	                            <div class="progress progress-mini">
-	                                <div style="width:100%;" class="progress-bar"></div>
-	                            </div>
-	                        </td>
-							<td class="project-time">
-	                           <small>2014.08.15</small>
-	                        </td>
-
-							<td class="project-actions">
-	                            <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
-	                        </td>
-						</tr>
-						<tr class='project-cancel'>
-							<td class="project-status">
-                                <span class="label label-default">Canceled</span>
-                            </td>
-                            <td>
-	                        	<span>281975</span>
-	                        </td>
-							<td class="project-title">
-	                            <a href="project_detail.html">What are some key terms in the GHS Vocabulary?</a>
-                            </td>
-                            <td class='project-bids project-bids-cancel'>
-	                        	0
-	                        </td>
-							<td class="project-completion">
-                                <small>0</small>
-                                <div class="progress progress-mini">
-                                    <div style="width: 0" class="progress-bar"></div>
-                                </div>
-                            </td>
-							<td class="project-time">
-                               <small>2014.08.15</small>
-                            </td>
-
-							<td class="project-actions">
-                                <a href="projects.html#" class="btn btn-ghost-default btn-small"><i class="fa fa-folder"></i> Detail </a>
-                               
-                            </td>
-							
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
 					</tbody>
 				</table>
-			</div>
-		    
+			</section>
+
+			<!-- 主要内容 -->
+			<section class='section'>
+
+				<!-- 雇主身份 -->
+				<div class='employer-view' style='display: none'>
+						<!-- Nav tabs -->
+					  <ul class="nav nav-tabs" role="tablist">
+						    <li role="presentation" class="active">
+						    	<a href="#open-for-bidding" data-toggle="tab">Open for Bidding</a>
+		                	</li>
+						    <li role="presentation">
+						   	 	<a href="#work-in-progress" data-toggle="tab">Work in Progress</a>
+						    </li>
+						    <li role="presentation">
+					   		 	<a href="#past-project" data-toggle="tab">Past Project</a>
+		                    </li>
+						    <li role="presentation">
+						    	<a href="#open-question" data-toggle="tab">Open Question</a>
+			                 </li>
+			                  <li role="presentation">
+			                  	<a href="#past-question" data-toggle="tab">Past Question</a>
+			                 </li>
+					  </ul>
+					  <div class="row pt-30">
+					  		<div class="col-md-9">
+				  				<div class="form-group">
+				  					<div class="input-group">
+				  						<input type="text" name="" value="" placeholder="" class='form-control'>
+				  						<div  style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+				  							<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'>search</button>
+				  						</div>
+
+				  					</div>
+				  						
+			  							<!-- <button type="" class='btn btn-primary' style='width: auto;'>search</button> -->
+				  				</div>
+					  		</div>
+					  		<div class="col-md-3">
+					  			<div class="form-group">
+				  					<div class="input-group">
+				  						<select class='form-control'>
+								  				<option value="5"> 显示5</option>
+								  				<option value="10"> 显示10</option>
+								  				<option value="15"> 显示15</option>
+								  				<option value="20"> 显示20</option>
+								  				<option value="100"> 显示100</option>
+						  				</select>
+				  						<div style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+				  							<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'><i class="fa fa-refresh"></i></button>
+				  						</div>
+				  					</div>
+				  				</div>
+					  		</div>
+					  </div>
+					  <!-- Tab panes -->
+					  <div class="tab-content">
+						    <div role="tabpanel" class="tab-pane active" id="open-for-bidding">
+						    	<table class="table">
+						    		<thead>
+						    			<tr>
+						    				<th>名称</th>
+						    				<th>竞标</th>
+						    				<th>平均报价</th>
+						    				<th>竞标结束日期</th>
+						    				<th>动作</th>
+						    			</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td class="CreateProject-container text-center" colspan="5">
+										        <a href="/post-project" class="CreateProject">
+										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
+										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+										        </a>
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="work-in-progress">
+						    	<table class="table">
+						    		<thead>
+						    			<tr>
+						    				<th>项目名称</th>
+						    				<th>自由职业者</th>
+						    				<th>被悬赏的竞标</th>
+						    				<th>最后期限</th>
+						    				<th>动作</th>
+						    			</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td class="CreateProject-container text-center" colspan="5">
+										        <a href="/post-project" class="CreateProject">
+										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
+										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+										        </a>
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="past-project">
+						    	<table class="table">
+						    		<thead>
+						    			<tr>
+						    				<th>项目名称</th>
+						    				<th>竞标</th>
+						    				<th>自由职业者</th>
+						    				<th>被悬赏的竞标</th>
+						    				<th>时间</th>
+						    				<th>状态</th>
+						    				<th>动作</th>
+						    			</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td class="CreateProject-container text-center" colspan="6">
+										        <a href="/post-project" class="CreateProject">
+										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
+										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+										        </a>
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="open-question">
+						    	<table class="table">
+						    		<thead>
+							    		<tr>
+							    			<th>竞赛名称</th>
+							    			<th>作品</th>
+							    			<th>奖金</th>
+							    			<th>消息</th>
+							    			<th>竞赛结束日期</th>
+							    			<th>动作</th>
+							    		</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td class="CreateProject-container text-center" colspan="6">
+										        <a href="/post-project" class="CreateProject">
+										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
+										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+										        </a>
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="past-question">
+						    	<table class="table">
+						    		<thead>
+							    		<tr>
+							    			<th>竞赛名称</th>
+							    			<th>作品</th>
+							    			<th>奖金</th>
+							    			<th>消息</th>
+							    			<th>竞赛结束日期</th>
+							    			<th>动作</th>
+							    		</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td class="CreateProject-container text-center" colspan="6">
+										        <a href="" class="CreateProject">
+										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
+										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+										        </a>
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+					  </div>
+				</div>
+
+				<!-- 威客身份 -->
+				<div class="provider-view">
+						<!-- Nav tabs -->
+					  <ul class="nav nav-tabs" role="tablist">
+						    <li role="presentation" class="active">
+						    	<a href="#active-bids" data-toggle="tab">Active Bids</a>
+		                	</li>
+						    <li role="presentation">
+						   	 	<a href="#current-work" data-toggle="tab">Current Work</a>
+						    </li>
+						    <li role="presentation">
+					   		 	<a href="#past-work" data-toggle="tab">Past Work</a>
+		                    </li>
+						    <li role="presentation">
+						    	<a href="#active-question" data-toggle="tab">Active Question</a>
+			                 </li>
+			                  <li role="presentation">
+			                  	<a href="#past-question" data-toggle="tab">Past Question</a>
+			                 </li>
+					  </ul>
+					  <div class="row pt-30">
+					  		<div class="col-md-9">
+				  				<div class="form-group">
+				  					<div class="input-group">
+				  						<input type="text" name="" value="" placeholder="" class='form-control'>
+				  						<div  style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+				  							<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'>search</button>
+				  						</div>
+
+				  					</div>
+				  						
+			  							<!-- <button type="" class='btn btn-primary' style='width: auto;'>search</button> -->
+				  				</div>
+					  		</div>
+					  		<div class="col-md-3">
+					  			<div class="form-group">
+				  					<div class="input-group">
+				  						<select class='form-control'>
+								  				<option value="5"> 显示5</option>
+								  				<option value="10"> 显示10</option>
+								  				<option value="15"> 显示15</option>
+								  				<option value="20"> 显示20</option>
+								  				<option value="100"> 显示100</option>
+						  				</select>
+				  						<div style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+				  							<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'><i class="fa fa-refresh"></i></button>
+				  						</div>
+				  					</div>
+				  				</div>
+					  		</div>
+					  </div>
+					  <!-- Tab panes -->
+					  <div class="tab-content">
+						    <div role="tabpanel" class="tab-pane active" id="active-bids">
+						    	<table class="table">
+						    		<thead>
+						    			<tr>
+						    				<th>项目名称</th>
+						    				<th>竞标</th>
+						    				<th>我的竞标</th>
+						    				<th>平均报价</th>
+						    				<th>竞标结束日期</th>
+						    				<th>动作</th>
+						    			</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td colspan="6">
+										        没有找到项目
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="current-work">
+						    	<table class="table">
+						    		<thead>
+						    			<tr>
+						    				<th>项目名称</th>
+						    				<th>雇主</th>
+						    				<th>被悬赏的竞标</th>
+						    				<th>最后期限</th>
+						    				<th>动作</th>
+						    			</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td colspan="5">
+										       没有找到项目 
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="past-work">
+						    	<table class="table">
+						    		<thead>
+						    			<tr>
+						    				<th>项目名称</th>
+						    				<th>竞标</th>
+						    				<th>雇主</th>
+						    				<th>被悬赏的竞标</th>
+						    				<th>时间</th>
+						    				<th>结果</th>
+						    			</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td colspan="6">
+										       没有找到项目
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="active-question">
+						    	<table class="table">
+						    		<thead>
+							    		<tr>
+							    			<th>问题名称</th>
+							    			<th>提问者</th>
+							    			<th>我的回答</th>
+							    			<th>奖金</th>
+							    			<th>消息</th>
+							    			<th>问题结束日期</th>
+							    			<th>动作</th>
+							    		</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td colspan="7">
+										        没有找到问题
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="past-question">
+						    	<table class="table">
+						    		<thead>
+							    		<tr>
+							    			<th>问题名称</th>
+							    			<th>提问者</th>
+							    			<th>我的回答</th>
+							    			<th>奖金</th>
+							    			<th>消息</th>
+							    			<th>问题结束日期</th>
+							    			<th>动作</th>
+							    		</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td colspan="7">
+										        没有找到问题
+					    					</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+					  </div>
+				</div>
+			</section>
 		</div>
-		
 	</div>
-</div>
 	
 </section>
 

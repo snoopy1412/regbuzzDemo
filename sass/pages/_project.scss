@@ -1,7 +1,44 @@
-.project-list-warp{
-	padding: 30px;
-	background-color: #fff;
+
+
+// list
+
+.proList-header{
+    position: relative;
+    .regbuzzToggle{
+        position: absolute;
+        right: 0;
+        top: -8px;
+        display: inline-block;
+        margin: 10px 0 0;
+        border: 1px solid #BEC0C2;
+        border-radius: 30px;
+        input[type=radio]{
+            visibility: hidden;
+            position: absolute;
+            padding: 0;
+            vertical-align: bottom;
+            margin: 2px;
+            top: 30px;
+            &:checked+label{
+                color: #F7F7F7;
+                background-color: #2b3340;
+                border-radius: 40px;
+                margin: 2px;
+            }
+        }
+        label{
+            display: inline-block;
+            border: none;
+            padding: 6px 26px;
+            background: 0 0;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        // input[type=radio]:checked+label
+    }
 }
+
+// detail
 .project-detail-title
 {
     font-size: 20px;

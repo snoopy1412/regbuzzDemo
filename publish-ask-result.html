@@ -315,19 +315,19 @@
 			<div class='container'>
 				<ul class='nav navbar-nav clearfix'>
 					<li>
-						<a href="" title="" class='active'>Home</a>
+						<a href="" title="" class='active'>Dashboard</a>
 					</li>
 					<li>
-						<a href="" title="">Needs</a>
+						<a href="" title="">My Projects</a>
 					</li>
 					<li>
-						<a href="" title="">Providers</a>
+						<a href="" title="">Discovery</a>
 					</li>
 					<li>
 						<a href="" title="">Connections</a>
 					</li>
 					<li>
-						<a href="" title="">Article</a>
+						<a href="" title="">Articles</a>
 					</li>
 				</ul>
 			</div>
@@ -420,7 +420,30 @@
 		        </div>
 			</div>
 			<div class="panel-footer text-right">
-				<a href='publish-ask-proposal.html' class='btn btn-primary btn-block'>立即回答</a>
+				<button type="button" class='btn btn-primary btn-block' data-toggle="collapse" href="#collapseExample">立即回答</button>	
+				<div class="collapse" id="collapseExample">
+					<form class="form-horizontal section">
+					<!-- Cover Letter -->
+						<div class="form-group">
+							<label for="cover-letter" class='col-md-3'>Answer the Question</label>
+							<div class="col-md-9">
+								<textarea name="" class='form-control' id='cover-letter' rows='5'></textarea>
+							</div>			
+						</div>		
+						<!-- 附件 -->
+						<div class='form-group'>
+							<label for="document" class='col-md-3'>Attach a document</label>
+							<div class="col-md-9">
+								<input type="file" id='document'>
+							</div>
+						</div>
+						<!--  -->
+						<div class='col-md-offset-3'>
+							<button type="button" class="btn btn-primary">Submit</button>
+							<button type="button" class="btn btn-secondary">Save</button>
+						</div>	
+					</form>
+				</div>
 			</div>
 		</div>
 

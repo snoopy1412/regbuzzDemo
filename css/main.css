@@ -6144,16 +6144,6 @@ button.close {
 * 源于 http://www.cnblogs.com/huangxi/archive/2015/11/01/4928823.html
 * 
  */
-.m-project-list ul {
-  padding-left: 0; }
-  .m-project-list ul li {
-    list-style: none; }
-
-.m-project-list ul {
-  padding-left: 0; }
-  .m-project-list ul li {
-    list-style: none; }
-
 .container-fluid--4 {
   margin-right: auto;
   margin-left: auto; }
@@ -9275,9 +9265,35 @@ ul {
       .authentication--provider .icon.is-verified i {
         color: #2185d0; }
 
-.project-list-warp {
-  padding: 30px;
-  background-color: #fff; }
+.proList-header {
+  position: relative; }
+  .proList-header .regbuzzToggle {
+    position: absolute;
+    right: 0;
+    top: -8px;
+    display: inline-block;
+    margin: 10px 0 0;
+    border: 1px solid #BEC0C2;
+    border-radius: 30px; }
+    .proList-header .regbuzzToggle input[type=radio] {
+      visibility: hidden;
+      position: absolute;
+      padding: 0;
+      vertical-align: bottom;
+      margin: 2px;
+      top: 30px; }
+      .proList-header .regbuzzToggle input[type=radio]:checked + label {
+        color: #F7F7F7;
+        background-color: #2b3340;
+        border-radius: 40px;
+        margin: 2px; }
+    .proList-header .regbuzzToggle label {
+      display: inline-block;
+      border: none;
+      padding: 6px 26px;
+      background: 0 0;
+      cursor: pointer;
+      margin-bottom: 0; }
 
 .project-detail-title {
   font-size: 20px;
@@ -10468,44 +10484,6 @@ ul {
 .js-modal-content {
   width: 500px;
   padding: 10px 20px; }
-
-.m-project-list {
-  background-color: #fff; }
-  .m-project-list .project-list-content {
-    padding-top: 20px; }
-  .m-project-list .project-list-content-header {
-    padding-top: 20px; }
-    .m-project-list .project-list-content-header .project-refresh, .m-project-list .project-list-content-header .project-search {
-      margin-bottom: 10px; }
-  .m-project-list .project-list {
-    padding-top: 10px; }
-    .m-project-list .project-list .project-list-table {
-      text-align: center;
-      width: 100%; }
-      .m-project-list .project-list .project-list-table th {
-        font-size: 16px;
-        font-size: 1.6rem;
-        background-color: #f8f8f8;
-        padding: 15px 10px; }
-        .m-project-list .project-list .project-list-table th a {
-          color: #555; }
-          .m-project-list .project-list .project-list-table th a:hover {
-            text-decoration: none; }
-    .m-project-list .project-list tr:hover {
-      background-color: #fbfbfb; }
-    .m-project-list .project-list td {
-      border-top: none;
-      border-bottom: 1px solid #E7EAEC;
-      padding: 15px 10px;
-      vertical-align: middle; }
-    .m-project-list .project-list .project-title a {
-      color: #444; }
-      .m-project-list .project-list .project-title a:hover {
-        text-decoration: none; }
-    .m-project-list .project-list .project-cancel .project-title, .m-project-list .project-list .project-termination .project-title {
-      text-decoration: line-through; }
-  .m-project-list .project-list-accepted .project-title {
-    text-align: left; }
 
 .m-oFormHelp {
   display: none;
