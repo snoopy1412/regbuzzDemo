@@ -57,6 +57,19 @@
     }
 }
 
+.pub-language-list{
+
+    background-color: #fff;
+
+    @include clearfix;
+    li{
+        float: left;
+        padding:5px 10px;
+       width: 100px;
+
+    }
+}
+
 // customize
 .pub-customize
 {

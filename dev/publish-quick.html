@@ -134,6 +134,22 @@
 
 										</div>
 									</div>
+
+									<!-- Estimated Duration -->
+									<div class="form-group">
+										<label for="estimated" class='col-md-3'>Estimated Duration</label>
+										<div class="col-md-9">
+											<select class="form-control form-control-all" id='estimated'>
+											    <option value="" label="Please select...">Please select...</option>
+											    <option value="1" label="More than 6 months">More than 6 months</option>
+											    <option value="2" label="3 to 6 months">3 to 6 months</option>
+											    <option value="3" label="1 to 3 months">1 to 3 months</option>
+											    <option value="4" label="Less than 1 month">Less than 1 month</option>
+											    <option value="5" label="Less than 1 week">Less than 1 week</option>
+											    <option value="4" label="I don't know yet">I'm not sure</option>
+											</select>
+										</div>
+									</div>	
 									
 									<!-- 附件 -->
 									<div class='form-group'>
@@ -158,22 +174,186 @@
 										</select>
 										</div>
 									</div>
-									
-									<!-- Estimated Duration -->
+
+									<!-- language -->
 									<div class="form-group">
-										<label for="estimated" class='col-md-3'>Estimated Duration</label>
+										<label for="marketplace" class='col-md-3'>Special Language Requirement</label>
 										<div class="col-md-9">
-											<select class="form-control form-control-all" id='estimated'>
-											    <option value="" label="Please select...">Please select...</option>
-											    <option value="1" label="More than 6 months">More than 6 months</option>
-											    <option value="2" label="3 to 6 months">3 to 6 months</option>
-											    <option value="3" label="1 to 3 months">1 to 3 months</option>
-											    <option value="4" label="Less than 1 month">Less than 1 month</option>
-											    <option value="5" label="Less than 1 week">Less than 1 week</option>
-											    <option value="4" label="I don't know yet">I'm not sure</option>
-											</select>
+											
+											<button type="button" class='btn btn-link' data-toggle="modal" data-target="#pub-add-language">+Add Language</button>
+											<!-- Modal -->
+											<div class="modal fade" id="pub-add-language">
+											  <div class="modal-dialog" role="document">
+											    <div class="modal-content">
+											     <div class="modal-header">
+											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											        <h4 class="modal-title" id="myModalLabel">Select your langauge</h4>
+											      </div>
+											      <div class="modal-body">
+											        <ul class='pub-language-list'>     
+														<li>
+												        	<label class="c-input c-checkbox" for='zh-cn'>
+															  <input type="checkbox" id='zh-cn'>
+															  <span class="c-indicator"></span>
+															 Chinese
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='spanish'>
+															  <input type="checkbox" id='spanish'>
+															  <span class="c-indicator"></span>
+															  Spanish
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='hindi'>
+															  <input type="checkbox" id='hindi'>
+															  <span class="c-indicator"></span>
+															  Hindi
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Russian'>
+															  <input type="checkbox" id='Russian'>
+															  <span class="c-indicator"></span>
+															  Russian
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Arabic'>
+															  <input type="checkbox" id='Arabic'>
+															  <span class="c-indicator"></span>
+															  Arabic
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Portuguese'>
+															  <input type="checkbox" id='Portuguese'>
+															  <span class="c-indicator"></span>
+															  Portuguese
+															</label>
+														</li>
+
+														<li>
+												        	<label class="c-input c-checkbox" for='Malay'>
+															  <input type="checkbox" id='Malay'>
+															  <span class="c-indicator"></span>
+															  Malay
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Bengali'>
+															  <input type="checkbox" id='Bengali'>
+															  <span class="c-indicator"></span>
+															 Bengali
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='French'>
+															  <input type="checkbox" id='French'>
+															  <span class="c-indicator"></span>
+															  French
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='German'>
+															  <input type="checkbox" id='German'>
+															  <span class="c-indicator"></span>
+															  German
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Japanese'>
+															  <input type="checkbox" id='Japanese'>
+															  <span class="c-indicator"></span>
+															  Japanese
+															</label>
+														</li>
+
+														<li>
+												        	<label class="c-input c-checkbox" for='Korean'>
+															  <input type="checkbox" id='Korean'>
+															  <span class="c-indicator"></span>
+															  Korean
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Turkish'>
+															  <input type="checkbox" id='Turkish'>
+															  <span class="c-indicator"></span>
+															  Turkish
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Italian'>
+															  <input type="checkbox" id='Italian'>
+															  <span class="c-indicator"></span>
+															  Italian
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Vietnamese'>
+															  <input type="checkbox" id='Vietnamese'>
+															  <span class="c-indicator"></span>
+															  Vietnamese
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Javanese'>
+															  <input type="checkbox" id='Javanese'>
+															  <span class="c-indicator"></span>
+															  Javanese
+															</label>
+														</li>
+
+														<li >
+												        	<label class="c-input c-checkbox" for='Thai'>
+															  <input type="checkbox" id='Thai'>
+															  <span class="c-indicator"></span>
+															  Thai
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Polish'>
+															  <input type="checkbox" id='Polish'>
+															  <span class="c-indicator"></span>
+															  Polish
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Persian'>
+															  <input type="checkbox" id='Persian'>
+															  <span class="c-indicator"></span>
+															  Persian
+															</label>
+														</li>
+														<li>
+												        	<label class="c-input c-checkbox" for='Burmese'>
+															  <input type="checkbox" id='Burmese'>
+															  <span class="c-indicator"></span>
+															  Burmese
+															</label>
+														</li>
+													</ul>
+
+													<div class="divider divider-horizontal">or</div>
+
+													
+														<input type="text" name="" value="" placeholder="自定义输入" class='form-control'>
+													
+											      </div>
+											      <div class="modal-footer">
+											      	<button type="button" class="btn btn-primary">Save</button>
+											        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+											      </div>
+											    </div>
+											  </div>
+											</div>
+											
 										</div>
-									</div>	
+									</div>
+									
+									
 
 									<!-- skill -->
 									<!-- <div class="form-group">

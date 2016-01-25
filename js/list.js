@@ -1,4 +1,4 @@
-define(['raty'], function(icheck, raty) {
+define(['raty','jRange'], function(raty,jRange) {
 
   // 星星评级  
   $('.grade-item').each(function() {
@@ -14,4 +14,21 @@ define(['raty'], function(icheck, raty) {
       targetKeep: true
     });
   });
+
+
+  // 范围
+  $('.slider-input').jRange({
+    from: 0,
+    to: 100,
+    step: 1,
+    scale: [0,25,50,75,100],
+    format: '%s',
+    width: 200,
+    showLabels: true,
+    isRange : true,
+    ondragend : function(){
+      $('.budget-min').html($('.back-bar .low').eq(1).html());
+      $('.budget-max').html($('.back-bar .high').eq(1).html());
+    }
+});
 });

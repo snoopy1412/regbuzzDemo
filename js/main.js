@@ -2,9 +2,9 @@ require.config({
   paths: {
     jquery: './vendor/jquery-1.11.2.min',
     velocity: './vendor/velocity.min',
+    jRange:'../plugins/jRange/jquery.range-min',
     validate: './vendor/jquery.validate.min',
     raty: './vendor/jquery.raty.min',
-    // icheck: '../plugins/icheck/icheck.min',
     layer: '../plugins/layer/layer',
     popover: './components/popover',
     edit: './components/edit',
@@ -18,9 +18,9 @@ require.config({
     "velocity": {
       deps: ["jquery"]
     },
-    // "icheck": {
-    //   deps: ["jquery"]
-    // },
+    "jRange": {
+      deps: ["jquery"]
+    },
     "raty": {
       deps: ["jquery"]
     },

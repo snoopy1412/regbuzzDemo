@@ -6,67 +6,7 @@
 .list-search{
     padding: 0px 0 20px 0;
 }
-.list-search-text-warp{
-        padding:0 10px;
-        margin-bottom: 10px;
-        width: 90%;
-        position: relative;
-        .fa-search{
-            position: absolute;
-            left: 20px;
-            top:12px;
-            color:#909090;
-        }
-    }
-.list-search-text{
-    padding-left:30px;
-}
-    .list-search-btn-warp{
-        padding-right:10px;
-        margin-bottom: 10px;
-        width: 10%;
 
-     .list-search-btn{
-            width: 100%;
-        }
-    }
-    @media (max-width: 768px){
-        .list-search-text-warp{
-            clear:both;
-            width: 100%;
-        }
-        .list-search-btn-warp{
-            clear:both;
-            padding-left: 10px;
-            .list-search-btn{
-                width: auto;
-            }
-        }
-    }   
-  @media (min-width: $screen-sm-min) {
-    .list-search-text-warp{
-        width: 85%;
-    }
-    .list-search-btn-warp{
-        width: 15%;
-        .list-search-btn{
-            width: 100%;
-        }
-    }
-  }
-    @media (min-width: $screen-md-min){
-    .list-search-text-warp{
-        width: 90%;
-    }
-    .list-search-btn-warp{
-        width: 10%;
-        .list-search-btn{
-            width: 100%;
-        }
-    }
-  }
-
-// list-search
 
 // aside
 .list-aside-item{

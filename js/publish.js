@@ -94,4 +94,5 @@ define(['jquery', 'popover','raty'],function($,popover,raty) {
     content: $('.js-modal-author'),
     dir:'down'
   });
+
 });

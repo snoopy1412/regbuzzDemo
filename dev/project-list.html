@@ -13,7 +13,7 @@
 			<h1>项目和竞赛</h1>
 			<div class="regbuzzToggle">
 		        <input id="employerView_option" type="radio" value="employer" name="usertype_option" checked="checked">
-		        <label for="employerView_option">
+		        <label for="employerView_option"> 
 		            Employer
 		        </label>
 		        <input id="providerView_option" type="radio" value="provider" name="usertype_option">
@@ -23,210 +23,213 @@
 		    </div>
 		</header>
 		<div class="proList-content">
-
 			
-
-			<!-- 主要内容 -->
-			<section class='section'>
-
-				<!-- 雇主身份 -->
-				<div class='employer-view' >
-				<!--草稿  -->
+			<!-- 主要内容  雇主视角-->
+			<section class='section section--employer-view' style='display: none'>
+				<div class='employer-view'>
+					
+					<!--草稿  -->
 					<section class='setion'>
 						<table class="table table-bordered">
 							<thead>
-								<tr class='active'>
-									<th>草稿</th>
-									<th>项目类型</th>
-									<th>操作</th>
-								</tr>
+							<tr class='active'>
+								<th>草稿</th>
+								<th>项目类型</th>
+								<th>操作</th>
+							</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td colspan='3'>
-										没有草稿
-									</td>
-									
+								<td colspan='3'>
+								没有草稿
+								</td>
 								</tr>
 							</tbody>
 						</table>
 					</section>
-						<!-- Nav tabs -->
-					  <ul class="nav nav-tabs" role="tablist">
-						    <li role="presentation" class="active">
-						    	<a href="#open-for-bidding" data-toggle="tab">Open for Bidding</a>
-		                	</li>
-						    <li role="presentation">
-						   	 	<a href="#work-in-progress" data-toggle="tab">Work in Progress</a>
-						    </li>
-						    <li role="presentation">
-					   		 	<a href="#past-project" data-toggle="tab">Past Project</a>
-		                    </li>
-						    <li role="presentation">
-						    	<a href="#open-question" data-toggle="tab">Open Question</a>
-			                 </li>
-			                  <li role="presentation">
-			                  	<a href="#past-question" data-toggle="tab">Past Question</a>
-			                 </li>
-					  </ul>
-					  <div class="row pt-30">
-					  		<div class="col-md-9">
-				  				<div class="form-group">
-				  					<div class="input-group">
-				  						<input type="text" name="" value="" placeholder="" class='form-control'>
-				  						<div  style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
-				  							<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'>search</button>
-				  						</div>
 
-				  					</div>
-				  						
-			  							<!-- <button type="" class='btn btn-primary' style='width: auto;'>search</button> -->
-				  				</div>
-					  		</div>
-					  		<div class="col-md-3">
-					  			<div class="form-group">
-				  					<div class="input-group">
-				  						<select class='form-control'>
-								  				<option value="5"> 显示5</option>
-								  				<option value="10"> 显示10</option>
-								  				<option value="15"> 显示15</option>
-								  				<option value="20"> 显示20</option>
-								  				<option value="100"> 显示100</option>
-						  				</select>
-				  						<div style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
-				  							<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'><i class="fa fa-refresh"></i></button>
-				  						</div>
-				  					</div>
-				  				</div>
-					  		</div>
-					  </div>
-					  <!-- Tab panes -->
-					  <div class="tab-content">
-						    <div role="tabpanel" class="tab-pane active" id="open-for-bidding">
-						    	<table  class="table table-bordered">
-						    		<thead>
-						    			<tr class='active'>
-						    				<th>名称</th>
-						    				<th>竞标</th>
-						    				<th>平均报价</th>
-						    				<th>竞标结束日期</th>
-						    				<th>动作</th>
-						    			</tr>
-						    		</thead>
-						    		<tbody>
-						    			<tr>
-						    				<td class="CreateProject-container text-center" colspan="5">
-										        <a href="/post-project" class="CreateProject">
-										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
-										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
-										        </a>
-					    					</td>
-						    			</tr>
-						    		</tbody>
-						    	</table>
-						    </div>
-						    <div role="tabpanel" class="tab-pane" id="work-in-progress">
-						    	<table class="table table-bordered">
-						    		<thead>
-						    			<tr class='active'>
-						    				<th>项目名称</th>
-						    				<th>自由职业者</th>
-						    				<th>被悬赏的竞标</th>
-						    				<th>最后期限</th>
-						    				<th>动作</th>
-						    			</tr>
-						    		</thead>
-						    		<tbody>
-						    			<tr>
-						    				<td class="CreateProject-container text-center" colspan="5">
-										        <a href="/post-project" class="CreateProject">
-										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
-										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
-										        </a>
-					    					</td>
-						    			</tr>
-						    		</tbody>
-						    	</table>
-						    </div>
-						    <div role="tabpanel" class="tab-pane" id="past-project">
-						    	<table  class="table table-bordered">
-						    		<thead>
-						    			<tr class='active'>
-						    				<th>项目名称</th>
-						    				<th>竞标</th>
-						    				<th>自由职业者</th>
-						    				<th>被悬赏的竞标</th>
-						    				<th>时间</th>
-						    				<th>状态</th>
-						    				<th>动作</th>
-						    			</tr>
-						    		</thead>
-						    		<tbody>
-						    			<tr>
-						    				<td class="CreateProject-container text-center" colspan="6">
-										        <a href="/post-project" class="CreateProject">
-										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
-										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
-										        </a>
-					    					</td>
-						    			</tr>
-						    		</tbody>
-						    	</table>
-						    </div>
-						    <div role="tabpanel" class="tab-pane" id="open-question">
-						    	<table class="table table-bordered">
-						    		<thead>
-							    		<tr class='active'>
-							    			<th>竞赛名称</th>
-							    			<th>作品</th>
-							    			<th>奖金</th>
-							    			<th>消息</th>
-							    			<th>竞赛结束日期</th>
-							    			<th>动作</th>
-							    		</tr>
-						    		</thead>
-						    		<tbody>
-						    			<tr>
-						    				<td class="CreateProject-container text-center" colspan="6">
-										        <a href="/post-project" class="CreateProject">
-										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
-										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
-										        </a>
-					    					</td>
-						    			</tr>
-						    		</tbody>
-						    	</table>
-						    </div>
-						    <div role="tabpanel" class="tab-pane" id="past-question">
-						    	<table class="table table-bordered">
-						    		<thead>
-							    		<tr class='active'>
-							    			<th>竞赛名称</th>
-							    			<th>作品</th>
-							    			<th>奖金</th>
-							    			<th>消息</th>
-							    			<th>竞赛结束日期</th>
-							    			<th>动作</th>
-							    		</tr>
-						    		</thead>
-						    		<tbody>
-						    			<tr>
-						    				<td class="CreateProject-container text-center" colspan="6">
-										        <a href="" class="CreateProject">
-										            <h4 class="CreateProject-heading">创建一个新的项目</h4>
-										            <p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
-										        </a>
-					    					</td>
-						    			</tr>
-						    		</tbody>
-						    	</table>
-						    </div>
-					  </div>
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						<li role="presentation" class="active">
+							<a href="#open-for-bidding" data-toggle="tab">Open for Bidding</a>
+						</li>
+						<li role="presentation">
+							<a href="#work-in-progress" data-toggle="tab">Work in Progress</a>
+						</li>
+						<li role="presentation">
+							<a href="#past-project" data-toggle="tab">Past Project</a>
+						</li>
+						<li role="presentation">
+							<a href="#open-question" data-toggle="tab">Open Question</a>
+						</li>
+						<li role="presentation">
+							<a href="#past-question" data-toggle="tab">Past Question</a>
+						</li>
+					</ul>
+
+					<!-- 搜索 -->
+					<div class="row pt-30">
+						<div class="col-md-9">
+							<div class="form-group">
+								<div class="input-group">
+									<input type="text" name="" value="" placeholder="" class='form-control'>
+									<div  style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+										<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'>search</button>
+									</div>
+
+								</div>
+
+							<!-- <button type="" class='btn btn-primary' style='width: auto;'>search</button> -->
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<div class="input-group">
+									<select class='form-control'>
+										<option value="5"> 显示5</option>
+										<option value="10"> 显示10</option>
+										<option value="15"> 显示15</option>
+										<option value="20"> 显示20</option>
+										<option value="100"> 显示100</option>
+									</select>
+									<div style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+										<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'><i class="fa fa-refresh"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="open-for-bidding">
+							<table  class="table table-bordered">
+							<thead>
+								<tr class='active'>
+									<th>名称</th>
+									<th>竞标</th>
+									<th>平均报价</th>
+									<th>竞标结束日期</th>
+									<th>动作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="CreateProject-container text-center" colspan="5">
+										<a href="/post-project" class="CreateProject">
+										<h4 class="CreateProject-heading">创建一个新的项目</h4>
+										<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="tab-pane" id="work-in-progress">
+							<table class="table table-bordered">
+								<thead>
+									<tr class='active'>
+										<th>项目名称</th>
+										<th>自由职业者</th>
+										<th>被悬赏的竞标</th>
+										<th>最后期限</th>
+										<th>动作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="CreateProject-container text-center" colspan="5">
+											<a href="/post-project" class="CreateProject">
+											<h4 class="CreateProject-heading">创建一个新的项目</h4>
+											<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tab-pane" id="past-project">
+							<table  class="table table-bordered">
+								<thead>
+									<tr class='active'>
+									<th>项目名称</th>
+									<th>竞标</th>
+									<th>自由职业者</th>
+									<th>被悬赏的竞标</th>
+									<th>时间</th>
+									<th>状态</th>
+									<th>动作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="CreateProject-container text-center" colspan="6">
+										<a href="/post-project" class="CreateProject">
+											<h4 class="CreateProject-heading">创建一个新的项目</h4>
+											<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+										</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tab-pane" id="open-question">
+							<table class="table table-bordered">
+								<thead>
+									<tr class='active'>
+										<th>竞赛名称</th>
+										<th>作品</th>
+										<th>奖金</th>
+										<th>消息</th>
+										<th>竞赛结束日期</th>
+										<th>动作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="CreateProject-container text-center" colspan="6">
+											<a href="/post-project" class="CreateProject">
+											<h4 class="CreateProject-heading">创建一个新的项目</h4>
+											<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tab-pane" id="past-question">
+							<table class="table table-bordered">
+								<thead>
+									<tr class='active'>
+										<th>竞赛名称</th>
+										<th>作品</th>
+										<th>奖金</th>
+										<th>消息</th>
+										<th>竞赛结束日期</th>
+										<th>动作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="CreateProject-container text-center" colspan="6">
+											<a href="" class="CreateProject">
+												<h4 class="CreateProject-heading">创建一个新的项目</h4>
+												<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
+			</section>
 
+			<section class='section section--provider-view'>
+				
 				<!-- 威客身份 -->
-				<div class="provider-view" style='display: none'>
-						<!-- Nav tabs -->
+				<div class="provider-view">
+					  <!-- Nav tabs -->
 					  <ul class="nav nav-tabs" role="tablist">
 						    <li role="presentation" class="active">
 						    	<a href="#active-bids" data-toggle="tab">Active Bids</a>
@@ -244,6 +247,8 @@
 			                  	<a href="#past-question" data-toggle="tab">Past Question</a>
 			                 </li>
 					  </ul>
+
+					  <!-- 搜索 -->
 					  <div class="row pt-30">
 					  		<div class="col-md-9">
 				  				<div class="form-group">
@@ -275,7 +280,7 @@
 				  				</div>
 					  		</div>
 					  </div>
-					  <!-- Tab panes -->
+					  
 					  <div class="tab-content">
 						    <div role="tabpanel" class="tab-pane active" id="active-bids">
 						    	<table class="table table-bordered">
@@ -384,7 +389,7 @@
 						    	</table>
 						    </div>
 					  </div>
-				</div>
+				</div>				
 			</section>
 		</div>
 	</div>
