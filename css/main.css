@@ -7645,8 +7645,8 @@ ul {
   .header .header-utilities .header-utilities--helpCenter {
     width: 300px; }
     .header .header-utilities .header-utilities--helpCenter .fa {
-      width: 30px;
-      text-align: center; }
+      text-align: center;
+      width: 12px; }
     .header .header-utilities .header-utilities--helpCenter .header-utilities-list a {
       font-size: 1.2rem; }
   .header .header-utilities .header-utilities-box--user {
