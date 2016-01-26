@@ -62,10 +62,10 @@
     background-color: #fff;
 
     @include clearfix;
-    li{
+    &>li{
         float: left;
         padding:5px 10px;
-       width: 100px;
+       width: 140px;
 
     }
 }

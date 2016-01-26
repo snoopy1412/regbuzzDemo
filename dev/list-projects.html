@@ -1,0 +1,276 @@
+<!-- head.html -->
+<% include ../publicTpl/head.html %>
+<!-- head.html end-->
+<body>
+	<!-- <link rel="stylesheet" type="text/css" href="./plugins/jRange/jquery.range.css"> -->
+	<!-- header.html -->
+	<% include ../publicTpl/header.html %>
+	<!-- header.html end-->
+
+	<section class='com-main com-main--list'>
+		<div class='list-search-warp'>
+			<div class='container'>
+				<!-- 面包屑 -->
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Search</li>
+				</ol>
+			</div>		
+		</div>
+		
+		<div class="container" >	
+			<div class="row mt-10">
+
+				<!-- public-lis.html -->
+				<div class="col-md-3 com-aside">
+					<aside class='list-aside'>
+						<section class='list-aside-item list-aside-item-method'>
+							<div class="list-group list-aside-item-method-list">
+							  <a href="#" class="list-group-item">
+							   	<i class="fa fa-bars"></i><span>All</span>
+							  </a>
+							  <a href="#" class="list-group-item  active"><i class="fa fa-tasks"></i><span>Projects</span></a>
+							  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>Providers</span></a>
+							  <a href="#" class="list-group-item"><i class="fa fa-info-circle"></i><span>Questions</span></a>
+							  
+							</div>						
+						</section>
+
+						<!-- 分类 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Category</h4>
+								<select class='form-control'>
+									<option id="cn1-0" value="">All Categories</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 预算 -->
+						<div class="list-aside-item list-aside-item-fixed panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>Budget (fixed price)</h4>
+								<!-- <span class='price'>预算：$<span class='budget-min'>0</span>k - $<span class='budget-max'>100</span>k </span>
+								<div class='form-group' style='margin-bottom: 10px;margin-top:30px;'>
+									<input type="hidden" class="slider-input" value="23" />
+								</div> -->
+								<select id="project-budget" name="budget" class="form-control" style='width: 100%'><option value="192">微项目 ($80-240 USD)</option><option value="25">简单的项目 ($240-2000 USD)</option><option value="26">非常小的项目 ($2000-6000 USD)</option><option value="27">小项目 ($6000-12000 USD)</option><option value="28" selected="selected">中等项目 ($12000-24000 USD)</option><option value="29">大项目 ($24000-40000 USD)</option><option value="30">较大项目 ($40000-80000 USD)</option><option value="233">非常大的项目 ($80000-160000 USD)</option><option value="252">大项目 ($160000-400000 USD)</option><option value="271">主要的项目 ($ &gt;400000 USD)</option><option value="custom">自定义预算</option></select>
+							</div>
+						</div>
+
+						<!-- 语言 -->
+						<div class="list-aside-item list-aside-item-language panel panel-default"  id='vue-list-languages'>
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Language</h4>
+								<ul class='checkbox-list'>							        
+									<li class="checkbox" v-for='language in languages | limitBy 5'>
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+										  <input type="checkbox" id='{{language.abbr}}'>
+										  <span class="c-indicator"></span>
+										 {{language.local}}
+										</label>
+									</li>
+								</ul>
+								<button type="button" class='btn btn-link' data-toggle="collapse" href="#list-language-list" >More <i class="fa fa-angle-down"></i></button>
+								<ul id='list-language-list' class="collapse" >
+									<li class="checkbox" v-for='language in languages | | limitBy 19 5'>
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+										  <input type="checkbox" id='{{language.abbr}}'>
+										  <span class="c-indicator"></span>
+										 {{language.local}}
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 地点 -->
+						<div class="list-aside-item list-aside-item-location panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Location</h4>
+								<div class='form-group'>
+									<div class="input-group">
+										<input type="text" class='form-control'>
+										<span class='input-group-addon'><i class="fa fa-map-marker"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 雇主历史成交数 -->
+						<div class="list-aside-item list-aside-item-type panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Client History</h4>
+								<ul class='checkbox-list list-unstyled'>
+								<li class="checkbox">
+						        	<label class="c-input c-checkbox" for='no-hires'>
+									  <input type="checkbox" id='no-hires' checked="true">
+									  <span class="c-indicator"></span>
+									  No Hires(5,503)
+									</label>
+								</li>
+								<li class="checkbox">
+						        	<label class="c-input c-checkbox" for='scale-hires'>
+									  <input type="checkbox" id='scale-hires'>
+									  <span class="c-indicator"></span>
+									  1 to 9 Hires(4,820)
+									</label>
+								</li>
+								<li class="checkbox">
+						        	<label class="c-input c-checkbox" for='more-hires'>
+									  <input type="checkbox" id='more-hires'>
+									  <span class="c-indicator"></span>
+									  10+ Hires(5,674)
+									</label>
+								</li>
+							</ul>	
+							</div>
+						</div>
+
+						 <!-- 项目周期 -->
+						<div class="list-aside-item list-aside-item-type panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Project length</h4>
+								<ul class='checkbox-list list-unstyled'>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='weeks'>
+										  <input type="checkbox"  id='weeks' checked="true">
+										  <span class="c-indicator"></span>
+										  Weeks(474)
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='months'>
+										  <input type="checkbox"  id='months' checked="true">
+										  <span class="c-indicator"></span>
+										  Months(732)
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='6-months'>
+										  <input type="checkbox"  id='6-months' checked="true">
+										  <span class="c-indicator"></span>
+										  >6 months(745)
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='not-specified'>
+										  <input type="checkbox"  id='not-specified' checked="true">
+										  <span class="c-indicator"></span>
+										  >Not Specified(0)
+										</label>
+									</li>
+								</ul>			
+							</div>
+						</div>
+						
+						
+					</aside>
+				</div>
+				<!-- public-lis.html end-->
+
+				<!-- 主要内容部分 -->
+				<div class="col-md-9 com-content">
+					<form class="list-search clearfix">
+						<div class="input-group">
+							<input type="text" name="" value="" placeholder="" class='form-control'>
+							<div style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+								<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'>search</button>
+							</div>
+						</div>
+					</form>	
+					<article class='list-main'>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<section class='list-bar'>
+									<div class="row">
+										<div class="col-md-4">
+											<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
+										</div>
+										<div class="col-md-8">
+											<div class="select-menu form-inline">		
+												<label>
+													Sort by :
+												</label>
+												<select class="form-control">
+												  
+												  <option value="">发布时间</option>
+												  <option value="">截止时间</option>
+												  <option value="">竞标者人数</option>
+												  <option value="">价格</option>
+												</select>
+										    </div>
+										</div>
+									</div>									
+								</section>
+							</div>
+							<div class="panel-body">
+								<section class="list-results clearfix">
+									<ul class='list-peojects list-unstyled'>
+										<li class='list-results-item row list-peojects-item'>
+											<div class="col-md-10 list-peojects-item-left">
+													<h3 class='list-item-title list-peojects-item-title'>
+														<a href="" title="">Expert Joomla Web Developer - CiviCRM a Plus!</a>
+													</h3>
+													<div class='list-peojects-item-user'>
+														Posted  <time datetime="2011-01-12" class='time'> 1 month ago</time> | <span><a href="" title="">15</a> bids already</span> | <span>2000 Views</span>
+													</div>
+													<p>You will work with a Bermuda-based technology firm to enhance and maintain existing Web sites built with Joomla and integrated with CiviCRM. *** You must answer each of the screening questions below to be considered for this job *** About You -----  </p>
+													<div class='list-peojects-item-require'>
+														<div class='category'>	
+															<a href='' class='label label-primary'>GHS</a> <span> - </span>
+															<a href='' class='label label-success'>SDS(MSDS) Authoring</a>
+														</div>
+													</div>											
+											</div>
+											<div class="col-md-2 list-peojects-item-right">
+													<a href="" title="" class='btn btn-primary btn--bid'>Bid It</a>
+													<p class='budget'>
+												<sup>$</sup>858
+												</p>											
+											</div>										
+										</li>															
+									</ul>
+								</section>
+							<nav class='text-center'>
+								<ul class="pagination">
+									<li class="disabled">
+										<a href="#" aria-label="Previous">
+											<span>&lt; Previous</span>
+										</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span>Next &gt;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							</div>
+						</div>
+					</article>
+				</div> 
+			</div>
+		</div>
+	</section>
+
+	<!-- header.html -->
+	<% include ../publicTpl/footer.html %>
+	<!-- header.html end-->
+</body>
+</html>

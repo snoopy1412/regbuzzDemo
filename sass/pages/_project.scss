@@ -34,9 +34,18 @@
             cursor: pointer;
             margin-bottom: 0;
         }
-        // input[type=radio]:checked+label
+
     }
 }
+.proList-content{
+    .section--employer-view,.section--provider-view{
+        display: none;
+        &.active{
+            display: block;
+        }
+    }
+}
+
 
 // detail
 .project-detail-title

@@ -18,10 +18,10 @@
 	<![endif]-->
 </head>
 <!-- head.html end-->
-
 <body>
-<!-- header.html -->
-	<!-- /header -->
+	<link rel="stylesheet" type="text/css" href="./plugins/jRange/jquery.range.css">
+	<!-- header.html -->
+		<!-- /header -->
 	<header class="header">
 		<nav class="navbar">
 			<div class="container">
@@ -316,70 +316,167 @@
 			</div>
 		</nav>
 </header>
-<!-- header.html end-->
+	<!-- header.html end-->
 
-<!-- /header -->
-<section class='com-main'>
-<div class="container container-arbitration">
-	<div class="arbitration-main section">
-		<h1>纠纷</h1>
-		<div class="arbitration-content">
-			<!-- Nav tabs -->
-			  <ul class="nav nav-tabs">
-			    <li class="active"><a href="#home" data-toggle="tab">现存纠纷</a></li>
-			    <li><a href="#past" data-toggle="tab">既往纠纷</a></li>
-			  </ul>
-
-			  <!-- Tab panes -->
-			  <div class="tab-content">
-			    <div class="tab-pane active" id="home">
-			    	<table class="table table-striped">
-			    		<thead>
-			    			<tr>
-			    				<th>纠纷ID</th>
-			    				<th>项目名称</th>
-			    				<th>对方</th>
-			    				<th>纠纷金额</th>
-			    				<th>状态</th>
-			    				<th>响应时间</th>
-			    			</tr>
-			    		</thead>
-			    		<tbody>
-			    			<tr>
-			    				<td colspan="6" class='text-center'>您没有进行中的纠纷</td>
-			    			</tr>
-			    		</tbody>
-			    	</table>
-			    </div>
-			    <div class="tab-pane" id="past">
-			    	<table class="table table-striped">
-			    		<thead>
-			    			<tr>
-			    				<th>纠纷ID</th>
-			    				<th>项目名称</th>
-			    				<th>对方</th>
-			    				<th>纠纷金额</th>
-			    				<th>结果</th>
-			    				<th>关闭时间</th>
-			    			</tr>
-			    		</thead>
-			    		<tbody>
-			    			<tr>
-			    				<td colspan="6"  class='text-center'>你没有既往纠纷</td>
-			    			</tr>
-			    		</tbody>
-			    	</table>
-			    </div>
-			  </div>
-			  <button type="button" class='btn btn-primary'>创建新纠纷</button>
+	<section class='com-main com-main--list'>
+		<div class='list-search-warp'>
+			<div class='container'>
+				<!-- 面包屑 -->
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Search</li>
+				</ol>
+			</div>		
 		</div>
-	</div>
-</div>
-</section>
+		
+		<div class="container" >	
+			<div class="row mt-10">
 
-<!-- 页脚部分 -->
-<!-- footer.html -->
-<footer class='footer'>
+				<!-- public-lis.html -->
+				<div class="col-md-3 com-aside">
+					<aside class='list-aside'>
+						<section class='list-aside-item list-aside-item-method'>
+							<div class="list-group list-aside-item-method-list">
+							  <a href="#" class="list-group-item">
+							   	<i class="fa fa-bars"></i><span>All</span>
+							  </a>
+							  <a href="#" class="list-group-item"><i class="fa fa-tasks"></i><span>Projects</span></a>
+							  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>Providers</span></a>
+							  <a href="#" class="list-group-item active"><i class="fa fa-info-circle"></i><span>Questions</span></a>
+							  
+							</div>						
+						</section>
+
+						<!-- 分类 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Category</h4>
+								<select class='form-control'>
+									<option id="cn1-0" value="">All Categories</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 预算 -->
+						<div class="list-aside-item list-aside-item-fixed list-fixed-questions panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Rewards</h4>
+								<div class='form-group' style='margin: 30px 5px'>
+									<input type="hidden" class="slider-input" value='0'/>
+								</div>
+								<div class='price text-center'>$<span class='budget-min'>20</span> - $<span class='budget-max'>140</span> </div>
+							</div>
+						</div>
+												
+					</aside>
+				</div>
+				<!-- public-lis.html end-->
+
+				<!-- 主要内容部分 -->
+				<div class="col-md-9 com-content">
+					<form class="list-search clearfix">
+						<div class="input-group">
+							<input type="text" name="" value="" placeholder="" class='form-control'>
+							<div style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+								<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'>search</button>
+							</div>
+						</div>
+					</form>	
+					<article class='list-main'>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<section class='list-bar'>
+									<div class="row">
+										<div class="col-md-4">
+											<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
+										</div>
+										<div class="col-md-8">
+											<div class="select-menu form-inline">		
+												<label>
+													Sort by :
+												</label>
+												<select class="form-control">
+												  
+												  <option value="">Latest</option>
+												  <option value="">Oldest</option>
+												  <option value="">Highest Entries</option>
+												  <option value="">Fewest Entries</option>
+												  <option value="">Highest Prize</option>
+												  <option value="">Lowest Entries</option>
+
+												</select>
+										    </div>
+										</div>
+									</div>									
+								</section>
+							</div>
+							<div class="panel-body">
+								<section class="list-results clearfix">
+									<ul class='list-peojects list-unstyled'>
+										<li class='list-results-item row list-peojects-item'>
+											<div class="col-md-10 list-peojects-item-left">
+													<h3 class='list-item-title list-peojects-item-title'>
+														<a href="" title="">Expert Joomla Web Developer - CiviCRM a Plus!</a>
+													</h3>
+													<div class='list-peojects-item-user'>
+														Posted  <time datetime="2011-01-12" class='time'> 1 month ago</time> | <span><a href="" title="">15</a> bids already</span> | <span>2000 Views</span>
+													</div>
+													<p>You will work with a Bermuda-based technology firm to enhance and maintain existing Web sites built with Joomla and integrated with CiviCRM. *** You must answer each of the screening questions below to be considered for this job *** About You -----  </p>
+													<div class='list-peojects-item-require'>
+														<div class='category'>	
+															<a href='' class='label label-primary'>GHS</a> <span> - </span>
+															<a href='' class='label label-success'>SDS(MSDS) Authoring</a>
+														</div>
+													</div>											
+											</div>
+											<div class="col-md-2 list-peojects-item-right">
+													<a href="" title="" class='btn btn-primary btn--bid'>Bid It</a>
+													<p class='budget'>
+												<sup>$</sup>858
+												</p>											
+											</div>										
+										</li>															
+									</ul>
+								</section>
+							<nav class='text-center'>
+								<ul class="pagination">
+									<li class="disabled">
+										<a href="#" aria-label="Previous">
+											<span>&lt; Previous</span>
+										</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span>Next &gt;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							</div>
+						</div>
+					</article>
+				</div> 
+			</div>
+		</div>
+	</section>
+
+	<!-- header.html -->
+	<footer class='footer'>
 <div class="container-fluid">
 <div class="row footer-nav">
 	<div class="col-md-2 footer-nav-list">
@@ -497,6 +594,6 @@
 </div>
 </div>
 </footer>
-<!-- footer.html end-->
+	<!-- header.html end-->
 </body>
 </html>

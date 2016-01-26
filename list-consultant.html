@@ -19,6 +19,7 @@
 </head>
 <!-- head.html end-->
 <body>
+<link rel="stylesheet" type="text/css" href="./plugins/jRange/jquery.range.css">
 	<!-- header.html -->
 		<!-- /header -->
 	<header class="header">
@@ -37,40 +38,22 @@
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" >
-					<form class='navbar-form navbar-left search-form'>
-						<!-- <div class="search-dropdown pull-left dropdown">
-						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
-						</span>
-						<ul class='dropdown-menu'>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
-									<span>Search for people, projects, articles...</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-user"></i>
-									<span>Search peoples</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-briefcase"></i>
-									<span>Search projects</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-folder-open"></i>
-									<span>Search articles</span>
-								</a>
-							</li>
-						</ul>
-						</div>
-						-->
-						<div class='dropdown'>
-							<div class='form-group'>
-								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+
+					<form action="" class="navbar-form navbar-left search-form">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-btn">
+								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars fa-fw"></i>&nbsp;All <span class="caret"></span></button>
+								        <ul class="dropdown-menu">
+								          <li><a href="#"><i class="fa fa-bars fa-fw"></i>&nbsp;All</a></li>
+								          <li role="separator" class="divider"></li>
+								          <li><a href="#"><i class="fa fa-tasks fa-fw"></i>&nbsp;Projects</a></li>
+								          <li><a href="#"><i class="fa fa-user fa-fw"></i>&nbsp;Providers</a></li>
+								          <li><a href="#"><i class="fa fa-info-circle fa-fw"></i>&nbsp;Questions</a></li>
+								          
+								        </ul>
+						      	</div><!-- /btn-group -->
+								<input type="text" name="" value="" placeholder="Search for projects, questions,articles..." class='form-control' style='min-width: 300px'  data-toggle="dropdown">
 								<div class='dropdown-menu search-text-response'>
 									<ul class='list-unstyled'>
 										<li class='search-text-response-title clearfix'>
@@ -121,9 +104,10 @@
 										</li>
 									</ul>
 								</div>
+								<div class="input-group-btn">
+									<button type="" class="btn btn-secondary" >search</button>
+								</div>
 							</div>
-
-							<button type="submit" class="btn btn-secondary">Submit</button>
 						</div>
 					</form>
 					<ul class="nav navbar-nav navbar-right header-utilities">
@@ -352,109 +336,471 @@
 				<!-- 侧边栏 -->
 				<!-- public-list.html -->
 				<div class="col-md-3 com-aside">
-	<aside class='list-aside'>
-		<section class='list-aside-item list-aside-item-method'>
-			<div class="list-group list-aside-item-method-list">
-			  <a href="#" class="list-group-item active">
-			   	<i class="fa fa-bars"></i><span>All</span>
-			  </a>
-			  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>Projects</span></a>
-			  <a href="#" class="list-group-item"><i class="fa fa-briefcase"></i><span>Questions</span></a>
-			  <a href="#" class="list-group-item"><i class="fa fa-folder-open"></i><span>Providers</span></a>
-			</div>						
-		</section>
-		<div class="list-aside-item panel panel-default">
-			<div class="panel-body">
-				<h4 class='list-aside-item-title'>Category</h4>
-				<select class='form-control'>
-				<option id="cn1-0" value="">All Categories</option>
-			</select>
-			</div>
-		</div>
-		<div class="list-aside-item list-aside-item-type panel panel-default">
-			<div class="panel-body">
-				<h4 class='list-aside-item-title'>Project Types</h4>
-				<ul class='checkbox-list list-unstyled'>
-				<li class="checkbox">
-		        	<label class="c-input c-checkbox" for='hourly'>
-					  <input type="checkbox"  id='hourly'>
-					  <span class="c-indicator"></span>
-					  Hourly(8,380)
-					</label>
-				</li>
-				<li class="checkbox">
-		        	<label class="c-input c-checkbox" for='fixed-price'>
-					  <input type="checkbox"  id='fixed-price'>
-					  <span class="c-indicator"></span>
-					  Fixed Price(7,436)
-					</label>
-				</li>
-			</ul>			
-			</div>
-		</div>
-		<div class="list-aside-item list-aside-item-type panel panel-default">
-			<div class="panel-body">
-				<h4 class='list-aside-item-title'>Publish type</h4>
-				<ul class='checkbox-list list-unstyled'>
-				<li class="checkbox">
-		        	<label class="c-input c-checkbox" for='featured'>
-					  <input type="checkbox" id='featured'>
-					  <span class="c-indicator"></span>
-					  Featured
-					</label>
-				</li>
-				<li class="checkbox">
-		        	<label class="c-input c-checkbox" for='sealed'>
-					  <input type="checkbox" id='sealed'>
-					  <span class="c-indicator"></span>
-					  Sealed
-					</label>
-				</li>
-				<li class="checkbox">
-		        	<label class="c-input c-checkbox" for='NDA'>
-					  <input type="checkbox" id='NDA'>
-					  <span class="c-indicator"></span>
-					  NDA
-					</label>
-				</li>
-				<li class="checkbox">
-		        	<label class="c-input c-checkbox" for='urgent'>
-					  <input type="checkbox" id='urgent'>
-					  <span class="c-indicator"></span>
-					  Urgent
-					</label>
-				</li>
-				<li class="checkbox">
-		        	<label class="c-input c-checkbox" for='fulltime'>
-					  <input type="checkbox" id='fulltime'>
-					  <span class="c-indicator"></span>
-					  Fulltime
-					</label>
-				</li>
-				<li class="checkbox">
-		        	<label class="c-input c-checkbox" for='Hourly'>
-					  <input type="checkbox" id='Hourly'>
-					  <span class="c-indicator"></span>
-					  Hourly
-					</label>
-				</li>
-			</ul>	
-			</div>
-		</div>
-		<div class="list-aside-item list-aside-item-fixed panel panel-default">
-			<div class="panel-body form-inline">
-				<h4 class='list-aside-item-title'>Budget (fixed price)</h4>
-				<div class='form-group' style='margin-bottom: 10px;'>
-					<span class='budget-modify-str'>$</span>
-					<input type="number" name="" id=""  value="100" class='form-control' style='width:90px;'>
-					<span class='budget-modify-str'>-</span>
-					<input type="number" name="" id=""  value="200" class='form-control' style='width:90px;'>
+					<aside class='list-aside'>
+
+						<!-- tab -->
+						<section class='list-aside-item list-aside-item-method'>
+							<div class="list-group list-aside-item-method-list">
+							  <a href="#" class="list-group-item">
+							   	<i class="fa fa-bars"></i><span>All</span>
+							  </a>
+							  <a href="#" class="list-group-item "><i class="fa fa-tasks"></i><span>Projects</span></a>
+							  <a href="#" class="list-group-item active"><i class="fa fa-info-circle"></i><span>Questions</span></a>
+							  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>Providers</span></a>
+							</div>						
+						</section>
+
+						<!-- 分类 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Category</h4>
+								<select class='form-control'>
+									<option id="cn1-0" value="">All Categories</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 技能 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Skill</h4>
+								<div class="form-group">
+									<input type="text" name="" value="" placeholder="选择技能" class='form-control'>
+								</div>
+							</div>
+						</div>
+
+						<!-- 国家 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Country</h4>
+								
+							</div>
+						</div>
+
+						<!-- 预算 -->
+						<div class="list-aside-item list-aside-item-fixed panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>时薪</h4>
+								
+								<div class='form-group' style='margin: 10px 5px 30px'>
+									<input type="hidden" class="slider-input" value="23" />
+								</div>
+								<div class='price text-center'>$<span class='budget-min'>0</span> - $<span class='budget-max'>100</span> </div>
+								
+							</div>
+						</div>
+
+						<!-- 评分 -->
+						<div class="list-aside-item list-aside-item-grade panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>评分</h4>
+								
+								<span class="list-grade-choose"></span>
+								
+							</div>
+						</div>
+
+						<!-- 语言 -->
+						<div class="list-aside-item list-aside-item-language panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Language</h4>
+								<!-- <ul class='checkbox-list'>							        
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='af'>
+										  <input type="checkbox" id='af'>
+										  <span class="c-indicator"></span>
+										 Afrikaans
+										</label>
+									</li>
+
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='bn'>
+										  <input type="checkbox" id='bn'>
+										  <span class="c-indicator"></span>
+										  বাংলা
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='ca'>
+										  <input type="checkbox" id='ca'>
+										  <span class="c-indicator"></span>
+										  Català
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='cs'>
+										  <input type="checkbox" id='cs'>
+										  <span class="c-indicator"></span>
+										  Čeština
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='da'>
+										  <input type="checkbox" id='da'>
+										  <span class="c-indicator"></span>
+										  Dansk
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='de'>
+										  <input type="checkbox" id='de'>
+										  <span class="c-indicator"></span>
+										  Deutsch
+										</label>
+									</li>
+
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='el'>
+										  <input type="checkbox" id='el'>
+										  <span class="c-indicator"></span>
+										  ελληνικά
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='en'>
+										  <input type="checkbox" id='en'>
+										  <span class="c-indicator"></span>
+										 English
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='es'>
+										  <input type="checkbox" id='es'>
+										  <span class="c-indicator"></span>
+										  Español
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='fi'>
+										  <input type="checkbox" id='fi'>
+										  <span class="c-indicator"></span>
+										  Filipino
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='fr'>
+										  <input type="checkbox" id='fr'>
+										  <span class="c-indicator"></span>
+										  Français
+										</label>
+									</li>
+								</ul>
+
+								<ul id='collapse-langauge' class="collapse" >
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='hi'>
+										  <input type="checkbox" id='hi'>
+										  <span class="c-indicator"></span>
+										  हिन्दी
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='hu'>
+										  <input type="checkbox" id='hu'>
+										  <span class="c-indicator"></span>
+										  Magyar
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='it'>
+										  <input type="checkbox" id='it'>
+										  <span class="c-indicator"></span>
+										 	Italiano
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='ja'>
+										  <input type="checkbox" id='ja'>
+										  <span class="c-indicator"></span>
+										 日本語
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='ko'>
+										  <input type="checkbox" id='ko'>
+										  <span class="c-indicator"></span>
+										  한국어
+										</label>
+									</li>
+
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='ms'>
+										  <input type="checkbox" id='ms'>
+										  <span class="c-indicator"></span>
+										  Bahasa Malaysia
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='nb'>
+										  <input type="checkbox" id='nb'>
+										  <span class="c-indicator"></span>
+										  Norsk-Bokmål
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='nl'>
+										  <input type="checkbox" id='nl'>
+										  <span class="c-indicator"></span>
+										  Nederlands
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='pl'>
+										  <input type="checkbox" id='pl'>
+										  <span class="c-indicator"></span>
+										  Polski
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='pt'>
+										  <input type="checkbox" id='pt'>
+										  <span class="c-indicator"></span>
+										 	Português
+										</label>
+									</li>
+
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='ro'>
+										  <input type="checkbox" id='ro'>
+										  <span class="c-indicator"></span>
+										 Română
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='ru'>
+										  <input type="checkbox" id='ru'>
+										  <span class="c-indicator"></span>
+										  ру́сский язы́к
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='sq'>
+										  <input type="checkbox" id='sq'>
+										  <span class="c-indicator"></span>
+										  Shqip
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='sv'>
+										  <input type="checkbox" id='sv'>
+										  <span class="c-indicator"></span>
+										  Svenska
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='sw'>
+										  <input type="checkbox" id='sw'>
+										  <span class="c-indicator"></span>
+										  Kiswahili
+										</label>
+									</li>
+									
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='th'>
+										  <input type="checkbox" id='th'>
+										  <span class="c-indicator"></span>
+										  ภาษาไทย
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='tr'>
+										  <input type="checkbox" id='tr'>
+										  <span class="c-indicator"></span>
+										 	Türkçe
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='uk'>
+										  <input type="checkbox" id='uk'>
+										  <span class="c-indicator"></span>
+										  українська мова
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='vi'>
+										  <input type="checkbox" id='vi'>
+										  <span class="c-indicator"></span>
+										  Tiếng Việt
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='zh-cn'>
+										  <input type="checkbox" id='zh-cn'>
+										  <span class="c-indicator"></span>
+										 	中文(简体)
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='zh-tw'>
+										  <input type="checkbox" id='zh-tw'>
+										  <span class="c-indicator"></span>
+										 	中文(繁体)
+										</label>
+									</li>
+								</ul> -->
+
+								<ul class='checkbox-list'>							        
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='zh-cn'>
+										  <input type="checkbox" id='zh-cn'>
+										  <span class="c-indicator"></span>
+										 Chinese
+										</label>
+									</li>
+
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='spanish'>
+										  <input type="checkbox" id='spanish'>
+										  <span class="c-indicator"></span>
+										  Spanish
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='hindi'>
+										  <input type="checkbox" id='hindi'>
+										  <span class="c-indicator"></span>
+										  Hindi
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Russian'>
+										  <input type="checkbox" id='Russian'>
+										  <span class="c-indicator"></span>
+										  Russian
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Arabic'>
+										  <input type="checkbox" id='Arabic'>
+										  <span class="c-indicator"></span>
+										  Arabic
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Portuguese'>
+										  <input type="checkbox" id='Portuguese'>
+										  <span class="c-indicator"></span>
+										  Portuguese
+										</label>
+									</li>
+								</ul>
+								<button type="button" class='btn btn-link' data-toggle="collapse" href="#list-language-list" >More <i class="fa fa-angle-down"></i></button>
+								<ul id='list-language-list' class="collapse" >
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Malay'>
+										  <input type="checkbox" id='Malay'>
+										  <span class="c-indicator"></span>
+										  Malay
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Bengali'>
+										  <input type="checkbox" id='Bengali'>
+										  <span class="c-indicator"></span>
+										 Bengali
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='French'>
+										  <input type="checkbox" id='French'>
+										  <span class="c-indicator"></span>
+										  French
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='German'>
+										  <input type="checkbox" id='German'>
+										  <span class="c-indicator"></span>
+										  German
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Japanese'>
+										  <input type="checkbox" id='Japanese'>
+										  <span class="c-indicator"></span>
+										  Japanese
+										</label>
+									</li>
+
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Korean'>
+										  <input type="checkbox" id='Korean'>
+										  <span class="c-indicator"></span>
+										  Korean
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Turkish'>
+										  <input type="checkbox" id='Turkish'>
+										  <span class="c-indicator"></span>
+										  Turkish
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Italian'>
+										  <input type="checkbox" id='Italian'>
+										  <span class="c-indicator"></span>
+										  Italian
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Vietnamese'>
+										  <input type="checkbox" id='Vietnamese'>
+										  <span class="c-indicator"></span>
+										  Vietnamese
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Javanese'>
+										  <input type="checkbox" id='Javanese'>
+										  <span class="c-indicator"></span>
+										  Javanese
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Thai'>
+										  <input type="checkbox" id='Thai'>
+										  <span class="c-indicator"></span>
+										  Thai
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Polish'>
+										  <input type="checkbox" id='Polish'>
+										  <span class="c-indicator"></span>
+										  Polish
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Persian'>
+										  <input type="checkbox" id='Persian'>
+										  <span class="c-indicator"></span>
+										  Persian
+										</label>
+									</li>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox" for='Burmese'>
+										  <input type="checkbox" id='Burmese'>
+										  <span class="c-indicator"></span>
+										  Burmese
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- 在线 -->
+						<div class="list-aside-item list-aside-item-online panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>在线</h4>
+								
+							</div>
+						</div>
+						
+						
+					</aside>
 				</div>
-				<a href="" class='btn btn-primary'>submit</a>
-			</div>
-		</div>
-	</aside>
-</div>
 				<!-- public-list.html end-->
 
 				<!-- 主要内容部分 -->
@@ -482,15 +828,10 @@
 												Sort by :
 											</label>
 											<select class="form-control">
-											  <option>Best match</option>
-											  <option>Newest</option>
-											  <option>Oldest</option>
-											  <option>Most Client Hours</option>
-											  <option>Least Client Hours</option>
-											  <option>Most Dollars Paid</option>
-											  <option>Least Dollars Paid</option>
-											  <option>Highest Feedback Score</option>
-											  <option>Lowest Feedback Score</option>
+											   <option value="">发布时间</option>
+												  <option value="">截止时间</option>
+												  <option value="">竞标者人数</option>
+												  <option value="">价格</option>
 											</select>
 									    </div>
 									</div>

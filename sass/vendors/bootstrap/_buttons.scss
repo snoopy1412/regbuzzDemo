@@ -9,9 +9,9 @@
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
-  user-select: none;
+  user-select: none; 
   border: 1px solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, 1.428571429, $btn-border-radius);
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, 1.43, $btn-border-radius); //1.428571429
   @include transition(all .2s ease-in-out);
 
   &,

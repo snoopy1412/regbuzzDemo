@@ -37,40 +37,22 @@
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" >
-					<form class='navbar-form navbar-left search-form'>
-						<!-- <div class="search-dropdown pull-left dropdown">
-						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
-						</span>
-						<ul class='dropdown-menu'>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
-									<span>Search for people, projects, articles...</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-user"></i>
-									<span>Search peoples</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-briefcase"></i>
-									<span>Search projects</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-folder-open"></i>
-									<span>Search articles</span>
-								</a>
-							</li>
-						</ul>
-						</div>
-						-->
-						<div class='dropdown'>
-							<div class='form-group'>
-								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+
+					<form action="" class="navbar-form navbar-left search-form">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-btn">
+								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars fa-fw"></i>&nbsp;All <span class="caret"></span></button>
+								        <ul class="dropdown-menu">
+								          <li><a href="#"><i class="fa fa-bars fa-fw"></i>&nbsp;All</a></li>
+								          <li role="separator" class="divider"></li>
+								          <li><a href="#"><i class="fa fa-tasks fa-fw"></i>&nbsp;Projects</a></li>
+								          <li><a href="#"><i class="fa fa-user fa-fw"></i>&nbsp;Providers</a></li>
+								          <li><a href="#"><i class="fa fa-info-circle fa-fw"></i>&nbsp;Questions</a></li>
+								          
+								        </ul>
+						      	</div><!-- /btn-group -->
+								<input type="text" name="" value="" placeholder="Search for projects, questions,articles..." class='form-control' style='min-width: 300px'  data-toggle="dropdown">
 								<div class='dropdown-menu search-text-response'>
 									<ul class='list-unstyled'>
 										<li class='search-text-response-title clearfix'>
@@ -121,9 +103,10 @@
 										</li>
 									</ul>
 								</div>
+								<div class="input-group-btn">
+									<button type="" class="btn btn-secondary" >search</button>
+								</div>
 							</div>
-
-							<button type="submit" class="btn btn-secondary">Submit</button>
 						</div>
 					</form>
 					<ul class="nav navbar-nav navbar-right header-utilities">
@@ -517,153 +500,16 @@
 											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 											        <h4 class="modal-title" id="myModalLabel">Select your langauge</h4>
 											      </div>
-											      <div class="modal-body">
+											      <div class="modal-body" id='vue-list-languages'>
 											        <ul class='pub-language-list'>     
-														<li>
-												        	<label class="c-input c-checkbox" for='zh-cn'>
-															  <input type="checkbox" id='zh-cn'>
+														<li v-for='language in languages'>
+												        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+															  <input type="checkbox" id='{{language.abbr}}'>
 															  <span class="c-indicator"></span>
-															 Chinese
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='spanish'>
-															  <input type="checkbox" id='spanish'>
-															  <span class="c-indicator"></span>
-															  Spanish
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='hindi'>
-															  <input type="checkbox" id='hindi'>
-															  <span class="c-indicator"></span>
-															  Hindi
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Russian'>
-															  <input type="checkbox" id='Russian'>
-															  <span class="c-indicator"></span>
-															  Russian
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Arabic'>
-															  <input type="checkbox" id='Arabic'>
-															  <span class="c-indicator"></span>
-															  Arabic
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Portuguese'>
-															  <input type="checkbox" id='Portuguese'>
-															  <span class="c-indicator"></span>
-															  Portuguese
-															</label>
-														</li>
-
-														<li>
-												        	<label class="c-input c-checkbox" for='Malay'>
-															  <input type="checkbox" id='Malay'>
-															  <span class="c-indicator"></span>
-															  Malay
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Bengali'>
-															  <input type="checkbox" id='Bengali'>
-															  <span class="c-indicator"></span>
-															 Bengali
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='French'>
-															  <input type="checkbox" id='French'>
-															  <span class="c-indicator"></span>
-															  French
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='German'>
-															  <input type="checkbox" id='German'>
-															  <span class="c-indicator"></span>
-															  German
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Japanese'>
-															  <input type="checkbox" id='Japanese'>
-															  <span class="c-indicator"></span>
-															  Japanese
-															</label>
-														</li>
-
-														<li>
-												        	<label class="c-input c-checkbox" for='Korean'>
-															  <input type="checkbox" id='Korean'>
-															  <span class="c-indicator"></span>
-															  Korean
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Turkish'>
-															  <input type="checkbox" id='Turkish'>
-															  <span class="c-indicator"></span>
-															  Turkish
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Italian'>
-															  <input type="checkbox" id='Italian'>
-															  <span class="c-indicator"></span>
-															  Italian
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Vietnamese'>
-															  <input type="checkbox" id='Vietnamese'>
-															  <span class="c-indicator"></span>
-															  Vietnamese
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Javanese'>
-															  <input type="checkbox" id='Javanese'>
-															  <span class="c-indicator"></span>
-															  Javanese
-															</label>
-														</li>
-
-														<li >
-												        	<label class="c-input c-checkbox" for='Thai'>
-															  <input type="checkbox" id='Thai'>
-															  <span class="c-indicator"></span>
-															  Thai
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Polish'>
-															  <input type="checkbox" id='Polish'>
-															  <span class="c-indicator"></span>
-															  Polish
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Persian'>
-															  <input type="checkbox" id='Persian'>
-															  <span class="c-indicator"></span>
-															  Persian
-															</label>
-														</li>
-														<li>
-												        	<label class="c-input c-checkbox" for='Burmese'>
-															  <input type="checkbox" id='Burmese'>
-															  <span class="c-indicator"></span>
-															  Burmese
+															 {{language.local}}
 															</label>
 														</li>
 													</ul>
-
 													<div class="divider divider-horizontal">or</div>
 
 													

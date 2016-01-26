@@ -15,40 +15,22 @@
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" >
-					<form class='navbar-form navbar-left search-form'>
-						<!-- <div class="search-dropdown pull-left dropdown">
-						<span class='fa dropdown-select-all js-inbox dropdown-toggle' data-toggle="dropdown"> <i class='fa fa-bars'></i>
-						</span>
-						<ul class='dropdown-menu'>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'> <i class="fa fa-bars"></i>
-									<span>Search for people, projects, articles...</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-user"></i>
-									<span>Search peoples</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-briefcase"></i>
-									<span>Search projects</span>
-								</a>
-							</li>
-							<li>
-								<a href="javascript:;" title="" class='js-outbox'>
-									<i class="fa fa-folder-open"></i>
-									<span>Search articles</span>
-								</a>
-							</li>
-						</ul>
-						</div>
-						-->
-						<div class='dropdown'>
-							<div class='form-group'>
-								<input type="text" class="form-control dropdown-toggle" placeholder="Search for people, projects, articles..."  data-toggle="dropdown">
+
+					<form action="" class="navbar-form navbar-left search-form">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-btn">
+								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars fa-fw"></i>&nbsp;All <span class="caret"></span></button>
+								        <ul class="dropdown-menu">
+								          <li><a href="#"><i class="fa fa-bars fa-fw"></i>&nbsp;All</a></li>
+								          <li role="separator" class="divider"></li>
+								          <li><a href="#"><i class="fa fa-tasks fa-fw"></i>&nbsp;Projects</a></li>
+								          <li><a href="#"><i class="fa fa-user fa-fw"></i>&nbsp;Providers</a></li>
+								          <li><a href="#"><i class="fa fa-info-circle fa-fw"></i>&nbsp;Questions</a></li>
+								          
+								        </ul>
+						      	</div><!-- /btn-group -->
+								<input type="text" name="" value="" placeholder="Search for projects, questions,articles..." class='form-control' style='min-width: 300px'  data-toggle="dropdown">
 								<div class='dropdown-menu search-text-response'>
 									<ul class='list-unstyled'>
 										<li class='search-text-response-title clearfix'>
@@ -99,9 +81,10 @@
 										</li>
 									</ul>
 								</div>
+								<div class="input-group-btn">
+									<button type="" class="btn btn-secondary" >search</button>
+								</div>
 							</div>
-
-							<button type="submit" class="btn btn-secondary">Submit</button>
 						</div>
 					</form>
 					<ul class="nav navbar-nav navbar-right header-utilities">

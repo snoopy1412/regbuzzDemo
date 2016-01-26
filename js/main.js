@@ -12,7 +12,8 @@ require.config({
     revealOnScroll: './components/revealOnScroll',
     responsiveNav: './components/responsiveNav',
     dropdown: './components/dropdown',
-    bootstrap:'./vendor/bootstrap'
+    bootstrap:'./vendor/bootstrap',
+    Vue:'./vendor/vue'
   },
   shim: {
     "velocity": {
@@ -35,13 +36,18 @@ require.config({
     },
     "dropdown": {
       deps: ["jquery"]
+    },
+    'Vue':{
+      exports:'Vue'
     }
   }
 });
 
-require(['jquery','bootstrap','index', 'dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help'], function($, index, dashboard, list, profile, publish, register, blog,bootstrap) {
+require(['jquery','bootstrap','index', 'dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help','project-list'], function($,bootstrap,index, dashboard, list, profile, publish, register, blog,setting,help,projectList) {
   layer.config({
     path: './plugins/layer/' //layer.js所在的目录，可以是绝对目录，也可以是相对目录
   });
+
+  $('[data-toggle="tooltip"]').tooltip();
 
 });

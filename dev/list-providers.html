@@ -2,6 +2,7 @@
 <% include ../publicTpl/head.html %>
 <!-- head.html end-->
 <body>
+<link rel="stylesheet" type="text/css" href="./plugins/jRange/jquery.range.css">
 	<!-- header.html -->
 	<% include ../publicTpl/header.html %>
 	<!-- header.html end-->
@@ -23,7 +24,120 @@
 
 				<!-- 侧边栏 -->
 				<!-- public-list.html -->
-				<% include ../publicTpl/public-list.html %>
+				<div class="col-md-3 com-aside">
+					<aside class='list-aside'>
+
+						<!-- tab -->
+						<section class='list-aside-item list-aside-item-method'>
+							<div class="list-group list-aside-item-method-list">
+							  <a href="#" class="list-group-item">
+							   	<i class="fa fa-bars"></i><span>All</span>
+							  </a>
+							  <a href="#" class="list-group-item "><i class="fa fa-tasks"></i><span>Projects</span></a>
+							  <a href="#" class="list-group-item active"><i class="fa fa-info-circle"></i><span>Questions</span></a>
+							  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>Providers</span></a>
+							</div>						
+						</section>
+
+						<!-- 分类 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Category</h4>
+								<select class='form-control'>
+									<option id="cn1-0" value="">All Categories</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 技能 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Skill</h4>
+								<div class="form-group">
+									<input type="text" name="" value="" placeholder="选择技能" class='form-control'>
+								</div>
+							</div>
+						</div>
+
+						<!-- 国家 -->
+						<div class="list-aside-item panel panel-default" id='vue-countries'>
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Country</h4>
+								<ul class="checkbox-list">							        
+									<li class="checkbox" v-for='country in countries' v-show='country.show'>
+							        	<label class="c-input c-checkbox" for="{{country.short}}">
+										  <input type="checkbox" id="{{country.short}}" value='{{country.short}}'>
+										  <span class="c-indicator"></span>
+										 {{country.text}}
+										</label>
+									</li>
+								</ul>
+								<div class='form-group'>
+									<input type="text" name="" value="" placeholder="输入获得更多国家" class='form-control' v-on:keyup='selectCountry | debounce 200' v-model='countryMsg'>
+								</div>
+							</div>
+						</div>
+
+						<!-- 预算 -->
+						<div class="list-aside-item list-aside-item-fixed list-fixed-providers panel panel-default">
+							<div class="panel-body ">
+								<h4 class='list-aside-item-title'>时薪</h4>
+								<div class='form-group' style='margin: 30px 5px'>
+									<input type="hidden" class="slider-input" value="100" />
+								</div>
+								<div class='price text-center'>$<span class='budget-min'>0</span> - $<span class='budget-max'>100</span> </div>
+								
+							</div>
+						</div>
+
+						<!-- 评分 -->
+						<div class="list-aside-item list-aside-item-grade panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>评分</h4>
+								
+								<span class="list-grade-choose"></span>
+								
+							</div>
+						</div>
+
+						<!-- 语言 -->
+						<div class="list-aside-item list-aside-item-language panel panel-default" id='vue-list-languages'>
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Language</h4>
+								<ul class='checkbox-list'>							        
+									<li class="checkbox" v-for='language in languages | limitBy 5'>
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+										  <input type="checkbox" id='{{language.abbr}}'>
+										  <span class="c-indicator"></span>
+										 {{language.local}}
+										</label>
+									</li>
+								</ul>
+								<button type="button" class='btn btn-link' data-toggle="collapse" href="#list-language-list" >More <i class="fa fa-angle-down"></i></button>
+								<ul id='list-language-list' class="collapse" >
+									<li class="checkbox" v-for='language in languages | | limitBy 19 5'>
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+										  <input type="checkbox" id='{{language.abbr}}'>
+										  <span class="c-indicator"></span>
+										 {{language.local}}
+										</label>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+
+						<!-- 在线 -->
+						<div class="list-aside-item list-aside-item-online panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>在线</h4>
+								
+							</div>
+						</div>
+						
+						
+					</aside>
+				</div>
 				<!-- public-list.html end-->
 
 				<!-- 主要内容部分 -->
@@ -51,15 +165,10 @@
 												Sort by :
 											</label>
 											<select class="form-control">
-											  <option>Best match</option>
-											  <option>Newest</option>
-											  <option>Oldest</option>
-											  <option>Most Client Hours</option>
-											  <option>Least Client Hours</option>
-											  <option>Most Dollars Paid</option>
-											  <option>Least Dollars Paid</option>
-											  <option>Highest Feedback Score</option>
-											  <option>Lowest Feedback Score</option>
+											   <option value="">发布时间</option>
+												  <option value="">截止时间</option>
+												  <option value="">竞标者人数</option>
+												  <option value="">价格</option>
 											</select>
 									    </div>
 									</div>

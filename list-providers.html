@@ -18,10 +18,10 @@
 	<![endif]-->
 </head>
 <!-- head.html end-->
-
 <body>
-<!-- header.html -->
-	<!-- /header -->
+<link rel="stylesheet" type="text/css" href="./plugins/jRange/jquery.range.css">
+	<!-- header.html -->
+		<!-- /header -->
 	<header class="header">
 		<nav class="navbar">
 			<div class="container">
@@ -316,70 +316,291 @@
 			</div>
 		</nav>
 </header>
-<!-- header.html end-->
+	<!-- header.html end-->
 
-<!-- /header -->
-<section class='com-main'>
-<div class="container container-arbitration">
-	<div class="arbitration-main section">
-		<h1>纠纷</h1>
-		<div class="arbitration-content">
-			<!-- Nav tabs -->
-			  <ul class="nav nav-tabs">
-			    <li class="active"><a href="#home" data-toggle="tab">现存纠纷</a></li>
-			    <li><a href="#past" data-toggle="tab">既往纠纷</a></li>
-			  </ul>
+	<section class='com-main com-main--list'>
+		<div class='list-search-warp'>
+			<div class='container'>
+				<!-- 面包屑 -->
+				<ol class="breadcrumb">
+				  <li><a href="#">Home</a></li>
+				  <li class="active">Search</li>
+				</ol>
+			</div>		
 
-			  <!-- Tab panes -->
-			  <div class="tab-content">
-			    <div class="tab-pane active" id="home">
-			    	<table class="table table-striped">
-			    		<thead>
-			    			<tr>
-			    				<th>纠纷ID</th>
-			    				<th>项目名称</th>
-			    				<th>对方</th>
-			    				<th>纠纷金额</th>
-			    				<th>状态</th>
-			    				<th>响应时间</th>
-			    			</tr>
-			    		</thead>
-			    		<tbody>
-			    			<tr>
-			    				<td colspan="6" class='text-center'>您没有进行中的纠纷</td>
-			    			</tr>
-			    		</tbody>
-			    	</table>
-			    </div>
-			    <div class="tab-pane" id="past">
-			    	<table class="table table-striped">
-			    		<thead>
-			    			<tr>
-			    				<th>纠纷ID</th>
-			    				<th>项目名称</th>
-			    				<th>对方</th>
-			    				<th>纠纷金额</th>
-			    				<th>结果</th>
-			    				<th>关闭时间</th>
-			    			</tr>
-			    		</thead>
-			    		<tbody>
-			    			<tr>
-			    				<td colspan="6"  class='text-center'>你没有既往纠纷</td>
-			    			</tr>
-			    		</tbody>
-			    	</table>
-			    </div>
-			  </div>
-			  <button type="button" class='btn btn-primary'>创建新纠纷</button>
 		</div>
-	</div>
-</div>
-</section>
+		
+		<div class="container" >	
+			<div class="row mt-10">
 
-<!-- 页脚部分 -->
-<!-- footer.html -->
-<footer class='footer'>
+				<!-- 侧边栏 -->
+				<!-- public-list.html -->
+				<div class="col-md-3 com-aside">
+					<aside class='list-aside'>
+
+						<!-- tab -->
+						<section class='list-aside-item list-aside-item-method'>
+							<div class="list-group list-aside-item-method-list">
+							  <a href="#" class="list-group-item">
+							   	<i class="fa fa-bars"></i><span>All</span>
+							  </a>
+							  <a href="#" class="list-group-item "><i class="fa fa-tasks"></i><span>Projects</span></a>
+							  <a href="#" class="list-group-item active"><i class="fa fa-info-circle"></i><span>Questions</span></a>
+							  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>Providers</span></a>
+							</div>						
+						</section>
+
+						<!-- 分类 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Category</h4>
+								<select class='form-control'>
+									<option id="cn1-0" value="">All Categories</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 技能 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Skill</h4>
+								<div class="form-group">
+									<input type="text" name="" value="" placeholder="选择技能" class='form-control'>
+								</div>
+							</div>
+						</div>
+
+						<!-- 国家 -->
+						<div class="list-aside-item panel panel-default" id='vue-countries'>
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Country</h4>
+								<ul class="checkbox-list">							        
+									<li class="checkbox" v-for='country in countries' v-show='country.show'>
+							        	<label class="c-input c-checkbox" for="{{country.short}}">
+										  <input type="checkbox" id="{{country.short}}" value='{{country.short}}'>
+										  <span class="c-indicator"></span>
+										 {{country.text}}
+										</label>
+									</li>
+								</ul>
+								<div class='form-group'>
+									<input type="text" name="" value="" placeholder="输入获得更多国家" class='form-control' v-on:keyup='selectCountry | debounce 200' v-model='countryMsg'>
+								</div>
+							</div>
+						</div>
+
+						<!-- 预算 -->
+						<div class="list-aside-item list-aside-item-fixed list-fixed-providers panel panel-default">
+							<div class="panel-body ">
+								<h4 class='list-aside-item-title'>时薪</h4>
+								<div class='form-group' style='margin: 30px 5px'>
+									<input type="hidden" class="slider-input" value="100" />
+								</div>
+								<div class='price text-center'>$<span class='budget-min'>0</span> - $<span class='budget-max'>100</span> </div>
+								
+							</div>
+						</div>
+
+						<!-- 评分 -->
+						<div class="list-aside-item list-aside-item-grade panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>评分</h4>
+								
+								<span class="list-grade-choose"></span>
+								
+							</div>
+						</div>
+
+						<!-- 语言 -->
+						<div class="list-aside-item list-aside-item-language panel panel-default" id='vue-list-languages'>
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Language</h4>
+								<ul class='checkbox-list'>							        
+									<li class="checkbox" v-for='language in languages | limitBy 5'>
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+										  <input type="checkbox" id='{{language.abbr}}'>
+										  <span class="c-indicator"></span>
+										 {{language.local}}
+										</label>
+									</li>
+								</ul>
+								<button type="button" class='btn btn-link' data-toggle="collapse" href="#list-language-list" >More <i class="fa fa-angle-down"></i></button>
+								<ul id='list-language-list' class="collapse" >
+									<li class="checkbox" v-for='language in languages | | limitBy 19 5'>
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+										  <input type="checkbox" id='{{language.abbr}}'>
+										  <span class="c-indicator"></span>
+										 {{language.local}}
+										</label>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+
+						<!-- 在线 -->
+						<div class="list-aside-item list-aside-item-online panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>在线</h4>
+								
+							</div>
+						</div>
+						
+						
+					</aside>
+				</div>
+				<!-- public-list.html end-->
+
+				<!-- 主要内容部分 -->
+				<div class="col-md-9 com-content">
+					<!-- 搜索框 -->
+					<form class="list-search clearfix">
+						<div class="input-group">
+							<input type="text" name="" value="" placeholder="" class='form-control'>
+							<div style='width: 1%;display: table-cell;white-space: nowrap;vertical-align: middle;'>
+								<button type="" class='btn btn-primary' style='border-radius: 0 4px 4px 0'>search</button>
+							</div>
+						</div>
+					</form>	
+					<article class='list-main'>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<section class='list-bar'>
+								<div class="row">
+									<div class="col-md-4">
+										<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
+									</div>
+									<div class="col-md-8">
+										<div class="select-menu form-inline">		
+											<label>
+												Sort by :
+											</label>
+											<select class="form-control">
+											   <option value="">发布时间</option>
+												  <option value="">截止时间</option>
+												  <option value="">竞标者人数</option>
+												  <option value="">价格</option>
+											</select>
+									    </div>
+									</div>
+								</div>									
+							</section>
+						</div>
+						<div class="panel-body">
+							<section class="list-results clearfix">
+								<ul class="list-peoples list-unstyled">
+								<li class="list-results-item row list-peoples-item">
+									<div class="col-md-2 list-peoples-img">
+										<img src="img/index/servers/13.jpg" alt="">
+										<a href="" title="" class='btn btn-danger-outline btn--save'><i class="fa fa-heart-o"></i> Save</a>
+									</div>
+									<div class="col-md-8 list-peoples-info">
+										<h3 class='list-item-title list-peoples-item-title'>
+										<a href="" title="">Aaron Su</a>
+										</h3>
+										<p class='list-peoples-position'>
+											GHS Consultant in <a href="" title="">CIRS</a>
+										</p>
+										
+										<p class='list-peoples-item-bref'> Augmented reality app programmer for Android & iOS.</p>
+										<div class='list-peoples-item-grade clearfix'>
+											<span class="grade-item-name pull-left"></span>
+											<div class="grade-item pull-left" data-score='4.5'></div>
+											 <a href=''>33 Reviews</a>     			
+										</div>
+										<p class='list-peoples-item-skills'>
+											<a href="" title="" class='label label-bell'>GHS</a>
+											<a href='' class='label label-bell'>Chemical</a>
+											<a href='' class='label label-bell'>HSF</a>
+											<a href='' class='label label-bell'>REACH</a>
+											<a href='' class='label label-bell'>English</a>
+										</p>
+									</div>
+									<div class="col-md-2 list-peoples-item-aside">
+										<a href="" title="" class='btn btn-primary btn--hire'>Hire me </a>
+										<p class='charging-standard'>
+											<sup>$</sup>858
+											<span>USD/hour</span>
+										</p>
+									</div>
+								</li>
+								<li class="list-results-item row list-peoples-item">
+									<div class="col-md-2 list-peoples-img">
+										<img src="img/index/servers/16.jpg" alt="">
+										<a href="" title="" class='btn btn-danger-outline btn--save'><i class="fa fa-heart-o"></i> Save</a>
+									</div>
+									<div class="col-md-8 list-peoples-info">
+										<h3 class='list-item-title list-peoples-item-title'>
+										<a href="" title="">Steven Jobs</a>
+										</h3>
+										<p class='list-peoples-position'>
+											GHS Consultant in <a href="" title="">CIRS</a>
+										</p>
+										
+										<p class='list-peoples-item-bref'>I am in to design browser compatible SharePoint sites (Master Pages, CSS, Page Layouts), customizing (Content Management) and development of custom solutions for SharePoint (Web Parts, Events, Workflows etc). Experienced in all the SharePoint versions and find experience details below,1. SharePoint 2013 & Office 3 ...</p>
+										<div class='list-peoples-item-grade clearfix'>
+											<span class="grade-item-name pull-left"></span>
+											<div class="grade-item pull-left" data-score='3.5'></div>
+											 <a href=''>33 Reviews</a>     			
+										</div>
+										<p class='list-peoples-item-skills'>
+											<a href="" title="" class='label label-bell'>GHS</a>
+											<a href='' class='label label-bell'>Chemical</a>
+											<a href='' class='label label-bell'>HSF</a>
+											<a href='' class='label label-bell'>REACH</a>
+											
+										</p>
+									</div>
+									<div class="col-md-2 list-peoples-item-aside">
+										<a href="" title="" class='btn btn-primary btn--hire'>Hire me </a>
+										<p class='charging-standard'>
+											<sup>$</sup>858
+											<span>USD/hour</span>
+										</p>
+									</div>
+								</li>
+							</ul>
+							</section>
+						<nav class='text-center'>
+							<ul class="pagination">
+								<li class="disabled">
+									<a href="#" aria-label="Previous">
+										<span>&lt; Previous</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">5</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Next">
+										<span>Next &gt;</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						</div>
+					</div>
+
+					</article>
+				</div> 
+			</div>
+		</div>
+	</section>
+
+	<!-- footer.html -->
+	<footer class='footer'>
 <div class="container-fluid">
 <div class="row footer-nav">
 	<div class="col-md-2 footer-nav-list">
@@ -497,6 +718,6 @@
 </div>
 </div>
 </footer>
-<!-- footer.html end-->
+	<!-- footer.html end-->
 </body>
 </html>

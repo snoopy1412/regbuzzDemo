@@ -1,0 +1,1001 @@
+var countriesData = [{
+	text: 'United States',
+	short: 'us',
+	show: false
+}, {
+	text: 'Afghanistan',
+	short: 'af',
+	show: false
+}, {
+	text: 'Aland Islands',
+	short: 'ax',
+	show: false
+}, {
+	text: 'Albania',
+	short: 'al',
+	show: false
+}, {
+	text: 'Algeria',
+	short: 'dz',
+	show: false
+}, {
+	text: 'American Samoa',
+	short: 'as',
+	show: false
+}, {
+	text: 'Andorra',
+	short: 'ad',
+	show: false
+}, {
+	text: 'Angola',
+	short: 'ao',
+	show: false
+}, {
+	text: 'Anguilla',
+	short: 'ai',
+	show: false
+}, {
+	text: 'Antarctica',
+	short: 'aq',
+	show: false
+}, {
+	text: 'Antigua and Barbuda',
+	short: 'ag',
+	show: false
+}, {
+	text: 'Argentina',
+	short: 'ar',
+	show: false
+}, {
+	text: 'Armenia',
+	short: 'am',
+	show: false
+}, {
+	text: 'Aruba',
+	short: 'aw',
+	show: false
+}, {
+	text: 'Australia',
+	short: 'au',
+	show: false
+}, {
+	text: 'Austria',
+	short: 'at',
+	show: false
+}, {
+	text: 'Azerbaijan',
+	short: 'az',
+	show: false
+}, {
+	text: 'Bahamas',
+	short: 'bs',
+	show: false
+}, {
+	text: 'Bahrain',
+	short: 'bh',
+	show: false
+}, {
+	text: 'Bangladesh',
+	short: 'bd',
+	show: false
+}, {
+	text: 'Barbados',
+	short: 'bb',
+	show: false
+}, {
+	text: 'Belarus',
+	short: 'by',
+	show: false
+}, {
+	text: 'Belgium',
+	short: 'be',
+	show: false
+}, {
+	text: 'Belize',
+	short: 'bz',
+	show: false
+}, {
+	text: 'Benin',
+	short: 'bj',
+	show: false
+}, {
+	text: 'Bermuda',
+	short: 'bm',
+	show: false
+}, {
+	text: 'Bhutan',
+	short: 'bt',
+	show: false
+}, {
+	text: 'Bolivia',
+	short: 'bo',
+	show: false
+}, {
+	text: 'Bosnia and Herzegovina',
+	short: 'ba',
+	show: false
+}, {
+	text: 'Botswana',
+	short: 'bw',
+	show: false
+}, {
+	text: 'Bouvet Island',
+	short: 'bv',
+	show: false
+}, {
+	text: 'Brazil',
+	short: 'br',
+	show: false
+}, {
+	text: 'British Indian Ocean Territory',
+	short: 'io',
+	show: false
+}, {
+	text: 'Brunei Darussalam',
+	short: 'bn',
+	show: false
+}, {
+	text: 'Bulgaria',
+	short: 'bg',
+	show: false
+}, {
+	text: 'Burkina Faso',
+	short: 'bf',
+	show: false
+}, {
+	text: 'Burundi',
+	short: 'bi',
+	show: false
+}, {
+	text: 'Cambodia',
+	short: 'kh',
+	show: false
+}, {
+	text: 'Cameroon',
+	short: 'cm',
+	show: false
+}, {
+	text: 'Canada',
+	short: 'ca',
+	show: false
+}, {
+	text: 'Cape Verde',
+	short: 'cv',
+	show: false
+}, {
+	text: 'Caribbean Nations',
+	short: 'cb',
+	show: false
+}, {
+	text: 'Cayman Islands',
+	short: 'ky',
+	show: false
+}, {
+	text: 'Central African Republic',
+	short: 'cf',
+	show: false
+}, {
+	text: 'Chad',
+	short: 'td',
+	show: false
+}, {
+	text: 'Chile',
+	short: 'cl',
+	show: false
+}, {
+	text: 'China',
+	short: 'cn',
+	show: false
+}, {
+	text: 'Christmas Island',
+	short: 'cx',
+	show: false
+}, {
+	text: 'Cocos (Keeling) Islands',
+	short: 'cc',
+	show: false
+}, {
+	text: 'Colombia',
+	short: 'co',
+	show: false
+}, {
+	text: 'Comoros',
+	short: 'km',
+	show: false
+}, {
+	text: 'Congo',
+	short: 'cg',
+	show: false
+}, {
+	text: 'Cook Islands',
+	short: 'ck',
+	show: false
+}, {
+	text: 'Costa Rica',
+	short: 'cr',
+	show: false
+}, {
+	text: 'Cote D\' Ivoire(Ivory Coast)',
+	short: 'ci',
+	show: false
+}, {
+	text: 'Croatia',
+	short: 'hr',
+	show: false
+}, {
+	text: 'Cuba',
+	short: 'cu',
+	show: false
+}, {
+	text: 'Cyprus',
+	short: 'cy',
+	show: false
+}, {
+	text: 'Czech Republic',
+	short: 'cz',
+	show: false
+}, {
+	text: 'Democratic Republic of the Congo',
+	short: 'cd',
+	show: false
+}, {
+	text: 'Denmark',
+	short: 'dk',
+	show: false
+}, {
+	text: 'Djibouti',
+	short: 'dj',
+	show: false
+}, {
+	text: 'Dominica',
+	short: 'dm',
+	show: false
+}, {
+	text: 'Dominican Republic',
+	short: 'do',
+	show: false
+}, {
+	text: 'East Timor',
+	short: 'tp',
+	show: false
+}, {
+	text: 'Ecuador',
+	short: 'ec',
+	show: false
+}, {
+	text: 'Egypt',
+	short: 'eg',
+	show: false
+}, {
+	text: 'El Salvador',
+	short: 'sv',
+	show: false
+}, {
+	text: 'Equatorial Guinea',
+	short: 'gq',
+	show: false
+}, {
+	text: 'Eritrea',
+	short: 'er',
+	show: false
+}, {
+	text: 'Estonia',
+	short: 'ee',
+	show: false
+}, {
+	text: 'Ethiopia',
+	short: 'et',
+	show: false
+}, {
+	text: 'Falkland Islands (Malvinas)',
+	short: 'fk',
+	show: false
+}, {
+	text: 'Faroe Islands',
+	short: 'fo',
+	show: false
+}, {
+	text: 'Federated States of Micronesia',
+	short: 'fm',
+	show: false
+}, {
+	text: 'Fiji',
+	short: 'fj',
+	show: false
+}, {
+	text: 'Finland',
+	short: 'fi',
+	show: false
+}, {
+	text: 'France',
+	short: 'fr',
+	show: false
+}, {
+	text: 'French Guiana',
+	short: 'gf',
+	show: false
+}, {
+	text: 'French Polynesia',
+	short: 'pf',
+	show: false
+}, {
+	text: 'French Southern Territories',
+	short: 'tf',
+	show: false
+}, {
+	text: 'Gabon',
+	short: 'ga',
+	show: false
+}, {
+	text: 'Gambia',
+	short: 'gm',
+	show: false
+}, {
+	text: 'Georgia',
+	short: 'ge',
+	show: false
+}, {
+	text: 'Germany',
+	short: 'de',
+	show: false
+}, {
+	text: 'Ghana',
+	short: 'gh',
+	show: false
+}, {
+	text: 'Gibraltar',
+	short: 'gi',
+	show: false
+}, {
+	text: 'Greece',
+	short: 'gr',
+	show: false
+}, {
+	text: 'Greenland',
+	short: 'gl',
+	show: false
+}, {
+	text: 'Grenada',
+	short: 'gd',
+	show: false
+}, {
+	text: 'Guadeloupe',
+	short: 'gp',
+	show: false
+}, {
+	text: 'Guam',
+	short: 'gu',
+	show: false
+}, {
+	text: 'Guatemala',
+	short: 'gt',
+	show: false
+}, {
+	text: 'Guernsey',
+	short: 'gg',
+	show: false
+}, {
+	text: 'Guinea',
+	short: 'gn',
+	show: false
+}, {
+	text: 'Guinea-Bissau',
+	short: 'gw',
+	show: false
+}, {
+	text: 'Guyana',
+	short: 'gy',
+	show: false
+}, {
+	text: 'Haiti',
+	short: 'ht',
+	show: false
+}, {
+	text: 'Heard Island and McDonald Islands',
+	short: 'hm',
+	show: false
+}, {
+	text: 'Honduras',
+	short: 'hn',
+	show: false
+}, {
+	text: 'Hong Kong',
+	short: 'hk',
+	show: false
+}, {
+	text: 'Hungary',
+	short: 'hu',
+	show: false
+}, {
+	text: 'Iceland',
+	short: 'is',
+	show: false
+}, {
+	text: 'India',
+	short: 'in',
+	show: false
+}, {
+	text: 'Indonesia',
+	short: 'id',
+	show: false
+}, {
+	text: 'Iran',
+	short: 'ir',
+	show: false
+}, {
+	text: 'Iraq',
+	short: 'iq',
+	show: false
+}, {
+	text: 'Ireland',
+	short: 'ie',
+	show: false
+}, {
+	text: 'Isle of Man',
+	short: 'im',
+	show: false
+}, {
+	text: 'Israel',
+	short: 'il',
+	show: false
+}, {
+	text: 'Italy',
+	short: 'it',
+	show: false
+}, {
+	text: 'Jamaica',
+	short: 'jm',
+	show: false
+}, {
+	text: 'Japan',
+	short: 'jp',
+	show: false
+}, {
+	text: 'Jersey',
+	short: 'je',
+	show: false
+}, {
+	text: 'Jordan',
+	short: 'jo',
+	show: false
+}, {
+	text: 'Kazakhstan',
+	short: 'kz',
+	show: false
+}, {
+	text: 'Kenya',
+	short: 'ke',
+	show: false
+}, {
+	text: 'Kiribati',
+	short: 'ki',
+	show: false
+}, {
+	text: 'Korea',
+	short: 'kr',
+	show: false
+}, {
+	text: 'Korea (North)',
+	short: 'kp',
+	show: false
+}, {
+	text: 'Kosovo',
+	short: 'ko',
+	show: false
+}, {
+	text: 'Kuwait',
+	short: 'kw',
+	show: false
+}, {
+	text: 'Kyrgyzstan',
+	short: 'kg',
+	show: false
+}, {
+	text: 'Laos',
+	short: 'la',
+	show: false
+}, {
+	text: 'Latvia',
+	short: 'lv',
+	show: false
+}, {
+	text: 'Lebanon',
+	short: 'lb',
+	show: false
+}, {
+	text: 'Lesotho',
+	short: 'ls',
+	show: false
+}, {
+	text: 'Liberia',
+	short: 'lr',
+	show: false
+}, {
+	text: 'Libya',
+	short: 'ly',
+	show: false
+}, {
+	text: 'Liechtenstein',
+	short: 'li',
+	show: false
+}, {
+	text: 'Lithuania',
+	short: 'lt',
+	show: false
+}, {
+	text: 'Luxembourg',
+	short: 'lu',
+	show: false
+}, {
+	text: 'Macao',
+	short: 'mo',
+	show: false
+}, {
+	text: 'Macedonia',
+	short: 'mk',
+	show: false
+}, {
+	text: 'Madagascar',
+	short: 'mg',
+	show: false
+}, {
+	text: 'Malawi',
+	short: 'mw',
+	show: false
+}, {
+	text: 'Malaysia',
+	short: 'my',
+	show: false
+}, {
+	text: 'Maldives',
+	short: 'mv',
+	show: false
+}, {
+	text: 'Mali',
+	short: 'ml',
+	show: false
+}, {
+	text: 'Malta',
+	short: 'mt',
+	show: false
+}, {
+	text: 'Marshall Islands',
+	short: 'mh',
+	show: false
+}, {
+	text: 'Martinique',
+	short: 'mq',
+	show: false
+}, {
+	text: 'Mauritania',
+	short: 'mr',
+	show: false
+}, {
+	text: 'Mauritius',
+	short: 'mu',
+	show: false
+}, {
+	text: 'Mayotte',
+	short: 'yt',
+	show: false
+}, {
+	text: 'Mexico',
+	short: 'mx',
+	show: false
+}, {
+	text: 'Moldova',
+	short: 'md',
+	show: false
+}, {
+	text: 'Monaco',
+	short: 'mc',
+	show: false
+}, {
+	text: 'Mongolia',
+	short: 'mn',
+	show: false
+}, {
+	text: 'Montenegro',
+	short: 'me',
+	show: false
+}, {
+	text: 'Montserrat',
+	short: 'ms',
+	show: false
+}, {
+	text: 'Morocco',
+	short: 'ma',
+	show: false
+}, {
+	text: 'Mozambique',
+	short: 'mz',
+	show: false
+}, {
+	text: 'Myanmar',
+	short: 'mm',
+	show: false
+}, {
+	text: 'Namibia',
+	short: 'na',
+	show: false
+}, {
+	text: 'Nauru',
+	short: 'nr',
+	show: false
+}, {
+	text: 'Nepal',
+	short: 'np',
+	show: false
+}, {
+	text: 'Netherlands',
+	short: 'nl',
+	show: false
+}, {
+	text: 'Netherlands Antilles',
+	short: 'an',
+	show: false
+}, {
+	text: 'New Caledonia',
+	short: 'nc',
+	show: false
+}, {
+	text: 'New Zealand',
+	short: 'nz',
+	show: false
+}, {
+	text: 'Nicaragua',
+	short: 'ni',
+	show: false
+}, {
+	text: 'Niger',
+	short: 'ne',
+	show: false
+}, {
+	text: 'Nigeria',
+	short: 'ng',
+	show: false
+}, {
+	text: 'Niue',
+	short: 'nu',
+	show: false
+}, {
+	text: 'Norfolk Island',
+	short: 'nf',
+	show: false
+}, {
+	text: 'Northern Mariana Islands',
+	short: 'mp',
+	show: false
+}, {
+	text: 'Norway',
+	short: 'no',
+	show: false
+}, {
+	text: 'Pakistan',
+	short: 'pk',
+	show: false
+}, {
+	text: 'Palau',
+	short: 'pw',
+	show: false
+}, {
+	text: 'Palestinian Territory',
+	short: 'ps',
+	show: false
+}, {
+	text: 'Panama',
+	short: 'pa',
+	show: false
+}, {
+	text: 'Papua New Guinea',
+	short: 'pg',
+	show: false
+}, {
+	text: 'Paraguay',
+	short: 'py',
+	show: false
+}, {
+	text: 'Peru',
+	short: 'pe',
+	show: false
+}, {
+	text: 'Philippines',
+	short: 'ph',
+	show: false
+}, {
+	text: 'Pitcairn',
+	short: 'pn',
+	show: false
+}, {
+	text: 'Poland',
+	short: 'pl',
+	show: false
+}, {
+	text: 'Portugal',
+	short: 'pt',
+	show: false
+}, {
+	text: 'Puerto Rico',
+	short: 'pr',
+	show: false
+}, {
+	text: 'Qatar',
+	short: 'qa',
+	show: false
+}, {
+	text: 'Reunion',
+	short: 're',
+	show: false
+}, {
+	text: 'Romania',
+	short: 'ro',
+	show: false
+}, {
+	text: 'Russian Federation',
+	short: 'ru',
+	show: false
+}, {
+	text: 'Rwanda',
+	short: 'rw',
+	show: false
+}, {
+	text: 'S. Georgia and S. Sandwich Islands',
+	short: 'gs',
+	show: false
+}, {
+	text: 'Saint Helena',
+	short: 'sh',
+	show: false
+}, {
+	text: 'Saint Kitts and Nevis',
+	short: 'kn',
+	show: false
+}, {
+	text: 'Saint Lucia',
+	short: 'lc',
+	show: false
+}, {
+	text: 'Saint Pierre and Miquelon',
+	short: 'pm',
+	show: false
+}, {
+	text: 'Saint Vincent and the Grenadines',
+	short: 'vc',
+	show: false
+}, {
+	text: 'Samoa',
+	short: 'ws',
+	show: false
+}, {
+	text: 'San Marino',
+	short: 'sm',
+	show: false
+}, {
+	text: 'Sao Tome and Principe',
+	short: 'st',
+	show: false
+}, {
+	text: 'Saudi Arabia',
+	short: 'sa',
+	show: false
+}, {
+	text: 'Senegal',
+	short: 'sn',
+	show: false
+}, {
+	text: 'Serbia',
+	short: 'rs',
+	show: false
+}, {
+	text: 'Serbia and Montenegro',
+	short: 'cs',
+	show: false
+}, {
+	text: 'Seychelles',
+	short: 'sc',
+	show: false
+}, {
+	text: 'Sierra Leone',
+	short: 'sl',
+	show: false
+}, {
+	text: 'Singapore',
+	short: 'sg',
+	show: false
+}, {
+	text: 'Slovak Republic',
+	short: 'sk',
+	show: false
+}, {
+	text: 'Slovenia',
+	short: 'si',
+	show: false
+}, {
+	text: 'Solomon Islands',
+	short: 'sb',
+	show: false
+}, {
+	text: 'Somalia',
+	short: 'so',
+	show: false
+}, {
+	text: 'South Africa',
+	short: 'za',
+	show: false
+}, {
+	text: 'South Sudan',
+	short: 'ss',
+	show: false
+}, {
+	text: 'Spain',
+	short: 'es',
+	show: false
+}, {
+	text: 'Sri Lanka',
+	short: 'lk',
+	show: false
+}, {
+	text: 'Sudan',
+	short: 'sd',
+	show: false
+}, {
+	text: 'Sultanate of Oman',
+	short: 'om',
+	show: false
+}, {
+	text: 'Suriname',
+	short: 'sr',
+	show: false
+}, {
+	text: 'Svalbard and Jan Mayen',
+	short: 'sj',
+	show: false
+}, {
+	text: 'Swaziland',
+	short: 'sz',
+	show: false
+}, {
+	text: 'Sweden',
+	short: 'se',
+	show: false
+}, {
+	text: 'Switzerland',
+	short: 'ch',
+	show: false
+}, {
+	text: 'Syria',
+	short: 'sy',
+	show: false
+}, {
+	text: 'Taiwan',
+	short: 'tw',
+	show: false
+}, {
+	text: 'Tajikistan',
+	short: 'tj',
+	show: false
+}, {
+	text: 'Tanzania',
+	short: 'tz',
+	show: false
+}, {
+	text: 'Thailand',
+	short: 'th',
+	show: false
+}, {
+	text: 'Timor-Leste',
+	short: 'tl',
+	show: false
+}, {
+	text: 'Togo',
+	short: 'tg',
+	show: false
+}, {
+	text: 'Tokelau',
+	short: 'tk',
+	show: false
+}, {
+	text: 'Tonga',
+	short: 'to',
+	show: false
+}, {
+	text: 'Trinidad and Tobago',
+	short: 'tt',
+	show: false
+}, {
+	text: 'Tunisia',
+	short: 'tn',
+	show: false
+}, {
+	text: 'Turkey',
+	short: 'tr',
+	show: false
+}, {
+	text: 'Turkmenistan',
+	short: 'tm',
+	show: false
+}, {
+	text: 'Turks and Caicos Islands',
+	short: 'tc',
+	show: false
+}, {
+	text: 'Tuvalu',
+	short: 'tv',
+	show: false
+}, {
+	text: 'Uganda',
+	short: 'ug',
+	show: false
+}, {
+	text: 'Ukraine',
+	short: 'ua',
+	show: false
+}, {
+	text: 'United Arab Emirates',
+	short: 'ae',
+	show: false
+}, {
+	text: 'United Kingdom',
+	short: 'gb',
+	show: false
+}, {
+	text: 'Uruguay',
+	short: 'uy',
+	show: false
+}, {
+	text: 'Uzbekistan',
+	short: 'uz',
+	show: false
+}, {
+	text: 'Vanuatu',
+	short: 'vu',
+	show: false
+}, {
+	text: 'Vatican City State (Holy See)',
+	short: 'va',
+	show: false
+}, {
+	text: 'Venezuela',
+	short: 've',
+	show: false
+}, {
+	text: 'Vietnam',
+	short: 'vn',
+	show: false
+}, {
+	text: 'Virgin Islands (British)',
+	short: 'vg',
+	show: false
+}, {
+	text: 'Virgin Islands (U.S.)',
+	short: 'vi',
+	show: false
+}, {
+	text: 'Wallis and Futuna',
+	short: 'wf',
+	show: false
+}, {
+	text: 'Western Sahara',
+	short: 'eh',
+	show: false
+}, {
+	text: 'Yemen',
+	short: 'ye',
+	show: false
+}, {
+	text: 'Yugoslavia',
+	short: 'yu',
+	show: false
+}, {
+	text: 'Zambia',
+	short: 'zm',
+	show: false
+}, {
+	text: 'Zimbabwe',
+	short: 'zw',
+	show: false
+}, {
+	text: 'Other',
+	short: 'oo',
+	show: false
+}, ]
