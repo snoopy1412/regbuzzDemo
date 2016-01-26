@@ -78,7 +78,7 @@ var vm = new Vue({
           }
         };
       }else{
-        this.countries = getShow(countries,10);
+        this.countries = getShow(countriesData,10);
       }
       
     }
