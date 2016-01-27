@@ -43,7 +43,7 @@ require.config({
   }
 });
 
-require(['jquery','bootstrap','index', 'dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help','project-list'], function($,bootstrap,index, dashboard, list, profile, publish, register, blog,setting,help,projectList) {
+require(['jquery','bootstrap','index', 'dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help','project-list','top-up'], function($) {
   layer.config({
     path: './plugins/layer/' //layer.js所在的目录，可以是绝对目录，也可以是相对目录
   });

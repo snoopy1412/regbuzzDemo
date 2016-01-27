@@ -1,0 +1,46 @@
+@mixin tabs-custom($bgColor,$linkColor,$linkHoverColor){
+	@extend %custom-common;
+	background-color: $bgColor;
+	&>li{
+		&>a{
+			color:$linkColor;
+			&:hover{
+				color:$linkHoverColor;
+			}
+		}
+		&.active{
+			a{
+				color:$linkHoverColor;
+			}
+		}
+	}
+}
+%custom-common{
+	border-radius: 4px 4px 0 0;
+	&>li{
+		margin-top: -10px;
+		&>a{
+			padding: 20px 15px 10px;
+			display: block;
+			border-radius: 4px 4px 0 0;
+			margin-right: 0;
+			line-height: 1.43;
+			border: 1px solid transparent;
+			font-weight: 600;
+			-webkit-transition: all 0.25s;
+				-o-transition: all 0.25s;
+				transition: all 0.25s;	
+			&:hover{
+				background-color: #fff;
+				border-bottom-color: transparent;
+			}
+		}
+		&.active{
+			a{
+				background-color: #fff;
+				border-bottom-color: transparent;
+			}
+		}
+
+	}
+}

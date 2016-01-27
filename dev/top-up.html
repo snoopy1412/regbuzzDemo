@@ -9,7 +9,7 @@
 
 <!-- /header -->
 <section class='com-main'>
-<div class="container">
+<div class="container" id='vue-top-up'>
 	<div class="row">
 		<div class="col-md-8 com-content">
 			<div class="panel panel-default">
@@ -39,7 +39,9 @@
 						</div>
 				</div>
 				<div class="panel-body topUp-body">
-					<div class="row topUp-body-credit" style='display: none'>
+
+					<!-- 信用卡 -->
+					<div class="row topUp-body-item topUp-body-credit active">
 						<div class="col-md-8">
 							<h2 class='topUp-body-title'>What card would you like to pay with?</h2>
 							<form>
@@ -142,15 +144,17 @@
 								<label>存款金额</label>
 									 <div class="input-group">
 								      <div class="input-group-addon">USD</div>
-								      <input type="text" class="form-control" placeholder="Amount">
+								      <input type="text" class="form-control" placeholder="Amount" v-model='amount'>
 								    </div>
 								</div>
 								<input type="submit" class='btn btn-primary' value='确认$247.12 USD'>
 							</form>
 						</div>
 					</div>
-					<div class="row topUp-body-paypal"  style='display: none'>
-						<div class="col-md-8">
+
+					<!-- paypal -->
+					<div class="row topUp-body-item topUp-body-paypal" >
+						<div class="col-md-6">
 							<h2 class='topUp-body-title'>
 								<img src="./img/register/paypal-logo.png" height="34" width="139">
 							</h2>
@@ -159,15 +163,17 @@
 								<label>存款金额</label>
 									 <div class="input-group">
 								      <div class="input-group-addon">USD</div>
-								      <input type="text" class="form-control" placeholder="Amount">
+								      <input type="text" class="form-control" placeholder="Amount"  v-model='amount'>
 								    </div>
 								</div>
 								<input type="submit" class='btn btn-primary' value='确认$247.12 USD'>
 							</form>
 						</div>
 					</div>
-					<div class="row topUp-body-stripe" >
-						<div class="col-md-8">
+
+					<!-- stripe -->
+					<div class="row topUp-body-item topUp-body-stripe" >
+						<div class="col-md-6">
 							<h2 class='topUp-body-title'>
 								<img src="./img/register/stripe-logo.png" height="27" width="63" alt="">
 							</h2>
@@ -176,15 +182,17 @@
 								<label>存款金额</label>
 									 <div class="input-group">
 								      <div class="input-group-addon">USD</div>
-								      <input type="text" class="form-control" placeholder="Amount">
+								      <input type="text" class="form-control" placeholder="Amount" v-model='amount'>
 								    </div>
 								</div>
 								<input type="submit" class='btn btn-primary' value='确认$247.12 USD'>
 							</form>
 						</div>
 					</div>
-					<div class="row topUp-body-alipay" style='display: none'>
-						<div class="col-md-8">
+
+					<!-- 阿里国际 -->
+					<div class="row topUp-body-item topUp-body-alipay" >
+						<div class="col-md-6">
 							<h2 class='topUp-body-title'>
 								<img src="./img/register/alipay-logo.png" height="51" width="120">
 							</h2>
@@ -193,7 +201,7 @@
 								<label>存款金额</label>
 									 <div class="input-group">
 								      <div class="input-group-addon">USD</div>
-								      <input type="text" class="form-control" placeholder="Amount">
+								      <input type="text" class="form-control" placeholder="Amount"  v-model='amount'>
 								    </div>
 								</div>
 								<input type="submit" class='btn btn-primary' value='确认$247.12 USD'>
@@ -214,7 +222,7 @@
 					<ul class='topUp-aside-body-list'>
 						<li class='table-display'>
 							<span class='table-left'>存款金额</span>
-							<span class='table-right'>$240.00</span>
+							<span class='table-right'>{{amount | currency}}</span>
 						</li>
 						<li class='table-display'>
 							<span class='table-left'>存款费用 <i class="fa fa-question-circle"></i> </span>

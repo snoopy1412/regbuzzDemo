@@ -1,4 +1,50 @@
-var countriesData = [{
+var countriesData = [
+{
+	text: 'Australia',
+	short: 'au',
+	show: false
+}, 
+ {
+	text: 'Canada',
+	short: 'ca',
+	show: false
+},
+ {
+	text: 'China',
+	short: 'cn',
+	show: false
+}, 
+ {
+	text: 'France',
+	short: 'fr',
+	show: false
+}, 
+ {
+	text: 'Germany',
+	short: 'de',
+	show: false
+}, 
+ {
+	text: 'Italy',
+	short: 'it',
+	show: false
+}, 
+ {
+	text: 'Japan',
+	short: 'jp',
+	show: false
+}, 
+ {
+	text: 'Korea',
+	short: 'kr',
+	show: false
+}, 
+ {
+	text: 'United Kingdom',
+	short: 'gb',
+	show: false
+}, 
+{
 	text: 'United States',
 	short: 'us',
 	show: false
@@ -53,10 +99,6 @@ var countriesData = [{
 }, {
 	text: 'Aruba',
 	short: 'aw',
-	show: false
-}, {
-	text: 'Australia',
-	short: 'au',
 	show: false
 }, {
 	text: 'Austria',
@@ -155,10 +197,6 @@ var countriesData = [{
 	short: 'cm',
 	show: false
 }, {
-	text: 'Canada',
-	short: 'ca',
-	show: false
-}, {
 	text: 'Cape Verde',
 	short: 'cv',
 	show: false
@@ -182,11 +220,7 @@ var countriesData = [{
 	text: 'Chile',
 	short: 'cl',
 	show: false
-}, {
-	text: 'China',
-	short: 'cn',
-	show: false
-}, {
+},{
 	text: 'Christmas Island',
 	short: 'cx',
 	show: false
@@ -306,11 +340,7 @@ var countriesData = [{
 	text: 'Finland',
 	short: 'fi',
 	show: false
-}, {
-	text: 'France',
-	short: 'fr',
-	show: false
-}, {
+},{
 	text: 'French Guiana',
 	short: 'gf',
 	show: false
@@ -334,11 +364,7 @@ var countriesData = [{
 	text: 'Georgia',
 	short: 'ge',
 	show: false
-}, {
-	text: 'Germany',
-	short: 'de',
-	show: false
-}, {
+},{
 	text: 'Ghana',
 	short: 'gh',
 	show: false
@@ -438,19 +464,11 @@ var countriesData = [{
 	text: 'Israel',
 	short: 'il',
 	show: false
-}, {
-	text: 'Italy',
-	short: 'it',
-	show: false
-}, {
+},{
 	text: 'Jamaica',
 	short: 'jm',
 	show: false
-}, {
-	text: 'Japan',
-	short: 'jp',
-	show: false
-}, {
+},{
 	text: 'Jersey',
 	short: 'je',
 	show: false
@@ -470,11 +488,7 @@ var countriesData = [{
 	text: 'Kiribati',
 	short: 'ki',
 	show: false
-}, {
-	text: 'Korea',
-	short: 'kr',
-	show: false
-}, {
+},{
 	text: 'Korea (North)',
 	short: 'kp',
 	show: false
@@ -934,11 +948,7 @@ var countriesData = [{
 	text: 'United Arab Emirates',
 	short: 'ae',
 	show: false
-}, {
-	text: 'United Kingdom',
-	short: 'gb',
-	show: false
-}, {
+},{
 	text: 'Uruguay',
 	short: 'uy',
 	show: false

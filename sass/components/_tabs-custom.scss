@@ -1,0 +1,15 @@
+.nav-tabs-custom-default{
+	@include tabs-custom(#e0e1e7,#898989,#65cea7)
+}
+.nav-tabs-custom-dark{
+	@include tabs-custom(#424F63,#fff,#424F63)
+}
+.nav-tabs-custom-turquoise{
+	@include tabs-custom(#65CEA7,#fff,#65CEA7)
+}
+.nav-tabs-custom-blue{
+	@include tabs-custom(#5BC0DE,#fff,#5BC0DE)
+}
+.nav-tabs-custom-yellow{
+	@include tabs-custom(#F0AD4E,#fff,#F0AD4E)
+}

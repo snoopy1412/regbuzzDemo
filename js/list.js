@@ -61,17 +61,11 @@ var vm = new Vue({
   methods : {
     selectCountry : function(){
       var text = this.countryMsg.trim();
-      console.log(text);
-      var reg = new RegExp("^"+text+"\S*",'gim');
-     
-      var that = this;
-      // console.log(reg);
+      // var reg = new RegExp("^"+text+"\S*",'gim');
       if(text){
         for (var i = 0; i < this.countries.length; i++) {
           var todoText = this.countries[i].text.trim(); 
-          console.log(todoText)
-          if(reg.test(todoText)){
-            console.log(todoText)
+          if(todoText.toLowerCase().indexOf(text.toLowerCase())!=-1){
             this.countries[i].show = true;
           }else{
             this.countries[i].show = false;
@@ -80,11 +74,11 @@ var vm = new Vue({
       }else{
         this.countries = getShow(countriesData,10);
       }
-      
     }
   }
 })
 
+// 初始的值
 function getShow(array,num){
   var newArray = array;
   for (var i = 0; i < newArray.length; i++) {
@@ -93,7 +87,6 @@ function getShow(array,num){
   for (var i = 0; i < num; i++) {
     newArray[i].show = true;
   };
-
   return newArray;
 }
 

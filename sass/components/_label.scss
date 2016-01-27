@@ -2,23 +2,6 @@
 // Labels
 // --------------------------------------------------
 
-.label {
-  display: inline-block;
-  line-height: 1;
-  vertical-align: baseline;
-  margin: 0 .14285714rem;
-
-  background-image: none;
-  padding: .3em .6em .4em; 
-  text-transform: none;
-  font-weight: 700;
-  font-size: 1.2rem;
-  border: 0 solid transparent;
-  border-radius: .28571429rem;
-  -webkit-transition: background .1s ease;
-  transition: background .1s ease;
-  // margin-left: 1rem;
-}
 
 // Add hover effects
 %hoverFont{
@@ -44,15 +27,11 @@
   }
 }
 
+.label-skills{
+  @include label-variant(lighten($palette-blue,30%));
+  @extend %hoverFont;
+}
 
-.label-news {
-  @include label-variant(#f8ac59);
-  @extend %hoverFont;
-}
-.label-bell{
-  @include label-variant(#1ab394);
-  @extend %hoverFont;
-}
 .label-hotTags{
   @include label-variant(#3DA9F7);
   @extend %hoverFont;

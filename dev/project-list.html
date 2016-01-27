@@ -29,7 +29,7 @@
 				<div class='employer-view'>
 					
 					<!--草稿  -->
-					<section class='setion'>
+					<section class='mb-60'>
 						<table class="table table-bordered">
 							<thead>
 							<tr class='active'>
@@ -40,16 +40,26 @@
 							</thead>
 							<tbody>
 								<tr>
-								<td colspan='3'>
-								没有草稿
+								<td>
+									<a href="" title="">我是一个示例草稿</a>
+								</td>
+								<td>
+									草稿
+								</td>
+								<td>
+									<button type="button" class='btn btn-primary btn-sm'>发布</button>
+									<button type="button" class='btn btn-warning btn-sm'>编辑</button>
+									<button type="button" class='btn btn-danger btn-sm'>删除</button>
 								</td>
 								</tr>
 							</tbody>
 						</table>
 					</section>
-
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs">
+					
+					<!-- 主要内容 -->
+					<section>
+						<!-- Nav tabs -->
+					<ul class="nav nav-tabs nav-tabs-custom-dark">
 						<li role="presentation" class="active">
 							<a href="#open-for-bidding" data-toggle="tab">Open for Bidding</a>
 						</li>
@@ -87,7 +97,7 @@
 								<div class="input-group">
 									<select class='form-control'>
 										<option value="5"> 显示5</option>
-										<option value="10"> 显示10</option>
+										<option value="10" selected="true"> 显示10</option>
 										<option value="15"> 显示15</option>
 										<option value="20"> 显示20</option>
 										<option value="100"> 显示100</option>
@@ -222,6 +232,8 @@
 							</table>
 						</div>
 					</div>
+					</section>
+					
 				</div>
 			</section>
 
@@ -230,7 +242,7 @@
 				<!-- 威客身份 -->
 				<div class="provider-view">
 					  <!-- Nav tabs -->
-					  <ul class="nav nav-tabs" role="tablist">
+					  <ul class="nav nav-tabs nav-tabs-custom-dark">
 						    <li role="presentation" class="active">
 						    	<a href="#active-bids" data-toggle="tab">Active Bids</a>
 		                	</li>

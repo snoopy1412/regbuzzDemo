@@ -63,6 +63,9 @@
 						<div class="list-aside-item panel panel-default" id='vue-countries'>
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Country</h4>
+								<div class='form-group'>
+									<input type="text" name="" value="" placeholder="输入获得更多国家" class='form-control' v-on:keyup='selectCountry | debounce 200' v-model='countryMsg'>
+								</div>
 								<ul class="checkbox-list">							        
 									<li class="checkbox" v-for='country in countries' v-show='country.show'>
 							        	<label class="c-input c-checkbox" for="{{country.short}}">
@@ -72,9 +75,7 @@
 										</label>
 									</li>
 								</ul>
-								<div class='form-group'>
-									<input type="text" name="" value="" placeholder="输入获得更多国家" class='form-control' v-on:keyup='selectCountry | debounce 200' v-model='countryMsg'>
-								</div>
+								
 							</div>
 						</div>
 
@@ -122,16 +123,23 @@
 										 {{language.local}}
 										</label>
 									</li>
-									
 								</ul>
 							</div>
 						</div>
 
 						<!-- 在线 -->
 						<div class="list-aside-item list-aside-item-online panel panel-default">
-							<div class="panel-body form-inline">
+							<div class="panel-body">
 								<h4 class='list-aside-item-title'>在线</h4>
-								
+								<ul class='checkbox-list'>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox">
+										  <input type="checkbox">
+										  <span class="c-indicator"></span>
+										  Online providers only
+										</label>
+									</li>
+								</ul>
 							</div>
 						</div>
 						
@@ -198,11 +206,11 @@
 											 <a href=''>33 Reviews</a>     			
 										</div>
 										<p class='list-peoples-item-skills'>
-											<a href="" title="" class='label label-bell'>GHS</a>
-											<a href='' class='label label-bell'>Chemical</a>
-											<a href='' class='label label-bell'>HSF</a>
-											<a href='' class='label label-bell'>REACH</a>
-											<a href='' class='label label-bell'>English</a>
+											<a href="" title="" class='label label-skills'>GHS</a>
+											<a href='' class='label label-skills'>Chemical</a>
+											<a href='' class='label label-skills'>HSF</a>
+											<a href='' class='label label-skills'>REACH</a>
+											<a href='' class='label label-skills'>English</a>
 										</p>
 									</div>
 									<div class="col-md-2 list-peoples-item-aside">
@@ -233,10 +241,10 @@
 											 <a href=''>33 Reviews</a>     			
 										</div>
 										<p class='list-peoples-item-skills'>
-											<a href="" title="" class='label label-bell'>GHS</a>
-											<a href='' class='label label-bell'>Chemical</a>
-											<a href='' class='label label-bell'>HSF</a>
-											<a href='' class='label label-bell'>REACH</a>
+											<a href="" title="" class='label label-skills'>GHS</a>
+											<a href='' class='label label-skills'>Chemical</a>
+											<a href='' class='label label-skills'>HSF</a>
+											<a href='' class='label label-skills'>REACH</a>
 											
 										</p>
 									</div>

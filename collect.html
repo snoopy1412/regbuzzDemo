@@ -18,10 +18,9 @@
 	<![endif]-->
 </head>
 <!-- head.html end-->
-
 <body>
-<!-- header.html -->
-	<!-- /header -->
+	<!-- header.html -->
+		<!-- /header -->
 	<header class="header">
 		<nav class="navbar">
 			<div class="container">
@@ -33,27 +32,25 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="index.html">
 					<img src='img/header/logo4.png' height="32" width="123"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" >
-
 					<form action="" class="navbar-form navbar-left search-form">
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-btn">
-								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars fa-fw"></i>&nbsp;All <span class="caret"></span></button>
-								        <ul class="dropdown-menu">
-								          <li><a href="#"><i class="fa fa-bars fa-fw"></i>&nbsp;All</a></li>
-								          <li role="separator" class="divider"></li>
-								          <li><a href="#"><i class="fa fa-tasks fa-fw"></i>&nbsp;Projects</a></li>
+								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search fa-fw"></i>&nbsp;All&nbsp;<span class="caret"></span></button>
+								        <ul class="dropdown-menu search-select-response">
+								          <li><a href="#"><i class="fa fa-search fa-fw"></i>&nbsp;All</a></li>
+								          <li><a href="#"><i class="fa fa-suitcase fa-fw"></i>&nbsp;Projects</a></li>
 								          <li><a href="#"><i class="fa fa-user fa-fw"></i>&nbsp;Providers</a></li>
-								          <li><a href="#"><i class="fa fa-info-circle fa-fw"></i>&nbsp;Questions</a></li>
-								          
+								          <li><a href="#"><i class="fa fa-question-circle fa-fw"></i>&nbsp;Questions</a></li>
+								          <li><a href="#"><i class="fa fa-book fa-fw"></i>&nbsp;Articles</a></li>
 								        </ul>
-						      	</div><!-- /btn-group -->
-								<input type="text" name="" value="" placeholder="Search for projects, questions,articles..." class='form-control' style='min-width: 300px'  data-toggle="dropdown">
+						      	</div>
+								<input type="text" name="" value="" placeholder="Search for projects, providers,questions,articles..." class='form-control' style='min-width: 300px'  data-toggle="dropdown">
 								<div class='dropdown-menu search-text-response'>
 									<ul class='list-unstyled'>
 										<li class='search-text-response-title clearfix'>
@@ -113,7 +110,7 @@
 					<ul class="nav navbar-nav navbar-right header-utilities">
 						<li class='dropdown'>
 							<a href="javascript:;" title="" class='dropdown-toggle'  data-toggle="dropdown">
-								<i class='fa fa-book'></i>
+								<i class="fa fa-book"></i>
 							</a>
 							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow header-utilities--helpCenter">
 								<div class="panel panel-default">
@@ -174,7 +171,7 @@
 						<li class='dropdown'>
 							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
 								<i class='fa fa-envelope'></i>
-								<span class='label label-news inform'>8</span>
+								<span class='label label-warning inform'>8</span>
 							</a>
 							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow">
 							<div class="panel panel-default">
@@ -206,7 +203,7 @@
 						<li>
 							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
 								<i class='fa fa-bell'></i>
-								<span class='label label-bell inform'>2</span>
+								<span class='label label-success inform'>2</span>
 							</a>
 							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow">
 								<div class="panel panel-default">
@@ -327,222 +324,164 @@
 			</div>
 		</nav>
 </header>
-<!-- header.html end-->
-
-<!-- /header -->
-<section class='com-main'>
-	<div class="container container--order">
-		<header class='order-header section'>
-			<h1>Order Confirmation</h1>
-			<div class="row">
-				<div class="col-md-7">
-					<dl>
-						<dt><span class="order-title-prefix">Project Title</span></dt>
-						<dd>
-							<h2 class="order-title">Need a logo about Children Association</h2>
-						</dd>
-					</dl>
-                    <div class='cooperators'>
-                    	<dt><span class="order-title-prefix">合作双方</span></dt>
-						<dd>
-							<span class='dd-fixed-width'>雇主：</span><a href="" title="">Aaron Su</a>
-						</dd>
-						<dd>
-							<span class='dd-fixed-width'>咨询师：</span><a href="" title="">Tom Jack</a>
-						</dd>
-                    </div>
-				</div>
-				<div class="col-md-5">
-					<div class="order-info-id"><span>Project ID：</span> 9299728</div>
-                    <div class="order-info-date"><span>Project Date：</span> 22 March 2016</div>
-                    <div class='due-warp'>
-                    	<span class="t-due">TOTAL DUE</span>
-                    	<h2 class="due-amount">$ 3120.00</h2>
-                    </div>
-                    
-				</div>
-			</div>
-		</header>
-		<div class='panel panel-default'>
-			<div class="panel-heading">
-				Project Deliverables
-			</div>
-			<div class="panel-body">
-				<div class="form-group">
-					<label for="estimated" class='col-md-2'>Estimated Deliverables</label>
-					<div class="col-md-9">
-						<table class='table--proposal'>
-							<tbody>
-								<tr>
-									<td width="80%" class='text-left'>
-										<input type="text" class='form-control' value='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' disabled="true">
-									</td>
-									<td width="20%" class='text-right'>
-										<button class='btn btn-primary btn-sm'><i class="fa fa-plus"></i></button>
-										<button class='btn btn-warning btn-sm'><i class="fa fa-pencil"></i></button>
-										<button class='btn btn-danger btn-sm'><i class="fa fa-trash"></i></button>
-									</td>
-								</tr>
-								<tr>
-									<td class='text-left'>
-										<input type="text" class='form-control'  value='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' disabled="true">
-									</td>
-									<td class='text-right'>
-										<button class='btn btn-primary btn-sm'><i class="fa fa-plus"></i></button>
-										<button class='btn btn-warning btn-sm'><i class="fa fa-pencil"></i></button>
-										<button class='btn btn-danger btn-sm'><i class="fa fa-trash"></i></button>
-									</td>
-								</tr>
-							</tbody>
-							
-						</table>
-					</div>
-				</div>
-			</div>
+	<!-- header.html end-->
+	<!-- /header -->
+	<section class='com-main'>
+		<div class="container section">
+			<dl class='pull-left' style='width: 200px'>
+				<dt>用户模块</dt>
+				<dd>
+				<ul>
+					<li><a href="register.html" target='_blank'>注册页</a></li>
+					
+					<li>
+						<a href="login.html" title="" target='_blank'>登录</a>
+					</li>
+					<li><a href="setting.html" target='_blank'>设置页</a></li>
+					<li>
+						<a href="membership.html" title="" target='_blank'>会员费用</a>
+					</li>
+					<li>
+						<a href="notice.html" title="" target='_blank'>通知</a>
+					</li>
+					<li>
+						<a href="account.html" target='_blank'>账户信息</a>
+					</li>
+					<li>
+						<a href="phone-verify.html" title="" target='_blank'>手机验证</a>
+					</li>
+					<li>
+						<a href="mail-verify.html" title="" target='_blank'>邮箱验证</a>
+					</li>
+					<li>
+						<a href="id-verification.html" title="" target='_blank'>身份验证</a>
+					</li>
+					<li>
+						<a href="profile.html" title="" target='_blank'>个人简历</a>
+					</li>
+				</ul>
+				</dd>
+			</dl>
+			<dl class='pull-left' style='width: 200px'>
+				<dt>项目模块</dt>
+				<dd>
+				<ul>
+					<li>
+						<a href="publish-quick.html" title="" target='_blank'>快速项目发布页</a>
+					</li>
+					<li>
+						<a href="publish-quick-result.html" title="" target='_blank'>快速项目详细页</a>
+					</li>
+					<li>
+						<a href="publish-quick-proposal.html" title="" target='_blank'>快速项目报名页</a>
+					</li>
+					<li>
+						<a href="publish-ask.html" title="" target='_blank'>问答项目发布页</a>
+					</li>
+					<li>
+						<a href="publish-ask-result.html" title="" target='_blank'>问答项目详细页</a>
+					</li>
+					
+					<li>
+						<a href="publish-order.html" title="" target='_blank'>项目订单页</a>
+					</li>	
+					<li>
+						<a href="list-projects.html" title="" target='_blank'>搜索（项目）</a>
+					</li>
+					<li>
+						<a href="list-providers.html" title="" target='_blank'>搜索（咨询师）</a>
+					</li>
+					<li>
+						<a href="list-questions.html" title="" target='_blank'>搜索（问题）</a>
+					</li>
+					<li>
+						<a href="list-blogs.html" title="" target='_blank'>搜索（博客备用）</a>
+					</li>
+					<li>
+						<a href="project-list.html" title="" target='_blank'>项目管理</a>
+					</li>
+				
+				</ul>
+				</dd>
+			</dl>
+			<dl class='pull-left' style='width: 200px'>
+				<dt>财务模块</dt>
+				<dd>
+				<ul>
+					<li><a href="top-up.html" target='_blank'>存款页</a></li>
+					<li><a href="withdraw-mail.html" target='_blank'>取款（验证邮箱）</a></li>
+					<li><a href="withdraw-phone.html" target='_blank'>取款（验证手机）</a></li>
+					<li><a href="withdraw.html" target='_blank'>取款页</a></li>
+					<li>
+						<a href="arbitration.html" title="" target='_blank'>争论</a>
+					</li>
+				</ul>
+				</dd>
+			</dl>
+			<dl class='pull-left' style='width: 200px'>
+				<dt>帮助模块</dt>
+				<dd>
+				<ul>
+					<li>
+						<a href="help.html" title="" target='_blank'>帮助首页</a>
+					</li>
+					<li>
+						<a href="agreement.html" title="" target='_blank'>用户协议</a>
+					</li>
+					<li>
+						<a href="faqs.html" title="" target='_blank'>常见问题</a>
+					</li>
+					<li>
+						<a href="faqs-result.html" title="" target='_blank'>常见问题（搜索结果）</a>
+					</li>
+					<li>
+						<a href="feedback.html" title="" target='_blank'>反馈</a>
+					</li>
+					<li>
+						<a href="fees.html" title="" target='_blank'>费用</a>
+					</li>
+					<li>
+						<a href="guidance.html" title="" target='_blank'>用户指导</a>
+					</li>
+					<li><a href="works.html" target='_blank'>how it works</a></li>
+				</ul>
+				</dd>
+			</dl>
+			
+			<dl class='pull-left' style='width: 200px'>
+				<dt>博客模块</dt>
+				<dd>
+				<ul>
+					<li>
+						<a href="blog.html" title="" target='_blank'>博客</a>
+					</li>
+					<li>
+						<a href="blog_page.html" title="" target='_blank'>博客内页</a>
+					</li>
+				</ul>
+				</dd>
+			</dl>
+			
+			<dl class='pull-left' style='width: 200px'>
+				<dt>其他</dt>
+				<dd>
+				<ul>
+					<li>
+						<a href="index.html" title="" target='_blank'>首页</a>
+					</li>
+					<li>
+						<a href="dashboard.html" title="" target='_blank'>控制面板（dashboard）</a>
+					</li>
+				</ul>
+				</dd>
+			</dl>
+			<ul>
+			</ul>
 		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Deadline
-			</div>
-			<div class="panel-body">
-			  	<div class="form-horizontal">
-			  		<div class="form-group">
-			  			<label for="" class='col-sm-2 control-label'>开始时间: </label>
-			  			<div class="col-sm-10">
-			  				<p class="form-control-static">
-			  					<time datetime="2011-01-12">January 12th, 2011</time>
-			  				</p>
-			  			</div>
-			  		</div>
-			  		<div class="form-group">
-			  			<label for="" class='col-sm-2 control-label'>Deadline: </label>
-			  			<div class="col-sm-3">
-				  			<div class="input-group">
-				  				<input type="date" name="" value="" placeholder="" class='form-control'>
-				  				<div class="input-group-addon"><i class="fa fa-calendar"></i></div>
-				  				
-				  			</div>
-			  				
-			  			</div>
-			  		</div>
-			  	</div>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Price
-			</div>
-			<div class="panel-body">
-			   <table class="table table-bordered table--order">
-		           <!--  <thead>
-			            <tr>
-			                <th>#</th>
-			                <th>Item Description</th>
-			                <th class="text-center">Unit Cost</th>
-			                <th class="text-center">Quantity</th>
-			                <th class="text-center">Total</th>
-			            </tr>
-		            </thead> -->
-		            <tbody>
-			            <!-- <tr>
-			                <td>1</td>
-			                <td>
-			                    <h4>Service One</h4>
-			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-			                </td>
-			                <td class="text-center"><strong>$ 599.00</strong></td>
-			                <td class="text-center"><strong>4</strong></td>
-			                <td class="text-center"><strong>$2396.00</strong></td>
-			            </tr>
-			            <tr>
-			                <td>2</td>
-			                <td>
-			                    <h4>Service Two</h4>
-			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-			                </td>
-			                <td class="text-center"><strong>$ 599.00</strong>	</td>
-			                <td class="text-center"><strong>5</strong></td>
-			                <td class="text-center"><strong>$2995.00</strong></td>
-			            </tr>
-			            <tr>
-			                <td>3</td>
-			                <td>
-			                    <h4>Service Three</h4>
-			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-			                </td>
-			                <td class="text-center"><strong>$ 599.00</strong>	</td>
-			                <td class="text-center"><strong>2</strong></td>
-			                <td class="text-center"><strong>$1198.00</strong></td>
-			            </tr> -->
-			            <tr>
-			                <!-- <td colspan="2" class="payment-method">
-			                    <h4>Payment Method</h4>
-			                </td> -->
-			                <td class="text-right" width="50%">
-			                    <p>Sub Total</p>
-			                    <p>Tax (VAT 10%)</p>			                    
-			                    <p><strong>GRAND TOTAL</strong></p>
-			                </td>
-			                <td class="text-center" width="50%">
-			                    <p>$ 6589.00</p>
-			                    <p>$ 120.00</p>			               
-			                    <p><strong>$ 6709.00</strong></p>
-			                </td>
-			            </tr>
-		            </tbody>
-	        </table>
-			</div>
-		</div>
-		<div class='panel panel-default'>
-			<div class="panel-heading">
-				Responsibilities
-			</div>
-			<div class="panel-body">
-				<ol class='responsibilities-list'>
-					<li>工作开始前，甲、乙双方应确认交付物、价格、工期计划，无异议后乙方开始工作。</li>
-					<li>乙方（服务商）完成工作后，甲方（雇主）应在3个工作日内予以验收和确认，验收合格后支付费用。</li>
-					<li>甲方（雇主）如需增加功能需求，应与乙方（服务商）进行协商，甲方（雇主）补足差额后，双方签署的补充订单生效。</li>
-					<li>如甲方（雇主）原因变更需求内容，双方意见未达成一致，可向Regbuzz发起争议或维权。Regbuzz以双方签署的订单作为调节判定的依据。</li>
-					<li>无需求变更要求时，乙方（服务商）未按项目时间表完成工作，甲方（雇主）有权要求退回款项。</li>
-					<li>甲方（雇主）提出的可能导致工期延后的修改意见，双方应及时签订补充合同并签字确认</li>
-					<li>在约定维护期间，乙方（服务商）未兑现售后维护承诺，Regbuzz有权根据网站规则进行处罚。</li>
-				</ol>
-			</div>
-		</div>
-		<div class="section">
-			<div class="row">
-				<div class="col-md-6">
-					<dl class="dl-horizontal">
-						<dt>甲方（雇主）：</dt>
-						<dd>Aaron Su</dd>
-					</dl>
-					<dl class="dl-horizontal">
-						<dt>签署时间：</dt>
-						<dd>2016年1月21日</dd>
-					</dl>
-				</div>
-				<div class="col-md-6">
-					<dl class="dl-horizontal">
-						<dt>乙方（服务商）：</dt>
-						<dd>富士康</dd>
-					</dl>
-					<dl class="dl-horizontal">
-						<dt>签署时间：</dt>
-						<dd>2016年1月21日</dd>
-					</dl>
-				</div>
-			</div>
-		</div>
-	    <div class="text-center ">
-	        <a class="btn btn-success"><i class="fa fa-check"></i> Submit</a>
-	        <a class="btn btn-primary" target="_blank" href="invoice_print.html"><i class="fa fa-print"></i> Print </a>
-	    </div>
-	</div>
-</section>
-
-<!-- 页脚部分 -->
-<!-- footer.html -->
-<footer class='footer'>
+	</section>
+	<!-- 页脚部分 -->
+	<!-- footer.html -->
+	<footer class='footer'>
 <div class="container-fluid">
 <div class="row footer-nav">
 	<div class="col-md-2 footer-nav-list">
@@ -660,6 +599,6 @@
 </div>
 </div>
 </footer>
-<!-- footer.html end-->
+	<!-- footer.html end-->
 </body>
 </html>
