@@ -1,0 +1,187 @@
+// home-heading
+.home-heading{	
+	margin-bottom: 20px;
+	.home-heading-section{
+		border-right: 1px solid #ddd;
+		&:last-child{border-right: 0}
+	}
+	.home-name,.home-history{
+		border-right: 1px solid #ddd;
+	}
+	.home-img{
+		position: relative;
+		margin-right: 20px;
+		img{
+			-webkit-transition: box-shadow 0.45s;
+			-o-transition: box-shadow 0.45s;
+			transition: box-shadow 0.45s;
+			&:hover{
+				box-shadow: 0 2px 10px rgba(0,0,0,.35);
+			}
+		}	
+	}
+
+	.home-call-name{
+		color:#444;
+		padding-top: 5px;
+		display: block;
+		@include font-size(1.8);
+		font-weight: 600;
+	}
+	.home-call-position{
+		color:#666;
+	}
+	.home-call-des{
+		color:#999;
+		.link{
+			display: inline-block;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			line-height: 1.43;
+			margin-right: 20px;
+		}
+	}	
+	
+	// history
+	.home-history{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.history-content-item{
+		border-top: 1px solid #eee;
+		margin-top: 5px;
+		&>li{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #eee;
+			color:#66696a;
+			span{
+				display: inline-block;
+				color:#878cc9;
+				width: 50px;
+				@include font-size(1.7);
+			}
+			&:last-child{
+				border-bottom: 0;
+			}
+		}
+	}
+
+
+
+	// score
+	.home-score{
+		padding-left:10px;
+	}
+	.home-score-item{
+		.left,.right{
+			display: inline-block;
+			font-size: 14px;
+		}
+		.left{
+			width: 40px;
+		}
+		.score-stars{
+			@include font-size(2);
+		}
+
+	}
+	.home-score-price{
+		font-size: 16px;
+		sup{
+			font-size: 55%;
+			vertical-align: bottom;
+		}
+	}
+
+	// right
+	.home-ibox{
+		.balance-value {
+			color: $palette-red;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.frozen-value{
+			color:$palette-red;
+		}
+		.home-money{
+			
+		}
+	}
+	.home-ibox--income{
+		padding-bottom: 20px;
+		border-bottom: 1px solid #ddd;
+	}
+}
+
+// 公共
+.home-section-title{
+	margin-bottom: 20px;
+	@include font-size(2.6);
+}
+
+
+// home-post
+.home-post{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	margin-bottom: 20px;
+	&>*{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.post{
+		border-right: 1px solid #ddd;
+		.fa{
+			color:$palette-blue;
+		}
+	}
+	.ask{
+		.fa{
+			color:$palette-teal;
+		}
+	}
+}
+.home-post-item{
+	color:#66696a;
+
+	font-size: 16px;
+	display: block;
+	padding: 17px;
+	text-align: center;
+	vertical-align: top;
+	.fa{
+		font-size: 26px;
+		width: 40px;
+	}
+	&:hover{
+		background-color: #f1f3f5;
+	}
+}
+
+// home-push
+.home-push{
+	.panel-title{
+		@include font-size(1.8);
+		// font-weight: 600;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+.home-push-title{
+	@include font-size(1.6);
+	font-weight: 600;
+	margin-top: 0;
+	a{
+		color:#666;
+	}
+}
+.home-push-state{
+	color:#999;
+}
+
+
+
+

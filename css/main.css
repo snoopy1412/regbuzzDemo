@@ -8411,6 +8411,134 @@ ul {
   .login-copyright a {
     color: #f1f1f1; }
 
+.home-heading {
+  margin-bottom: 20px; }
+  .home-heading .home-heading-section {
+    border-right: 1px solid #ddd; }
+    .home-heading .home-heading-section:last-child {
+      border-right: 0; }
+  .home-heading .home-name, .home-heading .home-history {
+    border-right: 1px solid #ddd; }
+  .home-heading .home-img {
+    position: relative;
+    margin-right: 20px; }
+    .home-heading .home-img img {
+      -webkit-transition: box-shadow 0.45s;
+      -o-transition: box-shadow 0.45s;
+      transition: box-shadow 0.45s; }
+      .home-heading .home-img img:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
+  .home-heading .home-call-name {
+    color: #444;
+    padding-top: 5px;
+    display: block;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 600; }
+  .home-heading .home-call-position {
+    color: #666; }
+  .home-heading .home-call-des {
+    color: #999; }
+    .home-heading .home-call-des .link {
+      display: inline-block;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      line-height: 1.43;
+      margin-right: 20px; }
+  .home-heading .home-history {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .home-heading .history-content-item {
+    border-top: 1px solid #eee;
+    margin-top: 5px; }
+    .home-heading .history-content-item > li {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      color: #66696a; }
+      .home-heading .history-content-item > li span {
+        display: inline-block;
+        color: #878cc9;
+        width: 50px;
+        font-size: 17px;
+        font-size: 1.7rem; }
+      .home-heading .history-content-item > li:last-child {
+        border-bottom: 0; }
+  .home-heading .home-score {
+    padding-left: 10px; }
+  .home-heading .home-score-item .left, .home-heading .home-score-item .right {
+    display: inline-block;
+    font-size: 14px; }
+  .home-heading .home-score-item .left {
+    width: 40px; }
+  .home-heading .home-score-item .score-stars {
+    font-size: 20px;
+    font-size: 2rem; }
+  .home-heading .home-score-price {
+    font-size: 16px; }
+    .home-heading .home-score-price sup {
+      font-size: 55%;
+      vertical-align: bottom; }
+  .home-heading .home-ibox .balance-value {
+    color: #db2828;
+    font-size: 24px;
+    font-weight: bold; }
+  .home-heading .home-ibox .frozen-value {
+    color: #db2828; }
+  .home-heading .home-ibox--income {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; }
+
+.home-section-title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-size: 2.6rem; }
+
+.home-post {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 20px; }
+  .home-post > * {
+    padding-left: 0;
+    padding-right: 0; }
+  .home-post .post {
+    border-right: 1px solid #ddd; }
+    .home-post .post .fa {
+      color: #2185d0; }
+  .home-post .ask .fa {
+    color: #00b5ad; }
+
+.home-post-item {
+  color: #66696a;
+  font-size: 16px;
+  display: block;
+  padding: 17px;
+  text-align: center;
+  vertical-align: top; }
+  .home-post-item .fa {
+    font-size: 26px;
+    width: 40px; }
+  .home-post-item:hover {
+    background-color: #f1f3f5; }
+
+.home-push .panel-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.home-push-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 0; }
+  .home-push-title a {
+    color: #666; }
+
+.home-push-state {
+  color: #999; }
+
 .hoverImg img {
   -webkit-transition: -webkit-transform .75s;
   -o-transition: -o-transform .75s;
@@ -9561,129 +9689,6 @@ ul {
     padding-bottom: 10px;
     margin-top: 10px;
     margin-bottom: 10px; }
-
-.account-aside {
-  margin-bottom: 20px; }
-  .account-aside .account-aside-section {
-    border-right: 1px solid #ddd; }
-    .account-aside .account-aside-section:last-child {
-      border-right: 0; }
-  .account-aside .account-name {
-    padding-bottom: 10px; }
-  .account-aside .account-img {
-    position: relative; }
-    .account-aside .account-img img {
-      -webkit-transition: box-shadow 0.45s;
-      -o-transition: box-shadow 0.45s;
-      transition: box-shadow 0.45s; }
-      .account-aside .account-img img:hover {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
-    .account-aside .account-img .level {
-      position: absolute;
-      right: 0px;
-      bottom: 0px;
-      background: url(../img/account/level-bg.jpg) no-repeat 50%;
-      color: #fff;
-      width: 30px;
-      height: 30px;
-      text-align: center;
-      line-height: 30px;
-      font-size: 20px;
-      font-size: 2rem;
-      font-weight: bold; }
-  .account-aside .account-call {
-    padding-left: 20px; }
-    .account-aside .account-call .progress--small {
-      position: relative; }
-    .account-aside .account-call .level-num {
-      position: absolute;
-      top: -9px;
-      right: -40px;
-      font-weight: 300;
-      color: #1ab394; }
-  .account-aside .account-call-name, .account-aside .account-call-viewpro {
-    display: block; }
-  .account-aside .account-call-name {
-    color: #444;
-    padding-top: 5px;
-    font-size: 18px;
-    font-size: 1.8rem;
-    font-weight: 600; }
-  .account-aside .account-call-des {
-    color: #999; }
-  .account-aside .account-call-viewpro {
-    margin-top: 15px; }
-  .account-aside .account-score {
-    border-top: 1px solid #ddd;
-    padding-top: 10px; }
-    .account-aside .account-score .left, .account-aside .account-score .right {
-      width: 50%;
-      text-align: center; }
-    .account-aside .account-score .left {
-      border-right: 1px solid #ddd; }
-    .account-aside .account-score .right {
-      padding-top: 15px; }
-  .account-aside .account-ibox .header {
-    position: relative;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px; }
-  .account-aside .account-ibox .account-ibox-title {
-    margin: 0;
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-weight: 600; }
-  .account-aside .account-ibox .account-ibox-more {
-    position: absolute;
-    right: 10px;
-    top: 10px; }
-  .account-aside .account-ibox .content {
-    position: relative; }
-    .account-aside .account-ibox .content .row {
-      width: 100%;
-      margin: 0; }
-    .account-aside .account-ibox .content .col-md-6 {
-      padding-left: 2px;
-      padding-right: 2px; }
-  .account-aside .account-ibox .item {
-    border-radius: 4px; }
-  .account-aside .account-ibox .panel {
-    margin-bottom: 0; }
-  .account-aside .account-ibox .p-states h4 {
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0; }
-  .account-aside .account-ibox .p-states h3 {
-    font-size: 25px;
-    margin: 10px 0 0 0; }
-  .account-aside .account-ibox .chart-bar {
-    margin-top: 10px; }
-  .account-aside .account-ibox .green-box {
-    background-color: #6bc5a4;
-    color: #fff;
-    box-shadow: 0 5px 0 #5bb996; }
-    .account-aside .account-ibox .green-box h4, .account-aside .account-ibox .green-box h3 {
-      color: #fff; }
-  .account-aside .account-ibox .blue-box {
-    background-color: #2185d0;
-    color: #fff;
-    box-shadow: 0 5px 0 #1a69a4; }
-    .account-aside .account-ibox .blue-box h4, .account-aside .account-ibox .blue-box h3 {
-      color: #fff; }
-  .account-aside .account-ibox .balance-value {
-    color: #db2828;
-    font-size: 24px;
-    font-weight: bold; }
-  .account-aside .account-ibox .frozen-value {
-    color: #db2828; }
-  .account-aside .account-ibox .account-money {
-    position: absolute;
-    right: 0;
-    bottom: 0; }
-  .account-aside .account-ibox--income {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd; }
 
 .account-content .panel {
   border: 0; }
