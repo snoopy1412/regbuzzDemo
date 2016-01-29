@@ -6101,7 +6101,7 @@ button.close {
   .tabs-bar:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after {
     clear: both; }
 
-.dropdown-menu-up-arrow:after, .header .search-form .search-text-response:before, .header .search-form .search-text-response:after, .m-oFormHelp:before, .m-oFormHelp:after {
+.dropdown-menu-up-arrow:after, .header .search-form .search-text-response:before, .header .search-form .search-text-response:after, .user-new-content:before, .user-new-content:after, .m-oFormHelp:before, .m-oFormHelp:after {
   height: 0;
   width: 0;
   overflow: hidden;
@@ -7709,7 +7709,7 @@ ul {
   background-color: #3f3f3f;
   box-shadow: 0 5px 5px #1e77ba;
   z-index: 2; }
-  .header .nav-side a {
+  .header .nav-side .navbar-nav > li > a {
     height: 50px;
     display: block;
     padding: 15px 20px;
@@ -7718,10 +7718,16 @@ ul {
     -webkit-transition: 0.25s;
     -o-transition: 0.25s;
     transition: 0.25s; }
-    .header .nav-side a.active, .header .nav-side a:hover {
+    .header .nav-side .navbar-nav > li > a.active, .header .nav-side .navbar-nav > li > a:hover {
       background-color: #3f3f3f;
       color: #fff;
       border-bottom: 4px solid #db2828; }
+  .header .nav-side .navbar-nav > li .dropdown-menu a {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .header .nav-side .navbar-nav > li.open > a {
+    background-color: #3f3f3f;
+    color: #fff; }
 
 .footer {
   background: #303030;
@@ -8543,10 +8549,48 @@ ul {
 .home-push-state {
   color: #999; }
 
+.user-new-content {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  position: relative; }
+  .user-new-content:before {
+    content: '';
+    z-index: 2;
+    left: -19px;
+    top: 5px;
+    border-right-color: #fff;
+    border-width: 10px; }
+  .user-new-content:after {
+    content: '';
+    left: -20px;
+    top: 5px;
+    border-right-color: #ccc;
+    border-width: 10px; }
+
+.home-aside-title {
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-top: 0;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px; }
+
 .home-aside-account .balance-value {
   color: #db2828;
   font-size: 24px;
-  font-weight: bold; }
+  font-weight: bold;
+  vertical-align: middle; }
+
+.home-aside-account .balance-history {
+  display: inline-block;
+  padding-top: 6px;
+  vertical-align: top; }
+  .home-aside-account .balance-history:hover {
+    text-decoration: underline; }
 
 .hoverImg img {
   -webkit-transition: -webkit-transform .75s;
