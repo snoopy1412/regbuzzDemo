@@ -8457,6 +8457,8 @@ ul {
     padding-bottom: 6px;
     line-height: 1.43;
     margin-right: 20px; }
+  .home-heading .home-call-profile .progress {
+    margin-bottom: 0; }
   .home-heading .home-call-profile .progress-info {
     color: #eff5fa; }
     .home-heading .home-call-profile .progress-info:hover {
