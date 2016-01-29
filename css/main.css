@@ -6093,12 +6093,12 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.tabs-bar, .container-fluid--4, .profile-info-aside .history li {
+.tabs-bar, .container-fluid--4, .home-heading .history-content-item > li, .profile-info-aside .history li {
   zoom: 1; }
-  .tabs-bar:before, .container-fluid--4:before, .profile-info-aside .history li:before, .tabs-bar:after, .container-fluid--4:after, .profile-info-aside .history li:after {
+  .tabs-bar:before, .container-fluid--4:before, .home-heading .history-content-item > li:before, .profile-info-aside .history li:before, .tabs-bar:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after {
     content: " ";
     display: block; }
-  .tabs-bar:after, .container-fluid--4:after, .profile-info-aside .history li:after {
+  .tabs-bar:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after {
     clear: both; }
 
 .dropdown-menu-up-arrow:after, .header .search-form .search-text-response:before, .header .search-form .search-text-response:after, .m-oFormHelp:before, .m-oFormHelp:after {
@@ -6883,6 +6883,10 @@ ul {
   border-radius: 4px;
   padding: 20px;
   margin-bottom: 10px; }
+
+.row > .row {
+  margin-left: 0;
+  margin-right: 0; }
 
 @keyframes around {
   0% {
@@ -8412,13 +8416,15 @@ ul {
     color: #f1f1f1; }
 
 .home-heading {
-  margin-bottom: 20px; }
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 10px; }
   .home-heading .home-heading-section {
     border-right: 1px solid #ddd; }
     .home-heading .home-heading-section:last-child {
       border-right: 0; }
-  .home-heading .home-name, .home-heading .home-history {
-    border-right: 1px solid #ddd; }
   .home-heading .home-img {
     position: relative;
     margin-right: 20px; }
@@ -8436,15 +8442,19 @@ ul {
     font-size: 1.8rem;
     font-weight: 600; }
   .home-heading .home-call-position {
-    color: #666; }
+    color: #666;
+    margin-bottom: 5px; }
+  .home-heading .home-call-account {
+    margin-bottom: 10px; }
   .home-heading .home-call-des {
-    color: #999; }
-    .home-heading .home-call-des .link {
-      display: inline-block;
-      padding-top: 6px;
-      padding-bottom: 6px;
-      line-height: 1.43;
-      margin-right: 20px; }
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 1.43;
+    margin-right: 20px; }
+  .home-heading .home-call-profile .progress-info {
+    color: #eff5fa; }
+    .home-heading .home-call-profile .progress-info:hover {
+      text-decoration: underline; }
   .home-heading .home-history {
     padding-left: 10px;
     padding-right: 10px; }
@@ -8452,20 +8462,17 @@ ul {
     border-top: 1px solid #eee;
     margin-top: 5px; }
     .home-heading .history-content-item > li {
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       border-bottom: 1px solid #eee;
       color: #66696a; }
-      .home-heading .history-content-item > li span {
+      .home-heading .history-content-item > li span.right {
         display: inline-block;
         color: #878cc9;
-        width: 50px;
         font-size: 17px;
         font-size: 1.7rem; }
       .home-heading .history-content-item > li:last-child {
         border-bottom: 0; }
-  .home-heading .home-score {
-    padding-left: 10px; }
   .home-heading .home-score-item .left, .home-heading .home-score-item .right {
     display: inline-block;
     font-size: 14px; }
@@ -8479,20 +8486,11 @@ ul {
     .home-heading .home-score-price sup {
       font-size: 55%;
       vertical-align: bottom; }
-  .home-heading .home-ibox .balance-value {
-    color: #db2828;
-    font-size: 24px;
-    font-weight: bold; }
-  .home-heading .home-ibox .frozen-value {
-    color: #db2828; }
-  .home-heading .home-ibox--income {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd; }
 
 .home-section-title {
   margin-bottom: 20px;
-  font-size: 26px;
-  font-size: 2.6rem; }
+  font-size: 22px;
+  font-size: 2.2rem; }
 
 .home-post {
   border: 1px solid #ccc;
@@ -8513,7 +8511,7 @@ ul {
   color: #66696a;
   font-size: 16px;
   display: block;
-  padding: 17px;
+  padding: 15px;
   text-align: center;
   vertical-align: top; }
   .home-post-item .fa {
@@ -8522,22 +8520,33 @@ ul {
   .home-post-item:hover {
     background-color: #f1f3f5; }
 
+.home-push > .col-md-12, .home-push .col-md-6 {
+  padding-left: 2px;
+  padding-right: 2px; }
+
 .home-push .panel-title {
-  font-size: 18px;
-  font-size: 1.8rem;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+.home-push .panel-body {
+  padding: 20px; }
 
 .home-push-title {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
+  color: blue;
   margin-top: 0; }
   .home-push-title a {
     color: #666; }
 
 .home-push-state {
   color: #999; }
+
+.home-aside-account .balance-value {
+  color: #db2828;
+  font-size: 24px;
+  font-weight: bold; }
 
 .hoverImg img {
   -webkit-transition: -webkit-transform .75s;

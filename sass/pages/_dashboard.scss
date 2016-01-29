@@ -1,13 +1,17 @@
 // home-heading
 .home-heading{	
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
 	margin-bottom: 20px;
+	padding: 10px;
 	.home-heading-section{
 		border-right: 1px solid #ddd;
-		&:last-child{border-right: 0}
+		&:last-child{
+			border-right: 0
+		}
 	}
-	.home-name,.home-history{
-		border-right: 1px solid #ddd;
-	}
+	
 	.home-img{
 		position: relative;
 		margin-right: 20px;
@@ -30,17 +34,25 @@
 	}
 	.home-call-position{
 		color:#666;
+		margin-bottom: 5px;
+	}
+	.home-call-account{
+		margin-bottom: 10px;
 	}
 	.home-call-des{
-		color:#999;
-		.link{
-			display: inline-block;
-			padding-top: 6px;
-			padding-bottom: 6px;
-			line-height: 1.43;
-			margin-right: 20px;
-		}
+		padding-top: 6px;
+		padding-bottom: 6px;
+		line-height: 1.43;
+		margin-right: 20px;
 	}	
+	.home-call-profile{
+		.progress-info{
+			color:lighten(#337ab7,50%);
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
 	
 	// history
 	.home-history{
@@ -51,16 +63,20 @@
 	.history-content-item{
 		border-top: 1px solid #eee;
 		margin-top: 5px;
+
 		&>li{
-			padding-top: 10px;
-			padding-bottom: 10px;
+			@extend %clearfix;
+			padding-top: 5px;
+			padding-bottom: 5px;
 			border-bottom: 1px solid #eee;
-			color:#66696a;
+			color:#66696a;	
 			span{
-				display: inline-block;
-				color:#878cc9;
-				width: 50px;
+				&.right{
+					display: inline-block;
+					color:#878cc9;
 				@include font-size(1.7);
+				}
+				
 			}
 			&:last-child{
 				border-bottom: 0;
@@ -72,7 +88,7 @@
 
 	// score
 	.home-score{
-		padding-left:10px;
+		// padding-left:10px;
 	}
 	.home-score-item{
 		.left,.right{
@@ -95,30 +111,13 @@
 		}
 	}
 
-	// right
-	.home-ibox{
-		.balance-value {
-			color: $palette-red;
-			font-size: 24px;
-			font-weight: bold;
-		}
-		.frozen-value{
-			color:$palette-red;
-		}
-		.home-money{
-			
-		}
-	}
-	.home-ibox--income{
-		padding-bottom: 20px;
-		border-bottom: 1px solid #ddd;
-	}
+
 }
 
 // 公共
 .home-section-title{
 	margin-bottom: 20px;
-	@include font-size(2.6);
+	@include font-size(2.2);
 }
 
 
@@ -149,7 +148,7 @@
 
 	font-size: 16px;
 	display: block;
-	padding: 17px;
+	padding: 15px;
 	text-align: center;
 	vertical-align: top;
 	.fa{
@@ -163,16 +162,21 @@
 
 // home-push
 .home-push{
+	&>.col-md-12,.col-md-6{
+		padding-left: 2px;
+		padding-right: 2px;
+	}
 	.panel-title{
-		@include font-size(1.8);
-		// font-weight: 600;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		@include font-size(1.6);
+	}
+	.panel-body{
+		padding: 20px;
 	}
 }
 .home-push-title{
-	@include font-size(1.6);
+	@include font-size(1.4);
 	font-weight: 600;
+	color:blue;
 	margin-top: 0;
 	a{
 		color:#666;
@@ -183,5 +187,15 @@
 }
 
 
+// aside
+	.home-aside-account{
+		.balance-value {
+			color: $palette-red;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		
+	}
+	
 
 

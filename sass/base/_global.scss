@@ -5,3 +5,10 @@
 	padding: 20px;
 	margin-bottom: 10px;
 }
+
+.row{
+	&>.row{
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
