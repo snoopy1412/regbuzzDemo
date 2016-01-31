@@ -1,0 +1,58 @@
+.connect-header,.connect-content{
+	border: 1px solid #ccc;
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+.connect-header-icon{
+	width: 80px;
+	height: 80px;
+	background-color: #0077b5;
+	text-align: center;
+	line-height: 80px;
+	color:#fff;
+	margin-top: -20px;
+	margin-right: 20px;
+}
+.connect-header-title{
+	h1{
+		@include font-size(2);
+		font-weight: 600;
+		margin:0;
+		margin-bottom: 5px;
+	}
+}
+.connect-form,.connect-list-action{
+	margin-bottom: 20px;
+}
+.connect-list{
+
+}
+.connect-list-section{
+	@extend %clearfix;
+	border-bottom: 1px solid #ddd;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	.body{
+		margin-left: 15px;
+		.name{
+			margin: 0;
+			margin-bottom: 5px;
+			@include font-size(1.8);
+			font-weight: 600;
+		}
+
+		.headline{
+			margin-bottom: 5px;
+			a{
+			color:#333;
+			}
+		}
+		.location{
+			color:#a59999;
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+	}
+}

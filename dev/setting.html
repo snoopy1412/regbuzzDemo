@@ -15,10 +15,10 @@
 				<i class="fa fa-user fa-fw"></i>&nbsp; 
 				Basic information
 			</a>
-			<!-- <a href="javascript:;" title="Preference" class='list-group-item'>
-				<i class="fa fa-user"></i>
-				Preference
-			</a> -->
+			<a href="javascript:;" title="Preference" class='list-group-item'>
+				<i class="fa fa-user fa-fw"></i>&nbsp;
+				Preferences
+			</a>
 			<a href="javascript:;" title="Billing Methods"  class="list-group-item">
 				<i class="fa fa-credit-card fa-fw"></i>&nbsp; 
 				Billing Methods
@@ -27,9 +27,15 @@
 				<i class="fa fa-lock fa-fw"></i>&nbsp; 
 				Password &amp; Security
 			</a>
-			<a href="javascript:;" title="Trust &amp; Verification"  class="list-group-item">
-				<i class="fa fa-check-square-o fa-fw"></i>&nbsp; 
-				Trust &amp; Verification
+			</a>
+			
+			
+			<a href="javascript:;" title="Notification"  class="list-group-item">
+				<!-- <i class="fa fa-check-square-o fa-fw"></i>&nbsp; 
+				Trust &amp; Verification -->
+
+				<i class="fa fa-bell fa-fw"></i>&nbsp; 
+				Notification
 			</a>
 			<a href="javascript:;" title="Linked Accounts" class="list-group-item">
 				<i class="fa fa-link fa-fw"></i>&nbsp; 
@@ -41,82 +47,97 @@
 	<div class="col-md-9  com-content">
 		<div class="setting-content">
 			<section class="setting-section setting-section--Info active">
-					<div class="panel panel-default">
-						<div class="panel-heading">Basic information</div>
-						<div class="panel-body">
-							<div class='setting-section-item'>
-								<div class="setting-edit">
-									<h3 class='setting-edit-title'><i class="fa fa-picture-o"></i><span>Profile Picture</span></h3>
-									<div class='clearfix'>
-										<img alt="@snoopy1412" class="avatar pull-left" height="70" src="https://avatars0.githubusercontent.com/u/13896109?v=3&amp;s=140" width="70" />
-										<div class="avatar-upload pull-left">
-											<a href="#" class="btn btn-primary file-upload">
-												Upload new picture
-												<input id="upload-profile-picture" type="file" class="manual-file-chooser js-manual-file-chooser js-avatar-field" />
-											</a>
-										</div>
-										<!-- /.avatar-upload -->
-									</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Basic information</div>
+					<div class="panel-body">
+						<form class='form-horizontal'>
+							<div class="form-group">
+								<label for="" class='col-sm-2 control-label'>
+									姓名
+								</label>
+								<div class="col-sm-10">
+									<p class='form-control-static'>
+										Aaron Su
+									</p>
 								</div>
-								<div class="form-horizontal">
-									<div class="setting-edit setting-edit-name">
-										<h3 class='setting-edit-title'><i class="fa fa-user"></i><span>Name</span></h3>
-										<div class='form-group'>
-											<label for="user_profile_name" class='col-sm-2 control-label'>First Name：</label>
-											<div class="col-sm-10">
-												<p class="form-control-static">Aaron</p>
-											</div>
-											<!-- <input id="user_profile_name" class='form-control col-sm-10' size="30" type="text" value='Aaron'></div>
-										-->
-									</div>
-									<div class='form-group'>
-										<label for="user_profile_name" class='col-sm-2 control-label'>Last Name：</label>
-										<div class="col-sm-10">
-											<p class="form-control-static">Su</p>
-										</div>
-										<!-- <input id="user_profile_name" class='form-control col-sm-10' size="30" type="text" value='Su'>--></div>
-									<a href="" title="" class='btn btn-success-outline setting-edit-btn'>edit</a>
-								</div>
-								<div class="setting-edit setting-edit-name">
-									<h3 class='setting-edit-title'><i class="fa fa-envelope-o"></i><span>Email</span></h3>
-									<div class='form-group'>
-										<label for="user_profile_email" class='col-sm-2 control-label'>Public email：</label>
-										<div class="col-sm-10">
-											<p class="form-control-static">402090261@qq.com</p>
-										</div>
-										<!-- <input id="user_profile_email" class='form-control col-sm-10' size="30" type="text" value='402090261@qq.com'>--></div>
-									<a href="" title="" class='btn btn-success-outline setting-edit-btn'>edit</a>
-								</div>
-								<div class="setting-edit setting-edit-name">
-									<h3 class='setting-edit-title'><i class="fa fa-phone"></i><span>Phone</span></h3>
-									<div class='form-group'>
-										<label for="user_profile_email" class='col-sm-2 control-label'>Public phone：</label>
-										<div class="col-sm-10">
-											<p class="form-control-static">1100000000</p>
-										</div>
-										<!-- <input id="user_profile_email" class='form-control col-sm-10' size="30" type="text" value='1100000000'>--></div>
-									<a href="" title="" class='btn btn-success-outline setting-edit-btn'>edit</a>
-								</div>
-								<p class='pl-20'>
-									<button type="submit" class="btn btn-primary">Update profile</button>
-								</p>
 							</div>
-						</div>
+							<div class="form-group">
+								<label for="" class='col-sm-2 control-label'>
+									邮箱
+								</label>
+								<div class="col-sm-6">
+									<input type="text" class='form-control' value='szh@cirs-group.com' disabled="true">
+								</div>
+								<div class="col-sm-4">
+									<button type='button' class='btn btn-success' disabled="true">已认证</button>
+								<button type='button' class='btn btn-primary'>修改</button>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="" class='col-sm-2 control-label'>
+									手机
+								</label>
+								<div class="col-sm-6">
+									<div class="input-group">
+										<span class='input-group-addon'>+86</span>
+										<input type="text" class='form-control' value='13513810135' disabled="true">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<button type='button' class='btn btn-success'>未认证</button>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="" class='col-sm-2 control-label'>
+									身份
+								</label>
+								<div class="col-sm-6">
+									<input type="text" class='form-control' value='Aaron Su' disabled="true">
+								</div>
+								<div class="col-sm-4">
+									<button type='button' class='btn btn-success'>未认证</button>
+								</div>
+							</div>
+						</form>
+						
 					</div>
 				</div>
 			</section>
-			<!-- <section class="setting-section setting-section--preference">
+			<section class="setting-section setting-section--preference">
 				<div class="panel panel-default">
 					<div class="panel-heading">Preference Setting</div>
 					<div class="panel-body">
 						
 					</div>
 				</div>
-			</section> -->
+			</section>
 			<section class="setting-section setting-section--bills">
 				<div class="panel panel-default">
 					<div class="panel-heading">Billing Methods</div>
-					<div class="panel-body"></div>
+					<div class="panel-body">
+											<div class="">
+						<h2 class='text-center'>ADD A BILLING METHOD</h2>
+					</div>
+					<div class='col-md-4'>
+						<section class='pay-method pay-method--paypal'>
+							<i class="pay-method-img"></i>
+							<a href="" title="" class='btn btn-primary btn-small'><i class="fa fa-plus"></i> Paypal</a>
+						</section>
+					</div>
+					<div class='col-md-4'>
+						<section class='pay-method pay-method--stripe'>
+							<i class="pay-method-img"></i>
+							<a href="" title="" class='btn btn-primary  btn-small'><i class="fa fa-plus"></i> Stripe</a>
+						</section>
+						
+					</div>
+					<div class='col-md-4'>
+						<section class='pay-method pay-method--alipay'>
+							<i class="pay-method-img"></i>
+							<a href="" title="" class='btn btn-primary  btn-small'><i class="fa fa-plus"></i> alipay</a>
+						</section>	
+					</div>
+					</div>
 				</div>
 			</section>
 			<section class="setting-section setting-section--Password">
@@ -147,36 +168,9 @@
 			</section>
 			<section class="setting-section setting-section--verification">
 				<div class="panel panel-default">
-					<div class="panel-heading">Trust & Verification</div>
+					<div class="panel-heading">Notification</div>
 					<div class="panel-body">
-						<div class='setting-section-item'>
-							<ul class='setting-verify-list'>
-								<li class='clearfix'>
-									<span class='pull-left'>
-										邮箱认证
-									</span>
-									<span class='pull-right'>
-										<button type='button' class='btn btn-primary' disabled="disabled">已认证</button>
-									</span>
-								</li>
-								<li class='clearfix'>
-									<span class='pull-left'>
-										手机认证
-									</span>
-									<span class='pull-right'>
-										<button type='button' class='btn btn-primary'>未认证</button>
-									</span>
-								</li>
-								<li class='clearfix'>
-									<span class='pull-left'>
-										ID认证
-									</span>
-									<span class='pull-right'>
-										<button type='button' class='btn btn-primary'>未认证</button>
-									</span>
-								</li>
-							</ul>
-						</div>
+						
 					</div>
 				</div>
 			</section>

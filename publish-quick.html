@@ -533,10 +533,7 @@
 														</li>
 													</ul>
 													<div class="divider divider-horizontal">or</div>
-
-													
 														<input type="text" name="" value="" placeholder="自定义输入" class='form-control'>
-													
 											      </div>
 											      <div class="modal-footer">
 											      	<button type="button" class="btn btn-primary">Save</button>
@@ -572,16 +569,25 @@
 									<div class="form-group">
 										<label for="location" class='col-md-3'>Candidates Location</label>
 										<div class="col-md-9">
-											<select class='form-control form-control-all' id='location'>
-											    <option value="" label="Any location">Any location</option>
-											    <option value="8" label="Australasia">Australasia</option>
-											    <option value="3" label="East Asia">East Asia</option>
-											    <option value="1" label="Eastern Europe">Eastern Europe</option>
-											    <option value="2" label="Latin America">Latin America</option>
-											    <option value="5" label="North America">North America</option>
-											    <option value="6" label="South Asia">South Asia</option>
-											    <option value="7" label="Western Europe">Western Europe</option>
-											</select>
+											<div class="row row--no-padding">
+												<div class="col-md-6">
+													<select class='form-control form-control-all' id='location'>
+													    <option value="" label="Any location">Any location</option>
+													    <option value="3" label="East Asia">East Asia</option>
+													    <option value="1" label="Eastern Europe">Eastern Europe</option>
+													    <option value="2" label="Latin America">Latin America</option>
+													    <option value="5" label="North America">North America</option>
+													    <option value="6" label="South Asia">South Asia</option>
+													    <option value="7" label="Western Europe">Western Europe</option>
+													</select>
+												</div>
+												<div class="col-md-6">
+													<select class='form-control'>
+														<option value="">Any location</option>
+													</select>
+												</div>
+											</div>
+											
 										</div>
 									</div>	
 
@@ -593,7 +599,7 @@
 											  <label class="c-input c-checkbox">
 											  <input id="radio1" name="checkbox" type="checkbox" checked>
 											  <span class="c-indicator"></span>
-											  Name vified
+											  ID vified
 											</label>
 											<label class="c-input c-checkbox">
 											  <input id="radio2" name="checkbox" type="checkbox" checked>
@@ -681,8 +687,13 @@
 								</div> -->
 
 								<div class='form-group mt-20'>
-									<div class='col-sm-offset-3 col-md-3'>
-										<input type="submit" name="" value="Post Project Now" class='btn btn-primary'>
+									<div class='col-sm-offset-3 col-md-9'>
+										<input type="submit" name="" value="Post Project Now" class='btn btn-primary' style='margin-right:10px'>
+										<label class="c-input c-checkbox" >
+										  <input id="radio2" name="checkbox" type="checkbox" checked='true'>
+										  <span class="c-indicator"></span>
+										    分享该任务给好友
+										</label>
 									</div>
 									
 								</div>
@@ -763,7 +774,7 @@
 	</section>
 
 <!-- footer.html -->
-<footer class='footer'>
+<footer class='public-footer'>
 <div class="container-fluid">
 <div class="row footer-nav">
 	<div class="col-md-2 footer-nav-list">

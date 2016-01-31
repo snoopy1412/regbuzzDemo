@@ -6093,15 +6093,15 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.tabs-bar, .container-fluid--4, .home-heading .history-content-item > li, .profile-info-aside .history li {
+.tabs-bar, .container-fluid--4, .home-heading .history-content-item > li, .profile-info-aside .history li, .connect-list-section {
   zoom: 1; }
-  .tabs-bar:before, .container-fluid--4:before, .home-heading .history-content-item > li:before, .profile-info-aside .history li:before, .tabs-bar:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after {
+  .tabs-bar:before, .container-fluid--4:before, .home-heading .history-content-item > li:before, .profile-info-aside .history li:before, .connect-list-section:before, .tabs-bar:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .connect-list-section:after {
     content: " ";
     display: block; }
-  .tabs-bar:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after {
+  .tabs-bar:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .connect-list-section:after {
     clear: both; }
 
-.dropdown-menu-up-arrow:after, .header .search-form .search-text-response:before, .header .search-form .search-text-response:after, .user-new-content:before, .user-new-content:after, .m-oFormHelp:before, .m-oFormHelp:after {
+.dropdown-menu-up-arrow:after, .header .search-form .search-text-response:before, .header .search-form .search-text-response:after, .user-new-content:before, .user-new-content:after, .pubResault-list .answers-item .content:before, .pubResault-list .answers-item .content:after, .m-oFormHelp:before, .m-oFormHelp:after {
   height: 0;
   width: 0;
   overflow: hidden;
@@ -7729,7 +7729,7 @@ ul {
     background-color: #3f3f3f;
     color: #fff; }
 
-.footer {
+.public-footer {
   background: #303030;
   padding-top: 68px;
   color: #fff; }
@@ -8497,8 +8497,8 @@ ul {
 
 .home-section-title {
   margin-bottom: 20px;
-  font-size: 22px;
-  font-size: 2.2rem; }
+  font-size: 20px;
+  font-size: 2rem; }
 
 .home-post {
   border: 1px solid #ccc;
@@ -9369,6 +9369,49 @@ ul {
     font-weight: 600;
     display: block; }
 
+.pubResault-list .ansower-header {
+  padding: 10px 0;
+  line-height: 24px;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #eee; }
+  .pubResault-list .ansower-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 600; }
+
+.pubResault-list .answers-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px; }
+  .pubResault-list .answers-item .content {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    position: relative; }
+    .pubResault-list .answers-item .content:before {
+      content: '';
+      z-index: 2;
+      left: -19px;
+      top: 5px;
+      border-right-color: #fff;
+      border-width: 10px; }
+    .pubResault-list .answers-item .content:after {
+      content: '';
+      left: -20px;
+      top: 5px;
+      border-right-color: #ccc;
+      border-width: 10px; }
+  .pubResault-list .answers-item .footer {
+    margin-top: 20px;
+    color: #999; }
+    .pubResault-list .answers-item .footer .left {
+      padding: 6px 0; }
+      .pubResault-list .answers-item .footer .left a {
+        color: #999; }
+        .pubResault-list .answers-item .footer .left a:hover {
+          color: #698ebf; }
+
 .authentication--provider {
   margin-top: 8px; }
   .authentication--provider .icon {
@@ -9553,6 +9596,36 @@ ul {
     bottom: 25px; }
   .setting-edit .avatar-upload {
     margin-left: 20px; }
+
+.setting-section--bills h2 {
+  font-size: 2.6rem;
+  color: #2980B9;
+  margin-bottom: 20px; }
+  .setting-section--bills h2 > a {
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 30px; }
+
+.setting-section--bills .pay-method {
+  margin: 10px;
+  padding: 20px 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  text-align: center; }
+  .setting-section--bills .pay-method .pay-method-img {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px; }
+
+.setting-section--bills .pay-method--paypal .pay-method-img {
+  background: url(../img/register/paypal-logo.png) no-repeat center; }
+
+.setting-section--bills .pay-method--stripe .pay-method-img {
+  background: url(../img/register/stripe-logo.png) no-repeat center; }
+
+.setting-section--bills .pay-method--alipay .pay-method-img {
+  background: url(../img/register/alipay-logo.png) no-repeat center; }
 
 .setting-verify-list > li {
   border-bottom: 1px solid #eee;
@@ -10265,6 +10338,54 @@ ul {
 
 .responsibilities-list > li {
   padding: 5px 0; }
+
+.connect-header, .connect-content {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px; }
+
+.connect-header-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #0077b5;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+  margin-top: -20px;
+  margin-right: 20px; }
+
+.connect-header-title h1 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 5px; }
+
+.connect-form, .connect-list-action {
+  margin-bottom: 20px; }
+
+.connect-list-section {
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .connect-list-section .body {
+    margin-left: 15px; }
+    .connect-list-section .body .name {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-weight: 600; }
+    .connect-list-section .body .headline {
+      margin-bottom: 5px; }
+      .connect-list-section .body .headline a {
+        color: #333; }
+    .connect-list-section .body .location {
+      color: #a59999;
+      display: inline-block;
+      margin-bottom: 5px; }
 
 .m-steps {
   width: 100%;
