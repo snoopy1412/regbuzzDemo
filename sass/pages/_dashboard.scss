@@ -156,9 +156,14 @@
 	.fa{
 		font-size: 26px;
 		width: 40px;
+		vertical-align: middle;
 	}
 	&:hover{
 		background-color: #f1f3f5;
+	}
+	span{
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
 

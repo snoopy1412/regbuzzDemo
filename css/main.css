@@ -8523,9 +8523,13 @@ ul {
   text-align: center; }
   .home-post-item .fa {
     font-size: 26px;
-    width: 40px; }
+    width: 40px;
+    vertical-align: middle; }
   .home-post-item:hover {
     background-color: #f1f3f5; }
+  .home-post-item span {
+    display: inline-block;
+    vertical-align: middle; }
 
 .home-push > .col-md-12, .home-push .col-md-6 {
   padding-left: 2px;
