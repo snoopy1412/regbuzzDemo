@@ -25,8 +25,8 @@
 		<header class="header reg-header">
 			<div class="header-top container clearfix">
 				<h1 class='logo-container logo-container--reg pull-left'>
-					<a href='#' class="brand-logo text-hide">
-						RegBUZZ
+					<a href='#' class="brand-logo">
+						<img src="./img/logo.png" width="150" alt="">
 					</a>
 				</h1>
 				<nav class="navbar pull-right">
@@ -55,14 +55,14 @@
 						Set up Your Base Account
 					</li>
 					<li>
-						<span class="m-steps-icon fa fa-credit-card"></span>
+						<span class="m-steps-icon fa fa-heartbeat"></span>
 						<strong class="step">Step 2:</strong>
 						Choose Your Interests 
 					</li>
 					<li>
-						<span class="m-steps-icon fa fa-dashboard "></span>
+						<span class="m-steps-icon fa fa-envelope-o"></span>
 						<strong class="step">Step 3:</strong>
-						Go to Your Dashboard
+						Mail Authentication
 					</li>
 				</ol> 
 				
@@ -81,31 +81,49 @@
 							</div>
 					<!-- or -->							
 							<div class="divider divider-horizontal">or</div>
-							<form action="" class='reg-form'>
-								<p class='reg-title'>Create your base account</p>
-								<div class="form-group has-feedback">
-								<label for='firstname'> First Name </label>
-									<input type="text" name="firstname" id='firstname' placeholder="First Name" class='form-control form-control--register'>
-									<span class="fa fa-times form-control-feedback" aria-hidden="true"></span>
-								</div>
-								<div class="form-group has-feedback">
-								<label for='lastname'> Last Name </label>
-									<input type="text" name="lastname" id='lastname' placeholder="Last Name" class='form-control form-control--register'>
-									<span class="fa fa-times form-control-feedback" aria-hidden="true"></span>
-								</div>
-								<div class="form-group has-feedback">
-								<label for='email'> Email </label>
-									<input type="email" name="email" id='email' placeholder="Your@email.com" class='form-control form-control--register'>
-									<span class="fa fa-times form-control-feedback" aria-hidden="true"></span>
-								</div>
-								<div class="form-group has-feedback">
-								<label for='password'> Password </label>
-									<input type="password" name="password" id='password' placeholder="********" class='form-control form-control--register'>
-									<span class="fa fa-times form-control-feedback" aria-hidden="true"></span>
-								</div>
-								<p class='privacy'>By creating an account, you agree to our <a href="" title="">Terms & Conditions</a></p>
-								<input type="submit" name="" value="Proceed" class="btn btn-block btn-primary " disabled="disabled">
-							</form>
+							<div id="app">
+								<validator name='validator1'>
+									<form action="" class='reg-form' novalidate>
+										<p class='reg-title'>Create your base account</p>
+										<div class="form-group has-feedback" :class="{'has-error':firstNameShow && $validator1.firstname.invalid}">
+										<label for='firstname' class='control-label'> First Name </label>
+											<input type="text" name="firstname" id='firstname' placeholder="First Name" class='form-control form-control--register' v-validate:firstname="['required']" v-on:keyup='showError("firstName")'>
+											<span class="fa fa-times form-control-feedback"></span>
+											<div class="errors" v-show='firstNameShow'>
+												<p v-if="$validator1.firstname.required">Required your first name.</p>
+											</div>
+										</div>
+										<div class="form-group has-feedback" :class="{'has-error':lastNameShow && $validator1.lastname.invalid}">
+										<label for='lastname'> Last Name </label>
+											<input type="text" name="lastname" id='lastname' placeholder="Last Name" class='form-control form-control--register' v-validate:lastname="['required']" v-on:keyup='showError("lastName")'>
+											<span class="fa fa-times form-control-feedback"></span>
+											<div class="errors" v-show='lastNameShow'>
+												<p v-if="$validator1.lastname.required">Required your last name.</p>
+											</div>
+										</div>
+										<div class="form-group has-feedback" :class="{'has-error':emailShow && $validator1.email.invalid}">
+										<label for='email'> Email </label>
+											<input type="email" name="email" id='email' placeholder="Your@email.com" class='form-control form-control--register' v-validate:email="{required:true,email:true}" v-on:keyup='showError("email")'>
+											<span class="fa fa-times form-control-feedback"></span>
+											<div class="errors" v-show='emailShow'>
+												<p v-if="$validator1.email.required">Required your email.</p>
+												<p v-if="$validator1.email.email">Invalid your mail address format.</p>
+											</div>
+										</div>
+										<div class="form-group has-feedback" :class="{'has-error':passwordShow && $validator1.password.invalid}">
+										<label for='password'> Password </label>
+											<input type="password" name="password" id='password' placeholder="********" class='form-control form-control--register' v-validate:password="{required:true,passwordFormat:true}" v-on:keyup='showError("password")'>
+											<span class="fa fa-times form-control-feedback"></span>
+											<div class="errors" v-show='passwordShow'>
+												<p v-if="$validator1.password.required">Required your password.</p>
+												<p v-if="$validator1.password.passwordFormat">at least one lowercase letter, one numeral</p>
+											</div>
+										</div>
+										<p class='privacy'>By creating an account, you agree to our <a href="" title="">Terms & Conditions</a></p>
+										<input type="submit" name="" value="Proceed" class="btn btn-block btn-primary btn--register" :disabled="!$validator1.valid">
+									</form>
+								</validator>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-4" style='padding-bottom:60px'>
@@ -134,29 +152,6 @@
 				
 				<!-- step2 -->
 				<div class="row reg-main reg-main-2"  style='display: none'>
-					<div class="pure-u-1">
-						<h2 class='text-center'>ADD A PAYMENT METHOD</h2>
-					</div>
-					<div class='col-md-4'>
-						<section class='pay-method pay-method--paypal'>
-							<i class="pay-method-img"></i>
-							<a href="" title="" class='btn btn-primary btn-small'><i class="fa fa-plus"></i> Paypal</a>
-						</section>
-					</div>
-					<div class='col-md-4'>
-						<section class='pay-method pay-method--stripe'>
-							<i class="pay-method-img"></i>
-							<a href="" title="" class='btn btn-primary  btn-small'><i class="fa fa-plus"></i> Stripe</a>
-						</section>
-						
-					</div>
-					<div class='col-md-4'>
-						<section class='pay-method pay-method--alipay'>
-							<i class="pay-method-img"></i>
-							<a href="" title="" class='btn btn-primary  btn-small'><i class="fa fa-plus"></i> alipay</a>
-						</section>	
-					</div>
-
 					<div class="col-md-12">
 					<div class="divider divider-horizontal divider--larger-padding">or</div>
 						<p class='text-center'>
@@ -169,27 +164,27 @@
 							<p>
 								2. regbuzz.com竭尽全力为所有用户保证支付帐号的信息安全，并承诺不会擅自使用、出售用户的账户信息。
 							</p>
-						</div>
-						
-						
+						</div>	
 					</div>
 				</div>
 				<!-- step2 end -->
-
 				<div class="reg-main reg-main-3" style='display: none'>
-					<section class='reg-main-3-warp text-center'>
-						<div>
-							<a href="" title="" class='btn btn-success btn-larger'>Go to your dashboard</a>
-						</div>
-						<div class="divider divider-horizontal divider--larger-padding">or</div>
-						<div>
-							<a href="" title="" class='btn btn-primary btn-larger'>Become a consultant </a>
-						</div>
-						<div class='reg-notice'>
-							<p>
-								基本帐号可以升级为咨询师帐号，您也可以选择跳过此步骤，在主面板中随时选择升级。
-							</p>
-						</div>
+					<section class='reg-main-3-warp'>
+							<div class="text-center">
+			                    <div class="verify-sucess">
+			                        <i class="fa fa-check-circle"></i>
+			                        <span>验证邮件已发送</span>
+			                    </div>
+			                    <div class="verify-mail-des">
+			                        <p>验证邮件已发送至您的邮箱<a href="javascript:void(0);">402****@qq.com</a>，点击邮件中的链接完成操作。</p>
+			                        <p>验证邮件24小时内有效，请尽快验证！</p>
+			                    </div>
+			                    <div class="verify-mail-send">
+			                        <a class="btn btn-success">立即进入邮箱</a>
+			                        <!-- <a class="reSent fs12" href="#" type="3" id="J_email-resendSubmit">重新发送</a> -->
+			                        <a href="javascript:void(0)" class="verify-mail-handle">已发送 <span>59</span>秒后重新发送</a>
+			                    </div>
+			                </div>
 					</section>
 				</div>
 			</div>

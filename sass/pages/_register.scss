@@ -1,7 +1,7 @@
 @include sticky-footer(100px);
 .reg-header{
     .logo-container--reg{
-        padding-top: 15px; 
+        padding-top: 10px; 
     }
 }
 
@@ -148,19 +148,22 @@
 
 .reg-form{
     // 用于velidate
-    .has-feedback label {
+    .form-control-feedback{
+        display: none;
+    }
+    .has-error label {
           & ~ .form-control-feedback {
-            display: none;
+            display: block;
           }
         }
-    input.error{
-      @include form-control($palette-red);
-      &~.form-control-feedback{
-        display: inline-block;
-        color:$palette-red;
-      }
-    }
-    .error{
+    // input.error{
+    //   @include form-control($palette-red);
+    //   &~.form-control-feedback{
+    //     display: inline-block;
+    //     color:$palette-red;
+    //   }
+    // }
+    .errors{
       color:$palette-red;  
     }
 }
@@ -240,6 +243,7 @@
     max-width: 600px;
     margin-left:auto;
     margin-right: auto;
+    padding-bottom: 30px;
     .divider--larger-padding{
         padding-top: 10px;
         padding-bottom: 10px;

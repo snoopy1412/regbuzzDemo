@@ -13,7 +13,8 @@ require.config({
     responsiveNav: './components/responsiveNav',
     dropdown: './components/dropdown',
     bootstrap:'./vendor/bootstrap',
-    Vue:'./vendor/vue'
+    Vue:'./vendor/vue',
+    vueValidator:'./vendor/vue-validator.min'
   },
   shim: {
     "velocity": {
@@ -39,6 +40,10 @@ require.config({
     },
     'Vue':{
       exports:'Vue'
+    },
+    'vueValidator':{
+      deps:["Vue"],
+      exports:'vueValidator'
     }
   }
 });

@@ -25,7 +25,6 @@
 }
 .setting-content{
 
-
 }
 .setting-section{
 	display: none;
@@ -41,32 +40,100 @@
 		width: auto;
 	}
 }
-.setting-edit{
-	margin-bottom: 20px;
-	padding:10px 20px;
-	border:1px solid #eee;
-	border-radius: 4px;
-	position: relative;
-	.setting-edit-title{
-		font-size: 14px;
-		font-weight: 600;
-		margin-top: 0;
-		margin-bottom: 20px;
-		padding-bottom: 15px;
-		padding-top: 5px;
-		color:#6d6c6c;
-		border-bottom: 1px solid #eee;
-		&>span{
-			padding-left: 10px;
+// .setting-edit{
+// 	margin-bottom: 20px;
+// 	padding:10px 20px;
+// 	border:1px solid #eee;
+// 	border-radius: 4px;
+// 	position: relative;
+// 	.setting-edit-title{
+// 		font-size: 14px;
+// 		font-weight: 600;
+// 		margin-top: 0;
+// 		margin-bottom: 20px;
+// 		padding-bottom: 15px;
+// 		padding-top: 5px;
+// 		color:#6d6c6c;
+// 		border-bottom: 1px solid #eee;
+// 		&>span{
+// 			padding-left: 10px;
+// 		}
+// 	}
+// 	.setting-edit-btn{
+// 		position: absolute;
+// 		right: 20px;
+// 		bottom: 25px;
+// 	}
+// 	.avatar-upload{
+// 		margin-left: 20px;
+// 	}
+// }
+.setting-section--Info{
+	.basic-header{
+		padding: 10px;
+		.img {
+			margin-right: 20px;
+		}
+		.user-name{
+			margin-top:0;
+			@include font-size(1.6);
+			font-weight: 600;
+		}
+		.ustatus{
+			display: inline-block;
+			margin-right: 20px;
 		}
 	}
-	.setting-edit-btn{
-		position: absolute;
-		right: 20px;
-		bottom: 25px;
+	.basic-verify{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		.row{
+			border: 1px solid #ddd;
+		}
+		.col-md-4{
+			border-right: 1px solid #ddd;
+
+			background-color: #fcfcfc;
+			padding: 10px;
+			@extend %clearfix;
+			&:last-child{
+				border-right: 0;
+			}
+			.icon{
+				float: left;
+				margin-right: 20px;
+				.fa{
+					width: 70px;
+					height: 70px;
+					background-color: #dfdfdf;
+					color:#fff;
+					line-height: 70px;
+					text-align: center;
+				}
+			}
+			.active-icon{
+				.fa{
+					background-color: $palette-blue;
+				}
+				
+			}
+			.content{
+				float: left;
+				p{
+					margin-bottom: 5px;
+				}
+				.content-important{
+					color:#666;
+				}
+			}
+		}
 	}
-	.avatar-upload{
-		margin-left: 20px;
+	.basic-info-section{
+		padding: 10px;
+		h2{
+			@include font-size(1.8);
+			font-weight: 600;
+		}
 	}
 }
 

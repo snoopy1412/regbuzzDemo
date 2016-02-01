@@ -328,7 +328,7 @@
 				Basic information
 			</a>
 			<a href="javascript:;" title="Preference" class='list-group-item'>
-				<i class="fa fa-user fa-fw fa-lg"></i>&nbsp;
+				<i class="fa fa-heartbeat fa-fw fa-lg"></i>&nbsp;
 				Preferences
 			</a>
 			<a href="javascript:;" title="Billing Methods"  class="list-group-item">
@@ -339,9 +339,6 @@
 				<i class="fa fa-lock fa-fw fa-lg"></i>&nbsp; 
 				Password &amp; Security
 			</a>
-			</a>
-			
-			
 			<a href="javascript:;" title="Notification"  class="list-group-item">
 				<!-- <i class="fa fa-check-square-o fa-fw"></i>&nbsp; 
 				Trust &amp; Verification -->
@@ -362,7 +359,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">Basic information</div>
 					<div class="panel-body">
-						<form class='form-horizontal'>
+						<!-- <form class='form-horizontal'>
 							<div class="form-group">
 								<label for="" class='col-sm-2 control-label'>
 									姓名
@@ -382,7 +379,7 @@
 								</div>
 								<div class="col-sm-4">
 									<button type='button' class='btn btn-success' disabled="true">已认证</button>
-								<button type='button' class='btn btn-primary'>修改</button>
+									<button type='button' class='btn btn-primary'>修改</button>
 								</div>
 							</div>
 							<div class="form-group">
@@ -396,7 +393,7 @@
 									</div>
 								</div>
 								<div class="col-sm-4">
-									<button type='button' class='btn btn-success'>未认证</button>
+									<a href='phone-verify.html' class='btn btn-success'>未认证</a>
 								</div>
 							</div>
 							<div class="form-group">
@@ -407,11 +404,106 @@
 									<input type="text" class='form-control' value='Aaron Su' disabled="true">
 								</div>
 								<div class="col-sm-4">
-									<button type='button' class='btn btn-success'>未认证</button>
+									<a href='id-verification.html' class='btn btn-success'>未认证</a>
 								</div>
 							</div>
-						</form>
-						
+						</form> -->
+
+						<header class="basic-header clearfix">
+							<div class="img pull-left">
+								<img src="./img/index/servers/13.jpg" height="80" width="80" alt="">
+							</div>
+							<div class="user-info pull-left">
+								<h2 class='user-name'>
+									<a href="" title="">Aaron Su</a>
+								</h2>
+								<p class='position'>
+									会员状态 ：<span class='ustatus'>普通会员</span> <a href="membership.html" title="" class='btn btn-success-outline btn-sm'>Upgrade Now</a>
+								</p>
+							</div>
+						</header>
+						<section class="basic-verify">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="icon active-icon">
+										<i class="fa fa-envelope-o fa-4x"></i>
+									</div>	
+									<div class="content">
+										<p class='content-title'>邮箱已验证</p>
+										<p class='content-important'>szh@cirs-group.com</p>
+										<a href="" title="">修改邮箱</a>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="icon active-icon">
+										<i class="fa fa-mobile fa-4x"></i>
+									</div>	
+									<div class="content">
+										<p>手机已验证</p>
+										<p class='content-important'>+86 137****8273 </p>
+										<a href="" title="">修改手机号</a>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="icon">
+										<i class="fa fa-user fa-4x"></i>
+									</div>	
+									<div class="content">
+										<p>身份未验证</p>
+										<p><a href="" title="">立即绑定</a></p>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="basic-info-section">
+							<form>
+								<div class='basic-location'>
+									<h2>地址</h2>
+									<div class="row row--no-padding">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="">
+													国家
+												</label>
+												<input type="text" class='form-control'>	
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="">
+													城市
+												</label>
+												<input type="text" class='form-control'>	
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="">
+											地址
+										</label>
+										<input type="text" class='form-control'>	
+									</div>
+								</div>
+								<div class="basic-company">
+									<h2>公司</h2>
+									<div class="form-group">
+										<label for="">
+											公司
+										</label>
+										<input type="text" class='form-control'>	
+									</div>
+									<div class="form-group">
+										<label for="">
+											公司主页
+										</label>
+										<input type="text" class='form-control' placeholder='http://'>	
+									</div>
+								</div>
+							
+							
+							</form>
+							<button class='btn btn-primary'>保存设置</button>
+						</section>
 					</div>
 				</div>
 			</section>
@@ -459,7 +551,7 @@
 						<div class='setting-section-item'>
 							<div class="form-horizontal">
 								<div class="setting-edit setting-edit-name">
-									<h3 class='setting-edit-title'><i class="fa fa-lock"></i><span>Change password</span></h3>
+									<!-- <h3 class='setting-edit-title'><i class="fa fa-lock"></i><span>Change password</span></h3> -->
 									<div class='form-group'>
 										<label for="user_profile_name" class='col-sm-3 control-label'>Old password：</label>
 										<input id="user_profile_name" class='form-control col-sm-9' size="30" type="text"  value=''></div>
@@ -492,7 +584,7 @@
 					<div class="panel-body">
 						<div class='setting-section-item'>
 							<div class="setting-edit setting-edit-name">
-								<h3 class='setting-edit-title'><i class="fa fa-link"></i><span>Linked Accounts</span></h3>
+								<!-- <h3 class='setting-edit-title'><i class="fa fa-link"></i><span>Linked Accounts</span></h3> -->
 								<p class='pb-10'>Manage your linked social accounts on Regbuzz.</p>
 								<div class="reg-social-link reg-social-link--setting text-center" >
 									<a href="" title="" class='reg-social-link-linkedin'>
