@@ -2,14 +2,14 @@
 
 .com-main{
 	background-color: #f1f1f1;
-	padding: 20px 0;
+	padding: 40px 0;
 }
 .com-content,.com-aside{
 	padding-right: 10px;
 	padding-left: 10px;
 }
 
-// 
+// 撑满页面
 @include sticky-footer(100px);
 // footer
 .com-policy{
@@ -18,5 +18,10 @@
 		color:#96999C;
 		margin: 0 4px;
 	}
+}
+
+.com-title-h1{
+	@include font-size(2.6);
+	font-weight: 600;
 }
 

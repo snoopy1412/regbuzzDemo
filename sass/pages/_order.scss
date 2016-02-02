@@ -7,24 +7,7 @@
 		text-transform: uppercase;
 		color:$palette-blue;
 	}
-	.due-warp{
-		margin-top: 20px;
-		.due-amount{
-			margin: 0;
-			color:#a4a4a4;
-		}
-	}
-	.cooperators{
-		color:#a4a4a4;
-	}
-	.t-due{
-		font-size: 22px;
-		color: $palette-blue;
-	}
-	.dd-fixed-width{
-		display: inline-block;
-		width: 80px;
-	}
+
 	.order-info-id,.order-info-date{
 		margin-bottom: 5px;
 		color:#a4a4a4;
@@ -43,12 +26,36 @@
 	text-transform: uppercase;
 }
 .order-title{
-	@include font-size(1.8);
-	font-weight: 600;
-	margin: 0;
-	color:#555;
+		margin: 0;
+		a{
+			@include font-size(1.8);
+			font-weight: 600;
+			color:#555;
+		}
+	
 }
 
+// estimated
+
+.estimated-text{
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 0;
+	padding-bottom: 5px;
+	input[type=text]{
+		border:0;
+		width:100%;
+		outline: 0;
+	}
+}
+.alert-estimated {
+	padding: 0;
+	position: relative;
+	.closeOut{
+		position: absolute;
+		right:-35px;
+		top:2px;
+	}
+}
 // table--order
 .table--order{
 	&>thead{
@@ -73,6 +80,15 @@
 		font-weight: bold;
 		margin: 0 0 5px 0;
 	}
+	.due-amount{
+		margin: 0;
+		color:#a4a4a4;
+	}
+	.t-due{
+		font-size: 22px;
+		color: $palette-blue;
+	}
+
 }
 
 .responsibilities-list{

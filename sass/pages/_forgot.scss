@@ -1,0 +1,19 @@
+.container-forgot{
+	padding-top:40px;
+	padding-bottom: 160px;
+}
+.forgot-title{
+	@include font-size(2.8);
+	margin-bottom: 50px;
+}
+.forgot-method{
+	display: block;
+	padding: 15px 14px;
+	border: 1px solid lighten($palette-blue,40%);
+	background-color: lighten($palette-blue,50%);
+
+	border-radius: 4px;
+	&:hover{
+		background-color: lighten($palette-blue,40%);
+	}
+}

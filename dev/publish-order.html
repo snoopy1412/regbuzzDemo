@@ -9,7 +9,7 @@
 
 <!-- /header -->
 <section class='com-main'>
-	<div class="container container--order">
+	<div class="container container--order" id='vue-order-controller'>
 		<ul class="steps">
 			<li class='step-item active'>
 				<a href="" title="" class='step-1'>Describe your need</a>
@@ -31,7 +31,7 @@
 					<dl>
 						<dt><span class="order-title-prefix">Project Title</span></dt>
 						<dd>
-							<h2 class="order-title">Need a logo about Children Association</h2>
+							<h2 class="order-title"><a href="" title="">Need a logo about Children Association</a></h2>
 						</dd>
 					</dl>
                     <!-- <div class='cooperators'>
@@ -63,31 +63,21 @@
 				<div class="form-group">
 					<label for="estimated" class='col-md-2'>Estimated Deliverables</label>
 					<div class="col-md-9">
-						<table class='table--proposal'>
-							<tbody>
-								<tr>
-									<td width="80%" class='text-left'>
-										<input type="text" class='form-control' value='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' disabled="true">
-									</td>
-									<td width="20%" class='text-right'>
-										<button class='btn btn-primary btn-sm'><i class="fa fa-plus"></i></button>
-										<button class='btn btn-warning btn-sm'><i class="fa fa-pencil"></i></button>
-										<button class='btn btn-danger btn-sm'><i class="fa fa-trash"></i></button>
-									</td>
-								</tr>
-								<tr>
-									<td class='text-left'>
-										<input type="text" class='form-control'  value='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' disabled="true">
-									</td>
-									<td class='text-right'>
-										<button class='btn btn-primary btn-sm'><i class="fa fa-plus"></i></button>
-										<button class='btn btn-warning btn-sm'><i class="fa fa-pencil"></i></button>
-										<button class='btn btn-danger btn-sm'><i class="fa fa-trash"></i></button>
-									</td>
-								</tr>
-							</tbody>
-							
-						</table>
+						<div classs='estimated-content'>
+							<div class="alert alert-estimated fade in clearfix">
+								<button type="button" class="closeOut btn btn-danger-outline btn-sm" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+								<p class='estimated-text'>
+									<input type="text" value='完成十个中文的SDS报告'>
+								</p>	
+							</div>
+							<div class="alert alert-estimated fade in clearfix">
+								<button type="button" class="closeOut btn btn-danger-outline btn-sm" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+								<p class='estimated-text'>
+									<input type="text" value='完成十个中文的SDS报告'>
+								</p>	
+							</div>
+						</div>
+						<a href="javascript:;" title="" id='add-deliverables'>+Add Deliverables</a>
 					</div>
 				</div>
 			</div>
@@ -126,61 +116,37 @@
 			</div>
 			<div class="panel-body">
 			   <table class="table table-bordered table--order">
-		           <!--  <thead>
-			            <tr>
-			                <th>#</th>
-			                <th>Item Description</th>
-			                <th class="text-center">Unit Cost</th>
-			                <th class="text-center">Quantity</th>
-			                <th class="text-center">Total</th>
-			            </tr>
-		            </thead> -->
+		           
 		            <tbody>
-			            <!-- <tr>
-			                <td>1</td>
-			                <td>
-			                    <h4>Service One</h4>
-			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-			                </td>
-			                <td class="text-center"><strong>$ 599.00</strong></td>
-			                <td class="text-center"><strong>4</strong></td>
-			                <td class="text-center"><strong>$2396.00</strong></td>
-			            </tr>
-			            <tr>
-			                <td>2</td>
-			                <td>
-			                    <h4>Service Two</h4>
-			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-			                </td>
-			                <td class="text-center"><strong>$ 599.00</strong>	</td>
-			                <td class="text-center"><strong>5</strong></td>
-			                <td class="text-center"><strong>$2995.00</strong></td>
-			            </tr>
-			            <tr>
-			                <td>3</td>
-			                <td>
-			                    <h4>Service Three</h4>
-			                    <p>Service Four Description Lorem ipsum dolor sit amet.</p>
-			                </td>
-			                <td class="text-center"><strong>$ 599.00</strong>	</td>
-			                <td class="text-center"><strong>2</strong></td>
-			                <td class="text-center"><strong>$1198.00</strong></td>
-			            </tr> -->
-			            <tr>
-			                <!-- <td colspan="2" class="payment-method">
-			                    <h4>Payment Method</h4>
-			                </td> -->
-			                <td class="text-right" width="50%">
-			                    <p>Sub Total</p>
-			                    <p>Tax (VAT 10%)</p>			                    
-			                    <p><strong>GRAND TOTAL</strong></p>
-			                </td>
-			                <td class="text-center" width="50%">
-			                    <p>$ 6589.00</p>
-			                    <p>$ 120.00</p>			               
-			                    <p><strong>$ 6709.00</strong></p>
-			                </td>
-			            </tr>
+			          <tr>
+			          	<td width="50%">
+			          		Sub Total
+			          	</td>
+			          	<td width="50%">
+			          		<div class="input-group" style="max-width: 200px;">
+			          			<span class="input-group-addon">$</span>
+			          			<input type="number" v-model='offer' class='form-control' number>
+			          		</div>
+		          			
+			          	</td>
+			          </tr>
+			          <tr>
+			          	<td>
+			          		保证金
+			          	</td>
+			          	<td>
+			          		{{margin | currency}}
+			          	</td>
+			          </tr>
+			          <tr>
+			          	<td>
+			          		<strong class='t-due'>GRAND TOTAL</strong>
+			          	</td>
+			          	<td>
+			          		<h2 class='due-amount'>{{finalOffer | currency}}</h2>
+			          	</td>
+			          </tr>
+			            
 		            </tbody>
 	        </table>
 			</div>
@@ -209,7 +175,7 @@
 						<dd>Aaron Su</dd>
 					</dl>
 					<dl class="dl-horizontal">
-						<dt>签署时间：</dt>
+						<dt>确认时间：</dt>
 						<dd>2016年1月21日</dd>
 					</dl>
 				</div>
@@ -219,7 +185,7 @@
 						<dd>富士康</dd>
 					</dl>
 					<dl class="dl-horizontal">
-						<dt>签署时间：</dt>
+						<dt>确认时间：</dt>
 						<dd>2016年1月21日</dd>
 					</dl>
 				</div>

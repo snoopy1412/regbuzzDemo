@@ -9,289 +9,148 @@
 
 <!-- /header -->
 <section class='com-main'>
-	<div class="container">
-		<!-- <div class="row account-aside section">
-			<div class="col-md-6 account-aside-section">
-				<div class="account-name clearfix">
-					<div class="account-img pull-left">
-						<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="120px" ></a>
-						<span class="level">1</span>
-					</div>
-					<div class="account-call pull-left">
-						<div class='account-call-name-warp'>
-							<a href="" title="" class='account-call-name'>Aaron Su</a>
-							<div class='account-call-des clearfix'>
-								<p class=''>Current : Base User <a href="" title="" class='btn btn-primary-outline btn-sm' style='margin-left: 60px'>Update account</a></p>
+	<div class="container">	
+
+		<!-- 面包屑 -->
+		<ol class="breadcrumb">
+		  <li><a href="dashboard.html">Dashboard</a></li>
+		  <li class="active">Transaction History</li>
+		</ol>
+
+		<!-- 主要内容 -->
+		<div class="account-content section">
+				<section class='account-section'>
+							<div class="account-content-heading clearfix" style='margin-bottom: 20px;'>
+								<form action="" method="POST" class="form-inline clearfix">
+									<div class="form-group">
+										<label  for="">Trading hours: </label>
+										<div class="input-group date form_date">
+										 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
+										 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>	 	
+										 </div>
+										-
+										<div class="input-group date form_date">
+										 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
+										 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
+										 </div>
+									</div>
+									<div class='form-group' style='padding-left: 20px'>
+										<label for="">Fund flow: </label>
+										<select name="" id="" class="form-control">
+											<option value="" selected>all</option>
+											<option value="">income</option>
+											<option value="">cost</option>
+										</select>
+									</div>
+									<div class="form-group pull-right">
+										<input type="text" class='form-control' placeholder='input your order number'>
+										<button class="btn btn-primary">search</button>
+									</div>
+								</form>
 							</div>
-							<div class="progress--small">
-							  <div class="progress-bar progress-bar-success" style="width: 40%">
-							  </div><label class='level-num'> 32/40 </label>
+							<table class="table table-hover table--account">
+								<thead>
+									<tr>
+										<th width="10%">
+											serial number
+										</th>
+										<th width="15%">
+											time
+										</th>
+										<th width="50%">
+											content
+										</th>
+										<th width="5%">
+											money($)
+										</th>
+										<th width="20%">
+											Payment channels
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											2015092300038507
+										</td>
+										<td>
+											<time datetime="2011-01-12">January 12th, 2011</time>
+										</td>
+										<td>
+											订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
+											<br>
+											托管赏金-服务 - 订单号 ：6250482
+										</td>
+										<td>
+											-3750
+										</td>
+										<td>
+											支付宝
+										</td>
+									</tr>
+									<tr>
+										<td>
+											2015092300038507
+										</td>
+										<td>
+											<time datetime="2011-01-12">January 12th, 2011</time>
+										</td>
+										<td>
+											订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
+											<br>
+											托管赏金-服务 - 订单号 ：6250482
+										</td>
+										<td>
+											-3750
+										</td>
+										<td>
+											支付宝
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="account-content-footer clearfix">
+								<p class='pull-left cost-statistics'>
+									共一条数据，累计收入<span class='num'>0</span>元，累计支出<span class='num'>3750</span>元。
+								</p>
+								<nav class='pull-right'>
+								  <ul class="pagination">
+								    <li>
+								      <a href="#" aria-label="Previous">
+								        <span aria-hidden="true">&laquo;</span>
+								      </a>
+								    </li>
+								    <li><a href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								    <li><a href="#">4</a></li>
+								    <li><a href="#">5</a></li>
+								    <li>
+								      <a href="#" aria-label="Next">
+								        <span aria-hidden="true">&raquo;</span>
+								      </a>
+								    </li>
+								  </ul>
+								</nav>
 							</div>
-							<section class='account-call-viewpro'>
-								<a href="" title="" class='btn btn-info-outline btn-sm '>view profile</a>
-							</section>
-						</div>
-					</div>
-				</div>
-				<div class="account-score clearfix">
-					<div class="left pull-left">
-						<p class='score-num'>4.98</p>
-						<p class='score-stars'><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i>
-						</p>
-						<p><a href="" title="">93 commits</a></p>
-					</div>
-					<div class="right pull-left">
-					<dl class="dl-horizontal--short score">
-					<dt class='score-title'>工作质量</dt>
-					<dd>
-						<span class='score-detail'>4.8</span>
-						<span class='score-stars'>
-							<i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
-						</span>
-					</dd>
-				</dl>
-				<dl class="dl-horizontal--short score-warp">
-					<dt class='score-title'>沟通</dt>
-					<dd>
-						<span class='score-detail'>4.8</span>
-						<span class='score-stars'>
-							<i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
-						</span>
-					</dd>
-				</dl>
-				<dl class="dl-horizontal--short score-warp">
-					<dt class='score-title'>专业技能</dt>
-					<dd>
-						<span class='score-detail'>4.8</span>
-						<span class='score-stars'>
-							<i class="fa fa-star "></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star fa"></i><i class="fa fa-star"></i>
-						</span>
-					</dd>
-				</dl>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 account-aside-section">
-				<div class="account-ibox  account-ibox--income">
-						<div class='header clearfix'>
-							<div class="btn-group pull-right">
-								<a href="" title="" class='btn btn-secondary btn-sm active'>All</a>
-								<a href="" title="" class='btn btn-secondary btn-sm'>Dayly</a>
-								<a href="" title="" class='btn btn-secondary btn-sm'>Monthly</a>
-								<a href="" title="" class='btn btn-secondary btn-sm'>Yearly</a>
+							<div class="account-faqs">
+								<h3>
+									FAQs
+								</h3>
+								<dl>
+									<dt>Trading a refund money, back to where go to?</dt>
+									<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+								</dl>
+								<dl>
+									<dt>Trading a refund money, back to where go to?</dt>
+									<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+								</dl>
+								<dl>
+									<dt>Trading a refund money, back to where go to?</dt>
+									<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+								</dl>
 							</div>
-							
-						</div>
-						<div class="content">
-							<div class="row">
-								<section class='col-md-6'>
-									<div class='item item-income'>
-										<div class="panel">
-			                                <div class="panel-body p-states blue-box">
-			                                    <div class="summary pull-left">
-			                                        <h4>INCOME</h4>
-			                                        
-			                                        <h3>$ 5,600</h3>
-			                                    </div>
-			                                    <div id="expense" class="chart-bar pull-right">
-			                                    	<img src="./img/account/chart-white.png" height="35" width="68" alt="">
-			                                    </div>
-			                                </div>
-			                            </div>
-									</div>			
-								</section>
-								<section class='col-md-6'>
-									<div class="item item-cost">
-										<div class="panel">
-			                                <div class="panel-body p-states green-box">
-			                                    <div class="summary pull-left">
-			                                        <h4>COST</h4>
-			                                       
-			                                        <h3>$ 5,600</h3>
-			                                    </div>
-			                                    <div id="expense" class="chart-bar pull-right">
-			                                    	<img src="./img/account/chart-white.png" height="35" width="68" alt="">
-			                                    </div>
-			                                </div>
-			                            </div>
-									</div>		
-								</section>
-							</div>
-						</div>
-				</div>
-				<div class="account-ibox">
-					<div class="content clearfix">
-						<dl class="dl-horizontal--short">
-							<dt>BALANCE</dt>
-							<dd><span class="balance-value">$ 3,120.00</span></dd>
-						</dl>
-						<dl class="dl-horizontal--short">
-							<dt>FROZEN</dt>
-							<dd><span class="frozen-value">$ 3,120.00</span></dd>
-						</dl>
-						<div class='account-money'>
-							<a href="" title="" class='btn btn-sm btn-primary-outline'>Withdraw</a>
-							<a href="" title="" class='btn btn-sm btn-primary'>Top-up</a>
-						</div>						
-					</div>
-				</div>				
-			</div>
-		</div>	 -->	
-		<div class="row account-content section">
-			<ul class="nav nav-tabs">
-				<li class="active"><a href="#transactions-statement" data-toggle="tab">Transactions Statement</a></li>
-				<li><a href="#scoring-rating" data-toggle="tab">Scoring & Rating</a></li>
-				<li><a href="#invoice-management" data-toggle="tab">Invoice Management</a></li>
-				<li><a href="#arbitration-management" data-toggle="tab">Arbitration Management</a></li>
-			</ul>
-			<div class='tab-content'>
-				<section class='account-section tab-pane fade in active' id="transactions-statement">
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="account-content-heading clearfix" style='margin-bottom: 20px;'>
-							<form action="" method="POST" class="form-inline clearfix">
-								<div class="form-group">
-									<label  for="">Trading hours: </label>
-									<div class="input-group date form_date">
-									 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
-									 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>	 	
-									 </div>
-									-
-									<div class="input-group date form_date">
-									 	<input type="text" id="datepicker1" name="dateFrom" value="" class="form-control" readonly="" style='width:100px;'>
-									 	 <span class="input-group-addon"><span class="fa fa-times"></span></span>
-									 </div>
-								</div>
-								<div class='form-group' style='padding-left: 20px'>
-									<label for="">Fund flow: </label>
-									<select name="" id="" class="form-control">
-										<option value="" selected>all</option>
-										<option value="">income</option>
-										<option value="">cost</option>
-									</select>
-								</div>
-								<div class="form-group pull-right">
-									<input type="text" class='form-control' placeholder='input your order number'>
-									<button class="btn btn-primary">search</button>
-								</div>
-							</form>
-						</div>
-						<table class="table table-hover table--account">
-							<thead>
-								<tr>
-									<th width="10%">
-										serial number
-									</th>
-									<th width="15%">
-										time
-									</th>
-									<th width="50%">
-										content
-									</th>
-									<th width="5%">
-										money($)
-									</th>
-									<th width="20%">
-										Payment channels
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										2015092300038507
-									</td>
-									<td>
-										<time datetime="2011-01-12">January 12th, 2011</time>
-									</td>
-									<td>
-										订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
-										<br>
-										托管赏金-服务 - 订单号 ：6250482
-									</td>
-									<td>
-										-3750
-									</td>
-									<td>
-										支付宝
-									</td>
-								</tr>
-								<tr>
-									<td>
-										2015092300038507
-									</td>
-									<td>
-										<time datetime="2011-01-12">January 12th, 2011</time>
-									</td>
-									<td>
-										订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
-										<br>
-										托管赏金-服务 - 订单号 ：6250482
-									</td>
-									<td>
-										-3750
-									</td>
-									<td>
-										支付宝
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="account-content-footer clearfix">
-							<p class='pull-left cost-statistics'>
-								共一条数据，累计收入<span class='num'>0</span>元，累计支出<span class='num'>3750</span>元。
-							</p>
-							<nav class='pull-right'>
-							  <ul class="pagination">
-							    <li>
-							      <a href="#" aria-label="Previous">
-							        <span aria-hidden="true">&laquo;</span>
-							      </a>
-							    </li>
-							    <li><a href="#">1</a></li>
-							    <li><a href="#">2</a></li>
-							    <li><a href="#">3</a></li>
-							    <li><a href="#">4</a></li>
-							    <li><a href="#">5</a></li>
-							    <li>
-							      <a href="#" aria-label="Next">
-							        <span aria-hidden="true">&raquo;</span>
-							      </a>
-							    </li>
-							  </ul>
-							</nav>
-						</div>
-						<div class="account-faqs">
-							<h3>
-								FAQs
-							</h3>
-							<dl>
-								<dt>Trading a refund money, back to where go to?</dt>
-								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-							</dl>
-							<dl>
-								<dt>Trading a refund money, back to where go to?</dt>
-								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-							</dl>
-							<dl>
-								<dt>Trading a refund money, back to where go to?</dt>
-								<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-							</dl>
-						</div>
-						
-					</div>
-				</div>
 				</section>
-				<section class='account-section tab-pane fade in'  id="scoring-rating">
-				1
-				</section>
-				<section class='account-section tab-pane fade in'  id="invoice-management">
-				2
-				</section>
-				<section class='account-section tab-pane fade in'  id="arbitration-management">
-				3
-				</section>
-			</div>
 		</div>	
 	</div>
 </section>

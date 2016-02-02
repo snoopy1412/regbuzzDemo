@@ -1,4 +1,4 @@
-define(['jquery', 'popover','raty'],function($,popover,raty) {
+define(['jquery', 'popover','raty','./js/publish-controller.js'],function($,popover,raty) {
 
   // 星星评级      
   $('.grade-item').each(function() {
@@ -68,10 +68,6 @@ define(['jquery', 'popover','raty'],function($,popover,raty) {
     }
   });
 
-
-
-
-
   // star    
     $('.star-bids-user').raty({
         readOnly: true,
@@ -84,9 +80,6 @@ define(['jquery', 'popover','raty'],function($,popover,raty) {
         targetKeep: true
     });
 
-
-
-
 // prover
   $('.provider-name').popover({
     method: 'hover',
@@ -94,5 +87,21 @@ define(['jquery', 'popover','raty'],function($,popover,raty) {
     content: $('.js-modal-author'),
     dir:'down'
   });
+
+
+
+  // order
+  // +Add Deliverables
+  $('#add-deliverables').on('click',function(){
+      var content = $(this).prev(),
+          html = $("<div class='alert alert-estimated fade in clearfix'>"+
+                   "<button type='button' class='closeOut btn btn-danger-outline btn-sm' data-dismiss='alert'><span aria-hidden='true'>×</span></button>"+
+                   "<p class='estimated-text'>"+
+                   "<input type='text' value='' placeholder='Add your deliverable'>"+
+                   "</p>"+  
+                   "</div>"
+                   );
+     content.append(html);
+  })
 
 });

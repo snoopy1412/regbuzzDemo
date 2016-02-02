@@ -8,22 +8,15 @@
 
 <section class='com-main'>
 <div class="container">
-	<div class="pure-g">
-			<ol class="breadcrumb">
-			  <li><a href="#">Home</a></li>
-			  <li>Notice</li>
-			</ol>		
-			<div class="notice-list section">
-				<!-- <ul class='tab clearfix'>
-					<li class='active'><a href="" title="">All Notification</a></li>
-					<li><a href="" title="">Unread Notification</a></li>
-				</ul> -->
-				<ul class="nav nav-tabs">
-				  <li role="presentation" class="active"><a href="#">All Notification</a></li>
-				  <li role="presentation"><a href="#">Unread Notification</a></li>
-				</ul>
-				<div class="notice-content">
-					<div class='notice-content-list'>
+		<h1 class='com-title-h1'>Notification</h1>	
+		<div class="notice-list section">
+			<ul class="nav nav-tabs">
+			  <li class="active"><a href="#all" data-toggle='tab'>All Notification</a></li>
+			  <li><a href="#unread"  data-toggle='tab'>Unread Notification</a></li>
+			</ul>
+			<div class="notice-content tab-content">
+				<div class="tab-pane active" id="all">
+			    	<div class='notice-content-list'>
 						<div class='alert alert-dismissible fade in clearfix'>
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
 							<a href="" title="" class='notice-title'>A security question has been created for your account.</a>
@@ -104,9 +97,92 @@
 							</li>
 						</ul>
 					</nav>	
-				</div>
+		    	</div>
+				<div class="tab-pane" id="unread">
+			    	<div class='notice-content-list'>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+						<div class='alert alert-dismissible fade in clearfix'>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<a href="" title="" class='notice-title unread-title'>A security question has been created for your account.</a>
+							<time datetime="2011-01-12" class='notice-time'>January 12th, 2011</time>	
+						</div>
+					</div>
+					<nav class='text-right'>
+						<ul class="pagination">
+							<li class="disabled">
+								<a href="#" aria-label="Previous">
+									<span>&lt; Previous</span>
+								</a>
+							</li>
+							<li class="active">
+								<a href="#">1</a>
+							</li>
+							<li>
+								<a href="#">2</a>
+							</li>
+							<li>
+								<a href="#">3</a>
+							</li>
+							<li>
+								<a href="#">4</a>
+							</li>
+							<li>
+								<a href="#">5</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Next">
+									<span>Next &gt;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>	
+		    	</div>
 			</div>
-	</div>	
+		</div>
 </div>
 
 </section>

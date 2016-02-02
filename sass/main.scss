@@ -14,7 +14,7 @@
 
 // base
 @import "base/font";
-@import "base/normalize";
+// @import "base/normalize";
 @import "base/base";
 @import "base/type";
 @import "base/global";
@@ -66,6 +66,7 @@
 @import "pages/proposal";
 @import "pages/order";
 @import "pages/connection";
+@import "pages/forgot";
 
 // module
 @import "module/step";
