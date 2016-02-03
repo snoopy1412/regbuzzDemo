@@ -1,4 +1,4 @@
-define(['raty','edit','layer'],function(raty,edit,layer) {
+define(['raty','edit','layer','./js/profile-controller.js'],function(raty,edit,layer) {
 
     // 星星评级
     $('.totalScore').raty({
@@ -61,17 +61,20 @@ $('.profile-info-item').each(function(){
 
 
 
-// 给location准备的单独的
-$('#profile-location').on('mouseover',function(){
-   
 
-})
 $('#profile-location').hover(function(){
      $(this).find('.location-text').css('background-color','#dcf2fc');
       $(this).find('.edit').css('background-color','#dcf2fc');
 },function(){
         $(this).find('.location-text').css('background-color','transparent');
       $(this).find('.edit').css('background-color','transparent');
+})
+
+
+$('.profile-info--person-register .edit').on('click',function(){
+    $('body').popover({
+        selector:'.aaa'
+    })
 })
 
 });
