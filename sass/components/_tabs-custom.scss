@@ -8,7 +8,7 @@
 	@include tabs-custom(#65CEA7,#fff,#65CEA7)
 }
 .nav-tabs-custom-blue{
-	@include tabs-custom(#5BC0DE,#fff,#5BC0DE)
+	@include tabs-custom($palette-blue,#fff,$palette-blue)
 }
 .nav-tabs-custom-yellow{
 	@include tabs-custom(#F0AD4E,#fff,#F0AD4E)

@@ -14,7 +14,8 @@ require.config({
     dropdown: './components/dropdown',
     bootstrap:'./vendor/bootstrap',
     Vue:'./vendor/vue',
-    vueValidator:'./vendor/vue-validator.min'
+    vueValidator:'./vendor/vue-validator.min',
+    wysiwyg:'../plugins/wysiwyg/wysiwyg'
   },
   shim: {
     "velocity": {
@@ -44,11 +45,14 @@ require.config({
     'vueValidator':{
       deps:["Vue"],
       exports:'vueValidator'
+    },
+    'wysiwyg':{
+      deps:['jquery']
     }
   }
 });
 
-require(['jquery','bootstrap','index', 'dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help','project-list','top-up'], function($) {
+require(['jquery','bootstrap','index', 'dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help','project-list','top-up','wysiwyg-handle'], function($) {
   layer.config({
     path: './plugins/layer/' //layer.js所在的目录，可以是绝对目录，也可以是相对目录
   });

@@ -151,6 +151,18 @@
 .profile-info--person-register
 {
     padding-top: 10px;
+    .location{
+        margin-bottom: 10px;
+    }
+    .location-text{
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .edit{
+        padding: 5px;
+    }
 }
 .profile-info--person-brief
 {

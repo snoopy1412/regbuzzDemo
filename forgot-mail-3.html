@@ -1,5 +1,22 @@
 <!-- head.html -->
-<% include ../publicTpl/head.html %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
+	<title>Document</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src='./js/vendor/respond.min.js'></script>
+    <script type="text/javascript" src='./js/vendor/require.js' data-main='./js/main.js'></script>
+	<!--[if lt IE9]> 
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
 <!-- head.html end-->
 <body>
 <div class="com-stick-root">
@@ -34,11 +51,11 @@
 						<strong class="step">Step 1:</strong>
 						输入绑定邮箱
 					</li>
-					<li>
+					<li class='current'>
 						<strong class="step">Step 2:</strong>
 						设置新密码
 					</li>
-					<li>
+					<li class='current'>
 						<strong class="step">Step 3:</strong>
 						设置成功
 					</li>
@@ -47,35 +64,12 @@
 				<!-- form -->
 				<section style='max-width: 600px;margin: 50px auto 100px;'>
 
-					<!-- 步骤1 -->
-					<form class='form-horizontal'>
-						<div class="form-group">
-							<label for="" class='col-sm-4 control-label'>输入绑定的邮箱：</label>
-							<div class='col-sm-6'>
-								<input type="email" name="" value="" placeholder="" class='form-control'>
-							</div>
-						</div>
-						<div class='col-sm-offset-4 col-sm-8'>
-							<button type="button" class='btn btn-primary'>发送验证邮件</button>
-						</div>
-						
-					</form>
-					<!-- 发送验证邮箱后，页面变成 -->
-				<!-- 	<div class="text-center">
-		                    <div class="verify-sucess">
-		                        <i class="fa fa-check-circle"></i>
-		                        <span>验证邮件已发送</span>
-		                    </div>
-		                    <div class="verify-mail-des">
-		                        <p>验证邮件已发送至您的邮箱<a href="javascript:void(0);">402****@qq.com</a>，点击邮件中的链接完成操作。</p>
-		                        <p>验证邮件24小时内有效，请尽快验证！</p>
-		                    </div>
-		                    <div class="verify-mail-send">
-		                        <a class="btn btn-success">立即进入邮箱</a>
-		                       
-		                        <a href="javascript:void(0)" class="verify-mail-handle">已发送 <span>59</span>秒后重新发送</a>
-		                    </div>
-	                </div> -->
+					<!-- 步骤3 -->
+					<div class="success_note">
+                        <i class="fa fa-check fa-lg"></i>
+                        <span>密码设置成功</span>
+                    </div>
+				
 				</section>
 			</div>		
 		</div>

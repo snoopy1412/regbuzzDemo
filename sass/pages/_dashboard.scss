@@ -3,7 +3,7 @@
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	background-color: #fff;
-	margin-bottom: 20px;
+	margin-bottom:10px;
 	padding: 10px;
 	.home-heading-section{
 		border-right: 1px solid #ddd;
@@ -31,6 +31,7 @@
 		display: block;
 		@include font-size(1.8);
 		font-weight: 600;
+		margin: 0;
 	}
 	.home-call-position{
 		color:#666;
@@ -141,8 +142,14 @@
 		}
 	}
 	.ask{
+		border-right: 1px solid #ddd;
 		.fa{
 			color:$palette-teal;
+		}
+	}
+	.share{
+		.fa{
+			color:$palette-violet;
 		}
 	}
 }
@@ -154,7 +161,7 @@
 	padding: 10px;
 	text-align: center;
 	.fa{
-		font-size: 26px;
+		font-size: 22px;
 		width: 40px;
 		vertical-align: middle;
 	}
@@ -167,7 +174,28 @@
 	}
 }
 
+// 公共
+.dashboard-article{
+	.nav{
+		margin-bottom: 20px;
+	}
+}
+.home-dynamic,.home-new{
+	.col-md-1{
+		padding-left: 0;
+	}
+	.col-md-11{
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.dashboard-content{
+	margin-bottom: 20px;
+}
+
 // home-push
+
 .home-push{
 	&>.col-md-12,.col-md-6{
 		padding-left: 2px;
@@ -197,7 +225,7 @@
 .user-new-content{
 	border: 1px solid #ccc;
 	background-color: #fff;
-	padding: 20px;
+	padding: 10px;
 	border-radius: 4px;
 	position: relative;
 	&:before{
@@ -213,7 +241,83 @@
 		top:5px;
 		@include arrow(right,10px,#ccc);
 	}
+
+	.header{
+		padding: 12px 0;
+		margin-bottom: 11px;
+		min-height: 17px;
+		border-bottom: 1px solid #EEE;
+		.headline{
+			margin: 0;
+		}
+	}
+	.author{
+		margin-bottom: 10px;
+	}
+	.author-name{
+		display: inline-block;
+		margin-left: 10px;
+	}
+	.side-article{
+		position: relative;
+		height: 100px;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	.side-content-image{
+		position: absolute;
+		left: 0;
+		top:0;
+		overflow: hidden;
+		border-right: 1px solid rgba(0, 0, 0, .1);
+		.image-container{
+			width: 165px;
+			height: 98px;
+			overflow: hidden;
+		}
+	}
+	.side-content-description{
+		margin-left: 180px;
+		.content{
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-right: 10px;
+			overflow: hidden;
+
+		}
+		.snippet-link{
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		h4{
+			font-size: 16px;
+			line-height: 20px;
+			color: #333;
+			font-weight: normal;
+			max-height: 40px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			margin: 0;
+		}
+		.snippet-container{
+			color:#999;
+			margin-bottom: 0;
+		}
+	}
+	.detail-footer{
+		margin-top: 10px;
+		a{
+			&.likes{
+				color:#777;
+			}
+		}
+	}
 	
+}
+
+// dashboard-dynamic
+.dashboard-dynamic{
+
 }
 
 

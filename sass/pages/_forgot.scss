@@ -1,6 +1,24 @@
 .container-forgot{
 	padding-top:40px;
 	padding-bottom: 160px;
+	.success_note{
+		text-align: center;
+		.fa{
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background-color: #67a100;
+			color:#fff;
+			border-radius: 50%;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
+		span{
+			@include font-size(2);
+			vertical-align: middle;
+		}
+	}
 }
 .forgot-title{
 	@include font-size(2.8);
