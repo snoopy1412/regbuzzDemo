@@ -9256,17 +9256,23 @@ ul {
   display: inline-block;
   padding-left: 10px; }
 
-#open-for-bidding .table .btn {
+.container--proList .table .btn {
   border: 0;
   display: block;
   margin: 0 auto;
   padding-top: 0;
   text-transform: capitalize; }
 
-#open-for-bidding .table th {
+.container--proList .table .action {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  color: #444; }
+
+.container--proList .table th {
   text-align: center; }
 
-#open-for-bidding .table td {
+.container--proList .table td {
   vertical-align: top;
   padding: 2px 10px;
   text-align: center; }
