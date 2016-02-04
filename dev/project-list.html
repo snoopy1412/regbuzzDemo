@@ -85,29 +85,108 @@
 
 					<!-- Tab panes -->
 					<div class="tab-content">
+
+						<!-- open-for-bidding -->
 						<div class="tab-pane active" id="open-for-bidding">
 							<table  class="table table-bordered">
 							<thead>
 								<tr class='active'>
-									<th>名称</th>
-									<th>竞标</th>
-									<th>平均报价</th>
-									<th>竞标结束日期</th>
-									<th>动作</th>
+									<th width="40%">Open for bidding Name</th>
+									<th width="10%">Bids</th>
+									<th width="10%">Averagre Price</th>
+									<th width="15%">Time remaining</th>
+									<th width="15%">Status</th>
+									<th width="10%">Action</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<!-- <tr>
 									<td class="CreateProject-container text-center" colspan="5">
 										<a href="publish-quick.html" class="CreateProject">
 										<h4 class="CreateProject-heading">创建一个新的项目</h4>
 										<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
 										</a>
 									</td>
+								</tr> -->
+
+								<tr>
+									<td><a href="" title="竞标名称">竞标名称</a></td>
+									<td>0</td>
+									<td>0 USD</td>
+									<td>6days 7h</td>
+									<td>
+										<span class=''>Draft</span>
+									</td>
+									<td>
+
+										<button type="button" class='btn btn-secondary'>edit</button>
+										<button type="button" class='btn btn-secondary'>cancel</button>
+									</td>
+								</tr>
+								<tr>
+									<td><a href="" title="竞标名称">竞标名称</a></td>
+									<td>0</td>
+									<td>0 USD</td>
+									<td>6days 7h</td>
+									<td>
+										<span class=''>Waiting for bids</span>
+									</td>
+									<td>
+										<button type="button" class='btn btn-secondary'>supplement</button>
+										<button type="button" class='btn btn-secondary'>promote</button>
+										<button type="button" class='btn btn-secondary'>extend</button>
+										<button type="button" class='btn btn-secondary'>cancel</button>
+										<button type="button" class='btn btn-secondary'>detail</button>
+									</td>
+								</tr>
+								<tr>
+									<td><a href="" title="竞标名称">竞标名称</a></td>
+									<td>1</td>
+									<td>$ 10 USD</td>
+									<td>3h</td>
+									<td>
+										<span class=''>Waiting for bids</span>
+									</td>
+									<td>
+										<button type="button" class='btn btn-secondary'>supplement</button>
+										<button type="button" class='btn btn-secondary'>promote</button>
+										<button type="button" class='btn btn-secondary'>extend</button>
+										<button type="button" class='btn btn-secondary'>detail</button>
+									</td>
+								</tr>
+								<tr>
+									<td><a href="" title="竞标名称">竞标名称</a></td>
+									<td>1</td>
+									<td>$ 10 USD</td>
+									<td>0</td>
+									<td>
+										<span class=''>Bidding Closed</span>
+									</td>
+									<td>
+										<button type="button" class='btn btn-secondary'>extend</button>
+										<button type="button" class='btn btn-secondary'>detail</button>
+									</td>
+								</tr>
+								<tr>
+									<td><a href="" title="竞标名称">竞标名称</a></td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>
+										<span class=''>Bidding Closed</span>
+									</td>
+									<td>
+										<button type="button" class='btn btn-secondary'>extend</button>
+										<button type="button" class='btn btn-secondary'>detail</button>
+										<button type="button" class='btn btn-secondary'>cancel</button>
+									</td>
 								</tr>
 							</tbody>
 							</table>
 						</div>
+						<!-- open-for-bidding end -->
+
+						<!-- order-placing -->
 						<div class="tab-pane" id="order-placing">
 							<table class="table table-bordered">
 								<thead>
@@ -131,6 +210,9 @@
 								</tbody>
 							</table>
 						</div>
+						<!-- order-placing end -->
+
+
 						<div class="tab-pane" id="work-in-progress">
 							<table class="table table-bordered">
 								<thead>

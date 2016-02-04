@@ -17,7 +17,7 @@
 						 		<img src="./img/index/servers/13.jpg" alt="Aaron Su" width="100%">
 							 	<section class='profile-info--person-register text-center'>
 							 		<div class="location" id='profile-location'>
-							 			<span class='location-text' v-show='hideOrigin' v-on:click='hide'>{{cityResult}}&nbsp;&nbsp;{{countryResult}}</span>
+							 			<span class='location-text' v-show='hideOrigin' v-on:click='hide'>{{cityResult | capitalize}}&nbsp;&nbsp;{{countryResult}}</span>
 							 			<a href="javascript:;" title="" class='edit'><i class="fa fa-pencil" v-show='hideOrigin' v-on:click='hide'></i></a>	
 							 			<form class='form-horizontal' v-show='!hideOrigin'>
 									  	 	<div class="form-group">
@@ -32,7 +32,7 @@
 								  	 		<div class="form-group">
 									  	 		<label for="" class="col-sm-4 control-label">城市</label>
 									  	 		<div class="col-sm-8">
-									  	 			<input type="text"  class='form-control' name="" v-model='city' placeholder="">
+									  	 			<input type="text"  class='form-control' name="" v-model='city | capitalize' placeholder="">
 									  	 		</div>
 									  	 	</div>
 									  	 	<div class="col-sm-offset-2">
