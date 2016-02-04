@@ -403,7 +403,7 @@
 							<table  class="table table-bordered">
 							<thead>
 								<tr class='active'>
-									<th width="40%">Open for bidding Name</th>
+									<th width="40%">Name</th>
 									<th width="10%">Bids</th>
 									<th width="10%">Averagre Price</th>
 									<th width="15%">Time remaining</th>
@@ -427,7 +427,7 @@
 									<td>0 USD</td>
 									<td>6days 7h</td>
 									<td>
-										<span class=''>Draft</span>
+										<span class=''>Prject Drafting</span>
 									</td>
 									<td>
 										<a href="" class="action">Edit</a>
@@ -446,29 +446,16 @@
 										<a href="" class="action">Supplement</a>
 										<a href="" class="action">Promote</a>
 										<a href="" class="action">Extend</a>
+										<a href="" class="action">Detail</a>
 										<a href="" class="action">Cancel</a>
-										<a href="" class="action">Detail</a>
+										
 									</td>
 								</tr>
+								
 								<tr>
 									<td><a href="" title="竞标名称">竞标名称</a></td>
 									<td>1</td>
-									<td>$ 10 USD</td>
-									<td>3h</td>
-									<td>
-										<span class=''>Waiting for bids</span>
-									</td>
-									<td>
-										<a href="" class="action">Supplement</a>
-										<a href="" class="action">Promote</a>
-										<a href="" class="action">Extend</a>
-										<a href="" class="action">Detail</a>
-									</td>
-								</tr>
-								<tr>
-									<td><a href="" title="竞标名称">竞标名称</a></td>
-									<td>1</td>
-									<td>$ 10 USD</td>
+									<td>10 USD</td>
 									<td>0</td>
 									<td>
 										<span class=''>Bidding Closed</span>
@@ -478,20 +465,7 @@
 										<a href="" class="action">Detail</a>
 									</td>
 								</tr>
-								<tr>
-									<td><a href="" title="竞标名称">竞标名称</a></td>
-									<td>0</td>
-									<td>0</td>
-									<td>0</td>
-									<td>
-										<span class=''>Bidding Closed</span>
-									</td>
-									<td>
-										<a href="" class="action">Extend</a>
-										<a href="" class="action">Detail</a>
-										<a href="" class="action">Cancel</a>
-									</td>
-								</tr>
+								
 							</tbody>
 							</table>
 						</div>
@@ -928,20 +902,92 @@
 						    	<table class="table table-bordered">
 						    		<thead>
 						    			<tr class='active'>
-						    				<th>项目名称</th>
-						    				<th>竞标</th>
-						    				<th>我的竞标</th>
-						    				<th>平均报价</th>
-						    				<th>竞标结束日期</th>
-						    				<th>动作</th>
+						    				<th>Name</th>
+						    				<th>Bids</th>
+						    				<th>Average price</th>
+						    				<th>My price</th>
+						    				<th>Time remaining</th>
+						    				<th>Status</th>
+						    				<th>Action</th>
 						    			</tr>
 						    		</thead>
 						    		<tbody>
 						    			<tr>
-						    				<td colspan="6">
-										        没有找到项目
-					    					</td>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>21</td>
+						    				<td>128 USD</td>
+						    				<td>100 USD</td>
+						    				<td>6Days7h59m59s</td>
+						    				<td>Opening for bids</td>
+						    				<td>
+						    					<a href="" class="action">Edit</a>
+						    					<a href="" class="action">Supplement</a>
+						    					<a href="" class="action">Detail</a>
+						    					<a href="" class="action">Cancel</a>
+						    				</td>
 						    			</tr>
+						    			<tr>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>21</td>
+						    				<td>128 USD</td>
+						    				<td>100 USD</td>
+						    				<td>0</td>
+						    				<td>Biding closed</td>
+						    				<td>
+						    					<a href="" class="action">Detail</a>
+						    					<a href="" class="action">Dispute</a>
+						    				</td>
+						    			</tr>
+						    		</tbody>
+						    	</table>
+						    </div>
+						    <div role="tabpanel" class="tab-pane" id="order-placing">
+						    	<table class="table table-bordered">
+						    		<thead>
+						    			<tr class='active'>
+						    				<th>Name</th>
+						    				<th>Employer</th>
+						    				<th>Status</th>
+						    				<th>Action</th>
+						    			</tr>
+						    		</thead>
+						    		<tbody>
+						    			<tr>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					Waiting for the order
+						    				</td>
+						    				<td>
+						    					<a href="" class="action">Detail</a>
+						    					<a href="" class="action">Dispute</a>
+						    				</td>
+						    			</tr>
+						    			<tr>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					Order received
+						    				</td>
+						    				<td>
+						    					<a href="" class="action">Detail</a>
+						    					<a href="" class="action">Quit</a>
+						    					<a href="" class="action">Dispute</a>
+						    				</td>
+						    			</tr>
+						    			
 						    		</tbody>
 						    	</table>
 						    </div>
@@ -949,18 +995,117 @@
 						    	<table class="table table-bordered">
 						    		<thead>
 						    			<tr class='active'>
-						    				<th>项目名称</th>
-						    				<th>雇主</th>
-						    				<th>被悬赏的竞标</th>
-						    				<th>最后期限</th>
-						    				<th>动作</th>
+						    				<th>Name</th>
+						    				<th>Employer</th>
+						    				<th>Price</th>
+						    				<th>Time remaining</th>
+						    				<th>Status</th>
+						    				<th>Action</th>
 						    			</tr>
 						    		</thead>
 						    		<tbody>
 						    			<tr>
-						    				<td colspan="5">
-										       没有找到项目 
-					    					</td>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					100 USD
+						    				</td>
+						    				<td>
+						    					6Days7h59m59s
+						    				</td>
+						    				<td>
+						    					Working
+						    				</td>
+						    				<td>
+						    					<a href="" class="action">Detail</a>
+						    					<a href="" class="action">Extend</a>
+						    					<a href="" class="action">Job done</a>
+						    					<a href="" class="action">Quit</a>
+						    					<a href="" class="action">Dispute</a>
+						    				</td>
+						    			</tr>
+						    			<tr>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					100 USD
+						    				</td>
+						    				<td>
+						    					0
+						    				</td>
+						    				<td>
+						    					Time out
+						    				</td>
+						    				<td>
+						    					<a href="" class="action">Detail</a>
+						    					<a href="" class="action">Extend</a>
+						    					<a href="" class="action">Dispute</a>
+						    				</td>
+						    			</tr>
+						    			<tr>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					100 USD
+						    				</td>
+						    				<td>
+						    					
+						    				</td>
+						    				<td>
+						    					Waiting for Receipt confirm
+						    				</td>
+						    				<td>
+						    				</td>
+						    			</tr>
+						    			<tr>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					100 USD
+						    				</td>
+						    				<td>
+						    					
+						    				</td>
+						    				<td>
+						    					Waiting for Payment
+						    				</td>
+						    				<td>
+						    				</td>
+						    			</tr>
+						    			<tr>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					100 USD
+						    				</td>
+						    				<td>
+						    					
+						    				</td>
+						    				<td>
+						    					Waiting for Comments
+						    				</td>
+						    				<td>
+						    				</td>
 						    			</tr>
 						    		</tbody>
 						    	</table>
@@ -969,19 +1114,50 @@
 						    	<table class="table table-bordered">
 						    		<thead>
 						    			<tr class='active'>
-						    				<th>项目名称</th>
-						    				<th>竞标</th>
-						    				<th>雇主</th>
-						    				<th>被悬赏的竞标</th>
-						    				<th>时间</th>
-						    				<th>结果</th>
+						    				<th>Name</th>
+						    				<th>Employer</th>
+						    				<th>Reward</th>
+						    				<th>Status</th>
+						    				<th>Action</th>
 						    			</tr>
 						    		</thead>
 						    		<tbody>
 						    			<tr>
-						    				<td colspan="6">
-										       没有找到项目
-					    					</td>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					100 USD
+						    				</td>
+						    				<td>
+						    					Success
+						    				</td>
+						    				<td>
+						    					<a href="" class="action">Detail</a>
+						    					<a href="" class="action">Dispute</a>
+						    				</td>
+						    			</tr>
+						    			<tr>
+						    				<td>
+						    					<a href="">项目名称</a>
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					100 USD
+						    				</td>
+						    				<td>
+						    					Failed
+						    				</td>
+						    				<td>
+						    					<a href="" class="action">Detail</a>
+						    					<a href="" class="action">Reason</a>
+						    					<a href="" class="action">Dispute</a>
+						    				</td>
 						    			</tr>
 						    		</tbody>
 						    	</table>
@@ -990,20 +1166,56 @@
 						    	<table class="table table-bordered">
 						    		<thead>
 							    		<tr class='active'>
-							    			<th>问题名称</th>
-							    			<th>提问者</th>
-							    			<th>我的回答</th>
-							    			<th>奖金</th>
-							    			<th>消息</th>
-							    			<th>问题结束日期</th>
-							    			<th>动作</th>
+							    			<th>Name</th>
+							    			<th>Reward</th>
+							    			<th>Asker</th>
+							    			<th>Time remaining</th>
+							    			<th>Status</th>
+							    			<th>Action</th>
 							    		</tr>
 						    		</thead>
 						    		<tbody>
 						    			<tr>
-						    				<td colspan="7">
-										        没有找到问题
-					    					</td>
+						    				<td>
+						    					<a href="">我的问题</a>
+						    				</td>
+						    				<td>
+						    					10 USD
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					6Days7h59m59s
+						    				</td>
+						    				<td>
+						    					Answer drafting
+						    				</td>
+						    				<td>
+						    					<a href="" class="action">Edit</a>
+						    					<a href="" class="action">Cancel</a>
+						    				</td>
+						    			</tr>
+						    			<tr>
+						    				<td>
+						    					<a href="">我的问题</a>
+						    				</td>
+						    				<td>
+						    					10 USD
+						    				</td>
+						    				<td>
+						    					<a href="">Aaron Su.</a>
+						    				</td>
+						    				<td>
+						    					6Days7h59m59s
+						    				</td>
+						    				<td>
+						    					Waiting for result
+						    				</td>
+						    				<td>
+						    					<a href="" class="action">Supplement</a>
+						    					<a href="" class="action">Quit</a>
+						    				</td>
 						    			</tr>
 						    		</tbody>
 						    	</table>
