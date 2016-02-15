@@ -9296,6 +9296,10 @@ ul {
   text-align: center;
   font-size: 12px; }
 
+.container--proList .table .no-content {
+  height: 100px;
+  vertical-align: middle; }
+
 .notice-main {
   background-color: #fff;
   min-height: 600px;
