@@ -139,6 +139,9 @@
             margin-bottom: 5px;
             text-transform: capitalize;
             color:#444;
+            &:hover{
+                color:$palette-red;
+            }
         }
         th{
             text-align: center;
@@ -151,6 +154,23 @@
         }
         .no-content{
             height: 100px;
+            vertical-align: middle;
+        }
+    }
+
+
+
+    // open-for-bidding
+    .participate-img{
+        text-align: left;
+        img{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            vertical-align: top;
+        }
+        .more{
             vertical-align: middle;
         }
     }

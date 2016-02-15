@@ -9286,6 +9286,8 @@ ul {
   margin-bottom: 5px;
   text-transform: capitalize;
   color: #444; }
+  .container--proList .table .action:hover {
+    color: #db2828; }
 
 .container--proList .table th {
   text-align: center; }
@@ -9299,6 +9301,17 @@ ul {
 .container--proList .table .no-content {
   height: 100px;
   vertical-align: middle; }
+
+.container--proList .participate-img {
+  text-align: left; }
+  .container--proList .participate-img img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    vertical-align: top; }
+  .container--proList .participate-img .more {
+    vertical-align: middle; }
 
 .notice-main {
   background-color: #fff;

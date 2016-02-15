@@ -19,12 +19,12 @@
 						<div class="form-group">
 							<div class="input-group">
 								<div class="input-group-btn">
-								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="width: 120px"><i class="fa fa-search fa-fw" :class='defaultSearch.class'></i>&nbsp;{{defaultSearch.text}}&nbsp;<span class="caret"></span></button>
+								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search fa-fw" :class='defaultSearch.class'></i><span class="caret"></span></button>
 								        <ul class="dropdown-menu search-select-response">
 								          <li v-for='search in searchList'><a href="javascript:;" v-on:click='choiseSearch($index)'><i class="fa fa-fw" :class='search.class'></i>&nbsp;{{search.text}}</a></li>
 								        </ul>
 						      	</div>
-								<input type="text" name="" value="" :placeholder="defaultSearch.placeholder" class='form-control' style='min-width: 300px'  data-toggle="dropdown">
+								<input type="text" name="" value="" :placeholder="defaultSearch.placeholder" class='form-control' style='min-width: 350px'  data-toggle="dropdown">
 								<div class='dropdown-menu search-text-response'>
 									<ul class='list-unstyled'>
 										<li class='search-text-response-title clearfix'>
