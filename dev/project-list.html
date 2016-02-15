@@ -88,12 +88,12 @@
 
 						<!-- open-for-bidding -->
 						<div class="tab-pane active" id="open-for-bidding">
-							<table  class="table table-bordered">
+							<table class="table table-bordered">
 							<thead>
 								<tr class='active'>
-									<th width="40%">Name</th>
-									<th width="10%">Bids</th>
-									<th width="10%">Averagre Price</th>
+									<th width="35%">Name</th>
+									<th width="">Bids</th>
+									<th width="">Averagre Price</th>
 									<th width="15%">Time remaining</th>
 									<th width="15%">Status</th>
 									<th width="10%">Action</th>
@@ -164,10 +164,12 @@
 							<table class="table table-bordered">
 								<thead>
 									<tr class='active'>
-										<th>Order placing Name</th>
+										<th width="35%">Name</th>
 										<th>Provider</th>
-										<th>Status</th>
-										<th>Action</th>
+										<th>Price</th>
+										<th>Time Remaining</th>
+										<th width="15%">Status</th>
+										<th width="10%">Action</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -184,6 +186,8 @@
 											<a href="">订单名称</a>
 										</td>
 										<td><a href="">Charles C.</a></td>
+										<td></td>
+										<td></td>
 										<td>Order Drafting</td>
 										<td>
 											<a href="" class='action'>Edit</a>
@@ -195,6 +199,8 @@
 											<a href="">订单名称</a>
 										</td>
 										<td><a href="">Charles C.</a></td>
+										<td></td>
+										<td></td>
 										<td>Waiting for confirmation</td>
 										<td>
 											<a href="" class='action'>Supplement</a>
@@ -208,6 +214,8 @@
 											<a href="">订单名称</a>
 										</td>
 										<td><a href="">Charles C.</a></td>
+										<td></td>
+										<td></td>
 										<td>Order confirmed</td>
 										<td>
 											<a href="" class='action'>Supplement</a>
@@ -538,6 +546,9 @@
 						    <li role="presentation" class="active">
 						    	<a href="#active-bids" data-toggle="tab">Active Bids</a>
 		                	</li>
+		                	 <li role="presentation">
+						    	<a href="#order-placing-provider" data-toggle="tab">Order Placing</a>
+		                	</li>
 						    <li role="presentation">
 						   	 	<a href="#current-work" data-toggle="tab">Current Work</a>
 						    </li>
@@ -590,13 +601,12 @@
 						    	<table class="table table-bordered">
 						    		<thead>
 						    			<tr class='active'>
-						    				<th>Name</th>
+						    				<th width="35%">Name</th>
 						    				<th>Bids</th>
 						    				<th>Average price</th>
-						    				<th>My price</th>
-						    				<th>Time remaining</th>
-						    				<th>Status</th>
-						    				<th>Action</th>
+						    				<th width="15%">Time remaining</th>
+						    				<th width="15%">Status</th>
+						    				<th width="10%">Action</th>
 						    			</tr>
 						    		</thead>
 						    		<tbody>
@@ -606,7 +616,6 @@
 						    				</td>
 						    				<td>21</td>
 						    				<td>128 USD</td>
-						    				<td>100 USD</td>
 						    				<td>6Days7h59m59s</td>
 						    				<td>Opening for bids</td>
 						    				<td>
@@ -622,7 +631,6 @@
 						    				</td>
 						    				<td>21</td>
 						    				<td>128 USD</td>
-						    				<td>100 USD</td>
 						    				<td>0</td>
 						    				<td>Biding closed</td>
 						    				<td>
@@ -633,7 +641,7 @@
 						    		</tbody>
 						    	</table>
 						    </div>
-						    <div role="tabpanel" class="tab-pane" id="order-placing">
+						    <div role="tabpanel" class="tab-pane" id="order-placing-provider">
 						    	<table class="table table-bordered">
 						    		<thead>
 						    			<tr class='active'>
@@ -683,12 +691,12 @@
 						    	<table class="table table-bordered">
 						    		<thead>
 						    			<tr class='active'>
-						    				<th>Name</th>
+						    				<th width="35%">Name</th>
 						    				<th>Employer</th>
 						    				<th>Price</th>
-						    				<th>Time remaining</th>
-						    				<th>Status</th>
-						    				<th>Action</th>
+						    				<th width="15%">Time remaining</th>
+						    				<th width="15%">Status</th>
+						    				<th width="10%">Action</th>
 						    			</tr>
 						    		</thead>
 						    		<tbody>
