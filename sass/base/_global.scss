@@ -1,3 +1,5 @@
+// 全局
+// 公共外包围
 .section{
 	border: 1px solid #ccc;
 	background-color: #fff;
@@ -6,9 +8,35 @@
 	margin-bottom: 10px;
 }
 
+.bold{
+  font-weight: 600;
+}
+
+.img-round{
+  border-radius: 50%;
+}
+
+.transition-link{
+	-webkit-transition: all 0.35s;
+	-o-transition: all 0.35s;
+	transition: all 0.35s;
+}
+
+// bootstrap下的特殊css
 .row{
 	& .row{
 		margin-left: 0;
 		margin-right: 0;
 	}
 }
+
+.row--no-padding{
+  width:100%;
+  margin-left: 0;
+  margin-right: 0;
+  &>*{
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+

@@ -1,10 +1,5 @@
 // home-heading
 .home-heading{	
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	background-color: #fff;
-	margin-bottom:10px;
-	padding: 10px;
 	.home-heading-section{
 		border-right: 1px solid #ddd;
 		&:last-child{
@@ -62,6 +57,14 @@
 	.home-history{
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	.history-content{
+		.employer-view,.provider-view{
+			display: none;
+		}
+		.active{
+			display: block;
+		}
 	}
 	
 	.history-content-item{
@@ -209,12 +212,14 @@
 	}
 }
 .home-push-title{
-	@include font-size(1.4);
-	font-weight: 600;
 	color:blue;
 	margin-top: 0;
 	a{
 		color:#666;
+		&:hover{
+			color:$palette-blue;
+			text-decoration: underline;
+		}
 	}
 }
 .home-push-state{

@@ -6297,9 +6297,6 @@ select[size] {
       background-color: #fff;
       border-bottom-color: transparent; }
 
-.img-round {
-  border-radius: 50%; }
-
 .mt-0 {
   margin-top: 0; }
 
@@ -6353,17 +6350,6 @@ select[size] {
 
 .pb-10 {
   padding-bottom: 10px; }
-
-.row--no-padding {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0; }
-  .row--no-padding > * {
-    padding-left: 2px;
-    padding-right: 2px; }
-
-.bold {
-  font-weight: 600; }
 
 @-webkit-keyframes dropdown-show {
   0% {
@@ -6538,9 +6524,28 @@ ul {
   padding: 10px;
   margin-bottom: 10px; }
 
+.bold {
+  font-weight: 600; }
+
+.img-round {
+  border-radius: 50%; }
+
+.transition-link {
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s; }
+
 .row .row {
   margin-left: 0;
   margin-right: 0; }
+
+.row--no-padding {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0; }
+  .row--no-padding > * {
+    padding-left: 2px;
+    padding-right: 2px; }
 
 @keyframes around {
   0% {
@@ -8078,80 +8083,93 @@ ul {
   .login-copyright a {
     color: #f1f1f1; }
 
-.home-heading {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-  margin-bottom: 10px;
-  padding: 10px; }
-  .home-heading .home-heading-section {
-    border-right: 1px solid #ddd; }
-    .home-heading .home-heading-section:last-child {
-      border-right: 0; }
-  .home-heading .home-img {
-    position: relative;
-    margin-right: 20px; }
-    .home-heading .home-img img {
-      -webkit-transition: box-shadow 0.45s;
-      -o-transition: box-shadow 0.45s;
-      transition: box-shadow 0.45s; }
-      .home-heading .home-img img:hover {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
-  .home-heading .home-call-name {
-    color: #444;
+.home-heading .home-heading-section {
+  border-right: 1px solid #ddd; }
+  .home-heading .home-heading-section:last-child {
+    border-right: 0; }
+
+.home-heading .home-img {
+  position: relative;
+  margin-right: 20px; }
+  .home-heading .home-img img {
+    -webkit-transition: box-shadow 0.45s;
+    -o-transition: box-shadow 0.45s;
+    transition: box-shadow 0.45s; }
+    .home-heading .home-img img:hover {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
+
+.home-heading .home-call-name {
+  color: #444;
+  padding-top: 5px;
+  display: block;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0; }
+
+.home-heading .home-call-position {
+  color: #666;
+  margin-bottom: 5px; }
+
+.home-heading .home-call-account {
+  margin-bottom: 10px; }
+
+.home-heading .home-call-des {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  line-height: 1.43;
+  margin-right: 20px; }
+
+.home-heading .home-call-profile .progress {
+  margin-bottom: 0; }
+
+.home-heading .home-call-profile .progress-info {
+  color: #eff5fa; }
+  .home-heading .home-call-profile .progress-info:hover {
+    text-decoration: underline; }
+
+.home-heading .home-history {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.home-heading .history-content .employer-view, .home-heading .history-content .provider-view {
+  display: none; }
+
+.home-heading .history-content .active {
+  display: block; }
+
+.home-heading .history-content-item {
+  border-top: 1px solid #eee;
+  margin-top: 5px; }
+  .home-heading .history-content-item > li {
     padding-top: 5px;
-    display: block;
-    font-size: 18px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 0; }
-  .home-heading .home-call-position {
-    color: #666;
-    margin-bottom: 5px; }
-  .home-heading .home-call-account {
-    margin-bottom: 10px; }
-  .home-heading .home-call-des {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    line-height: 1.43;
-    margin-right: 20px; }
-  .home-heading .home-call-profile .progress {
-    margin-bottom: 0; }
-  .home-heading .home-call-profile .progress-info {
-    color: #eff5fa; }
-    .home-heading .home-call-profile .progress-info:hover {
-      text-decoration: underline; }
-  .home-heading .home-history {
-    padding-left: 10px;
-    padding-right: 10px; }
-  .home-heading .history-content-item {
-    border-top: 1px solid #eee;
-    margin-top: 5px; }
-    .home-heading .history-content-item > li {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #eee;
-      color: #66696a; }
-      .home-heading .history-content-item > li span.right {
-        display: inline-block;
-        color: #878cc9;
-        font-size: 17px;
-        font-size: 1.7rem; }
-      .home-heading .history-content-item > li:last-child {
-        border-bottom: 0; }
-  .home-heading .home-score-item .left, .home-heading .home-score-item .right {
-    display: inline-block;
-    font-size: 14px; }
-  .home-heading .home-score-item .left {
-    width: 40px; }
-  .home-heading .home-score-item .score-stars {
-    font-size: 20px;
-    font-size: 2rem; }
-  .home-heading .home-score-price {
-    font-size: 16px; }
-    .home-heading .home-score-price sup {
-      font-size: 55%;
-      vertical-align: bottom; }
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    color: #66696a; }
+    .home-heading .history-content-item > li span.right {
+      display: inline-block;
+      color: #878cc9;
+      font-size: 17px;
+      font-size: 1.7rem; }
+    .home-heading .history-content-item > li:last-child {
+      border-bottom: 0; }
+
+.home-heading .home-score-item .left, .home-heading .home-score-item .right {
+  display: inline-block;
+  font-size: 14px; }
+
+.home-heading .home-score-item .left {
+  width: 40px; }
+
+.home-heading .home-score-item .score-stars {
+  font-size: 20px;
+  font-size: 2rem; }
+
+.home-heading .home-score-price {
+  font-size: 16px; }
+  .home-heading .home-score-price sup {
+    font-size: 55%;
+    vertical-align: bottom; }
 
 .home-section-title {
   margin-bottom: 20px;
@@ -8218,13 +8236,13 @@ ul {
   padding: 20px; }
 
 .home-push-title {
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: 600;
   color: blue;
   margin-top: 0; }
   .home-push-title a {
     color: #666; }
+    .home-push-title a:hover {
+      color: #2185d0;
+      text-decoration: underline; }
 
 .home-push-state {
   color: #999; }
