@@ -8132,7 +8132,16 @@ ul {
   padding-left: 10px;
   padding-right: 10px; }
 
-.home-heading .history-content .employer-view, .home-heading .history-content .provider-view {
+.home-heading .history-content .fadeIn-transition {
+  animation: fade-in .75s; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.home-heading .history-content .view {
   display: none; }
 
 .home-heading .history-content .active {

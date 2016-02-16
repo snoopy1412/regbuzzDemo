@@ -353,36 +353,23 @@
 				<div class="home-history">
 					<div class="text-right">
 						<div class="btn-group" data-toggle="buttons" id='change-role'>
-						  <label class="btn btn-secondary active">
-						    <input type="radio" name="options" id="employerView_option" value='employer'>Employer
-						  </label>
-						  <label class="btn btn-secondary">
-						    <input type="radio" name="options" id="providerView_option" value='provider'>Provider
-						  </label>
-						</div>
-					</div>
-					<div class="history-content tab-content">
-						<div class="employer-view active">
-							<ul class='history-content-item history-content-employer'>
-								<li>
-									<span class='pull-left '>发布项目</span> <span class='pull-right right'>10</span>
-								</li>
-								<li>
-									<span class='pull-left '>发布问题</span> <span class='pull-right right'>10</span>
-								</li>
-							</ul>
-						</div>
-						<div class="provider-view">
-							<ul class='history-content-item history-content-provider'>
-								<li>
-									<span class='pull-left '>投标项目</span> <span class='pull-right right'>10</span>
-								</li>
-								<li>
-									<span class='pull-left '>问题回答</span> <span class='pull-right right'>10</span>
-								</li>
-							</ul>
-						</div>
-					</div>			
+					  		<label v-for='role in roles' class="btn btn-secondary" :class="{'active':$index === autoindex}" @click='changeView($index)'>
+						    	<input type="radio" name="options" :value='role.name' >{{role.name | capitalize }}
+						  	</label>
+						 </div>
+						  <div class="history-content tab-content">
+						  	<div v-for='role in roles' transition="fadeIn" class='view' :class="{'active':$index === autoindex}">
+								<ul class='history-content-item history-content-employer'>
+									<li>
+										<span class='pull-left'> {{role.context.project.title}}</span> <span class='pull-right right'>{{role.context.project.num}}</span>
+									</li>
+									<li>
+										<span class='pull-left'>{{role.context.question.title}}</span> <span class='pull-right right'>{{role.context.question.num}}</span>
+									</li>
+								</ul>
+							</div>
+						  </div>
+					</div>	
 				</div>
 			</div>	
 		</header>
@@ -404,9 +391,8 @@
 		    <li role="presentation"><a href="#dashboard-dynamic" aria-controls="messages" role="tab" data-toggle="tab">我的动态</a></li>
 		  </ul>
 		  <div class="tab-content">
-		    <div class="tab-pane active" id="dashboard-push">
+		    <div class="tab-pane active fade in" id="dashboard-push">
 		    	<section class="row home-push">
-					
 					<div class="col-md-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">
@@ -461,7 +447,6 @@
 										<div class='text-right'>
 											<a href="" class='btn btn-info-outline btn-sm'>detail</a>
 											<a href="" class='btn btn-link btn-sm'>skip</a>
-
 										</div>
 									</li>
 								</ul>
@@ -470,7 +455,7 @@
 					</div>
 				</section>
 		    </div>
-		    <div class="tab-pane" id="dashboard-news">
+		    <div class="tab-pane fade" id="dashboard-news">
 		    	<section class='row home-new'>
 					<div class="content dashboard-content">
 						<div class="col-md-1">
@@ -527,7 +512,7 @@
 					</div>
 				</section>
 		    </div>
-		    <div class="tab-pane" id="dashboard-dynamic">
+		    <div class="tab-pane fade" id="dashboard-dynamic">
 		    	<section class='row home-dynamic'>
 					<div class="content">
 						<div class="col-md-1">
