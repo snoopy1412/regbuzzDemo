@@ -312,6 +312,8 @@
                 -o-transition: 0.25s;
                 transition: 0.25s;
                 &.active,
+                &:active,
+                &:focus,
                 &:hover
                 {       
                     background-color: #3f3f3f;

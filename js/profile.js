@@ -1,4 +1,4 @@
-define(['raty','edit','layer','./js/profile-controller.js'],function(raty,edit,layer) {
+define(['raty','edit','./js/profile-controller.js'],function(raty,edit) {
 
     // 星星评级
     $('.totalScore').raty({

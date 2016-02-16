@@ -1,5 +1,6 @@
 // home-heading
 .home-heading{	
+	min-height: 136px;
 	.home-heading-section{
 		border-right: 1px solid #ddd;
 		&:last-child{
@@ -236,6 +237,12 @@
 }
 .home-push-state{
 	color:#999;
+	font-size: 12px;
+	font-style: italic;
+	span{
+		display: inline-block;
+		margin-right: 4px;
+	}
 }
 
 // 消息

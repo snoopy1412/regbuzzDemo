@@ -1,5 +1,4 @@
 define(['wysiwyg','./plugins/wysiwyg/wysiwyg-editor.js'], function(wysiwyg) {
-	console.log(wysiwyg)
 	$('#editor1').each(function(index, element) {
 		$(element).wysiwyg({
 				'class': 'fake-bootstrap',

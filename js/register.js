@@ -1,4 +1,4 @@
-define(['validate','Vue','vueValidator'],function(validate,Vue,vueValidator) {
+define(['Vue','vueValidator'],function(Vue,vueValidator) {
   
 // var validate = $('.reg-form').validate({
 //     rules: {

@@ -1,8 +1,9 @@
-define(['jquery', 'popover'], function($, popover) {
-	$('.author-name').popover({
+define(['jquery','popoverCustom'], function($, popoverCustom) {
+	
+	// 人名hover效果
+	$('.author-name').popoverCustom({
 		method: 'hover',
 		defaultPosition : false,
-		content: $('.js-modal-author'),
-		dir:'down'
+		content: $('.js-modal-author')
 	});
 });

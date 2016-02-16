@@ -1,11 +1,9 @@
-define(['dropdown','popover','revealOnScroll', 'hoverMask'],function( dropdown,popover,revealOnScroll, hoverMask){
+define(['popoverCustom','revealOnScroll', 'hoverMask'],function(popoverCustom,revealOnScroll, hoverMask){
   // 首页滚动监听元素添加渐入效果
   new revealOnScroll.RevealOnScroll();
 
   // 首页二级菜单的调用
-  $('.js-dropdown-toggle').dropdown();
-  $('.js-dropdown-hover').popover();
-
+  $('.js-dropdown-hover').popoverCustom();
 
   // 首页八种分类的hover效果
   new hoverMask.HoverMask('.js-HoverMask-hover');
@@ -29,8 +27,8 @@ define(['dropdown','popover','revealOnScroll', 'hoverMask'],function( dropdown,p
 
 
   // 为验证页面做
- 	$('#verification-statement').modal({
- 		show : true
- 	});
+ 	// $('#verification-statement').modal({
+ 	// 	show : true
+ 	// });
 
 });

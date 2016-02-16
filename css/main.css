@@ -4181,7 +4181,7 @@ tbody.collapse.in {
       color: #444; }
 
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 8px 0;
   margin-bottom: 20px;
   list-style: none;
   border-radius: 4px; }
@@ -7382,7 +7382,7 @@ ul {
     -webkit-transition: 0.25s;
     -o-transition: 0.25s;
     transition: 0.25s; }
-    .header .nav-side .navbar-nav > li > a.active, .header .nav-side .navbar-nav > li > a:hover {
+    .header .nav-side .navbar-nav > li > a.active, .header .nav-side .navbar-nav > li > a:active, .header .nav-side .navbar-nav > li > a:focus, .header .nav-side .navbar-nav > li > a:hover {
       background-color: #3f3f3f;
       color: #fff;
       border-bottom: 4px solid #db2828; }
@@ -8083,102 +8083,88 @@ ul {
   .login-copyright a {
     color: #f1f1f1; }
 
-.home-heading .home-heading-section {
-  border-right: 1px solid #ddd; }
-  .home-heading .home-heading-section:last-child {
-    border-right: 0; }
-
-.home-heading .home-img {
-  position: relative;
-  margin-right: 20px; }
-  .home-heading .home-img img {
-    -webkit-transition: box-shadow 0.45s;
-    -o-transition: box-shadow 0.45s;
-    transition: box-shadow 0.45s; }
-    .home-heading .home-img img:hover {
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
-
-.home-heading .home-call-name {
-  color: #444;
-  padding-top: 5px;
-  display: block;
-  font-size: 18px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0; }
-
-.home-heading .home-call-position {
-  color: #666;
-  margin-bottom: 5px; }
-
-.home-heading .home-call-account {
-  margin-bottom: 10px; }
-
-.home-heading .home-call-des {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  line-height: 1.43;
-  margin-right: 20px; }
-
-.home-heading .home-call-profile .progress {
-  margin-bottom: 0; }
-
-.home-heading .home-call-profile .progress-info {
-  color: #eff5fa; }
-  .home-heading .home-call-profile .progress-info:hover {
-    text-decoration: underline; }
-
-.home-heading .home-history {
-  padding-left: 10px;
-  padding-right: 10px; }
-
-.home-heading .history-content .fadeIn-transition {
-  animation: fade-in .75s; }
+.home-heading {
+  min-height: 136px; }
+  .home-heading .home-heading-section {
+    border-right: 1px solid #ddd; }
+    .home-heading .home-heading-section:last-child {
+      border-right: 0; }
+  .home-heading .home-img {
+    position: relative;
+    margin-right: 20px; }
+    .home-heading .home-img img {
+      -webkit-transition: box-shadow 0.45s;
+      -o-transition: box-shadow 0.45s;
+      transition: box-shadow 0.45s; }
+      .home-heading .home-img img:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); }
+  .home-heading .home-call-name {
+    color: #444;
+    padding-top: 5px;
+    display: block;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0; }
+  .home-heading .home-call-position {
+    color: #666;
+    margin-bottom: 5px; }
+  .home-heading .home-call-account {
+    margin-bottom: 10px; }
+  .home-heading .home-call-des {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 1.43;
+    margin-right: 20px; }
+  .home-heading .home-call-profile .progress {
+    margin-bottom: 0; }
+  .home-heading .home-call-profile .progress-info {
+    color: #eff5fa; }
+    .home-heading .home-call-profile .progress-info:hover {
+      text-decoration: underline; }
+  .home-heading .home-history {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .home-heading .history-content .fadeIn-transition {
+    animation: fade-in .75s; }
 
 @keyframes fade-in {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-
-.home-heading .history-content .view {
-  display: none; }
-
-.home-heading .history-content .active {
-  display: block; }
-
-.home-heading .history-content-item {
-  border-top: 1px solid #eee;
-  margin-top: 5px; }
-  .home-heading .history-content-item > li {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #eee;
-    color: #66696a; }
-    .home-heading .history-content-item > li span.right {
-      display: inline-block;
-      color: #878cc9;
-      font-size: 17px;
-      font-size: 1.7rem; }
-    .home-heading .history-content-item > li:last-child {
-      border-bottom: 0; }
-
-.home-heading .home-score-item .left, .home-heading .home-score-item .right {
-  display: inline-block;
-  font-size: 14px; }
-
-.home-heading .home-score-item .left {
-  width: 40px; }
-
-.home-heading .home-score-item .score-stars {
-  font-size: 20px;
-  font-size: 2rem; }
-
-.home-heading .home-score-price {
-  font-size: 16px; }
-  .home-heading .home-score-price sup {
-    font-size: 55%;
-    vertical-align: bottom; }
+  .home-heading .history-content .view {
+    display: none; }
+  .home-heading .history-content .active {
+    display: block; }
+  .home-heading .history-content-item {
+    border-top: 1px solid #eee;
+    margin-top: 5px; }
+    .home-heading .history-content-item > li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #eee;
+      color: #66696a; }
+      .home-heading .history-content-item > li span.right {
+        display: inline-block;
+        color: #878cc9;
+        font-size: 17px;
+        font-size: 1.7rem; }
+      .home-heading .history-content-item > li:last-child {
+        border-bottom: 0; }
+  .home-heading .home-score-item .left, .home-heading .home-score-item .right {
+    display: inline-block;
+    font-size: 14px; }
+  .home-heading .home-score-item .left {
+    width: 40px; }
+  .home-heading .home-score-item .score-stars {
+    font-size: 20px;
+    font-size: 2rem; }
+  .home-heading .home-score-price {
+    font-size: 16px; }
+    .home-heading .home-score-price sup {
+      font-size: 55%;
+      vertical-align: bottom; }
 
 .home-section-title {
   margin-bottom: 20px;
@@ -8254,7 +8240,12 @@ ul {
       text-decoration: underline; }
 
 .home-push-state {
-  color: #999; }
+  color: #999;
+  font-size: 12px;
+  font-style: italic; }
+  .home-push-state span {
+    display: inline-block;
+    margin-right: 4px; }
 
 .user-new-content {
   border: 1px solid #ccc;
@@ -10187,25 +10178,26 @@ ul {
   background-color: #fff;
   padding: 10px;
   border-radius: 4px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: 10px; }
 
 .connect-header-icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   background-color: #0077b5;
   text-align: center;
-  line-height: 80px;
+  line-height: 100px;
   color: #fff;
-  margin-top: -20px;
+  margin-top: -30px;
   margin-right: 20px;
   font-size: 30px; }
 
 .connect-header-title h1 {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 600;
   margin: 0;
-  margin-bottom: 5px; }
+  margin-bottom: 10px; }
 
 .connect-form, .connect-list-action {
   margin-bottom: 20px; }

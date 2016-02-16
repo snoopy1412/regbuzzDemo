@@ -1,13 +1,13 @@
 define(['velocity'],function(velocity) {
 
 	/**
-	 * Popover
+	 * PopoverCustom
 	 * 该函数用于鼠标移入菜单时，出现的二级菜单
 	 * parma : obj 绑定的元素class或者id; 
 	 */
-	function Popover(obj, options) {
+	function PopoverCustom(obj, options) {
 		this.obj = $(obj);
-		this.options = $.extend({}, Popover.defaults, options);
+		this.options = $.extend({}, PopoverCustom.defaults, options);
 
 		this.callback = this.options.callback;
 		this.content = this.options.content;
@@ -18,7 +18,7 @@ define(['velocity'],function(velocity) {
 		this.init();
 	}
 
-	Popover.defaults = {
+	PopoverCustom.defaults = {
 		content: false,
 		defaultPosition: true,
 		dir: 'down',
@@ -27,8 +27,8 @@ define(['velocity'],function(velocity) {
 
 	// 原型函数
 	// ------------------------------------------------------------------
-	Popover.prototype = {
-		constructor: Popover,
+	PopoverCustom.prototype = {
+		constructor: PopoverCustom,
 
 		init: function() {
 			this.hover();
@@ -78,8 +78,6 @@ define(['velocity'],function(velocity) {
 								if(_this.callback){
 									_this.callback(_this.obj);
 								}
-
-								
 							}
 						},150);					
 					},
@@ -140,7 +138,8 @@ define(['velocity'],function(velocity) {
 		if (arguments.length == 3) {
 			switch (dir) {
 				case 'down':
-					if (targetObj.height() < topDir && bottomDir < topDir) {
+					if (targetObj.height() - bottomDir > 0 && bottomDir < topDir) {
+						console.log(targetObj.height(),bottomDir)
 						offset = {
 							left: obj.offset().left,
 							top: obj.offset().top - targetObj.height() - 10
@@ -154,14 +153,14 @@ define(['velocity'],function(velocity) {
 
 					break;
 				case 'up':
-					if (targetObj.height() < bottomDir && bottomDir > topDir)
+					if (targetObj.height() - bottomDir < 0 && bottomDir > topDir)
 						offset = {
 							left: obj.offset().left,
 							top: obj.offset().top - targetObj.height() - 10
 						};
 					break;
 				case 'left':
-					if (targetObj.width() < rightDir && leftDir < rightDir) {
+					if (targetObj.width() - rightDir < 0  && leftDir < rightDir) {
 						offset = {
 							left: obj.offset().left + obj.width() + 10,
 							top: obj.offset().top
@@ -174,7 +173,7 @@ define(['velocity'],function(velocity) {
 					}
 					break;
 				case 'right':
-					if (targetObj.width() < leftDir && leftDir > rightDir) {
+					if (targetObj.width() - leftDir < 0 && leftDir > rightDir) {
 						offset = {
 							left: obj.offset().left - targetObj.width() - 10,
 							top: obj.offset().top
@@ -206,9 +205,9 @@ define(['velocity'],function(velocity) {
 
 	// 生成jquery插件
 	$.fn.extend({
-		popover: function(options) {
+		popoverCustom: function(options) {
 			this.each(function() {
-				new Popover(this, options);
+				new PopoverCustom(this, options);
 			});
 			return this;
 		}

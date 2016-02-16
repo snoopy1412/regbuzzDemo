@@ -1,4 +1,4 @@
-define(['jquery', 'popover','raty','./js/publish-controller.js'],function($,popover,raty) {
+define(['jquery', 'popoverCustom','raty','./js/publish-controller.js'],function($,popoverCustom,raty) {
 
   // 星星评级      
   $('.grade-item').each(function() {
@@ -81,7 +81,7 @@ define(['jquery', 'popover','raty','./js/publish-controller.js'],function($,popo
     });
 
 // prover
-  $('.provider-name').popover({
+  $('.provider-name').popoverCustom({
     method: 'hover',
     defaultPosition : false,
     content: $('.js-modal-author'),
