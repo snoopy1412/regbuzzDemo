@@ -1,4 +1,4 @@
-define(['Vue','../data/countries.js','../data/profile/services.js','../data/profile/skills.js','../data/profile/experience.js','../data/profile/language.js'],function(Vue) {
+define(['Vue','../data/countries.js','../data/profile/services.js','../data/profile/skills.js','../data/profile/experience.js','../data/profile/language.js','../data/profile/educations.js'],function(Vue) {
    
     var profileUserVm = new Vue({
         el:"#vue-profile-user",
@@ -51,6 +51,9 @@ define(['Vue','../data/countries.js','../data/profile/services.js','../data/prof
 
             // language 数据
             languageData : languageData,
+
+            // education 数据
+            educationsData : educationsData,
 
         },
         methods:{
@@ -168,10 +171,54 @@ define(['Vue','../data/countries.js','../data/profile/services.js','../data/prof
                 this.addExperienceLastMonth = '';
                 this.addExperienceLastYear = '';
                 this.addExperienceContent = '';
+            },
 
+             /**
+             * 添加语言
+             */
+             LanguageAdd : function(){
+                 var data = {
+                    origin : {
+                        title : this.addLanguageTitle,
+                        level: this.addLanguageLevel
+                    },
+                    result:{
+                        title : this.addLanguageTitle,
+                        level : this.addLanguageLevel
+                    },
+                    hideOrigin : true
+                };
+                this.languageData.push(data);
+                this.addLanguageTitle = '';
+                this.addLanguageLevel = '';
+             },
 
+             /**
+             * 添加教育
+             */
+             educationAdd : function(){
+                var data = {
+                    origin : {
+                        degree : this.addEducationDegree,
+                        school: this.addEducationSchool,
+                        startTime : this.addEducationStartTime,
+                        endTime : this.addEducationEndTime
+                    },
+                    result:{
+                        degree : this.addEducationDegree,
+                        school: this.addEducationSchool,
+                        startTime : this.addEducationStartTime,
+                        endTime : this.addEducationEndTime
+                    },
+                    hideOrigin : true
+                };
+                this.educationsData.push(data);
+                this.addEducationDegree = '';
+                this.addEducationSchool = '';
+                this.addEducationStartTime = '';
+                this.addEducationEndTime = '';
+             }
 
-            }
         }
     })
 
