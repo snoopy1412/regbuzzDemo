@@ -1,4 +1,4 @@
-define(['raty','edit','./js/profile-controller.js'],function(raty,edit) {
+define(['raty','./js/profile-controller.js'],function(raty) {
 
     // 星星评级
     $('.totalScore').raty({
@@ -42,39 +42,22 @@ define(['raty','edit','./js/profile-controller.js'],function(raty,edit) {
         targetKeep: true
     });
 
-
-    // 编辑
-    $('.js-edit-start').edit({
-        hoverColor:'#dcf2fc',
-        isDelete:true
-    });
-
   
-
-$('.profile-info-item').each(function(){
-    $(this).hover(function(){
-        $(this).find('.profile-info-item-mask').show();
-    },function(){
-        $(this).find('.profile-info-item-mask').hide();
-    });
-});
-
-
-
-
-$('#profile-location').hover(function(){
-     $(this).find('.location-text').css('background-color','#dcf2fc');
-      $(this).find('.edit').css('background-color','#dcf2fc');
+$('.edit-start').hover(function(){
+     $(this).find('.edit-text').css('background-color','#dcf2fc');
+     $(this).find('.edit-handle').css('background-color','#dcf2fc');
 },function(){
-        $(this).find('.location-text').css('background-color','transparent');
-      $(this).find('.edit').css('background-color','transparent');
+     $(this).find('.edit-text').css('background-color','transparent');
+     $(this).find('.edit-handle').css('background-color','transparent');
 })
 
-
-$('.profile-info--person-register .edit').on('click',function(){
-    $('body').popover({
-        selector:'.aaa'
-    })
-})
+// 演示
+// $('.profile-info-item').each(function(){
+//     $(this).hover(function(){
+//         $(this).find('.profile-info-item-mask').show();
+//     },function(){
+//         $(this).find('.profile-info-item-mask').hide();
+//     });
+// });
 
 });

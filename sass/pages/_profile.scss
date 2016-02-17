@@ -54,14 +54,40 @@
     position: relative;
 
     padding: 20px;
+
+    border-bottom: 1px dashed #ddd;
+    &:last-child{
+        border-bottom: 0;
+    }
+
 }
 .profile-info-item-position
 {
-    font-size: 18px;
-    font-size: 1.8rem;
+
+    @include font-size(1.8);
     font-weight: 600;
 
-    padding-bottom: 5px;
+    position: relative;
+    margin: 0;
+    margin-bottom: 15px;
+    .handle{
+        @include font-size(2);
+        position: absolute;
+        right: 0;
+        top:-5px;
+    }
+    span{
+        vertical-align: middle;
+    }
+    .edit,.delete{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+        color:#999;
+        &:hover{
+            color:$palette-red;
+        }
+    }
 }
 .profile-info-item-company
 {
@@ -80,60 +106,27 @@
         color: #66696a;
     }
 }
-.profile-info-item-mask
-{
-    position: absolute;
-    top: 0;
-    left: 0;
 
-    display: none;
-
-    width: 100%;
-    height: 100%;
-
-    border-radius: 2px;
-
-    @include bgcolor-alpha(rgba(242,242,242,.5));
-    a
-    {
-        font-size: 30px;
-        font-size: 3rem;
-        line-height: 60px;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        display: inline-block;
-
-        width: 60px;
-        height: 60px;
-        margin-top: -30px;
-
-        text-align: center;
-
-        color: #9b9a9a;
-        &:hover
-        {
-            text-decoration: none;
-
-            color: #2185d0;
-        }
-    }
-    .edit
-    {
-        margin-left: -60px;
-    }
-    .delete
-    {
-        margin-left: 0;
-    }
-}
 
 // 个人档案
 .profile-info--person
 {
     padding-bottom: 0;
+    .location{
+        margin-bottom: 10px;
+    }
+    .edit-text{
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .edit-handle{
+        padding: 5px;
+    }
+    .add-color{
+        background-color: #dcf2fc;
+    }
 }
 .profile-info--person-img
 {
@@ -151,24 +144,13 @@
 .profile-info--person-register
 {
     padding-top: 10px;
-    .location{
-        margin-bottom: 10px;
-    }
-    .location-text{
-        display: inline-block;
-        margin-right: 5px;
-        padding: 5px;
-        cursor: pointer;
-    }
-    .edit{
-        padding: 5px;
-    }
 }
 .profile-info--person-brief
 {
     width: 65%;
     margin-top: 20px;
     padding-left: 40px;
+    padding-right: 20px;
     li
     {
         margin-bottom: 16px;
@@ -191,16 +173,6 @@
     .summary
     {
         width: 90%;
-    }
-    .edit
-    {
-        i
-        {
-            font-size: 20px;
-            font-size: 2rem;
-
-            color: $palette-blue;
-        }
     }
 }
 

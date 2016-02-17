@@ -5,34 +5,3 @@
 	@include opacity(0);
  }
 
- // 个人档案的编辑
- .js-show{
- 	display: block;
- 	&:hover{
-	
-	}
- }
- .js-hide{
- 	display: none;
- }
-.js-edit-start{
-	border-radius: 4px;
-	
-}
-.js-edit-text,.js-edit-edit{
-	display: inline-block;
-	padding:5px;
-	margin:0;
-	&:hover{
-		background-color: #dcf2fc;	
-	}
-}
-.js-edit-text{
-	margin-right:5px;
-}
-.js-edit-edit{
-	cursor: pointer;
-}
- .js-edit-textarea{
- 	margin-bottom: 10px;
- }

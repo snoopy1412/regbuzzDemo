@@ -14,6 +14,9 @@ require.config({
     wysiwyg:'../plugins/wysiwyg/wysiwyg'
   },
   shim: {
+    "bootstrap":{
+      deps:["jquery"]
+    },
     "velocity": {
       deps: ["jquery"]
     },
