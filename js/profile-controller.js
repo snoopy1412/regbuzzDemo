@@ -1,4 +1,5 @@
-define(['Vue','../data/countries.js','../data/profile/services.js'],function(Vue) {
+define(['Vue','../data/countries.js','../data/profile/services.js','../data/profile/skills.js','../data/profile/experience.js','../data/profile/language.js'],function(Vue) {
+   
     var profileUserVm = new Vue({
         el:"#vue-profile-user",
         data:{
@@ -42,10 +43,14 @@ define(['Vue','../data/countries.js','../data/profile/services.js'],function(Vue
             //  services 数据
             servicesData : servicesData,
 
-            // add 数据
-            addServiceName : '',
-            addServicePrice : '',
-            addServiceContent : '',
+            // skill 数据
+            skillsData : skillsData,
+
+            // experience 数据
+            experienceData : experienceData,
+
+            // language 数据
+            languageData : languageData,
 
         },
         methods:{
@@ -79,8 +84,92 @@ define(['Vue','../data/countries.js','../data/profile/services.js'],function(Vue
                 data.splice(index, 1)
             },
 
-            // 私有方法
+            // 专属方法
+            /*
+                添加服务
+             */
             ServiceAdd:function(){
+                var data = {
+                    origin : {
+                        name : this.addServiceName,
+                        price : this.addServicePrice,
+                        content : this.addServiceContent
+                    },
+                    result:{
+                        name : this.addServiceName,
+                        price : this.addServicePrice,
+                        content : this.addServiceContent
+                    },
+                    hideOrigin : true
+                };
+                this.servicesData.push(data);
+
+                // 清空表单
+                this.addServiceName = '';
+                this.addServicePrice = '';
+                this.addServiceContent = '';
+            },
+
+            /**
+             * 添加技能
+             */
+            SKillAdd:function(){
+                var data = {
+                    origin : {
+                        name : this.addSkillName
+                    },
+                    result:{
+                        name : this.addSkillName
+                    },
+                    hideOrigin : true
+                };
+                this.skillsData.push(data);
+                this.addSkillName = '';
+            },
+
+            /**
+             * 添加经验
+             */
+            ExperienceAdd:function(){
+                var data = {
+                    origin : {
+                        position : this.addExperienceName,
+                        company: this.addExperienceCompany,
+                        startTime:{
+                            month:this.addExperienceStartMonth,
+                            year:this.addExperienceStartYear
+                        },
+                        lastTime:{
+                            month:this.addExperienceLastMonth,
+                            year:this.addExperienceLastYear
+                        },
+                        content:this.addExperienceContent
+                    },
+                    result:{
+                        position : this.addExperienceName,
+                        company:this.addExperienceCompany,
+                        startTime:{
+                            month:this.addExperienceStartMonth,
+                            year:this.addExperienceStartYear
+                        },
+                        lastTime:{
+                            month:this.addExperienceLastMonth,
+                            year:this.addExperienceLastYear
+                        },
+                        content:this.addExperienceContent
+                    },
+                    hideOrigin : true
+                };
+                this.experienceData.push(data);
+                this.addExperienceName = '';
+                this.addExperienceCompany = '';
+                this.addExperienceStartMonth = '';
+                this.addExperienceStartYear = '';
+                this.addExperienceLastMonth = '';
+                this.addExperienceLastYear = '';
+                this.addExperienceContent = '';
+
+
 
             }
         }

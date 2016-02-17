@@ -418,17 +418,9 @@
 									<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-skills"><i class="fa fa-plus"></i> Add Skills</a>
 							</header><!-- /header -->
 							<section class='skills'>
-								<a href='javascript:;' class='skills-item'>   
-									<span class='skills-title'>GHS</span>
-									<i class="remove fa fa-times"></i>
-								 </a>			
-								<a href='javascript:;' class='skills-item'> 
-									<span class='skills-title'>Chemical</span>
-									<i class="remove fa fa-times"></i>
-								 </a>
-								<a href='javascript:;' class='skills-item'> 
-									<span class='skills-title'>consult</span>
-									<i class="remove fa fa-times"></i>
+								<a href="javascript:;" class='skills-item' v-for='skill in skillsData'>
+									<span class='skills-title' v-text='skill.result.name'></span>
+									<i class="remove fa fa-times" @click='remove(skillsData,$index)'></i>
 								</a>
 							</section>						
 						</section>
@@ -438,39 +430,131 @@
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Experience</h3>
 								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-experience"><i class="fa fa-plus"></i> Add Experience</a>
-							</header><!-- /header -->
-								<section class="profile-info-item experience-item">
-									<h4 class='profile-info-item-position experience-item-position'>counselor</h4>
-									<strong class='profile-info-item-company experience-item-company'>Global GHS Comliance Service</strong>
+							</header>
+							<section class="profile-info-item experience-item" v-for='experience in experienceData'>
+								<div v-show='experience.hideOrigin'>
+									<h4 class='profile-info-item-position experience-item-position'>
+										<span v-text='experience.result.position | capitalize'></span>
+										<span class='handle'>
+											<a href="javascript:;" title="" class='edit' v-on:click='hide(experience)' v-show='experience.hideOrigin'>
+												<i class='fa fa-pencil'></i>
+											</a>
+											<a href="javascript:;" class='delete' v-on:click="remove(experienceData,$index)" v-show='experience.hideOrigin'>
+												<i class='fa fa-trash-o'></i>
+											</a>
+										</span>
+									</h4>
+									<strong class='profile-info-item-company experience-item-company' v-text='experience.result.company | capitalize'></strong>
 									<div class='profile-info-item-time experience-item-time'>
-										<time datetime="2011-01-12">2011-01-12</time> - <time datetime="2011-02-12">2011-02-12</time> 
+										<span v-text='experience.result.startTime.month + "&nbsp;" + experience.result.startTime.year'></span> - <span v-text='experience.result.lastTime.month + "&nbsp;" + experience.result.startTime.year'></span>
 									</div>
-									<p class='profile-info-item-brief experience-item-brief'>EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Service</p>
-								</section>
-								<section class="profile-info-item experience-item">
-									<h4 class='profile-info-item-position experience-item-position'>counselor</h4>
-									<strong class='profile-info-item-company experience-item-company'>Global GHS Comliance Service</strong>
-									<div class='profile-info-item-time experience-item-time'>
-										<time datetime="2011-01-12">2011-01-12</time> - <time datetime="2011-02-12">2011-02-12</time> 
+									<p class='profile-info-item-brief experience-item-brief' v-text='experience.result.content'></p>									
+								</div>
+								<div v-show='!experience.hideOrigin'> 
+									<div class="form-group">
+										<input type="text" name="" v-model="experience.result.position" placeholder="Input your position" class='form-control'>
 									</div>
-									<p class='profile-info-item-brief experience-item-brief'>EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Service</p>
-								</section>								
+									<div class="form-group">
+										<input type="text" name="" v-model="experience.result.company" placeholder="Input your company" class='form-control'>
+									</div>
+									<div class="form-group">
+										<div class='row row--no-padding'>
+											<div class="col-md-3">
+										      	<select name="startDateMonth" class='form-control' v-model='experience.result.startTime.month'>
+											      	<option value="January">January</option>
+											      	<option value="February">February</option>
+											      	<option value="March">March</option>
+											      	<option value="April">April</option>
+											      	<option value="May">May</option>
+											      	<option value="June">June</option>
+											      	<option value="July">July</option>
+											      	<option value="August">August</option>
+											      	<option value="September">September</option>
+											      	<option value="October">October</option>
+											      	<option value="November">November</option>
+											      	<option value="December">December</option>
+										      	</select>
+										      	
+											</div>
+											<div class='col-md-2'>
+												<input type="text" class='form-control' placeholder='year' v-model='experience.result.startTime.year'>
+											</div>
+											<div class="col-md-1 text-center"> 
+												<span style='display:block;padding:6px 0;'>-</span> 
+											</div>
+											<div class="col-md-3">
+												<select name="startDateMonth" class='form-control' v-model='experience.result.lastTime.month'>
+											      	<option value="January">January</option>
+											      	<option value="February">February</option>
+											      	<option value="March">March</option>
+											      	<option value="April">April</option>
+											      	<option value="May">May</option>
+											      	<option value="June">June</option>
+											      	<option value="July">July</option>
+											      	<option value="August">August</option>
+											      	<option value="September">September</option>
+											      	<option value="October">October</option>
+											      	<option value="November">November</option>
+											      	<option value="December">December</option>
+										      	</select>	
+											</div>
+											<div class='col-md-2'>
+												<input type="text" class='form-control' placeholder='year'  v-model='experience.result.lastTime.year'>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<textarea name="" v-model='experience.result.content' rows='5' class='form-control'  placeholder="Input your content"></textarea>
+									</div>
+									<div class="form-group text-right">
+										<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(experience)'>Save</a>
+						  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(experience)'>Cancel</a>
+									</div>
+								</div>
+
+							</section>							
 						</section>
 						
 						<!-- 语言 -->
-						<section class='profile-info profile-info--experience section'>
+						<section class='profile-info section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Language</h3>
 								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-language"><i class="fa fa-plus"></i> Add Language</a>
-							</header><!-- /header -->
-							<section class="profile-info-item language-item">
-								<h4 class='profile-info-item-position experience-item-position'>chinese</h4>
-								<strong class='profile-info-item-company experience-item-company'>Native or bilingual proficiency</strong>
-							</section>
-							<section class="profile-info-item language-item">
-								<h4 class='profile-info-item-position experience-item-position'>english</h4>
-								<strong class='profile-info-item-company experience-item-company'>Professional working proficiency</strong>
-							</section>								
+							</header>
+							<section class="profile-info-item language-item" v-for='language in languageData'>
+								<div v-show='language.hideOrigin'>
+									<h4 class='profile-info-item-position'>
+										<span v-text='language.result.title'></span>
+										<span class='handle'>
+											<a href="javascript:;" title="" class='edit' v-on:click='hide(language)'>
+												<i class='fa fa-pencil'></i>
+											</a>
+											<a href="javascript:;" class='delete' v-on:click="remove(languageData,$index)">
+												<i class='fa fa-trash-o'></i>
+											</a>
+										</span>
+									</h4>
+									<strong class='profile-info-item-company' v-text='language.result.level'></strong>
+								</div>
+								<div v-show='!language.hideOrigin'>
+									<div class="form-group">
+										<input type="text" v-model='language.result.title' placeholder="" class='form-control'>
+									</div>
+									<div class="form-group">
+										<select class='form-control' v-model='language.result.level'>
+											<option >Elementary proficiency</option>
+											<option >Limited working proficiency</option>
+											<option >Professional working proficiency</option>
+											<option >Full professional proficiency</option>
+											<option >Native or bilingual proficiency</option>
+										</select>
+									</div>
+									<div class="form-group text-right">
+										<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(language)'>Save</a>
+						  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(language)'>Cancel</a>
+									</div>
+								</div>
+							</section>												
 						</section>
 						
 						<!-- 教育 -->
@@ -518,7 +602,9 @@
 							</section>														
 						</section>	
 			    	</div>
+			    	
 			    	<div class="tab-pane fade in" id='services'>
+			    		
 			    		<!-- 服务 -->
 						<section class='profile-info profile-info--server section'>
 							<header class='profile-info-heading'>
@@ -540,7 +626,7 @@
 										</span>
 									</h4>
 									<p>Price: <span v-text='service.result.price | currency'></span></p>
-									<p class='profile-info-item-brief' v-text='service.result.context'></p>		
+									<p class='profile-info-item-brief' v-text='service.result.content'></p>		
 								</div>
 								<div v-show='!service.hideOrigin'>
 									<div class="form-group">
@@ -556,7 +642,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<textarea name="" placeholder="Input your service content" class='form-control' rows='5' v-model='service.result.context'></textarea>
+										<textarea name="" placeholder="Input your service content" class='form-control' rows='5' v-model='service.result.content'></textarea>
 									</div>
 									<div class="form-group text-right">
 										<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(service)'>Save</a>
@@ -566,6 +652,7 @@
 							</section>
 						</section>
 			    	</div>
+			    	
 			    	<div class="tab-pane fade in" id="evaluate">
 						<div class="evalute-main section">
 							<section class="evaluate-section evaluate-main-heading clearfix">
@@ -936,9 +1023,6 @@
 								</div>
 					 		</div>
 				 		</div>
-						<!-- <span class="membership-plans-price">
-                            $0<sup>.00</sup><span class='price-unit'>USD/hr</span>
-                        </span> -->
 						<a href="" title="" class='btn btn-primary' style='width:80%;'>&nbsp; <i class="fa fa-user-plus"></i>&nbsp; |&nbsp; Hire me</a>
 					</div>
 					<!-- 认证 -->
@@ -1041,6 +1125,8 @@
 				</section>
 			</div>
 		</div>   
+
+
 <!-- add的拓展 -->
 	<!-- 服务拓展 -->
 	<div class="modal fade" id="js-profile-services" >
@@ -1075,7 +1161,7 @@
 				</div>
 	      </div>
 	      <div class="modal-footer">
-		      	<button type="button" class="btn btn-primary">Save</button>
+		      	<button type="button" class="btn btn-primary" @click='ServiceAdd' data-dismiss='modal'>Save</button>
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>
@@ -1094,11 +1180,11 @@
 		<label>
 			Skills
 		</label>
-			<input type="text" class='form-control' placeholder ='Skills Name'>	
+			<input type="text" class='form-control' placeholder ='Skills Name' v-model='addSkillName'>	
 		</div>
 	      </div>
 	      <div class="modal-footer">
-	      	<button type="button" class="btn btn-primary">Save</button>
+	      	<button type="button" class="btn btn-primary" data-dismiss="modal" @click='SKillAdd'>Save</button>
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>
@@ -1118,13 +1204,13 @@
 				<label>
 					Job Title
 				</label>
-				<input type="text" class='form-control' placeholder ='job title'>	
+				<input type="text" class='form-control' placeholder ='job title' v-model='addExperienceName'>	
 			</div>
 			<div class="form-group">
 				<label>
 					Company Name
 				</label>
-				<input type="text" class='form-control' placeholder ='company name'>	
+				<input type="text" class='form-control' placeholder ='company name'  v-model='addExperienceCompany'>	
 			</div>
 			<div class="form-group">
 				<label>
@@ -1132,48 +1218,45 @@
 				</label>
 				<div class='row row--no-padding'>
 					<div class="col-md-3">
-				      	<select name="startDateMonth" class='form-control'>
-					      	<option value="" selected="selected">Choose...</option>
-					      	<option value="1">January</option>
-					      	<option value="2">February</option>
-					      	<option value="3">March</option>
-					      	<option value="4">April</option>
-					      	<option value="5">May</option>
-					      	<option value="6">June</option>
-					      	<option value="7">July</option>
-					      	<option value="8">August</option>
-					      	<option value="9">September</option>
-					      	<option value="10">October</option>
-					      	<option value="11">November</option>
-					      	<option value="12">December</option>
+				      	<select name="startDateMonth" class='form-control' v-model='addExperienceStartMonth'>
+					      	<option value="January">January</option>
+					      	<option value="February">February</option>
+					      	<option value="March">March</option>
+					      	<option value="April">April</option>
+					      	<option value="May">May</option>
+					      	<option value="June">June</option>
+					      	<option value="July">July</option>
+					      	<option value="August">August</option>
+					      	<option value="September">September</option>
+					      	<option value="October">October</option>
+					      	<option value="November">November</option>
+					      	<option value="December">December</option>
 				      	</select>
-				      	
 					</div>
 					<div class='col-md-2'>
-						<input type="text" class='form-control' placeholder='year'>
+						<input type="text" class='form-control' placeholder='year' v-model='addExperienceStartYear'>
 					</div>
 					<div class="col-md-1 text-center"> 
 						<span style='display:block;padding:6px 0;'>-</span> 
 					</div>
 					<div class="col-md-3">
-						<select name="startDateMonth" class='form-control'>
-					      	<option value="" selected="selected">Choose...</option>
-					      	<option value="1">January</option>
-					      	<option value="2">February</option>
-					      	<option value="3">March</option>
-					      	<option value="4">April</option>
-					      	<option value="5">May</option>
-					      	<option value="6">June</option>
-					      	<option value="7">July</option>
-					      	<option value="8">August</option>
-					      	<option value="9">September</option>
-					      	<option value="10">October</option>
-					      	<option value="11">November</option>
-					      	<option value="12">December</option>
+						<select name="startDateMonth" class='form-control' v-model='addExperienceLastMonth'>
+							<option value="January">January</option>
+							<option value="February">February</option>
+							<option value="March">March</option>
+							<option value="April">April</option>
+							<option value="May">May</option>
+							<option value="June">June</option>
+							<option value="July">July</option>
+							<option value="August">August</option>
+							<option value="September">September</option>
+							<option value="October">October</option>
+							<option value="November">November</option>
+							<option value="December">December</option>
 				      	</select>	
 					</div>
 					<div class='col-md-2'>
-						<input type="text" class='form-control' placeholder='year'>
+						<input type="text" class='form-control' placeholder='year' v-model='addExperienceLastYear'>
 					</div>
 				</div>
 			</div>
@@ -1181,11 +1264,11 @@
 				<label>
 					Job Description
 				</label>
-				<textarea name="" class='form-control'></textarea>
+				<textarea name="" class='form-control' v-model='addExperienceContent'></textarea>
 			</div>	
 	      </div>
 	      <div class="modal-footer">
-	      	<button type="button" class="btn btn-primary">Save</button>
+	      	<button type="button" class="btn btn-primary" data-dismiss="modal" @click='ExperienceAdd'>Save</button>
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	      </div>
 	    </div>

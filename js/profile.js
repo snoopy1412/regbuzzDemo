@@ -51,13 +51,6 @@ $('.edit-start').hover(function(){
      $(this).find('.edit-handle').css('background-color','transparent');
 })
 
-// 演示
-// $('.profile-info-item').each(function(){
-//     $(this).hover(function(){
-//         $(this).find('.profile-info-item-mask').show();
-//     },function(){
-//         $(this).find('.profile-info-item-mask').hide();
-//     });
-// });
+
 
 });

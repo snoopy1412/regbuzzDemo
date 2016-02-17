@@ -3,12 +3,12 @@ var servicesData = [
 		origin:{
 			name:"Global GHS Compliance Services",
 			price:"100",
-			context:"EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Ser"							
+			content:"EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Ser"							
 		},
 		result:{
 			name:"Global GHS Compliance Services",
 			price:"100",
-			context:"EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Ser"										
+			content:"EU CLP SDS and Labeling; Chinese SDS and Labeling;Japanese and Korean SDS and Labeling;GHS in Other Asian Countries or Regions, e.g. Philippine, Taiwan, Malaysia, Korea, Japan, India, Thailan, Vietnam;Chemical Consumer Products Labeling Review.24h Emergency Telephone Number Ser"										
 		},
 		hideOrigin : true
 	},
@@ -16,12 +16,12 @@ var servicesData = [
 		origin:{
 			name:"Regulation Training",
 			price:"300",
-			context:"Customized online & on-site training services are offered by CIRS experts based on the requirements of customers."									
+			content:"Customized online & on-site training services are offered by CIRS experts based on the requirements of customers."									
 		},
 		result:{
 			name:"Regulation Training",
 			price:"300",
-			context:"Customized online & on-site training services are offered by CIRS experts based on the requirements of customers."												
+			content:"Customized online & on-site training services are offered by CIRS experts based on the requirements of customers."												
 		},
 		hideOrigin : true
 	},
@@ -29,12 +29,12 @@ var servicesData = [
 		origin:{
 			name:"Cosmetic Regulatory Analysis Report",
 			price:"800",
-			context:"Detailed comparison(in both Chinese and English)between Hygienic Standard for Cosmetics (2007) and Technical Safety Standard for Cosmetics (2015, Final). "										
+			content:"Detailed comparison(in both Chinese and English)between Hygienic Standard for Cosmetics (2007) and Technical Safety Standard for Cosmetics (2015, Final). "										
 		},
 		result:{
 			name:"Cosmetic Regulatory Analysis Report",
 			price:"800",
-			context:"Detailed comparison(in both Chinese and English)between Hygienic Standard for Cosmetics (2007) and Technical Safety Standard for Cosmetics (2015, Final). "										
+			content:"Detailed comparison(in both Chinese and English)between Hygienic Standard for Cosmetics (2007) and Technical Safety Standard for Cosmetics (2015, Final). "										
 		},
 		hideOrigin : true
 	},
@@ -42,12 +42,12 @@ var servicesData = [
 		origin:{
 			name:"Food Ingredients Review",
 			price:"200",
-			context:"Review if the food ingredients are approved to be used in China and/or if their dosages are compliant, including food additives"							
+			content:"Review if the food ingredients are approved to be used in China and/or if their dosages are compliant, including food additives"							
 		},
 		result:{
 			name:"Food Ingredients Review",
 			price:"200",
-			context:"Review if the food ingredients are approved to be used in China and/or if their dosages are compliant, including food additives"							
+			content:"Review if the food ingredients are approved to be used in China and/or if their dosages are compliant, including food additives"							
 		},
 		hideOrigin : true
 	}
