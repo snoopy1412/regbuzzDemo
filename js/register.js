@@ -71,7 +71,6 @@ define(['Vue','vueValidator'],function(Vue,vueValidator) {
     methods:{
       showError:function(text){
         this[text+'Show'] = true;
-        console.log(this.lastNameShow);
       }
     }
   })

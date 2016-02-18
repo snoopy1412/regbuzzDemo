@@ -3,6 +3,18 @@
 {
     height: 100%;
     margin-top: 20px;
+    .edit-text{
+        display: inline-block;
+        margin-right: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .edit-handle{
+        padding: 5px;
+    }
+    .add-color{
+        background-color: #dcf2fc;
+    }
 }
 
 .profile-info
@@ -114,18 +126,6 @@
     padding-bottom: 0;
     .location{
         margin-bottom: 10px;
-    }
-    .edit-text{
-        display: inline-block;
-        margin-right: 5px;
-        padding: 5px;
-        cursor: pointer;
-    }
-    .edit-handle{
-        padding: 5px;
-    }
-    .add-color{
-        background-color: #dcf2fc;
     }
 }
 .profile-info--person-img
@@ -252,9 +252,12 @@
     {
         text-align: center;
         .membership-plans-price{
-            @include font-size(2.6);
+            @include font-size(2.2);
             display: inline-block;
             padding-bottom: 20px;
+            .edit{
+                // font-size: 20px;
+            }
         }
         .price-unit{
             font-size: 14px;

@@ -1,0 +1,9 @@
+var summaryData = {
+		origin: {
+			summary: "Compliance Consultant, Founder and CEO of ComplyEthic Consulting LLC, a firm dedicated to providing professional compliance support and cost-effective solutions tailored to meet company needs in a rapidly changing world. Leona led product compliance policy and process development for a Fortune 100 retailer. She's able to connect legal requirements to operational requirements by working with cross functional groups. "
+		},
+		result: {
+			summary: "Compliance Consultant, Founder and CEO of ComplyEthic Consulting LLC, a firm dedicated to providing professional compliance support and cost-effective solutions tailored to meet company needs in a rapidly changing world. Leona led product compliance policy and process development for a Fortune 100 retailer. She's able to connect legal requirements to operational requirements by working with cross functional groups. "
+		},
+		hideOrigin: true
+	}

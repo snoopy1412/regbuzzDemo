@@ -1,70 +1,150 @@
-define(['Vue','../data/countries.js','../data/profile/services.js','../data/profile/skills.js','../data/profile/experience.js','../data/profile/language.js','../data/profile/educations.js'],function(Vue) {
-   
+define(['Vue', '../data/countries.js', '../data/profile/country.js', '../data/profile/position.js', '../data/profile/summary.js', '../data/profile/price.js', '../data/profile/services.js', '../data/profile/skills.js', '../data/profile/experience.js', '../data/profile/language.js', '../data/profile/educations.js', '../data/profile/certificate.js', '../data/profile/publish.js'], function(Vue) {
+
     var profileUserVm = new Vue({
-        el:"#vue-profile-user",
-        data:{
-            countries:countriesData,
+        el: "#vue-profile-user",
+        data: {
+            loading : true,
+            errorMsg : false,
+            /**
+             * 页面数据初始化
+             * @type {Array}
+             */
+            countries: [],
 
             // location 数据
-            countryData:{
-                origin:{
-                    country:'China',
-                    city:'nanjing',
-                },
-                result:{
-                    country:'China',
-                    city:'nanjing',
-                },
-                hideOrigin : true
-            },
+            countryData: {},
 
             // position 数据
-            positionData:{
-                origin:{
-                    position:'Law Consultant'
-                },
-                result:{
-                    position:'Law Consultant'
-                },
-                hideOrigin : true
-            },
+            positionData: {},
 
             // summary 数据
-            summaryData:{
-                origin:{
-                    summary:"Compliance Consultant, Founder and CEO of ComplyEthic Consulting LLC, a firm dedicated to providing professional compliance support and cost-effective solutions tailored to meet company needs in a rapidly changing world. Leona led product compliance policy and process development for a Fortune 100 retailer. She's able to connect legal requirements to operational requirements by working with cross functional groups. "
-                },
-                result:{
-                    summary:"Compliance Consultant, Founder and CEO of ComplyEthic Consulting LLC, a firm dedicated to providing professional compliance support and cost-effective solutions tailored to meet company needs in a rapidly changing world. Leona led product compliance policy and process development for a Fortune 100 retailer. She's able to connect legal requirements to operational requirements by working with cross functional groups. "
-                },
-                hideOrigin : true
-            },
+            summaryData: {},
+
+            // price 数据
+            priceData: {},
 
             //  services 数据
-            servicesData : servicesData,
+            servicesData: [],
 
             // skill 数据
-            skillsData : skillsData,
+            skillsData: [],
 
             // experience 数据
-            experienceData : experienceData,
+            experienceData: [],
 
             // language 数据
-            languageData : languageData,
+            languageData: [],
 
             // education 数据
-            educationsData : educationsData,
+            educationsData: [],
+
+            // certificate 数据
+            certificateData: [],
+
+            // publish 数据
+            publishData: [],
+
+
+            /**
+             * 这一部分是为了初始化add部分数据
+             */
+            
+            // 服务
+            addServiceName : '',
+            addServicePrice : '',
+            addServiceContent : '',
+
+            // 技能
+            addSkillName : '',
+
+            // 经验
+            addExperienceName : '',
+            addExperienceCompany : '',
+            addExperienceStartMonth : '',
+            addExperienceStartYear : '',
+            addExperienceLastMonth : '',
+            addExperienceLastYear : '',
+            addExperienceContent : '',
+
+            // 语言
+            addLanguageTitle : '',
+            addLanguageLevel : '',
+
+            // 教育
+            addEducationDegree :'',
+            addEducationSchool :'',
+            addEducationStartTime :'',
+            addEducationEndTime :'',
+
+            // 认证
+            addCertificateTitle : '',
+            addCertificateAuthority : '',
+            addCertificateMonth : '',
+            addCertificateYear : '',
+
+            // 证书
+            addPublishTitle : '',
+            addPublishAgency : '',
+            addPublishMonth : '',
+            addPublishYear : '',
 
         },
-        methods:{
+        created:function(){
+             this.countries = countriesData;
+
+             // location 数据
+             this.countryData = countryData;
+
+            // position 数据
+            this.positionData = positionData;
+
+            // summary 数据
+            this.summaryData = summaryData;
+
+            // price 数据
+            this.priceData = priceData;
+
+            //  services 数据
+            this.servicesData = servicesData;
+
+            // skill 数据
+            this.skillsData = skillsData;
+
+            // experience 数据
+            this.experienceData = experienceData;
+
+            // language 数据
+            this.languageData = languageData;
+
+            // education 数据
+            this.educationsData = educationsData;
+
+            // certificate 数据
+            this.certificateData = certificateData;
+
+            // publish 数据
+            this.publishData = publishData;
+
+            // 初始化模拟  模拟加载
+            var self = this;
+            setTimeout(function(){
+                self.loading = false;
+            },1000)
+        },
+        methods: {
 
             // 公用方法
-            hide:function(data){
+            hide: function(data) {
                 data.hideOrigin = false;
             },
-            save:function(data){
-                for( key in data.result ){
-                    data.origin[i] = data.result[i];
+            save: function(data) {
+                for (key in data.result) {
+                    var text = data.result[key].trim();
+                    if(text ===''){
+                        this.errorMsg = true;
+                        return false;
+                    }
+                    data.origin[key] = data.result[key];
                 }
 
                 // 可以引入ajax
@@ -74,37 +154,45 @@ define(['Vue','../data/countries.js','../data/profile/services.js','../data/prof
                 // $.post(url,data,function(data){
                 //     // 提示成功
                 // });
-                
+
                 data.hideOrigin = true;
             },
-            cancel:function(data){
-                for( key in data.result ){
-                    data.result[i] = data.origin[i];
+            cancel: function(data) {
+                for (key in data.origin) {
+                    data.result[key] = data.origin[key];
                 }
+
                 data.hideOrigin = true;
             },
-            remove:function(data,index){
+
+            remove: function(data, index) {
                 data.splice(index, 1)
+                // 可引入ajax 进行删除处理
             },
 
             // 专属方法
             /*
                 添加服务
              */
-            ServiceAdd:function(){
+            ServiceAdd: function() {
+                if(this.addServiceName==='' || this.addServicePrice ==='' ||  this.addServiceContent ===''){
+                     this.errorMsg = true;
+                    return false;
+                }
                 var data = {
-                    origin : {
-                        name : this.addServiceName,
-                        price : this.addServicePrice,
-                        content : this.addServiceContent
+                    origin: {
+                        name: this.addServiceName,
+                        price: this.addServicePrice,
+                        content: this.addServiceContent
                     },
-                    result:{
-                        name : this.addServiceName,
-                        price : this.addServicePrice,
-                        content : this.addServiceContent
+                    result: {
+                        name: this.addServiceName,
+                        price: this.addServicePrice,
+                        content: this.addServiceContent
                     },
-                    hideOrigin : true
+                    hideOrigin: true
                 };
+
                 this.servicesData.push(data);
 
                 // 清空表单
@@ -116,15 +204,19 @@ define(['Vue','../data/countries.js','../data/profile/services.js','../data/prof
             /**
              * 添加技能
              */
-            SKillAdd:function(){
+            SKillAdd: function() {
+                if(this.addSkillName===''){
+                     this.errorMsg = true;
+                    return false;
+                }
                 var data = {
-                    origin : {
-                        name : this.addSkillName
+                    origin: {
+                        name: this.addSkillName
                     },
-                    result:{
-                        name : this.addSkillName
+                    result: {
+                        name: this.addSkillName
                     },
-                    hideOrigin : true
+                    hideOrigin: true
                 };
                 this.skillsData.push(data);
                 this.addSkillName = '';
@@ -133,35 +225,39 @@ define(['Vue','../data/countries.js','../data/profile/services.js','../data/prof
             /**
              * 添加经验
              */
-            ExperienceAdd:function(){
+            ExperienceAdd: function() {
+                if(this.addExperienceName==='' || this.addExperienceCompany ==='' ||  this.addExperienceStartMonth ==='' ||  this.addExperienceStartYear ==='' ||  this.addExperienceLastMonth ==='' ||  this.addExperienceLastYear ==='' || this.addExperienceContent === ''){
+                     this.errorMsg = true;
+                    return false;
+                }
                 var data = {
-                    origin : {
-                        position : this.addExperienceName,
+                    origin: {
+                        position: this.addExperienceName,
                         company: this.addExperienceCompany,
-                        startTime:{
-                            month:this.addExperienceStartMonth,
-                            year:this.addExperienceStartYear
+                        startTime: {
+                            month: this.addExperienceStartMonth,
+                            year: this.addExperienceStartYear
                         },
-                        lastTime:{
-                            month:this.addExperienceLastMonth,
-                            year:this.addExperienceLastYear
+                        lastTime: {
+                            month: this.addExperienceLastMonth,
+                            year: this.addExperienceLastYear
                         },
-                        content:this.addExperienceContent
+                        content: this.addExperienceContent
                     },
-                    result:{
-                        position : this.addExperienceName,
-                        company:this.addExperienceCompany,
-                        startTime:{
-                            month:this.addExperienceStartMonth,
-                            year:this.addExperienceStartYear
+                    result: {
+                        position: this.addExperienceName,
+                        company: this.addExperienceCompany,
+                        startTime: {
+                            month: this.addExperienceStartMonth,
+                            year: this.addExperienceStartYear
                         },
-                        lastTime:{
-                            month:this.addExperienceLastMonth,
-                            year:this.addExperienceLastYear
+                        lastTime: {
+                            month: this.addExperienceLastMonth,
+                            year: this.addExperienceLastYear
                         },
-                        content:this.addExperienceContent
+                        content: this.addExperienceContent
                     },
-                    hideOrigin : true
+                    hideOrigin: true
                 };
                 this.experienceData.push(data);
                 this.addExperienceName = '';
@@ -173,51 +269,119 @@ define(['Vue','../data/countries.js','../data/profile/services.js','../data/prof
                 this.addExperienceContent = '';
             },
 
-             /**
+            /**
              * 添加语言
              */
-             LanguageAdd : function(){
-                 var data = {
-                    origin : {
-                        title : this.addLanguageTitle,
+            LanguageAdd: function() {
+                if(this.addLanguageTitle==='' || this.addLanguageLevel ==='' ){
+                     this.errorMsg = true;
+                    return false;
+                }
+                var data = {
+                    origin: {
+                        title: this.addLanguageTitle,
                         level: this.addLanguageLevel
                     },
-                    result:{
-                        title : this.addLanguageTitle,
-                        level : this.addLanguageLevel
+                    result: {
+                        title: this.addLanguageTitle,
+                        level: this.addLanguageLevel
                     },
-                    hideOrigin : true
+                    hideOrigin: true
                 };
                 this.languageData.push(data);
                 this.addLanguageTitle = '';
                 this.addLanguageLevel = '';
-             },
+            },
 
-             /**
+            /**
              * 添加教育
              */
-             educationAdd : function(){
+            educationAdd: function() {
+                 if(this.addEducationDegree==='' || this.addEducationSchool ==='' || this.addEducationStartTime==='' || this.addEducationEndTime ===''){
+                     this.errorMsg = true;
+                    return false;
+                }
                 var data = {
-                    origin : {
-                        degree : this.addEducationDegree,
+                    origin: {
+                        degree: this.addEducationDegree,
                         school: this.addEducationSchool,
-                        startTime : this.addEducationStartTime,
-                        endTime : this.addEducationEndTime
+                        startTime: this.addEducationStartTime,
+                        endTime: this.addEducationEndTime
                     },
-                    result:{
-                        degree : this.addEducationDegree,
+                    result: {
+                        degree: this.addEducationDegree,
                         school: this.addEducationSchool,
-                        startTime : this.addEducationStartTime,
-                        endTime : this.addEducationEndTime
+                        startTime: this.addEducationStartTime,
+                        endTime: this.addEducationEndTime
                     },
-                    hideOrigin : true
+                    hideOrigin: true
                 };
                 this.educationsData.push(data);
                 this.addEducationDegree = '';
                 this.addEducationSchool = '';
                 this.addEducationStartTime = '';
                 this.addEducationEndTime = '';
-             }
+            },
+
+            /**
+             * 添加认证 
+             */
+            CertificateAdd: function() {
+                if(this.addCertificateTitle==='' || this.addCertificateAuthority ==='' || this.addCertificateMonth==='' || this.addCertificateYear ===''){
+                     this.errorMsg = true;
+                    return false;
+                }
+                var data = {
+                    origin: {
+                        title: this.addCertificateTitle,
+                        agency: this.addCertificateAuthority,
+                        month: this.addCertificateMonth,
+                        year: this.addCertificateYear
+                    },
+                    result: {
+                        title: this.addCertificateTitle,
+                        agency: this.addCertificateAuthority,
+                        month: this.addCertificateMonth,
+                        year: this.addCertificateYear
+                    },
+                    hideOrigin: true
+                };
+                this.certificateData.push(data);
+                this.addCertificateTitle = '';
+                this.addCertificateAuthority = '';
+                this.addCertificateMonth = '';
+                this.addCertificateYear = '';
+            },
+
+            /**
+             * 添加证书
+             */
+            publishAdd: function() {
+                if(this.addPublishTitle==='' || this.addPublishAgency ==='' || this.addPublishMonth==='' || this.addPublishYear ===''){
+                     this.errorMsg = true;
+                    return false;
+                }
+                var data = {
+                    origin: {
+                        title: this.addPublishTitle,
+                        agency: this.addPublishAgency,
+                        month: this.addPublishMonth,
+                        year: this.addPublishYear
+                    },
+                    result: {
+                        title: this.addPublishTitle,
+                        agency: this.addPublishAgency,
+                        month: this.addPublishMonth,
+                        year: this.addPublishYear
+                    },
+                    hideOrigin: true
+                };
+                this.publishData.push(data);
+                this.addPublishTitle = '';
+                this.addPublishAgency = '';
+                this.addPublishMonth = '';
+                this.addPublishYear = '';
+            }
 
         }
     })
