@@ -1,30 +1,27 @@
 .m-oFormHelp{
-	display: none;
-	position:absolute;
+
 	background-color: #fff;
-	border-radius: 4px;
-	border: 1px solid #59a9e5;
 	min-width: 280px;
-	top:-40px;
-	left: 102%;
-	padding: 10px 30px;
+	top:-10px;
+	left: 100%;
+	padding:10px 20px;
 	z-index: 100;
 	&:before,&:after{
 		content: '';
 		position: absolute;
-		top:40px;
+		top:10px;
 	}
 	&:before{
-		left:-30px;
-		@include arrow(right,15px,#59a9e5);
+		left:-20px;
+		@include arrow(right,10px,#ccc);
 	}
 	&:after{
-		left:-29px;
-		@include arrow(right,15px,#fff);
+		left:-19px;
+		@include arrow(right,10px,#fff);
 	}
 	
 	.m-oFormHelp-title{
-		@include font-size(1.7);
+		@include font-size(1.6);
 		font-weight: 600;
 		margin: 10px 0;
 	}

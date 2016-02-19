@@ -343,35 +343,31 @@
 
 								<!-- 任务基本信息 -->
 								<div class="row pub-item pub-item-base">
-									<h3 class='pub-item-title col-md-12'>Project Basic Information </h3>
+									<h3 class='pub-item-title col-md-12'>Project Basic Information (required*)</h3>
 									<div class="form-group">
 										<label for="select-category" class='col-md-3'>Choose a category</label>
-										<div class="col-md-9" style='position: relative'>
-										<div class="row row--no-padding">
-										  <div class="col-md-6">
-										   <select class='form-control pub-category-select js-dropdown-toggle' id='select-category' v-model='selected'>
-												<option v-for='list in lists' v-bind:value='list.text'>{{list.text}}</option>
-											</select>
-										  </div>
-										  <div class="col-md-6">
-										   <select class='form-control pub-category-select'>
-												<option v-for='sy in selection' v-bind:value='sy.text'>{{sy.text}}</option>
-											</select>
-										  </div>
-										</div>
-											<div class="m-oFormHelp js-dropdown-menu">
-												<div class="dropdown-body">
-													<h4 class='m-oFormHelp-title'>First things first</h4>
-													<p class='m-oFormHelp-bref'>Choose the category and sub-category that best ﬁts your job.</p>
-												</div>
+										<div class="col-md-9">
+											<div class="row row--no-padding">
+											  <div class="col-md-6">
+											   <select class='form-control pub-category-select' id='select-category' v-model='selected'>
+													<option v-for='list in lists' v-bind:value='list.text' v-text='list.text'></option>
+												</select>
+											  </div>
+											  <div class="col-md-6">
+											   <select class='form-control pub-category-select'>
+													<option v-for='sy in selection' v-bind:value='sy.text' v-text='sy.text'></option>
+												</select>
+											  </div>
 											</div>
 										</div>							
 									</div>
 									<div class="form-group">
 										<label for="job-name" class='col-md-3'>Give your job a name</label>
-										<div class="col-md-9 dropdown-default">
-											<input type="text" name="" value="" placeholder="" class='form-control js-dropdown-toggle' id='job-name'>
-											<div class="m-oFormHelp js-dropdown-menu">
+										<div class="col-md-9 dropdown">
+											<input type="text" name="" value="" placeholder="" class='form-control dropdown-toggle' id='job-name' data-toggle="dropdown" />
+											
+											<!-- prompt -->
+											<div class="m-oFormHelp dropdown-menu">
 												<div class="dropdown-body">
 													<h4 class='m-oFormHelp-title'>What's in a name?</h4>
 													<p class='m-oFormHelp-bref'>A lot, actually. A concise, yet specific job name will help attract qualified applicants. For instance:</p>
@@ -380,6 +376,8 @@
 													</ul>
 												</div>
 											</div>
+											<!-- prompt end -->
+
 										</div>						
 									</div>	
 
@@ -404,7 +402,24 @@
 									<div class="form-group">
 										<label for="pub-profile-txt" class='col-md-3'>Job Description</label>
 										<div class="col-md-9">
-											<textarea name="" value="" class='form-control'  rows="5" id='pub-profile-txt'></textarea>
+											<div class='words-count' data-toggle="dropdown">
+												<textarea name="" class='form-control words-input' rows="5" id='pub-profile-txt' v-model='textareaCount'></textarea>
+
+												<div class='words-count-area'>
+													<span class='current-words' :class="{'overmax':isOvermax}" v-text='currentWords'></span> / <span class='total-words' v-text='totalWords'></span>
+												</div>
+
+											</div>
+											<!-- prompt -->
+											<div class="m-oFormHelp dropdown-menu">
+												<div class="dropdown-body">
+													<h4 class='m-oFormHelp-title'>What's in a Job Description?</h4>
+													<p class='m-oFormHelp-bref'>添加提示信息</p>
+												</div>
+											</div>
+											<!-- prompt end -->
+											
+											
 										</div>
 									</div>		
 									
@@ -412,9 +427,21 @@
 									<div class="form-group">
 										<label for="pub-budget-txt" class='col-md-3'>Budget</label>
 										<div class="col-md-9">
-								      		<select id="project-budget" name="budget" class='form-control' v-model='selectedBudget'><option value="192">微项目 ($80-240 USD)</option><option value="25">简单的项目 ($240-2000 USD)</option><option value="26">非常小的项目 ($2000-6000 USD)</option><option value="27">小项目 ($6000-12000 USD)</option><option value="28" selected="selected">中等项目 ($12000-24000 USD)</option><option value="29">大项目 ($24000-40000 USD)</option><option value="30">较大项目 ($40000-80000 USD)</option><option value="233">非常大的项目 ($80000-160000 USD)</option><option value="252">大项目 ($160000-400000 USD)</option><option value="271">主要的项目 ($ &gt;400000 USD)</option><option value="custom">自定义预算</option></select>
+								      		<select id="project-budget" name="budget" class='form-control' v-model='selectedBudget'>
+								      			<option value="192">微项目 ($80-240 USD)</option>
+								      			<option value="25">简单的项目 ($240-2000 USD)</option>
+								      			<option value="26">非常小的项目 ($2000-6000 USD)</option>
+								      			<option value="27">小项目 ($6000-12000 USD)</option>
+								      			<option value="28" selected="selected">中等项目 ($12000-24000 USD)</option>
+								      			<option value="29">大项目 ($24000-40000 USD)</option><option value="30">较大项目 ($40000-80000 USD)</option>
+								      			<option value="233">非常大的项目 ($80000-160000 USD)</option>
+								      			<option value="252">大项目 ($160000-400000 USD)</option>
+								      			<option value="271">主要的项目 ($ &gt;400000 USD)</option>
+								      			<option value="custom">自定义预算</option>
+								      		</select>
+								      		
 								      		<!-- 自定义预算 -->
-								      		<div class="pub-budget-custom" v-if='customBudget'>
+								      		<div class="pub-budget-custom" v-show='customBudget' transition="pub-expand">
 								      			<div class='budget-min'>
 								      				<label for="">最低收费</label>
 													<div class="input-group">
@@ -451,8 +478,12 @@
 											</select>
 										</div>
 									</div>	
-									
-									<!-- 附件 -->
+								</div>	
+								
+
+								<!-- 附件 -->
+								<div class="row pub-item">
+									<h3 class='pub-item-title col-md-12'>Attachment</h3>
 									<div class='form-group'>
 										<label for="document" class='col-md-3'>Attach a document</label>
 										<div class="col-md-9">
@@ -460,6 +491,7 @@
 										</div>
 									</div>
 								</div>
+								
 
 								<!-- 候选人资质 -->
 								<div class="row pub-item">
@@ -478,44 +510,78 @@
 
 									<!-- language -->
 									<div class="form-group">
-										<label for="marketplace" class='col-md-3'>Special Language Requirement</label>
+										<label class='col-md-3'>Special Language Requirement</label>
 										<div class="col-md-9">
+											<!-- <ul class='clearfix pub-language-result'>
+												<li>
+													<span class='label label-default'>Chinese</span>
+												</li>
+											</ul>
 											
-											<button type="button" class='btn btn-link' data-toggle="modal" data-target="#pub-add-language">+Add Language</button>
-											<!-- Modal -->
-											<div class="modal fade" id="pub-add-language">
-											  <div class="modal-dialog" role="document">
-											    <div class="modal-content">
-											     <div class="modal-header">
-											        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											        <h4 class="modal-title" id="myModalLabel">Select your langauge</h4>
-											      </div>
-											      <div class="modal-body" id='vue-list-languages'>
-											        <ul class='pub-language-list'>     
-														<li v-for='language in languages'>
-												        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
-															  <input type="checkbox" id='{{language.abbr}}'>
-															  <span class="c-indicator"></span>
-															 {{language.local}}
-															</label>
-														</li>
-													</ul>
-													<div class="divider divider-horizontal">or</div>
-														<input type="text" name="" value="" placeholder="自定义输入" class='form-control'>
-											      </div>
-											      <div class="modal-footer">
-											      	<button type="button" class="btn btn-primary">Save</button>
-											        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-											      </div>
-											    </div>
-											  </div>
+
+											<button type="button" class='btn btn-link' data-toggle="modal" data-target="#pub-add-language">+Add Language</button> -->
+
+
+
+											<div id="jellybean">
+												<ul class='jellybean-container clearfix'>
+													<li class="jellybean-container-item" v-for='item in languagelist' track-by="$index">
+														<span class="jellybean-suggest-show">
+															<span class="value" v-text='item'></span>
+															<button type="button" class="remove" @click='remove($index)'>×</button>
+														</span>
+													</li>
+													<li class="jellybean-container-item">
+														<span class="jellybean-suggest-input">
+															<input type="text" class="jellybean-input" placeholder="输入语言" v-model='searchLanguge' @keyup='search | debounce 500'>
+															<ul class='jellybean-result' :class="{'show':isShow}">
+																<li v-for='langauge in languagesResult | filterBy searchLanguge'>
+																	<a href="javascript:;" class="jellybean-result-link" v-html='langauge.show | capitalize' @click='addInLanguageList(langauge.origin)'></a>
+																</li>
+																<li v-if='promptMessage'>
+																	<span class='jellybean-result-link' >
+																		没有数据啊，擦
+																	</span>
+																</li>
+																
+															</ul>
+														</span>
+													</li>
+												</ul>
 											</div>
+
+											<!-- Modal -->
+											<!-- <div class="modal fade" id="pub-add-language">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">Select your langauge</h4>
+												</div>
+											<div class="modal-body">
+												<ul class='pub-language-list'> 
+													<li v-for='language in languagesData'>
+														<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+														<input type="checkbox" id='{{language.abbr}}' v-model="languageNames" value='{{language.en}}'>
+															<span class="c-indicator"></span>
+															{{language.local}}
+														</label>
+													</li>
+												</ul>
+												<div class="divider divider-horizontal">or</div>
+												<input type="text" name="" value="" placeholder="自定义输入" class='form-control'>
+											</div>
+											<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-dismiss="modal" @click='addLanguage'>Save</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal" @click='cancelLanguage'>Close</button>
+											</div>
+											</div>
+										</div>
+											</div> -->
 											
 										</div>
 									</div>
 									
-									
-
 									<!-- skill -->
 									<!-- <div class="form-group">
 										<label for="skills" class='col-md-3'>What skills are needed?</label>
@@ -663,9 +729,7 @@
 										    分享该任务给好友
 										</label>
 									</div>
-									
 								</div>
-								
 							</form>
 						</div>
 					</section>				

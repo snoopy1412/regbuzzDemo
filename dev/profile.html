@@ -79,8 +79,8 @@
 											<input type='text' class='form-control' v-model='positionData.result.position' placeholder="input your position"/>
 										</div>
 										<div class='form-group'>
-											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(positionData)'>保存</a>
-							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(positionData)'>取消</a>
+											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(positionData)'>Save</a>
+							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(positionData)'>Cancel</a>
 										</div>
 							 		</div>
 						 		</li>
@@ -97,8 +97,8 @@
 											<textarea class='form-control' v-model='summaryData.result.summary' placeholder="input your summary" rows='10'></textarea>
 										</div>
 										<div class='form-group'>
-											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(summaryData)'>保存</a>
-							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(summaryData)'>取消</a>
+											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(summaryData)'>Save</a>
+							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(summaryData)'>Cancel</a>
 										</div>
 							 		</div>
 						 		</li>
@@ -120,7 +120,7 @@
 						<section class='profile-info profile-info--skills section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Skills</h3>
-									<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-skills"><i class="fa fa-plus"></i> Add Skills</a>
+									
 							</header><!-- /header -->
 							<section class='skills'>
 								<a href="javascript:;" class='skills-item' v-for='skill in skillsData'>
@@ -128,13 +128,14 @@
 									<i class="remove fa fa-times" @click='remove(skillsData,$index)'></i>
 								</a>
 							</section>						
+							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-skills"><i class="fa fa-plus"></i> Add Skills</a>
 						</section>
 						
 						<!-- 经验 -->
 						<section class='profile-info profile-info--experience section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Experience</h3>
-								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-experience"><i class="fa fa-plus"></i> Add Experience</a>
+								<!-- <a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-experience"><i class="fa fa-plus"></i> Add Experience</a> -->
 							</header>
 							<section class="profile-info-item experience-item" v-for='experience in experienceData'>
 								<div v-show='experience.hideOrigin'>
@@ -215,15 +216,15 @@
 						  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(experience)'>Cancel</a>
 									</div>
 								</div>
-
-							</section>							
+							</section>	
+							<a href="javascript:;" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-experience"><i class="fa fa-plus"></i> Add Experience</a>						
 						</section>
 						
 						<!-- 语言 -->
 						<section class='profile-info section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Language</h3>
-								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-language"><i class="fa fa-plus"></i> Add Language</a>
+								<!-- <a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-language"><i class="fa fa-plus"></i> Add Language</a> -->
 							</header>
 							<section class="profile-info-item language-item" v-for='language in languageData'>
 								<div v-show='language.hideOrigin'>
@@ -258,14 +259,15 @@
 						  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(language)'>Cancel</a>
 									</div>
 								</div>
-							</section>												
+							</section>
+							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-language"><i class="fa fa-plus"></i> Add Language</a>												
 						</section>
 						
 						<!-- 教育 -->
 						<section class='profile-info profile-info--educations section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Educations</h3>
-								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-educations"><i class="fa fa-plus"></i> Add Educations</a>
+								<!-- <a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-educations"><i class="fa fa-plus"></i> Add Educations</a> -->
 							</header>
 							<section class='profile-info-item' v-for='education in educationsData'>
 								<div v-show='education.hideOrigin'>
@@ -313,14 +315,15 @@
 									</div>
 									
 								</div>
-							</section>						
+							</section>	
+							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-educations"><i class="fa fa-plus"></i> Add Educations</a>					
 						</section>
 						
 						<!-- 证书 -->
 						<section class='profile-info section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Certificate</h3>
-								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-certificate"><i class="fa fa-plus"></i> Add Certificate</a>
+								<!-- <a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-certificate"><i class="fa fa-plus"></i> Add Certificate</a> -->
 							</header>
 							<section class='profile-info-item' v-for='certificate in certificateData'>
 								<div v-show='certificate.hideOrigin'>
@@ -377,14 +380,15 @@
 						  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(certificate)'>Cancel</a>
 									</div>
 								</div>
-							</section>													
+							</section>
+							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-certificate"><i class="fa fa-plus"></i> Add Certificate</a>											
 						</section>	
 						
 						<!-- 出版 -->
 						<section class='profile-info section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Publish</h3>
-								<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-publish"><i class="fa fa-plus"></i> Add Publish</a>
+								<!-- <a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-publish"><i class="fa fa-plus"></i> Add Publish</a> -->
 							</header>
 							<section class='profile-info-item' v-for='publish in publishData'>
 								<div v-show='publish.hideOrigin'>
@@ -441,8 +445,8 @@
 						  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(publish)'>Cancel</a>
 									</div>
 								</div>
-								
-							</section>														
+							</section>	
+							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-publish"><i class="fa fa-plus"></i> Add Publish</a>													
 						</section>	
 			    	</div>
 			    	
@@ -452,7 +456,7 @@
 						<section class='profile-info profile-info--server section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Services</h3>
-									<a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-services"><i class="fa fa-plus"></i> Add Services</a>
+									<!-- <a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-services"><i class="fa fa-plus"></i> Add Services</a> -->
 							</header>
 
 							<section v-for='service in servicesData' class='profile-info-item profile-info--server-item'>
@@ -493,6 +497,7 @@
 									</div>
 								</div>
 							</section>
+							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-services"><i class="fa fa-plus"></i> Add Services</a>
 						</section>
 			    	</div>
 			    	

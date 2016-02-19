@@ -1,0 +1,23 @@
+.words-count{
+	position: relative;
+	.words-input,.words-count-area{
+		
+	}
+	.word-input{
+		left: 0;
+		top: 0;
+	}
+	.words-count-area{
+		position: absolute;
+		z-index: 100;
+		right: 20px;
+		bottom: 10px;
+		color:#808080;
+		color:rgba(#808080,0.8);
+		font-style: italic;
+		font-weight: 600;
+	}
+	.current-words.overmax{
+		color:rgba($palette-red,0.8);
+	}
+}
