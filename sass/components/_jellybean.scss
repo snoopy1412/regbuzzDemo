@@ -1,4 +1,4 @@
-#jellybean
+.jellybean
 {
     position: relative;
 
@@ -17,16 +17,19 @@
         outline: 0;
         @include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1), 0 0 8px 0 rgba(0,0,0,0.2));
       }
+    &.error{
+        border-color: #a94442;
+    }
 
 }
-#jellybean .show{
+.jellybean .show{
     display: block;
 } 
-#jellybean .jellybean-container-item
+.jellybean .jellybean-container-item
 {
     float: left;
 }
-#jellybean .jellybean-suggest-show
+.jellybean .jellybean-suggest-show
 {
     font-size: 13px;
     font-weight: normal;
@@ -50,7 +53,7 @@
     background: #f1f1f1;
     box-shadow: 0 1px 1px #ccc;
 }
-#jellybean .remove
+.jellybean .remove
 {
     font-size: 20px;
 
@@ -68,11 +71,11 @@
        -moz-appearance: none;
             appearance: none;
 }
-#jellybean .jellybean-suggest-input
+.jellybean .jellybean-suggest-input
 {
     position: relative;
 }
-#jellybean .jellybean-result
+.jellybean .jellybean-result
 {
     position: absolute;
     top: 30px;
@@ -90,7 +93,7 @@
     background-color: #fff;
     @include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1), 0 0 8px 0 rgba(0,0,0,0.2));
 }
-#jellybean .jellybean-result a
+.jellybean .jellybean-result a
 {
     line-height: 1.5em;
     line-height: 100%;
@@ -102,12 +105,12 @@
     text-align: left;
     text-decoration: none;
 }
-#jellybean .jellybean-result a:hover
+.jellybean .jellybean-result a:hover
 {
     background-color: #f1f1f1;
 }
 
-#jellybean .jellybean-input
+.jellybean .jellybean-input
 {
     height: 26px;
     margin-top: 5px;

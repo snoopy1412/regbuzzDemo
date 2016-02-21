@@ -347,7 +347,7 @@
 									<div class="form-group">
 										<label for="select-category" class='col-md-3'>Choose a category</label>
 										<div class="col-md-9">
-											<div class="row row--no-padding">
+											<!-- <div class="row row--no-padding">
 											  <div class="col-md-6">
 											   <select class='form-control pub-category-select' id='select-category' v-model='selected'>
 													<option v-for='list in lists' v-bind:value='list.text' v-text='list.text'></option>
@@ -358,7 +358,9 @@
 													<option v-for='sy in selection' v-bind:value='sy.text' v-text='sy.text'></option>
 												</select>
 											  </div>
-											</div>
+											</div> -->
+											<linkage :linkageData='selectedData'></linkage>
+
 										</div>							
 									</div>
 									<div class="form-group">
@@ -402,7 +404,7 @@
 									<div class="form-group">
 										<label for="pub-profile-txt" class='col-md-3'>Job Description</label>
 										<div class="col-md-9">
-											<div class='words-count' data-toggle="dropdown">
+											<div class='words-count ' data-toggle="dropdown">
 												<textarea name="" class='form-control words-input' rows="5" id='pub-profile-txt' v-model='textareaCount'></textarea>
 
 												<div class='words-count-area'>
@@ -523,7 +525,7 @@
 
 
 
-											<div id="jellybean">
+											<div class="jellybean" :class="{'error':isError}">
 												<ul class='jellybean-container clearfix'>
 													<li class="jellybean-container-item" v-for='item in languagelist' track-by="$index">
 														<span class="jellybean-suggest-show">
@@ -533,17 +535,16 @@
 													</li>
 													<li class="jellybean-container-item">
 														<span class="jellybean-suggest-input">
-															<input type="text" class="jellybean-input" placeholder="输入语言" v-model='searchLanguge' @keyup='search | debounce 500'>
+															<input type="text" class="jellybean-input" placeholder="输入语言(最多三个)" v-model='searchLanguge' @keyup='search | debounce 500'>
 															<ul class='jellybean-result' :class="{'show':isShow}">
 																<li v-for='langauge in languagesResult | filterBy searchLanguge'>
 																	<a href="javascript:;" class="jellybean-result-link" v-html='langauge.show | capitalize' @click='addInLanguageList(langauge.origin)'></a>
 																</li>
 																<li v-if='promptMessage'>
-																	<span class='jellybean-result-link' >
-																		没有数据啊，擦
-																	</span>
+																	<a href='javascript:;' class='jellybean-result-link' style='text-align: center;'>
+																		没有数据,换个词搜索试试？
+																	</a>
 																</li>
-																
 															</ul>
 														</span>
 													</li>

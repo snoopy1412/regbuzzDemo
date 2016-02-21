@@ -45,8 +45,8 @@ require.config({
   }
 });
 
-require(['jquery','bootstrap','index','header','dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help','project-list','top-up','wysiwyg-handle'], function($) {
-
+require(['jquery','bootstrap','index','header','dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help','project-list','top-up','wysiwyg-handle','../static/vue-build'], function($) {
+  
   $('[data-toggle="tooltip"]').tooltip();
 
 });

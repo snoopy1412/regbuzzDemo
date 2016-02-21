@@ -41,31 +41,25 @@
 										<div class="col-md-9" style='position: relative'>
 										<div class="row row--no-padding">
 										  <div class="col-md-6">
-										   <select class='form-control pub-category-select js-dropdown-toggle' id='select-category'  v-model='selected'>
-													<option v-for='list in lists' v-bind:value='list.text'>{{list.text}}</option>
+										   <select class='form-control pub-category-select js-dropdown-toggle' id='select-category' v-model='selected'>
+													<option v-for='list in lists' v-bind:value='list.text' v-text='list.text'></option>
 											</select>
 											
 										  </div>
 										  <div class="col-md-6">
 										   <select class='form-control pub-category-select'>
-												<option v-for='sy in selection' v-bind:value='sy.text'>{{sy.text}}</option>
+												<option v-for='sy in selection' v-bind:value='sy.text' v-text='sy.text'></option>
 											</select>
 										  </div>
 										</div>
-											<div class="m-oFormHelp js-dropdown-menu">
-												<div class="dropdown-body">
-													<h4 class='m-oFormHelp-title'>First things first</h4>
-													<p class='m-oFormHelp-bref'>Choose the category and sub-category that best ﬁts your job.</p>
-												</div>
-											</div>
 										</div>							
 									</div>
 
 									<div class="form-group">
 										<label for="job-name" class='col-md-3'>Describe your question</label>
 										<div class="col-md-9 dropdown-default">
-											<input type="text" name="" value="" placeholder="" class='form-control js-dropdown-toggle' id='job-name'>
-											<div class="m-oFormHelp js-dropdown-menu">
+											<input type="text" name="" value="" placeholder="" class='form-control' id='job-name' data-toggle="dropdown">
+											<div class="m-oFormHelp dropdown-menu">
 												<div class="dropdown-body">
 													<h4 class='m-oFormHelp-title'>What's in a name?</h4>
 													<p class='m-oFormHelp-bref'>A lot, actually. A concise, yet specific job name will help attract qualified applicants. For instance:</p>
@@ -81,7 +75,15 @@
 									<div class="form-group">
 										<label for="pub-profile-txt" class='col-md-3'>Supplementary (optional)</label>
 										<div class="col-md-9">
-											<textarea name="" value="" class='form-control'  rows="5" id='pub-profile-txt'></textarea>
+											<textarea name="" value="" class='form-control'  rows="5" id='pub-profile-txt' data-toggle="dropdown"></textarea>
+											<!-- prompt -->
+											<div class="m-oFormHelp dropdown-menu">
+												<div class="dropdown-body">
+													<h4 class='m-oFormHelp-title'>What's in a Job Description?</h4>
+													<p class='m-oFormHelp-bref'>添加提示信息</p>
+												</div>
+											</div>
+											<!-- prompt end -->
 										</div>
 									</div>		
 									
