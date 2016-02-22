@@ -54,11 +54,16 @@
 	
 	var _WordCount2 = _interopRequireDefault(_WordCount);
 	
+	var _jellybean = __webpack_require__(11);
+	
+	var _jellybean2 = _interopRequireDefault(_jellybean);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var VueComponent = {
 		linkage: _Linkage2.default,
-		wordcount: _WordCount2.default
+		wordcount: _WordCount2.default,
+		jellybean: _jellybean2.default
 	};
 	
 	window.VueComponent = VueComponent;
@@ -510,7 +515,7 @@
 	});
 	// <template>
 	// 	<div class='words-count'>
-	// 		<textarea class='form-control words-input' rows="5" v-model='inputText'></textarea>
+	// 		<textarea class='form-control words-input' :rows="rowsNum" v-model='inputText'></textarea>
 	// 		<div class='words-count-area'>
 	// 			<span class='current-words' :class="{'overmax':isOverMax}" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>
 	// 		</div>
@@ -525,8 +530,14 @@
 				default: 20
 			},
 			inputText: {
+				type: String,
 				default: ''
+			},
+			rowsNum: {
+				type: Number,
+				default: 5
 			}
+	
 		},
 		data: function data() {
 			return {
@@ -577,7 +588,192 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class='words-count'>\n\t<textarea class='form-control words-input' rows=\"5\" v-model='inputText'></textarea>\n\t<div class='words-count-area'>\n\t\t<span class='current-words' :class=\"{'overmax':isOverMax}\" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>\n\t</div>\n</div>\n";
+	module.exports = "\n<div class='words-count'>\n\t<textarea class='form-control words-input' :rows=\"rowsNum\" v-model='inputText'></textarea>\n\t<div class='words-count-area'>\n\t\t<span class='current-words' :class=\"{'overmax':isOverMax}\" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(12)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] components\\src\\jellybean.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(13)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "e:\\regbuzzDemo\\components\\src\\jellybean.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	// <template>
+	// 	<div class="jellybean" :class="{'error':isError}">
+	// 		<ul class='jellybean-container clearfix'>
+	// 			<li class="jellybean-container-item" v-for='item in jellybeanList' track-by="$index">
+	// 				<span class="jellybean-suggest-show">
+	// 					<span class="value" v-text='item'></span>
+	// 					<button type="button" class="remove" @click='remove($index)'>×</button>
+	// 				</span>
+	// 			</li>
+	// 			<li class="jellybean-container-item">
+	// 				<span class="jellybean-suggest-input">
+	// 					<input type="text" class="jellybean-input" :placeholder="placeholder" v-model='searchText' @keyup='search | debounce 500'>
+	// 					<ul class='jellybean-result' :class="{'show':isShow}">
+	// 						<li v-for='item in searchResult | filterBy searchText'>
+	// 							<a href="javascript:;" class="jellybean-result-link" v-html='item.show | capitalize' @click='addInjellybeanList(item.origin)'></a>
+	// 						</li>
+	// 						<li v-if='promptMessage'>
+	// 							<a href='javascript:;' class='jellybean-result-link text-center' v-text='msgCustom'>
+	// 							</a>
+	// 						</li>
+	// 					</ul>
+	// 				</span>
+	// 			</li>
+	// 		</ul>
+	// 	</div>
+	// </template>
+	//
+	// <script>
+	exports.default = {
+		props: {
+			jellybeanData: {
+				type: Array,
+				require: true
+			},
+			jellybeanMax: {
+				type: Number
+			},
+			placeholder: {
+				type: String
+			},
+			msgCustom: {
+				type: String
+			}
+		},
+		data: function data() {
+			return {
+				// 数据提示
+				searchText: '',
+				searchResult: [],
+				jellybeanList: [],
+				isShow: false,
+				promptMessage: false,
+				isError: false
+			};
+		},
+	
+		ready: function ready() {
+			console.log(this.msgCustom);
+			var self = this;
+	
+			// 标准浏览器		 
+			window.addEventListener('click', function (event) {
+				if (self.isShow) {
+					self.isShow = false;
+					self.searchText = '';
+				}
+			}, false);
+		},
+		methods: {
+	
+			// 数据提示 也可引入ajax
+			search: function search() {
+	
+				var size = this.jellybeanList.length;
+	
+				if (this.jellybeanMax) {
+	
+					if (size >= this.jellybeanMax) {
+						if (this.searchText.trim() !== '') {
+							this.isError = true;
+						} else {
+							this.isError = false;
+						}
+						return false;
+					} else {
+						this.isError = false;
+					}
+				}
+	
+				this.searchResult = [];
+	
+				var self = this,
+				    text = this.searchText.trim().toLowerCase();
+	
+				if (text) {
+					this.isShow = true;
+					this.jellybeanData.forEach(function (element, index) {
+						var str = element.toLowerCase();
+	
+						if (str.indexOf(text) !== -1) {
+							var newStr = str.replace(new RegExp('(' + text + ')', 'gi'), '<strong>$1</strong>');
+							self.searchResult.push({
+								origin: element,
+								show: newStr
+							});
+						}
+					});
+					this.promptMessage = this.searchResult.length > 0 ? false : true;
+				} else {
+					this.isShow = false;
+				}
+			},
+			addInjellybeanList: function addInjellybeanList(data) {
+				var size = this.jellybeanList.length;
+	
+				if (this.jellybeanMax) {
+					if (size == this.jellybeanMax) {
+						return false;
+					}
+				}
+	
+				this.jellybeanList.push(data);
+				this.searchText = '';
+				this.isShow = false;
+			},
+			remove: function remove(index) {
+				this.jellybeanList.splice(index, 1);
+				this.searchText = '';
+				var size = this.jellybeanList.length;
+	
+				if (this.jellybeanMax) {
+					if (size <= this.jellybeanMax) {
+						this.isError = false;
+					}
+				}
+			}
+		}
+	};
+	// </script>
+
+	/* generated by vue-loader */
+
+/***/ },
+/* 13 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"jellybean\" :class=\"{'error':isError}\">\n\t<ul class='jellybean-container clearfix'>\n\t\t<li class=\"jellybean-container-item\" v-for='item in jellybeanList' track-by=\"$index\">\n\t\t\t<span class=\"jellybean-suggest-show\">\n\t\t\t\t<span class=\"value\" v-text='item'></span>\n\t\t\t\t<button type=\"button\" class=\"remove\" @click='remove($index)'>×</button>\n\t\t\t</span>\n\t\t</li>\n\t\t<li class=\"jellybean-container-item\">\n\t\t\t<span class=\"jellybean-suggest-input\">\n\t\t\t\t<input type=\"text\" class=\"jellybean-input\" :placeholder=\"placeholder\" v-model='searchText' @keyup='search | debounce 500'>\n\t\t\t\t<ul class='jellybean-result' :class=\"{'show':isShow}\">\n\t\t\t\t\t<li v-for='item in searchResult | filterBy searchText'>\n\t\t\t\t\t\t<a href=\"javascript:;\" class=\"jellybean-result-link\" v-html='item.show | capitalize' @click='addInjellybeanList(item.origin)'></a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li v-if='promptMessage'>\n\t\t\t\t\t\t<a href='javascript:;' class='jellybean-result-link text-center' v-text='msgCustom'>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</span>\n\t\t</li>\n\t</ul>\n</div>\n";
 
 /***/ }
 /******/ ]);

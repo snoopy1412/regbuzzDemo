@@ -93,7 +93,7 @@
     background-color: #fff;
     @include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1), 0 0 8px 0 rgba(0,0,0,0.2));
 }
-.jellybean .jellybean-result a
+.jellybean .jellybean-result-link
 {
     line-height: 1.5em;
     line-height: 100%;
@@ -104,12 +104,11 @@
     color:#666;
     text-align: left;
     text-decoration: none;
-}
-.jellybean .jellybean-result a:hover
-{
-    background-color: #f1f1f1;
-}
 
+    &:hover{
+        background-color: #f1f1f1;
+    }
+}
 .jellybean .jellybean-input
 {
     height: 26px;

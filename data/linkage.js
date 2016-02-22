@@ -3,7 +3,7 @@ var linkageData = [
 		firstData: 'Please select...',
 		secondData: [
 			{
-				text: 'Please select...'
+				text : 'Please select...'
 			}
 		]
 	}, 
@@ -11,16 +11,16 @@ var linkageData = [
 		firstData: 'Chemicals',
 		secondData: [
 			{
-				text: 'SDS/MSDS and labelling'
+				text : 'SDS/MSDS and labelling'
 			}, 
 			{
-				text: 'Chemical Notification'
+				text : 'Chemical Notification'
 			}, 
 			{
-				text: 'Chemical Registration'
+				text : 'Chemical Registration'
 			}, 
 			{
-				text: 'Others'
+				text : 'Others'
 			}
 		]
 	}

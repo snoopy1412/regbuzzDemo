@@ -194,42 +194,9 @@
 									<div class="form-group">
 										<label class='col-md-3'>Special Language Requirement</label>
 										<div class="col-md-9">
-											<!-- <ul class='clearfix pub-language-result'>
-												<li>
-													<span class='label label-default'>Chinese</span>
-												</li>
-											</ul>
 											
-
-											<button type="button" class='btn btn-link' data-toggle="modal" data-target="#pub-add-language">+Add Language</button> -->
-
-
-
-											<div class="jellybean" :class="{'error':isError}">
-												<ul class='jellybean-container clearfix'>
-													<li class="jellybean-container-item" v-for='item in languagelist' track-by="$index">
-														<span class="jellybean-suggest-show">
-															<span class="value" v-text='item'></span>
-															<button type="button" class="remove" @click='remove($index)'>×</button>
-														</span>
-													</li>
-													<li class="jellybean-container-item">
-														<span class="jellybean-suggest-input">
-															<input type="text" class="jellybean-input" placeholder="输入语言(最多三个)" v-model='searchLanguge' @keyup='search | debounce 500'>
-															<ul class='jellybean-result' :class="{'show':isShow}">
-																<li v-for='langauge in languagesResult | filterBy searchLanguge'>
-																	<a href="javascript:;" class="jellybean-result-link" v-html='langauge.show | capitalize' @click='addInLanguageList(langauge.origin)'></a>
-																</li>
-																<li v-if='promptMessage'>
-																	<a href='javascript:;' class='jellybean-result-link' style='text-align: center;'>
-																		没有数据,换个词搜索试试？
-																	</a>
-																</li>
-															</ul>
-														</span>
-													</li>
-												</ul>
-											</div>
+											<!-- 加载jellybean组件，此组件来自于 components/Jellybean.vue -->
+											<jellybean :jellybean-data='languageData' :placeholder='placeholder' :jellybean-max=3 :msg-custom='msgCustom'></jellybean>
 										</div>
 									</div>
 									

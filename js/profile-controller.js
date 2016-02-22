@@ -1,7 +1,11 @@
-define(['Vue', '../data/countries.js', '../data/profile/country.js', '../data/profile/position.js', '../data/profile/summary.js', '../data/profile/price.js', '../data/profile/services.js', '../data/profile/skills.js', '../data/profile/experience.js', '../data/profile/language.js', '../data/profile/educations.js', '../data/profile/certificate.js', '../data/profile/publish.js'], function(Vue) {
+define(['Vue','VueComponent' ,'../data/countries.js', '../data/profile/country.js', '../data/profile/position.js', '../data/profile/summary.js', '../data/profile/price.js', '../data/profile/services.js', '../data/profile/skills.js', '../data/profile/experience.js', '../data/profile/language.js', '../data/profile/educations.js', '../data/profile/certificate.js', '../data/profile/publish.js'], function(Vue,VueComponent) {
+    var  wordcount = VueComponent.wordcount;
 
     var profileUserVm = new Vue({
         el: "#vue-profile-user",
+        components : {
+            wordcount : wordcount
+        },
         data: {
             loading : true,
             errorMsg : false,

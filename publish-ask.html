@@ -347,19 +347,9 @@
 									<div class="form-group">
 										<label for="select-category" class='col-md-3'>Choose a category</label>
 										<div class="col-md-9" style='position: relative'>
-										<div class="row row--no-padding">
-										  <div class="col-md-6">
-										   <select class='form-control pub-category-select js-dropdown-toggle' id='select-category' v-model='selected'>
-													<option v-for='list in lists' v-bind:value='list.text' v-text='list.text'></option>
-											</select>
 											
-										  </div>
-										  <div class="col-md-6">
-										   <select class='form-control pub-category-select'>
-												<option v-for='sy in selection' v-bind:value='sy.text' v-text='sy.text'></option>
-											</select>
-										  </div>
-										</div>
+											<!-- 加载二级联动，此组件来自于 components/Linkage.vue -->
+											<linkage v-bind:linkage-data='selectedData'></linkage>
 										</div>							
 									</div>
 
@@ -383,7 +373,13 @@
 									<div class="form-group">
 										<label for="pub-profile-txt" class='col-md-3'>Supplementary (optional)</label>
 										<div class="col-md-9">
-											<textarea name="" value="" class='form-control'  rows="5" id='pub-profile-txt' data-toggle="dropdown"></textarea>
+
+											<div data-toggle='dropdown'>
+
+												<!-- 加载数字计数组件，此组件来自于 components/WordCount.vue -->
+												<wordcount :total-count = 1000></wordcount>
+											</div>
+											
 											<!-- prompt -->
 											<div class="m-oFormHelp dropdown-menu">
 												<div class="dropdown-body">

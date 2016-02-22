@@ -402,7 +402,9 @@
 						 			</div>						 			
 							 		<div class='text-right' v-show='!summaryData.hideOrigin' v-cloak>
 										<div class="form-group">
-											<textarea class='form-control' v-model='summaryData.result.summary' placeholder="input your summary" rows='10'></textarea>
+
+											<wordcount :total-count = 1000 :input-text.sync='summaryData.result.summary' :rows-num= 10></wordcount>
+											<!-- <textarea class='form-control' v-model='summaryData.result.summary' placeholder="input your summary" rows='10'></textarea> -->
 										</div>
 										<div class='form-group'>
 											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(summaryData)'>Save</a>
