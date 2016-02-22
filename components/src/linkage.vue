@@ -1,6 +1,7 @@
 <template>
 	<div class="row row--no-padding">
 		<div class="col-md-6">
+		{{ aaa }}
 			<select class='form-control' v-model='initSelect'>
 				<option v-for='linkage in linkageData' v-bind:value='linkage.firstData' v-text='linkage.firstData'></option>
 			</select>
@@ -22,47 +23,20 @@
 			},
 			linkageData : {
 				type : Array,
-				require : true
-
-				// 数据格式
-				// linkageData : [
-				// 	{
-				// 		firstData :'Please select...',
-				// 		secondData :[
-				// 			{
-				// 				text : 'Please select...'
-				// 			}
-				// 		]
-				// 	},
-				// 	{
-				// 		firstData:'Chemicals',
-				// 		secondData:[
-				// 			{
-				// 				text : 'SDS/MSDS and labelling'
-				// 			},
-				// 			{
-				// 				text : 'Chemical Notification'
-				// 			},
-				// 			{
-				// 				text : 'Chemical Registration'
-				// 			},
-				// 			{
-				// 				text : 'Others'
-				// 			}
-				// 		]
-				// 	}
-				// ],				
+				require : true		
 			}
 		},
 		computed : {
 
 			// 两级联动
 			selection() {
-				for (var i = 0; i < this.linkageData.length; i++) {
-	                if (this.linkageData[i].firstData === this.initSelect) {
-	                    return this.linkageData[i].secondData;
-	                }
-            	}
+				if(this.linkageData.length){
+					for (var i = 0; i < this.linkageData.length; i++) {
+		                if (this.linkageData[i].firstData === this.initSelect) {
+		                    return this.linkageData[i].secondData;
+		                }
+	            	}
+				}				
 			}
 		}
 	}

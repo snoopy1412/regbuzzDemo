@@ -7024,23 +7024,6 @@ ul {
 .score-stars {
   color: #fa8911; }
 
-.words-count {
-  position: relative; }
-  .words-count .word-input {
-    left: 0;
-    top: 0; }
-  .words-count .words-count-area {
-    position: absolute;
-    z-index: 100;
-    right: 20px;
-    bottom: 10px;
-    color: #808080;
-    color: rgba(128, 128, 128, 0.8);
-    font-style: italic;
-    font-weight: 600; }
-  .words-count .current-words.overmax {
-    color: rgba(219, 40, 40, 0.8); }
-
 .container-fluid--4 {
   padding-left: 60px;
   padding-right: 60px; }

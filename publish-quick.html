@@ -347,19 +347,9 @@
 									<div class="form-group">
 										<label for="select-category" class='col-md-3'>Choose a category</label>
 										<div class="col-md-9">
-											<!-- <div class="row row--no-padding">
-											  <div class="col-md-6">
-											   <select class='form-control pub-category-select' id='select-category' v-model='selected'>
-													<option v-for='list in lists' v-bind:value='list.text' v-text='list.text'></option>
-												</select>
-											  </div>
-											  <div class="col-md-6">
-											   <select class='form-control pub-category-select'>
-													<option v-for='sy in selection' v-bind:value='sy.text' v-text='sy.text'></option>
-												</select>
-											  </div>
-											</div> -->
-											<linkage :linkageData='selectedData'></linkage>
+
+											<!-- 加载二级联动，此组件来自于 components/Linkage.vue -->
+											<linkage v-bind:linkage-data='selectedData'></linkage>
 
 										</div>							
 									</div>
@@ -404,14 +394,12 @@
 									<div class="form-group">
 										<label for="pub-profile-txt" class='col-md-3'>Job Description</label>
 										<div class="col-md-9">
-											<div class='words-count ' data-toggle="dropdown">
-												<textarea name="" class='form-control words-input' rows="5" id='pub-profile-txt' v-model='textareaCount'></textarea>
+											<div data-toggle='dropdown'>
 
-												<div class='words-count-area'>
-													<span class='current-words' :class="{'overmax':isOvermax}" v-text='currentWords'></span> / <span class='total-words' v-text='totalWords'></span>
-												</div>
-
+												<!-- 加载数字计数组件，此组件来自于 components/WordCount.vue -->
+												<wordcount :total-count = 1000></wordcount>
 											</div>
+											
 											<!-- prompt -->
 											<div class="m-oFormHelp dropdown-menu">
 												<div class="dropdown-body">
@@ -550,36 +538,6 @@
 													</li>
 												</ul>
 											</div>
-
-											<!-- Modal -->
-											<!-- <div class="modal fade" id="pub-add-language">
-										<div class="modal-dialog" role="document">
-											<div class="modal-content">
-												<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-											<h4 class="modal-title" id="myModalLabel">Select your langauge</h4>
-												</div>
-											<div class="modal-body">
-												<ul class='pub-language-list'> 
-													<li v-for='language in languagesData'>
-														<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
-														<input type="checkbox" id='{{language.abbr}}' v-model="languageNames" value='{{language.en}}'>
-															<span class="c-indicator"></span>
-															{{language.local}}
-														</label>
-													</li>
-												</ul>
-												<div class="divider divider-horizontal">or</div>
-												<input type="text" name="" value="" placeholder="自定义输入" class='form-control'>
-											</div>
-											<div class="modal-footer">
-											<button type="button" class="btn btn-primary" data-dismiss="modal" @click='addLanguage'>Save</button>
-											<button type="button" class="btn btn-secondary" data-dismiss="modal" @click='cancelLanguage'>Close</button>
-											</div>
-											</div>
-										</div>
-											</div> -->
-											
 										</div>
 									</div>
 									

@@ -1,40 +1,22 @@
-define(['Vue','../data/languages.js','../data/linkage.js'],function(Vue){
+define(['Vue','VueComponent','../data/languages.js','../data/linkage.js',],function(Vue,VueComponent){
+	
+	var linkage = VueComponent.linkage,
+		wordcount = VueComponent.wordcount;
 
 	// 项目发布
 	var pubVm = new Vue({
 		el:"#vue-pubController",
+		components : {
+				linkage : linkage,
+				wordcount : wordcount
+		},
 		data:{
-			// 两级联动
-			// selected:'Please select...',
+			// 
+			selectedData : [],
+
+			// 自定义价格
 			selectedBudget:'',
 			customBudget:false,
-			// lists:[
-			// 	{
-			// 		text:'Please select...',
-			// 		subset:[
-			// 			{
-			// 				text : 'Please select...'
-			// 			}
-			// 		]
-			// 	},
-			// 	{
-			// 		text:'Chemicals',
-			// 		subset:[
-			// 			{
-			// 				text : 'SDS/MSDS and labelling'
-			// 			},
-			// 			{
-			// 				text : 'Chemical Notification'
-			// 			},
-			// 			{
-			// 				text : 'Chemical Registration'
-			// 			},
-			// 			{
-			// 				text : 'Others'
-			// 			}
-			// 		]
-			// 	}
-			// ],
 
 			// 输入数字
 			totalWords : 20,
@@ -54,15 +36,7 @@ define(['Vue','../data/languages.js','../data/linkage.js'],function(Vue){
 
 		computed : {
 
-			// 两级联动
-			selection : function(){
-				for (var i = 0; i < this.lists.length; i++) {
-	                if (this.lists[i].text === this.selected) {
-	                    return this.lists[i].subset;
-	                }
-            	}
-			},
-			customBudget:function(){
+			customBudget: function(){
 				if(this.selectedBudget === 'custom'){
 					return true
 				}else{
@@ -76,9 +50,7 @@ define(['Vue','../data/languages.js','../data/linkage.js'],function(Vue){
 			},
 			isOvermax : function(){
 				return this.currentWords > this.totalWords ? true : false;
-			},
-
-
+			}
 		},
 		ready: function(){
 			var self = this;			 
@@ -89,7 +61,6 @@ define(['Vue','../data/languages.js','../data/linkage.js'],function(Vue){
 			 	}
 			 },false);
 		},
-
 
 		created : function(){
 			this.selectedData = linkageData;

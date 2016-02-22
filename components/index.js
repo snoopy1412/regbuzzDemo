@@ -1,9 +1,10 @@
-var Vue = require('vue');
-var Linkage = require('../components/src/linkage.vue');
+import linkage from '../components/src/Linkage.vue';
+import wordcount from '../components/src/WordCount.vue';
 
-new Vue({
-	el:'body',
-	components : {
-		Linkage
-	}
-})
+const VueComponent = {
+	linkage : linkage,
+	wordcount : wordcount
+}
+
+window.VueComponent = VueComponent;
+
