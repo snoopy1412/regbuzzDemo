@@ -22,9 +22,7 @@
     }
 
 }
-.jellybean .show{
-    display: block;
-} 
+
 .jellybean .jellybean-container-item
 {
     float: left;
@@ -93,6 +91,21 @@
     background-color: #fff;
     @include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1), 0 0 8px 0 rgba(0,0,0,0.2));
 }
+
+
+@keyframes show {
+    0% {
+        transform : translateY(-10px);
+    } 
+    100% {
+       transform : translateY(0);
+    }
+}
+.jellybean .show{
+    animation:show 0.1s linear;
+    -webkit-animation:show 0.1s linear;
+    display: block;
+} 
 .jellybean .jellybean-result-link
 {
     line-height: 1.5em;

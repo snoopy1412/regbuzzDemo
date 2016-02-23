@@ -1,0 +1,119 @@
+.select2{
+	margin: 0;
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 100%;
+}
+.select2-choice {
+	cursor: pointer;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    background-clip: padding-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color:#444;
+    background-color: #fff;
+    margin: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    padding: 12px 18px;
+    i.fa{
+    	position: absolute;
+    	right: 15px;
+    	top:12px;
+    }
+}
+.select2-drop{
+	width: 300px;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 1010;
+    top: 100%;
+    background: #fff;
+    color: #000;
+    border-radius: 2px;
+}
+.select2-drop-hide{
+	display: none;
+	
+}
+
+.select2-drop-show{
+	display: block;
+	animation : select2-drop-show .2s;
+}
+@keyframes select2-drop-show {
+	0%{
+		will-change:transform,opacity;
+		-webkit-transform: translateY(-10px);
+		        transform: translateY(-10px);
+		opacity: 0;
+	}
+	100%{
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+		opacity: 1;
+	}
+}
+.select2-search{
+    display: inline-block;
+    width: 100%;
+    min-height: 26px;
+    margin: 0;
+    position: relative;
+    z-index: 1020;
+    white-space: nowrap;
+    &:before{
+    	content: "\f002";
+    	font-family: 'FontAwesome';
+	    position: absolute;
+    	top: 10px;
+    	left: 10px;
+   		color: #2185d0;
+    }
+    input{
+    	padding-left: 30px;
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+    	border: 1px solid #e0e0e0;
+    	border-radius: 2px 2px 0 0;
+    }
+}
+.select2-content{
+    max-height: 400px;
+    border: 1px solid #e0e0e0;
+    border-top: 0;
+    -moz-box-shadow: 0 8px 8px rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 8px 8px rgba(0,0,0,.15);
+    box-shadow: 0 8px 8px rgba(0,0,0,.15);
+    max-height: 200px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-tap-highlight-color: transparent;
+    border-bottom: 2px solid #e0e0e0;
+    li>a{
+    	display: block;
+    	padding: 8px 18px;
+    	border-left: 5px solid transparent;
+	    border-bottom:1px solid #e0e0e0;
+	    margin-bottom: 0;
+	    color:#444;
+	    &:hover{
+	    	border-left: 5px solid #2185d0;
+	    }
+    }
+}

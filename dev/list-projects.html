@@ -62,25 +62,25 @@
 						<div class="list-aside-item list-aside-item-language panel panel-default"  id='vue-list-languages'>
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Language</h4>
-								<ul class='checkbox-list'>							        
-									<li class="checkbox" v-for='language in languages | limitBy 5'>
-							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+								<ul class='checkbox-list' v-show='!isShowLanguages'>		
+									<li class="checkbox" v-for='language in languagesData | limitBy 5'  >
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
 										  <input type="checkbox" id='{{language.abbr}}'>
 										  <span class="c-indicator"></span>
-										 {{language.local}}
+										  <span v-text='language.en'></span>
 										</label>
 									</li>
 								</ul>
-								<button type="button" class='btn btn-link' data-toggle="collapse" href="#list-language-list" >More <i class="fa fa-angle-down"></i></button>
-								<ul id='list-language-list' class="collapse" >
-									<li class="checkbox" v-for='language in languages | | limitBy 19 5'>
-							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+								<ul class='checkbox-list' v-else>	
+									<li class="checkbox" v-for='language in languagesData' >
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
 										  <input type="checkbox" id='{{language.abbr}}'>
 										  <span class="c-indicator"></span>
-										 {{language.local}}
+										  <span v-text='language.en'></span>
 										</label>
 									</li>
 								</ul>
+								<a href="javascript:;" title="more" @click='toggleLanguageNum'><span v-text='toggleText'></span> <i class="fa" :class="{'fa-angle-down':isDown,'fa-angle-up':isUp}"></i></a>
 							</div>
 						</div>
 
@@ -88,12 +88,40 @@
 						<div class="list-aside-item list-aside-item-location panel panel-default">
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Location</h4>
-								<div class='form-group'>
+								<!-- <div class='form-group'>
 									<div class="input-group">
 										<input type="text" class='form-control'>
 										<span class='input-group-addon'><i class="fa fa-map-marker"></i></span>
 									</div>
-								</div>
+								</div> -->
+
+								<div class="select2" id='select2'>
+									<a href="javascript:;" title="select" class='select2-choice' @click.stop='select2IsHide = !select2IsHide'>
+										Any Location
+										<i class="fa" :class="{'fa-angle-down':select2IsHide,'fa-angle-up':!select2IsHide}"></i>
+									</a>
+									<div class='select2-drop' :class="{'select2-drop-hide':select2IsHide , 'select2-drop-show':!select2IsHide}" v-cloak>
+										<div class='select2-search'>
+											<input type="text" name="" value="" placeholder="" class='form-control' v-model='select2SearchText' @click.stop>
+										</div>
+										<ul class='select2-content'>
+											<li v-for='country in select2SearchResult' track-by="$index">
+												<a href="javascript:;" :title="country.text" v-html='country.text | highlight select2SearchText' @click='Add2Select2List(country.text)'>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<ul class='checkbox-list'>		
+										<li class="checkbox" v-for='item in select2List' v-cloak>
+								        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{item.text}}" for="{{item.short}}" @mouseup='remove2SelectList($index)'>
+											  <input type="checkbox" id='{{item.short}}' value='{{item.text}}' v-model='checkedNames'>
+											  <span class="c-indicator"></span>
+											  <span v-text='item.text'></span>
+											</label>
+										</li>
+									</ul>
+								</div>	
+								
 							</div>
 						</div>
 

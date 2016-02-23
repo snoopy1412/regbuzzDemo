@@ -119,6 +119,10 @@
 				}
 				
 				this.jellybeanList.push(data);
+
+				// ajax，需要考虑的是，如何处理data,再返回相应的值？ 
+				
+
 				this.searchText = '';
 				this.isShow = false;
 			},
