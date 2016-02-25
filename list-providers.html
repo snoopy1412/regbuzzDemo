@@ -324,7 +324,6 @@
 				  <li class="active">Find a Provider</li>
 				</ol>
 			</div>		
-
 		</div>
 		
 		<div class="container" id='vue-list'>	
@@ -383,9 +382,9 @@
 							<div class="panel-body ">
 								<h4 class='list-aside-item-title'>时薪</h4>
 								<div class='form-group' style='margin: 30px 5px'>
-									<input type="hidden" class="slider-input" value="100" />
+									<input type="hidden" class="slider-input" value="20,100" />
 								</div>
-								<div class='price text-center'>$<span class='budget-min'>0</span> - $<span class='budget-max'>100</span> </div>
+								<div class='price text-center'>$<span class='budget-min'>20</span> - $<span class='budget-max'>100</span> </div>
 								
 							</div>
 						</div>
@@ -420,7 +419,7 @@
 										</label>
 									</li>
 								</ul>
-								<a href="javascript:;" title="more" @click='toggleLanguageNum'><span v-text='toggleText'></span> <i class="fa" :class="{'fa-angle-down':isDown,'fa-angle-up':isUp}"></i></a>
+								<a href="javascript:;" title="more" @click='toggleLanguageNum'><span v-text='toggleText'></span> <i class="fa" :class="{'fa-angle-down':!isShowLanguages,'fa-angle-up':isShowLanguages}"></i></a>
 							</div>
 						</div>
 
