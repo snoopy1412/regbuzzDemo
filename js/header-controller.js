@@ -22,16 +22,6 @@ define(['Vue'],function(Vue){
 				text : 'Providers',
 				class:'fa-user',
 				placeholder:'Search for providers...'
-			},
-			{
-				text : 'Questions',
-				class:'fa-question-circle',
-				placeholder:'Search for questions...'
-			},
-			{
-				text : 'Articles',
-				class:'fa-book',
-				placeholder:'Search for articles...'
 			}
 		]
 	},
