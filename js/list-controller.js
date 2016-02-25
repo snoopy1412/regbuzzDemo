@@ -31,8 +31,7 @@ define(['Vue','VueComponent','../data/countries.js', '../data/languages.js','../
         originData : []
     },
     components : {
-       select2 : select2,
-       linkage : linkage
+       select2 : select2
     },
     created : function(){
         this.originData = countriesData;
