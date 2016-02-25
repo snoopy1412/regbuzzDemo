@@ -1,7 +1,6 @@
 <template>
 	<div class="row row--no-padding">
 		<div class="col-md-6">
-		{{ aaa }}
 			<select class='form-control' v-model='initSelect'>
 				<option v-for='linkage in linkageData' v-bind:value='linkage.firstData' v-text='linkage.firstData'></option>
 			</select>

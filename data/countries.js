@@ -1,1011 +1,761 @@
 var countriesData = [
 {
 	text: 'Australia',
-	short: 'au',
-	show: false
+	short: 'au'
 }, 
  {
 	text: 'Canada',
-	short: 'ca',
-	show: false
+	short: 'ca'
 },
  {
 	text: 'China',
-	short: 'cn',
-	show: false
+	short: 'cn'
 }, 
  {
 	text: 'France',
-	short: 'fr',
-	show: false
+	short: 'fr'
 }, 
  {
 	text: 'Germany',
-	short: 'de',
-	show: false
+	short: 'de'
 }, 
  {
 	text: 'Italy',
-	short: 'it',
-	show: false
+	short: 'it'
 }, 
  {
 	text: 'Japan',
-	short: 'jp',
-	show: false
+	short: 'jp'
 }, 
  {
 	text: 'Korea',
-	short: 'kr',
-	show: false
+	short: 'kr'
 }, 
  {
 	text: 'United Kingdom',
-	short: 'gb',
-	show: false
+	short: 'gb'
 }, 
 {
 	text: 'United States',
-	short: 'us',
-	show: false
+	short: 'us'
 }, {
 	text: 'Afghanistan',
-	short: 'af',
-	show: false
+	short: 'af'
 }, {
 	text: 'Aland Islands',
-	short: 'ax',
-	show: false
+	short: 'ax'
 }, {
 	text: 'Albania',
-	short: 'al',
-	show: false
+	short: 'al'
 }, {
 	text: 'Algeria',
-	short: 'dz',
-	show: false
+	short: 'dz'
 }, {
 	text: 'American Samoa',
-	short: 'as',
-	show: false
+	short: 'as'
 }, {
 	text: 'Andorra',
-	short: 'ad',
-	show: false
+	short: 'ad'
 }, {
 	text: 'Angola',
-	short: 'ao',
-	show: false
+	short: 'ao'
 }, {
 	text: 'Anguilla',
-	short: 'ai',
-	show: false
+	short: 'ai'
 }, {
 	text: 'Antarctica',
-	short: 'aq',
-	show: false
+	short: 'aq'
 }, {
 	text: 'Antigua and Barbuda',
-	short: 'ag',
-	show: false
+	short: 'ag'
 }, {
 	text: 'Argentina',
-	short: 'ar',
-	show: false
+	short: 'ar'
 }, {
 	text: 'Armenia',
-	short: 'am',
-	show: false
+	short: 'am'
 }, {
 	text: 'Aruba',
-	short: 'aw',
-	show: false
+	short: 'aw'
 }, {
 	text: 'Austria',
-	short: 'at',
-	show: false
+	short: 'at'
 }, {
 	text: 'Azerbaijan',
-	short: 'az',
-	show: false
+	short: 'az'
 }, {
 	text: 'Bahamas',
-	short: 'bs',
-	show: false
+	short: 'bs'
 }, {
 	text: 'Bahrain',
-	short: 'bh',
-	show: false
+	short: 'bh'
 }, {
 	text: 'Bangladesh',
-	short: 'bd',
-	show: false
+	short: 'bd'
 }, {
 	text: 'Barbados',
-	short: 'bb',
-	show: false
+	short: 'bb'
 }, {
 	text: 'Belarus',
-	short: 'by',
-	show: false
+	short: 'by'
 }, {
 	text: 'Belgium',
-	short: 'be',
-	show: false
+	short: 'be'
 }, {
 	text: 'Belize',
-	short: 'bz',
-	show: false
+	short: 'bz'
 }, {
 	text: 'Benin',
-	short: 'bj',
-	show: false
+	short: 'bj'
 }, {
 	text: 'Bermuda',
-	short: 'bm',
-	show: false
+	short: 'bm'
 }, {
 	text: 'Bhutan',
-	short: 'bt',
-	show: false
+	short: 'bt'
 }, {
 	text: 'Bolivia',
-	short: 'bo',
-	show: false
+	short: 'bo'
 }, {
 	text: 'Bosnia and Herzegovina',
-	short: 'ba',
-	show: false
+	short: 'ba'
 }, {
 	text: 'Botswana',
-	short: 'bw',
-	show: false
+	short: 'bw'
 }, {
 	text: 'Bouvet Island',
-	short: 'bv',
-	show: false
+	short: 'bv'
 }, {
 	text: 'Brazil',
-	short: 'br',
-	show: false
+	short: 'br'
 }, {
 	text: 'British Indian Ocean Territory',
-	short: 'io',
-	show: false
+	short: 'io'
 }, {
 	text: 'Brunei Darussalam',
-	short: 'bn',
-	show: false
+	short: 'bn'
 }, {
 	text: 'Bulgaria',
-	short: 'bg',
-	show: false
+	short: 'bg'
 }, {
 	text: 'Burkina Faso',
-	short: 'bf',
-	show: false
+	short: 'bf'
 }, {
 	text: 'Burundi',
-	short: 'bi',
-	show: false
+	short: 'bi'
 }, {
 	text: 'Cambodia',
-	short: 'kh',
-	show: false
+	short: 'kh'
 }, {
 	text: 'Cameroon',
-	short: 'cm',
-	show: false
+	short: 'cm'
 }, {
 	text: 'Cape Verde',
-	short: 'cv',
-	show: false
+	short: 'cv'
 }, {
 	text: 'Caribbean Nations',
-	short: 'cb',
-	show: false
+	short: 'cb'
 }, {
 	text: 'Cayman Islands',
-	short: 'ky',
-	show: false
+	short: 'ky'
 }, {
 	text: 'Central African Republic',
-	short: 'cf',
-	show: false
+	short: 'cf'
 }, {
 	text: 'Chad',
-	short: 'td',
-	show: false
+	short: 'td'
 }, {
 	text: 'Chile',
-	short: 'cl',
-	show: false
+	short: 'cl'
 },{
 	text: 'Christmas Island',
-	short: 'cx',
-	show: false
+	short: 'cx'
 }, {
 	text: 'Cocos (Keeling) Islands',
-	short: 'cc',
-	show: false
+	short: 'cc'
 }, {
 	text: 'Colombia',
-	short: 'co',
-	show: false
+	short: 'co'
 }, {
 	text: 'Comoros',
-	short: 'km',
-	show: false
+	short: 'km'
 }, {
 	text: 'Congo',
-	short: 'cg',
-	show: false
+	short: 'cg'
 }, {
 	text: 'Cook Islands',
-	short: 'ck',
-	show: false
+	short: 'ck'
 }, {
 	text: 'Costa Rica',
-	short: 'cr',
-	show: false
+	short: 'cr'
 }, {
 	text: 'Cote D\' Ivoire(Ivory Coast)',
-	short: 'ci',
-	show: false
+	short: 'ci'
 }, {
 	text: 'Croatia',
-	short: 'hr',
-	show: false
+	short: 'hr'
 }, {
 	text: 'Cuba',
-	short: 'cu',
-	show: false
+	short: 'cu'
 }, {
 	text: 'Cyprus',
-	short: 'cy',
-	show: false
+	short: 'cy'
 }, {
 	text: 'Czech Republic',
-	short: 'cz',
-	show: false
+	short: 'cz'
 }, {
 	text: 'Democratic Republic of the Congo',
-	short: 'cd',
-	show: false
+	short: 'cd'
 }, {
 	text: 'Denmark',
-	short: 'dk',
-	show: false
+	short: 'dk'
 }, {
 	text: 'Djibouti',
-	short: 'dj',
-	show: false
+	short: 'dj'
 }, {
 	text: 'Dominica',
-	short: 'dm',
-	show: false
+	short: 'dm'
 }, {
 	text: 'Dominican Republic',
-	short: 'do',
-	show: false
+	short: 'do'
 }, {
 	text: 'East Timor',
-	short: 'tp',
-	show: false
+	short: 'tp'
 }, {
 	text: 'Ecuador',
-	short: 'ec',
-	show: false
+	short: 'ec'
 }, {
 	text: 'Egypt',
-	short: 'eg',
-	show: false
+	short: 'eg'
 }, {
 	text: 'El Salvador',
-	short: 'sv',
-	show: false
+	short: 'sv'
 }, {
 	text: 'Equatorial Guinea',
-	short: 'gq',
-	show: false
+	short: 'gq'
 }, {
 	text: 'Eritrea',
-	short: 'er',
-	show: false
+	short: 'er'
 }, {
 	text: 'Estonia',
-	short: 'ee',
-	show: false
+	short: 'ee'
 }, {
 	text: 'Ethiopia',
-	short: 'et',
-	show: false
+	short: 'et'
 }, {
 	text: 'Falkland Islands (Malvinas)',
-	short: 'fk',
-	show: false
+	short: 'fk'
 }, {
 	text: 'Faroe Islands',
-	short: 'fo',
-	show: false
+	short: 'fo'
 }, {
 	text: 'Federated States of Micronesia',
-	short: 'fm',
-	show: false
+	short: 'fm'
 }, {
 	text: 'Fiji',
-	short: 'fj',
-	show: false
+	short: 'fj'
 }, {
 	text: 'Finland',
-	short: 'fi',
-	show: false
+	short: 'fi'
 },{
 	text: 'French Guiana',
-	short: 'gf',
-	show: false
+	short: 'gf'
 }, {
 	text: 'French Polynesia',
-	short: 'pf',
-	show: false
+	short: 'pf'
 }, {
 	text: 'French Southern Territories',
-	short: 'tf',
-	show: false
+	short: 'tf'
 }, {
 	text: 'Gabon',
-	short: 'ga',
-	show: false
+	short: 'ga'
 }, {
 	text: 'Gambia',
-	short: 'gm',
-	show: false
+	short: 'gm'
 }, {
 	text: 'Georgia',
-	short: 'ge',
-	show: false
+	short: 'ge'
 },{
 	text: 'Ghana',
-	short: 'gh',
-	show: false
+	short: 'gh'
 }, {
 	text: 'Gibraltar',
-	short: 'gi',
-	show: false
+	short: 'gi'
 }, {
 	text: 'Greece',
-	short: 'gr',
-	show: false
+	short: 'gr'
 }, {
 	text: 'Greenland',
-	short: 'gl',
-	show: false
+	short: 'gl'
 }, {
 	text: 'Grenada',
-	short: 'gd',
-	show: false
+	short: 'gd'
 }, {
 	text: 'Guadeloupe',
-	short: 'gp',
-	show: false
+	short: 'gp'
 }, {
 	text: 'Guam',
-	short: 'gu',
-	show: false
+	short: 'gu'
 }, {
 	text: 'Guatemala',
-	short: 'gt',
-	show: false
+	short: 'gt'
 }, {
 	text: 'Guernsey',
-	short: 'gg',
-	show: false
+	short: 'gg'
 }, {
 	text: 'Guinea',
-	short: 'gn',
-	show: false
+	short: 'gn'
 }, {
 	text: 'Guinea-Bissau',
-	short: 'gw',
-	show: false
+	short: 'gw'
 }, {
 	text: 'Guyana',
-	short: 'gy',
-	show: false
+	short: 'gy'
 }, {
 	text: 'Haiti',
-	short: 'ht',
-	show: false
+	short: 'ht'
 }, {
 	text: 'Heard Island and McDonald Islands',
-	short: 'hm',
-	show: false
+	short: 'hm'
 }, {
 	text: 'Honduras',
-	short: 'hn',
-	show: false
+	short: 'hn'
 }, {
 	text: 'Hong Kong',
-	short: 'hk',
-	show: false
+	short: 'hk'
 }, {
 	text: 'Hungary',
-	short: 'hu',
-	show: false
+	short: 'hu'
 }, {
 	text: 'Iceland',
-	short: 'is',
-	show: false
+	short: 'is'
 }, {
 	text: 'India',
-	short: 'in',
-	show: false
+	short: 'in'
 }, {
 	text: 'Indonesia',
-	short: 'id',
-	show: false
+	short: 'id'
 }, {
 	text: 'Iran',
-	short: 'ir',
-	show: false
+	short: 'ir'
 }, {
 	text: 'Iraq',
-	short: 'iq',
-	show: false
+	short: 'iq'
 }, {
 	text: 'Ireland',
-	short: 'ie',
-	show: false
+	short: 'ie'
 }, {
 	text: 'Isle of Man',
-	short: 'im',
-	show: false
+	short: 'im'
 }, {
 	text: 'Israel',
-	short: 'il',
-	show: false
+	short: 'il'
 },{
 	text: 'Jamaica',
-	short: 'jm',
-	show: false
+	short: 'jm'
 },{
 	text: 'Jersey',
-	short: 'je',
-	show: false
+	short: 'je'
 }, {
 	text: 'Jordan',
-	short: 'jo',
-	show: false
+	short: 'jo'
 }, {
 	text: 'Kazakhstan',
-	short: 'kz',
-	show: false
+	short: 'kz'
 }, {
 	text: 'Kenya',
-	short: 'ke',
-	show: false
+	short: 'ke'
 }, {
 	text: 'Kiribati',
-	short: 'ki',
-	show: false
+	short: 'ki'
 },{
 	text: 'Korea (North)',
-	short: 'kp',
-	show: false
+	short: 'kp'
 }, {
 	text: 'Kosovo',
-	short: 'ko',
-	show: false
+	short: 'ko'
 }, {
 	text: 'Kuwait',
-	short: 'kw',
-	show: false
+	short: 'kw'
 }, {
 	text: 'Kyrgyzstan',
-	short: 'kg',
-	show: false
+	short: 'kg'
 }, {
 	text: 'Laos',
-	short: 'la',
-	show: false
+	short: 'la'
 }, {
 	text: 'Latvia',
-	short: 'lv',
-	show: false
+	short: 'lv'
 }, {
 	text: 'Lebanon',
-	short: 'lb',
-	show: false
+	short: 'lb'
 }, {
 	text: 'Lesotho',
-	short: 'ls',
-	show: false
+	short: 'ls'
 }, {
 	text: 'Liberia',
-	short: 'lr',
-	show: false
+	short: 'lr'
 }, {
 	text: 'Libya',
-	short: 'ly',
-	show: false
+	short: 'ly'
 }, {
 	text: 'Liechtenstein',
-	short: 'li',
-	show: false
+	short: 'li'
 }, {
 	text: 'Lithuania',
-	short: 'lt',
-	show: false
+	short: 'lt'
 }, {
 	text: 'Luxembourg',
-	short: 'lu',
-	show: false
+	short: 'lu'
 }, {
 	text: 'Macao',
-	short: 'mo',
-	show: false
+	short: 'mo'
 }, {
 	text: 'Macedonia',
-	short: 'mk',
-	show: false
+	short: 'mk'
 }, {
 	text: 'Madagascar',
-	short: 'mg',
-	show: false
+	short: 'mg'
 }, {
 	text: 'Malawi',
-	short: 'mw',
-	show: false
+	short: 'mw'
 }, {
 	text: 'Malaysia',
-	short: 'my',
-	show: false
+	short: 'my'
 }, {
 	text: 'Maldives',
-	short: 'mv',
-	show: false
+	short: 'mv'
 }, {
 	text: 'Mali',
-	short: 'ml',
-	show: false
+	short: 'ml'
 }, {
 	text: 'Malta',
-	short: 'mt',
-	show: false
+	short: 'mt'
 }, {
 	text: 'Marshall Islands',
-	short: 'mh',
-	show: false
+	short: 'mh'
 }, {
 	text: 'Martinique',
-	short: 'mq',
-	show: false
+	short: 'mq'
 }, {
 	text: 'Mauritania',
-	short: 'mr',
-	show: false
+	short: 'mr'
 }, {
 	text: 'Mauritius',
-	short: 'mu',
-	show: false
+	short: 'mu'
 }, {
 	text: 'Mayotte',
-	short: 'yt',
-	show: false
+	short: 'yt'
 }, {
 	text: 'Mexico',
-	short: 'mx',
-	show: false
+	short: 'mx'
 }, {
 	text: 'Moldova',
-	short: 'md',
-	show: false
+	short: 'md'
 }, {
 	text: 'Monaco',
-	short: 'mc',
-	show: false
+	short: 'mc'
 }, {
 	text: 'Mongolia',
-	short: 'mn',
-	show: false
+	short: 'mn'
 }, {
 	text: 'Montenegro',
-	short: 'me',
-	show: false
+	short: 'me'
 }, {
 	text: 'Montserrat',
-	short: 'ms',
-	show: false
+	short: 'ms'
 }, {
 	text: 'Morocco',
-	short: 'ma',
-	show: false
+	short: 'ma'
 }, {
 	text: 'Mozambique',
-	short: 'mz',
-	show: false
+	short: 'mz'
 }, {
 	text: 'Myanmar',
-	short: 'mm',
-	show: false
+	short: 'mm'
 }, {
 	text: 'Namibia',
-	short: 'na',
-	show: false
+	short: 'na'
 }, {
 	text: 'Nauru',
-	short: 'nr',
-	show: false
+	short: 'nr'
 }, {
 	text: 'Nepal',
-	short: 'np',
-	show: false
+	short: 'np'
 }, {
 	text: 'Netherlands',
-	short: 'nl',
-	show: false
+	short: 'nl'
 }, {
 	text: 'Netherlands Antilles',
-	short: 'an',
-	show: false
+	short: 'an'
 }, {
 	text: 'New Caledonia',
-	short: 'nc',
-	show: false
+	short: 'nc'
 }, {
 	text: 'New Zealand',
-	short: 'nz',
-	show: false
+	short: 'nz'
 }, {
 	text: 'Nicaragua',
-	short: 'ni',
-	show: false
+	short: 'ni'
 }, {
 	text: 'Niger',
-	short: 'ne',
-	show: false
+	short: 'ne'
 }, {
 	text: 'Nigeria',
-	short: 'ng',
-	show: false
+	short: 'ng'
 }, {
 	text: 'Niue',
-	short: 'nu',
-	show: false
+	short: 'nu'
 }, {
 	text: 'Norfolk Island',
-	short: 'nf',
-	show: false
+	short: 'nf'
 }, {
 	text: 'Northern Mariana Islands',
-	short: 'mp',
-	show: false
+	short: 'mp'
 }, {
 	text: 'Norway',
-	short: 'no',
-	show: false
+	short: 'no'
 }, {
 	text: 'Pakistan',
-	short: 'pk',
-	show: false
+	short: 'pk'
 }, {
 	text: 'Palau',
-	short: 'pw',
-	show: false
+	short: 'pw'
 }, {
 	text: 'Palestinian Territory',
-	short: 'ps',
-	show: false
+	short: 'ps'
 }, {
 	text: 'Panama',
-	short: 'pa',
-	show: false
+	short: 'pa'
 }, {
 	text: 'Papua New Guinea',
-	short: 'pg',
-	show: false
+	short: 'pg'
 }, {
 	text: 'Paraguay',
-	short: 'py',
-	show: false
+	short: 'py'
 }, {
 	text: 'Peru',
-	short: 'pe',
-	show: false
+	short: 'pe'
 }, {
 	text: 'Philippines',
-	short: 'ph',
-	show: false
+	short: 'ph'
 }, {
 	text: 'Pitcairn',
-	short: 'pn',
-	show: false
+	short: 'pn'
 }, {
 	text: 'Poland',
-	short: 'pl',
-	show: false
+	short: 'pl'
 }, {
 	text: 'Portugal',
-	short: 'pt',
-	show: false
+	short: 'pt'
 }, {
 	text: 'Puerto Rico',
-	short: 'pr',
-	show: false
+	short: 'pr'
 }, {
 	text: 'Qatar',
-	short: 'qa',
-	show: false
+	short: 'qa'
 }, {
 	text: 'Reunion',
-	short: 're',
-	show: false
+	short: 're'
 }, {
 	text: 'Romania',
-	short: 'ro',
-	show: false
+	short: 'ro'
 }, {
 	text: 'Russian Federation',
-	short: 'ru',
-	show: false
+	short: 'ru'
 }, {
 	text: 'Rwanda',
-	short: 'rw',
-	show: false
+	short: 'rw'
 }, {
 	text: 'S. Georgia and S. Sandwich Islands',
-	short: 'gs',
-	show: false
+	short: 'gs'
 }, {
 	text: 'Saint Helena',
-	short: 'sh',
-	show: false
+	short: 'sh'
 }, {
 	text: 'Saint Kitts and Nevis',
-	short: 'kn',
-	show: false
+	short: 'kn'
 }, {
 	text: 'Saint Lucia',
-	short: 'lc',
-	show: false
+	short: 'lc'
 }, {
 	text: 'Saint Pierre and Miquelon',
-	short: 'pm',
-	show: false
+	short: 'pm'
 }, {
 	text: 'Saint Vincent and the Grenadines',
-	short: 'vc',
-	show: false
+	short: 'vc'
 }, {
 	text: 'Samoa',
-	short: 'ws',
-	show: false
+	short: 'ws'
 }, {
 	text: 'San Marino',
-	short: 'sm',
-	show: false
+	short: 'sm'
 }, {
 	text: 'Sao Tome and Principe',
-	short: 'st',
-	show: false
+	short: 'st'
 }, {
 	text: 'Saudi Arabia',
-	short: 'sa',
-	show: false
+	short: 'sa'
 }, {
 	text: 'Senegal',
-	short: 'sn',
-	show: false
+	short: 'sn'
 }, {
 	text: 'Serbia',
-	short: 'rs',
-	show: false
+	short: 'rs'
 }, {
 	text: 'Serbia and Montenegro',
-	short: 'cs',
-	show: false
+	short: 'cs'
 }, {
 	text: 'Seychelles',
-	short: 'sc',
-	show: false
+	short: 'sc'
 }, {
 	text: 'Sierra Leone',
-	short: 'sl',
-	show: false
+	short: 'sl'
 }, {
 	text: 'Singapore',
-	short: 'sg',
-	show: false
+	short: 'sg'
 }, {
 	text: 'Slovak Republic',
-	short: 'sk',
-	show: false
+	short: 'sk'
 }, {
 	text: 'Slovenia',
-	short: 'si',
-	show: false
+	short: 'si'
 }, {
 	text: 'Solomon Islands',
-	short: 'sb',
-	show: false
+	short: 'sb'
 }, {
 	text: 'Somalia',
-	short: 'so',
-	show: false
+	short: 'so'
 }, {
 	text: 'South Africa',
-	short: 'za',
-	show: false
+	short: 'za'
 }, {
 	text: 'South Sudan',
-	short: 'ss',
-	show: false
+	short: 'ss'
 }, {
 	text: 'Spain',
-	short: 'es',
-	show: false
+	short: 'es'
 }, {
 	text: 'Sri Lanka',
-	short: 'lk',
-	show: false
+	short: 'lk'
 }, {
 	text: 'Sudan',
-	short: 'sd',
-	show: false
+	short: 'sd'
 }, {
 	text: 'Sultanate of Oman',
-	short: 'om',
-	show: false
+	short: 'om'
 }, {
 	text: 'Suriname',
-	short: 'sr',
-	show: false
+	short: 'sr'
 }, {
 	text: 'Svalbard and Jan Mayen',
-	short: 'sj',
-	show: false
+	short: 'sj'
 }, {
 	text: 'Swaziland',
-	short: 'sz',
-	show: false
+	short: 'sz'
 }, {
 	text: 'Sweden',
-	short: 'se',
-	show: false
+	short: 'se'
 }, {
 	text: 'Switzerland',
-	short: 'ch',
-	show: false
+	short: 'ch'
 }, {
 	text: 'Syria',
-	short: 'sy',
-	show: false
+	short: 'sy'
 }, {
 	text: 'Taiwan',
-	short: 'tw',
-	show: false
+	short: 'tw'
 }, {
 	text: 'Tajikistan',
-	short: 'tj',
-	show: false
+	short: 'tj'
 }, {
 	text: 'Tanzania',
-	short: 'tz',
-	show: false
+	short: 'tz'
 }, {
 	text: 'Thailand',
-	short: 'th',
-	show: false
+	short: 'th'
 }, {
 	text: 'Timor-Leste',
-	short: 'tl',
-	show: false
+	short: 'tl'
 }, {
 	text: 'Togo',
-	short: 'tg',
-	show: false
+	short: 'tg'
 }, {
 	text: 'Tokelau',
-	short: 'tk',
-	show: false
+	short: 'tk'
 }, {
 	text: 'Tonga',
-	short: 'to',
-	show: false
+	short: 'to'
 }, {
 	text: 'Trinidad and Tobago',
-	short: 'tt',
-	show: false
+	short: 'tt'
 }, {
 	text: 'Tunisia',
-	short: 'tn',
-	show: false
+	short: 'tn'
 }, {
 	text: 'Turkey',
-	short: 'tr',
-	show: false
+	short: 'tr'
 }, {
 	text: 'Turkmenistan',
-	short: 'tm',
-	show: false
+	short: 'tm'
 }, {
 	text: 'Turks and Caicos Islands',
-	short: 'tc',
-	show: false
+	short: 'tc'
 }, {
 	text: 'Tuvalu',
-	short: 'tv',
-	show: false
+	short: 'tv'
 }, {
 	text: 'Uganda',
-	short: 'ug',
-	show: false
+	short: 'ug'
 }, {
 	text: 'Ukraine',
-	short: 'ua',
-	show: false
+	short: 'ua'
 }, {
 	text: 'United Arab Emirates',
-	short: 'ae',
-	show: false
+	short: 'ae'
 },{
 	text: 'Uruguay',
-	short: 'uy',
-	show: false
+	short: 'uy'
 }, {
 	text: 'Uzbekistan',
-	short: 'uz',
-	show: false
+	short: 'uz'
 }, {
 	text: 'Vanuatu',
-	short: 'vu',
-	show: false
+	short: 'vu'
 }, {
 	text: 'Vatican City State (Holy See)',
-	short: 'va',
-	show: false
+	short: 'va'
 }, {
 	text: 'Venezuela',
-	short: 've',
-	show: false
+	short: 've'
 }, {
 	text: 'Vietnam',
-	short: 'vn',
-	show: false
+	short: 'vn'
 }, {
 	text: 'Virgin Islands (British)',
-	short: 'vg',
-	show: false
+	short: 'vg'
 }, {
 	text: 'Virgin Islands (U.S.)',
-	short: 'vi',
-	show: false
+	short: 'vi'
 }, {
 	text: 'Wallis and Futuna',
-	short: 'wf',
-	show: false
+	short: 'wf'
 }, {
 	text: 'Western Sahara',
-	short: 'eh',
-	show: false
+	short: 'eh'
 }, {
 	text: 'Yemen',
-	short: 'ye',
-	show: false
+	short: 'ye'
 }, {
 	text: 'Yugoslavia',
-	short: 'yu',
-	show: false
+	short: 'yu'
 }, {
 	text: 'Zambia',
-	short: 'zm',
-	show: false
+	short: 'zm'
 }, {
 	text: 'Zimbabwe',
-	short: 'zw',
-	show: false
+	short: 'zw'
 }, {
 	text: 'Other',
-	short: 'oo',
-	show: false
+	short: 'oo'
 }, ]

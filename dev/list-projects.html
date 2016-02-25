@@ -2,7 +2,7 @@
 <% include ../publicTpl/head.html %>
 <!-- head.html end-->
 <body>
-	<!-- <link rel="stylesheet" type="text/css" href="./plugins/jRange/jquery.range.css"> -->
+	<link rel="stylesheet" type="text/css" href="./plugins/jRange/jquery.range.css">
 	<!-- header.html -->
 	<% include ../publicTpl/header.html %>
 	<!-- header.html end-->
@@ -18,7 +18,7 @@
 			</div>		
 		</div>
 		
-		<div class="container" >	
+		<div class="container" id='vue-list'>	
 			<div class="row mt-10">
 
 				<!-- public-lis.html -->
@@ -26,13 +26,12 @@
 					<aside class='list-aside'>
 						<section class='list-aside-item list-aside-item-method'>
 							<div class="list-group list-aside-item-method-list">
-							  <a href="#" class="list-group-item">
-							   	<i class="fa fa-bars"></i><span>All</span>
-							  </a>
-							  <a href="#" class="list-group-item  active"><i class="fa fa-tasks"></i><span>Projects</span></a>
-							  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>Providers</span></a>
-							  <a href="#" class="list-group-item"><i class="fa fa-info-circle"></i><span>Questions</span></a>
-							  
+								  <a href="#" class="list-group-item">
+								   	<i class="fa fa-bars"></i><span>All</span>
+								  </a>
+								  <a href="#" class="list-group-item  active"><i class="fa fa-tasks"></i><span>Projects</span></a>
+								  <a href="#" class="list-group-item"><i class="fa fa-user"></i><span>Providers</span></a>
+								  <a href="#" class="list-group-item"><i class="fa fa-info-circle"></i><span>Questions</span></a>
 							</div>						
 						</section>
 
@@ -47,14 +46,13 @@
 						</div>
 
 						<!-- 预算 -->
-						<div class="list-aside-item list-aside-item-fixed panel panel-default">
-							<div class="panel-body form-inline">
+						<div class="list-aside-item list-aside-item-fixed list-fixed-projects panel panel-default">
+							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Budget (fixed price)</h4>
-								<!-- <span class='price'>预算：$<span class='budget-min'>0</span>k - $<span class='budget-max'>100</span>k </span>
-								<div class='form-group' style='margin-bottom: 10px;margin-top:30px;'>
-									<input type="hidden" class="slider-input" value="23" />
-								</div> -->
-								<select id="project-budget" name="budget" class="form-control" style='width: 100%'><option value="192">微项目 ($80-240 USD)</option><option value="25">简单的项目 ($240-2000 USD)</option><option value="26">非常小的项目 ($2000-6000 USD)</option><option value="27">小项目 ($6000-12000 USD)</option><option value="28" selected="selected">中等项目 ($12000-24000 USD)</option><option value="29">大项目 ($24000-40000 USD)</option><option value="30">较大项目 ($40000-80000 USD)</option><option value="233">非常大的项目 ($80000-160000 USD)</option><option value="252">大项目 ($160000-400000 USD)</option><option value="271">主要的项目 ($ &gt;400000 USD)</option><option value="custom">自定义预算</option></select>
+								<div class='form-group' style='margin: 30px 5px'>
+									<input type="hidden" class="slider-input" value='0'/>
+								</div>
+								<div class='price text-center'>$<span class='budget-min'>20</span> - $<span class='budget-max'>400000</span> </div>
 							</div>
 						</div>
 
@@ -88,40 +86,9 @@
 						<div class="list-aside-item list-aside-item-location panel panel-default">
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Location</h4>
-								<!-- <div class='form-group'>
-									<div class="input-group">
-										<input type="text" class='form-control'>
-										<span class='input-group-addon'><i class="fa fa-map-marker"></i></span>
-									</div>
-								</div> -->
 
-								<div class="select2" id='select2'>
-									<a href="javascript:;" title="select" class='select2-choice' @click.stop='select2IsHide = !select2IsHide'>
-										Any Location
-										<i class="fa" :class="{'fa-angle-down':select2IsHide,'fa-angle-up':!select2IsHide}"></i>
-									</a>
-									<div class='select2-drop' :class="{'select2-drop-hide':select2IsHide , 'select2-drop-show':!select2IsHide}" v-cloak>
-										<div class='select2-search'>
-											<input type="text" name="" value="" placeholder="" class='form-control' v-model='select2SearchText' @click.stop>
-										</div>
-										<ul class='select2-content'>
-											<li v-for='country in select2SearchResult' track-by="$index">
-												<a href="javascript:;" :title="country.text" v-html='country.text | highlight select2SearchText' @click='Add2Select2List(country.text)'>
-												</a>
-											</li>
-										</ul>
-									</div>
-									<ul class='checkbox-list'>		
-										<li class="checkbox" v-for='item in select2List' v-cloak>
-								        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{item.text}}" for="{{item.short}}" @mouseup='remove2SelectList($index)'>
-											  <input type="checkbox" id='{{item.short}}' value='{{item.text}}' v-model='checkedNames'>
-											  <span class="c-indicator"></span>
-											  <span v-text='item.text'></span>
-											</label>
-										</li>
-									</ul>
-								</div>	
-								
+								<!-- 加载select2组件，此组件来自于 components/Select2.vue -->
+								<select2 :origin-data='originData'></select2>
 							</div>
 						</div>
 

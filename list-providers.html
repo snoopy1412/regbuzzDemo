@@ -327,7 +327,7 @@
 
 		</div>
 		
-		<div class="container" >	
+		<div class="container" id='vue-list'>	
 			<div class="row mt-10">
 
 				<!-- 侧边栏 -->
@@ -368,22 +368,12 @@
 						</div>
 
 						<!-- 国家 -->
-						<div class="list-aside-item panel panel-default" id='vue-countries'>
+						<div class="list-aside-item panel panel-default">
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Country</h4>
 								
-								<ul class="checkbox-list">							        
-									<li class="checkbox" v-for='country in countries' v-show='country.show'>
-							        	<label class="c-input c-checkbox" for="{{country.short}}">
-										  <input type="checkbox" id="{{country.short}}" value='{{country.short}}'>
-										  <span class="c-indicator"></span>
-										 {{country.text}}
-										</label>
-									</li>
-								</ul>
-								<div class='form-group'>
-									<input type="text" name="" value="" placeholder="搜索其他国家" class='form-control' v-on:keyup='selectCountry | debounce 200' v-model='countryMsg'>
-								</div>
+								<!-- 加载select2组件，此组件来自于 components/Select2.vue -->
+								<select2 :origin-data='originData'></select2>
 								
 							</div>
 						</div>
@@ -404,35 +394,33 @@
 						<div class="list-aside-item list-aside-item-grade panel panel-default">
 							<div class="panel-body form-inline">
 								<h4 class='list-aside-item-title'>评分</h4>
-								
 								<span class="list-grade-choose"></span>
-								
 							</div>
 						</div>
 
 						<!-- 语言 -->
-						<div class="list-aside-item list-aside-item-language panel panel-default" id='vue-list-languages'>
+						<div class="list-aside-item list-aside-item-language panel panel-default"  id='vue-list-languages'>
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Language</h4>
-								<ul class='checkbox-list'>							        
-									<li class="checkbox" v-for='language in languages | limitBy 5'>
-							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+								<ul class='checkbox-list' v-show='!isShowLanguages'>		
+									<li class="checkbox" v-for='language in languagesData | limitBy 5'  >
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
 										  <input type="checkbox" id='{{language.abbr}}'>
 										  <span class="c-indicator"></span>
-										 {{language.local}}
+										  <span v-text='language.en'></span>
 										</label>
 									</li>
 								</ul>
-								<button type="button" class='btn btn-link' data-toggle="collapse" href="#list-language-list" >More <i class="fa fa-angle-down"></i></button>
-								<ul id='list-language-list' class="collapse" >
-									<li class="checkbox" v-for='language in languages | | limitBy 19 5'>
-							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.en}}" for="{{language.abbr}}">
+								<ul class='checkbox-list' v-else>	
+									<li class="checkbox" v-for='language in languagesData' >
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
 										  <input type="checkbox" id='{{language.abbr}}'>
 										  <span class="c-indicator"></span>
-										 {{language.local}}
+										  <span v-text='language.en'></span>
 										</label>
 									</li>
 								</ul>
+								<a href="javascript:;" title="more" @click='toggleLanguageNum'><span v-text='toggleText'></span> <i class="fa" :class="{'fa-angle-down':isDown,'fa-angle-up':isUp}"></i></a>
 							</div>
 						</div>
 
