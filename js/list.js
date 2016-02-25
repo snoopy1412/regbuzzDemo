@@ -18,7 +18,7 @@ define([ 'raty', 'jRange','./js/list-controller.js'], function(raty, jRange) {
   $('.list-fixed-projects .slider-input').jRange({
     from: 20,
     to: 400000,
-    step: 1,
+    step: 20,
     scale: [],
     format: '%s',
     theme: 'theme-blue',
@@ -28,8 +28,7 @@ define([ 'raty', 'jRange','./js/list-controller.js'], function(raty, jRange) {
     onstatechange: function() {
       $('.list-fixed-projects .budget-min').html($('.back-bar .low').eq(1).html());
       $('.list-fixed-projects .budget-max').html($('.back-bar .high').eq(1).html());
-    },
-
+    }
   });
 
   $('.list-fixed-projects .slider-input').jRange('setValue', '20,400000');
@@ -50,6 +49,7 @@ define([ 'raty', 'jRange','./js/list-controller.js'], function(raty, jRange) {
       $('.list-fixed-providers .budget-max').html($('.back-bar .high').eq(1).html());
     }
   });
+
 
   $('.list-fixed-projects .slider-input').jRange('setValue', '20,100');
 
