@@ -12,281 +12,280 @@
 	<div class="container container-home" id='vue-home'>
 		<div class="row">
 			<div class="col-md-8">
-			<header class="row home-heading section">
-				<div class="col-md-7 home-heading-section">
-					<div class="home-name clearfix">
-						<div class="home-img pull-left">
-							<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="110px"></a>
-						</div>
-						<div class="home-call pull">
-							<div class='home-call-name-warp'>
-								<h1 href="" title="" class='home-call-name'>Aaron Su <img src="https://cdn3.f-cdn.com/img/flags/png/us.png">
-								</h1>
-								<p class="home-call-position">
-									GHS Author
-								</p>
-								<div class='home-call-account'>
-									<a href="membership.html" class='home-call-des'>Base User </a>
-									<a href="membership.html" class='btn btn-success-outline btn-sm'>Update Account</a>
-								</div>						
-								<div class="home-call-profile">
-									<div class="progress ">
-									  <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%;">
-									   	<a href="profile.html" class='progress-info'>完善个人信息 60%</a>
-									  </div>
-									</div> 
-									
-								</div>
+				<header class="row home-heading section">
+					<div class="col-md-7 home-heading-section">
+						<div class="home-name clearfix">
+							<div class="home-img pull-left">
+								<a href=""><img src="./img/index/servers/1.jpg" alt="" class='img-round' width="110px"></a>
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-5 home-heading-section">
-					<div class="home-history">
-						<div class="text-right">
-							<div class="btn-group" data-toggle="buttons" id='change-role'>
-						  		<label v-for='role in roles' class="btn btn-secondary" :class="{'active':$index === autoindex}" @click='changeView($index)' v-text="role.name | capitalize">
-							    	<input type="radio" name="options" :value='role.name' >
-							  	</label>
-							 </div>
-							  <div class="history-content tab-content">
-							  	<div v-for='role in roles' transition="fadeIn" class='view' :class="{'active':$index === autoindex}">
-									<ul class='history-content-item history-content-employer'>
-										<li>
-											<span class='pull-left'  v-text="role.context.project.title"></span> <span class='pull-right right' v-text="role.context.project.num"></span>
-										</li>
-										<li>
-											<span class='pull-left' v-text="role.context.question.title"></span> <span class='pull-right right' v-text="role.context.question.num"></span>
-										</li>
-									</ul>
-								</div>
-							  </div>
-						</div>	
-					</div>
-				</div>	
-			</header>
-			<section class="row home-post">
-				<div class="col-md-12">
-					<a href="publish-quick.html" class='home-post-item post'><i class="fa fa-product-hunt"></i><span>Post a Project</span></a>
-				</div>
-			</section>
-			<div class="dashboard-article">
-			  <ul class="nav nav-tabs nav-tabs-custom-blue" role="tablist">
-			    <li role="presentation" class="active"><a href="#dashboard-push" aria-controls="home" role="tab" data-toggle="tab">项目推送</a></li>
-			    <li role="presentation"><a href="#dashboard-news" aria-controls="profile" role="tab" data-toggle="tab">新消息</a></li>
-			    <li role="presentation"><a href="#dashboard-dynamic" aria-controls="messages" role="tab" data-toggle="tab">我的动态</a></li>
-			  </ul>
-			  <div class="tab-content">
-			    <div class="tab-pane active fade in" id="dashboard-push">
-			    	<section class="row home-push">
-						<div class="col-md-6">
-							<div class="panel panel-default">		
-								<div class="panel-body">
-									<ul class='home-push-list'>
-										<li class='home-push-item'>
-											<h3 class="home-push-title">
-												<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
-											</h3>
-											<p>
-												<span class="label label-default">GHS / SDS</span>
-											</p>
-											<p class='home-push-state'>
-												<span> $ 100,000 USD </span> |
-												<span> 5 days left </span> |
-												<span>
-													<a href=""> 15 bids </a>
-												</span>
-											</p>
-											<div class='text-right'>
-												<a href="" class='btn btn-primary-outline'>detail</a>
-												<a href="" class='btn btn-link'>skip</a>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="panel panel-default">
-								<div class="panel-body">
-									<ul class='home-push-list'>
-										<li class='home-push-item'>
-											<h3  class="home-push-title">
-												<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
-											</h3>
-											<p>
-												<span class="label label-default">GHS / SDS</span>
-											</p>
-											<p class='home-push-state'>
-												<span> $ 100,000 USD </span> |
-												<span> 5 days left </span> |
-												<span>
-													<a href=""> 15 bids </a>
-												</span>
-											</p>
-											<div class='text-right'>
-												<a href="" class='btn btn-primary-outline'>detail</a>
-												<a href="" class='btn btn-link'>skip</a>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</section>
-			    </div>
-			    <div class="tab-pane fade" id="dashboard-news">
-			    	<section class='row home-new'>
-						<div class="content dashboard-content">
-							<div class="col-md-1">
-								<div class="user-img">
-									<a href=""><img src="./img/index/servers/1.jpg" alt="" width="50px"></a>
-								</div>
-							</div>
-							<div class="col-md-11">
-								<div class="user-new-content">
-									<div class="header">
-										<h3 class="headline"><a href="" class="miniprofile name">zhonghui su</a> likes this</h3>
+							<div class="home-call pull">
+								<div class='home-call-name-warp'>
+									<h1 href="" title="" class='home-call-name'>Aaron Su <img src="https://cdn3.f-cdn.com/img/flags/png/us.png">
+									</h1>
+									<p class="home-call-position">
+										GHS Author
+									</p>
+									<div class='home-call-account'>
+										<a href="membership.html" class='home-call-des'>Base User </a>
+										<a href="membership.html" class='btn btn-success-outline btn-sm'>Update Account</a>
+									</div>						
+									<div class="home-call-profile">
+										<div class="progress ">
+										  <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%;">
+										   	<a href="profile.html" class='progress-info'>完善个人信息 60%</a>
+										  </div>
+										</div> 
+										
 									</div>
-									<article class='detail'>
-										<div class="author">
-											<a href="" class="image company small-actor-image"><img alt="South China Morning Post SCMP" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAcdAAAAJDAyY2U4ZWQwLWJjYmMtNGU2ZC04N2UwLWM2MGJlN2UxMzFkMw.png" width="40" height="40"></a>
-											<a href="" title="" class='author-name'>South China Morning Post SCMP</a>
-											<button type="button" class='btn btn-primary-outline btn-sm pull-right'>follow</button>
-										</div>
-										<p class='overview'>
-											Drama at Hong Kong airport: a Chinese national accused of bludgeoning his two nephews to death in the U.S and described as 'armed and dangerous' was grabbed by police on his way to the mainland to avoid arrest.
-										</p>
-										<div class="side-article">
-											<a href="" class="side-content-image"  target="_blank">
-												<div class="image-container">
-													<img src="https://media.licdn.com/media-proxy/ext?w=180&amp;h=110&amp;f=c&amp;hash=NOuCvQsdsQ9TD%2FQdKo0EODzsqyI%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VKunUlU0R8s8OCCokL_905TQJGTBmX3CmD2vsrWOSu8OticPfv98R4Jfi4B2Ac3efDoBWK9S8Cjcte-KokylMqwYMi7YgJJO0xn0yYfvZ5pbVZ8tJCiUO6oMmNNg-lZIH7sNuykPgdvWWgzpbiKL4TZeAVIigWzRNXgHsl6Vr5w9ZIUyU5S-MTRG8Fj-sFN_zBB2lE">
-												</div>
-											</a>
-											<div class="side-content-description">
-												<div class="content">
-													<a href="" class="snippet-link" data-trk="article-title" target="_blank">
-														<h4>‘Armed and dangerous’ double-murder suspect arrested in dramatic swoop at Hong Kong airport</h4>
-														<p class="snippet-container">
-															Chinese national accused of bludgeoning two nephews to death in Los Angeles grabbed by Hong Kong po…
-														</p>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class='detail-footer'>
-											<a href="">Unlike</a>
-											<span class="zg-bull zu-autohide">•</span>
-											<a href="" title="">Comment</a>
-											<span class="zg-bull zu-autohide">•</span>
-											<a href="" title="">Share</a>
-											<span class="zg-bull zu-autohide">•</span>
-											<a href="" title="" class='likes'>
-												<i class="fa fa-thumbs-o-up"></i>
-												10
-											</a>
-										</div>
-									</article>
 								</div>
 							</div>
 						</div>
-					</section>
-			    </div>
-			    <div class="tab-pane fade" id="dashboard-dynamic">
-			    	<section class='row home-dynamic'>
+					</div>
+					<div class="col-md-5 home-heading-section">
+						<div class="home-history">
+							<div class="text-right">
+								<div class="btn-group" data-toggle="buttons" id='change-role'>
+							  		<label v-for='role in roles' class="btn btn-secondary" :class="{'active':$index === autoindex}" @click='changeView($index)' v-text="role.name | capitalize">
+								    	<input type="radio" name="options" :value='role.name' >
+								  	</label>
+								 </div>
+								  <div class="history-content tab-content">
+								  	<div v-for='role in roles' transition="fadeIn" class='view' :class="{'active':$index === autoindex}">
+										<ul class='history-content-item history-content-employer'>
+											<li>
+												<span class='pull-left'  v-text="role.context.project.title"></span> <span class='pull-right right' v-text="role.context.project.num"></span>
+											</li>
+											<li>
+												<span class='pull-left' v-text="role.context.question.title"></span> <span class='pull-right right' v-text="role.context.question.num"></span>
+											</li>
+										</ul>
+									</div>
+								  </div>
+							</div>	
+						</div>
+					</div>	
+				</header>
+				<section class="row home-post">
+					<div class="col-md-12">
+						<a href="publish-quick.html" class='home-post-item post'><i class="fa fa-product-hunt"></i><span>Post a Project</span></a>
+					</div>
+				</section>
+				<div class="dashboard-article">
+				  <ul class="nav nav-tabs nav-tabs-custom-blue" role="tablist">
+				    <li role="presentation" class="active"><a href="#dashboard-push" aria-controls="home" role="tab" data-toggle="tab">项目推送</a></li>
+				    <li role="presentation"><a href="#dashboard-news" aria-controls="profile" role="tab" data-toggle="tab">新消息</a></li>
+				    <li role="presentation"><a href="#dashboard-dynamic" aria-controls="messages" role="tab" data-toggle="tab">我的动态</a></li>
+				  </ul>
+				  <div class="tab-content">
+				    <div class="tab-pane active fade in" id="dashboard-push">
+				    	<section class="row home-push">
+							<div class="col-md-6">
+								<div class="panel panel-default">		
+									<div class="panel-body">
+										<ul class='home-push-list'>
+											<li class='home-push-item'>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
+												</h3>
+												<p>
+													<span class="label label-default">GHS / SDS</span>
+												</p>
+												<p class='home-push-state'>
+													<span> $ 100,000 USD </span> |
+													<span> 5 days left </span> |
+													<span>
+														<a href=""> 15 bids </a>
+													</span>
+												</p>
+												<div class='text-right'>
+													<a href="" class='btn btn-primary-outline'>detail</a>
+													<a href="" class='btn btn-link'>skip</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<ul class='home-push-list'>
+											<li class='home-push-item'>
+												<h3  class="home-push-title">
+													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
+												</h3>
+												<p>
+													<span class="label label-default">GHS / SDS</span>
+												</p>
+												<p class='home-push-state'>
+													<span> $ 100,000 USD </span> |
+													<span> 5 days left </span> |
+													<span>
+														<a href=""> 15 bids </a>
+													</span>
+												</p>
+												<div class='text-right'>
+													<a href="" class='btn btn-primary-outline'>detail</a>
+													<a href="" class='btn btn-link'>skip</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+				    </div>
+				    <div class="tab-pane fade" id="dashboard-news">
+				    	<section class='row home-new'>
+							<div class="content dashboard-content">
+								<div class="col-md-1">
+									<div class="user-img">
+										<a href=""><img src="./img/index/servers/1.jpg" alt="" width="50px"></a>
+									</div>
+								</div>
+								<div class="col-md-11">
+									<div class="user-new-content">
+										<div class="header">
+											<h3 class="headline"><a href="" class="miniprofile name">zhonghui su</a> likes this</h3>
+										</div>
+										<article class='detail'>
+											<div class="author">
+												<a href="" class="image company small-actor-image"><img alt="South China Morning Post SCMP" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAcdAAAAJDAyY2U4ZWQwLWJjYmMtNGU2ZC04N2UwLWM2MGJlN2UxMzFkMw.png" width="40" height="40"></a>
+												<a href="" title="" class='author-name'>South China Morning Post SCMP</a>
+												<button type="button" class='btn btn-primary-outline btn-sm pull-right'>follow</button>
+											</div>
+											<p class='overview'>
+												Drama at Hong Kong airport: a Chinese national accused of bludgeoning his two nephews to death in the U.S and described as 'armed and dangerous' was grabbed by police on his way to the mainland to avoid arrest.
+											</p>
+											<div class="side-article">
+												<a href="" class="side-content-image"  target="_blank">
+													<div class="image-container">
+														<img src="https://media.licdn.com/media-proxy/ext?w=180&amp;h=110&amp;f=c&amp;hash=NOuCvQsdsQ9TD%2FQdKo0EODzsqyI%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VKunUlU0R8s8OCCokL_905TQJGTBmX3CmD2vsrWOSu8OticPfv98R4Jfi4B2Ac3efDoBWK9S8Cjcte-KokylMqwYMi7YgJJO0xn0yYfvZ5pbVZ8tJCiUO6oMmNNg-lZIH7sNuykPgdvWWgzpbiKL4TZeAVIigWzRNXgHsl6Vr5w9ZIUyU5S-MTRG8Fj-sFN_zBB2lE">
+													</div>
+												</a>
+												<div class="side-content-description">
+													<div class="content">
+														<a href="" class="snippet-link" data-trk="article-title" target="_blank">
+															<h4>‘Armed and dangerous’ double-murder suspect arrested in dramatic swoop at Hong Kong airport</h4>
+															<p class="snippet-container">
+																Chinese national accused of bludgeoning two nephews to death in Los Angeles grabbed by Hong Kong po…
+															</p>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class='detail-footer'>
+												<a href="">Unlike</a>
+												<span class="zg-bull zu-autohide">•</span>
+												<a href="" title="">Comment</a>
+												<span class="zg-bull zu-autohide">•</span>
+												<a href="" title="">Share</a>
+												<span class="zg-bull zu-autohide">•</span>
+												<a href="" title="" class='likes'>
+													<i class="fa fa-thumbs-o-up"></i>
+													10
+												</a>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</section>
+				    </div>
+				    <div class="tab-pane fade" id="dashboard-dynamic">
+				    	<section class='row home-dynamic'>
+							<div class="content">
+								<div class="col-md-1">
+									<div class="user-img">
+										<a href=""><img src="./img/index/servers/1.jpg" alt="" width="50px"></a>
+									</div>
+								</div>
+								<div class="col-md-11">
+									<div class="user-new-content">
+										<div class="header">
+											<h3 class="headline"><a href="" class="miniprofile name">zhonghui su</a> likes this</h3>
+										</div>
+										<article class='detail'>
+											<div class="author">
+												<a href="" class="image company small-actor-image"><img alt="South China Morning Post SCMP" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAcdAAAAJDAyY2U4ZWQwLWJjYmMtNGU2ZC04N2UwLWM2MGJlN2UxMzFkMw.png" width="40" height="40"></a>
+												<a href="" title="" class='author-name'>South China Morning Post SCMP</a>
+												<button type="button" class='btn btn-primary-outline btn-sm pull-right'>follow</button>
+											</div>
+											<p class='overview'>
+												Drama at Hong Kong airport: a Chinese national accused of bludgeoning his two nephews to death in the U.S and described as 'armed and dangerous' was grabbed by police on his way to the mainland to avoid arrest.
+											</p>
+											<div class="side-article">
+												<a href="" class="side-content-image"  target="_blank">
+													<div class="image-container">
+														<img src="https://media.licdn.com/media-proxy/ext?w=180&amp;h=110&amp;f=c&amp;hash=NOuCvQsdsQ9TD%2FQdKo0EODzsqyI%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VKunUlU0R8s8OCCokL_905TQJGTBmX3CmD2vsrWOSu8OticPfv98R4Jfi4B2Ac3efDoBWK9S8Cjcte-KokylMqwYMi7YgJJO0xn0yYfvZ5pbVZ8tJCiUO6oMmNNg-lZIH7sNuykPgdvWWgzpbiKL4TZeAVIigWzRNXgHsl6Vr5w9ZIUyU5S-MTRG8Fj-sFN_zBB2lE">
+													</div>
+												</a>
+												<div class="side-content-description">
+													<div class="content">
+														<a href="" class="snippet-link" data-trk="article-title" target="_blank">
+															<h4>‘Armed and dangerous’ double-murder suspect arrested in dramatic swoop at Hong Kong airport</h4>
+															<p class="snippet-container">
+																Chinese national accused of bludgeoning two nephews to death in Los Angeles grabbed by Hong Kong po…
+															</p>
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class='detail-footer'>
+												<a href="">Unlike</a>
+												<span class="zg-bull zu-autohide">•</span>
+												<a href="" title="">Comment</a>
+												<span class="zg-bull zu-autohide">•</span>
+												<a href="" title="">Share</a>
+												<span class="zg-bull zu-autohide">•</span>
+												<a href="" title="" class='likes'>
+													<i class="fa fa-thumbs-o-up"></i>
+													10
+												</a>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>	
+				    	</section>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="home-aside">
+					<div class="home-aside-section home-aside-account  section">
+						<h3 class='home-aside-title'>Balance</h3>
+						<div class="content clearfix">
+							<ul class='balance-amount clearfix'>
+								<li class='pull-left'>
+									<span class='balance-value'>$ 3,120.00</span>
+								</li>
+								<li class=' pull-right'>
+									<a href="account.html" class='balance-history'><i class="fa fa-history fa-fw"></i>Transaction History</a>
+								</li>
+							</ul>
+							<div class='home-money clearfix' style='padding-top:10px'>
+								<span class='pull-right'>
+									<a href="" title="" class='btn btn-primary'>Withdraw</a>
+								<a href="" title="" class='btn btn-warning'>Top-up</a>
+								</span>
+								
+							</div>						
+						</div>
+					</div>				
+					<div class="home-aside-section  section">
+						<h3 class='home-aside-title'>测试</h3>
 						<div class="content">
-							<div class="col-md-1">
-								<div class="user-img">
-									<a href=""><img src="./img/index/servers/1.jpg" alt="" width="50px"></a>
-								</div>
-							</div>
-							<div class="col-md-11">
-								<div class="user-new-content">
-									<div class="header">
-										<h3 class="headline"><a href="" class="miniprofile name">zhonghui su</a> likes this</h3>
-									</div>
-									<article class='detail'>
-										<div class="author">
-											<a href="" class="image company small-actor-image"><img alt="South China Morning Post SCMP" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAcdAAAAJDAyY2U4ZWQwLWJjYmMtNGU2ZC04N2UwLWM2MGJlN2UxMzFkMw.png" width="40" height="40"></a>
-											<a href="" title="" class='author-name'>South China Morning Post SCMP</a>
-											<button type="button" class='btn btn-primary-outline btn-sm pull-right'>follow</button>
-										</div>
-										<p class='overview'>
-											Drama at Hong Kong airport: a Chinese national accused of bludgeoning his two nephews to death in the U.S and described as 'armed and dangerous' was grabbed by police on his way to the mainland to avoid arrest.
-										</p>
-										<div class="side-article">
-											<a href="" class="side-content-image"  target="_blank">
-												<div class="image-container">
-													<img src="https://media.licdn.com/media-proxy/ext?w=180&amp;h=110&amp;f=c&amp;hash=NOuCvQsdsQ9TD%2FQdKo0EODzsqyI%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VKunUlU0R8s8OCCokL_905TQJGTBmX3CmD2vsrWOSu8OticPfv98R4Jfi4B2Ac3efDoBWK9S8Cjcte-KokylMqwYMi7YgJJO0xn0yYfvZ5pbVZ8tJCiUO6oMmNNg-lZIH7sNuykPgdvWWgzpbiKL4TZeAVIigWzRNXgHsl6Vr5w9ZIUyU5S-MTRG8Fj-sFN_zBB2lE">
-												</div>
-											</a>
-											<div class="side-content-description">
-												<div class="content">
-													<a href="" class="snippet-link" data-trk="article-title" target="_blank">
-														<h4>‘Armed and dangerous’ double-murder suspect arrested in dramatic swoop at Hong Kong airport</h4>
-														<p class="snippet-container">
-															Chinese national accused of bludgeoning two nephews to death in Los Angeles grabbed by Hong Kong po…
-														</p>
-													</a>
-												</div>
-											</div>
-										</div>
-										<div class='detail-footer'>
-											<a href="">Unlike</a>
-											<span class="zg-bull zu-autohide">•</span>
-											<a href="" title="">Comment</a>
-											<span class="zg-bull zu-autohide">•</span>
-											<a href="" title="">Share</a>
-											<span class="zg-bull zu-autohide">•</span>
-											<a href="" title="" class='likes'>
-												<i class="fa fa-thumbs-o-up"></i>
-												10
-											</a>
-										</div>
-									</article>
-								</div>
-							</div>
-						</div>	
-			    	</section>
-			    </div>
-			  </div>
-			</div>
-
-		</div>
-		<div class="col-md-4">
-			<div class="home-aside">
-				<div class="home-aside-section home-aside-account  section">
-					<h3 class='home-aside-title'>Balance</h3>
-					<div class="content clearfix">
-						<ul class='balance-amount clearfix'>
-							<li class='pull-left'>
-								<span class='balance-value'>$ 3,120.00</span>
-							</li>
-							<li class=' pull-right'>
-								<a href="account.html" class='balance-history'><i class="fa fa-history fa-fw"></i>Transaction History</a>
-							</li>
-						</ul>
-						<div class='home-money clearfix' style='padding-top:10px'>
-							<span class='pull-right'>
-								<a href="" title="" class='btn btn-primary'>Withdraw</a>
-							<a href="" title="" class='btn btn-warning'>Top-up</a>
-							</span>
-							
-						</div>						
-					</div>
-				</div>				
-				<div class="home-aside-section  section">
-					<h3 class='home-aside-title'>测试</h3>
-					<div class="content">
-						<ul>
-							<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
-							<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
-							<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
-						</ul>
+							<ul>
+								<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
+								<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
+								<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
 		</div>
 	</div>
 </section>

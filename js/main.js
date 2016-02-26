@@ -19,7 +19,9 @@ require.config({
     Vue:'./vendor/vue', // MVVM框架
     VueStrap : './vendor/vue-strap.min', //类似bootstrap组件
     vueValidator: './vendor/vue-validator.min', //Vue 验证插件
-    VueComponent : '../static/vue-component', // 自定义Vue 组件
+    VueComponent : '../static/vue-component', // 自定义Vue 组件,
+    VueGlobalFilter : './vue-globalfilter', //全局过滤器,
+    VueMixins : './vue-mixins'
   },
   shim: {
     "bootstrap":{

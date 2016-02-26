@@ -1,5 +1,5 @@
-define(['Vue','VueComponent','../data/languages.js','../data/linkage.js',],function(Vue,VueComponent){
-	
+define(['Vue','VueComponent','VueGlobalFilter','../data/languages.js','../data/linkage.js',],function(Vue,VueComponent){
+
 	var linkage = VueComponent.linkage,
 		wordcount = VueComponent.wordcount,
 		jellybean = VueComponent.jellybean;
@@ -34,6 +34,10 @@ define(['Vue','VueComponent','../data/languages.js','../data/linkage.js',],funct
 					return false
 				}
 			},
+			ajax : function(){
+				var child = this.$refs.profile;
+				return child.select2List.length;
+			}
 		},
 
 		created : function(){
@@ -42,11 +46,7 @@ define(['Vue','VueComponent','../data/languages.js','../data/linkage.js',],funct
 			this.selectedData = linkageData;
 
 			// jellybean的动态数据加载
-			var newArr = [];
-			languagesData.forEach(function(element,index){
-				newArr.push(element['en']);
-			})
-			this.languageData = newArr;
+			this.languageData = languagesData;
 		}
 	})
 

@@ -1,22 +1,23 @@
 <template>
-	<div class="jellybean" :class="{'error':isError}">
+	<div class="jellybean" :class="{'error':jellybeanMaxError}">
 		<ul class='jellybean-container clearfix'>
-			<li class="jellybean-container-item" v-for='item in jellybeanList' track-by="$index">
+			<li class="jellybean-container-item" v-for='item in select2List' track-by="$index">
 				<span class="jellybean-suggest-show">
-					<span class="value" v-text='item'></span>
-					<button type="button" class="remove" @click='remove($index)'>×</button>
+					<span class="value" v-text='item.text'></span>
+					<button type="button" class="remove" @click='remove2SelectList($index)'>×</button>
 				</span>
 			</li>
 			<li class="jellybean-container-item">
 				<span class="jellybean-suggest-input">
-					<input type="text" class="jellybean-input" :placeholder="placeholder" v-model='searchText' @keyup='search | debounce 500'>
-					<ul class='jellybean-result' :class="{'show':isShow}">
-						<li v-for='item in searchResult | filterBy searchText'>
-							<a href="javascript:;" class="jellybean-result-link" v-html='item.show | capitalize' @click='addInjellybeanList(item.origin)'></a>
-						</li>
-						<li v-if='promptMessage'>
-							<a href='javascript:;' class='jellybean-result-link text-center' v-text='msgCustom'>
+					<input type="text" class="jellybean-input" :placeholder="placeholder" v-model='select2SearchText' debounce="500" @click.stop>					
+					<ul class='jellybean-result' :class="{'show':select2IsHide}" v-cloak>					
+						<li v-for='item in select2SearchResult' track-by="$index" v-if='!promptMessage'>
+							<a href="javascript:;" :title="item.text" class="jellybean-result-link" v-html='item.text | highlight select2SearchText' @click='Add2Select2List(item.text)'>
 							</a>
+						</li>		
+						<li v-if='promptMessage'>
+							<span class='jellybean-result-link jellybean-result-error text-center' v-text='msgCustom'>
+							</span>
 						</li>
 					</ul>
 				</span>
@@ -26,12 +27,11 @@
 </template>
 
 <script>
+	import Select2Mixin from './select2Mixin.js';
+	
 	export default {
+	mixins: [Select2Mixin],
 	props : {
-		jellybeanData : {
-			type : Array,
-			require : true
-		},
 		jellybeanMax: {
 			type : Number
 		},
@@ -45,98 +45,56 @@
 	data() {
 		return {				
 			// 数据提示
-			searchText : '',
-			searchResult : [],
-			jellybeanList: [],
-			isShow: false,
-			promptMessage: false,
-			isError : false,
+			  jellybeanMaxError : false
 			}
 		},	
-	ready: function(){
-			console.log(this.msgCustom)
-			var self = this;	
 
-			// 标准浏览器		  
-			 window.addEventListener('click',function(event){
-			 	if(self.isShow){
-			 		self.isShow = false;
-			 		self.searchText = '';
-			 	}
-			 },false);
-		},
-		methods : {
-
-			// 数据提示 也可引入ajax
-			search : function(){
-
-				var size = this.jellybeanList.length;
-
-				if(this.jellybeanMax){
-
-					if(size >= this.jellybeanMax){
-						if(this.searchText.trim() !== ''){
-							this.isError = true;
-						}else{
-							this.isError = false;
-						}
-						return false;
-					}else{
-						this.isError = false;
-					}
-				}
-				
-				this.searchResult = [];
-
-				var self = this,
-					text = this.searchText.trim().toLowerCase();
-				
-				if(text){
-					this.isShow = true;
-					this.jellybeanData.forEach(function(element,index){
-						var str = element.toLowerCase();
-
-						if( str.indexOf(text) !== -1 ){
-						    var newStr =  str.replace(new RegExp('('+text+')', 'gi'), '<strong>$1</strong>');
-						    self.searchResult.push({
-						    	origin : element,
-						    	show : newStr
-						    })
-						}
-					});
-					this.promptMessage = this.searchResult.length > 0 ? false : true;
+		computed : {
+			select2IsHide : function(){
+				if(!this.jellybeanMaxError){
+					return this.select2SearchText.trim() !== '' ? true : false;
 				}else{
-					this.isShow = false;
-				}
+					return false;
+				}	
 			},
-			addInjellybeanList : function(data){
-				var size = this.jellybeanList.length;
-
+			jellybeanMaxError : function(){
+				var size = this.select2List.length;
 				if(this.jellybeanMax){
-					if(size == this.jellybeanMax){
-						return false;
+					if(size >= this.jellybeanMax && this.select2SearchText.trim()!== ''){
+						return true;
 					}
 				}
-				
-				this.jellybeanList.push(data);
-
-				// ajax，需要考虑的是，如何处理data,再返回相应的值？ 
-				
-
-				this.searchText = '';
-				this.isShow = false;
+				return false;
 			},
-			remove : function(index){
-				this.jellybeanList.splice(index,1);
-				this.searchText = '';
-				var size = this.jellybeanList.length;
-
-				if(this.jellybeanMax){
-					if(size <= this.jellybeanMax){
-						this.isError = false;
-					}
-				}
+			promptMessage : function(){
+				return this.select2SearchResult.length === 0 ? true : false;
 			}
-		}
+		},
+		methods : {		
+			Add2Select2List: function(str) {
+				if(this.jellybeanMaxError){
+					return false;
+				}
+				var self = this,
+					newArr = [];
+
+				this.resultData.forEach(function(element, index) {
+					newArr.push(element.text);
+				});
+				var isIndex = $.inArray(str, newArr);
+				if (isIndex !== -1) {
+					this.select2List.push({
+						text: self.resultData[isIndex].text,
+						local: self.resultData[isIndex].local,
+						index: isIndex
+					});
+
+					this.resultData[isIndex].isForbid = true;
+
+				}
+				this.select2SearchText = '';
+			}
+		}		
 	}
+
 </script>

@@ -1,8 +1,13 @@
+
 .header
 {   
 
     .navbar{
+        // min-height: 70px;
         margin-bottom: 0;
+        .container{
+            // padding-top: 10px;
+        }
     }
     .navbar-brand{
         padding-top: 8px;

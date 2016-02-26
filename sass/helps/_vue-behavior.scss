@@ -3,18 +3,26 @@
 
 // transition 过渡
 /* 必需 */
-.fadeIn-transition {
-  transition: opacity .3s ease;
-	@include opacity(1);
-}
 
-/* .expand-enter 定义进入的开始状态 */
-/* .expand-leave 定义离开的结束状态 */
+// fadeIn
+@keyframes fadeIn {
+  0% {
+    @include opacity(0);
+  }
+  
+  100% {
+    @include opacity(1);
+  }
+}
+.fadeIn-transition {
+  animation: fadeIn .3s;
+}
 .fadeIn-enter, .fadeIn-leave {
 	@include opacity(0);
 }
 
 
+// staggered
 .staggered-transition {
     transition: all .5s ease;
     overflow: hidden;
@@ -44,8 +52,4 @@
   @include opacity(0);
 }
 
-
-
-
 // end -------------------------------------------------------------------------------------
-

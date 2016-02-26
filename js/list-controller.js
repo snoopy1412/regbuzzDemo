@@ -1,4 +1,4 @@
-define(['Vue','VueComponent','../data/countries.js', '../data/languages.js','../data/linkage.js'],function(Vue,VueComponent){
+define(['Vue','VueComponent','VueGlobalFilter','../data/countries.js', '../data/languages.js','../data/linkage.js'],function( Vue, VueComponent, VueGlobalFilter){
 
 
   // 语言

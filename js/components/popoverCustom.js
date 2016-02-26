@@ -59,12 +59,15 @@ define(['velocity'],function(velocity) {
 
 								if (_this.content && _this.defaultPosition === false) {
 									var offset = _offset(_this.dir, popoverContent, $(that));
+									
 									$(window).resize(function() {
 										offset = _offset(_this.dir, popoverContent, $(that));
 									});
+									
 									$('html body').scroll(function() {
 										offset = _offset(_this.dir, popoverContent, $(that));
 									});
+									
 									popoverContent.css({
 										left: offset.left,
 										top: offset.top

@@ -58,7 +58,7 @@
 	
 	var _Jellybean2 = _interopRequireDefault(_Jellybean);
 	
-	var _Select = __webpack_require__(14);
+	var _Select = __webpack_require__(30);
 	
 	var _Select2 = _interopRequireDefault(_Select);
 	
@@ -93,7 +93,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "D:\\project\\regbuzzDemo\\components\\src\\Linkage.vue"
+	  var id = "e:\\regbuzzDemo\\components\\src\\Linkage.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -182,7 +182,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "D:\\project\\regbuzzDemo\\components\\src\\WordCount.vue"
+	  var id = "e:\\regbuzzDemo\\components\\src\\WordCount.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -604,7 +604,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] components\\src\\Jellybean.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(13)
+	__vue_template__ = __webpack_require__(29)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -614,7 +614,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "D:\\project\\regbuzzDemo\\components\\src\\Jellybean.vue"
+	  var id = "e:\\regbuzzDemo\\components\\src\\Jellybean.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -624,47 +624,23 @@
 
 /***/ },
 /* 12 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	// <template>
-	// 	<div class="jellybean" :class="{'error':isError}">
-	// 		<ul class='jellybean-container clearfix'>
-	// 			<li class="jellybean-container-item" v-for='item in jellybeanList' track-by="$index">
-	// 				<span class="jellybean-suggest-show">
-	// 					<span class="value" v-text='item'></span>
-	// 					<button type="button" class="remove" @click='remove($index)'>×</button>
-	// 				</span>
-	// 			</li>
-	// 			<li class="jellybean-container-item">
-	// 				<span class="jellybean-suggest-input">
-	// 					<input type="text" class="jellybean-input" :placeholder="placeholder" v-model='searchText' @keyup='search | debounce 500'>
-	// 					<ul class='jellybean-result' :class="{'show':isShow}">
-	// 						<li v-for='item in searchResult | filterBy searchText'>
-	// 							<a href="javascript:;" class="jellybean-result-link" v-html='item.show | capitalize' @click='addInjellybeanList(item.origin)'></a>
-	// 						</li>
-	// 						<li v-if='promptMessage'>
-	// 							<a href='javascript:;' class='jellybean-result-link text-center' v-text='msgCustom'>
-	// 							</a>
-	// 						</li>
-	// 					</ul>
-	// 				</span>
-	// 			</li>
-	// 		</ul>
-	// 	</div>
-	// </template>
-	//
-	// <script>
+	
+	var _select2Mixin = __webpack_require__(13);
+	
+	var _select2Mixin2 = _interopRequireDefault(_select2Mixin);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
 	exports.default = {
+		mixins: [_select2Mixin2.default],
 		props: {
-			jellybeanData: {
-				type: Array,
-				require: true
-			},
 			jellybeanMax: {
 				type: Number
 			},
@@ -678,317 +654,208 @@
 		data: function data() {
 			return {
 				// 数据提示
-				searchText: '',
-				searchResult: [],
-				jellybeanList: [],
-				isShow: false,
-				promptMessage: false,
-				isError: false
+				jellybeanMaxError: false
 			};
 		},
 	
-		ready: function ready() {
-			console.log(this.msgCustom);
-			var self = this;
 	
-			// 标准浏览器		 
-			window.addEventListener('click', function (event) {
-				if (self.isShow) {
-					self.isShow = false;
-					self.searchText = '';
+		computed: {
+			select2IsHide: function select2IsHide() {
+				if (!this.jellybeanMaxError) {
+					return this.select2SearchText.trim() !== '' ? true : false;
+				} else {
+					return false;
 				}
-			}, false);
+			},
+			jellybeanMaxError: function jellybeanMaxError() {
+				var size = this.select2List.length;
+				if (this.jellybeanMax) {
+					if (size >= this.jellybeanMax && this.select2SearchText.trim() !== '') {
+						return true;
+					}
+				}
+				return false;
+			},
+			promptMessage: function promptMessage() {
+				return this.select2SearchResult.length === 0 ? true : false;
+			}
 		},
 		methods: {
-	
-			// 数据提示 也可引入ajax
-			search: function search() {
-	
-				var size = this.jellybeanList.length;
-	
-				if (this.jellybeanMax) {
-	
-					if (size >= this.jellybeanMax) {
-						if (this.searchText.trim() !== '') {
-							this.isError = true;
-						} else {
-							this.isError = false;
-						}
-						return false;
-					} else {
-						this.isError = false;
-					}
+			Add2Select2List: function Add2Select2List(str) {
+				if (this.jellybeanMaxError) {
+					return false;
 				}
-	
-				this.searchResult = [];
-	
 				var self = this,
-				    text = this.searchText.trim().toLowerCase();
+				    newArr = [];
 	
-				if (text) {
-					this.isShow = true;
-					this.jellybeanData.forEach(function (element, index) {
-						var str = element.toLowerCase();
-	
-						if (str.indexOf(text) !== -1) {
-							var newStr = str.replace(new RegExp('(' + text + ')', 'gi'), '<strong>$1</strong>');
-							self.searchResult.push({
-								origin: element,
-								show: newStr
-							});
-						}
+				this.resultData.forEach(function (element, index) {
+					newArr.push(element.text);
+				});
+				var isIndex = $.inArray(str, newArr);
+				if (isIndex !== -1) {
+					this.select2List.push({
+						text: self.resultData[isIndex].text,
+						local: self.resultData[isIndex].local,
+						index: isIndex
 					});
-					this.promptMessage = this.searchResult.length > 0 ? false : true;
-				} else {
-					this.isShow = false;
+	
+					this.resultData[isIndex].isForbid = true;
 				}
-			},
-			addInjellybeanList: function addInjellybeanList(data) {
-				var size = this.jellybeanList.length;
-	
-				if (this.jellybeanMax) {
-					if (size == this.jellybeanMax) {
-						return false;
-					}
-				}
-	
-				this.jellybeanList.push(data);
-	
-				// ajax，需要考虑的是，如何处理data,再返回相应的值？
-	
-				this.searchText = '';
-				this.isShow = false;
-			},
-			remove: function remove(index) {
-				this.jellybeanList.splice(index, 1);
-				this.searchText = '';
-				var size = this.jellybeanList.length;
-	
-				if (this.jellybeanMax) {
-					if (size <= this.jellybeanMax) {
-						this.isError = false;
-					}
-				}
+				this.select2SearchText = '';
 			}
 		}
 	};
+
 	// </script>
 
 	/* generated by vue-loader */
+	// <template>
+	// 	<div class="jellybean" :class="{'error':jellybeanMaxError}">
+	// 		<ul class='jellybean-container clearfix'>
+	// 			<li class="jellybean-container-item" v-for='item in select2List' track-by="$index">
+	// 				<span class="jellybean-suggest-show">
+	// 					<span class="value" v-text='item.text'></span>
+	// 					<button type="button" class="remove" @click='remove2SelectList($index)'>×</button>
+	// 				</span>
+	// 			</li>
+	// 			<li class="jellybean-container-item">
+	// 				<span class="jellybean-suggest-input">
+	// 					<input type="text" class="jellybean-input" :placeholder="placeholder" v-model='select2SearchText' debounce="500" @click.stop>					
+	// 					<ul class='jellybean-result' :class="{'show':select2IsHide}" v-cloak>					
+	// 						<li v-for='item in select2SearchResult' track-by="$index" v-if='!promptMessage'>
+	// 							<a href="javascript:;" :title="item.text" class="jellybean-result-link" v-html='item.text | highlight select2SearchText' @click='Add2Select2List(item.text)'>
+	// 							</a>
+	// 						</li>		
+	// 						<li v-if='promptMessage'>
+	// 							<span class='jellybean-result-link jellybean-result-error text-center' v-text='msgCustom'>
+	// 							</span>
+	// 						</li>
+	// 					</ul>
+	// 				</span>
+	// 			</li>
+	// 		</ul>
+	// 	</div>
+	// </template>
+	//
+	// <script>
 
 /***/ },
 /* 13 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"jellybean\" :class=\"{'error':isError}\">\n\t<ul class='jellybean-container clearfix'>\n\t\t<li class=\"jellybean-container-item\" v-for='item in jellybeanList' track-by=\"$index\">\n\t\t\t<span class=\"jellybean-suggest-show\">\n\t\t\t\t<span class=\"value\" v-text='item'></span>\n\t\t\t\t<button type=\"button\" class=\"remove\" @click='remove($index)'>×</button>\n\t\t\t</span>\n\t\t</li>\n\t\t<li class=\"jellybean-container-item\">\n\t\t\t<span class=\"jellybean-suggest-input\">\n\t\t\t\t<input type=\"text\" class=\"jellybean-input\" :placeholder=\"placeholder\" v-model='searchText' @keyup='search | debounce 500'>\n\t\t\t\t<ul class='jellybean-result' :class=\"{'show':isShow}\">\n\t\t\t\t\t<li v-for='item in searchResult | filterBy searchText'>\n\t\t\t\t\t\t<a href=\"javascript:;\" class=\"jellybean-result-link\" v-html='item.show | capitalize' @click='addInjellybeanList(item.origin)'></a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li v-if='promptMessage'>\n\t\t\t\t\t\t<a href='javascript:;' class='jellybean-result-link text-center' v-text='msgCustom'>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</span>\n\t\t</li>\n\t</ul>\n</div>\n";
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(15)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] components\\src\\Select2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(31)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
-	  if (!hotAPI.compatible) return
-	  var id = "D:\\project\\regbuzzDemo\\components\\src\\Select2.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+		value: true
 	});
 	
-	var _assign = __webpack_require__(16);
+	var _assign = __webpack_require__(14);
 	
 	var _assign2 = _interopRequireDefault(_assign);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// <template>
-	// 	<div id="select2">
-	// 		<div class="select2">
-	// 			<a href="javascript:;" title="select" class='select2-choice' @click.stop='select2IsHide = !select2IsHide'>
-	// 				Any Location
-	// 				<i class="fa" :class="{'fa-angle-down':select2IsHide,'fa-angle-up':!select2IsHide}"></i>
-	// 			</a>
-	// 			<div class='select2-drop' :class="{'select2-drop-hide':select2IsHide , 'select2-drop-show':!select2IsHide}" v-cloak>
-	// 				<div class='select2-search'>
-	// 					<input type="text" name="" value="" placeholder="" class='form-control' v-model='select2SearchText' @click.stop>
-	// 				</div>
-	// 				<ul class='select2-content'>
-	// 					<li v-for='country in select2SearchResult' track-by="$index">
-	// 						<a href="javascript:;" :title="country.text" v-html='country.text | highlight select2SearchText' @click='Add2Select2List(country.text)'>
-	// 						</a>
-	// 					</li>
-	// 				</ul>
-	// 			</div>
-	// 		</div>
-	// 		<ul class='checkbox-list'>		
-	// 			<li class="checkbox" v-for='item in select2List' v-cloak>
-	// 	        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{item.text}}" for="{{item.short}}" @mouseup='remove2SelectList($index)'>
-	// 				  <input type="checkbox" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames'>
-	// 				  <span class="c-indicator"></span>
-	// 				  <span v-text='item.text'></span>
-	// 				</label>
-	// 			</li>
-	// 		</ul>
-	// 	</div> 								
-	// </template>
-	//
-	// <script>
-	exports.default = {
-	  props: {
-	    originData: {
-	      type: Array,
-	      require: true
-	    }
-	  },
-	  data: function data() {
-	    return {
-	      select2IsHide: true,
-	      select2SearchText: '',
-	      resultData: [],
-	      select2List: [],
-	      select2SearchResult: [],
-	      select2CheckedNames: []
-	    };
-	  },
+	var select2Mixin = {
+		props: {
+			originData: {
+				type: Array,
+				require: true
+			}
+		},
+		data: function data() {
+			return {
+				select2IsHide: false,
+				select2SearchText: '',
+				resultData: [],
+				select2SearchResult: [],
+				select2List: []
+			};
+		},
 	
-	  created: function created() {
+		created: function created() {
+			var self = this;
+			this.originData.forEach(function (element) {
+				self.resultData.push((0, _assign2.default)({}, element, {
+					isForbid: false
+				}));
+			});
+		},
+		computed: {
+			select2SearchResult: function select2SearchResult() {
+				var self = this,
+				    newArr = [],
+				    text = this.select2SearchText.trim().toLowerCase();
 	
-	    var newArr = [];
-	    this.originData.forEach(function (element) {
-	      newArr.push((0, _assign2.default)({}, element, { isForbid: false }));
-	    });
+				if (this.resultData.length !== 0) {
+					this.resultData.forEach(function (element, index) {
 	
-	    this.resultData = newArr;
-	  },
+						if (!element.isForbid) {
+							if (text) {
+								var str = element['text'].toLowerCase();
+								if (str.indexOf(text) !== -1) {
+									newArr.push(element);
+								}
+							} else {
+								newArr.push(element);
+							}
+						}
+					});
+				}
+				return newArr;
+			}
+		},
+		ready: function ready() {
+			var self = this;
 	
-	  ready: function ready() {
-	    var self = this;
+			$(window).on('click', function (event) {
+				event.stopPropagation();
+				if (self.select2IsHide) {
+					self.select2IsHide = false;
+					self.select2SearchText = '';
+				}
+			});
+		},
 	
-	    $(window).on('click', function (event) {
-	      event.stopPropagation();
-	      if (!self.select2IsHide) {
-	        self.select2IsHide = true;
-	      }
-	    });
-	  },
-	  computed: {
-	    select2SearchResult: function select2SearchResult() {
-	      var self = this,
-	          newArr = [],
-	          text = this.select2SearchText.trim().toLowerCase();
-	
-	      if (this.resultData.length !== 0) {
-	        this.resultData.forEach(function (element, index) {
-	
-	          if (!element.isForbid) {
-	            if (text) {
-	              var str = element['text'].toLowerCase();
-	              if (str.indexOf(text) !== -1) {
-	                newArr.push(element);
-	              }
-	            } else {
-	              newArr.push(element);
-	            }
-	          }
-	        });
-	      }
-	
-	      return newArr;
-	    }
-	  },
-	  methods: {
-	    Add2Select2List: function Add2Select2List(str) {
-	      var self = this,
-	          newArr = [];
-	
-	      this.resultData.forEach(function (element, index) {
-	        newArr.push(element.text);
-	      });
-	
-	      var isIndex = $.inArray(str, newArr);
-	
-	      if (isIndex !== -1) {
-	        this.select2CheckedNames.push(self.resultData[isIndex].text);
-	        this.select2List.push({
-	          text: self.resultData[isIndex].text,
-	          short: self.resultData[isIndex].short,
-	          index: isIndex
-	        });
-	
-	        this.resultData[isIndex].isForbid = true;
-	      }
-	
-	      this.select2SearchText = '';
-	    },
-	    remove2SelectList: function remove2SelectList(index) {
-	      var originIndex = this.select2List[index].index;
-	      this.resultData[originIndex].isForbid = false;
-	      this.select2List.splice(index, 1);
-	    }
-	  },
-	  filters: {
-	    highlight: function highlight(value, phrase) {
-	      return value.replace(new RegExp('(' + phrase + ')', 'gi'), '<strong>$1</strong>');
-	    }
-	  }
+		methods: {
+			remove2SelectList: function remove2SelectList(index) {
+				var originIndex = this.select2List[index].index;
+				this.resultData[originIndex].isForbid = false;
+				this.select2List.splice(index, 1);
+			}
+		}
 	};
-	// </script>
-	/* generated by vue-loader */
+	
+	exports.default = select2Mixin;
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(15), __esModule: true };
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(16);
+	module.exports = __webpack_require__(19).Object.assign;
 
 /***/ },
 /* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(17), __esModule: true };
+	// 19.1.3.1 Object.assign(target, source)
+	var $export = __webpack_require__(17);
+	
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(22)});
 
 /***/ },
 /* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(18);
-	module.exports = __webpack_require__(21).Object.assign;
-
-/***/ },
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.1 Object.assign(target, source)
-	var $export = __webpack_require__(19);
-	
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(24)});
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global    = __webpack_require__(20)
-	  , core      = __webpack_require__(21)
-	  , ctx       = __webpack_require__(22)
+	var global    = __webpack_require__(18)
+	  , core      = __webpack_require__(19)
+	  , ctx       = __webpack_require__(20)
 	  , PROTOTYPE = 'prototype';
 	
 	var $export = function(type, name, source){
@@ -1034,7 +901,7 @@
 	module.exports = $export;
 
 /***/ },
-/* 20 */
+/* 18 */
 /***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -1043,18 +910,18 @@
 	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ },
-/* 21 */
+/* 19 */
 /***/ function(module, exports) {
 
 	var core = module.exports = {version: '1.2.6'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
-/* 22 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
-	var aFunction = __webpack_require__(23);
+	var aFunction = __webpack_require__(21);
 	module.exports = function(fn, that, length){
 	  aFunction(fn);
 	  if(that === undefined)return fn;
@@ -1075,7 +942,7 @@
 	};
 
 /***/ },
-/* 23 */
+/* 21 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -1084,16 +951,16 @@
 	};
 
 /***/ },
-/* 24 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.1 Object.assign(target, source, ...)
-	var $        = __webpack_require__(25)
-	  , toObject = __webpack_require__(26)
-	  , IObject  = __webpack_require__(28);
+	var $        = __webpack_require__(23)
+	  , toObject = __webpack_require__(24)
+	  , IObject  = __webpack_require__(26);
 	
 	// should work with symbols and should have deterministic property order (V8 bug)
-	module.exports = __webpack_require__(30)(function(){
+	module.exports = __webpack_require__(28)(function(){
 	  var a = Object.assign
 	    , A = {}
 	    , B = {}
@@ -1122,7 +989,7 @@
 	} : Object.assign;
 
 /***/ },
-/* 25 */
+/* 23 */
 /***/ function(module, exports) {
 
 	var $Object = Object;
@@ -1140,17 +1007,17 @@
 	};
 
 /***/ },
-/* 26 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(27);
+	var defined = __webpack_require__(25);
 	module.exports = function(it){
 	  return Object(defined(it));
 	};
 
 /***/ },
-/* 27 */
+/* 25 */
 /***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
@@ -1160,17 +1027,17 @@
 	};
 
 /***/ },
-/* 28 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(29);
+	var cof = __webpack_require__(27);
 	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
 /***/ },
-/* 29 */
+/* 27 */
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -1180,7 +1047,7 @@
 	};
 
 /***/ },
-/* 30 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = function(exec){
@@ -1192,10 +1059,127 @@
 	};
 
 /***/ },
-/* 31 */
+/* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"select2\">\n\t<div class=\"select2\">\n\t\t<a href=\"javascript:;\" title=\"select\" class='select2-choice' @click.stop='select2IsHide = !select2IsHide'>\n\t\t\tAny Location\n\t\t\t<i class=\"fa\" :class=\"{'fa-angle-down':select2IsHide,'fa-angle-up':!select2IsHide}\"></i>\n\t\t</a>\n\t\t<div class='select2-drop' :class=\"{'select2-drop-hide':select2IsHide , 'select2-drop-show':!select2IsHide}\" v-cloak>\n\t\t\t<div class='select2-search'>\n\t\t\t\t<input type=\"text\" name=\"\" value=\"\" placeholder=\"\" class='form-control' v-model='select2SearchText' @click.stop>\n\t\t\t</div>\n\t\t\t<ul class='select2-content'>\n\t\t\t\t<li v-for='country in select2SearchResult' track-by=\"$index\">\n\t\t\t\t\t<a href=\"javascript:;\" :title=\"country.text\" v-html='country.text | highlight select2SearchText' @click='Add2Select2List(country.text)'>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n\t<ul class='checkbox-list'>\t\t\n\t\t<li class=\"checkbox\" v-for='item in select2List' v-cloak>\n        \t<label class=\"c-input c-checkbox\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"{{item.text}}\" for=\"{{item.short}}\" @mouseup='remove2SelectList($index)'>\n\t\t\t  <input type=\"checkbox\" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames'>\n\t\t\t  <span class=\"c-indicator\"></span>\n\t\t\t  <span v-text='item.text'></span>\n\t\t\t</label>\n\t\t</li>\n\t</ul>\n</div> \t\t\t\t\t\t\t\t\n";
+	module.exports = "\n<div class=\"jellybean\" :class=\"{'error':jellybeanMaxError}\">\n\t<ul class='jellybean-container clearfix'>\n\t\t<li class=\"jellybean-container-item\" v-for='item in select2List' track-by=\"$index\">\n\t\t\t<span class=\"jellybean-suggest-show\">\n\t\t\t\t<span class=\"value\" v-text='item.text'></span>\n\t\t\t\t<button type=\"button\" class=\"remove\" @click='remove2SelectList($index)'>×</button>\n\t\t\t</span>\n\t\t</li>\n\t\t<li class=\"jellybean-container-item\">\n\t\t\t<span class=\"jellybean-suggest-input\">\n\t\t\t\t<input type=\"text\" class=\"jellybean-input\" :placeholder=\"placeholder\" v-model='select2SearchText' debounce=\"500\" @click.stop>\t\t\t\t\t\n\t\t\t\t<ul class='jellybean-result' :class=\"{'show':select2IsHide}\" v-cloak>\t\t\t\t\t\n\t\t\t\t\t<li v-for='item in select2SearchResult' track-by=\"$index\" v-if='!promptMessage'>\n\t\t\t\t\t\t<a href=\"javascript:;\" :title=\"item.text\" class=\"jellybean-result-link\" v-html='item.text | highlight select2SearchText' @click='Add2Select2List(item.text)'>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\t\t\n\t\t\t\t\t<li v-if='promptMessage'>\n\t\t\t\t\t\t<span class='jellybean-result-link jellybean-result-error text-center' v-text='msgCustom'>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</span>\n\t\t</li>\n\t</ul>\n</div>\n";
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(31)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] components\\src\\Select2.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(32)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), true)
+	  if (!hotAPI.compatible) return
+	  var id = "e:\\regbuzzDemo\\components\\src\\Select2.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _select2Mixin = __webpack_require__(13);
+	
+	var _select2Mixin2 = _interopRequireDefault(_select2Mixin);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  mixins: [_select2Mixin2.default],
+	  data: function data() {
+	    return {
+	      select2CheckedNames: []
+	    };
+	  },
+	
+	  methods: {
+	    Add2Select2List: function Add2Select2List(str) {
+	      var self = this,
+	          newArr = [];
+	
+	      this.resultData.forEach(function (element, index) {
+	        newArr.push(element.text);
+	      });
+	
+	      var isIndex = $.inArray(str, newArr);
+	
+	      if (isIndex !== -1) {
+	        this.select2CheckedNames.push(self.resultData[isIndex].text);
+	        this.select2List.push({
+	          text: self.resultData[isIndex].text,
+	          short: self.resultData[isIndex].short,
+	          index: isIndex
+	        });
+	        this.resultData[isIndex].isForbid = true;
+	      }
+	      this.select2SearchText = '';
+	    }
+	  }
+	};
+	// </script>
+	/* generated by vue-loader */
+	// <template>
+	// 	<div id="select2">
+	// 		<div class="select2">
+	// 			<a href="javascript:;" title="select" class='select2-choice' @click.stop='select2IsHide = !select2IsHide'>
+	// 				Any Location
+	// 				<i class="fa" :class="{'fa-angle-down':!select2IsHide,'fa-angle-up':select2IsHide}"></i>
+	// 			</a>
+	// 			<div class='select2-drop' :class="{'select2-drop-hide':!select2IsHide , 'select2-drop-show':select2IsHide}" v-cloak>
+	// 				<div class='select2-search'>
+	// 					<input type="text" name="" value="" placeholder="" class='form-control' v-model='select2SearchText' @click.stop>
+	// 				</div>
+	// 				<ul class='select2-content'>
+	// 					<li v-for='country in select2SearchResult' track-by="$index">
+	// 						<a href="javascript:;" :title="country.text" v-html='country.text | highlight select2SearchText' @click='Add2Select2List(country.text)'>
+	// 						</a>
+	// 					</li>
+	// 				</ul>
+	// 			</div>
+	// 		</div>
+	// 		<ul class='checkbox-list'>		
+	// 			<li class="checkbox" v-for='item in select2List' v-cloak>
+	// 	        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{item.text}}" for="{{item.short}}" @mouseup='remove2SelectList($index)'>
+	// 				  <input type="checkbox" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames'>
+	// 				  <span class="c-indicator"></span>
+	// 				  <span v-text='item.text'></span>
+	// 				</label>
+	// 			</li>
+	// 		</ul>
+	// 	</div> 								
+	// </template>
+	//
+	// <script>
+
+/***/ },
+/* 32 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div id=\"select2\">\n\t<div class=\"select2\">\n\t\t<a href=\"javascript:;\" title=\"select\" class='select2-choice' @click.stop='select2IsHide = !select2IsHide'>\n\t\t\tAny Location\n\t\t\t<i class=\"fa\" :class=\"{'fa-angle-down':!select2IsHide,'fa-angle-up':select2IsHide}\"></i>\n\t\t</a>\n\t\t<div class='select2-drop' :class=\"{'select2-drop-hide':!select2IsHide , 'select2-drop-show':select2IsHide}\" v-cloak>\n\t\t\t<div class='select2-search'>\n\t\t\t\t<input type=\"text\" name=\"\" value=\"\" placeholder=\"\" class='form-control' v-model='select2SearchText' @click.stop>\n\t\t\t</div>\n\t\t\t<ul class='select2-content'>\n\t\t\t\t<li v-for='country in select2SearchResult' track-by=\"$index\">\n\t\t\t\t\t<a href=\"javascript:;\" :title=\"country.text\" v-html='country.text | highlight select2SearchText' @click='Add2Select2List(country.text)'>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n\t<ul class='checkbox-list'>\t\t\n\t\t<li class=\"checkbox\" v-for='item in select2List' v-cloak>\n        \t<label class=\"c-input c-checkbox\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"{{item.text}}\" for=\"{{item.short}}\" @mouseup='remove2SelectList($index)'>\n\t\t\t  <input type=\"checkbox\" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames'>\n\t\t\t  <span class=\"c-indicator\"></span>\n\t\t\t  <span v-text='item.text'></span>\n\t\t\t</label>\n\t\t</li>\n\t</ul>\n</div> \t\t\t\t\t\t\t\t\n";
 
 /***/ }
 /******/ ]);

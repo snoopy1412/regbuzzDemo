@@ -1,123 +1,123 @@
 var languagesData = [
 	{
 		local:'Bahasa Indonesia',
-		en:'Bahasa Indonesia',
+		text:'Bahasa Indonesia',
 		abbr:'ID'
 	},
 	{
 		local:'Bahasa Malaysia',
-		en:'Malay',
+		text:'Malay',
 		abbr:'MS'
 	},
 	{
 		local:'Čeština',
-		en:'Czech',
+		text:'Czech',
 		abbr:'CS'
 	},
 	{
 		local:'Dansk',
-		en:'Danish',
+		text:'Danish',
 		abbr:'DA'
 	},
 	{
 		local:'Deutsch',
-		en:'German',
+		text:'German',
 		abbr:'DE'
 	},
 	{
 		local:'English',
-		en:'English',
+		text:'English',
 		abbr:'EN'
 	},
 	{
 		local:'Español',
-		en:'Spanish',
+		text:'Spanish',
 		abbr:'ES'
 	},
 
 	{
 		local:'正體中文',
-		en:'Chinese(Traditional)',
+		text:'Chinese(Traditional)',
 		abbr:'ZH-TW'
 	},
 	{
 		local:'Français',
-		en:'French',
+		text:'French',
 		abbr:'FR'
 	},
 	{
 		local:'한국어',
-		en:'Korean',
+		text:'Korean',
 		abbr:'KO'
 	},
 	{
 		local:'Italiano',
-		en:'Italian',
+		text:'Italian',
 		abbr:'IT'
 	},
 	{
 		local:'简体中文',
-		en:'Chinese(Simplified)',
+		text:'Chinese(Simplified)',
 		abbr:'ZH-CN'
 	},
 	{
 		local:'Nederlands',
-		en:'Dutch',
+		text:'Dutch',
 		abbr:'NL'
 	},
 	{
 		local:'日本語',
-		en:'Japanese',
+		text:'Japanese',
 		abbr:'JA'
 	},
 	{
 		local:'Norsk',
-		en:'Norwegian',
+		text:'Norwegian',
 		abbr:'NO'
 	},
 	{
 		local:'Polski',
-		en:'Polish',
+		text:'Polish',
 		abbr:'PL'
 	},
 	{
 		local:'Português',
-		en:'Portuguese',
+		text:'Portuguese',
 		abbr:'PT'
 	},
 	{
 		local:'Română',
-		en:'Romanian',
+		text:'Romanian',
 		abbr:'RO'
 	},
 	{
 		local:'Русский',
-		en:'Russian',
+		text:'Russian',
 		abbr:'RU'
 	},
 	{
 		local:'Svenska',
-		en:'Swedish',
+		text:'Swedish',
 		abbr:'SV'
 	},
 	{
 		local:'Tagalog',
-		en:'Tagalog',
+		text:'Tagalog',
 		abbr:'TL'
 	},
 	{
 		local:'ภาษาไทย',
-		en:'Thai',
+		text:'Thai',
 		abbr:'TH'
 	},
 	{
 		local:'Türkçe',
-		en:'Turkish',
+		text:'Turkish',
 		abbr:'TR'
 	},
 	{
 		local:'العربية',
-		en:'Arabic',
+		text:'Arabic',
 		abbr:'AR'
 	}
 ]

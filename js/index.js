@@ -25,10 +25,4 @@ define(['popoverCustom','revealOnScroll', 'hoverMask'],function(popoverCustom,re
 	})
 
 
-
-  // 为验证页面做
- 	// $('#verification-statement').modal({
- 	// 	show : true
- 	// });
-
 });
