@@ -46,7 +46,7 @@ require.config({
   }
 });
 
-require(['jquery','Vue','bootstrap','index','header','dashboard', 'list', 'profile', 'publish', 'register', 'blog','setting','help','project-list','top-up','wysiwyg-handle'], function($,Vue) {
+require(['jquery','Vue','bootstrap','index','header','dashboard', 'list', 'profile', 'publish', 'register','setting','help','project-list','top-up','wysiwyg-handle'], function($,Vue) {
  
 
   // 全局bootstrap 启用tootip

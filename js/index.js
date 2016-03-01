@@ -12,7 +12,6 @@ define(['popoverCustom','revealOnScroll', 'hoverMask'],function(popoverCustom,re
   		event.preventDefault();
 		if($(this).data('showInfo')===undefined){
 			$(this).data('showInfo',true);
-			
 		}
 		if($(this).data('showInfo'))
 		{
@@ -23,12 +22,5 @@ define(['popoverCustom','revealOnScroll', 'hoverMask'],function(popoverCustom,re
 			$(this).data('showInfo',true);
 		}
 	})
-
-
-
-  // 为验证页面做
- 	// $('#verification-statement').modal({
- 	// 	show : true
- 	// });
 
 });

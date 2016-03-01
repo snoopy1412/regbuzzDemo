@@ -1,4 +1,3 @@
-define(['./js/dashboard-controller.js'],function(){
-
-
+define(function(require){
+	require('./js/dashboard-controller.js');
 });
