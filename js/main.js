@@ -9,6 +9,10 @@ require.config({
     // plugins 区域
     jRange:'../plugins/jRange/jquery.range-min', // 自定义滑竿
     wysiwyg:'../plugins/wysiwyg/wysiwyg', //第三方富文本编辑器
+    WebUploader : '../plugins/webuploader/webuploader.min',  //第三方上传插件
+    moment : '../plugins/datetimepicker/moment.min',
+    datetimepicker : '../plugins/datetimepicker/bootstrap-datetimepicker',
+
 
     // 自编写 components 区域
     popoverCustom: './components/popoverCustom', // 自制弹窗插件
@@ -48,7 +52,7 @@ require.config({
   }
 });
 
-require(['jquery','Vue','bootstrap','index','header','dashboard', 'list', 'profile', 'publish', 'register','setting','help','project-list','top-up','wysiwyg-handle'], function($,Vue) {
+require(['jquery','Vue','bootstrap','index','header','dashboard', 'list', 'profile', 'publish', 'register','setting','help','project-list','top-up','account'], function($,Vue) {
  
 
   // 全局bootstrap 启用tootip

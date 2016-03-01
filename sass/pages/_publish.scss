@@ -23,9 +23,10 @@
     position: relative;
     padding: 20px;
     padding-top: 80px;
-    label{
+    .control-label{
         color:#999;
         font-weight: 300;
+        text-align: left;
     }
 
 }

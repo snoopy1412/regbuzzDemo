@@ -7160,6 +7160,33 @@ ul {
     .select2-content li > a:hover {
       border-left: 5px solid #2185d0; }
 
+.webuploader-container {
+  position: relative; }
+
+.webuploader-element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.webuploader-pick {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background: #2185d0;
+  padding: 6px 12px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden; }
+
+.webuploader-pick-hover {
+  background: #2d92de; }
+
+.webuploader-pick-disable {
+  opacity: 0.6;
+  pointer-events: none; }
+
 .container-fluid--4 {
   padding-left: 60px;
   padding-right: 60px; }
@@ -8786,9 +8813,10 @@ ul {
   position: relative;
   padding: 20px;
   padding-top: 80px; }
-  .pub-item label {
+  .pub-item .control-label {
     color: #999;
-    font-weight: 300; }
+    font-weight: 300;
+    text-align: left; }
 
 .pub-item-title {
   position: absolute;

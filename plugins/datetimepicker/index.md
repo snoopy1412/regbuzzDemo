@@ -1,3 +1,4 @@
+#http://eonasdan.github.io/bootstrap-datetimepicker/Options/
 #Bootstrap 3 Datepicker v4 Docs
 
 <div class="alert alert-info">

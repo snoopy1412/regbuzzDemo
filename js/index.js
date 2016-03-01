@@ -1,4 +1,5 @@
 define(['popoverCustom','revealOnScroll', 'hoverMask'],function(popoverCustom,revealOnScroll, hoverMask){
+
   // 首页滚动监听元素添加渐入效果
   new revealOnScroll.RevealOnScroll();
 
@@ -23,8 +24,4 @@ define(['popoverCustom','revealOnScroll', 'hoverMask'],function(popoverCustom,re
 		}
 	})
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b5cc74b505d37aa3e98658ada3a8b85197fc33a4
 });

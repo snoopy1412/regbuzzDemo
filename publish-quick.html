@@ -335,13 +335,13 @@
 				<div class="col-md-9">
 					<section class="pub-main">					
 						<div class='pub-content'>
-							<form class="form-horizontal" id='vue-pubController'>
+							<div class="form-horizontal" id='vue-pubController'>
 
 								<!-- 任务基本信息 -->
 								<div class="row pub-item pub-item-base">
 									<h3 class='pub-item-title col-md-12'>Project Basic Information (required*)</h3>
 									<div class="form-group">
-										<label for="select-category" class='col-md-3'>Choose a category</label>
+										<label for="select-category" class='col-md-3 control-label'>Choose a category</label>
 										<div class="col-md-9">
 
 											<!-- 加载二级联动，此组件来自于 components/Linkage.vue -->
@@ -350,7 +350,7 @@
 										</div>							
 									</div>
 									<div class="form-group">
-										<label for="job-name" class='col-md-3'>Give your job a name</label>
+										<label for="job-name" class='col-md-3 control-label'>Give your job a name</label>
 										<div class="col-md-9 dropdown">
 											<input type="text" name="" value="" placeholder="" class='form-control dropdown-toggle' id='job-name' data-toggle="dropdown" />
 											
@@ -388,7 +388,7 @@
 									
 									<!-- Job Description -->
 									<div class="form-group">
-										<label for="pub-profile-txt" class='col-md-3'>Job Description</label>
+										<label for="pub-profile-txt" class='col-md-3 control-label'>Job Description</label>
 										<div class="col-md-9">
 											<div data-toggle='dropdown'>
 
@@ -411,7 +411,7 @@
 									
 									<!-- 预算 -->
 									<div class="form-group">
-										<label for="pub-budget-txt" class='col-md-3'>Budget</label>
+										<label for="pub-budget-txt" class='col-md-3 control-label'>Budget</label>
 										<div class="col-md-9">
 								      		<select id="project-budget" name="budget" class='form-control' v-model='selectedBudget'>
 								      			<option value="192">微项目 ($80-240 USD)</option>
@@ -451,7 +451,7 @@
 
 									<!-- Estimated Duration -->
 									<div class="form-group">
-										<label for="estimated" class='col-md-3'>Estimated Duration</label>
+										<label for="estimated" class='col-md-3 control-label'>Estimated Duration</label>
 										<div class="col-md-9">
 											<select class="form-control form-control-all" id='estimated'>
 											    <option value="" label="Please select...">Please select...</option>
@@ -471,9 +471,19 @@
 								<div class="row pub-item">
 									<h3 class='pub-item-title col-md-12'>Attachment</h3>
 									<div class='form-group'>
-										<label for="document" class='col-md-3'>Attach a document</label>
+										<label for="document" class='col-md-3 control-label'>Attach a document</label>
 										<div class="col-md-9">
-											<input type="file" id='document'>
+											<!-- <input type="file" id='document'> -->
+												<div id="upload">
+														<div class="btns">
+												        <div id="picker"><i class="fa fa-cloud-upload fa-lg"></i> 选择文件</div>
+												        <div id="thelist" class="uploader-list">
+												        	<table class="table table-hover table-condensed">
+												        	</table>
+												        </div>
+												        <button id="ctlBtn" class="btn btn-info" style='display: none'>开始上传</button>  
+											 	   </div>
+												</div>
 										</div>
 									</div>
 								</div>
@@ -485,7 +495,7 @@
 
 									<!-- Marketplace Visibility -->
 									<div class="form-group">
-										<label for="marketplace" class='col-md-3'>Marketplace Visibility</label>
+										<label for="marketplace" class='col-md-3 control-label'>Marketplace Visibility</label>
 										<div class="col-md-9">
 											<select class='form-control form-control-all' id='marketplace'>
 										    <option value="public" label="All consultants can find this job">All consultants can find this job</option>
@@ -496,7 +506,7 @@
 
 									<!-- language -->
 									<div class="form-group">
-										<label class='col-md-3'>Special Language Requirement</label>
+										<label class='col-md-3 control-label'>Special Language Requirement</label>
 										<div class="col-md-9">
 											
 											<!-- 加载jellybean组件，此组件来自于 components/Jellybean.vue -->
@@ -524,7 +534,7 @@
 
 									<!-- Location -->
 									<div class="form-group">
-										<label for="location" class='col-md-3'>Candidates Location</label>
+										<label for="location" class='col-md-3 control-label'>Candidates Location</label>
 										<div class="col-md-9">
 											<div class="row row--no-padding">
 												<div class="col-md-6">
@@ -551,7 +561,7 @@
 
 									<!-- Verification -->
 									<div class="form-group">
-										<label for="" class='col-md-3'>Candidates Verification</label>
+										<label for="" class='col-md-3 control-label'>Candidates Verification</label>
 										<div class="col-md-9 clearfix radiobox-list">
 											  <label class="c-input c-checkbox">
 											  <input id="radio1" name="checkbox" type="checkbox" checked>
@@ -653,7 +663,7 @@
 										</label>
 									</div>
 								</div>
-							</form>
+							</div>
 						</div>
 					</section>				
 				</div>
