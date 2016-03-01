@@ -1,3 +1,3 @@
-define(['./js/header-controller.js'],function(){
-	
-})
+define(function(require){
+	require('./js/header-controller.js');
+});

@@ -12,7 +12,6 @@ define(['popoverCustom','revealOnScroll', 'hoverMask'],function(popoverCustom,re
   		event.preventDefault();
 		if($(this).data('showInfo')===undefined){
 			$(this).data('showInfo',true);
-			
 		}
 		if($(this).data('showInfo'))
 		{
@@ -24,5 +23,8 @@ define(['popoverCustom','revealOnScroll', 'hoverMask'],function(popoverCustom,re
 		}
 	})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b5cc74b505d37aa3e98658ada3a8b85197fc33a4
 });

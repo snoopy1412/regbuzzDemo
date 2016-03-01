@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.Jcrop.min.css">
+	<style type="text/css">
+		#preview_id{
+			display: block;
+		    /*padding: 6px;*/
+		    border: 1px rgba(0,0,0,.4) solid;
+		    border-radius: 6px;
+		    background-color: white;
+		    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+	        width: 200px;
+		    height: 200px;
+		    overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<img src="demos/demo_files/pool.jpg" alt="" id="element_id">
+<hr>
+	<div id="preview_id">
+
+			<img src="demos/demo_files/pool.jpg" alt="" id="preview_img">
+	</div>
+
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/jquery.Jcrop.min.js'></script>
+	<script type="text/javascript">
+		var $pcnt = $('#preview_id');
+		xsize = $pcnt.width();
+		ysize = $pcnt.height();
+		var jcrop = $('#element_id').Jcrop({
+			aspectRatio : 1,
+			minSize:[20,20],
+			onChange : function(){
+				var self = this;
+				var c = this.tellSelect();
+				var $pimg = $('#preview_img');
+				   if (parseInt(c.w) > 0) {
+				      var rx = xsize / c.w;
+				      var ry = ysize / c.h;
+				      $pimg.css({
+				        width: Math.round(rx * self.getBounds().x) + 'px',
+				        height: Math.round(ry *  self.getBounds().y) + 'px',
+				        marginLeft: '-' + Math.round(rx * c.x) + 'px',
+				        marginTop: '-' + Math.round(ry * c.y) + 'px'
+				      });
+				     }
+			},
+			onDblClick : function(){
+				this.release()
+				console.log(this.tellSelect());
+			}
+		},function(){
+			 jcrop_api = this;
+			 jcrop_api.animateTo([0,0,200,200]);
+		});
+
+
+
+
+
+
+
+
+
+
+		// 
+		// 可行
+		// $('#element_id').Jcrop({
+		// 	aspectRatio : 1,
+		// 	minSize:[20,20],
+		// 	setSelect : ([0,0,100,100])
+		// });
+	</script>
+</body>
+</html>
