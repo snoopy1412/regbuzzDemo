@@ -9,7 +9,7 @@ define(['jquery','WebUploader'],function($,WebUploader){
 		var uploader = WebUploader.create({
 
 		    // swf文件路径
-		    swf: '/js/Uploader.swf',
+		    swf: '../plugins/webuploader/swf/Uploader.swf',
 
 		    // 文件接收服务端。
 		    server: './server/fileupload.php',

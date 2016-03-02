@@ -19,6 +19,9 @@
 </head>
 <!-- head.html end-->
 <body>
+
+
+<link rel="stylesheet" type="text/css" href="./plugins/jcrop/jquery.Jcrop.min.css">
 <!-- header.html -->
 	<!-- /header -->
 	<header class="header" id='vue-header'>
@@ -331,7 +334,12 @@
 				<section class='profile-info profile-info--person section'>
 					<div class='clearfix'>
 						 <div class="pull-left profile-info--person-img">
-						 		<img src="./img/index/servers/13.jpg" alt="Aaron Su" width="100%">
+						 		
+						 		<!-- 头像区域 -->
+						 		<div class='profile-avatar'>
+						 			<img src="./img/index/servers/13.jpg" alt="Aaron Su" width="100%">
+						 			<a title="change your avatar" class='profile-avatar-upload' data-toggle="modal" data-target="#person-avatar-crop"><i class="fa fa-camera fa-4x"></i></a>
+						 		</div>
 							 	<section class='profile-info--person-register text-center'>
 							 		<div class="location">
 							 			<div class='edit-start' v-show='countryData.hideOrigin'>
@@ -1625,6 +1633,50 @@
 	      	<button type="button" class="btn btn-primary" data-dismiss="modal" @click='publishAdd'>Save</button>
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- 裁剪-->
+	<div class="modal fade" id="person-avatar-crop" tabindex="-1">
+	  <div class="modal-dialog modal-lg">
+	    <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Edit Photo</h4>
+			</div>
+			<div class="modal-body">
+				<p>Make sure you're looking your best...</p>
+				<section class="modal-profile-avatar-upload">
+					<div class="row" id='person-avatar-preview'>
+						<div class="col-md-6 has-border-right">
+							<p>Choose a Photo <small>You can upload a JPEG, GIF, or PNG file (File size limit is 8 MB).</small>	</p>
+							<div id="filePicker" style="width: 80px;height: 31px;">选择图片</div>
+							<div class="img-crop">
+								
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="img-preview-origin">
+								
+							</div>
+							<div class='img-preview-size'>
+								<ul>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id='upload-avator'>upload</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal" id='upload-resize'>cancel</button>
+			</div>
 	    </div>
 	  </div>
 	</div>		

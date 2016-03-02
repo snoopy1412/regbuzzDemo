@@ -8653,6 +8653,30 @@ ul {
   border-radius: 2px;
   background-color: #fff; }
 
+.profile-avatar {
+  position: relative; }
+
+.profile-avatar-upload {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: #ddd;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; }
+  .profile-avatar-upload .fa {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto; }
+  .profile-avatar-upload:hover {
+    color: #ddd; }
+
 .profile-info--person-register {
   padding-top: 10px; }
 
@@ -8793,6 +8817,26 @@ ul {
 
 .profile-info-aside .blogs .blogs-list a {
   color: #555; }
+
+#person-avatar-crop .modal-profile-avatar-upload {
+  position: relative;
+  background: #eee;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+#person-avatar-crop .img-crop {
+  margin-top: 20px;
+  min-height: 235px;
+  overflow: hidden; }
+
+#person-avatar-crop .has-border-right {
+  border-right: 1px solid #ddd; }
+
+#person-avatar-crop .preview-container {
+  width: 202px;
+  height: 202px;
+  overflow: hidden;
+  border: 1px solid #ccc; }
 
 .pub-main {
   padding: 20px;

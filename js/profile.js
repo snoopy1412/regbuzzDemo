@@ -1,4 +1,4 @@
-define(['raty','./js/profile-controller.js'],function(raty) {
+define(['raty','./js/profile-crop.js','./js/profile-controller.js'],function(raty) {
 
     // 星星评级
     $('.totalScore').raty({
@@ -52,5 +52,12 @@ $('.edit-start').hover(function(){
 })
 
 
+
+    // 头像区域模拟
+    $('.profile-avatar').hover(function(){
+        $('.profile-avatar-upload').show();
+    },function(){
+        $('.profile-avatar-upload').hide();
+    });
 
 });

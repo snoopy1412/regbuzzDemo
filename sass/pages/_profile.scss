@@ -141,6 +141,32 @@
     border-radius: 2px;
     background-color: #fff;
 }
+.profile-avatar{
+    position: relative;
+}
+.profile-avatar-upload{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color:#ddd;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+    .fa{
+        position: absolute;
+        width: 60px;
+        height: 60px;  
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        margin:auto;
+    }
+    &:hover{
+        color : #ddd;
+    }
+}
 .profile-info--person-register
 {
     padding-top: 10px;
@@ -396,5 +422,29 @@
                 color: #555;
             }
         }
+    }
+}
+
+// person-avatar-crop
+#person-avatar-crop{
+    .modal-profile-avatar-upload{     
+        position: relative;
+        background: #eee;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .img-crop{
+        margin-top: 20px;
+        min-height: 235px;
+        overflow: hidden;
+    }
+    .has-border-right{
+        border-right: 1px solid #ddd;
+    }
+    .preview-container{
+        width: 202px;
+        height: 202px;
+        overflow: hidden;
+        border:1px solid #ccc;
     }
 }
