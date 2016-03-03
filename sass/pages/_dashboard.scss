@@ -22,7 +22,7 @@
 	}
 
 	.home-call-name{
-		color:#444;
+		color:#49586e;
 		padding-top: 5px;
 		display: block;
 		@include font-size(1.8);
@@ -140,20 +140,8 @@
 		padding-right: 0;
 	}
 	.post{
-		border-right: 1px solid #ddd;
 		.fa{
 			color:$palette-blue;
-		}
-	}
-	.ask{
-		border-right: 1px solid #ddd;
-		.fa{
-			color:$palette-teal;
-		}
-	}
-	.share{
-		.fa{
-			color:$palette-violet;
 		}
 	}
 }
@@ -162,7 +150,7 @@
 
 	font-size: 14px;
 	display: block;
-	padding: 10px;
+	padding: 8px;
 	text-align: center;
 	.fa{
 		font-size: 22px;
@@ -180,6 +168,7 @@
 
 // 公共
 .dashboard-article{
+	margin-top: 20px;
 	.nav{
 		margin-bottom: 20px;
 	}
@@ -211,12 +200,32 @@
 	.panel-body{
 		padding: 20px;
 	}
+	.category{
+		color:#ea755c;
+		font-size: 12px;
+	}
+}
+.home-push-list{
+	margin-bottom: 10px;
+}
+.home-push-item{
+	background-color : #fff;
+	border-radius: 2px;
+	border: 1px solid #ddd;
+}
+.home-push-item-header,.home-push-item-content{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.home-push-item-header {
+	padding-top: 20px;
 }
 .home-push-title{
-	color:blue;
-	margin-top: 0;
 	a{
 		color:#666;
+		font-weight: 600;
+		margin-bottom: 0;
+		font-size: 16px;
 		&:hover{
 			color:$palette-blue;
 			text-decoration: underline;
@@ -224,18 +233,42 @@
 	}
 }
 .home-push-state{
-	color:#999;
-	font-size: 12px;
-	font-style: italic;
+	color:#b6bcbc;
+	padding-bottom: 10px;
+	display: table;
+	width: 100%;
 	span{
-		display: inline-block;
-		margin-right: 4px;
+		display: table-cell;
+		text-align: left;
+
+	}
+}
+.home-push-states{
+	border-top: 1px solid #ddd;
+	li{
+		&>a{
+			display: block;
+			font-size: 14px;
+	    	color: #555;
+			border-bottom: 5px solid #ddd;
+			padding: 10px 0;
+			&:active{
+				border-bottom-width: 2px;
+				padding-top:13px;
+			}
+		}
+	    width: 50%;
+		text-align: center;
+	    float: left;
+	    &:first-child{
+	    	border-right: 1px solid #ddd;
+	    }
 	}
 }
 
 // 消息
 .user-new-content{
-	border: 1px solid #ccc;
+	border: 1px solid #ddd;
 	background-color: #fff;
 	padding: 10px;
 	border-radius: 4px;
@@ -359,6 +392,11 @@
 		}
 	}
 	
+}
+.home-aside-test{
+	.test-item{
+		margin: 10px 0;
+	}
 }
 
 	

@@ -4,12 +4,11 @@
     position: relative;
     margin-bottom: 30px;
     .regbuzzToggle{
-        position: absolute;
-        right: 0;
-        top: -8px;
+        // position: absolute;
+        // right: 0;
+        // top: -8px;
         display: inline-block;
-        margin: 10px 0 0;
-        border: 1px solid #BEC0C2;
+        border: 1px solid $palette-blue;
         border-radius: 30px;
         input[type=radio]{
             visibility: hidden;
@@ -18,14 +17,16 @@
             vertical-align: bottom;
             margin: 2px;
             top: 30px;
+
             &:checked+label{
                 color: #F7F7F7;
-                background-color: #2b3340;
+                background-color: $palette-blue;
                 border-radius: 40px;
                 margin: 2px;
             }
         }
         label{
+                        color: $palette-blue;
             display: inline-block;
             border: none;
             padding: 6px 26px;

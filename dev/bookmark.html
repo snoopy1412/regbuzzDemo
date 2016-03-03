@@ -6,18 +6,26 @@
 <!-- header.html -->
 <% include ./publicTpl/header.html %>
 <!-- header.html end-->
-
+<div class='breadcrumb-beauty-warp'>
+	<div class="container">
+		<ul class='breadcrumb-beauty'>
+            <li>
+              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href=""> Projects</a>
+            </li>
+            <li>
+              <a href="#">Bookmarked Projects</a>
+            </li>
+      	</ul>
+	</div>
+</div>
 <!-- /header -->
 <section class='com-main'>
 <div class="container container-bookmark">
-	<ol class="breadcrumb">
-		<li>
-			<a href="#">Projects</a>
-		</li>
-		<li class="active">Bookmarked Projects
-		</li>
-	</ol>
-	<h1 class='com-title-h1'>Bookmarked Projects</h1>
+
+	<!-- <h1 class='com-title-h1'>Bookmarked Projects</h1> -->
 	<div class='bookmark-section'>
 		<table class="table table-bordered table-hover ">
 			<thead>
@@ -31,7 +39,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td colspan="5">No Projects or Questions found</td>
+					<td colspan="5">No Projects found</td>
 				</tr>
 			</tbody>
 		</table>

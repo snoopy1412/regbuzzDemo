@@ -26,7 +26,7 @@
 	.active{
 		&>a{
 			color: white;
-			background-color: #3DA9F7;
+			background-color: $palette-blue;
 			cursor: default;
 			border: 1px solid #DDD;
 			border-bottom-color: transparent;
@@ -38,7 +38,7 @@
 				left: 50%;
 				width: 10px;
 				height: 10px;
-				background: #3DA9F7;
+				background: $palette-blue;
 				content: " ";
 				display: block;
 				margin-top: -5px;

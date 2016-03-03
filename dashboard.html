@@ -176,16 +176,43 @@
 									<strong class='heading-title'>Message</strong>
 								</div>
 								<div class="panel-body header-utilities-list">
-									<ul>
-										<li>
-											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
-										</li>
-										<li>
-											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
-										</li>
-										<li>
-											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
-										</li>
+									<ul class='header-utilities-message'>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./img/index/servers/2.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./img/index/servers/3.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./img/index/servers/4.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe </span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./img/index/servers/5.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe </span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>			                            			                            
 										<li>
 											<a href="" title="">See All Messages</a>
 										</li>
@@ -297,15 +324,18 @@
 						 <ul class="dropdown-menu">
 				            <li><a href="list-projects.html">Find a Project</a></li>
 				            <li><a href="list-providers.html">Find a Provider</a></li>
-				            <li>
+				           <!--  <li>
 				            	<a href="list-projects.html">Local Jobs</a>
-				            </li>
+				            </li> -->
 				          </ul>
 					</li>
 					<li>
 						<a href="connection.html" title="">Connections</a>
 					</li>
 				</ul>
+				<div class='navbar-right'>
+					<a href="publish-quick.html" title="" class='btn btn-warning navbar-btn'>发布项目</a>
+				</div>
 			</div>
 		</nav>
 </header>
@@ -331,11 +361,11 @@
 									</p>
 									<div class='home-call-account'>
 										<a href="membership.html" class='home-call-des'>Base User </a>
-										<a href="membership.html" class='btn btn-success-outline btn-sm'>Update Account</a>
+										<a href="membership.html" class='btn btn-primary-outline btn-sm'>Update Account</a>
 									</div>						
 									<div class="home-call-profile">
-										<div class="progress ">
-										  <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%;">
+										<div class="progress">
+										  <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 60%;">
 										   	<a href="profile.html" class='progress-info'>完善个人信息 60%</a>
 										  </div>
 										</div> 
@@ -369,11 +399,11 @@
 						</div>
 					</div>	
 				</header>
-				<section class="row home-post">
+				<!-- <section class="row home-post">
 					<div class="col-md-12">
 						<a href="publish-quick.html" class='home-post-item post'><i class="fa fa-product-hunt"></i><span>Post a Project</span></a>
 					</div>
-				</section>
+				</section> -->
 				<div class="dashboard-article">
 				  <ul class="nav nav-tabs nav-tabs-custom-blue" role="tablist">
 				    <li role="presentation" class="active"><a href="#dashboard-push" aria-controls="home" role="tab" data-toggle="tab">项目推送</a></li>
@@ -384,58 +414,252 @@
 				    <div class="tab-pane active fade in" id="dashboard-push">
 				    	<section class="row home-push">
 							<div class="col-md-6">
-								<div class="panel panel-default">		
-									<div class="panel-body">
-										<ul class='home-push-list'>
-											<li class='home-push-item'>
+									<article class='home-push-list'>
+										<section class='home-push-item'>
+											<header class='home-push-item-header'>
+												<span class="label label-primary">GHS / SDS</span>
 												<h3 class="home-push-title">
 													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
 												</h3>
-												<p>
-													<span class="label label-default">GHS / SDS</span>
-												</p>
+											</header><!-- /header -->
+											<div class='home-push-item-content'>
 												<p class='home-push-state'>
-													<span> $ 100,000 USD </span> |
-													<span> 5 days left </span> |
+													<span><i class="fa fa-usd"></i> 100,000</span> 
+													<span><i class="fa fa-clock-o"></i> 5 days left </span> 
 													<span>
-														<a href=""> 15 bids </a>
+														<a href=""><i class="fa fa-user"></i> 15 bids </a>
 													</span>
 												</p>
-												<div class='text-right'>
-													<a href="" class='btn btn-primary-outline'>detail</a>
-													<a href="" class='btn btn-link'>skip</a>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
+											</div>
+											<footer class='home-push-item-footer'>
+												<ul class="home-push-states clearfix">
+					                                <li>
+					                                    <a href="" title="">Detail</a>
+					                                </li>
+					                                <li>
+					                                    <a href="" title="">Skip</a>
+					                                </li>
+					                            </ul>
+											</footer>
+										</section>
+									</article>
 							</div>
 							<div class="col-md-6">
-								<div class="panel panel-default">
-									<div class="panel-body">
-										<ul class='home-push-list'>
-											<li class='home-push-item'>
-												<h3  class="home-push-title">
+									<article class='home-push-list'>
+										<section class='home-push-item'>
+											<header class='home-push-item-header'>
+												<span class="label label-primary">GHS / SDS</span>
+												<h3 class="home-push-title">
 													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
 												</h3>
-												<p>
-													<span class="label label-default">GHS / SDS</span>
-												</p>
+											</header><!-- /header -->
+											<div class='home-push-item-content'>
 												<p class='home-push-state'>
-													<span> $ 100,000 USD </span> |
-													<span> 5 days left </span> |
+													<span><i class="fa fa-usd"></i> 100,000</span> 
+													<span><i class="fa fa-clock-o"></i> 5 days left </span> 
 													<span>
-														<a href=""> 15 bids </a>
+														<a href=""><i class="fa fa-user"></i> 15 bids </a>
 													</span>
 												</p>
-												<div class='text-right'>
-													<a href="" class='btn btn-primary-outline'>detail</a>
-													<a href="" class='btn btn-link'>skip</a>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
+											</div>
+											<footer class='home-push-item-footer'>
+												<ul class="home-push-states clearfix">
+					                                <li>
+					                                    <a href="" title="">Detail</a>
+					                                </li>
+					                                <li>
+					                                    <a href="" title="">Skip</a>
+					                                </li>
+					                            </ul>
+											</footer>
+										</section>
+									</article>
+							</div>
+							<div class="col-md-6">
+									<article class='home-push-list'>
+										<section class='home-push-item'>
+											<header class='home-push-item-header'>
+												<span class="label label-primary">GHS / SDS</span>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
+												</h3>
+											</header><!-- /header -->
+											<div class='home-push-item-content'>
+												<p class='home-push-state'>
+													<span><i class="fa fa-usd"></i> 100,000</span> 
+													<span><i class="fa fa-clock-o"></i> 5 days left </span> 
+													<span>
+														<a href=""><i class="fa fa-user"></i> 15 bids </a>
+													</span>
+												</p>
+											</div>
+											<footer class='home-push-item-footer'>
+												<ul class="home-push-states clearfix">
+					                                <li>
+					                                    <a href="" title="">Detail</a>
+					                                </li>
+					                                <li>
+					                                    <a href="" title="">Skip</a>
+					                                </li>
+					                            </ul>
+											</footer>
+										</section>
+									</article>
+							</div>
+							<div class="col-md-6">
+									<article class='home-push-list'>
+										<section class='home-push-item'>
+											<header class='home-push-item-header'>
+												<span class="label label-primary">GHS / SDS</span>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
+												</h3>
+											</header><!-- /header -->
+											<div class='home-push-item-content'>
+												<p class='home-push-state'>
+													<span><i class="fa fa-usd"></i> 100,000</span> 
+													<span><i class="fa fa-clock-o"></i> 5 days left </span> 
+													<span>
+														<a href=""><i class="fa fa-user"></i> 15 bids </a>
+													</span>
+												</p>
+											</div>
+											<footer class='home-push-item-footer'>
+												<ul class="home-push-states clearfix">
+					                                <li>
+					                                    <a href="" title="">Detail</a>
+					                                </li>
+					                                <li>
+					                                    <a href="" title="">Skip</a>
+					                                </li>
+					                            </ul>
+											</footer>
+										</section>
+									</article>
+							</div>
+							<div class="col-md-6">
+									<article class='home-push-list'>
+										<section class='home-push-item'>
+											<header class='home-push-item-header'>
+												<span class="label label-primary">GHS / SDS</span>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
+												</h3>
+											</header><!-- /header -->
+											<div class='home-push-item-content'>
+												<p class='home-push-state'>
+													<span><i class="fa fa-usd"></i> 100,000</span> 
+													<span><i class="fa fa-clock-o"></i> 5 days left </span> 
+													<span>
+														<a href=""><i class="fa fa-user"></i> 15 bids </a>
+													</span>
+												</p>
+											</div>
+											<footer class='home-push-item-footer'>
+												<ul class="home-push-states clearfix">
+					                                <li>
+					                                    <a href="" title="">Detail</a>
+					                                </li>
+					                                <li>
+					                                    <a href="" title="">Skip</a>
+					                                </li>
+					                            </ul>
+											</footer>
+										</section>
+									</article>
+							</div>
+							<div class="col-md-6">
+									<article class='home-push-list'>
+										<section class='home-push-item'>
+											<header class='home-push-item-header'>
+												<span class="label label-primary">GHS / SDS</span>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
+												</h3>
+											</header><!-- /header -->
+											<div class='home-push-item-content'>
+												<p class='home-push-state'>
+													<span><i class="fa fa-usd"></i> 100,000</span> 
+													<span><i class="fa fa-clock-o"></i> 5 days left </span> 
+													<span>
+														<a href=""><i class="fa fa-user"></i> 15 bids </a>
+													</span>
+												</p>
+											</div>
+											<footer class='home-push-item-footer'>
+												<ul class="home-push-states clearfix">
+					                                <li>
+					                                    <a href="" title="">Detail</a>
+					                                </li>
+					                                <li>
+					                                    <a href="" title="">Skip</a>
+					                                </li>
+					                            </ul>
+											</footer>
+										</section>
+									</article>
+							</div>
+							<div class="col-md-6">
+									<article class='home-push-list'>
+										<section class='home-push-item'>
+											<header class='home-push-item-header'>
+												<span class="label label-primary">GHS / SDS</span>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
+												</h3>
+											</header><!-- /header -->
+											<div class='home-push-item-content'>
+												<p class='home-push-state'>
+													<span><i class="fa fa-usd"></i> 100,000</span> 
+													<span><i class="fa fa-clock-o"></i> 5 days left </span> 
+													<span>
+														<a href=""><i class="fa fa-user"></i> 15 bids </a>
+													</span>
+												</p>
+											</div>
+											<footer class='home-push-item-footer'>
+												<ul class="home-push-states clearfix">
+					                                <li>
+					                                    <a href="" title="">Detail</a>
+					                                </li>
+					                                <li>
+					                                    <a href="" title="">Skip</a>
+					                                </li>
+					                            </ul>
+											</footer>
+										</section>
+									</article>
+							</div>
+							<div class="col-md-6">
+									<article class='home-push-list'>
+										<section class='home-push-item'>
+											<header class='home-push-item-header'>
+												<span class="label label-primary">GHS / SDS</span>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
+												</h3>
+											</header><!-- /header -->
+											<div class='home-push-item-content'>
+												<p class='home-push-state'>
+													<span><i class="fa fa-usd"></i> 100,000</span> 
+													<span><i class="fa fa-clock-o"></i> 5 days left </span> 
+													<span>
+														<a href=""><i class="fa fa-user"></i> 15 bids </a>
+													</span>
+												</p>
+											</div>
+											<footer class='home-push-item-footer'>
+												<ul class="home-push-states clearfix">
+					                                <li>
+					                                    <a href="" title="">Detail</a>
+					                                </li>
+					                                <li>
+					                                    <a href="" title="">Skip</a>
+					                                </li>
+					                            </ul>
+											</footer>
+										</section>
+									</article>
 							</div>
 						</section>
 				    </div>
@@ -572,24 +796,27 @@
 							<div class='home-money clearfix' style='padding-top:10px'>
 								<span class='pull-right'>
 									<a href="" title="" class='btn btn-primary'>Withdraw</a>
-								<a href="" title="" class='btn btn-warning'>Top-up</a>
+								<a href="" title="" class='btn btn-primary-outline'>Top-up</a>
 								</span>
 								
 							</div>						
 						</div>
 					</div>				
-					<div class="home-aside-section  section">
+					<div class="home-aside-section home-aside-test section">
 						<h3 class='home-aside-title'>测试</h3>
 						<div class="content">
-							<ul>
-								<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
-								<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
-								<li><a href="">通过美国英语考试 - 等级 1 (+19%)</a></li>
+							<ul class="fa-ul">
+								<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
+								<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
+								<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
 							</ul>
 						</div>
 
-		</div>
+					</div>
 
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
 

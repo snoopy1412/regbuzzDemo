@@ -6,19 +6,28 @@
 <!-- header.html -->
 <% include ./publicTpl/header.html %>
 <!-- header.html end-->
-
+<div class='breadcrumb-beauty-warp'>
+	<div class="container">
+		<ul class='breadcrumb-beauty'>
+            <li>
+              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href=""> Projects</a>
+            </li>
+            <li>
+              <a href="#">Drafts</a>
+            </li>
+      	</ul>
+	</div>
+</div>
 <!-- /header -->
 <section class='com-main'>
 <div class="container">
-	<ol class="breadcrumb">
-			<li>
-				<a href="#">Projects</a>
-			</li>
-			<li class="active">Drafts</li>
-		</ol>	
+	
 	<!--草稿  -->
 	<section class='mb-60'>
-		<h1 class='com-title-h1'>Drafts</h1>
+		<!-- <h1 class='com-title-h1'>Drafts</h1> -->
 		<table class="table table-bordered">
 			<thead>
 			<tr class='active'>
@@ -52,11 +61,6 @@
 						<button type="button" class='btn btn-danger btn-sm'>删除</button>
 					</td>
 				</tr>
-<<<<<<< HEAD
-
-=======
-				
->>>>>>> b5cc74b505d37aa3e98658ada3a8b85197fc33a4
 			</tbody>
 		</table>
 	</section>

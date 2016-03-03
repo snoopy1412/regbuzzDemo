@@ -176,16 +176,43 @@
 									<strong class='heading-title'>Message</strong>
 								</div>
 								<div class="panel-body header-utilities-list">
-									<ul>
-										<li>
-											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
-										</li>
-										<li>
-											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
-										</li>
-										<li>
-											<a href=""><span class="label label-warning"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
-										</li>
+									<ul class='header-utilities-message'>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./img/index/servers/2.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./img/index/servers/3.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./img/index/servers/4.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe </span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./img/index/servers/5.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe </span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>			                            			                            
 										<li>
 											<a href="" title="">See All Messages</a>
 										</li>
@@ -297,31 +324,42 @@
 						 <ul class="dropdown-menu">
 				            <li><a href="list-projects.html">Find a Project</a></li>
 				            <li><a href="list-providers.html">Find a Provider</a></li>
-				            <li>
+				           <!--  <li>
 				            	<a href="list-projects.html">Local Jobs</a>
-				            </li>
+				            </li> -->
 				          </ul>
 					</li>
 					<li>
 						<a href="connection.html" title="">Connections</a>
 					</li>
 				</ul>
+				<div class='navbar-right'>
+					<a href="publish-quick.html" title="" class='btn btn-warning navbar-btn'>发布项目</a>
+				</div>
 			</div>
 		</nav>
 </header>
 <!-- header.html end-->
-
+<div class='breadcrumb-beauty-warp'>
+	<div class="container">
+		<ul class='breadcrumb-beauty'>
+            <li>
+              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href=""> Projects</a>
+            </li>
+            <li>
+              <a href="#">Bookmarked Projects</a>
+            </li>
+      	</ul>
+	</div>
+</div>
 <!-- /header -->
 <section class='com-main'>
 <div class="container container-bookmark">
-	<ol class="breadcrumb">
-		<li>
-			<a href="#">Projects</a>
-		</li>
-		<li class="active">Bookmarked Projects
-		</li>
-	</ol>
-	<h1 class='com-title-h1'>Bookmarked Projects</h1>
+
+	<!-- <h1 class='com-title-h1'>Bookmarked Projects</h1> -->
 	<div class='bookmark-section'>
 		<table class="table table-bordered table-hover ">
 			<thead>
@@ -335,7 +373,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td colspan="5">No Projects or Questions found</td>
+					<td colspan="5">No Projects found</td>
 				</tr>
 			</tbody>
 		</table>

@@ -1,5 +1,5 @@
 .nav-tabs-custom-default{
-	@include tabs-custom(#e0e1e7,#898989,#65cea7)
+	@include tabs-custom(#e0e1e7,$palette-blue,$palette-blue)
 }
 .nav-tabs-custom-dark{
 	@include tabs-custom(#424F63,#fff,#424F63)
