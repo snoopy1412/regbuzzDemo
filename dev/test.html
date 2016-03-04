@@ -1,0 +1,28 @@
+<!-- head.html -->
+<% include ./publicTpl/head.html %>
+<!-- head.html end-->
+<!-- header.html -->
+<% include ./publicTpl/header.html %>
+<!-- header.html end-->
+
+<div id="test-example">
+<!-- data -->
+<ul v-paginate:3="langs">
+  <li v-for="lang in langs">
+    {{ lang }}
+  </li>
+</ul>
+
+<!-- links -->
+<ul>
+  <li v-for="langLink in langsLinks">
+    <a @click="changeLangsPage(langLink)" href="#">
+      {{ langLink + 1 }}
+    </a>
+  </li>
+</ul>
+</div>
+
+<!-- footer.html -->
+<% include ./publicTpl/footer.html %>
+<!-- footer.html end-->

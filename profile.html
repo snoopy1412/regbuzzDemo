@@ -360,7 +360,6 @@
 	          <div></div>	        
 		</div>
 		
-		
 		<div class="row animated fadeIn" v-show='!loading' v-cloak>
 
 			<!-- alert -->
@@ -381,6 +380,7 @@
 						 			<img src="./img/index/servers/13.jpg" alt="Aaron Su" width="100%">
 						 			<a title="change your avatar" class='profile-avatar-upload' data-toggle="modal" data-target="#person-avatar-crop"><i class="fa fa-camera fa-4x"></i></a>
 						 		</div>
+
 							 	<section class='profile-info--person-register text-center'>
 							 		<div class="location">
 							 			<div class='edit-start' v-show='countryData.hideOrigin'>
@@ -483,14 +483,13 @@
 									<i class="remove fa fa-times" @click='remove(skillsData,$index)'></i>
 								</a>
 							</section>						
-							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-skills"><i class="fa fa-plus"></i> Add Skills</a>
+							<a title="Add Skills" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-skills"><i class="fa fa-plus"></i> Add Skills</a>
 						</section>
 						
 						<!-- 经验 -->
 						<section class='profile-info profile-info--experience section'>
 							<header class='profile-info-heading'>
 								<h3 class='profile-info-title'>Experience</h3>
-								<!-- <a href="javascript:;" title="" class='profile-info-add js-profile-server-add btn btn-primary' data-toggle="modal" data-target="#js-profile-experience"><i class="fa fa-plus"></i> Add Experience</a> -->
 							</header>
 							<section class="profile-info-item experience-item" v-for='experience in experienceData'>
 								<div v-show='experience.hideOrigin'>
@@ -572,7 +571,7 @@
 									</div>
 								</div>
 							</section>	
-							<a href="javascript:;" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-experience"><i class="fa fa-plus"></i> Add Experience</a>						
+							<a class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-experience"><i class="fa fa-plus"></i> Add Experience</a>						
 						</section>
 						
 						<!-- 语言 -->
@@ -615,7 +614,7 @@
 									</div>
 								</div>
 							</section>
-							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-language"><i class="fa fa-plus"></i> Add Language</a>												
+							<a title="Add Language" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-language"><i class="fa fa-plus"></i> Add Language</a>												
 						</section>
 						
 						<!-- 教育 -->
@@ -671,7 +670,7 @@
 									
 								</div>
 							</section>	
-							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-educations"><i class="fa fa-plus"></i> Add Educations</a>					
+							<a title="Add Educations" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-educations"><i class="fa fa-plus"></i> Add Educations</a>					
 						</section>
 						
 						<!-- 证书 -->
@@ -736,7 +735,7 @@
 									</div>
 								</div>
 							</section>
-							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-certificate"><i class="fa fa-plus"></i> Add Certificate</a>											
+							<a title="Add Certificate" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-certificate"><i class="fa fa-plus"></i> Add Certificate</a>											
 						</section>	
 						
 						<!-- 出版 -->
@@ -801,7 +800,7 @@
 									</div>
 								</div>
 							</section>	
-							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-publish"><i class="fa fa-plus"></i> Add Publish</a>													
+							<a title="Add Publish" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-publish"><i class="fa fa-plus"></i> Add Publish</a>													
 						</section>	
 			    	</div>
 			    	
@@ -852,7 +851,7 @@
 									</div>
 								</div>
 							</section>
-							<a href="javascript:;" title="" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-services"><i class="fa fa-plus"></i> Add Services</a>
+							<a title="Add Services" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-services"><i class="fa fa-plus"></i> Add Services</a>
 						</section>
 			    	</div>
 			    	

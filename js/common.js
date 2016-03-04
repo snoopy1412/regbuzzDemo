@@ -1,0 +1,5 @@
+define(['bootstrapTable'],function(){
+
+
+
+})

@@ -6,14 +6,15 @@ require.config({
     raty: './vendor/jquery.raty.min', // 星星评分
     bootstrap:'./vendor/bootstrap.min',  // bootstrap 插件
 
+
     // plugins 区域
     jRange:'../plugins/jRange/jquery.range-min', // 自定义滑竿
-    wysiwyg:'../plugins/wysiwyg/wysiwyg', //第三方富文本编辑器
+    summernote:'../plugins/summernote/summernote.min', //第三方富文本编辑器
     WebUploader : '../plugins/webuploader/webuploader',  //第三方上传插件
-    moment : '../plugins/datetimepicker/moment.min',
-    datetimepicker : '../plugins/datetimepicker/bootstrap-datetimepicker',
-    jcrop : '../plugins/jcrop/jquery.Jcrop.min',
-
+    moment : '../plugins/datetimepicker/moment.min',   // 时间选择依赖
+    datetimepicker : '../plugins/datetimepicker/bootstrap-datetimepicker', //时间选择插件
+    jcrop : '../plugins/jcrop/jquery.Jcrop.min',          //裁剪插件
+    bootstrapTable : '../plugins/bootstraptable/bootstrap-table.min',    //table排序插件
 
     // 自编写 components 区域
     popoverCustom: './components/popoverCustom', // 自制弹窗插件
@@ -23,14 +24,16 @@ require.config({
     // MVVM框架
     Vue:'./vendor/vue', // MVVM框架
     VueStrap : './vendor/vue-strap.min', //类似bootstrap组件
-    vueValidator: './vendor/vue-validator.min', //Vue 验证插件
+    vueValidator: './vendor/vue-validator.min', //Vue 验证插件,
     VueComponent : '../static/vue-component', // 自定义Vue 组件,
     VueGlobalFilter : './vue-globalfilter', //全局过滤器,
-    VueMixins : './vue-mixins'
   },
   shim: {
     "bootstrap":{
       deps:["jquery"]
+    },
+    "bootstrapTable":{
+      deps : ['jquery']
     },
     "velocity": {
       deps: ["jquery"]
@@ -53,10 +56,12 @@ require.config({
   }
 });
 
-require(['jquery','Vue','bootstrap','index','header','dashboard', 'list', 'profile', 'publish', 'register','setting','help','project-list','top-up','account'], function($,Vue) {
+require(['jquery','Vue','bootstrap','common','index','header','dashboard', 'list', 'profile', 'publish', 'register','setting','help','project-list','top-up','account'], function($,Vue) {
  
-
   // 全局bootstrap 启用tootip
   $('[data-toggle="tooltip"]').tooltip();
+
+
+
 
 });

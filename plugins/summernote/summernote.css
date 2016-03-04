@@ -1,5 +1,9 @@
 .note-editor {
-	position: relative
+	position: relative;
+	.form-group{
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 .note-editor .note-dropzone {
@@ -452,3 +456,4 @@
 	background-color: #428bca;
 	outline: 0
 }
+

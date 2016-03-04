@@ -19,6 +19,8 @@
 </head>
 <!-- head.html end-->
 <body>
+
+	<link rel="stylesheet" type="text/css" href="./plugins/summernote/summernote.css">
 <!-- header.html -->
 	<!-- /header -->
 	<header class="header" id='vue-header'>
@@ -342,11 +344,6 @@
 
 	<section class='com-main'>
 		<div class="container">	
-			<!-- 面包屑 -->
-			<!-- <ol class="breadcrumb">
-				<li><a href="#">Home</a></li>
-				<li class="active">Post a Project</li>
-			</ol> -->
 			<ul class="steps">
 				<li class='step-item active'>
 					<a href="" title="" class='step-1'>Describe your need</a>
@@ -414,7 +411,7 @@
 											   Post the job for my company!
 											</label>
 										</div>
-									</div>		 -->		
+									</div>-->		
 									
 									<!-- Job Description -->
 									<div class="form-group">
@@ -423,7 +420,8 @@
 											<div data-toggle='dropdown'>
 
 												<!-- 加载数字计数组件，此组件来自于 components/WordCount.vue -->
-												<wordcount :total-count = 1000></wordcount>
+												<!-- <wordcount :total-count = 1000></wordcount> -->
+												<div id="summernote"></div>
 											</div>
 											
 											<!-- prompt -->

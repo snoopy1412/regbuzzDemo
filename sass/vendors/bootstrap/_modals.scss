@@ -11,7 +11,18 @@
 .modal-open {
   overflow: hidden;
 }
-
+@keyframes bounceIn {
+  0% {
+    opacity:0;
+    transform:scale(.5);
+    transform:scale(.5)
+  }
+  100% {
+    opacity:1;
+    transform:scale(1);
+    transform:scale(1)
+  }
+}
 // Container that the modal scrolls within
 .modal {
   display: none;
@@ -29,11 +40,15 @@
   outline: 0;
 
   // When fading in the modal, animate it to slide down
-  &.fade .modal-dialog {
-    @include translate(0, -25%);
-    @include transition-transform(0.3s ease-out);
-  }
-  &.in .modal-dialog { @include translate(0, 0) }
+  // &.fade .modal-dialog {
+    
+  //   @include translate(0, -25%);
+  //   @include transition-transform(0.3s ease-out);
+  // }
+  &.in .modal-dialog { 
+    // @include translate(0, 0)
+      animation:bounceIn .2s;
+   }
 }
 .modal-open .modal {
   overflow-x: hidden;

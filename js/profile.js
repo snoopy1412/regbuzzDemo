@@ -42,7 +42,9 @@ define(['raty','./js/profile-crop.js','./js/profile-controller.js'],function(rat
         targetKeep: true
     });
 
-  
+
+
+// 头部编辑区域hover高亮处理
 $('.edit-start').hover(function(){
      $(this).find('.edit-text').css('background-color','#dcf2fc');
      $(this).find('.edit-handle').css('background-color','#dcf2fc');
@@ -53,11 +55,18 @@ $('.edit-start').hover(function(){
 
 
 
-    // 头像区域模拟
-    $('.profile-avatar').hover(function(){
-        $('.profile-avatar-upload').show();
-    },function(){
-        $('.profile-avatar-upload').hide();
-    });
+// 头部头像区域hover出现
+$('.profile-avatar').hover(function(){
+    $('.profile-avatar-upload').show();
+},function(){
+    $('.profile-avatar-upload').hide();
+});
 
+// 内容区域hover显示编辑按钮? 
+// 移动端没有hover事件
+$('.profile-info-item').hover(function(){
+    $(this).find('.handle').show();
+},function(){
+    $(this).find('.handle').hide();
+});
 });

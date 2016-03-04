@@ -1,4 +1,4 @@
-define(['jquery','raty','bootstrap','./js/publish-upload.js','./js/publish-controller.js','./js/order-controller.js'],function($,raty,bootstrap) {
+define(['jquery','raty','bootstrap','./js/publish-upload.js','./js/publish-edit.js','./js/publish-controller.js','./js/order-controller.js'],function($,raty,bootstrap) {
 
   // 星星评级      
   $('.grade-item').each(function() {

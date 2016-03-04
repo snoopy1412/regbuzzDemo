@@ -39,4 +39,5 @@ var dashBoardVm = new Vue({
 			}
 		}
 	})
+
 });

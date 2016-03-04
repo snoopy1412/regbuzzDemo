@@ -8,6 +8,9 @@
         margin-right: 5px;
         padding: 5px;
         cursor: pointer;
+        &,*{
+          word-wrap:break-word;/*支持IE，chrome，FF*/  
+        }
     }
     .edit-handle{
         padding: 5px;
@@ -68,8 +71,19 @@
     padding: 20px;
 
     border-bottom: 1px dashed #ddd;
+
+    -webkit-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
+    transition: background-color 0.25s;
+    &:hover{
+        background-color: lighten(#ccc,15%);
+    }
+
     &:last-of-type{
         border-bottom: 0;
+    }
+    .handle{
+        display: none;
     }
 
 }
