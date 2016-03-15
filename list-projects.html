@@ -398,8 +398,8 @@
 						<div class="list-aside-item list-aside-item-language panel panel-default"  id='vue-list-languages'>
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Language</h4>
-								<ul class='checkbox-list' v-show='!isShowLanguages'>		
-									<li class="checkbox" v-for='language in languagesData | limitBy 5'  >
+								<ul class='checkbox-list'>		
+									<li class="checkbox" v-for='language in languagesData |limitBy maxSize'>
 							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
 										  <input type="checkbox" id='{{language.abbr}}'>
 										  <span class="c-indicator"></span>
@@ -407,16 +407,7 @@
 										</label>
 									</li>
 								</ul>
-								<ul class='checkbox-list' v-else>	
-									<li class="checkbox" v-for='language in languagesData' >
-							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
-										  <input type="checkbox" id='{{language.abbr}}'>
-										  <span class="c-indicator"></span>
-										  <span v-text='language.text'></span>
-										</label>
-									</li>
-								</ul>
-								<a href="javascript:;" title="more" @click='toggleLanguageNum'><span v-text='toggleText'></span> <i class="fa" :class="{'fa-angle-down':!isShowLanguages,'fa-angle-up':isShowLanguages}"></i></a>
+								<a href="javascript:;" title="more" @click='isShowLanguages = !isShowLanguages'><span v-text='toggleText'></span> <i class="fa" :class="{'fa-angle-down':!isShowLanguages,'fa-angle-up':isShowLanguages}"></i></a>
 							</div>
 						</div>
 

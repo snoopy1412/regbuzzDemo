@@ -72,4 +72,6 @@ define([ 'raty', 'jRange','./js/list-controller.js'], function(raty, jRange) {
 
   $('.list-fixed-questions .slider-input').jRange('setValue', '20,140');
 
+
+// 
 });

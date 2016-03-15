@@ -1,4 +1,4 @@
-define(['Vue','VueComponent','VueGlobalFilter','../data/countries.js', '../data/languages.js','../data/linkage.js'],function( Vue, VueComponent, VueGlobalFilter){
+define(['Vue', 'VueComponent', 'VueGlobalFilter', '../data/countries.js', '../data/languages.js', '../data/linkage.js'], function(Vue, VueComponent, VueGlobalFilter) {
 
 
   // 语言
@@ -7,7 +7,8 @@ define(['Vue','VueComponent','VueGlobalFilter','../data/countries.js', '../data/
     data: {
       languagesData: [],
       isShowLanguages: false,
-      toggleText: 'More'
+      toggleText: 'More',
+      maxSize : 5
     },
     ready: function() {
       this.languagesData = languagesData;
@@ -15,26 +16,24 @@ define(['Vue','VueComponent','VueGlobalFilter','../data/countries.js', '../data/
     computed: {
       toggleText: function() {
         return !this.isShowLanguages ? 'More' : 'Pack up';
+      },
+      maxSize : function(){
+        return !this.isShowLanguages ? 5 : this.languagesData.length;
       }
     },
-    methods: {
-      toggleLanguageNum: function() {
-        this.isShowLanguages = !this.isShowLanguages;
-      }
-    }
   });
 
   var select2 = VueComponent.select2;
   new Vue({
-    el:'#vue-list',
-    data : {
-        originData : []
+    el: '#vue-list',
+    data: {
+      originData: []
     },
-    components : {
-       select2 : select2
+    components: {
+      select2: select2
     },
-    created : function(){
-        this.originData = countriesData;
+    created: function() {
+      this.originData = countriesData;
     }
   });
 
