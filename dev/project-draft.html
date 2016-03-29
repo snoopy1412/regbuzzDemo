@@ -1,0 +1,83 @@
+<!-- head.html -->
+<% include ./publicTpl/head-project.html %>
+<!-- head.html end-->
+
+<body>
+<!-- header.html -->
+<% include ./publicTpl/header.html %>
+<!-- header.html end-->
+<div class='breadcrumb-beauty-warp'>
+	<div class="container">
+		<ul class='breadcrumb-beauty'>
+            <li>
+              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href=""> Projects</a>
+            </li>
+            <li>
+              <a href="#">Drafts</a>
+            </li>
+      	</ul>
+	</div>
+</div>
+<!-- /header -->
+<section class='com-main'>
+<div class="container">
+	
+	<!--草稿  -->
+	<section class='mb-60'>
+		<!-- <h1 class='com-title-h1'>Drafts</h1> -->
+		<div id="toolbar" class="btn-group">
+			<button type="button" class="btn btn-danger">
+				Delete Selected
+			</button>
+		</div>
+		<table class="table table-bordered"  data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
+			<thead>
+			<tr class='active'>
+				<th data-field="state" data-checkbox="true"></th>
+				<th data-sortable="true">草稿</th>
+				<th data-sortable="true">项目类型</th>
+				<th data-events="actionEvents">操作</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td>
+						<a href="" title="">我是一个示例草稿</a>
+					</td>
+					<td>
+						Project
+					</td>
+					<td>
+						<button type="button" class='btn btn-primary btn-sm draft-edit'>编辑</button>
+						<button type="button" class='btn btn-danger btn-sm draft-remove'>删除</button>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="" title="">我是一个示例草稿</a>
+					</td>
+					<td>
+						Proposal
+					</td>
+					<td>
+						<button type="button" class='btn btn-primary btn-sm draft-edit'>编辑</button>
+						<button type="button" class='btn btn-danger btn-sm draft-remove'>删除</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</div>
+</section>
+
+<!-- 页脚部分 -->
+<!-- footer.html -->
+<% include ./publicTpl/footer.html %>
+<!-- footer.html end-->
+</body>
+</html>

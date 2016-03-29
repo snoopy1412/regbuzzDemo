@@ -1,5 +1,5 @@
 <!-- head.html -->
-<% include ./publicTpl/head.html %>
+<% include ./publicTpl/head-profile.html %>
 <!-- head.html end-->
 <body>
 
@@ -22,8 +22,8 @@
 </div>
 <section class='com-main'>
 	<div class="container container-profile"  id='vue-profile-user'>
-		<div  :class="{'loading': loading }" v-if='loading'>
-	          <div></div>	        
+		<div  :class="{'loading2': loading }" v-if='loading'>
+	          <i></i>	        
 		</div>
 		
 		<div class="row animated fadeIn" v-show='!loading' v-cloak>

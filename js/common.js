@@ -1,5 +1,3 @@
-define(['bootstrapTable'],function(){
-
-
+define([],function(){
 
 })

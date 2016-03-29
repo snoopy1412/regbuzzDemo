@@ -12,7 +12,10 @@
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <script type="text/javascript" src='./js/vendor/respond.min.js'></script>
-    <script type="text/javascript" src='./js/vendor/require.js' data-main='./js/main.js'></script>
+
+	<script type="text/javascript" src="./js/vendor/require-2.2.0.min.js"></script>
+    <script type="text/javascript" src='./js/require-config.js'></script>
+    <script type="text/javascript" src='./js/dashboard/main.js'></script>
 	<!--[if lt IE9]> 
 	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
 	<![endif]-->
@@ -322,8 +325,8 @@
 					<li>
 						<a href="javascrit:;" title="" data-toggle="dropdown" class="dropdown-toggle">Discovery<span class="caret"></span></a>
 						 <ul class="dropdown-menu">
-				            <li><a href="list-projects.html">Find a Project</a></li>
-				            <li><a href="list-providers.html">Find a Provider</a></li>
+				            <li><a href="discovery-projects.html">Find a Project</a></li>
+				            <li><a href="discovery-providers.html">Find a Provider</a></li>
 				           <!--  <li>
 				            	<a href="list-projects.html">Local Jobs</a>
 				            </li> -->
@@ -362,16 +365,23 @@
 	<!--草稿  -->
 	<section class='mb-60'>
 		<!-- <h1 class='com-title-h1'>Drafts</h1> -->
-		<table class="table table-bordered">
+		<div id="toolbar" class="btn-group">
+			<button type="button" class="btn btn-danger">
+				Delete Selected
+			</button>
+		</div>
+		<table class="table table-bordered"  data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
 			<thead>
 			<tr class='active'>
-				<th>草稿</th>
-				<th>项目类型</th>
-				<th>操作</th>
+				<th data-field="state" data-checkbox="true"></th>
+				<th data-sortable="true">草稿</th>
+				<th data-sortable="true">项目类型</th>
+				<th data-events="actionEvents">操作</th>
 			</tr>
 			</thead>
 			<tbody>
 				<tr>
+					<td></td>
 					<td>
 						<a href="" title="">我是一个示例草稿</a>
 					</td>
@@ -379,11 +389,12 @@
 						Project
 					</td>
 					<td>
-						<button type="button" class='btn btn-primary btn-sm'>编辑</button>
-						<button type="button" class='btn btn-danger btn-sm'>删除</button>
+						<button type="button" class='btn btn-primary btn-sm draft-edit'>编辑</button>
+						<button type="button" class='btn btn-danger btn-sm draft-remove'>删除</button>
 					</td>
 				</tr>
 				<tr>
+					<td></td>
 					<td>
 						<a href="" title="">我是一个示例草稿</a>
 					</td>
@@ -391,8 +402,8 @@
 						Proposal
 					</td>
 					<td>
-						<button type="button" class='btn btn-primary btn-sm'>编辑</button>
-						<button type="button" class='btn btn-danger btn-sm'>删除</button>
+						<button type="button" class='btn btn-primary btn-sm draft-edit'>编辑</button>
+						<button type="button" class='btn btn-danger btn-sm draft-remove'>删除</button>
 					</td>
 				</tr>
 			</tbody>

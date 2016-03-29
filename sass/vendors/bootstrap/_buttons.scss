@@ -13,10 +13,15 @@
   border: 1px solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, 1.43, $btn-border-radius); //1.428571429
   @include transition(all .2s ease-in-out);
+  
+  &:hover{
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
 
   &,
   &:active,
   &.active {
+
     &:focus,
     &.focus {
       @include tab-focus();
