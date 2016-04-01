@@ -1,4 +1,4 @@
-define(['Vue', 'VueComponent', '../data/countries.js', '../data/languages.js', '../data/linkage.js'], function(Vue, VueComponent, VueGlobalFilter) {
+define(['Vue', 'VueComponent','VueGlobalFilter', '../data/countries.js', '../data/languages.js', '../data/linkage.js'], function(Vue, VueComponent, VueGlobalFilter) {
   // 语言
   var vmLanguage = new Vue({
     el: "#vue-list-languages",

@@ -6343,12 +6343,19 @@ select[size] {
     opacity: 1;
     filter: alpha(opacity=100); } }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    opacity: 0;
+    filter: alpha(opacity=0); } }
+
 .fadeIn-transition {
   animation: fadeIn .3s; }
 
 .fadeIn-enter, .fadeIn-leave {
-  opacity: 0;
-  filter: alpha(opacity=0); }
+  animation: fadeOut .3s; }
 
 .staggered-transition {
   transition: all .5s ease;
@@ -6361,9 +6368,16 @@ select[size] {
 
 /**************************************************************************************
 
-
-//publish页面
+//dashboard页面
 //-------------------------------------------------------------------------------------
+/**
+ * fadeIn 效果
+ */
+.pushskip-transition {
+  animation: fadeIn .3s; }
+
+.pushskip-leave {
+  animation: fadeOut .3s; }
 
 /**
  * pub-expand 效果
@@ -6589,7 +6603,7 @@ ul {
   border: 1px solid #ccc;
   background-color: #fff;
   border-radius: 2px;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 10px; }
 
 .bold {
@@ -8739,7 +8753,7 @@ body {
     color: #f1f1f1; }
 
 .home-heading {
-  min-height: 136px; }
+  min-height: 146px; }
   .home-heading .home-heading-section {
     border-right: 1px solid #ddd; }
     .home-heading .home-heading-section:last-child {
@@ -9102,12 +9116,7 @@ body {
   margin-left: 0;
   padding: 30px 20px;
   border: 1px solid transparent;
-  border-bottom: 1px solid #eee;
-  -webkit-transition: border-color 0.75s;
-  -o-transition: border-color 0.75s;
-  transition: border-color 0.75s; }
-  .list-results-item:hover {
-    border: 1px solid #368CA9; }
+  border-bottom: 1px solid #eee; }
 
 .list-item-title {
   margin-top: 0; }
@@ -10758,14 +10767,6 @@ body {
 .responsibilities-list > li {
   padding: 5px 0; }
 
-.connect-header, .connect-content {
-  border: 1px solid #ccc;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  margin-top: 10px; }
-
 .connect-header-icon {
   width: 100px;
   height: 100px;
@@ -10796,6 +10797,8 @@ body {
   border-bottom: 1px solid #ddd;
   padding-top: 10px;
   padding-bottom: 10px; }
+  .connect-list-section:last-child {
+    border-bottom: 0; }
   .connect-list-section .body {
     margin-left: 15px; }
     .connect-list-section .body .name {

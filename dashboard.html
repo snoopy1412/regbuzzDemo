@@ -379,27 +379,10 @@
 						</div>
 					</div>
 					<div class="col-md-5 home-heading-section">
-						<div class="home-history">
-							<div class="text-right">
-								<div class="btn-group" data-toggle="buttons" id='change-role'>
-							  		<label v-for='role in roles' class="btn btn-secondary" :class="{'active':$index === autoindex}" @click='changeView($index)' v-text="role.name | capitalize">
-								    	<input type="radio" name="options" :value='role.name' >
-								  	</label>
-								 </div>
-								  <div class="history-content tab-content">
-								  	<div v-for='role in roles' transition="fadeIn" class='view' :class="{'active':$index === autoindex}">
-										<ul class='history-content-item history-content-employer'>
-											<li>
-												<span class='pull-left'  v-text="role.context.project.title"></span> <span class='pull-right right' v-text="role.context.project.num"></span>
-											</li>
-											<li>
-												<span class='pull-left' v-text="role.context.question.title"></span> <span class='pull-right right' v-text="role.context.question.num"></span>
-											</li>
-										</ul>
-									</div>
-								  </div>
-							</div>	
-						</div>
+
+							<!-- 加载dashboard组件，此组件来自于 components/homeHistory.vue -->
+							<homehistory v-bind:history-roles='historyRoles'></homehistory>
+
 					</div>	
 				</header>
 				<!-- <section class="row home-post">
@@ -414,110 +397,42 @@
 				    <li role="presentation"><a href="#dashboard-dynamic" aria-controls="messages" role="tab" data-toggle="tab">我的动态</a></li>
 				  </ul>
 				  <div class="tab-content">
-				    <div class="tab-pane active fade in" id="dashboard-push">
-				    	<section class="row home-push">
-							<div class="col-md-4">
-								<section class='home-push-item hoverable'>
-									<header class='home-push-item-header'>
-										<div class="push-handle">
-											<a href="" title='Favorite' class='favorite'><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
-											<a href="" title='Skip' class='skip'><i class='fa fa-times'></i>&nbsp;&nbsp;Skip</a>
-										</div>
-										<div class='push-warp-label'>
-											<span class="label label-info">GHS</span> - <span class="label label-info">SDS</span>
-										</div>
-										<h3 class="home-push-title">
-											<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
-										</h3>
-									</header><!-- /header -->
-									<div class='home-push-item-content'>
-										<p class='home-push-state'> 
-											<span class='text-left'><i class="fa fa-money fa-fw"></i>&nbsp;$ 100,000 USD</span>
-											<span class='text-right'><i class="fa fa-calendar-o fa-fw"></i>&nbsp;5 days left</span>
-										</p>
-										<div class='home-push-des'>
-											<p>
-											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item
+					<div class="tab-pane active fade in" id="dashboard-push">
+						<section class="row home-push" id='vue-home-push'>
+							<template v-for='item in pushData'>
+								<div class="col-md-4" transition="pushskip">
+									<section class='home-push-item hoverable'>
+										<header class='home-push-item-header'>
+											<div class="push-handle">
+												<a href="" title='Favorite' class='favorite'><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
+												<a href="javascript:;" title='Skip' class='skip' @click='pushSkip($index,$event)'><i class='fa fa-times'></i>&nbsp;&nbsp;Skip</a>
+											</div>
+											<div class='push-warp-label'>
+												<span class="label label-info" v-text='item.category.first'></span> - <span class="label label-info" v-text='item.category.sub'></span>
+											</div>
+											<h3 class="home-push-title">
+												<a href="" class='transition-link' v-text='item.title'></a>
+											</h3>
+										</header>
+										<div class='home-push-item-content'>
+											<p class='home-push-state'> 
+												<span class='text-left'><i class="fa fa-money fa-fw"></i>&nbsp;<i v-text='item.price.num | currency'></i> <i v-text='item.price.currency'></i></span>
+												<span class='text-right'><i class="fa fa-calendar-o fa-fw"></i>&nbsp;<i v-text='item.remaining'></i> days left</span>
 											</p>
+											<div class='home-push-des'>
+												<p v-text='item.description'></p>
+											</div>
 										</div>
-									</div>
-									<footer class='home-push-item-footer'>
-										<a href='' class='home-push-states'>
-											<i class="fa fa-search-plus fa-fw"></i>&nbsp;Detail
-										</a>
-									</footer>
-								</section>
-							</div>
-							<div class="col-md-4">
-								<section class='home-push-item hoverable'>
-									<header class='home-push-item-header'>
-										<div class="push-handle">
-											<a href="" title='Favorite' class='favorite'><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
-											<a href="" title='Skip' class='skip'><i class='fa fa-times'></i>&nbsp;&nbsp;Skip</a>
-										</div>
-										
-										<div class='push-warp-label'>
-											<span class="label label-info">GHS</span> - <span class="label label-info">SDS</span>
-										</div>
-										<h3 class="home-push-title">
-											<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
-										</h3>
-									</header><!-- /header -->
-									<div class='home-push-item-content'>
-										<p class='home-push-state'> 
-											<span class='text-left'><i class="fa fa-money fa-fw"></i>&nbsp;&nbsp;$ 100,000 USD</span>
-											<span class='text-right'><i class="fa fa-calendar-o fa-fw"></i>&nbsp;&nbsp;5 days left </span>
-										</p>
-										<div class='home-push-des'>
-											<p>
-											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item
-											</p>
-										</div>
-										
-									</div>
-									<footer class='home-push-item-footer'>
-										<a href='' class='home-push-states'>
-											<i class="fa fa-search-plus fa-fw"></i>&nbsp;Detail
-										</a>
-									</footer>
-								</section>
-							</div>
-							<div class="col-md-4">
-								<section class='home-push-item hoverable'>
-									<header class='home-push-item-header'>
-										<div class="push-handle">
-											<a href="" title='Favorite' class='favorite'><i class="fa fa-star"></i>&nbsp;Favorite</a>
-											<a href="" title='Skip' class='skip'><i class='fa fa-times'></i>&nbsp;Skip</a>
-										</div>
-										
-										<div class='push-warp-label'>
-											<span class="label label-info">GHS</span> - <span class="label label-info">SDS</span>
-										</div>
-										<h3 class="home-push-title">
-											<a href="" class='transition-link'>Expert Joomla Web Developer - CiviCRM a Plus!</a>
-										</h3>
-									</header><!-- /header -->
-									<div class='home-push-item-content'>
-										<p class='home-push-state'> 
-											<span class='text-left'><i class="fa fa-money fa-fw"></i>&nbsp;$ 100,000 USD</span>
-											<span class='text-right'><i class="fa fa-calendar-o fa-fw"></i>&nbsp;5 days left </span>
-										</p>
-										<div class='home-push-des'>
-											<p>
-											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item 
-											</p>
-										</div>
-									</div>
-									<footer class='home-push-item-footer'>
-										<a href='' class='home-push-states'>
-											<i class="fa fa-search-plus fa-fw"></i>&nbsp;Detail
-										</a>
-									</footer>
-								</section>
-							</div>
-							
+										<footer class='home-push-item-footer'>
+											<a href='' class='home-push-states'>
+												<i class="fa fa-search-plus fa-fw"></i>&nbsp;Detail
+											</a>
+										</footer>
+									</section>
+								</div>
+							</template>
 						</section>
-				    </div>
+					</div>
 				    <div class="tab-pane fade" id="dashboard-news">
 				    	<section class='row home-new'>
 							<div class="content dashboard-content">

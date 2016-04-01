@@ -72,12 +72,12 @@
     padding: 30px 20px;
     border: 1px solid transparent;
     border-bottom: 1px solid #eee;
-    -webkit-transition: border-color 0.75s;
-    -o-transition: border-color 0.75s;
-    transition: border-color 0.75s;
-    &:hover{
-        border:1px solid $palette-blue;
-    }
+    // -webkit-transition: border-color 0.75s;
+    // -o-transition: border-color 0.75s;
+    // transition: border-color 0.75s;
+    // &:hover{
+    //     border:1px solid $palette-blue;
+    // }
    
 }   
 .list-item-title{

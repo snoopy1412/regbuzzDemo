@@ -14,12 +14,25 @@
     @include opacity(1);
   }
 }
+
+// fadeOut
+@keyframes fadeOut {
+  0% {
+    @include opacity(1);
+  }
+  
+  100% {
+    @include opacity(0);
+  }
+}
+
 .fadeIn-transition {
   animation: fadeIn .3s;
 }
 .fadeIn-enter, .fadeIn-leave {
-	@include opacity(0);
+	animation: fadeOut .3s;
 }
+
 
 
 // staggered
@@ -36,6 +49,18 @@
 // 页面专用 
 /**************************************************************************************
 
+//dashboard页面
+//-------------------------------------------------------------------------------------
+/**
+ * fadeIn 效果
+ */
+.pushskip-transition{
+   animation: fadeIn .3s;
+}
+.pushskip-leave{
+  animation: fadeOut .3s;
+}
+// end -------------------------------------------------------------------------------------
 
 //publish页面
 //-------------------------------------------------------------------------------------
