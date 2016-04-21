@@ -35,7 +35,6 @@
 										   	<a href="profile.html" class='progress-info'>完善个人信息 60%</a>
 										  </div>
 										</div> 
-										
 									</div>
 								</div>
 							</div>
@@ -63,11 +62,11 @@
 					<div class="tab-pane active fade in" id="dashboard-push">
 						<section class="row home-push" id='vue-home-push'>
 							<template v-for='item in pushData'>
-								<div class="col-md-4" transition="pushskip">
+								<div class="col-md-4 home-push-item-warp" transition="pushskip">
 									<section class='home-push-item hoverable'>
 										<header class='home-push-item-header'>
 											<div class="push-handle">
-												<a href="" title='Favorite' class='favorite'><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
+												<a href="javascript:;" title='Favorite' class='favorite' @click='favorite($index,$event)'><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
 												<a href="javascript:;" title='Skip' class='skip' @click='pushSkip($index,$event)'><i class='fa fa-times'></i>&nbsp;&nbsp;Skip</a>
 											</div>
 											<div class='push-warp-label'>
@@ -95,6 +94,14 @@
 								</div>
 							</template>
 						</section>
+						<div class="alert alert-success text-center animated bounceIn save-message" v-show='saveHide' v-cloak style='width: 200px;margin:0 auto;position: fixed;top: 200px;left: 0;right: 0;'>
+							<i class="fa fa-check-square-o fa-2x" style='vertical-align: middle;'></i>
+							&nbsp;
+							<span style='vertical-align: middle;'>保存成功</span>
+							<button type="button" class="close" @click='saveHide = false'>
+								<span aria-hidden="true">×</span>
+							</button>
+						</div>
 					</div>
 				    <div class="tab-pane fade" id="dashboard-news">
 				    	<section class='row home-new'>
@@ -254,5 +261,8 @@
 <!-- footer.html -->
 <% include ./publicTpl/footer.html %>
 <!-- footer.html end-->
+
+
+
 </body>
 </html>

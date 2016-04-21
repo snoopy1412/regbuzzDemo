@@ -6372,12 +6372,28 @@ select[size] {
 //-------------------------------------------------------------------------------------
 /**
  * fadeIn 效果
- */
+//  */
+@keyframes slideUp {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  100% {
+    transform: translate3d(0, -100px, 0);
+    opacity: 0; } }
+
+@keyframes slideDown {
+  0% {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
 .pushskip-transition {
-  animation: fadeIn .3s; }
+  animation: slideDown .3s; }
 
 .pushskip-leave {
-  animation: fadeOut .3s; }
+  animation: slideUp .25s linear; }
 
 /**
  * pub-expand 效果
@@ -9800,7 +9816,8 @@ body {
   margin-bottom: 30px; }
   .proList-header .regbuzzToggle {
     display: inline-block;
-    border: 1px solid #368CA9;
+    background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 30px; }
     .proList-header .regbuzzToggle input[type=radio] {
       visibility: hidden;

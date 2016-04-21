@@ -8,7 +8,9 @@
         // right: 0;
         // top: -8px;
         display: inline-block;
-        border: 1px solid $palette-blue;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        // border: 1px solid $palette-blue;
         border-radius: 30px;
         input[type=radio]{
             visibility: hidden;
