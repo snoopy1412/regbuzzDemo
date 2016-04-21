@@ -29,4 +29,6 @@ require(['jquery', 'bootstrapTable'], function($) {
 			console.log(value, row, index);
 		}
 	};
+
+
 });

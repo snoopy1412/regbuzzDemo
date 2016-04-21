@@ -27,25 +27,49 @@
 
 	<!-- <h1 class='com-title-h1'>Bookmarked Projects</h1> -->
 	<div class='bookmark-section'>
-		<table class="table table-bordered table-hover ">
+		<div id="toolbar" class="btn-group">
+			<button type="button" class="btn btn-danger">
+				Delete Selected
+			</button>
+		</div>
+		<table class="table"  data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
 			<thead>
-				<tr class='active'>
-					<th>项目</th>
-					<th>竞标/作品</th>
-					<th>开始时间</th>
-					<th>结束时间</th>
-					<th>价格 (USD)</th>
-				</tr>
+			<tr class='active'>
+				<th data-field="state" data-checkbox="true"></th>
+				<th data-sortable="true">Title</th>
+				<th data-sortable="true">Status</th>
+				<th data-events="actionEvents">Action</th>
+			</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td colspan="5">No Projects found</td>
+					<td></td>
+					<td>
+						<a href="" title="">我是一个示例收藏</a>
+					</td>
+					<td>
+						Waiting for bids
+					</td>
+					<td>
+						<button type="button" class='btn btn-primary btn-sm'>Detail</button>
+						<button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<a href="" title="">我是一个示例收藏</a>
+					</td>
+					<td>
+						Closed
+					</td>
+					<td>
+						<button type="button" class='btn btn-primary btn-sm'>Detail</button>
+						<button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button>
+					</td>
 				</tr>
 			</tbody>
-		</table>
-		<p>
-			show 0 to 0 of 0 cntries
-		</p>		
+		</table>		
 	</div>
 
 </div>

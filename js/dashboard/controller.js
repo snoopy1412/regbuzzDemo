@@ -102,7 +102,8 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
 					description: 'I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item'
 				}
 			],
-			saveHide : false
+			saveHide : false,
+			isLoad : false
 		},
 		methods: {
 			pushSkip: function(index, event) {
