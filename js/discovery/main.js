@@ -1,10 +1,10 @@
 require(['raty', 'jRange', 'bootstrap', './discovery/controller'], function(raty, jRange) {
 
-  // 全局bootstrap 启用tootip
-  $(document).on('mouseover','[data-toggle="tooltip"]',function(){
-  	$(this).tooltip('show');
-  })
-  // $('[data-toggle="tooltip"]').tooltip();
+	  // 全局bootstrap 启用tootip
+	  $(document).on('mouseover','[data-toggle="tooltip"]',function(){
+	  	$(this).tooltip('show');
+	  })
+
 	
 	// 星星评级  
 	$('.list-grade-choose').each(function() {
@@ -12,11 +12,27 @@ require(['raty', 'jRange', 'bootstrap', './discovery/controller'], function(raty
 			readOnly: false,
 			half: true,
 			score: 0,
-			precision: true,
 			hints: ['bad', 'poor', 'regular', 'good', 'gorgeous'],
-			path: './img/stars'
+			path: './img/stars',
+		 	click: function(score, evt) {
+		    	alert("\nscore: " + score);
+		  	}
 		});
 	});
+
+
+	// 星星评级
+    $('.grade-item').raty({
+        readOnly: true,
+        half: true,
+        score: function(){
+        	return $(this).attr('data-score')
+        },
+        precision: true,
+        hints: ['bad', 'poor', 'regular', 'good', 'gorgeous'],
+        path: './img/stars'
+
+    });
 
 	// slider 
 	var fixedWidth = $('.list-aside-item-fixed .panel-body').width() - 10;

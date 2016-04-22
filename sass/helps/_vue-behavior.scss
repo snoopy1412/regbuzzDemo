@@ -66,7 +66,7 @@
 }
 @keyframes slideDown {
   0% {
-    transform : translate3d(0,20px,0);
+    transform : translate3d(0,100px,0);
     opacity: 0;
   }
   100% {
@@ -75,10 +75,14 @@
   }
 }
 .pushskip-transition{
-   animation: slideDown .3s;
+   animation: slideDown .25s;
+}
+.pushskip-enter{
+  animation: slideUp .2s linear;
 }
 .pushskip-leave{
-  animation: slideUp .25s linear;
+  // animation: slideUp .25s linear;
+  display: none;
 }
 // end -------------------------------------------------------------------------------------
 

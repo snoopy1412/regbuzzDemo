@@ -6383,17 +6383,20 @@ select[size] {
 
 @keyframes slideDown {
   0% {
-    transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 100px, 0);
     opacity: 0; }
   100% {
     transform: translate3d(0, 0, 0);
     opacity: 1; } }
 
 .pushskip-transition {
-  animation: slideDown .3s; }
+  animation: slideDown .25s; }
+
+.pushskip-enter {
+  animation: slideUp .2s linear; }
 
 .pushskip-leave {
-  animation: slideUp .25s linear; }
+  display: none; }
 
 /**
  * pub-expand 效果
@@ -6624,6 +6627,9 @@ ul {
 
 .bold {
   font-weight: 600; }
+
+.vertical-middle {
+  vertical-align: middle; }
 
 .img-round {
   border-radius: 50%; }
@@ -8901,6 +8907,9 @@ body {
   color: #ea755c;
   font-size: 12px; }
 
+.home-push .isFavorite {
+  color: #f2711c; }
+
 .home-push-item {
   background-color: #fff;
   margin-bottom: 10px;
@@ -8938,6 +8947,7 @@ body {
 .home-push-title {
   height: 36px; }
   .home-push-title a {
+    word-wrap: break-word;
     color: #444;
     margin-bottom: 0;
     font-size: 16px; }
