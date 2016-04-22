@@ -30,16 +30,16 @@
 		<!-- <h1 class='com-title-h1'>Drafts</h1> -->
 		<div id="toolbar" class="btn-group">
 			<button type="button" class="btn btn-danger">
-				Delete Selected
+				<i class="fa fa-trash-o vertical-middle" aria-hidden="true"></i>&nbsp;&nbsp;<span class='vertical-middle'>Delete Selected </span>
 			</button>
 		</div>
 		<table class="table"  data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
 			<thead>
 			<tr class='active'>
-				<th data-field="state" data-checkbox="true"></th>
-				<th data-sortable="true">Draft </th>
-				<th data-sortable="true">Type</th>
-				<th data-events="actionEvents">Action</th>
+				<th data-field="state" data-checkbox="true" data-width='4%'></th>
+				<th data-sortable="true" data-width='50%'>Draft Title</th>
+				<th data-sortable="true" data-width='26%'>Type</th>
+				<th data-events="actionEvents" data-width='20%'>Action</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -52,8 +52,12 @@
 						Project
 					</td>
 					<td>
-						<button type="button" class='btn btn-primary btn-sm draft-edit'>Edit</button>
-						<button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button>
+						<a href="" title="Edit" class='project-action'>
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+						</a>
+						<a href="" title="Delete"  class='project-action'>
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+						</a>
 					</td>
 				</tr>
 				<tr>
@@ -65,8 +69,12 @@
 						Proposal
 					</td>
 					<td>
-						<button type="button" class='btn btn-primary btn-sm draft-edit'>Edit</button>
-						<button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button>
+						<a href="" title="Edit" class='project-action'>
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+						</a>
+						<a href="" title="Delete" class='project-action'>
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+						</a>
 					</td>
 				</tr>
 			</tbody>

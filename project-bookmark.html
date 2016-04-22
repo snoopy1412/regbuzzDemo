@@ -362,20 +362,19 @@
 <section class='com-main'>
 <div class="container container-bookmark">
 
-	<!-- <h1 class='com-title-h1'>Bookmarked Projects</h1> -->
 	<div class='bookmark-section'>
 		<div id="toolbar" class="btn-group">
 			<button type="button" class="btn btn-danger">
-				Delete Selected
+				<i class="fa fa-trash-o vertical-middle" aria-hidden="true"></i>&nbsp;&nbsp;<span class='vertical-middle'>Delete Selected </span>
 			</button>
 		</div>
-		<table class="table"  data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
+		<table class="table" data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
 			<thead>
 			<tr class='active'>
-				<th data-field="state" data-checkbox="true"></th>
-				<th data-sortable="true">Title</th>
-				<th data-sortable="true">Status</th>
-				<th data-events="actionEvents">Action</th>
+				<th data-field="state" data-checkbox="true" data-width='4%'></th>
+				<th data-sortable="true" data-width='50%'>Bookmark Title</th>
+				<th data-sortable="true" data-width='26%'>Status</th>
+				<th data-events="actionEvents" data-width='20%'>Action</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -388,8 +387,14 @@
 						Waiting for bids
 					</td>
 					<td>
-						<button type="button" class='btn btn-primary btn-sm'>Detail</button>
-						<button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button>
+						<!-- <button type="button" class='btn btn-primary btn-sm'>Detail</button> -->
+						<!-- <button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button> -->
+						<a href="" title="Detail"  class='project-action'>
+							<i class="fa fa-folder-open" aria-hidden="true"></i>
+						</a>
+						<a href="" title="Delete"  class='project-action'>
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+						</a>
 					</td>
 				</tr>
 				<tr>
@@ -401,8 +406,12 @@
 						Closed
 					</td>
 					<td>
-						<button type="button" class='btn btn-primary btn-sm'>Detail</button>
-						<button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button>
+						<a href="" title="Detail"  class='project-action'>
+							<i class="fa fa-folder-open" aria-hidden="true"></i>
+						</a>
+						<a href="" title="Delete"  class='project-action'>
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+						</a>
 					</td>
 				</tr>
 			</tbody>

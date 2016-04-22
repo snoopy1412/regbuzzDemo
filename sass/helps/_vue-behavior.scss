@@ -56,12 +56,12 @@
 //  */
 @keyframes slideUp {
   0% {
-    transform : translate3d(0,0,0);
-    opacity: 1;
+    // transform : translate3d(0,0,0);
+    opacity: 0;
   }
   100% {
-    transform : translate3d(0,-100px,0);
-    opacity: 0;
+    // transform : translate3d(0,-100px,0);
+    opacity: 1;
   }
 }
 @keyframes slideDown {
@@ -75,13 +75,13 @@
   }
 }
 .pushskip-transition{
-   animation: slideDown .25s;
+   animation: slideDown .65s ease-out;
 }
 .pushskip-enter{
-  animation: slideUp .2s linear;
+  // animation: slideUp .5s linear;
 }
 .pushskip-leave{
-  // animation: slideUp .25s linear;
+  animation:fadeOut .1s;
   display: none;
 }
 // end -------------------------------------------------------------------------------------

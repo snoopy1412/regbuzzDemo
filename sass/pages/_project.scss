@@ -46,6 +46,9 @@
             display: block;
         }
     }
+    .fixed-table-container thead th .sortable{
+        padding-right: 8px;
+    }
 }
 
 
@@ -177,4 +180,11 @@
             vertical-align: middle;
         }
     }
+}
+
+.project-action{
+    display: inline-block;
+    margin-right:10px;
+    color:#368CA9;
+    font-size: 1.6rem;
 }

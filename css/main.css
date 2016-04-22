@@ -6375,11 +6375,9 @@ select[size] {
 //  */
 @keyframes slideUp {
   0% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1; }
+    opacity: 0; }
   100% {
-    transform: translate3d(0, -100px, 0);
-    opacity: 0; } }
+    opacity: 1; } }
 
 @keyframes slideDown {
   0% {
@@ -6390,12 +6388,10 @@ select[size] {
     opacity: 1; } }
 
 .pushskip-transition {
-  animation: slideDown .25s; }
-
-.pushskip-enter {
-  animation: slideUp .2s linear; }
+  animation: slideDown .65s ease-out; }
 
 .pushskip-leave {
+  animation: fadeOut .1s;
   display: none; }
 
 /**
@@ -9855,6 +9851,9 @@ body {
   .proList-content .section--employer-view.active, .proList-content .section--provider-view.active {
     display: block; }
 
+.proList-content .fixed-table-container thead th .sortable {
+  padding-right: 8px; }
+
 .project-detail-title {
   font-size: 20px;
   font-size: 2rem;
@@ -9943,6 +9942,12 @@ body {
     vertical-align: top; }
   .container--proList .participate-img .more {
     vertical-align: middle; }
+
+.project-action {
+  display: inline-block;
+  margin-right: 10px;
+  color: #368CA9;
+  font-size: 1.6rem; }
 
 .notice-main {
   background-color: #fff;
