@@ -1,0 +1,20 @@
+.order-confirmed-pay{
+
+}
+.order-confirmed-pay-method{
+	
+
+		height: 80px;
+		border-radius: 2px;
+		border: 1px solid #c0e0eb;
+		text-align: center;
+		font-size: 16px;
+		background-color: #e7f3f7;
+		display: block;
+		padding: 10px;
+		padding-top: 30px;
+	&:hover{
+	    background-color: #c0e0eb;
+	}
+	
+}
