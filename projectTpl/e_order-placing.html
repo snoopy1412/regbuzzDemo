@@ -1,0 +1,86 @@
+<!-- order-placing --> 
+<div class="tab-pane" id="order-placing">
+	<table data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
+		<thead>
+			<tr class='active'>
+				<th data-width="37%" data-sortable="true">Name</th>
+				<th data-width="12%" data-sortable="true">Provider</th>
+				<th data-width="12%" data-sortable="true">Price</th>
+				<th data-width="12%" data-sortable="true">Time Remaining</th>
+				<th data-width="12%" data-sortable="true">Status</th>
+				<th data-width="12%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- <tr>
+				<td class="CreateProject-container text-center" colspan="5">
+					<a href="publish-quick.html" class="CreateProject">
+					<h4 class="CreateProject-heading">创建一个新的项目</h4>
+					<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+					</a>
+				</td>
+			</tr> -->
+			<tr>
+				<td>
+					<a href="">订单名称</a>
+				</td>
+				<td><a href="">Charles C.</a></td>
+				<td></td>
+				<td></td>
+				<td>Order Drafting</td>
+				<td>
+					<a href="publish-order.html?user=1&project=23" class='action'>Edit</a>
+					<a href="#" class="action" data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='277'>Cancel</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">订单名称</a>
+				</td>
+				<td><a href="">Charles C.</a></td>
+				<td></td>
+				<td></td>
+				<td>Waiting for confirmation</td>
+				<td>
+					<!-- <a href="" class='action'>Revise</a> -->
+					<a href="publish-order.html?user=1&project=23" class="action">Edit</a>
+					<a href="#" class="action" data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='288'>Cancel</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">订单名称</a>
+				</td>
+				<td><a href="">Charles C.</a></td>
+				<td></td>
+				<td></td>
+				<td>Order confirmed</td>
+				<td>
+					<a href="" class='action' data-toggle="modal" data-target=".order-confirmed-pay" data-userId='1' data-projectId='299'>Pay</a>
+					<a href="#" class="action" data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='299'>Cancel</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- order-placing end -->
+<!-- order-placing 交互 -->
+	<div class="modal fade order-confirmed-pay" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">支付佣金</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						
+					</div>
+					<div class='text-right'>
+						<button type="button" class="btn btn-success js_open-waiting-add">确认</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- order-placing end-->

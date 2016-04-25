@@ -1,4 +1,4 @@
-require(['raty', 'jRange', 'bootstrap', './discovery/controller'], function(raty, jRange) {
+require(['raty', 'jRange', './discovery/controller'], function(raty, jRange) {
 
 	  // 全局bootstrap 启用tootip
 	  $(document).on('mouseover','[data-toggle="tooltip"]',function(){

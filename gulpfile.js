@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass');
 
 gulp.task('ejs', function() {  
-  gulp.src(["./dev/*.html"])
+  gulp.src(["./dev/*.html","./dev/*/*.html"])
 	.pipe(ejs({
 		msg: "Hello Gulp!"
 	},{ext: '.html'}))

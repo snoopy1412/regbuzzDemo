@@ -1,4 +1,4 @@
-require(['jquery', 'bootstrapTable'], function($) {
+require(['jquery', 'bootstrapTable','./project/e_open-for-bidding'], function($) {
 	var employerInput = $('#employerView_option').prop('checked'),
 		providerInput = $('#providerView_option').prop('checked');
 
@@ -29,6 +29,5 @@ require(['jquery', 'bootstrapTable'], function($) {
 			console.log(value, row, index);
 		}
 	};
-
 
 });

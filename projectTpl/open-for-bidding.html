@@ -1,0 +1,107 @@
+	<!-- open-for-bidding -->
+	<div class="tab-pane active" id="open-for-bidding">
+		<table data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
+		<thead>
+			<tr class='active'>
+				<th data-width="37%" data-sortable="true">Name</th>
+				<th data-width="12%" data-sortable="true">Bids</th>
+				<th data-width="12%" data-sortable="true">Averagre Price</th>
+				<th data-width="12%" data-sortable="true">Time Remaining</th>
+				<th data-width="12%" data-sortable="true">Status</th>
+				<th data-width="12%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- <tr>
+				<td class="CreateProject-container text-center" colspan="6">
+					<a href="publish-quick.html" class="CreateProject">
+					<h4 class="CreateProject-heading">创建一个新的项目</h4>
+					<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
+					</a>
+				</td>
+			</tr> -->
+			<tr>
+				<td><a href="" title="竞标名称">竞标名称</a></td>
+				<td>
+					<a href="" title="">10</a>
+				</td>
+				<td>0 USD</td>
+				<td>6days 7h</td>
+				<td>
+					<span class=''>Waiting for bids</span>
+				</td>
+				<td>
+					<a href='#' class="action" data-toggle="modal" data-target=".open-waiting-add" data-userId='1' data-projectId='233'>Add</a>
+
+					<!-- 暂时不考虑 -->
+					<!-- <a href="" class="action">Promote</a>  -->
+
+					<a href="connection.html" class="action" data-userId='1' data-projectId='233'>Invite</a>
+					<a href="publish-quick-result.html#pubResault-list" class="action" data-userId='1' data-projectId='233'>Select</a>
+					<a href="" class="action" data-toggle="modal" data-target=".open-waiting-cancel" data-userId='1' data-projectId='233'>Cancel</a>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><a href="" title="竞标名称">竞标名称</a></td>
+				<td><a href="" title="">10</a></td>
+				<td>10 USD</td>
+				<td>0</td>
+				<td>
+					<span class=''>Proposal Selecting</span>
+				</td>
+				<td>
+					<a href="publish-quick-result.html#pubResault-list" class="action">Select</a>
+					<a href="" class="action">Extend</a>										
+					<a href="" class="action">Cancel</a>
+				</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<!-- open -for-bidding 交互 -->
+
+	<!-- add 操作 -->
+	<div class="modal fade open-waiting-add" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">附加要求</h4>
+				</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<textarea name="" class='form-control js_open-waiting-add-content' rows='5'></textarea>
+				</div>
+				<div class='text-right'>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary js_open-waiting-add">Save changes</button>
+				</div>
+			</div>
+			
+			</div>
+		</div>
+	</div>
+	<!-- add end -->
+
+	<!-- cancel 操作 -->
+	<div class="modal fade open-waiting-cancel" tabindex="-1">
+		<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-body">
+				Are your sure to cancel your project?
+				<div class='text-center'>
+					<button type="button" class="btn btn-success">Yes, cancel it</button>
+					<button type="button" class="btn btn-link" data-dismiss="modal">No, wait a moment</button>
+					
+				</div>
+			</div>
+		</div>
+			
+		</div>
+	</div>
+	<!-- cancel end -->
+
+	<!-- open -for-bidding 交互 end-->
+
+	<!-- open-for-bidding end -->

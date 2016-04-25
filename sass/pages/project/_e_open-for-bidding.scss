@@ -1,0 +1,13 @@
+.open-waiting-add{
+	.description{
+		padding-top: 5px;
+		color:#666;
+		font-size: 12px;
+	}
+}
+
+.modal-cancel-des{
+	padding-bottom: 10px;
+	@include font-size(1.6);
+
+}

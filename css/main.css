@@ -9854,6 +9854,16 @@ body {
 .proList-content .fixed-table-container thead th .sortable {
   padding-right: 8px; }
 
+.proList-content .open-waiting-add .description {
+  padding-top: 5px;
+  color: #666;
+  font-size: 12px; }
+
+.proList-content .modal-cancel-des {
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-size: 1.6rem; }
+
 .project-detail-title {
   font-size: 20px;
   font-size: 2rem;

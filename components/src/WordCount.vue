@@ -22,7 +22,6 @@
 				type : Number,
 				default : 5
 			}
-
 		},
 		data(){
 			return {

@@ -28,7 +28,7 @@
             }
         }
         label{
-                        color: $palette-blue;
+            color: $palette-blue;
             display: inline-block;
             border: none;
             padding: 6px 26px;
@@ -49,6 +49,9 @@
     .fixed-table-container thead th .sortable{
         padding-right: 8px;
     }
+    
+    // 加载project-manage里面的片段
+    @import './project/e_open-for-bidding';
 }
 
 
