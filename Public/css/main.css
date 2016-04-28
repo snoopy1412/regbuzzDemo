@@ -9820,36 +9820,6 @@ body {
 .proList-header {
   position: relative;
   margin-bottom: 30px; }
-  .proList-header .regbuzzToggle {
-    display: inline-block;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 30px; }
-    .proList-header .regbuzzToggle input[type=radio] {
-      visibility: hidden;
-      position: absolute;
-      padding: 0;
-      vertical-align: bottom;
-      margin: 2px;
-      top: 30px; }
-      .proList-header .regbuzzToggle input[type=radio]:checked + label {
-        color: #F7F7F7;
-        background-color: #368CA9;
-        border-radius: 40px;
-        margin: 2px; }
-    .proList-header .regbuzzToggle label {
-      color: #368CA9;
-      display: inline-block;
-      border: none;
-      padding: 6px 26px;
-      background: 0 0;
-      cursor: pointer;
-      margin-bottom: 0; }
-
-.proList-content .section--employer-view, .proList-content .section--provider-view {
-  display: none; }
-  .proList-content .section--employer-view.active, .proList-content .section--provider-view.active {
-    display: block; }
 
 .proList-content .fixed-table-container thead th .sortable {
   padding-right: 8px; }
@@ -9857,7 +9827,8 @@ body {
 .proList-content .open-waiting-add .description {
   padding-top: 5px;
   color: #666;
-  font-size: 12px; }
+  font-size: 12px;
+  margin-bottom: 0; }
 
 .proList-content .modal-cancel-des {
   padding-bottom: 10px;
@@ -9865,17 +9836,40 @@ body {
   font-size: 1.6rem; }
 
 .proList-content .order-confirmed-pay-method {
-  height: 80px;
   border-radius: 2px;
   border: 1px solid #c0e0eb;
   text-align: center;
   font-size: 16px;
   background-color: #e7f3f7;
   display: block;
-  padding: 10px;
-  padding-top: 30px; }
+  padding: 10px; }
   .proList-content .order-confirmed-pay-method:hover {
     background-color: #c0e0eb; }
+  .proList-content .order-confirmed-pay-method .title, .proList-content .order-confirmed-pay-method .des {
+    display: block; }
+  .proList-content .order-confirmed-pay-method .title {
+    font-weight: bold; }
+  .proList-content .order-confirmed-pay-method .des {
+    padding-top: 10px; }
+  .proList-content .order-confirmed-pay-method .other-method-img {
+    height: 20px;
+    width: 30px;
+    display: inline-block;
+    margin-right: 4px; }
+  .proList-content .order-confirmed-pay-method .balance {
+    color: #d9534f; }
+
+.proList-content .order-banlance-handle {
+  margin-top: 20px; }
+
+.proList-content .work-reviews-score-container, .proList-content .work-reviews-score {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fb8a12; }
+
+.proList-content .work-reviews-score {
+  margin-left: 10px; }
 
 .project-detail-title {
   font-size: 20px;

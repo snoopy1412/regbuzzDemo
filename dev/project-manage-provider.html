@@ -1,0 +1,104 @@
+<!-- head.html -->
+<% include ./publicTpl/head-project.html %>
+<!-- head.html end-->
+<body>
+<!-- header.html -->
+<% include ./publicTpl/header.html %>
+<!-- header.html end-->
+
+<div class='breadcrumb-beauty-warp'>
+	<div class="container">
+		<ul class='breadcrumb-beauty'>
+            <li>
+              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href=""> Projects</a>
+            </li>
+            <li>
+              <a href="#">参与的任务</a>
+            </li>
+      	</ul>
+	</div>
+</div>
+<section class='com-main'>
+	<div class="container container--proList">
+		<!-- <header class='proList-header clearfix'>
+			<div class="regbuzzToggle pull-right">
+		        <input id="employerView_option" type="radio" value="employer" name="usertype_option" checked="true">
+		        <label for="employerView_option"> 
+		            Employer
+		        </label>
+		        <input id="providerView_option" type="radio" value="provider" name="usertype_option">
+		        <label for="providerView_option" >
+		            Provider
+		        </label>
+		    </div>
+		</header> -->
+		<div class="proList-content">
+			
+			<section class='proList-section section--provider-view'>
+				<!-- 威客身份 -->
+				<div class="provider-view">
+					  <!-- Nav tabs -->
+					  <ul class="nav nav-tabs nav-tabs-custom-blue">
+						    <li role="presentation" class="active">
+						    	<a href="#active-bids" data-toggle="tab">Active Bids</a>
+		                	</li>
+		                	 <li role="presentation">
+						    	<a href="#order-placing-provider" data-toggle="tab">Order Placing</a>
+		                	</li>
+						    <li role="presentation">
+						   	 	<a href="#current-work" data-toggle="tab">Current Work</a>
+						    </li>
+						    <li role="presentation">
+					   		 	<a href="#past-work" data-toggle="tab">Past Work</a>
+		                    </li>
+					  </ul>
+					  <div class="tab-content">
+							
+						<!-- active-bids -->
+						<% include ./projectTpl/p_active-bids.html %>
+							
+						<!-- order-placing-provider -->
+						<% include ./projectTpl/p_order-placing.html %>
+
+						<!-- current-work -->
+						<% include ./projectTpl/p_current-work.html %>
+
+						<!-- past-work -->
+						<% include ./projectTpl/p_past-work.html %>
+
+					    <!-- 公共 quit 行为-->						
+						<div class="modal fade modal-quit" tabindex="-1">
+							<div class="modal-dialog modal-sm">
+								<div class="modal-content">
+									<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">放弃任务</h4>
+									</div>
+									<div class="modal-body">
+										<p class='modal-cancel-des'>
+											Are your sure to quit your project?
+										</p>
+										<div class='modal-cancel-action'>
+											<button type="button" class="btn btn-danger js_open-waiting-cancel">Yes, quit it</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- cancel end -->		
+					  </div>
+				</div>				
+			</section>
+		</div>
+	</div>
+	
+</section>
+
+<!-- footer.html -->
+<% include ./publicTpl/footer.html %>
+<!-- footer.html end-->
+</body>
+</html>

@@ -1,0 +1,913 @@
+<!-- head.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
+	<title>Document</title>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./Public/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./Public/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Public/css/main.css">
+    <script type="text/javascript" src='./Public/js/vendor/respond.min.js'></script>
+
+	<script type="text/javascript" src="./Public/js/vendor/require-2.2.0.min.js"></script>
+    <script type="text/javascript" src='./Public/js/require-config.js'></script>
+    <script type="text/javascript" src='./Public/js/page/project/main.js'></script>
+	<!--[if lt IE9]> 
+	<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
+<!-- head.html end-->
+<body>
+<!-- header.html -->
+	<!-- /header -->
+	<header class="header" id='vue-header'>
+		<nav class="navbar">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">
+					<img src='./Public/img/header/logo4.png' height="32" width="123"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" >
+					<form action="" class="navbar-form navbar-left search-form">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-btn">
+								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search fa-fw" :class='defaultSearch.class'></i><span class="caret"></span></button>
+								        <ul class="dropdown-menu search-select-response">
+								          <li v-for='search in searchList'><a href="javascript:;" v-on:click='choiseSearch($index)'><i class="fa fa-fw" :class='search.class'></i>&nbsp;{{search.text}}</a></li>
+								        </ul>
+						      	</div>
+								<input type="text" name="" value="" :placeholder="defaultSearch.placeholder" class='form-control' style='min-width: 350px'  data-toggle="dropdown">
+								<div class='dropdown-menu search-text-response'>
+									<ul class='list-unstyled'>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-user"></i>
+											&nbsp;&nbsp; <strong>People</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-briefcase"></i>
+											&nbsp;&nbsp; <strong>Projects</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-title clearfix'>
+											<i class="fa fa-folder-open"></i>
+											&nbsp;&nbsp;
+											<strong>Articles</strong>
+											<a href="" title=""  class='pull-right search-text-more'>more results</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+										<li class='search-text-response-resoult'>
+											<a href="">Aaron</a>
+										</li>
+									</ul>
+								</div>
+								<div class="input-group-btn">
+									<button type="" class="btn btn-secondary" >search</button>
+								</div>
+							</div>
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right header-utilities">
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle'  data-toggle="dropdown">
+								<i class="fa fa-question"></i>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow header-utilities--helpCenter">
+								<div class="panel panel-default">
+									<!-- <div class="header-loading">
+										<i class="fa fa-spinner fa-pulse fa-2x"></i>
+									</div> -->
+									<div class="panel-heading">
+										<strong class='heading-title'>Help center</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href="help-faqs.html">
+													<span class='label label-info'>
+														<i class="fa fa-quote-left"></i>
+													</span>
+													
+													<span>FAQs</span>
+												</a>
+											</li>
+											<li>
+												<a href="help-guidance.html">
+												<span class='label label-info'>
+	     											<i class="fa fa-book"></i>
+	     										</span>
+													<span>Guidance</span>
+													</a>
+											</li>
+											<li>
+												<a href="help-fees.html">
+												<span class='label label-info'>
+													<i class="fa fa-usd"></i>
+												</span>
+													<span>Fees & Charges</span>
+												</a>
+											</li>
+											<li>
+												<a href="help-works.html">
+												<span class='label label-info'>
+													<i class="fa fa-cog"></i>
+												</span>
+													<span>How it works</span>
+												</a>
+											</li>
+											<li>
+												<a href="help-feedback.html">
+												<span class='label label-info'>
+													<i class="fa fa-info"></i>
+												</span>
+													<span>Feedback</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-envelope-o'></i>
+								<span class='label label-warning inform'>8</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<strong class='heading-title'>Message</strong>
+								</div>
+								<div class="panel-body header-utilities-list">
+									<ul class='header-utilities-message'>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./Public/img/index/servers/2.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./Public/img/index/servers/3.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe <span class="badge badge-success">new</span></span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./Public/img/index/servers/4.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe </span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>
+										<li class="new">
+				                                <a href="">
+				                                    <span class="thumb"><img src="./Public/img/index/servers/5.jpg"></span>
+			                                        <span class="desc">
+			                                          <span class="name">John Doe </span>
+			                                          <span class="msg">Lorem ipsum dolor sit amet...</span>
+			                                        </span>
+				                                </a>
+			                            </li>			                            			                            
+										<li>
+											<a href="" title="">See All Messages</a>
+										</li>
+									</ul>
+								</div>
+								<!-- <div class="panel-footer clearfix">
+									<a href="" title="" class='btn btn-primary btn-sm pull-right'>See All Messages</a>
+								</div> -->
+							</div>
+						</div>
+						</li>
+						<li>
+							<a href="javascript:;" title="" class='dropdown-toggle' data-toggle="dropdown">
+								<i class='fa fa-bell-o'></i>
+								<span class='label label-success inform'>2</span>
+							</a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--arrow">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<strong class='heading-title'>Notice</strong>
+									</div>
+									<div class="panel-body header-utilities-list">
+										<ul>
+											<li>
+												<a href=""><span class="label label-success"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
+											</li>
+											<li>
+												
+												<a href=""><span class="label label-success"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href=""><span class="label label-success"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
+											</li>
+											<li>
+												<a href="" title="">See All Notifications</a>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</li>
+						<li class='dropdown'>
+							<a href="javascript:;" title="" class='dropdown-toggle account' data-toggle="dropdown">
+								<img src="./Public/img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px"></a>
+							<div class="dropdown-menu header-utilities-box header-utilities-box--user">
+								<!-- <div class="dropdown-loading">
+								<i class="fa fa-spinner fa-pulse"></i>
+							</div>
+							-->
+								<div class="panel panel-default">
+									<div class="panel-body">
+										<div class="user-info">
+											<img src="./Public/img/index/servers/1.jpg" alt="" class='img-round' width="34px" height="34px">
+											<h4 class='user-info-name'>Aaron Su</h4>
+											<a href="" title="" class='user-info-level'>Basic User</a>
+										</div>
+										<ul class='user-info-list'>
+											<li>
+												<a href="profile.html">
+													<i class="fa fa-newspaper-o fa-lg"></i>
+													<span>Profile</span>
+												</a>
+											</li>
+											<li>
+												<a href="membership.html">
+													<i class="fa fa-trophy fa-lg"></i>
+													<span>Membership</span>
+												</a>
+											</li>
+											<li>
+												<a href="setting.html">
+													<i class="fa fa-cog fa-lg"></i>
+													<span>Settings</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="fa fa-sign-out fa-lg"></i>
+													<span>logout</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 页面导航部分 -->
+		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+			<div class='container'>
+				<ul class='nav navbar-nav clearfix'>
+					<li>
+						<a href='dashboard.html' title="" class='active'>Dashboard</a>
+					</li>
+					<li>
+						<a href="javascrit:;" title="" data-toggle="dropdown" class="dropdown-toggle">Projects<span class="caret"></span></a>
+						 <ul class="dropdown-menu">
+				            <li><a href="project-manage-employer.html">发起的任务</a></li>
+				            <li><a href="project-manage-provider.html">参与的任务</a></li>
+				            <li><a href="project-draft.html">Drafts</a></li>
+				            <li><a href="project-bookmark.html">Bookmarks</a></li>
+				          </ul>
+					</li>
+					<li>
+						<a href="javascrit:;" title="" data-toggle="dropdown" class="dropdown-toggle">Discovery<span class="caret"></span></a>
+						 <ul class="dropdown-menu">
+				            <li><a href="discovery-projects.html">Find a Project</a></li>
+				            <li><a href="discovery-providers.html">Find a Provider</a></li>
+				           <!--  <li>
+				            	<a href="list-projects.html">Local Jobs</a>
+				            </li> -->
+				          </ul>
+					</li>
+					<li>
+						<a href="connection.html" title="">Connections</a>
+					</li>
+				</ul>
+				<div class='navbar-right'>
+					<a href="publish-quick.html" title="" class='btn btn-warning navbar-btn'>Post a project</a>
+				</div>
+			</div>
+		</nav>
+</header>
+<!-- header.html end-->
+
+<div class='breadcrumb-beauty-warp'>
+	<div class="container">
+		<ul class='breadcrumb-beauty'>
+            <li>
+              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+            </li>
+            <li>
+              <a href=""> Projects</a>
+            </li>
+            <li>
+              <a href="#">参与的任务</a>
+            </li>
+      	</ul>
+	</div>
+</div>
+<section class='com-main'>
+	<div class="container container--proList">
+		<!-- <header class='proList-header clearfix'>
+			<div class="regbuzzToggle pull-right">
+		        <input id="employerView_option" type="radio" value="employer" name="usertype_option" checked="true">
+		        <label for="employerView_option"> 
+		            Employer
+		        </label>
+		        <input id="providerView_option" type="radio" value="provider" name="usertype_option">
+		        <label for="providerView_option" >
+		            Provider
+		        </label>
+		    </div>
+		</header> -->
+		<div class="proList-content">
+			
+			<section class='proList-section section--provider-view'>
+				<!-- 威客身份 -->
+				<div class="provider-view">
+					  <!-- Nav tabs -->
+					  <ul class="nav nav-tabs nav-tabs-custom-blue">
+						    <li role="presentation" class="active">
+						    	<a href="#active-bids" data-toggle="tab">Active Bids</a>
+		                	</li>
+		                	 <li role="presentation">
+						    	<a href="#order-placing-provider" data-toggle="tab">Order Placing</a>
+		                	</li>
+						    <li role="presentation">
+						   	 	<a href="#current-work" data-toggle="tab">Current Work</a>
+						    </li>
+						    <li role="presentation">
+					   		 	<a href="#past-work" data-toggle="tab">Past Work</a>
+		                    </li>
+					  </ul>
+					  <div class="tab-content">
+							
+						<!-- active-bids -->
+						<!-- active-bids -->
+<div role="tabpanel" class="tab-pane active" id="active-bids">
+<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
+	<thead>
+		<tr class='active'>
+			<th data-width="37%" data-sortable="true">Name</th>
+			<th data-width="12%" data-sortable="true">Bids</th>
+			<th data-width="12%" data-sortable="true">Average price</th>
+			<th data-width="12%" data-sortable="true">Time remaining</th>
+			<th data-width="12%" data-sortable="true">Status</th>
+			<th data-width="12%">Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<a href="">项目名称</a>
+			</td>
+			<td>21</td>
+			<td>128 USD</td>
+			<td>6Days7h59m59s</td>
+			<td>Opening for bids</td>
+			<td>
+				<a href="" class="action" data-toggle="modal" data-target=".active-opening-add" data-userId='1' data-projectId='233'>Add</a>
+				<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="">项目名称</a>
+			</td>
+			<td>21</td>
+			<td>128 USD</td>
+			<td>0</td>
+			<td>Waiting for Result</td>
+			<td>
+				<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<!-- active-bids 交互-->
+<!-- add 操作 -->
+<div class="modal fade active-opening-add" tabindex="-1">
+<div class="modal-dialog modal-sm">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title" id="myModalLabel">附加要求</h4>
+		</div>
+		<div class="modal-body">
+			<div class="form-group">
+				<textarea name="" class='form-control js_open-waiting-add-content' rows='5'></textarea>
+				<p class='description'>
+					注1：最大输入字符不能超过1000
+				</p>
+			</div>
+			
+		</div>
+		<div class="modal-footer">
+			<div class='text-right'>
+				<button type="button" class="btn btn-primary js_open-waiting-add">Save</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+			</div>
+		</div>	
+	</div>
+</div>
+</div>
+<!-- add end -->
+<!-- active-bids 交互 end -->
+<!-- active-bids end-->
+							
+						<!-- order-placing-provider -->
+						<!-- order-placing-provider -->
+<div role="tabpanel" class="tab-pane" id="order-placing-provider">
+	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
+		<thead>
+			<tr class='active'>
+				<th data-width="37%" data-sortable="true">Name</th>
+				<th data-width="12%" data-sortable="true">Employer</th>
+				<th data-width="12%" data-sortable="true">Price</th>
+				<th data-width="12%" data-sortable="true">Time remaining</th>
+				<th data-width="12%" data-sortable="true">Status</th>
+				<th data-width="12%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td></td>
+				<td></td>
+				<td>
+					Waiting for the order
+				</td>
+				<td>
+					<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td></td>
+				<td></td>
+				<td>
+					Order received
+				</td>
+				<td>
+					<a href="" class="action" data-toggle="modal" data-target=".order-received-confirm" data-userId='1' data-projectId='233'>Order Confirm</a>
+					<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td></td>
+				<td></td>
+				<td>
+					Waiting for payment
+				</td>
+				<td>
+					<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+				</td>
+			</tr>						    			
+		</tbody>
+	</table>
+</div>
+<!-- order-placing-provider end -->
+
+<!-- order-placing-provider 交互 -->
+<!-- order-received-confirm -->
+<div class="modal fade order-received-confirm" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">确认延期</h4>
+			</div>
+			<div class="modal-body">
+				<span class='modal-cancel-des'>
+					确定收到订单吗？
+				</span>
+			</div>
+			<div class="modal-footer">
+				<div class='modal-cancel-action'>
+					<button type="button" class="btn btn-success">Confirm</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>							
+<!-- order-received-confirm end-->
+<!-- order-placing-provider 交互 end -->
+
+						<!-- current-work -->
+						<!-- current-work  -->
+<div role="tabpanel" class="tab-pane" id="current-work">
+	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
+		<thead>
+			<tr class='active'>
+				<th data-width="37%" data-sortable="true">Name</th>
+				<th data-width="12%" data-sortable="true">Employer</th>
+				<th data-width="12%" data-sortable="true">Price</th>
+				<th data-width="12%" data-sortable="true">Time remaining</th>
+				<th data-width="12%" data-sortable="true">Status</th>
+				<th data-width="12%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td>
+					100 USD
+				</td>
+				<td>
+					6Days7h59m59s
+				</td>
+				<td>
+					Working
+				</td>
+				<td>
+					<a href="" class="action" data-toggle="modal" data-target=".current-working-done" data-userId='1' data-projectId='233'>Job Done</a>
+					<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td>
+					100 USD
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					Waiting for Receipt confirm
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td>
+					100 USD
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					Waiting for Payment
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td>
+					100 USD
+				</td>
+				<td>
+					
+				</td>
+				<td>
+					Waiting for Comments
+				</td>
+				<td>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- current-work end -->
+<!-- current-work 交互 -->
+<!-- order-received-confirm -->
+<div class="modal fade current-working-done" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">确认延期</h4>
+			</div>
+			<div class="modal-body">
+				<span class='modal-cancel-des'>
+					确定完成了工作吗？
+				</span>
+			</div>
+			<div class="modal-footer">
+				<div class='modal-cancel-action text-right'>
+					<button type="button" class="btn btn-success">Confirm</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>							
+<!-- order-received-confirm end-->
+<!-- current-work 交互 end -->
+
+						<!-- past-work -->
+						<!-- past-work -->
+<div role="tabpanel" class="tab-pane" id="past-work">
+	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
+		<thead>
+			<tr class='active'>
+				<th data-width="37%" data-sortable="true">Name</th>
+				<th data-width="12%" data-sortable="true">Employer</th>
+				<th data-width="12%" data-sortable="true">Price</th>
+				<th data-width="12%" data-sortable="true">Time remaining</th>
+				<th data-width="12%" data-sortable="true">Status</th>
+				<th data-width="12%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td>
+					100 USD
+				</td>
+				<td></td>
+				<td>
+					Success
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td>
+					100 USD
+				</td>
+				<td></td>
+				<td>
+					Failed
+				</td>
+				<td>
+					<a href="" class="action" data-toggle="modal" data-target=".past-failed-reason" data-userId='1' data-projectId='233'>Reason</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- past-work end -->
+<!-- past-work 交互 -->
+<div class="modal fade past-failed-reason" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">项目失败原因</h4>
+			</div>
+		<div class="modal-body">
+			<p>
+				咨询师取消任务
+			</p>
+		</div>
+		
+		</div>
+	</div>
+</div>	
+<!-- past-work 交互 end -->
+
+					    <!-- 公共 quit 行为-->						
+						<div class="modal fade modal-quit" tabindex="-1">
+							<div class="modal-dialog modal-sm">
+								<div class="modal-content">
+									<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<h4 class="modal-title" id="myModalLabel">放弃任务</h4>
+									</div>
+									<div class="modal-body">
+										<p class='modal-cancel-des'>
+											Are your sure to quit your project?
+										</p>
+										<div class='modal-cancel-action'>
+											<button type="button" class="btn btn-danger js_open-waiting-cancel">Yes, quit it</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- cancel end -->		
+					  </div>
+				</div>				
+			</section>
+		</div>
+	</div>
+	
+</section>
+
+<!-- footer.html -->
+<footer class='public-footer'>
+<div class="container-fluid">
+<div class="row footer-nav">
+	<div class="col-md-2 footer-nav-list">
+		<h4>Company</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">About</a>
+			</li>
+			<li>
+				<a href="">Contact</a>
+			</li>
+			<li>
+				<a href="">Jobs</a>
+			</li>
+			<li>
+				<a href="">Team</a>
+			</li>
+			<li>
+				<a href="">Press releases</a>
+			</li>
+			<li>
+				<a href="">Testimonials</a>
+			</li>
+			<li>
+				<a href="">Terms of Service</a>
+			</li>
+			<li>
+				<a href="">Privacy Policy</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Resource</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Videos</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Support</h4>
+		<div class="footer-divider"></div>
+		<ul class='list-unstyled'>
+			<li>
+				<a href="">Questions</a>
+			</li>
+			<li>
+				<a href="">Blogs</a>
+			</li>
+			<li>
+				<a href="">Language support</a>
+			</li>
+			<li>
+				<a href="">FAQ</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-2 footer-nav-list">
+		<h4>Social</h4>
+		<div class="footer-divider"></div>
+		<ul class='social-icon-list'>
+			<li class='social-icon'>
+				<span class='fa fa-linkedin'></span>
+				<a href="" title='Linkedin'>linkedin</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-twitter'></span>
+				<a href="" title='twitter'>twitter</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-facebook-official'></span>
+				<a href="" title='Facebook'>facebook</a>
+			</li>
+			<li class='social-icon'>
+				<span class='fa fa-google-plus'></span>
+				<a href="" title='Google+'>google+</a>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4 footer-nav-list">
+		<h4>Message</h4>
+		<div class="footer-divider"></div>
+		<form action="" class='footer-contact'>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+			<div class="form-group">
+				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+			<div class="form-group">
+				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+			</div>
+			<div class="form-group">
+				<input type="submit" value='Submit' class='btn btn-secondary'></div>
+		</form>
+	</div>
+</div>
+<div class="footer-divider"></div>
+<div class="row footer-bottom">
+	<div class="col-md-6">
+		<ul class='footer-brand clearfix'>
+			<li class='footer-brand-logo'>
+				<img src="./Public/img/index/footer-logo.png" alt=""></li>
+			<li class='footer-brand-content'>
+				<p>The best product compliance platform</p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<p class='text-right copyright'>
+			© Copyright 2015 - 2016
+			<a href="" title="">Regbuzz.com</a>
+		</p>
+	</div>
+</div>
+</div>
+</footer>
+<!-- footer.html end-->
+</body>
+</html>

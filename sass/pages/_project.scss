@@ -3,49 +3,45 @@
 .proList-header{
     position: relative;
     margin-bottom: 30px;
-    .regbuzzToggle{
-        // position: absolute;
-        // right: 0;
-        // top: -8px;
-        display: inline-block;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        // border: 1px solid $palette-blue;
-        border-radius: 30px;
-        input[type=radio]{
-            visibility: hidden;
-            position: absolute;
-            padding: 0;
-            vertical-align: bottom;
-            margin: 2px;
-            top: 30px;
+    // .regbuzzToggle{
+    //     display: inline-block;
+    //     background-color: #fff;
+    //     border: 1px solid #ccc;
+    //     // border: 1px solid $palette-blue;
+    //     border-radius: 30px;
+    //     input[type=radio]{
+    //         visibility: hidden;
+    //         position: absolute;
+    //         padding: 0;
+    //         vertical-align: bottom;
+    //         margin: 2px;
+    //         top: 30px;
 
-            &:checked+label{
-                color: #F7F7F7;
-                background-color: $palette-blue;
-                border-radius: 40px;
-                margin: 2px;
-            }
-        }
-        label{
-            color: $palette-blue;
-            display: inline-block;
-            border: none;
-            padding: 6px 26px;
-            background: 0 0;
-            cursor: pointer;
-            margin-bottom: 0;
-        }
-
-    }
+    //         &:checked+label{
+    //             color: #F7F7F7;
+    //             background-color: $palette-blue;
+    //             border-radius: 40px;
+    //             margin: 2px;
+    //         }
+    //     }
+    //     label{
+    //         color: $palette-blue;
+    //         display: inline-block;
+    //         border: none;
+    //         padding: 6px 26px;
+    //         background: 0 0;
+    //         cursor: pointer;
+    //         margin-bottom: 0;
+    //     }
+    // }
 }
 .proList-content{
-    .section--employer-view,.section--provider-view{
-        display: none;
-        &.active{
-            display: block;
-        }
-    }
+    // .section--employer-view,.section--provider-view{
+        // display: none;
+        // &.active{
+        //     display: block;
+        // }
+    // }
     .fixed-table-container thead th .sortable{
         padding-right: 8px;
     }
@@ -53,6 +49,7 @@
     // 加载project-manage里面的片段
     @import './project/e_open-for-bidding';
     @import './project/e_order-placing';
+    @import './project/e_work-in-progress';
 }
 
 

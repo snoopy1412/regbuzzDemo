@@ -1,0 +1,71 @@
+<!-- past-work -->
+<div role="tabpanel" class="tab-pane" id="past-work">
+	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
+		<thead>
+			<tr class='active'>
+				<th data-width="37%" data-sortable="true">Name</th>
+				<th data-width="12%" data-sortable="true">Employer</th>
+				<th data-width="12%" data-sortable="true">Price</th>
+				<th data-width="12%" data-sortable="true">Time remaining</th>
+				<th data-width="12%" data-sortable="true">Status</th>
+				<th data-width="12%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td>
+					100 USD
+				</td>
+				<td></td>
+				<td>
+					Success
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Aaron Su.</a>
+				</td>
+				<td>
+					100 USD
+				</td>
+				<td></td>
+				<td>
+					Failed
+				</td>
+				<td>
+					<a href="" class="action" data-toggle="modal" data-target=".past-failed-reason" data-userId='1' data-projectId='233'>Reason</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- past-work end -->
+<!-- past-work 交互 -->
+<div class="modal fade past-failed-reason" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">项目失败原因</h4>
+			</div>
+		<div class="modal-body">
+			<p>
+				咨询师取消任务
+			</p>
+		</div>
+		
+		</div>
+	</div>
+</div>	
+<!-- past-work 交互 end -->

@@ -1,0 +1,143 @@
+<div class="tab-pane" id="past-project">
+	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
+		<thead>
+			<tr class='active'>
+				<th data-width="37%" data-sortable="true">Name</th>
+				<th data-width="12%" data-sortable="true">Provider</th>
+				<th data-width="12%" data-sortable="true">Price</th>
+				<th data-width="12%" data-sortable="true">Time Remaining</th>
+				<th data-width="12%" data-sortable="true">Status</th>
+				<th data-width="12%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Charles C.</a>
+				</td>
+				<td>
+					10 USD
+				</td>
+				<td></td>
+				<td>
+					Success
+				</td>
+				<td>
+					<a href="" class="action" data-toggle="modal" data-target=".past-success-comment" data-userId='1' data-projectId='21213'>Add comment</a>
+					<a href="" class="action" data-toggle="modal" data-target=".past-dispute" data-userId='1' data-projectId='21213'>Dispute</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="">项目名称</a>
+				</td>
+				<td>
+					<a href="">Charles C.</a>
+				</td>
+				<td>
+					10 USD
+				</td>
+				<td></td>
+				<td>
+					Failed
+				</td>
+				<td>
+					<a href="" class="action" class="action" data-toggle="modal" data-target=".past-failed-reason" data-userId='1' data-projectId='21213'>Reason</a>
+					<a href="" class="action" class="action" data-toggle="modal" data-target=".past-dispute" data-userId='1' data-projectId='21213'>Dispute</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- past-project end -->
+					
+<!-- past-project 交互 -->
+<!-- Add comment -->
+<div class="modal fade past-success-comment" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">追加评论</h4>
+			</div>
+		<div class="modal-body">
+			<div class="form-group">
+				<textarea name="" class='form-control js_open-waiting-add-content' rows='5'></textarea>
+			</div>
+			
+		</div>
+		<div class="modal-footer">
+			<div class='text-right'>
+				<button type="button" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
+			</div>
+		</div>
+		
+		</div>
+	</div>
+</div>	
+<!-- Add comment end -->
+
+<!-- past-failed-reason -->
+<div class="modal fade past-failed-reason" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">项目失败原因</h4>
+			</div>
+			<div class="modal-body">
+				<p>
+					咨询师取消任务
+				</p>
+			</div>	
+		</div>
+	</div>
+</div>	
+<!-- past-failed-reason end -->
+
+<!-- past-dispute-->
+<div class="modal fade past-dispute" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">纠纷</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">Dispute Title</label>
+						<div class="col-sm-8">
+					      <input type="text" class="form-control" id="inputEmail3" placeholder="title">
+					    </div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">Dispute Description</label>
+						<div class="col-sm-8">
+					      <textarea name="" class='form-control' rows="5"></textarea>
+					    </div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-sm-3 control-label">Attach a document</label>
+						<div class="col-sm-8">
+					      <input type="file">
+					    </div>
+					</div>
+					<div class="form-group">
+						<div class='col-sm-offset-3 col-sm-8'>
+							<button type="button" class="btn btn-primary">Save</button>
+							<button type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
+						</div>	
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</div>	
+<!-- past-dispute end -->
+

@@ -2,9 +2,7 @@
 
 }
 .order-confirmed-pay-method{
-	
 
-		height: 80px;
 		border-radius: 2px;
 		border: 1px solid #c0e0eb;
 		text-align: center;
@@ -12,9 +10,31 @@
 		background-color: #e7f3f7;
 		display: block;
 		padding: 10px;
-		padding-top: 30px;
 	&:hover{
 	    background-color: #c0e0eb;
 	}
+	.title,.des{
+		display: block;
+	}
+	.title{
+		font-weight: bold;
+	}
+	.des{
+		padding-top: 10px;
+
+	}
+	.other-method-img{
+		height: 20px;
+		width: 30px;
+		display: inline-block;
+		margin-right: 4px;
+
+	}
+	.balance{
+		color:$brand-danger;
+	}
+}
+.order-banlance-handle{
+	margin-top: 20px;
 	
 }

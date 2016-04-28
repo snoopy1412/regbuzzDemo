@@ -1,4 +1,4 @@
-require(['raty','./page/profile/crop','./page/profile/controller'],function(raty){
+require(['jquery','raty','./page/profile/crop','./page/profile/controller'],function(raty){
 
    // 星星评级
     $('.totalScore').raty({
