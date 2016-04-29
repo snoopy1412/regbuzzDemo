@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
 	rename = require('gulp-rename'),
-	sass = require('gulp-sass');
+	sass = require('gulp-sass'),
+	connect = require('gulp-connect');;
 
 gulp.task('ejs', function() {  
   gulp.src(["./dev/*.html"])
@@ -19,6 +20,13 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('./Public/css'));
 });
 
+gulp.task('connect', function () {
+  connect.server({
+    root: './',
+    livereload: true
+  });
+});
+
 // gulp.task('script',function(){
 //     // 1. 找到文件
 //     gulp.src('java/*.js')
@@ -31,7 +39,10 @@ gulp.task('sass', function() {
 //     .pipe(gulp.dest('dist/js'));  //输出
 // })
 
+
 gulp.task('watch', function() {
 	gulp.watch(["./dev/*.html"], ['ejs']);
 	gulp.watch(['./sass/*.scss', './sass/**/*.scss'], ['sass']);
 })
+
+gulp.task('default', ['connect', 'watch']);

@@ -35,6 +35,9 @@ require.config({
     "bootstrap": {
       deps: ["jquery"]
     },
+    'layer':{
+      deps:['jquery']
+    },
     "bootstrapTable": {
       deps: ['jquery']
     },
@@ -66,4 +69,4 @@ require.config({
 });
 
 require(['./page/header/main']);
-// require(['./project/main']);
+require(['./layerInit']);

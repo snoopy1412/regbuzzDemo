@@ -1,14 +1,6 @@
 define(['jquery', 'layer', '../layerInit'], function($) {
 
-	$(document).on('click', '#release', function() {
-		layer.confirm('is not?', {
-			title: "延迟"
-		}, function(index) {
 
-		}, function() {
-
-		});
-	})
 
 	// function popupConfirm(node, options) {
 	// 	this.obj = $(obj);
