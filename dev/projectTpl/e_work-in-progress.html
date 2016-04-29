@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="./Public/plugins/datetimepicker/bootstrap-datetimepicker.min.css">
+
 <div class="tab-pane" id="work-in-progress">
 	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
 		<thead>
@@ -38,7 +40,7 @@
 				<td>
 					<a href="" class='action' data-toggle="modal" data-target='.work-extend' data-userId='1' data-projectId='21213'>Extend</a>
 					<a href="" class='action' data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='21213'>Cancel</a>
-				</td>
+				</td>1
 			</tr>
 			<tr>
 				<td>
@@ -101,7 +103,8 @@
 					Receipt confirmed
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target=".work-confirmed-release" data-userId='1' data-projectId='21213'>Release money</a>
+					<!-- <a href="" class='action' data-toggle="modal" data-target=".work-confirmed-release" data-userId='1' data-projectId='21213'>Release money</a> -->
+					<a href="javascript:;" class='action' id='release' data-userId='1' data-projectId='21213'>Release money</a>
 				</td>
 			</tr>
 			<tr>
@@ -141,15 +144,15 @@
 			<div class="modal-body">
 				<div class="form-group">
 					<label for="">延期时间</label>
-					<div class="input-group">
-						<input type="text" name="" value="" placeholder="" class='form-control'>
-						<span class='input-group-addon'>weekdays</span>
-					</div>
+					<div class="input-group date" id="datetimepicker6">
+					 	<input type="text"  class="form-control" id='js_datatime-text'>
+					 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>	 	
+					 </div>
 				</div>
 			</div>
 			<div class="modal-footer">
 				<div class='text-right'>
-					<button type="button" class="btn btn-primary">Save</button>
+					<button type="button" class="btn btn-primary" id='js_saveWorkExtendTime'>Save</button>
 					<button type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
 				</div>
 			</div>
@@ -167,25 +170,25 @@
 			</div>
 		<div class="modal-body">
 			<div class="form-group">
-				<label for="">退款原因</label>
-				<select name="" multiple class='form-control'>
-					<option value="">与描述不符合</option>
-					<option value="">态度恶劣，欺诈客户等行为</option>
-					<option value="">时效性非常差</option>
-					<option value="">与咨询师达成协议</option>
-					<option value="">其他</option>
+				<label for="work-refund-reason">退款原因</label>
+				<select name="" id='work-refund-reason' multiple class='form-control'>
+					<option value="与描述不符合">与描述不符合</option>
+					<option value="态度恶劣，欺诈客户等行为">态度恶劣，欺诈客户等行为</option>
+					<option value="时效性非常差">时效性非常差</option>
+					<option value="与咨询师达成协议">与咨询师达成协议</option>
+					<option value="其他">其他</option>
 				</select>
 			</div>
 			<div class="divider divider-horizontal">or</div>
 			<div class="form-group">
-			<label for="">补充退款原因</label>
-				<textarea name="" class='form-control' rows="5"></textarea>
+			<label for="work-refund-reason_add">补充退款原因</label>
+				<textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea>
 			</div>
 			
 		</div>
 		<div class="modal-footer">
 			<div class='text-light'>
-				<button type="button" class="btn btn-primary">Save</button>
+				<button type="button" class="btn btn-primary" id='js_saveWorkRefund'>Save</button>
 				<button type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
 			</div>
 		</div>
@@ -203,13 +206,13 @@
 					<h4 class="modal-title" id="myModalLabel">项目确认</h4>
 			</div>
 			<div class="modal-body">
-				<p class='modal-cancel-des'>
+				<span class='modal-cancel-des'>
 					是否确认项目已经顺利完成？
-				</p>
+				</span>
 			</div>
 			<div class="modal-footer">
 				<div class='text-right'>
-					<button type="button" class="btn btn-success">确认</button>
+					<button type="button" class="btn btn-success" id='js_workDonwConfirm'>确认</button>
 					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 				</div>
 			</div>
@@ -233,7 +236,7 @@
 			</div>
 			<div class="modal-footer">
 				<div class='modal-cancel-action'>
-					<button type="button" class="btn btn-success">确认</button>
+					<button type="button" class="btn btn-success" id='js_workConfirmedRelease'>确认</button>
 					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 				</div>
 			</div>

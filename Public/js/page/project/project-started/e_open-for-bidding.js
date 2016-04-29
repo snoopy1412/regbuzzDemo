@@ -6,9 +6,9 @@ define(['jquery'], function($) {
 			status = false,
 			$button = $(event.relatedTarget), // 获得
 			$text = $(this).find('#js_open-waiting-add-content'), //获得textarea
-			userId = $button.data('userId'), // 获得用户id
-			projectId = $button.data('projectId'), // 获得项目id
-			projectStatus = $button.data('data-status'); // 项目状态
+			userId = $button.data('userid'), // 获得用户id
+			projectId = $button.data('projectid'), // 获得项目id
+			projectStatus = $button.data('status'); // 项目状态
 
 		/* open-waiting-add 内部的操作 */
 		function openWaitingAdd() {
@@ -49,6 +49,9 @@ define(['jquery'], function($) {
 					success: function(data) {
 						// 执行回调函数
 						$(self).modal('hide');
+
+					},
+					complete: function() {
 						status = false;
 					},
 					error: function(xhr, error) {
@@ -67,14 +70,13 @@ define(['jquery'], function($) {
 		$(document).off('click', '#js_open-waiting-add');
 	})
 
-
 	// cancel 操作
 	$('.modal-cancel').on("show.bs.modal", function(event) {
 		var self = this,
 			status = false,
 			$button = $(event.relatedTarget), // 获得
-			userId = $button.data('userId'), // 获得用户id
-			projectId = $button.data('projectId'); // 获得项目id
+			userId = $button.data('userid'), // 获得用户id
+			projectId = $button.data('projectid'); // 获得项目id
 
 		$(document).on('click', '#js_open-waiting-cancel', function() {
 
@@ -96,6 +98,8 @@ define(['jquery'], function($) {
 					success: function(data) {
 						// 执行回调函数
 						$(self).modal('hide');
+					},
+					complete: function() {
 						status = false;
 					},
 					error: function(xhr, error) {

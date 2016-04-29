@@ -15,6 +15,7 @@ require.config({
     datetimepicker: '../plugins/datetimepicker/bootstrap-datetimepicker', //时间选择插件
     jcrop: '../plugins/jcrop/jquery.Jcrop.min', //裁剪插件
     bootstrapTable: '../plugins/bootstraptable/bootstrap-table.min', //table排序插件
+    layer : '../plugins/layer/layer',
 
     // 自编写 components 区域
     popoverCustom: './components/popoverCustom', // 自制弹窗插件
