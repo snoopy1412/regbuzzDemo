@@ -3,45 +3,8 @@
 .proList-header{
     position: relative;
     margin-bottom: 30px;
-    // .regbuzzToggle{
-    //     display: inline-block;
-    //     background-color: #fff;
-    //     border: 1px solid #ccc;
-    //     // border: 1px solid $palette-blue;
-    //     border-radius: 30px;
-    //     input[type=radio]{
-    //         visibility: hidden;
-    //         position: absolute;
-    //         padding: 0;
-    //         vertical-align: bottom;
-    //         margin: 2px;
-    //         top: 30px;
-
-    //         &:checked+label{
-    //             color: #F7F7F7;
-    //             background-color: $palette-blue;
-    //             border-radius: 40px;
-    //             margin: 2px;
-    //         }
-    //     }
-    //     label{
-    //         color: $palette-blue;
-    //         display: inline-block;
-    //         border: none;
-    //         padding: 6px 26px;
-    //         background: 0 0;
-    //         cursor: pointer;
-    //         margin-bottom: 0;
-    //     }
-    // }
 }
 .proList-content{
-    // .section--employer-view,.section--provider-view{
-        // display: none;
-        // &.active{
-        //     display: block;
-        // }
-    // }
     .fixed-table-container thead th .sortable{
         padding-right: 8px;
     }
@@ -51,7 +14,6 @@
     @import './project/e_order-placing';
     @import './project/e_work-in-progress';
 }
-
 
 // detail
 .project-detail-title
@@ -85,8 +47,6 @@
 {
     padding-top: 24px;
 }
-
-
 .project-detail-aside
 {
     padding-top: 20px;
@@ -150,6 +110,10 @@
                 color:$palette-red;
             }
         }
+        .action-active{
+            color:#999;
+            cursor: default;
+        }
         th{
             text-align: center;
         }
@@ -159,28 +123,24 @@
             text-align: center;
             font-size: 12px;
         }
-        .no-content{
-            height: 100px;
-            vertical-align: middle;
-        }
     }
 
 
 
-    // open-for-bidding
-    .participate-img{
-        text-align: left;
-        img{
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            border: 1px solid #ccc;
-            vertical-align: top;
-        }
-        .more{
-            vertical-align: middle;
-        }
+// open-for-bidding
+.participate-img{
+    text-align: left;
+    img{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        vertical-align: top;
     }
+    .more{
+        vertical-align: middle;
+    }
+}
 }
 
 .project-action{

@@ -9936,6 +9936,10 @@ body {
   .container--proList .table .action:hover {
     color: #db2828; }
 
+.container--proList .table .action-active {
+  color: #999;
+  cursor: default; }
+
 .container--proList .table th {
   text-align: center; }
 
@@ -9944,10 +9948,6 @@ body {
   padding: 2px 10px;
   text-align: center;
   font-size: 12px; }
-
-.container--proList .table .no-content {
-  height: 100px;
-  vertical-align: middle; }
 
 .container--proList .participate-img {
   text-align: left; }

@@ -361,18 +361,6 @@
 </div>
 <section class='com-main'>
 	<div class="container container--proList">
-		<!-- <header class='proList-header clearfix'>
-			<div class="regbuzzToggle pull-right">
-		        <input id="employerView_option" type="radio" value="employer" name="usertype_option" checked="true">
-		        <label for="employerView_option"> 
-		            Employer
-		        </label>
-		        <input id="providerView_option" type="radio" value="provider" name="usertype_option">
-		        <label for="providerView_option" >
-		            Provider
-		        </label>
-		    </div>
-		</header> -->
 		<div class="proList-content">
 			
 			<!-- 主要内容  雇主视角-->
@@ -413,14 +401,6 @@
 			</tr>
 		</thead>
 		<tbody>
-			<!-- <tr>
-				<td class="CreateProject-container text-center" colspan="6">
-					<a href="publish-quick.html" class="CreateProject">
-					<h4 class="CreateProject-heading">创建一个新的项目</h4>
-					<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
-					</a>
-				</td>
-			</tr> -->
 			<tr>
 				<td><a href="" title="竞标名称">竞标名称</a></td>
 				<td>
@@ -432,14 +412,12 @@
 					<span class=''>Waiting for bids</span>
 				</td>
 				<td>
-					<a href='#' class="action" data-toggle="modal" data-target=".open-waiting-add" data-userId='1' data-projectId='233' data-status='11'>Add</a>
-
+					<a href="javascript:;" class='action action_111' data-projectId='51065' data-projectActon='111'>Add</a>
 					<!-- 暂时不考虑 -->
 					<!-- <a href="" class="action">Promote</a>  -->
-
-					<a href="connection.html?user=1&project=23" class="action" data-userId='1' data-projectId='233'>Invite</a>
-					<a href="publish-quick-result.html?user=1&project=23#pubResault-list" class="action" data-userId='1' data-projectId='233'>Select</a>
-					<a href="#" class="action" data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='233'>Cancel</a>
+					<a href="connection.html?projectacton=112&projectid=51065" class="action" data-projectId='51065' data-projectActon='112'>Invite</a>
+					<a href="publish-quick-result.html?projectacton=113&projectid=51065#pubResault-list" class="action" data-projectId='51065' data-projectActon='113'>Select</a>
+					<a href="javascript:;" class='action action_cancel' data-projectId='51065' data-projectActon='114'>Cancel</a>
 				</td>
 			</tr>			
 			<tr>
@@ -451,9 +429,9 @@
 					<span class=''>Proposal Selecting</span>
 				</td>
 				<td>
-					<a href="publish-quick-result.html?user=1&project=23#pubResault-list" class="action">Select</a>
-					<a href="#" class="action"  data-toggle="modal" data-target=".open-selecting-extend" data-userId='1' data-projectId='255'>Extend</a>										
-					<a href="#" class="action" data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='255'>Cancel</a>
+					<a href="publish-quick-result.html?projectacton=121&projectid=51066#pubResault-list" class="action" data-projectId='51066' data-projectActon='121'>Select</a>
+					<a href="javascript:;" class='action action_122' data-projectId='51066' data-projectActon='122'>Extend</a>
+					<a href="javascript:;" class='action action_cancel' data-projectId='51066' data-projectActon='123'>Cancel</a>
 				</td>
 			</tr>
 		</tbody>
@@ -462,58 +440,15 @@
 	<!-- open -for-bidding 交互 -->
 
 	<!-- add 操作 -->
-	<div class="modal fade open-waiting-add" tabindex="-1">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">附加要求</h4>
-				</div>
-				<div class="modal-body">
-					<div class="form-group">
-						<textarea name="" class='form-control' id='js_open-waiting-add-content' rows='5'></textarea>
-						<p class='description'>
-							注1：最大输入字符不能超过1000
-						</p>
-					</div>
-
-				</div>
-				<div class="modal-footer">
-					<div class='text-right'>
-						<button type="button" class="btn btn-primary" id='js_open-waiting-add'>Add</button>
-						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					</div>
-				</div>
+		<div class="open-waiting-add" style='display: none;padding: 20px;padding-bottom: 0'>
+			<div class="form-group">
+				<textarea name="" class='form-control' id='js_111_content' rows='5' cols="100"></textarea>
+				<p class='description'>
+					注1：最大输入字符不能超过1000
+				</p>
 			</div>
 		</div>
-	</div>
 	<!-- add end -->
-	
-	<!-- extend 操作 -->
-		<div class="modal fade open-selecting-extend" tabindex="-1">
-			<div class="modal-dialog modal-sm">
-				<div class="modal-content">
-					<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-							<h4 class="modal-title" id="myModalLabel">确认延期</h4>
-					</div>
-					<div class="modal-body">
-						<span class='modal-cancel-des'>
-							确定延长3个工作日的招标时间吗？
-						</span>
-					</div>
-					<div class="modal-footer">
-						<div class='modal-cancel-action text-right'>
-							<button type="button" class="btn btn-success" id='js_open-waiting-cancel'>Confirm</button>
-							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	<!-- extend end -->
-
-
 	<!-- open -for-bidding 交互 end-->
 
 	<!-- open-for-bidding end -->
@@ -550,8 +485,8 @@
 				<td></td>
 				<td>Order Drafting</td>
 				<td>
-					<a href="publish-order.html?user=1&project=23" class='action'>Edit</a>
-					<a href="#" class="action" data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='277'>Cancel</a>
+					<a href="publish-order.html?projectacton=211&projectid=51067" class='action' data-projectId='51067' data-projectActon='211'>Edit</a>
+					<a href="javascript:;" class='action action_cancel' data-projectId='51067' data-projectActon='212'>Cancel</a>
 				</td>
 			</tr>
 			<tr>
@@ -564,8 +499,8 @@
 				<td>Waiting for confirmation</td>
 				<td>
 					<!-- <a href="" class='action'>Revise</a> -->
-					<a href="publish-order.html?user=1&project=23" class="action">Edit</a>
-					<a href="#" class="action" data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='288'>Cancel</a>
+					<a href="publish-order.html?projectacton=221&projectid=51068" class="action" data-projectId='51068' data-projectActon='221'>Edit</a>
+					<a href="javascript:;" class='action action_cancel' data-projectId='51068' data-projectActon='222'>Cancel</a>
 				</td>
 			</tr>
 			<tr>
@@ -577,8 +512,8 @@
 				<td></td>
 				<td>Order confirmed</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target=".order-confirmed-pay" data-userId='1' data-projectId='299'>Pay</a>
-					<a href="#" class="action" data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='299'>Cancel</a>
+					<a href="javascript:;" class='action action_231' data-projectId='51069' data-projectActon='231'>Pay</a>
+					<a href="javascript:;" class='action action_cancel' data-projectId='51069' data-projectActon='232'>Cancel</a>
 				</td>
 			</tr>
 		</tbody>
@@ -586,59 +521,45 @@
 </div>
 <!-- order-placing end -->
 <!-- order-placing 交互 -->
-	<div class="modal fade order-confirmed-pay" id='order-confirmed-pay' tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">支付佣金</h4>
-				</div>
-				<div class="modal-body">
-					<div class="container-fluid">
-						<div class="row">
-							<div class="col-md-6">
-								<a href="javascript:;" title="余额支付" class='order-confirmed-pay-method hoverable' @click='isBalancePaid = !isBalancePaid'>
-								<span class='title'>余额支付</span>
-								<span class='des'>
-									可用余额 ： <i class='balance'><span v-text='currentMoney | currency'></span> USD</i> 
-								</span>
-								</a>	
-							</div>
-							<div class="col-md-6">
-								<a title="其他支付方式" class='order-confirmed-pay-method hoverable' id='js_order-confirmed-method-other'>
-								<span class='title'>其他支付方式</span>
-								<span class='des'>
-									<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MDAgMzIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iI0YzRjRGNCIgZD0iTTQ3MCwzMjBIMzBjLTE2LjUsMC0zMC0xMy41LTMwLTMwVjMwQzAsMTMuNSwxMy41LDAsMzAsMGg0NDBjMTYuNSwwLDMwLDEzLjUsMzAsMzB2MjYwCglDNTAwLDMwNi41LDQ4Ni41LDMyMCw0NzAsMzIweiIvPgo8cGF0aCBmaWxsPSIjMEI2OUFBIiBkPSJNNTAwLDc3LjVIMFYzMEMwLDEzLjUsMTMuNSwwLDMwLDBoNDQwYzE2LjUsMCwzMCwxMy41LDMwLDMwVjc3LjV6Ii8+CjxwYXRoIGZpbGw9IiNGRkI3MjciIGQ9Ik01MDAsMjQyLjVIMFYyOTBjMCwxNi41LDEzLjUsMzAsMzAsMzBoNDQwYzE2LjUsMCwzMC0xMy41LDMwLTMwVjI0Mi41eiIvPgo8Zz4KCTxwb2x5Z29uIGZpbGw9IiMwQjY5QUEiIHBvaW50cz0iMjAxLjUsMjA5IDIxOCwxMTEuNSAyNDQuNSwxMTEuNSAyMjgsMjA5IAkiLz4KCTxwYXRoIGZpbGw9IiMwQjY5QUEiIGQ9Ik0zMjQsMTE0Yy01LTItMTMuNS00LTIzLjUtNGMtMjYsMC00NC41LDEzLTQ1LDMyYzAsMTQsMTMsMjIsMjMsMjYuNWMxMC41LDUsMTQsOCwxMy41LDEyCgkJYzAsNi41LTgsOS41LTE2LDkuNWMtMTAuNSwwLTE2LTEuNS0yNS01bC0zLjUtMS41bC0zLjUsMjJjNiwyLjUsMTcuNSw1LDI5LjUsNWMyOCwwLDQ2LTEzLDQ2LTMzYzAtMTEtNy0xOS41LTIyLTI2LjUKCQljLTkuNS00LjUtMTUtNy41LTE1LTEyYzAtNCw1LTguNSwxNS04LjVjOC41LDAsMTUsMiwyMCwzLjVsMi41LDFMMzI0LDExNCIvPgoJPHBhdGggZmlsbD0iIzBCNjlBQSIgZD0iTTM5MiwxMTEuNWgtMjAuNWMtNi41LDAtMTEsMS41LTE0LDhsLTM5LjUsODloMjhjMCwwLDQuNS0xMiw1LjUtMTQuNWMzLDAsMzAsMCwzNCwwYzEsMy41LDMsMTQuNSwzLDE0LjUKCQlINDEzTDM5MiwxMTEuNSBNMzU5LjUsMTc0LjVjMi01LjUsMTAuNS0yNywxMC41LTI3YzAsMC41LDItNS41LDMuNS05LjVsMiw4LjVjMCwwLDUsMjMsNiwyOEwzNTkuNSwxNzQuNUwzNTkuNSwxNzQuNXoiLz4KCTxwYXRoIGZpbGw9IiMwQjY5QUEiIGQ9Ik0xNzkuNSwxMTEuNWwtMjYsNjYuNWwtMy0xMy41Yy01LTE1LjUtMjAtMzIuNS0zNi41LTQxbDIzLjUsODVoMjhsNDEuNS05N0wxNzkuNSwxMTEuNSIvPgoJPHBhdGggZmlsbD0iI0ZGQjcyNyIgZD0iTTEyOS41LDExMS41SDg3bC0wLjUsMmMzMyw4LDU1LDI3LjUsNjQuNSw1MWwtOS41LTQ0LjVDMTM5LjUsMTEzLjUsMTM1LDExMiwxMjkuNSwxMTEuNSIvPgo8L2c+Cjwvc3ZnPgo=" alt="" class='other-method-img'>
-									<img src="./Public/img/register/paypal-logo.png" alt="" class='other-method-img'>
-									<img src="./Public/img/register/stripe-logo.png" alt="" class='other-method-img'>
-									<img src="./Public/img/register/alipay-logo.png" alt="" class='other-method-img'>
-								</span>
-								</a>	
-							</div>
-						</div>
-					</div>
-					<div class='order-banlance-handle fade in' v-show='isBalancePaid'>
-						<div class="divider divider-horizontal">余额支付</div>
-						<form action="" method="get" accept-charset="utf-8">
-							<div class="form-group" :class="{'has-error' : isOverMax}">
-								<label for="">可用余额 : <span style='color:#d9534f' > <span v-text='currentMoney | currency'></span> USD</span></label>&nbsp;&nbsp;
-								<div class="input-group">
-							      <div class="input-group-addon">$</div>
-							      <input type="number" class="form-control" placeholder="Amount" style='width: 200px;' v-model='inputMoney' number>
-
-							      <p class="form-control-static" style='margin-left: 230px;'>支付金额 <i class='result-price'><span v-text='inputMoney | currency'></span></i> USD</p>
-							    </div> 
-							</div>
-							<button type="button" class="btn btn-success-outline" @click='confirmPay'>确认</button>
-						</form>
-						
-					</div>
-
-						
-				</div>
+<div id='order-confirmed-pay' style='display: none;padding: 10px;'>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="javascript:;" title="余额支付" class='order-confirmed-pay-method hoverable' @click='isBalancePaid = !isBalancePaid'>
+				<span class='title'>余额支付</span>
+				<span class='des'>
+					可用余额 ： <i class='balance'><span v-text='currentMoney | currency'></span> USD</i> 
+				</span>
+				</a>	
+			</div>
+			<div class="col-md-6">
+				<a title="其他支付方式" class='order-confirmed-pay-method hoverable' id='js_231-otherMethod'>
+				<span class='title'>其他支付方式</span>
+				<span class='des'>
+					<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MDAgMzIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MDAgMzIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iI0YzRjRGNCIgZD0iTTQ3MCwzMjBIMzBjLTE2LjUsMC0zMC0xMy41LTMwLTMwVjMwQzAsMTMuNSwxMy41LDAsMzAsMGg0NDBjMTYuNSwwLDMwLDEzLjUsMzAsMzB2MjYwCglDNTAwLDMwNi41LDQ4Ni41LDMyMCw0NzAsMzIweiIvPgo8cGF0aCBmaWxsPSIjMEI2OUFBIiBkPSJNNTAwLDc3LjVIMFYzMEMwLDEzLjUsMTMuNSwwLDMwLDBoNDQwYzE2LjUsMCwzMCwxMy41LDMwLDMwVjc3LjV6Ii8+CjxwYXRoIGZpbGw9IiNGRkI3MjciIGQ9Ik01MDAsMjQyLjVIMFYyOTBjMCwxNi41LDEzLjUsMzAsMzAsMzBoNDQwYzE2LjUsMCwzMC0xMy41LDMwLTMwVjI0Mi41eiIvPgo8Zz4KCTxwb2x5Z29uIGZpbGw9IiMwQjY5QUEiIHBvaW50cz0iMjAxLjUsMjA5IDIxOCwxMTEuNSAyNDQuNSwxMTEuNSAyMjgsMjA5IAkiLz4KCTxwYXRoIGZpbGw9IiMwQjY5QUEiIGQ9Ik0zMjQsMTE0Yy01LTItMTMuNS00LTIzLjUtNGMtMjYsMC00NC41LDEzLTQ1LDMyYzAsMTQsMTMsMjIsMjMsMjYuNWMxMC41LDUsMTQsOCwxMy41LDEyCgkJYzAsNi41LTgsOS41LTE2LDkuNWMtMTAuNSwwLTE2LTEuNS0yNS01bC0zLjUtMS41bC0zLjUsMjJjNiwyLjUsMTcuNSw1LDI5LjUsNWMyOCwwLDQ2LTEzLDQ2LTMzYzAtMTEtNy0xOS41LTIyLTI2LjUKCQljLTkuNS00LjUtMTUtNy41LTE1LTEyYzAtNCw1LTguNSwxNS04LjVjOC41LDAsMTUsMiwyMCwzLjVsMi41LDFMMzI0LDExNCIvPgoJPHBhdGggZmlsbD0iIzBCNjlBQSIgZD0iTTM5MiwxMTEuNWgtMjAuNWMtNi41LDAtMTEsMS41LTE0LDhsLTM5LjUsODloMjhjMCwwLDQuNS0xMiw1LjUtMTQuNWMzLDAsMzAsMCwzNCwwYzEsMy41LDMsMTQuNSwzLDE0LjUKCQlINDEzTDM5MiwxMTEuNSBNMzU5LjUsMTc0LjVjMi01LjUsMTAuNS0yNywxMC41LTI3YzAsMC41LDItNS41LDMuNS05LjVsMiw4LjVjMCwwLDUsMjMsNiwyOEwzNTkuNSwxNzQuNUwzNTkuNSwxNzQuNXoiLz4KCTxwYXRoIGZpbGw9IiMwQjY5QUEiIGQ9Ik0xNzkuNSwxMTEuNWwtMjYsNjYuNWwtMy0xMy41Yy01LTE1LjUtMjAtMzIuNS0zNi41LTQxbDIzLjUsODVoMjhsNDEuNS05N0wxNzkuNSwxMTEuNSIvPgoJPHBhdGggZmlsbD0iI0ZGQjcyNyIgZD0iTTEyOS41LDExMS41SDg3bC0wLjUsMmMzMyw4LDU1LDI3LjUsNjQuNSw1MWwtOS41LTQ0LjVDMTM5LjUsMTEzLjUsMTM1LDExMiwxMjkuNSwxMTEuNSIvPgo8L2c+Cjwvc3ZnPgo=" alt="" class='other-method-img'>
+					<img src="./Public/img/register/paypal-logo.png" alt="" class='other-method-img'>
+					<img src="./Public/img/register/stripe-logo.png" alt="" class='other-method-img'>
+					<img src="./Public/img/register/alipay-logo.png" alt="" class='other-method-img'>
+				</span>
+				</a>	
 			</div>
 		</div>
 	</div>
+	<div class='order-banlance-handle fade in' v-if='isBalancePaid'>
+		<div class="divider divider-horizontal">余额支付</div>
+		<form action="" method="get" accept-charset="utf-8">
+			<div class="form-group" :class="{'has-error' : isOverMax}">
+				<label for="">可用余额 : <span style='color:#d9534f' > <span v-text='currentMoney | currency'></span> USD</span></label>&nbsp;&nbsp;
+				<div class="input-group">
+			      <div class="input-group-addon">$</div>
+			      <input type="number" class="form-control" placeholder="Amount" v-model='inputMoney' number>
+			    </div> 
+			    <p class="form-control-static">支付金额 <i class='result-price'><span v-text='inputMoney | currency'></span></i> USD</p>
+			</div>
+			<button type="button" class="btn btn-success-outline" @click='confirmPay'>确认</button>
+		</form>
+	</div>
+</div>
 <!--  order-placing end -->
 
 						<!-- work in progress -->
@@ -657,14 +578,6 @@
 			</tr>
 		</thead>
 		<tbody>
-			<!-- <tr>
-				<td class="CreateProject-container text-center" colspan="5">
-					<a href="publish-quick.html" class="CreateProject">
-					<h4 class="CreateProject-heading">创建一个新的项目</h4>
-					<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
-					</a>
-				</td>
-			</tr> -->
 			<tr>
 				<td>
 					<a href="">工作项目</a>
@@ -682,9 +595,9 @@
 					Waiting for Deliverables
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target='.work-extend' data-userId='1' data-projectId='21213'>Extend</a>
-					<a href="" class='action' data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='21213'>Cancel</a>
-				</td>1
+					<a href="javascript:;" class='action action_extend' data-projectId='51070' data-projectActon='311'>Extend</a>
+					<a href="" class='action action_cancel' data-projectId='51070' data-projectActon='312'>Cancel</a>
+				</td>
 			</tr>
 			<tr>
 				<td>
@@ -703,8 +616,8 @@
 					Time out
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target='.work-extend' data-userId='1' data-projectId='21213'>Extend</a>
-					<a href="" class='action' data-toggle="modal" data-target=".work-refund" data-userId='1' data-projectId='21213'>Refund</a>
+					<a href="javascript:;" class='action action_extend' data-projectId='51071' data-projectActon='321'>Extend</a>
+					<a href="javascript:;" class='action action_refund' data-projectId='51071' data-projectActon='322'>Refund</a>
 				</td>
 			</tr>
 			<tr>
@@ -724,8 +637,8 @@
 					Job done
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target=".work-done-confirm" data-userId='1' data-projectId='21213'>Receipt confirm</a>
-					<a href="" class='action' data-toggle="modal" data-target=".work-refund" data-userId='1' data-projectId='21213'>Refund</a>
+					<a href="javascript:;" class='action action_331' data-projectId='51078' data-projectActon='331'>Receipt confirm</a>
+					<a href="javascript:;" class='action action_refund' data-projectId='51078' data-projectActon='332'>Refund</a>
 					<!-- <a href="" class='action'>Release money</a>
 					<a href="" class='action'>Comment</a> -->
 				</td>
@@ -747,8 +660,7 @@
 					Receipt confirmed
 				</td>
 				<td>
-					<!-- <a href="" class='action' data-toggle="modal" data-target=".work-confirmed-release" data-userId='1' data-projectId='21213'>Release money</a> -->
-					<a href="javascript:;" class='action' id='release' data-userId='1' data-projectId='21213' data-canClick='true'>Release money</a>
+					<a href="javascript:;" class='action action_341' data-projectId='51079' data-projectActon='341'>Release money</a>
 				</td>
 			</tr>
 			<tr>
@@ -768,7 +680,7 @@
 					Payed
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target=".work-payed-reviews" data-userId='1' data-projectId='21213'>Write reviews</a>
+					<a href="javascript:;" class='action action_351' data-projectId='51080' data-projectActon='351'>Write reviews</a>
 				</td>
 			</tr>
 		</tbody>
@@ -778,148 +690,46 @@
 
 <!-- work in progress 交互 -->
 <!-- work extend 操作 -->
-<div class="modal fade work-extend" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">申请延期</h4>
-			</div>
-			<div class="modal-body">
-				<div class="form-group">
-					<label for="">延期时间</label>
-					<div class="input-group date" id="datetimepicker6">
-					 	<input type="text"  class="form-control" id='js_datatime-text'>
-					 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>	 	
-					 </div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<div class='text-right'>
-					<button type="button" class="btn btn-primary" id='js_saveWorkExtendTime'>Save</button>
-					<button type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
-				</div>
-			</div>
-		</div>
+<div id="work-extend" style='display: none;padding: 10px;'>
+	<div class="form-group">
+		<label for="">延期时间</label>
+		<div class="input-group date" id="datetimepicker6">
+		 	 <input type="text" class="form-control" id='js_datatime-text'>
+		 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>	 	
+		 </div>
 	</div>
 </div>
 <!-- work extend end -->
 <!-- work extend 操作 -->
-<div class="modal fade work-refund" tabindex="-1">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">申请退款</h4>
-			</div>
-		<div class="modal-body">
-			<div class="form-group">
-				<label for="work-refund-reason">退款原因</label>
-				<select name="" id='work-refund-reason' multiple class='form-control'>
-					<option value="与描述不符合">与描述不符合</option>
-					<option value="态度恶劣，欺诈客户等行为">态度恶劣，欺诈客户等行为</option>
-					<option value="时效性非常差">时效性非常差</option>
-					<option value="与咨询师达成协议">与咨询师达成协议</option>
-					<option value="其他">其他</option>
-				</select>
-			</div>
-			<div class="divider divider-horizontal">or</div>
-			<div class="form-group">
-			<label for="work-refund-reason_add">补充退款原因</label>
-				<textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea>
-			</div>
-			
-		</div>
-		<div class="modal-footer">
-			<div class='text-light'>
-				<button type="button" class="btn btn-primary" id='js_saveWorkRefund'>Save</button>
-				<button type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
-			</div>
-		</div>
-		</div>
+<div id="work-refund" style='display: none;padding: 10px;'>
+	<div class="form-group">
+		<label for="work-refund-reason">退款原因</label>
+		<select name="" id='work-refund-reason' multiple class='form-control'>
+			<option value="与描述不符合">与描述不符合</option>
+			<option value="态度恶劣，欺诈客户等行为">态度恶劣，欺诈客户等行为</option>
+			<option value="时效性非常差">时效性非常差</option>
+			<option value="与咨询师达成协议">与咨询师达成协议</option>
+			<option value="其他">其他</option>
+		</select>
+	</div>
+	<div class="divider divider-horizontal">or</div>
+	<div class="form-group">
+	<label for="work-refund-reason_add">补充退款原因</label>
+		<textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea>
 	</div>
 </div>
 <!-- work extend end -->
 
-<!-- work-done-confirm 操作 -->
-<div class="modal fade work-done-confirm" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">项目确认</h4>
-			</div>
-			<div class="modal-body">
-				<span class='modal-cancel-des'>
-					是否确认项目已经顺利完成？
-				</span>
-			</div>
-			<div class="modal-footer">
-				<div class='text-right'>
-					<button type="button" class="btn btn-success" id='js_workDonwConfirm'>确认</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- work-done-confirm end-->
-
-<!-- work-confirmed-release 操作-->
-<div class="modal fade work-confirmed-release" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">付款确认</h4>
-			</div>
-			<div class="modal-body">
-				<span class='modal-cancel-des'>
-					是否将佣金支付给咨询师？
-				</span>
-			</div>
-			<div class="modal-footer">
-				<div class='modal-cancel-action'>
-					<button type="button" class="btn btn-success" id='js_workConfirmedRelease'>确认</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- work-confirmed-release end-->
-
 <!-- work-payed-reviews 操作 -->
-<div class="modal fade work-payed-reviews" tabindex="-1">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">服务评价</h4>
-			</div>
-		<div class="modal-body">
-								
-			<div class="divider divider-horizontal">服务评分</div>
-			<div class='clearfix'>
-				
-				<div class="work-reviews-score-container pull-left"></div>	
-				<span class="work-reviews-score pull-left"></span>
-			</div>
-		
-			<div class="divider divider-horizontal">服务评价</div>
-			<div class="form-group">
-				<textarea name="" class='form-control js_open-waiting-add-content' rows='5'></textarea>
-			</div>
-			
-		</div>
-		<div class="modal-footer">
-			<div class='text-right'>
-				<button type="button" class="btn btn-primary">Save</button>
-				<button  type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
-			</div>
-		</div>
-		
-		</div>
+<div id="work-payed-reviews" style='display: none;padding: 10px;'>
+	<div class="divider divider-horizontal">服务评分</div>
+	<div class='clearfix'>
+		<div class="work-reviews-score-container pull-left"></div>	
+		<span class="work-reviews-score pull-left"></span>
+	</div>
+	<div class="divider divider-horizontal">服务评价</div>
+	<div class="form-group">
+		<textarea name="" class='form-control js_open-waiting-add-content' rows='5'></textarea>
 	</div>
 </div>			
 <!-- work-payed-reviews end -->
@@ -1070,34 +880,11 @@
 
 
 						
-						<!-- 公共cancel 行为 -->						
-						<div class="modal fade modal-cancel" tabindex="-1">
-							<div class="modal-dialog modal-sm">
-								<div class="modal-content">
-									<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											<h4 class="modal-title" id="myModalLabel">删除项目</h4>
-									</div>
-									<div class="modal-body">
-										<p class='modal-cancel-des'>
-											Are your sure to cancel your project?
-										</p>
-										<div class='modal-cancel-action text-left'>
-											<button type="button" class="btn btn-danger js_open-waiting-cancel">Yes, cancel it</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- cancel end -->
 					</div>
 				</div>
 			</section>
-
-
 		</div>
 	</div>
-	
 </section>
 
 <!-- footer.html -->

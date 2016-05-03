@@ -13,14 +13,6 @@
 			</tr>
 		</thead>
 		<tbody>
-			<!-- <tr>
-				<td class="CreateProject-container text-center" colspan="5">
-					<a href="publish-quick.html" class="CreateProject">
-					<h4 class="CreateProject-heading">创建一个新的项目</h4>
-					<p class="CreateProject-description">数以百万计的优秀威客准备好助您完成令人惊奇的事情。</p>
-					</a>
-				</td>
-			</tr> -->
 			<tr>
 				<td>
 					<a href="">工作项目</a>
@@ -38,9 +30,9 @@
 					Waiting for Deliverables
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target='.work-extend' data-userId='1' data-projectId='21213'>Extend</a>
-					<a href="" class='action' data-toggle="modal" data-target=".modal-cancel" data-userId='1' data-projectId='21213'>Cancel</a>
-				</td>1
+					<a href="javascript:;" class='action action_extend' data-projectId='51070' data-projectActon='311'>Extend</a>
+					<a href="" class='action action_cancel' data-projectId='51070' data-projectActon='312'>Cancel</a>
+				</td>
 			</tr>
 			<tr>
 				<td>
@@ -59,8 +51,8 @@
 					Time out
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target='.work-extend' data-userId='1' data-projectId='21213'>Extend</a>
-					<a href="" class='action' data-toggle="modal" data-target=".work-refund" data-userId='1' data-projectId='21213'>Refund</a>
+					<a href="javascript:;" class='action action_extend' data-projectId='51071' data-projectActon='321'>Extend</a>
+					<a href="javascript:;" class='action action_refund' data-projectId='51071' data-projectActon='322'>Refund</a>
 				</td>
 			</tr>
 			<tr>
@@ -80,8 +72,8 @@
 					Job done
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target=".work-done-confirm" data-userId='1' data-projectId='21213'>Receipt confirm</a>
-					<a href="" class='action' data-toggle="modal" data-target=".work-refund" data-userId='1' data-projectId='21213'>Refund</a>
+					<a href="javascript:;" class='action action_331' data-projectId='51078' data-projectActon='331'>Receipt confirm</a>
+					<a href="javascript:;" class='action action_refund' data-projectId='51078' data-projectActon='332'>Refund</a>
 					<!-- <a href="" class='action'>Release money</a>
 					<a href="" class='action'>Comment</a> -->
 				</td>
@@ -103,8 +95,7 @@
 					Receipt confirmed
 				</td>
 				<td>
-					<!-- <a href="" class='action' data-toggle="modal" data-target=".work-confirmed-release" data-userId='1' data-projectId='21213'>Release money</a> -->
-					<a href="javascript:;" class='action' id='release' data-userId='1' data-projectId='21213' data-canClick='true'>Release money</a>
+					<a href="javascript:;" class='action action_341' data-projectId='51079' data-projectActon='341'>Release money</a>
 				</td>
 			</tr>
 			<tr>
@@ -124,7 +115,7 @@
 					Payed
 				</td>
 				<td>
-					<a href="" class='action' data-toggle="modal" data-target=".work-payed-reviews" data-userId='1' data-projectId='21213'>Write reviews</a>
+					<a href="javascript:;" class='action action_351' data-projectId='51080' data-projectActon='351'>Write reviews</a>
 				</td>
 			</tr>
 		</tbody>
@@ -134,148 +125,46 @@
 
 <!-- work in progress 交互 -->
 <!-- work extend 操作 -->
-<div class="modal fade work-extend" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">申请延期</h4>
-			</div>
-			<div class="modal-body">
-				<div class="form-group">
-					<label for="">延期时间</label>
-					<div class="input-group date" id="datetimepicker6">
-					 	<input type="text"  class="form-control" id='js_datatime-text'>
-					 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>	 	
-					 </div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<div class='text-right'>
-					<button type="button" class="btn btn-primary" id='js_saveWorkExtendTime'>Save</button>
-					<button type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
-				</div>
-			</div>
-		</div>
+<div id="work-extend" style='display: none;padding: 10px;'>
+	<div class="form-group">
+		<label for="">延期时间</label>
+		<div class="input-group date" id="datetimepicker6">
+		 	 <input type="text" class="form-control" id='js_datatime-text'>
+		 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>	 	
+		 </div>
 	</div>
 </div>
 <!-- work extend end -->
 <!-- work extend 操作 -->
-<div class="modal fade work-refund" tabindex="-1">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">申请退款</h4>
-			</div>
-		<div class="modal-body">
-			<div class="form-group">
-				<label for="work-refund-reason">退款原因</label>
-				<select name="" id='work-refund-reason' multiple class='form-control'>
-					<option value="与描述不符合">与描述不符合</option>
-					<option value="态度恶劣，欺诈客户等行为">态度恶劣，欺诈客户等行为</option>
-					<option value="时效性非常差">时效性非常差</option>
-					<option value="与咨询师达成协议">与咨询师达成协议</option>
-					<option value="其他">其他</option>
-				</select>
-			</div>
-			<div class="divider divider-horizontal">or</div>
-			<div class="form-group">
-			<label for="work-refund-reason_add">补充退款原因</label>
-				<textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea>
-			</div>
-			
-		</div>
-		<div class="modal-footer">
-			<div class='text-light'>
-				<button type="button" class="btn btn-primary" id='js_saveWorkRefund'>Save</button>
-				<button type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
-			</div>
-		</div>
-		</div>
+<div id="work-refund" style='display: none;padding: 10px;'>
+	<div class="form-group">
+		<label for="work-refund-reason">退款原因</label>
+		<select name="" id='work-refund-reason' multiple class='form-control'>
+			<option value="与描述不符合">与描述不符合</option>
+			<option value="态度恶劣，欺诈客户等行为">态度恶劣，欺诈客户等行为</option>
+			<option value="时效性非常差">时效性非常差</option>
+			<option value="与咨询师达成协议">与咨询师达成协议</option>
+			<option value="其他">其他</option>
+		</select>
+	</div>
+	<div class="divider divider-horizontal">or</div>
+	<div class="form-group">
+	<label for="work-refund-reason_add">补充退款原因</label>
+		<textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea>
 	</div>
 </div>
 <!-- work extend end -->
 
-<!-- work-done-confirm 操作 -->
-<div class="modal fade work-done-confirm" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">项目确认</h4>
-			</div>
-			<div class="modal-body">
-				<span class='modal-cancel-des'>
-					是否确认项目已经顺利完成？
-				</span>
-			</div>
-			<div class="modal-footer">
-				<div class='text-right'>
-					<button type="button" class="btn btn-success" id='js_workDonwConfirm'>确认</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- work-done-confirm end-->
-
-<!-- work-confirmed-release 操作-->
-<div class="modal fade work-confirmed-release" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">付款确认</h4>
-			</div>
-			<div class="modal-body">
-				<span class='modal-cancel-des'>
-					是否将佣金支付给咨询师？
-				</span>
-			</div>
-			<div class="modal-footer">
-				<div class='modal-cancel-action'>
-					<button type="button" class="btn btn-success" id='js_workConfirmedRelease'>确认</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- work-confirmed-release end-->
-
 <!-- work-payed-reviews 操作 -->
-<div class="modal fade work-payed-reviews" tabindex="-1">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">服务评价</h4>
-			</div>
-		<div class="modal-body">
-								
-			<div class="divider divider-horizontal">服务评分</div>
-			<div class='clearfix'>
-				
-				<div class="work-reviews-score-container pull-left"></div>	
-				<span class="work-reviews-score pull-left"></span>
-			</div>
-		
-			<div class="divider divider-horizontal">服务评价</div>
-			<div class="form-group">
-				<textarea name="" class='form-control js_open-waiting-add-content' rows='5'></textarea>
-			</div>
-			
-		</div>
-		<div class="modal-footer">
-			<div class='text-right'>
-				<button type="button" class="btn btn-primary">Save</button>
-				<button  type="button" class="btn btn-default" data-dismiss='modal'>Cancel</button>
-			</div>
-		</div>
-		
-		</div>
+<div id="work-payed-reviews" style='display: none;padding: 10px;'>
+	<div class="divider divider-horizontal">服务评分</div>
+	<div class='clearfix'>
+		<div class="work-reviews-score-container pull-left"></div>	
+		<span class="work-reviews-score pull-left"></span>
+	</div>
+	<div class="divider divider-horizontal">服务评价</div>
+	<div class="form-group">
+		<textarea name="" class='form-control js_open-waiting-add-content' rows='5'></textarea>
 	</div>
 </div>			
 <!-- work-payed-reviews end -->

@@ -1,5 +1,5 @@
 require.config({
-	baseUrl: './Public/js',
+  baseUrl: './Public/js',
   paths: {
     // vendor区域
     jquery: './vendor/jquery-1.11.2.min', //经典
@@ -15,14 +15,15 @@ require.config({
     datetimepicker: '../plugins/datetimepicker/bootstrap-datetimepicker', //时间选择插件
     jcrop: '../plugins/jcrop/jquery.Jcrop.min', //裁剪插件
     bootstrapTable: '../plugins/bootstraptable/bootstrap-table.min', //table排序插件
-    layer : '../plugins/layer/layer',
+    layer: '../plugins/layer/layer',
 
     // 自编写 components 区域
     popoverCustom: './components/popoverCustom', // 自制弹窗插件
     hoverMask: './components/hoverMask', // 首页遮罩
     revealOnScroll: './components/revealOnScroll', // 滚动显示插件
     check: './components/check', //checkbox复选框全选
-    ellipsis : './components/ellipsis', 
+    ellipsis: './components/ellipsis',
+    popupConfirm: './components/popupConfirm',
 
     // MVVM框架
     Vue: './vendor/vue', // MVVM框架
@@ -35,8 +36,8 @@ require.config({
     "bootstrap": {
       deps: ["jquery"]
     },
-    'layer':{
-      deps:['jquery']
+    'layer': {
+      deps: ['jquery']
     },
     "bootstrapTable": {
       deps: ['jquery']
@@ -44,8 +45,8 @@ require.config({
     "check": {
       deps: ['jquery']
     },
-    "ellipsis" : {
-      deps : ['jquery']
+    "ellipsis": {
+      deps: ['jquery']
     },
     "velocity": {
       deps: ["jquery"]
@@ -58,6 +59,9 @@ require.config({
     },
     "popoverCustom": {
       deps: ["jquery"]
+    },
+    'popupConfirm': {
+      deps: ["jquery",'layer']
     },
     'wysiwyg': {
       deps: ['jquery']
