@@ -1,33 +1,40 @@
-define(['jquery', '../../../layerInit'], function($) {
-	$(document).on('click', '.action_111', function(event) {
+define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, library) {
+	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
+	var library = library.action;
+
+	$(document).on('click', '.action_dispute', function(event) {
 		event.preventDefault();
 		var self = this,
 			projectId = $(this).data('projectid'),
 			projectAction = $(this).data('projectacton'),
-			inputMaxSize = 100,
-			$textarea = $('#js_111_content');
+			titleMaxSize = 20,
+			textareaMaxSize = 100,
+			$title = $('#js_dispute-title-4'),
+			$textarea = $('#js_dispute-description-4');
 
 		$(this).data('canclick', true);
 		if ($(this).data('canclick')) {
 			$(this).data('canclick', false).addClass('action-active');
 			layer.open({
 				type: '1',
-				title: '附加要求',
-				content: $('.open-waiting-add'),
+				title: '纠纷',
+				content: $('#past-dispute'),
+				area: [resultWidth, 'auto'],
 				btn: ['Add', 'Cancel'],
 				yes: function(index, layero) { //add的回调
-					var str = $textarea.val().replace(/<\/?[^>]*>/g, ''), //去除HTML tag
-						loadIndex,
+					var loadIndex,
+						titleStr = $title.val(),
+						textareaStr = $textarea.val(),
 						status = false;
 
 					// 错误提示
-					if (str.trim() === '') { // 情况1 ，未填入字符
-						layer.alert('输入不能为空', {
+					if (titleStr.trim() === '' || textareaStr.trim() === '') { // 情况1 ，未填入字符
+						layer.alert('缺少纠纷标题或描述', {
 							icon: 0
 						});
 						return false;
-					} else if (str.trim().length > inputMaxSize) { // 情况2 ，超过最大值
-						layer.alert('超过输入的最大值', {
+					} else if (titleStr.trim().length > titleMaxSize || textareaStr.trim().length > textareaMaxSize) { // 情况2 ，超过最大值
+						layer.alert('标题或描述超过最大输入值', {
 							icon: 0
 						});
 						return false;
@@ -37,7 +44,8 @@ define(['jquery', '../../../layerInit'], function($) {
 					var submitData = {
 						projectId: projectId,
 						projectAction: projectAction,
-						str: str
+						titleStr: titleStr,
+						textareaStr: textareaStr
 					}
 
 					// ajax操作，最关键的还是后台的验证方式，保证安全性
@@ -55,14 +63,14 @@ define(['jquery', '../../../layerInit'], function($) {
 							},
 							success: function(data) {
 								if (data === 'true') {
-									layer.msg('添加成功', {
+									layer.msg('评价成功', {
 										icon: 1,
 										time: 500
 									});
 									// 执行回调函数
 									layer.close(index);
 								} else {
-									layer.msg('添加失败', {
+									layer.msg('评价失败', {
 										icon: 2,
 										time: 1000
 									});
@@ -74,6 +82,7 @@ define(['jquery', '../../../layerInit'], function($) {
 							complete: function() {
 								layer.close(loadIndex);
 								status = false;
+								$title.val('');
 								$textarea.val('');
 								$(self).data('canclick', true).removeClass('action-active');
 							},
@@ -84,6 +93,7 @@ define(['jquery', '../../../layerInit'], function($) {
 					}
 				},
 				cancel: function(index) { //cancel回调
+					$title.val('');
 					$textarea.val('');
 					$(self).data('canclick', true).removeClass('action-active');
 				}

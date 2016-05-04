@@ -12,8 +12,10 @@ define(['jquery', 'raty', '../../../layerInit'], function($, raty) {
 		var self = this,
 			projectId = $(this).data('projectid'),
 			projectAction = $(this).data('projectacton'),
+			
 			inputMaxSize = 100,
-			$textarea = $('#js_111_content');
+			$textarea = $('#js_351-content'),
+			evaluatedScore;
 
 		$(this).data('canclick', true);
 		if ($(this).data('canclick')) {
@@ -35,22 +37,22 @@ define(['jquery', 'raty', '../../../layerInit'], function($, raty) {
 						target: '.work-reviews-score',
 						targetKeep: true,
 						click: function(score, evt) {
-							alert("\nscore: " + score);
+							evaluatedScore = score;
 						}
 					});
 				},
 				yes: function(index, layero) { //add的回调
-					var str = $textarea.val().replace(/<\/?[^>]*>/g, ''), //去除HTML tag
-						loadIndex,
+					var loadIndex,
+						str = $textarea.val(),
 						status = false;
 
 					// 错误提示
-					if (str.trim() === '') { // 情况1 ，未填入字符
-						layer.alert('输入不能为空', {
+					if (evaluatedScore === undefined) { // 情况1 ，未填入字符
+						layer.alert('您还没有进行评分', {
 							icon: 0
 						});
 						return false;
-					} else if (str.trim().length > inputMaxSize) { // 情况2 ，超过最大值
+					}else if (str.trim().length > inputMaxSize) { // 情况2 ，超过最大值
 						layer.alert('超过输入的最大值', {
 							icon: 0
 						});
@@ -60,9 +62,17 @@ define(['jquery', 'raty', '../../../layerInit'], function($, raty) {
 					// 需要上传的数据
 					var submitData = {
 						projectId: projectId,
-						projectAction: projectAction,
-						str: str
+						projectAction: projectAction
 					}
+					
+					if(evaluatedScore !== undefined){
+						submitData['evaluatedScore'] = evaluatedScore;
+					}
+					if(str.trim() !== ''){
+						submitData['str'] = str;
+					}
+					
+					console.log(submitData)
 
 					// ajax操作，最关键的还是后台的验证方式，保证安全性
 					if (!status) {
@@ -79,14 +89,14 @@ define(['jquery', 'raty', '../../../layerInit'], function($, raty) {
 							},
 							success: function(data) {
 								if (data === 'true') {
-									layer.msg('添加成功', {
+									layer.msg('评价成功', {
 										icon: 1,
 										time: 500
 									});
 									// 执行回调函数
 									layer.close(index);
 								} else {
-									layer.msg('添加失败', {
+									layer.msg('评价失败', {
 										icon: 2,
 										time: 1000
 									});

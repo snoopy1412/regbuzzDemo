@@ -419,8 +419,8 @@
 			<td>6Days7h59m59s</td>
 			<td>Opening for bids</td>
 			<td>
-				<a href="" class="action" data-toggle="modal" data-target=".active-opening-add" data-userId='1' data-projectId='233'>Add</a>
-				<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+				<a href="javascript:;" class='action action_add' data-projectId='51100' data-projectActon='511'>Add</a>
+				<a href="javascript:;" class='action action_quit' data-projectId='51100' data-projectActon='512'>Quit</a>
 			</td>
 		</tr>
 		<tr>
@@ -432,43 +432,24 @@
 			<td>0</td>
 			<td>Waiting for Result</td>
 			<td>
-				<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+				<a href="javascript:;" class='action action_quit' data-projectId='51101' data-projectActon='521'>Quit</a>
 			</td>
 		</tr>
 	</tbody>
 </table>
 </div>
 
-<!-- active-bids 交互-->
 <!-- add 操作 -->
-<div class="modal fade active-opening-add" tabindex="-1">
-<div class="modal-dialog modal-sm">
-	<div class="modal-content">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="myModalLabel">附加要求</h4>
+	<div class="open-waiting-add" style='display: none;padding: 10px;padding-bottom: 0'>
+		<div class="form-group">
+			<textarea name="" class='form-control' id='js_111_content' rows='5' cols="100"></textarea>
+			<p class='description'>
+				注1：最大输入字符不能超过1000
+			</p>
 		</div>
-		<div class="modal-body">
-			<div class="form-group">
-				<textarea name="" class='form-control js_open-waiting-add-content' rows='5'></textarea>
-				<p class='description'>
-					注1：最大输入字符不能超过1000
-				</p>
-			</div>
-			
-		</div>
-		<div class="modal-footer">
-			<div class='text-right'>
-				<button type="button" class="btn btn-primary js_open-waiting-add">Save</button>
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-			</div>
-		</div>	
 	</div>
-</div>
-</div>
 <!-- add end -->
-<!-- active-bids 交互 end -->
-<!-- active-bids end-->
+
 							
 						<!-- order-placing-provider -->
 						<!-- order-placing-provider -->
@@ -498,7 +479,7 @@
 					Waiting for the order
 				</td>
 				<td>
-					<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+					<a href="javascript:;" class='action action_quit' data-projectId='51102' data-projectActon='611'>Quit</a>
 				</td>
 			</tr>
 			<tr>
@@ -514,8 +495,8 @@
 					Order received
 				</td>
 				<td>
-					<a href="" class="action" data-toggle="modal" data-target=".order-received-confirm" data-userId='1' data-projectId='233'>Order Confirm</a>
-					<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+					<a href="javascript:;" class='action action_621' data-projectId='51103' data-projectActon='621'>Order Confirm</a>
+					<a href="javascript:;" class='action action_quit' data-projectId='51103' data-projectActon='622'>Quit</a>
 				</td>
 			</tr>
 			<tr>
@@ -531,39 +512,13 @@
 					Waiting for payment
 				</td>
 				<td>
-					<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+					<a href="javascript:;" class='action action_quit' data-projectId='51104' data-projectActon='631'>Quit</a>
 				</td>
 			</tr>						    			
 		</tbody>
 	</table>
 </div>
 <!-- order-placing-provider end -->
-
-<!-- order-placing-provider 交互 -->
-<!-- order-received-confirm -->
-<div class="modal fade order-received-confirm" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">确认延期</h4>
-			</div>
-			<div class="modal-body">
-				<span class='modal-cancel-des'>
-					确定收到订单吗？
-				</span>
-			</div>
-			<div class="modal-footer">
-				<div class='modal-cancel-action'>
-					<button type="button" class="btn btn-success">Confirm</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>							
-<!-- order-received-confirm end-->
-<!-- order-placing-provider 交互 end -->
 
 						<!-- current-work -->
 						<!-- current-work  -->
@@ -597,8 +552,8 @@
 					Working
 				</td>
 				<td>
-					<a href="" class="action" data-toggle="modal" data-target=".current-working-done" data-userId='1' data-projectId='233'>Job Done</a>
-					<a href="" class="action" data-toggle="modal" data-target=".modal-quit" data-userId='1' data-projectId='233'>Quit</a>
+					<a href="javascript:;" class='action action_711' data-projectId='51105' data-projectActon='711'>Job Done</a>
+					<a href="javascript:;" class='action action_quit' data-projectId='51105' data-projectActon='712'>Quit</a>
 				</td>
 			</tr>
 			<tr>
@@ -662,31 +617,6 @@
 	</table>
 </div>
 <!-- current-work end -->
-<!-- current-work 交互 -->
-<!-- order-received-confirm -->
-<div class="modal fade current-working-done" tabindex="-1">
-	<div class="modal-dialog modal-sm">
-		<div class="modal-content">
-			<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">确认延期</h4>
-			</div>
-			<div class="modal-body">
-				<span class='modal-cancel-des'>
-					确定完成了工作吗？
-				</span>
-			</div>
-			<div class="modal-footer">
-				<div class='modal-cancel-action text-right'>
-					<button type="button" class="btn btn-success">Confirm</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>							
-<!-- order-received-confirm end-->
-<!-- current-work 交互 end -->
 
 						<!-- past-work -->
 						<!-- past-work -->
@@ -735,52 +665,13 @@
 					Failed
 				</td>
 				<td>
-					<a href="" class="action" data-toggle="modal" data-target=".past-failed-reason" data-userId='1' data-projectId='233'>Reason</a>
+					<a href="javascript:;" class='action action_reason' data-projectId='55106' data-projectActon='821' data-projectReason='1'>Reason</a>
 				</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
-<!-- past-work end -->
-<!-- past-work 交互 -->
-<div class="modal fade past-failed-reason" tabindex="-1">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">项目失败原因</h4>
-			</div>
-		<div class="modal-body">
-			<p>
-				咨询师取消任务
-			</p>
-		</div>
-		
-		</div>
-	</div>
-</div>	
-<!-- past-work 交互 end -->
-
-					    <!-- 公共 quit 行为-->						
-						<div class="modal fade modal-quit" tabindex="-1">
-							<div class="modal-dialog modal-sm">
-								<div class="modal-content">
-									<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-											<h4 class="modal-title" id="myModalLabel">放弃任务</h4>
-									</div>
-									<div class="modal-body">
-										<p class='modal-cancel-des'>
-											Are your sure to quit your project?
-										</p>
-										<div class='modal-cancel-action'>
-											<button type="button" class="btn btn-danger js_open-waiting-cancel">Yes, quit it</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- cancel end -->		
+<!-- past-work end -->	
 					  </div>
 				</div>				
 			</section>

@@ -14,7 +14,7 @@ define(function(require) {
 	// 1. open-for-bidding;
 	// 	1-1 Waiting for bids	
 	// 		1-1-1 add
-	require('./project-action/add-111');
+	require('./project-action/add-action');
 	// 		1-1-2 invite
 	// 		1-1-3 select 
 	// 		1-1-4 cancel
@@ -61,10 +61,14 @@ define(function(require) {
 	require('./project-action/write-reviews-351');
 
 	// 4. past-placeing
+	// 公共纠纷
+	require('./project-action/dispute-action-4');
 	// 	4-1 Success
 	// 		4-1-1 Add Comment
+	require('./project-action/add-comment-411');
 	// 		4-1-2 Dispute	
 	// 	4-2 Failed
 	// 		4-2-1 Reason
+	require('./project-action/reason-action');
 	// 		4-2-2 Dispute
 })
