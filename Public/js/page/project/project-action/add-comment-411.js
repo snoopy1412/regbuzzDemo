@@ -1,13 +1,11 @@
 define(['jquery', './library', '../../../layerInit'], function($, library) {
-
-	$(document).on('click', '.action_411', function(event) {
-		event.preventDefault();
+	var library = library.action;
+	library.bindEvent('.action_411', function() {
 		var self = this,
 			projectId = library.getData().projectId,
 			projectAction = library.getData().projectAction,
-			inputMaxSize = 100,
 			$textarea = $('#js_411-content');
-
+		
 		library.canclick(this, function() {
 			layer.open({
 				type: '1',
@@ -19,16 +17,9 @@ define(['jquery', './library', '../../../layerInit'], function($, library) {
 						str = $textarea.val(),
 						status = false;
 
-					// 错误提示
-					if (str.trim() === '') { // 情况1 ，未填入字符
-						layer.alert('您还没有进行评分', {
-							icon: 0
-						});
-						return false;
-					} else if (str.trim().length > inputMaxSize) { // 情况2 ，超过最大值
-						layer.alert('超过输入的最大值', {
-							icon: 0
-						});
+					// 验证字符串的有效性
+					var Verify = library.addVerify(str, 100, '输入不能为空', '超过输入的最大值', '请勿输入非法字符');
+					if (!Verify) {
 						return false;
 					}
 
@@ -70,7 +61,6 @@ define(['jquery', './library', '../../../layerInit'], function($, library) {
 				}
 			})
 		})
-
-
 	})
+
 })

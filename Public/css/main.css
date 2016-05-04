@@ -9824,6 +9824,12 @@ body {
 .proList-content .fixed-table-container thead th .sortable {
   padding-right: 8px; }
 
+.proList-content .description {
+  padding-top: 5px;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 0; }
+
 .proList-content .open-waiting-add .description {
   padding-top: 5px;
   color: #666;

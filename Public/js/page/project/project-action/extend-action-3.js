@@ -1,15 +1,14 @@
-define(['jquery', 'datetimepicker', '../../../layerInit'], function($, datetimepicker) {
-	$(document).on('click', '.action_extend', function(event) {
-		event.preventDefault();
+define(['jquery', 'datetimepicker', './library', '../../../layerInit'], function($, datetimepicker, library) {
+	var library = library.action;
+
+	library.bindEvent('.action_extend', function() {
 		var self = this,
-			projectId = $(this).data('projectid'),
-			projectAction = $(this).data('projectacton'),
+			projectId = library.getData(this).projectId,
+			projectAction = library.getData(this).projectAction,
 			layerDom,
 			choiceTime; //选取的日期
 
-		$(this).data('canclick', true);
-		if ($(this).data('canclick')) {
-			$(this).data('canclick', false).addClass('action-active');
+		library.canclick(this, function() {
 			layer.open({
 				type: '1',
 				title: '申请延期',
@@ -36,9 +35,11 @@ define(['jquery', 'datetimepicker', '../../../layerInit'], function($, datetimep
 				yes: function(index, layero) { //add的回调
 					var loadIndex,
 						status = false;
-					
-					if(!choiceTime){
-						layer.alert('未选定时间',{icon:3});
+
+					if (!choiceTime) {
+						layer.alert('未选定时间', {
+							icon: 3
+						});
 						return false;
 					}
 
@@ -57,36 +58,18 @@ define(['jquery', 'datetimepicker', '../../../layerInit'], function($, datetimep
 							timeout: 5 * 1000,
 							beforeSend: function() {
 								status = true; // 防止重复提交
-								loadIndex = layer.load(2, {
-									time: 5 * 1000
-								});
+								loadIndex = library.beforeSend();
 							},
 							success: function(data) {
-								if (data === 'true') {
-									layer.msg('延期成功', {
-										icon: 1,
-										time: 500
-									});
-									// 执行回调函数
-									layer.close(index);
-								} else {
-									layer.msg('延期失败', {
-										icon: 2,
-										time: 1000
-									});
-									$(this).data('canclick', true)
-										// 执行回调函数
-									layer.close(index);
-								}
+								library.success(self, data, index, '延期成功', '延期失败')
 							},
 							complete: function() {
-								layer.close(loadIndex);
+								library.complete(self, loadIndex);
 								status = false;
 								$('#js_datatime-text').val('');
-								$(self).data('canclick', true).removeClass('action-active');
 							},
 							error: function(xhr, error) {
-								console.log(xhr, error)
+								library.error('网络错误，请重试')
 							}
 						})
 					}
@@ -96,10 +79,9 @@ define(['jquery', 'datetimepicker', '../../../layerInit'], function($, datetimep
 						overflow: 'auto'
 					})
 					$('#js_datatime-text').val('');
-					$(self).data('canclick', true).removeClass('action-active');
+					library.cancel(self);
 				}
 			})
-		}
-
+		})
 	})
 })

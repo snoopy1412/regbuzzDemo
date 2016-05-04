@@ -1,5 +1,12 @@
 define(['jquery'], function($) {
 	var action = {
+		bindEvent: function(target, callback) {
+			$(document).on('click', target, function(event) {
+				event.preventDefault();
+
+				callback && callback.apply(this);
+			})
+		},
 		getWidth: function() {
 			var width = $(window).width(),
 				resultWidth;
@@ -10,30 +17,38 @@ define(['jquery'], function($) {
 			}
 			return resultWidth;
 		},
-		addVerify: function(str,overSizeNum,noStrMsg,overMaxMsg, illegalMsg) {
+		addVerify: function(str, overSizeNum, noStrMsg, overMaxMsg, illegalMsg) {
 			var re = /<\/?[^>]*>/g;
 			if (!re.test(str)) {
 				// 错误提示
-				if (str.trim() === '') { // 情况1 ，未填入字符
-					layer.alert(noStrMsg, {
-						icon: 0
-					});
-					return false;
-				} else if (str.trim().length > overSizeNum) { // 情况2 ，超过最大值
-					layer.alert(overMaxMsg, {
-						icon: 0
-					});
-					return false;
-				}else{
-					return true;
+				if (noStrMsg !== '') {
+					if (str.trim() === '') { // 情况1 ，未填入字符
+						layer.alert(noStrMsg, {
+							icon: 0
+						});
+						return false;
+					}
 				}
-			} else{
-				layer.alert(illegalMsg, {
-					icon: 0
-				});
-				return false;
+				if (overMaxMsg !== '') {
+					if (str.trim().length > overSizeNum) { // 情况2 ，超过最大值
+						layer.alert(overMaxMsg, {
+							icon: 0
+						});
+						return false;
+					}
+				}
+				return true;
+			} else {
+				if (illegalMsg !== '') {
+					layer.alert(illegalMsg, {
+						icon: 0
+					});
+					return false;
+				}
+				return true;
+
 			}
-			
+
 		},
 		getData: function(element) {
 			var projectId = $(element).data('projectid'),

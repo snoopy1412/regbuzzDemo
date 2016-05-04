@@ -1,12 +1,12 @@
 define(['jquery', './library', '../../../layerInit'], function($, library) {
 	var library = library.action;
-	$(document).on('click', '.action_add', function(event) {
-		event.preventDefault();
+
+	library.bindEvent('.action_add', function() {
 		var self = this,
-			projectId = library.getData().projectId,
-			projectAction = library.getData().projectAction,
-			inputMaxSize = 100,
+			projectId = library.getData(this).projectId,
+			projectAction = library.getData(this).projectAction,
 			$textarea = $('#js_111_content');
+
 		library.canclick(this, function() {
 			layer.open({
 				type: '1',
@@ -18,7 +18,7 @@ define(['jquery', './library', '../../../layerInit'], function($, library) {
 
 					// 验证字符串的有效性
 					var Verify = library.addVerify(str, 100, '输入不能为空', '超过输入的最大值', '请勿输入非法字符');
-					if(!Verify){
+					if (!Verify) {
 						return false;
 					}
 
@@ -28,7 +28,7 @@ define(['jquery', './library', '../../../layerInit'], function($, library) {
 						projectAction: projectAction,
 						str: str
 					}
-
+					
 					// ajax操作，最关键的还是后台的验证方式，保证安全性
 					if (!status) {
 						$.ajax({

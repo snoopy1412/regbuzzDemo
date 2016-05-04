@@ -1,25 +1,17 @@
-define(['jquery', 'raty', '../../../layerInit'], function($, raty) {
-	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
-	var width = $(window).width();
-	if (width >= 768) {
-		resultWidth = '600px';
-	} else {
-		resultWidth = (width - 30) + 'px';
-	}
+define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, library) {
+	var library = library.action;
 
-	$(document).on('click', '.action_351', function(event) {
-		event.preventDefault();
+	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
+	var resultWidth = library.getWidth();
+	library.bindEvent('.action_351', function() {
 		var self = this,
-			projectId = $(this).data('projectid'),
-			projectAction = $(this).data('projectacton'),
-			
+			projectId = library.getData(this).projectId,
+			projectAction = library.getData(this).projectAction,
 			inputMaxSize = 100,
 			$textarea = $('#js_351-content'),
 			evaluatedScore;
 
-		$(this).data('canclick', true);
-		if ($(this).data('canclick')) {
-			$(this).data('canclick', false).addClass('action-active');
+		library.canclick(this, function() {
 			layer.open({
 				type: '1',
 				title: '服务评价',
@@ -52,10 +44,11 @@ define(['jquery', 'raty', '../../../layerInit'], function($, raty) {
 							icon: 0
 						});
 						return false;
-					}else if (str.trim().length > inputMaxSize) { // 情况2 ，超过最大值
-						layer.alert('超过输入的最大值', {
-							icon: 0
-						});
+					}
+
+					// 情况2 ，超过最大值
+					var Verify = library.addVerify(str, 100, '', '超过输入的最大值', '请勿输入非法字符');
+					if (!Verify) {
 						return false;
 					}
 
@@ -64,15 +57,13 @@ define(['jquery', 'raty', '../../../layerInit'], function($, raty) {
 						projectId: projectId,
 						projectAction: projectAction
 					}
-					
-					if(evaluatedScore !== undefined){
+
+					if (evaluatedScore !== undefined) {
 						submitData['evaluatedScore'] = evaluatedScore;
 					}
-					if(str.trim() !== ''){
+					if (str.trim() !== '') {
 						submitData['str'] = str;
 					}
-					
-					console.log(submitData)
 
 					// ajax操作，最关键的还是后台的验证方式，保证安全性
 					if (!status) {
@@ -83,46 +74,27 @@ define(['jquery', 'raty', '../../../layerInit'], function($, raty) {
 							timeout: 5 * 1000,
 							beforeSend: function() {
 								status = true; // 防止重复提交
-								loadIndex = layer.load(2, {
-									time: 5 * 1000
-								});
+								loadIndex = library.beforeSend();
 							},
 							success: function(data) {
-								if (data === 'true') {
-									layer.msg('评价成功', {
-										icon: 1,
-										time: 500
-									});
-									// 执行回调函数
-									layer.close(index);
-								} else {
-									layer.msg('评价失败', {
-										icon: 2,
-										time: 1000
-									});
-									$(this).data('canclick', true)
-										// 执行回调函数
-									layer.close(index);
-								}
+								library.success(self, data, index, '评价成功', '评价失败')
 							},
 							complete: function() {
-								layer.close(loadIndex);
+								library.complete(self, loadIndex);
 								status = false;
 								$textarea.val('');
-								$(self).data('canclick', true).removeClass('action-active');
 							},
 							error: function(xhr, error) {
-								console.log(xhr, error)
+								library.error('网络错误，请重试')
 							}
 						})
 					}
 				},
 				cancel: function(index) { //cancel回调
 					$textarea.val('');
-					$(self).data('canclick', true).removeClass('action-active');
+					library.cancel(self);
 				}
 			})
-		}
-
+		})
 	})
 })

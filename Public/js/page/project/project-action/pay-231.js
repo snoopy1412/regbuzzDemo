@@ -1,24 +1,16 @@
-define(['jquery', 'Vue', '../../../layerInit'], function($, Vue) {
+define(['jquery', 'Vue', './library', '../../../layerInit'], function($, Vue, library) {
+	var library = library.action;
 
 	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
-	var width = $(window).width();
+	var resultWidth = library.getWidth();
 
-	if (width >= 768) {
-		resultWidth = '600px';
-	} else {
-		resultWidth = (width - 30) + 'px';
-	}
-
-	$(document).on('click', '.action_231', function(event) {
-		event.preventDefault();
+	library.bindEvent('.action_231', function() {
 		var self = this,
-			payVM,
-			projectId = $(this).data('projectid'),
-			projectAction = $(this).data('projectacton');
-		$(this).data('canclick', true);
-		if ($(this).data('canclick')) {
-			$(this).data('canclick', false).addClass('action-active');
+			projectId = library.getData(this).projectId,
+			projectAction = library.getData(this).projectAction,
+			payVM;
 
+		library.canclick(this, function() {
 			// 余额支付
 			layer.open({
 				type: "1",
@@ -88,36 +80,18 @@ define(['jquery', 'Vue', '../../../layerInit'], function($, Vue) {
 										timeout: 5 * 1000,
 										beforeSend: function() {
 											status = true; // 防止重复提交
-											loadIndex = layer.load(2, {
-												time: 5 * 1000
-											});
+											loadIndex = library.beforeSend();
 										},
 										success: function(data) {
-											if (data === 'true') {
-												layer.msg('添加成功', {
-													icon: 1,
-													time: 500
-												});
-												// 执行回调函数
-												layer.close(index);
-											} else {
-												layer.msg('添加失败', {
-													icon: 2,
-													time: 1000
-												});
-												$(this).data('canclick', true)
-													// 执行回调函数
-												layer.close(index);
-											}
+											library.success(self, data, index, '添加成功', '添加失败')
 										},
 										complete: function() {
-											layer.close(loadIndex);
+											library.complete(self, loadIndex);
 											status = false;
 											_this.inputMoney = '';
-											$(self).data('canclick', true).removeClass('action-active');
 										},
 										error: function(xhr, error) {
-											console.log(xhr, error)
+											library.error('网络错误，请重试')
 										}
 									})
 								}
@@ -128,7 +102,7 @@ define(['jquery', 'Vue', '../../../layerInit'], function($, Vue) {
 				cancel: function(index) { //cancel回调
 					payVM.inputMoney = '';
 					payVM.isBalancePaid = false;
-					$(self).data('canclick', true).removeClass('action-active');
+					library.cancel(self);
 				}
 			})
 
@@ -140,8 +114,6 @@ define(['jquery', 'Vue', '../../../layerInit'], function($, Vue) {
 				currentUrl = '';
 			currentUrl = originUrl + "?projectaction=" + projectAction + "&projectid=" + projectid;
 			$otherDom.prop('href', currentUrl);
-		}
+		})
 	})
-
-
 })

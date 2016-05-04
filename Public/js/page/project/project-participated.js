@@ -13,7 +13,7 @@ define(function(require) {
 	// 5. Active Bids
 	// 	5-1 Opening for bids		
 	// 		5-1-1 add
-	require('./project-action/add-action');
+	// require('./project-action/add-action');
 	// 		5-1-2 quit
 	// 	5-2 Waiting for Result
 	// 		5-2-1 quit
