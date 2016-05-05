@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery','layerInit'], function($,layerInit) {
 	function popupConfirm(options) {
 		this.options = $.extend({}, popupConfirm.defaults, options);
 		this.init();

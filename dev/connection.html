@@ -46,19 +46,24 @@
 				</div>
 			</form>
 			<div class="connect-list-action">
-				<label class="c-input c-checkbox" style='margin-right:20px'>
+				<label class="c-input c-checkbox" style='margin-right:20px;vertical-align: middle;'>
 				  <input type="checkbox" name='connectionAll'>
 				  <span class="c-indicator"></span>
 				 	 &nbsp;&nbsp;Seclect All
 				</label>
-				<button type='button' class="btn btn-secondary"><i class="fa fa-envelope-o" aria-hidden="true"></i> message</button>
-				<button type='button' class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> delete</button>	
+				<a href="" class='connect-btn connect-primary'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+				<a href="" class='connect-btn connect-primary' id='js_connection-message-all'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+				<a href="" class='connect-btn connect-danger'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+
+				<!-- <button type="button" class="btn btn-secondary btn-sm">invite</button>
+				<button type='button' class="btn btn-secondary btn-sm"><i class="fa fa-envelope-o" aria-hidden="true"></i> message</button>
+				<button type='button' class="btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i> delete</button>	 -->
 			</div>
 			<div class="connect-list">
 				<ul>
 					<li class='connect-list-section'>
 						<label class="c-input c-checkbox pull-left" style='margin-right:20px'>
-						  <input type="checkbox" name='connectionBox'>
+						  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' data-userid='12346'>
 						  <span class="c-indicator"></span>
 						</label>
 						<a href="" class='pull-left'>
@@ -77,13 +82,14 @@
 						  </P>
 						</div>
 						<div class="pull-right">
-							<button type='button' class="btn btn-secondary"><i class="fa fa-envelope-o" aria-hidden="true"></i> message</button>
-							<button type='button' class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> delete</button>	
+							<a href="" class='connect-btn connect-primary'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+							<a href="" class='connect-btn connect-primary js_connection-message' data-userid='12345'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+							<a href="" class='connect-btn connect-danger'><i class="fa fa-trash-o" aria-hidden="true"></i></a>		
 						</div>
 					</li>
 					<li class='connect-list-section'>
 						<label class="c-input c-checkbox pull-left" style='margin-right:20px'>
-						  <input type="checkbox" name='connectionBox'>
+						  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' data-userid='12345'>
 						  <span class="c-indicator"></span>
 						</label>
 						<a href="" class='pull-left'>
@@ -102,8 +108,9 @@
 						  </P>
 						</div>
 						<div class="pull-right">
-							<button type='button' class="btn btn-secondary"><i class="fa fa-envelope-o" aria-hidden="true"></i> message</button>
-							<button type='button' class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> delete</button>	
+							<a href="" class='connect-btn connect-primary'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+							<a href="" class='connect-btn connect-primary js_connection-message' data-userid='12345'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+							<a href="" class='connect-btn connect-danger'><i class="fa fa-trash-o" aria-hidden="true"></i></a>	
 						</div>
 					</li>
 				</ul>
@@ -116,5 +123,24 @@
 <!-- footer.html -->
 <% include ./publicTpl/footer.html %>
 <!-- footer.html end-->
+
+
+<!-- message框 -->
+<div id="connect-message" class='connect-message'>
+	<div class="message-main" id='message-main'>
+		<article class='message-content'>
+			<div class="form-group">
+				<textarea name="" class='form-control' rows='6' id='js_message-textarea'></textarea>
+			</div>
+		</article>
+		<div class="message-bar">
+			<a href="javascript:;" title="" class="bar-emoji" id='js_emojiBtn'><i class='fa fa-smile-o'></i></a>
+		</div>
+	</div>	
+	<!-- 表情 -->
+	<div id="emoji" class='connection-emoji'>
+	</div>
+</div>
+
 </body>
 </html>

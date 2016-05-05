@@ -10822,24 +10822,6 @@ body {
 .responsibilities-list > li {
   padding: 5px 0; }
 
-.connect-header-icon {
-  width: 100px;
-  height: 100px;
-  background-color: #0077b5;
-  text-align: center;
-  line-height: 100px;
-  color: #fff;
-  margin-top: -30px;
-  margin-right: 20px;
-  font-size: 30px; }
-
-.connect-header-title h1 {
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-weight: 600;
-  margin: 0;
-  margin-bottom: 10px; }
-
 .connect-form, .connect-list-action {
   margin-bottom: 20px; }
 
@@ -10850,8 +10832,7 @@ body {
 
 .connect-list-section {
   border-bottom: 1px solid #ddd;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 10px; }
   .connect-list-section:last-child {
     border-bottom: 0; }
   .connect-list-section .body {
@@ -10878,6 +10859,193 @@ body {
       color: #7a7676;
       display: inline-block;
       margin-bottom: 5px; }
+
+.connect-btn {
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background: #1B9AF7;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+.connect-primary {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #5cb85c; }
+  .connect-primary:focus, .connect-primary.focus {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #2d672d; }
+  .connect-primary:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #419641; }
+  .connect-primary:active, .connect-primary.active,
+  .open > .connect-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #419641; }
+    .connect-primary:active:hover, .connect-primary:active:focus, .connect-primary:active.focus, .connect-primary.active:hover, .connect-primary.active:focus, .connect-primary.active.focus,
+    .open > .connect-primary.dropdown-toggle:hover,
+    .open > .connect-primary.dropdown-toggle:focus,
+    .open > .connect-primary.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #398439;
+      border-color: #2d672d; }
+  .connect-primary:active, .connect-primary.active,
+  .open > .connect-primary.dropdown-toggle {
+    background-image: none; }
+  .connect-primary.disabled:hover, .connect-primary.disabled:focus, .connect-primary.disabled.focus, .connect-primary[disabled]:hover, .connect-primary[disabled]:focus, .connect-primary[disabled].focus,
+  fieldset[disabled] .connect-primary:hover,
+  fieldset[disabled] .connect-primary:focus,
+  fieldset[disabled] .connect-primary.focus {
+    background-color: #5cb85c;
+    border-color: #5cb85c; }
+  .connect-primary .badge {
+    color: #5cb85c;
+    background-color: #fff; }
+
+.connect-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d9534f; }
+  .connect-danger:focus, .connect-danger.focus {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #8b211e; }
+  .connect-danger:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #c12e2a; }
+  .connect-danger:active, .connect-danger.active,
+  .open > .connect-danger.dropdown-toggle {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #c12e2a; }
+    .connect-danger:active:hover, .connect-danger:active:focus, .connect-danger:active.focus, .connect-danger.active:hover, .connect-danger.active:focus, .connect-danger.active.focus,
+    .open > .connect-danger.dropdown-toggle:hover,
+    .open > .connect-danger.dropdown-toggle:focus,
+    .open > .connect-danger.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #ac2925;
+      border-color: #8b211e; }
+  .connect-danger:active, .connect-danger.active,
+  .open > .connect-danger.dropdown-toggle {
+    background-image: none; }
+  .connect-danger.disabled:hover, .connect-danger.disabled:focus, .connect-danger.disabled.focus, .connect-danger[disabled]:hover, .connect-danger[disabled]:focus, .connect-danger[disabled].focus,
+  fieldset[disabled] .connect-danger:hover,
+  fieldset[disabled] .connect-danger:focus,
+  fieldset[disabled] .connect-danger.focus {
+    background-color: #d9534f;
+    border-color: #d9534f; }
+  .connect-danger .badge {
+    color: #d9534f;
+    background-color: #fff; }
+
+.connect-message {
+  display: none;
+  width: 500px;
+  background-color: #fff;
+  padding: 10px; }
+  .connect-message .message-bar a {
+    display: inline-block;
+    margin-right: 15px;
+    float: left;
+    text-align: center;
+    font-size: 12px; }
+    .connect-message .message-bar a:last-child {
+      border-right: 0; }
+  .connect-message .message-bar .fa {
+    font-size: 20px;
+    vertical-align: middle; }
+  .connect-message .message-bar .upload {
+    display: inline-block;
+    overflow: hidden;
+    position: relative; }
+  .connect-message .message-bar .upload input {
+    font-size: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0; }
+  .connect-message .message-bar .bar-emoji {
+    color: #ffa405; }
+  .connect-message .message-bar .bar-image {
+    color: #87c108; }
+
+.message-header-private {
+  position: relative;
+  height: 90px; }
+  .message-header-private .header-img-warp {
+    width: 110px;
+    height: 110px;
+    padding: 1px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    top: -40px;
+    left: 0; }
+    .message-header-private .header-img-warp img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%; }
+  .message-header-private .header-des {
+    margin-left: 120px; }
+    .message-header-private .header-des .name {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+      .message-header-private .header-des .name a {
+        font-size: 18px; }
+    .message-header-private .header-des .headline {
+      color: #7a7676; }
+
+.message-header-all .firends span {
+  display: inline-block;
+  margin-right: 8px; }
+  .message-header-all .firends span:after {
+    content: ','; }
+  .message-header-all .firends span:last-child::after {
+    content: ''; }
+
+/*表情*/
+.connection-emoji {
+  z-index: 999;
+  width: 480px;
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  display: none; }
+
+.connection-emoji ul {
+  zoom: 1; }
+
+.connection-emoji ul:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.connection-emoji li {
+  width: 30px;
+  height: 30px;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px; }
+
+.connection-emoji li:hover {
+  border: 1px solid #ccc; }
 
 .container-forgot {
   padding-top: 40px;

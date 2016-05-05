@@ -1,4 +1,4 @@
-define(['jquery', '../../../layerInit', 'popupConfirm'], function($) {
+define(['jquery','popupConfirm'], function($) {
 	$.popupConfirm({
 		popupBtn: '.action_711',
 		modalTitle: '确认完成项目',

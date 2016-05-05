@@ -1,0 +1,91 @@
+.connect-message{
+	display: none;
+	width: 500px;
+	background-color: #fff;
+	padding:10px;
+
+	.message-bar{	
+		a{
+			display: inline-block;
+			margin-right: 15px;
+			float: left;
+			text-align: center;
+			font-size: 12px;
+			&:last-child{
+				border-right:0;
+			}
+		}
+		.fa{
+			font-size: 20px;
+			vertical-align: middle;
+		}
+		.upload{
+			display: inline-block;
+			overflow: hidden;
+			position: relative;
+		}
+		.upload input{
+			font-size: 100px;
+			overflow: hidden;
+			position: absolute;
+			top:0;
+			right: 0;
+			opacity: 0;
+		}
+		.bar-emoji{
+			color:rgb(255, 164, 5);
+		}
+		.bar-image{
+			color:rgb(135, 193, 8);
+		}
+	}
+}
+
+// 私聊
+.message-header-private{
+	position: relative;
+	height: 90px;
+	.header-img-warp{
+	width: 110px;
+	height: 110px;
+	padding: 1px;
+	background-color: #fff;
+	position: absolute;
+	border-radius: 50%;
+	border: 1px solid #f1f1f1;
+	top:-40px;
+	left: 0;
+		img{
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.header-des{
+		margin-left: 120px;
+		.name{
+			margin-top:5px;
+			margin-bottom: 5px;
+			a{
+				font-size: 18px;
+			}
+		}
+		.headline{
+			color:#7a7676;
+		}
+	}
+}
+.message-header-all{
+	.firends{
+		span{
+			display: inline-block;
+			margin-right: 8px;	
+			&:after{
+				content:','
+			}
+			&:last-child::after{
+				content:''
+			}
+		}
+	}
+}

@@ -24,6 +24,10 @@ require.config({
     check: './components/check', //checkbox复选框全选
     ellipsis: './components/ellipsis',
     popupConfirm: './components/popupConfirm',
+    'message':'./components/message',
+
+    // 常用工具
+    tools :'./utilities/tools',
 
     // MVVM框架
     Vue: './vendor/vue', // MVVM框架
@@ -31,6 +35,12 @@ require.config({
     vueValidator: './vendor/vue-validator.min', //Vue 验证插件,
     VueComponent: '../static/vue-component', // 自定义Vue 组件,
     VueGlobalFilter: './vue-globalfilter', //全局过滤器,
+
+    // layerInit
+    layerInit : './layerInit',
+
+    // page
+    library : 'page/project/project-action/library'
   },
   shim: {
     "bootstrap": {
@@ -62,6 +72,9 @@ require.config({
     },
     'popupConfirm': {
       deps: ["jquery",'layer']
+    },
+    'message':{
+      deps:['jquery']
     },
     'wysiwyg': {
       deps: ['jquery']

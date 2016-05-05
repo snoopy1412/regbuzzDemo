@@ -1,0 +1,32 @@
+/*表情*/
+.connection-emoji{
+	z-index: 999;
+	width: 480px;
+	padding: 10px;
+	border: 1px solid #e8e8e8;
+	background-color: #fff;
+	position: absolute;
+	border-radius: 2px;
+	box-shadow: 0 0 5px rgba(0,0,0,.15);
+	display: none;
+}
+
+.connection-emoji ul{
+	zoom:1;
+}
+.connection-emoji ul:after{
+	content: '';
+	display: block;
+	clear:both;
+}
+.connection-emoji li{
+	width: 30px;
+	height: 30px;
+	float: left;
+	cursor: pointer;
+	text-align: center;
+	line-height: 30px;
+}
+.connection-emoji li:hover{
+	border: 1px solid #ccc;
+}
