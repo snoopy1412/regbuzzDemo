@@ -50,6 +50,34 @@
 						
 						<!-- open-for-bidding -->
 						<% include ./projectTpl/e_open-for-bidding.html %>
+						<!-- invite -->
+						<div class='open-waiting-invite' id="open-waiting-invite">
+							<div class="invite-content clearfix">
+								<div class="invite-friends">
+									<h4 class='invite-title'>好友列表</h4>
+									<ul class='firends-item-warp'>
+
+									<li v-if='loadingMsg'>{{loadingMsg}}</li>
+										<template v-for='item in friendsList' v-if='firnedsList.length'>
+											<li class='firends-item' v-if='item.status === "0"'>
+												<label for="{{item.userid}}" ><input id="{{item.userid}}" type="checkbox" class="" value="{{ item.userid }}" @click='aaa($event,$index)'> <span>{{item.username}}</span></label>
+											</li>
+										</template>
+									</ul>
+								</div>
+
+								<div class='invite-board'>
+								<h4 class='invite-title'>邀请好友（最多五位）</h4>
+									<ul class='invite-box-warp'>
+										<template v-for='item in friendsList'>
+											<li class='firends-item' v-if='item.status === "1"'>
+												<label for="{{item.userid}}"><input id="{{item.userid}}" type="checkbox" class="" value="{{ item.userid }}"  @click='bbb($index)'> <span>{{item.username}}</span></label>
+											</li>
+										</template>
+									</ul>
+								</div>
+							</div>
+						</div>
 
 						<!-- order-placing -->
 						<% include ./projectTpl/e_order-placing.html %>
@@ -70,5 +98,8 @@
 <!-- footer.html -->
 <% include ./publicTpl/footer.html %>
 <!-- footer.html end-->
+
+
+
 </body>
 </html>

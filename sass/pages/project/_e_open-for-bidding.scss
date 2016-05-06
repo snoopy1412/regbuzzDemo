@@ -12,3 +12,56 @@
 	@include font-size(1.6);
 
 }
+
+.open-waiting-invite{
+	background-color: #fff;
+	display: none;
+	width: 100%;
+	padding: 20px;
+	.invite-content{
+		background-color:#f2f2f5;
+		padding: 20px;
+	}
+	.invite-friends,.invite-board{
+		width: 49%;
+	}
+	.invite-friends{
+		float: left;
+	}
+	.invite-board{
+		float: right;
+	}
+	.firends-item{
+		input[type=checkbox]{
+			vertical-align: middle;
+		}
+		span{
+			vertical-align: middle;
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+	.invite-title{
+		margin: 0;
+		border: 1px solid #ddd;
+		border-top-width: 2px ;
+		border-top-color: $brand-primary;
+		border-bottom: 0;
+		border-radius: 2px 2px 0 0 ;
+		background-color: #fff;
+		padding: 10px;
+		font-weight: bold;
+	}
+	// 左
+	// 右
+	.invite-box-warp,.firends-item-warp{
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-top-color: #f1f1f1;
+		border-radius: 0 0 2px 2px;
+		padding: 10px;
+		height: 200px;
+		overflow: auto;
+	} 
+	
+}

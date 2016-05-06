@@ -389,13 +389,10 @@
 				  <span class="c-indicator"></span>
 				 	 &nbsp;&nbsp;Seclect All
 				</label>
-				<a href="" class='connect-btn connect-primary'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+				<!-- invite按钮目前的设计是从任务管理页面进入的时候才会出现 -->
+				<a href="" class='connect-btn connect-primary js_connection-invite'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
 				<a href="" class='connect-btn connect-primary' id='js_connection-message-all'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-				<a href="" class='connect-btn connect-danger'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-
-				<!-- <button type="button" class="btn btn-secondary btn-sm">invite</button>
-				<button type='button' class="btn btn-secondary btn-sm"><i class="fa fa-envelope-o" aria-hidden="true"></i> message</button>
-				<button type='button' class="btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i> delete</button>	 -->
+				<a href="" class='connect-btn connect-danger js_connection-delete'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 			</div>
 			<div class="connect-list">
 				<ul>
@@ -420,9 +417,9 @@
 						  </P>
 						</div>
 						<div class="pull-right">
-							<a href="" class='connect-btn connect-primary'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+							<a href="" class='connect-btn connect-primary js_connection-invite' data-userid='12345'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
 							<a href="" class='connect-btn connect-primary js_connection-message' data-userid='12345'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-							<a href="" class='connect-btn connect-danger'><i class="fa fa-trash-o" aria-hidden="true"></i></a>		
+							<a href="" class='connect-btn connect-danger js_connection-delete'  data-userid='12345'><i class="fa fa-trash-o" aria-hidden="true"></i></a>		
 						</div>
 					</li>
 					<li class='connect-list-section'>
@@ -446,9 +443,9 @@
 						  </P>
 						</div>
 						<div class="pull-right">
-							<a href="" class='connect-btn connect-primary'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+							<a href="" class='connect-btn connect-primary js_connection-invite' data-userid='12345'><i class="fa fa-user-plus" aria-hidden="true" ></i></a>
 							<a href="" class='connect-btn connect-primary js_connection-message' data-userid='12345'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-							<a href="" class='connect-btn connect-danger'><i class="fa fa-trash-o" aria-hidden="true"></i></a>	
+							<a href="" class='connect-btn connect-danger js_connection-delete'  data-userid='12345'><i class="fa fa-trash-o" aria-hidden="true"></i></a>	
 						</div>
 					</li>
 				</ul>
@@ -579,21 +576,35 @@
 </footer>
 <!-- footer.html end-->
 
-
-<!-- message框 -->
+<!-- message框私聊-->
 <div id="connect-message" class='connect-message'>
-	<div class="message-main" id='message-main'>
+	<div class='message-main'>
 		<article class='message-content'>
-			<div class="form-group">
-				<textarea name="" class='form-control' rows='6' id='js_message-textarea'></textarea>
+			<div class='form-group'>
+				<textarea class='form-control' rows='6' id='js_message-textarea'></textarea>
 			</div>
 		</article>
-		<div class="message-bar">
-			<a href="javascript:;" title="" class="bar-emoji" id='js_emojiBtn'><i class='fa fa-smile-o'></i></a>
+		<div class='message-bar'>
+			<a href='javascript:;' title="emoji" class='bar-emoji' id='js_emojiBtn'><i class='fa fa-smile-o'></i></a>
 		</div>
 	</div>	
-	<!-- 表情 -->
-	<div id="emoji" class='connection-emoji'>
+	<div id='emoji' class='connection-emoji'>
+	</div>
+</div>
+
+<!-- message框群聊-->
+<div id="connect-message-all" class='connect-message'>
+	<div class='message-main'>
+		<article class='message-content'>
+			<div class='form-group'>
+				<textarea class='form-control' rows='6' id='js_message-textarea-all'></textarea>
+			</div>
+		</article>
+		<div class='message-bar'>
+			<a href='javascript:;' title="emoji" class='bar-emoji' id='js_emojiBtn-all'><i class='fa fa-smile-o'></i></a>
+		</div>
+	</div>	
+	<div id='emoji-all' class='connection-emoji'>
 	</div>
 </div>
 

@@ -85,12 +85,12 @@ define(['jquery'], function($) {
 				time: 1500
 			});
 		},
-		success: function(self, data, index, successMsg, failMsg) {
+		success: function(self, data, index, successMsg, failMsg,successCallback) {
 			if (data === 'true') {
 				layer.msg(successMsg, {
 					icon: 1,
 					time: 500
-				});
+				},successCallback);
 				// 执行回调函数
 				layer.close(index);
 			} else {

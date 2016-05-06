@@ -40,13 +40,20 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 			this.emojiBtn = this.options.emojiBtn;
 			this.emojiContainer = this.options.emojiContainer;
 			this.ajaxUrl = this.options.ajaxUrl;
+			if (this.type === 2) {
+				this.$checkboxs = $('.connect-list-section').find('.connect-frends-checkbox');
+				this.userIds = [];
+			}
 		},
 		_renderHeader: function() {
-			var userId = $(this.node).data('userid');
+			var userId = $(this.node).data('userid'),
+				self = this;
 			if (this.type === 1) {
 				$.get('data.js', {
 					userId: userId
 				}, function(data) {
+
+					// 写死是为了模拟
 					var html = "<header class='message-header-private'>" +
 						"<a href='' class='header-img-warp'>" +
 						"<img src='./Public/img/index/servers/4.jpg' alt='' class='header-img'>" +
@@ -54,12 +61,14 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 						"<div class='header-des pull-left'>" +
 						"<h3 class='name'><a href ='' title='Michelle Huan'> Michelle Huan </a><small> - Law Consultant</small > </h3><p class ='headline'>" +
 						"Chemical regulatory compliance consultant at Nanjing CIRS </p> </div> </header>";
-					$('#message-main').prepend(html);
+					$(self.modalBox).find('.message-main').prepend(html);
 				})
 			} else if (this.type === 2) {
 				$.get('data.js', {
 					userId: userId
 				}, function(data) {
+
+					// 写死是为了模拟
 					var html = "<header class='message-header-all'>" +
 						"<p class='firends'>Message to " +
 						"<span><a href=''>Michelle Huan</a></span>" +
@@ -75,12 +84,17 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 						"等10人" +
 						"</p>" +
 						"</header>";
-					$('#message-main').prepend(html);
+					$(self.modalBox).find('.message-main').prepend(html);
 				})
 			}
 		},
-		_destroyHeader:function(){
-			$('#message-main').html('');
+		_destroyHeader: function() {
+			if (this.type === 1) {
+				$(this.modalBox).find('.message-header-private').remove();
+			} else if (this.type === 2) {
+				$(this.modalBox).find('.message-header-all').remove();
+			}
+
 		},
 		_initEmoji: function() {
 			var self = this;
@@ -142,6 +156,18 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 			$(document).on('click', self.node, function(event) {
 				event.preventDefault();
 				var This = this;
+				if (self.type === 2) {
+					self.$checkboxs.each(function(i, elem) {
+						if ($(this).prop('checked')) {
+							self.userIds.push($(this).data('userid'));
+						}
+					})
+					if (!self.userIds.length) {
+						layer.alert('还没有选定')
+						return false;
+					}
+				}
+
 				self.layer(This);
 			})
 		},
@@ -176,15 +202,7 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 						self.success(layero)
 					},
 					yes: function(index, layero) {
-						// userId
-						var $checkboxs = $('.connect-list-section').find('.connect-frends-checkbox'),
-							userIds = [];
-						$checkboxs.each(function(i, elem) {
-							if ($(this).prop('checked')) {
-								userIds.push($(this).data('userid'));
-							}
-						})
-						self.yes(index, layero, userIds, This);
+						self.yes(index, layero, self.userIds, This);
 					},
 					cancel: function(index) { //cancel回调
 						self.cancel(This);
@@ -252,7 +270,7 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 		cancel: function(This) {
 			$(this.inputBox).val('');
 			library.cancel(This);
-			this._destroyHeader();
+			// this._destroyHeader();
 		}
 
 	}

@@ -415,7 +415,8 @@
 					<a href="javascript:;" class='action action_add' data-projectId='51065' data-projectActon='111'>Add</a>
 					<!-- 暂时不考虑 -->
 					<!-- <a href="" class="action">Promote</a>  -->
-					<a href="connection.html?projectacton=112&projectid=51065" class="action" data-projectId='51065' data-projectActon='112'>Invite</a>
+					<!-- <a href="connection.html?projectacton=112&projectid=51065" class="action" data-projectId='51065' data-projectActon='112'>Invite</a> -->
+					<a href="javascript:;" class='action action_112' data-projectId='51065' data-projectActon='112'>Invite</a>
 					<a href="publish-quick-result.html?projectacton=113&projectid=51065#pubResault-list" class="action" data-projectId='51065' data-projectActon='113'>Select</a>
 					<a href="javascript:;" class='action action_cancel' data-projectId='51065' data-projectActon='114'>Cancel</a>
 				</td>
@@ -452,6 +453,34 @@
 	<!-- open -for-bidding 交互 end-->
 
 	<!-- open-for-bidding end -->
+						<!-- invite -->
+						<div class='open-waiting-invite' id="open-waiting-invite">
+							<div class="invite-content clearfix">
+								<div class="invite-friends">
+									<h4 class='invite-title'>好友列表</h4>
+									<ul class='firends-item-warp'>
+
+									<li v-if='loadingMsg'>{{loadingMsg}}</li>
+										<template v-for='item in friendsList' v-if='firnedsList.length'>
+											<li class='firends-item' v-if='item.status === "0"'>
+												<label for="{{item.userid}}" ><input id="{{item.userid}}" type="checkbox" class="" value="{{ item.userid }}" @click='aaa($event,$index)'> <span>{{item.username}}</span></label>
+											</li>
+										</template>
+									</ul>
+								</div>
+
+								<div class='invite-board'>
+								<h4 class='invite-title'>邀请好友（最多五位）</h4>
+									<ul class='invite-box-warp'>
+										<template v-for='item in friendsList'>
+											<li class='firends-item' v-if='item.status === "1"'>
+												<label for="{{item.userid}}"><input id="{{item.userid}}" type="checkbox" class="" value="{{ item.userid }}"  @click='bbb($index)'> <span>{{item.username}}</span></label>
+											</li>
+										</template>
+									</ul>
+								</div>
+							</div>
+						</div>
 
 						<!-- order-placing -->
 						 <!-- order-placing -->
@@ -949,5 +978,8 @@
 </div>
 </footer>
 <!-- footer.html end-->
+
+
+
 </body>
 </html>

@@ -1,0 +1,54 @@
+{
+	"friends": [
+		{
+			"userid" : "1",
+			"username" : "Aaron Su",
+			"status":"0"
+		},
+		{
+			"userid" : "2",
+			"username" : "Michael Zhu",
+			"status":"0"
+		},
+		{
+			"userid" : "3",
+			"username" : "Christine Cormons",
+			"status":"0"
+		},
+		{
+			"userid" : "4",
+			"username" : "Michelle Huan",
+			"status":"0"
+		},
+		{
+			"userid" : "5",
+			"username" : "Charles Chang",
+			"status":"0"
+		},
+		{
+			"userid" : "7",
+			"username" : "William Wei",
+			"status":"0"
+		},
+		{
+			"userid" : "8",
+			"username" : "Amy Liu",
+			"status":"0"
+		},
+		{
+			"userid" : "9",
+			"username" : "Sunny Zhang",
+			"status":"0"
+		},
+		{
+			"userid" : "10",
+			"username" : "Robert Tim",
+			"status":"0"
+		},
+		{
+			"userid" : "11",
+			"username" : "Jessica Jons",
+			"status":"0"
+		}
+	]
+}

@@ -52,7 +52,7 @@ define(function(require) {
 	// 	4-2 Failed
 	// 		4-2-1 Reason
 	// 		4-2-2 Dispute
-
+	require('./project-action/invite-112');
 	require('./project-action/extend-122');
 	require('./project-action/pay-231');
 	require('./project-action/extend-action-3');
