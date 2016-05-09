@@ -1,12 +1,12 @@
-define(['jquery', './library', '../../../layerInit'], function($, library) {
-	var library = library.action;
-	library.bindEvent('.action_411', function() {
+define(['jquery', 'tools', '../../../layerInit'], function($, tools) {
+
+	tools.bindEvent('.action_411', function() {
 		var self = this,
-			projectId = library.getData().projectId,
-			projectAction = library.getData().projectAction,
+			projectId = tools.getData().projectId,
+			projectAction = tools.getData().projectAction,
 			$textarea = $('#js_411-content');
-		
-		library.canclick(this, function() {
+
+		tools.canclick(this, function() {
 			layer.open({
 				type: '1',
 				title: '追加评论',
@@ -18,10 +18,12 @@ define(['jquery', './library', '../../../layerInit'], function($, library) {
 						status = false;
 
 					// 验证字符串的有效性
-					var Verify = library.addVerify(str, 100, '输入不能为空', '超过输入的最大值', '请勿输入非法字符');
-					if (!Verify) {
-						return false;
-					}
+					return tools.StringValidator(str, {
+						overSizeNum: 100, // 最大输入值，number
+						noContentMsg: '输入不能为空', // 未填入内容提示
+						overMaxMsg: '超过输入的最大值', //超过最大输入值提示
+						illegalMsg: '请勿输入非法字符'
+					})
 
 					// 需要上传的数据
 					var submitData = {
@@ -39,24 +41,24 @@ define(['jquery', './library', '../../../layerInit'], function($, library) {
 							timeout: 5 * 1000,
 							beforeSend: function() {
 								status = true; // 防止重复提交
-								loadIndex = library.beforeSend();
+								loadIndex = tools.beforeSend();
 							},
 							success: function(data) {
-								library.success(self, data, index, '评价成功', '评价失败')
+								tools.success(self, data, index, '评价成功', '评价失败')
 							},
 							complete: function() {
-								library.complete(self, loadIndex);
+								tools.complete(self, loadIndex);
 								status = false;
 								$textarea.val('');
 							},
 							error: function(xhr, error) {
-								library.error('网络错误，请重试')
+								tools.error('网络错误，请重试')
 							}
 						})
 					}
 				},
 				cancel: function(index) { //cancel回调
-					library.cancel(self);
+					tools.cancel(self);
 					$textarea.val('');
 				}
 			})

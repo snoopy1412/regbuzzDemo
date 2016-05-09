@@ -1,33 +1,20 @@
-define(['jquery', 'datetimepicker', '../../../layerInit'], function($, datetimepicker) {
+define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, datetimepicker, tools) {
 	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
-	var width = $(window).width();
-
-	if (width >= 768) {
-		resultWidth = '600px';
-	} else {
-		resultWidth = (width - 30) + 'px';
-	}
-	$(document).on('click', '.action_refund', function(event) {
-		event.preventDefault();
+	var resultWidth = tools.getWidth();
+	tools.bindEvent('.action_refund', function() {
 		var self = this,
 			projectId = $(this).data('projectid'),
 			projectAction = $(this).data('projectacton'),
 			$reason = $('#work-refund-reason'),
 			$reasonAdd = $("#work-refund-reason_add"),
 			selectData = [];
-
-		$(this).data('canclick', true);
-		if ($(this).data('canclick')) {
-			$(this).data('canclick', false).addClass('action-active');
+		tools.canclick(this, function() {
 			layer.open({
 				type: '1',
 				title: '申请退款',
 				area: [resultWidth, 'auto'],
 				content: $('#work-refund'),
 				btn: ['Confirm', 'Cancel'],
-				success: function(layero, index) {
-
-				},
 				yes: function(index, layero) { //add的回调
 					var loadIndex,
 						status = false,
@@ -71,48 +58,29 @@ define(['jquery', 'datetimepicker', '../../../layerInit'], function($, datetimep
 							timeout: 5 * 1000,
 							beforeSend: function() {
 								status = true; // 防止重复提交
-								loadIndex = layer.load(2, {
-									time: 5 * 1000
-								});
+								loadIndex = tools.beforeSend();
 							},
 							success: function(data) {
-								if (data === 'true') {
-									layer.msg('申请成功', {
-										icon: 1,
-										time: 500
-									});
-									// 执行回调函数
-									layer.close(index);
-								} else {
-									layer.msg('申请失败', {
-										icon: 2,
-										time: 1000
-									});
-									$(this).data('canclick', true)
-										// 执行回调函数
-									layer.close(index);
-								}
+								tools.success(self, data, index, '申请成功', '申请失败')
 							},
 							complete: function() {
-								layer.close(loadIndex);
+								tools.complete(self, loadIndex);
 								status = false;
-								$(self).data('canclick', true).removeClass('action-active');
 								$reason.val('');
 								$reasonAdd.val('');
 							},
 							error: function(xhr, error) {
-								console.log(xhr, error)
+								tools.error('网络错误，请重试')
 							}
 						})
 					}
 				},
 				cancel: function(index) { //cancel回调
-					$(self).data('canclick', true).removeClass('action-active');
+					tools.cancel(self);
 					$reason.val('');
 					$reasonAdd.val('');
 				}
 			})
-		}
-
+		})
 	})
 })

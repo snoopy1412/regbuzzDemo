@@ -1,11 +1,5 @@
-require(['ellipsis','./page/dashboard/controller'],function(){
-
-// 溢出隐藏，省略号
-	$(".home-push-des").ellipsis({
-		childNodes : 'p'
-	})
-	
-	$('.home-push-title').ellipsis({
-		childNodes : 'a'
-	})
+require(['./page/dashboard/ellipsis', // 省略号溢出隐藏
+	'./page/dashboard/controller' // 控制器集合
+], function(ellipsis) {
+	ellipsis.ellipsis();
 });

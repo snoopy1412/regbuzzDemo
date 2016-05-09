@@ -250,7 +250,7 @@
 												<a href=""><span class="label label-success"><i class="fa fa-bolt"></i></span> A security question has been created for your account.</a>
 											</li>
 											<li>
-												<a href="" title="">See All Notifications</a>
+												<a href="./notice.html" title="">See All Notifications</a>
 											</li>
 										</ul>
 									</div>
@@ -407,8 +407,10 @@
 				<div class="dashboard-article">
 				  <ul class="nav nav-tabs nav-tabs-custom-blue" role="tablist">
 				    <li role="presentation" class="active"><a href="#dashboard-push" aria-controls="home" role="tab" data-toggle="tab">项目推送</a></li>
-				    <li role="presentation"><a href="#dashboard-news" aria-controls="profile" role="tab" data-toggle="tab">新消息</a></li>
-				    <li role="presentation"><a href="#dashboard-dynamic" aria-controls="messages" role="tab" data-toggle="tab">我的动态</a></li>
+
+				    <!-- 一版隐藏 -->
+				    <!-- <li role="presentation"><a href="#dashboard-news" aria-controls="profile" role="tab" data-toggle="tab">新消息</a></li>
+				    <li role="presentation"><a href="#dashboard-dynamic" aria-controls="messages" role="tab" data-toggle="tab">我的动态</a></li> -->
 				  </ul>
 				  <div class="tab-content">
 					<div class="tab-pane active fade in" id="dashboard-push">
@@ -418,7 +420,7 @@
 									<section class='home-push-item hoverable'>
 										<header class='home-push-item-header'>
 											<div class="push-handle">
-												<a href="javascript:;" title='Favorite' class='favorite' :class="{'isFavorite' : item.favoriteUsersId.indexOf(userId)!== -1 }" @click='favorite($index,$event)'><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
+												<a href="javascript:;" title='Favorite' class='favorite' :class="{'isFavorite' : item.favoriteUsersIds.indexOf(userId)!== -1 }" @click='favorite($index,$event)'><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
 												<!-- 
 												<a href="javascript:;" title='Skip' class='skip' @click='pushSkip($index,$event)'><i class='fa fa-times'></i>&nbsp;&nbsp;Skip</a> -->
 											</div>
@@ -459,7 +461,9 @@
 							</button>
 						</div>
 					</div>
-				    <div class="tab-pane fade" id="dashboard-news">
+
+					<!-- 一版隐藏 -->
+				    <!-- <div class="tab-pane fade" id="dashboard-news">
 				    	<section class='row home-new'>
 							<div class="content dashboard-content">
 								<div class="col-md-1">
@@ -572,7 +576,7 @@
 								</div>
 							</div>	
 				    	</section>
-				    </div>
+				    </div> -->
 				  </div>
 				</div>
 			</div>
@@ -606,7 +610,6 @@
 								<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
 							</ul>
 						</div>
-
 					</div>
 			</div>
 		</div>

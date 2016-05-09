@@ -1,17 +1,15 @@
-define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, library) {
-
-	var library = library.action;
+define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tools) {
 
 	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
-	var resultWidth = library.getWidth();
-	library.bindEvent('.action_dispute', function() {
+	var resultWidth = tools.getWidth();
+	tools.bindEvent('.action_dispute', function() {
 		var self = this,
 			projectId = $(this).data('projectid'),
 			projectAction = $(this).data('projectacton'),
 			$title = $('#js_dispute-title-4'),
 			$textarea = $('#js_dispute-description-4');
 
-		library.canclick(this, function() {
+		tools.canclick(this, function() {
 			layer.open({
 				type: '1',
 				title: '纠纷',
@@ -24,16 +22,19 @@ define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, 
 						textareaStr = $textarea.val(),
 						status = false;
 
-						
-					// 验证字符串的有效性
-					var VerifyTitle = library.addVerify(titleStr, 20, '标题输入不能为空', '标题超过输入的最大值', '请勿输入非法字符');
-					if (!VerifyTitle) {
-						return false;
-					}
-					var VerifyTextarea = library.addVerify(textareaStr, 100, '内容输入不能为空', '内容超过输入的最大值', '请勿输入非法字符');
-					if (!VerifyTextarea) {
-						return false;
-					}	
+					return tools.StringValidator(titleStr, {
+						overSizeNum: 100, // 最大输入值，number
+						noContentMsg: '标题输入不能为空', // 未填入内容提示
+						overMaxMsg: '标题超过输入的最大值', //超过最大输入值提示
+						illegalMsg: '请勿输入非法字符'
+					})
+					
+					return tools.StringValidator(textareaStr, {
+						overSizeNum: 100, // 最大输入值，number
+						noContentMsg: '内容输入不能为空', // 未填入内容提示
+						overMaxMsg: '内容超过输入的最大值', //超过最大输入值提示
+						illegalMsg: '请勿输入非法字符'
+					})
 
 					// 需要上传的数据
 					var submitData = {
@@ -52,19 +53,19 @@ define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, 
 							timeout: 5 * 1000,
 							beforeSend: function() {
 								status = true; // 防止重复提交
-								loadIndex = library.beforeSend();
+								loadIndex = tools.beforeSend();
 							},
 							success: function(data) {
-								library.success(self, data, index, '评价成功', '评价失败')
+								tools.success(self, data, index, '评价成功', '评价失败')
 							},
 							complete: function() {
-								library.complete(self, loadIndex);
+								tools.complete(self, loadIndex);
 								status = false;
 								$title.val('');
 								$textarea.val('');
 							},
 							error: function(xhr, error) {
-								library.error('网络错误，请重试')
+								tools.error('网络错误，请重试')
 							}
 						})
 					}
@@ -72,7 +73,7 @@ define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, 
 				cancel: function(index) { //cancel回调
 					$title.val('');
 					$textarea.val('');
-					library.cancel(self);
+					tools.cancel(self);
 				}
 			})
 		})

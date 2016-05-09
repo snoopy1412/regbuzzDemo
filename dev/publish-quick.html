@@ -191,15 +191,15 @@
 									<div class="form-group">
 										<label for="marketplace" class='col-md-3 control-label'>Marketplace Visibility</label>
 										<div class="col-md-9">
-											<select class='form-control form-control-all' id='marketplace'>
-										    <option value="public" label="All consultants can find this job">All consultants can find this job</option>
+											<select class='form-control form-control-all' id='marketplace' v-model='selectPublicOrPrivate'>
+										    <option value="public" label="All consultants can find this job" selected>All consultants can find this job</option>
 										    <option value="private" label="Only people I have invited can find this job">Only people I have invited can find this job</option>
 										</select>
 										</div>
 									</div>
 
 									<!-- language -->
-									<div class="form-group">
+									<div class="form-group" v-show='!onlyInvite'>
 										<label class='col-md-3 control-label'>Special Language Requirement</label>
 										<div class="col-md-9">
 											
@@ -227,7 +227,7 @@
 									</div> -->
 
 									<!-- Location -->
-									<div class="form-group">
+									<div class="form-group" v-show='!onlyInvite'>
 										<label for="location" class='col-md-3 control-label'>Candidates Location</label>
 										<div class="col-md-9">
 											<div class="row row--no-padding">
@@ -254,7 +254,7 @@
 
 
 									<!-- Verification -->
-									<div class="form-group">
+									<div class="form-group" v-show='!onlyInvite'>
 										<label for="" class='col-md-3 control-label'>Candidates Verification</label>
 										<div class="col-md-9 clearfix radiobox-list">
 											  <label class="c-input c-checkbox">

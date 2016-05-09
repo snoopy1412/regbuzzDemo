@@ -1,14 +1,13 @@
-define(['jquery', 'datetimepicker', './library', '../../../layerInit'], function($, datetimepicker, library) {
-	var library = library.action;
+define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, datetimepicker,tools) {
 
-	library.bindEvent('.action_extend', function() {
+	tools.bindEvent('.action_extend', function() {
 		var self = this,
-			projectId = library.getData(this).projectId,
-			projectAction = library.getData(this).projectAction,
+			projectId = tools.getData(this).projectId,
+			projectAction = tools.getData(this).projectAction,
 			layerDom,
 			choiceTime; //选取的日期
 
-		library.canclick(this, function() {
+		tools.canclick(this, function() {
 			layer.open({
 				type: '1',
 				title: '申请延期',
@@ -58,18 +57,18 @@ define(['jquery', 'datetimepicker', './library', '../../../layerInit'], function
 							timeout: 5 * 1000,
 							beforeSend: function() {
 								status = true; // 防止重复提交
-								loadIndex = library.beforeSend();
+								loadIndex = tools.beforeSend();
 							},
 							success: function(data) {
-								library.success(self, data, index, '延期成功', '延期失败')
+								tools.success(self, data, index, '延期成功', '延期失败')
 							},
 							complete: function() {
-								library.complete(self, loadIndex);
+								tools.complete(self, loadIndex);
 								status = false;
 								$('#js_datatime-text').val('');
 							},
 							error: function(xhr, error) {
-								library.error('网络错误，请重试')
+								tools.error('网络错误，请重试')
 							}
 						})
 					}
@@ -79,7 +78,7 @@ define(['jquery', 'datetimepicker', './library', '../../../layerInit'], function
 						overflow: 'auto'
 					})
 					$('#js_datatime-text').val('');
-					library.cancel(self);
+					tools.cancel(self);
 				}
 			})
 		})

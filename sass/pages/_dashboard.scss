@@ -63,7 +63,7 @@
 	}
 	
 	.history-content-item{
-		border-top: 1px solid #eee;
+		// border-top: 1px solid #eee;
 		margin-top: 5px;
 
 		&>li{
@@ -80,6 +80,7 @@
 				}
 				
 			}
+			
 			&:last-child{
 				border-bottom: 0;
 			}

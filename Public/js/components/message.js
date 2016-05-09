@@ -1,6 +1,4 @@
-define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) {
-
-	var library = library.action;
+define(['jquery', 'tools', 'layerInit'], function($, tools, layerInit) {
 
 	var Message = function(node, options) {
 		this.node = node;
@@ -52,15 +50,18 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 				$.get('data.js', {
 					userId: userId
 				}, function(data) {
+					var imgUrl = './Public/img/index/servers/4.jpg',
+						name = 'Michelle Huan',
+						position = 'Law Consultant',
+						des = 'Chemical regulatory compliance consultant at Nanjing CIRS';
 
 					// 写死是为了模拟
 					var html = "<header class='message-header-private'>" +
 						"<a href='' class='header-img-warp'>" +
-						"<img src='./Public/img/index/servers/4.jpg' alt='' class='header-img'>" +
+						"<img src='" + imgUrl + "' alt='' class='header-img'>" +
 						"</a>" +
 						"<div class='header-des pull-left'>" +
-						"<h3 class='name'><a href ='' title='Michelle Huan'> Michelle Huan </a><small> - Law Consultant</small > </h3><p class ='headline'>" +
-						"Chemical regulatory compliance consultant at Nanjing CIRS </p> </div> </header>";
+						"<h3 class='name'><a href ='' title='" + name + "'> " + name + " </a><small> - " + position + "</small > </h3><p class ='headline'>" + des +" </p> </div> </header>";
 					$(self.modalBox).find('.message-main').prepend(html);
 				})
 			} else if (this.type === 2) {
@@ -68,23 +69,16 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 					userId: userId
 				}, function(data) {
 
+					var names = ['Michelle Huan', 'Aaron Su', 'Christine Cormons'],
+						size = names.length,
+						html = '';
+
+					for (var i = 0; i < names.length; i++) {
+						html += "<span><a href=''>" + names[i] + "</a></span>";
+					}
 					// 写死是为了模拟
-					var html = "<header class='message-header-all'>" +
-						"<p class='firends'>Message to " +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"<span><a href=''>Michelle Huan</a></span>" +
-						"等10人" +
-						"</p>" +
-						"</header>";
-					$(self.modalBox).find('.message-main').prepend(html);
+					var template = "<header class='message-header-all'>" + "<p class='firends'>Message to " + html + "等" + size + "人" + "</p>" + "</header>";
+					$(self.modalBox).find('.message-main').prepend(template);
 				})
 			}
 		},
@@ -251,28 +245,26 @@ define(['jquery', 'tools', 'library', 'layerInit'], function($, tools, library) 
 					timeout: 5 * 1000,
 					beforeSend: function() {
 						status = true; // 防止重复提交
-						loadIndex = library.beforeSend();
+						loadIndex = tools.beforeSend();
 					},
 					success: function(data) {
-						library.success(This, data, index, '发送成功', '发送失败')
+						tools.success(This, data, index, '发送成功', '发送失败')
 					},
 					complete: function() {
-						library.complete(This, loadIndex);
+						tools.complete(This, loadIndex);
 						status = false;
 						$(self.inputBox).val('');
 					},
 					error: function(xhr, error) {
-						library.error('网络错误，请重试')
+						tools.error('网络错误，请重试')
 					}
 				})
 			}
 		},
 		cancel: function(This) {
 			$(this.inputBox).val('');
-			library.cancel(This);
-			// this._destroyHeader();
+			tools.cancel(This);
 		}
-
 	}
 
 	return {

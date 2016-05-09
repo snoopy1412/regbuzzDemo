@@ -1,17 +1,16 @@
-define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, library) {
-	var library = library.action;
+define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tools) {
 
 	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
-	var resultWidth = library.getWidth();
-	library.bindEvent('.action_351', function() {
+	var resultWidth = tools.getWidth();
+	tools.bindEvent('.action_351', function() {
 		var self = this,
-			projectId = library.getData(this).projectId,
-			projectAction = library.getData(this).projectAction,
+			projectId = tools.getData(this).projectId,
+			projectAction = tools.getData(this).projectAction,
 			inputMaxSize = 100,
 			$textarea = $('#js_351-content'),
 			evaluatedScore;
 
-		library.canclick(this, function() {
+		tools.canclick(this, function() {
 			layer.open({
 				type: '1',
 				title: '服务评价',
@@ -47,11 +46,8 @@ define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, 
 					}
 
 					// 情况2 ，超过最大值
-					var Verify = library.addVerify(str, 100, '', '超过输入的最大值', '请勿输入非法字符');
-					if (!Verify) {
-						return false;
-					}
-
+					return tools.addVerify(str, 100, '', '超过输入的最大值', '请勿输入非法字符');
+					
 					// 需要上传的数据
 					var submitData = {
 						projectId: projectId,
@@ -74,25 +70,25 @@ define(['jquery', 'raty', './library', '../../../layerInit'], function($, raty, 
 							timeout: 5 * 1000,
 							beforeSend: function() {
 								status = true; // 防止重复提交
-								loadIndex = library.beforeSend();
+								loadIndex = tools.beforeSend();
 							},
 							success: function(data) {
-								library.success(self, data, index, '评价成功', '评价失败')
+								tools.success(self, data, index, '评价成功', '评价失败')
 							},
 							complete: function() {
-								library.complete(self, loadIndex);
+								tools.complete(self, loadIndex);
 								status = false;
 								$textarea.val('');
 							},
 							error: function(xhr, error) {
-								library.error('网络错误，请重试')
+								tools.error('网络错误，请重试')
 							}
 						})
 					}
 				},
 				cancel: function(index) { //cancel回调
 					$textarea.val('');
-					library.cancel(self);
+					tools.cancel(self);
 				}
 			})
 		})

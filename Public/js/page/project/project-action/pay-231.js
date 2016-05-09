@@ -1,16 +1,15 @@
-define(['jquery', 'Vue', './library', '../../../layerInit'], function($, Vue, library) {
-	var library = library.action;
+define(['jquery', 'Vue', 'tools', '../../../layerInit'], function($, Vue, tools) {
 
 	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
-	var resultWidth = library.getWidth();
+	var resultWidth = tools.getWidth();
 
-	library.bindEvent('.action_231', function() {
+	tools.bindEvent('.action_231', function() {
 		var self = this,
-			projectId = library.getData(this).projectId,
-			projectAction = library.getData(this).projectAction,
+			projectId = tools.getData(this).projectId,
+			projectAction = tools.getData(this).projectAction,
 			payVM;
 
-		library.canclick(this, function() {
+		tools.canclick(this, function() {
 			// 余额支付
 			layer.open({
 				type: "1",
@@ -26,7 +25,7 @@ define(['jquery', 'Vue', './library', '../../../layerInit'], function($, Vue, li
 						el: "#order-confirmed-pay",
 						data: {
 							currentMoney: 50,
-							inputMoney: '',
+							inputMoney: 0,
 							isBalancePaid: false
 						},
 						ready: function() {
@@ -40,7 +39,7 @@ define(['jquery', 'Vue', './library', '../../../layerInit'], function($, Vue, li
 						},
 						computed: {
 							isOverMax: function() {
-								return this.currentMoney >= this.inputMoney ? false : true
+								return this.currentMoney >= this.inputMoney? false : true
 							}
 						},
 						methods: {
@@ -80,18 +79,18 @@ define(['jquery', 'Vue', './library', '../../../layerInit'], function($, Vue, li
 										timeout: 5 * 1000,
 										beforeSend: function() {
 											status = true; // 防止重复提交
-											loadIndex = library.beforeSend();
+											loadIndex = tools.beforeSend();
 										},
 										success: function(data) {
-											library.success(self, data, index, '添加成功', '添加失败')
+											tools.success(self, data, index, '添加成功', '添加失败')
 										},
 										complete: function() {
-											library.complete(self, loadIndex);
+											tools.complete(self, loadIndex);
 											status = false;
 											_this.inputMoney = '';
 										},
 										error: function(xhr, error) {
-											library.error('网络错误，请重试')
+											tools.error('网络错误，请重试')
 										}
 									})
 								}
@@ -102,7 +101,7 @@ define(['jquery', 'Vue', './library', '../../../layerInit'], function($, Vue, li
 				cancel: function(index) { //cancel回调
 					payVM.inputMoney = '';
 					payVM.isBalancePaid = false;
-					library.cancel(self);
+					tools.cancel(self);
 				}
 			})
 

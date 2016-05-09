@@ -1,5 +1,5 @@
-define(['jquery', 'layerInit', 'library'], function($, layerInit, library) {
-	var library = library.action;
+define(['jquery', 'layerInit', 'tools'], function($, layerInit, tools) {
+
 
 	$(document).on('click', '.js_connection-delete', function(event) {
 		event.preventDefault();
@@ -32,10 +32,10 @@ define(['jquery', 'layerInit', 'library'], function($, layerInit, library) {
 						timeout: 5 * 1000,
 						beforeSend: function() {
 							status = true; // 防止重复提交
-							loadIndex = library.beforeSend();
+							loadIndex = tools.beforeSend();
 						},
 						success: function(data) {
-							library.success(self, data, index, '删除成功', '删除失败', function() {
+							tools.success(self, data, index, '删除成功', '删除失败', function() {
 								window.location.reload();
 							})
 						},
@@ -44,7 +44,7 @@ define(['jquery', 'layerInit', 'library'], function($, layerInit, library) {
 							status = false;
 						},
 						error: function(xhr, error) {
-							library.error('网络错误，请重试')
+							tools.error('网络错误，请重试')
 						}
 					})
 				}
@@ -79,10 +79,10 @@ define(['jquery', 'layerInit', 'library'], function($, layerInit, library) {
 						timeout: 5 * 1000,
 						beforeSend: function() {
 							status = true; // 防止重复提交
-							loadIndex = library.beforeSend();
+							loadIndex = tools.beforeSend();
 						},
 						success: function(data) {
-							library.success(self, data, index, '删除成功', '删除失败', function() {
+							tools.success(self, data, index, '删除成功', '删除失败', function() {
 								window.location.reload();
 							})
 						},
@@ -91,7 +91,7 @@ define(['jquery', 'layerInit', 'library'], function($, layerInit, library) {
 							status = false;
 						},
 						error: function(xhr, error) {
-							library.error('网络错误，请重试')
+							tools.error('网络错误，请重试')
 						}
 					})
 				}

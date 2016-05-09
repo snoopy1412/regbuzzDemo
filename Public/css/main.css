@@ -8813,7 +8813,6 @@ body {
   .home-heading .history-content .active {
     display: block; }
   .home-heading .history-content-item {
-    border-top: 1px solid #eee;
     margin-top: 5px; }
     .home-heading .history-content-item > li {
       padding-top: 5px;
@@ -9841,45 +9840,6 @@ body {
   font-size: 16px;
   font-size: 1.6rem; }
 
-.proList-content .open-waiting-invite {
-  background-color: #fff;
-  display: none;
-  width: 100%;
-  padding: 20px; }
-  .proList-content .open-waiting-invite .invite-content {
-    background-color: #f2f2f5;
-    padding: 20px; }
-  .proList-content .open-waiting-invite .invite-friends, .proList-content .open-waiting-invite .invite-board {
-    width: 49%; }
-  .proList-content .open-waiting-invite .invite-friends {
-    float: left; }
-  .proList-content .open-waiting-invite .invite-board {
-    float: right; }
-  .proList-content .open-waiting-invite .firends-item input[type=checkbox] {
-    vertical-align: middle; }
-  .proList-content .open-waiting-invite .firends-item span {
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 5px; }
-  .proList-content .open-waiting-invite .invite-title {
-    margin: 0;
-    border: 1px solid #ddd;
-    border-top-width: 2px;
-    border-top-color: #368CA9;
-    border-bottom: 0;
-    border-radius: 2px 2px 0 0;
-    background-color: #fff;
-    padding: 10px;
-    font-weight: bold; }
-  .proList-content .open-waiting-invite .invite-box-warp, .proList-content .open-waiting-invite .firends-item-warp {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-top-color: #f1f1f1;
-    border-radius: 0 0 2px 2px;
-    padding: 10px;
-    height: 200px;
-    overflow: auto; }
-
 .proList-content .order-confirmed-pay-method {
   border-radius: 2px;
   border: 1px solid #c0e0eb;
@@ -10010,6 +9970,45 @@ body {
   margin-right: 10px;
   color: #368CA9;
   font-size: 1.6rem; }
+
+.open-waiting-invite {
+  background-color: #fff;
+  display: none;
+  width: 100%;
+  padding: 20px; }
+  .open-waiting-invite .invite-content {
+    background-color: #f2f2f5;
+    padding: 20px; }
+  .open-waiting-invite .invite-friends, .open-waiting-invite .invite-board {
+    width: 49%; }
+  .open-waiting-invite .invite-friends {
+    float: left; }
+  .open-waiting-invite .invite-board {
+    float: right; }
+  .open-waiting-invite .firends-item input[type=checkbox] {
+    vertical-align: middle; }
+  .open-waiting-invite .firends-item span {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 5px; }
+  .open-waiting-invite .invite-title {
+    margin: 0;
+    border: 1px solid #ddd;
+    border-top-width: 2px;
+    border-top-color: #368CA9;
+    border-bottom: 0;
+    border-radius: 2px 2px 0 0;
+    background-color: #fff;
+    padding: 10px;
+    font-weight: bold; }
+  .open-waiting-invite .invite-box-warp, .open-waiting-invite .firends-item-warp {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top-color: #f1f1f1;
+    border-radius: 0 0 2px 2px;
+    padding: 10px;
+    height: 200px;
+    overflow: auto; }
 
 .notice-main {
   background-color: #fff;

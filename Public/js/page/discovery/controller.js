@@ -1,4 +1,4 @@
-define(['Vue', 'VueComponent','VueGlobalFilter', '../../Public/data/countries.js', '../../Public/data/languages.js', '../../Public/data/linkage.js'], function(Vue, VueComponent, VueGlobalFilter) {
+define(['jquery', 'Vue', 'VueComponent', 'VueGlobalFilter', '../../Public/data/countries.js', '../../Public/data/languages.js', '../../Public/data/linkage.js'], function($, Vue, VueComponent, VueGlobalFilter) {
   // 语言
   var vmLanguage = new Vue({
     el: "#vue-list-languages",
@@ -6,7 +6,7 @@ define(['Vue', 'VueComponent','VueGlobalFilter', '../../Public/data/countries.js
       languagesData: [],
       isShowLanguages: false,
       toggleText: 'More',
-      maxSize : 5
+      maxSize: 5
     },
     ready: function() {
       this.languagesData = languagesData;
@@ -15,7 +15,7 @@ define(['Vue', 'VueComponent','VueGlobalFilter', '../../Public/data/countries.js
       toggleText: function() {
         return !this.isShowLanguages ? 'More' : 'Pack up';
       },
-      maxSize : function(){
+      maxSize: function() {
         return !this.isShowLanguages ? 5 : this.languagesData.length;
       }
     },

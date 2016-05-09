@@ -24,10 +24,10 @@ require.config({
     check: './components/check', //checkbox复选框全选
     ellipsis: './components/ellipsis',
     popupConfirm: './components/popupConfirm',
-    'message':'./components/message',
+    message: './components/message',
 
     // 常用工具
-    tools :'./utilities/tools',
+    tools: './utilities/tools',
 
     // MVVM框架
     Vue: './vendor/vue', // MVVM框架
@@ -37,11 +37,12 @@ require.config({
     VueGlobalFilter: './vue-globalfilter', //全局过滤器,
 
     // layerInit
-    layerInit : './layerInit',
+    layerInit: './layerInit',
 
     // page
-    library : 'page/project/project-action/library'
+    library: 'page/project/project-action/library',
   },
+  // waitSeconds: 0,
   shim: {
     "bootstrap": {
       deps: ["jquery"]
@@ -71,10 +72,10 @@ require.config({
       deps: ["jquery"]
     },
     'popupConfirm': {
-      deps: ["jquery",'layer']
+      deps: ["jquery", 'layer']
     },
-    'message':{
-      deps:['jquery']
+    'message': {
+      deps: ['jquery']
     },
     'wysiwyg': {
       deps: ['jquery']
@@ -86,4 +87,4 @@ require.config({
 });
 
 require(['./page/header/main']);
-require(['./layerInit']);
+// require(['./layerInit']);

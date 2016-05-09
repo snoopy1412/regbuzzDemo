@@ -1,3 +1,3 @@
-require(['bootstrap','./page/header/controller'],function(){
-	
-});
+require(['bootstrap',
+	'./page/header/controller'
+], function() {});
