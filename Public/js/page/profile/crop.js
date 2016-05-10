@@ -1,8 +1,13 @@
 define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
+	// 头部头像区域hover出现
+	$('.profile-avatar').hover(function() {
+		$('.profile-avatar-upload').show();
+	}, function() {
+		$('.profile-avatar-upload').hide();
+	});
 
 	// 修改了webuploader 1776行 refresh方法，并为pick元素赋值宽高,
 	// 这是目前的折中办法，得不偿失，建议慎重
-
 	var $container = $('#person-avatar-preview'),
 		// 优化retina, 在retina下这个值是2
 		ratio = window.devicePixelRatio || 1,
@@ -21,12 +26,12 @@ define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
 
 		// 默认裁剪数据
 		cropData = {
-			x : 0,
-			y : 0,
-			x2 : 200,
-			y2 : 200,
-			w : 200,
-			h : 200
+			x: 0,
+			y: 0,
+			x2: 200,
+			y2: 200,
+			w: 200,
+			h: 200
 		};
 
 	// 初始化Web Uploader
@@ -45,7 +50,7 @@ define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
 			multiple: false
 		},
 
-		fileNumLimit : 1,
+		fileNumLimit: 1,
 
 		// 只允许选择图片文件。
 		accept: {
@@ -68,7 +73,7 @@ define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
 		// $list为容器jQuery实例
 		$container.find('.img-crop').html($li);
 
-		var $imgOrigin = $('#'+ file.id +'-crop');
+		var $imgOrigin = $('#' + file.id + '-crop');
 
 		var $liPreview = $(
 				'<div id="' + file.id + '-preview" class="preview-container">' +
@@ -76,9 +81,9 @@ define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
 				'</div>'
 			),
 
-		$imgPreview = $liPreview.find('img');
+			$imgPreview = $liPreview.find('img');
 
-			
+
 		// 预览图
 		$container.find('.img-preview-origin').html($liPreview);
 
@@ -102,23 +107,23 @@ define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
 			var cropWidth = originImgId.width(),
 				cropHeight = originImgId.height();
 
-			if(cropWidth <= 0 || cropHeight <= 0){
+			if (cropWidth <= 0 || cropHeight <= 0) {
 				return false;
 			}
 
-			if(cropWidth >= cropHeight)	{
+			if (cropWidth >= cropHeight) {
 				originImgId.css({
-					width : '100%',
-					height : 'auto'
+					width: '100%',
+					height: 'auto'
 				})
 
 				// 计算更新的压缩比
 				compression = originImgId.width() / cropWidth;
 
-			}else{
+			} else {
 				originImgId.css({
-					height : '100%',
-					width : 'auto'
+					height: '100%',
+					width: 'auto'
 				})
 
 				// 计算更新的压缩比
@@ -137,7 +142,7 @@ define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
 			aspectRatio: 1,
 			minSize: [20, 20],
 			onChange: function() {
-				
+
 				var self = this;
 				var c = this.tellSelect();
 				var $pimg = previewImgId;
@@ -152,15 +157,15 @@ define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
 					});
 				}
 				cropData = {
-					x : this.tellSelect().x / compression,
-					y : this.tellSelect().y / compression,
-					x2 : this.tellSelect().x2 / compression,
-					y2 : this.tellSelect().y2 / compression,
-					w : this.tellSelect().w / compression,
-					h : this.tellSelect().h / compression
+					x: this.tellSelect().x / compression,
+					y: this.tellSelect().y / compression,
+					x2: this.tellSelect().x2 / compression,
+					y2: this.tellSelect().y2 / compression,
+					w: this.tellSelect().w / compression,
+					h: this.tellSelect().h / compression
 				}
 
-				console.log(cropData.x,this.tellSelect().x)
+				console.log(cropData.x, this.tellSelect().x)
 			}
 		}, function() {
 			jcrop_api = this;
@@ -170,47 +175,47 @@ define(['jquery', 'WebUploader', 'jcrop'], function($, WebUploader, jcrop) {
 
 
 
- 	uploader.on( 'all', function( type ) {
-        if ( type === 'startUpload' ) {
-            state = 'uploading';
-        } else if ( type === 'stopUpload' ) {
-            state = 'paused';
-        } else if ( type === 'uploadFinished' ) {
-            state = 'done';
-        }
+	uploader.on('all', function(type) {
+		if (type === 'startUpload') {
+			state = 'uploading';
+		} else if (type === 'stopUpload') {
+			state = 'paused';
+		} else if (type === 'uploadFinished') {
+			state = 'done';
+		}
 
-        if ( state === 'uploading' ) {
-            $submitBtn.text('stop');
-        } else {
-            $submitBtn.text('upload');
-        }
-    });
+		if (state === 'uploading') {
+			$submitBtn.text('stop');
+		} else {
+			$submitBtn.text('upload');
+		}
+	});
 
-    $submitBtn.on( 'click', function(e) {
-    	e.stopPropagation();
-        if ( state === 'uploading' ) {
-            uploader.stop();
-        } else {
+	$submitBtn.on('click', function(e) {
+		e.stopPropagation();
+		if (state === 'uploading') {
+			uploader.stop();
+		} else {
 
-        	// option.formData 输出给后台裁剪的坐标信息，用于后台裁剪数据使用
+			// option.formData 输出给后台裁剪的坐标信息，用于后台裁剪数据使用
 			uploader.option('formData', {
-			  x : cropData.x,
-			  y : cropData.y,
-			  x2 : cropData.x2,
-			  y2 : cropData.y2,
-			  w : cropData.w,
-			  h : cropData.h
+				x: cropData.x,
+				y: cropData.y,
+				x2: cropData.x2,
+				y2: cropData.y2,
+				w: cropData.w,
+				h: cropData.h
 			});
-            uploader.upload();
-        }
-    });
+			uploader.upload();
+		}
+	});
 
-    // bootstrap 中 模态框 自定义 隐藏模态框 事件，在此事件中，对裁剪框初始化
-    $('#person-avatar-crop').on('hidden.bs.modal', function (e) {
-	  $container.find('.img-crop').html('');
+	// bootstrap 中 模态框 自定义 隐藏模态框 事件，在此事件中，对裁剪框初始化
+	$('#person-avatar-crop').on('hidden.bs.modal', function(e) {
+		$container.find('.img-crop').html('');
 		$container.find('.img-preview-origin').html('');
-    	uploader.reset();
-    	$('#filePicker').show();
+		uploader.reset();
+		$('#filePicker').show();
 	})
 
 })

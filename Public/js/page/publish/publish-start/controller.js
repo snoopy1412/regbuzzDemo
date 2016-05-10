@@ -1,4 +1,8 @@
-define(['Vue', 'VueComponent', 'VueGlobalFilter', '../../Public/data/languages.js', '../../Public/data/linkage.js', ], function(Vue, VueComponent) {
+define(['Vue', 
+	'VueComponent', 
+	'VueGlobalFilter', 
+	'../../../Public/data/languages.js', 
+	'../../../Public/data/linkage.js', ], function(Vue, VueComponent) {
 
 	var linkage = VueComponent.linkage,
 		wordcount = VueComponent.wordcount,

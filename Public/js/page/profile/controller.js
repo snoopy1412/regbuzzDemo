@@ -1,14 +1,14 @@
-define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/data/profile/country.js', '../../Public/data/profile/position.js', '../../Public/data/profile/summary.js', '../../Public/data/profile/price.js', '../../Public/data/profile/services.js', '../../Public/data/profile/skills.js', '../../Public/data/profile/experience.js', '../../Public/data/profile/language.js', '../../Public/data/profile/educations.js', '../../Public/data/profile/certificate.js', '../../Public/data/profile/publish.js'], function(Vue,VueComponent) {
-    var  wordcount = VueComponent.wordcount;
+define(['Vue', 'VueComponent', '../../Public/data/countries.js', '../../Public/data/profile/country.js', '../../Public/data/profile/position.js', '../../Public/data/profile/summary.js', '../../Public/data/profile/price.js', '../../Public/data/profile/services.js', '../../Public/data/profile/skills.js', '../../Public/data/profile/experience.js', '../../Public/data/profile/language.js', '../../Public/data/profile/educations.js', '../../Public/data/profile/certificate.js', '../../Public/data/profile/publish.js'], function(Vue, VueComponent) {
+    var wordcount = VueComponent.wordcount;
 
     var profileUserVm = new Vue({
         el: "#vue-profile-user",
-        components : {
-            wordcount : wordcount
+        components: {
+            wordcount: wordcount
         },
         data: {
-            loading : true,
-            errorMsg : false,
+            loading: true,
+            errorMsg: false,
             /**
              * 页面数据初始化
              * @type {Array}
@@ -52,52 +52,52 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
             /**
              * 这一部分是为了初始化add部分数据
              */
-            
+
             // 服务
-            addServiceName : '',
-            addServicePrice : '',
-            addServiceContent : '',
+            addServiceName: '',
+            addServicePrice: '',
+            addServiceContent: '',
 
             // 技能
-            addSkillName : '',
+            addSkillName: '',
 
             // 经验
-            addExperienceName : '',
-            addExperienceCompany : '',
-            addExperienceStartMonth : '',
-            addExperienceStartYear : '',
-            addExperienceLastMonth : '',
-            addExperienceLastYear : '',
-            addExperienceContent : '',
+            addExperienceName: '',
+            addExperienceCompany: '',
+            addExperienceStartMonth: '',
+            addExperienceStartYear: '',
+            addExperienceLastMonth: '',
+            addExperienceLastYear: '',
+            addExperienceContent: '',
 
             // 语言
-            addLanguageTitle : '',
-            addLanguageLevel : '',
+            addLanguageTitle: '',
+            addLanguageLevel: '',
 
             // 教育
-            addEducationDegree :'',
-            addEducationSchool :'',
-            addEducationStartTime :'',
-            addEducationEndTime :'',
+            addEducationDegree: '',
+            addEducationSchool: '',
+            addEducationStartTime: '',
+            addEducationEndTime: '',
 
             // 认证
-            addCertificateTitle : '',
-            addCertificateAuthority : '',
-            addCertificateMonth : '',
-            addCertificateYear : '',
+            addCertificateTitle: '',
+            addCertificateAuthority: '',
+            addCertificateMonth: '',
+            addCertificateYear: '',
 
             // 证书
-            addPublishTitle : '',
-            addPublishAgency : '',
-            addPublishMonth : '',
-            addPublishYear : '',
+            addPublishTitle: '',
+            addPublishAgency: '',
+            addPublishMonth: '',
+            addPublishYear: '',
 
         },
-        created:function(){
-             this.countries = countriesData;
+        created: function() {
+            this.countries = countriesData;
 
-             // location 数据
-             this.countryData = countryData;
+            // location 数据
+            this.countryData = countryData;
 
             // position 数据
             this.positionData = positionData;
@@ -131,9 +131,9 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
 
             // 初始化模拟  模拟加载
             var self = this;
-            setTimeout(function(){
+            setTimeout(function() {
                 self.loading = false;
-            },10000)
+            }, 2000)
         },
         methods: {
 
@@ -144,7 +144,7 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
             save: function(data) {
                 for (key in data.result) {
                     var text = data.result[key].trim();
-                    if(text ===''){
+                    if (text === '') {
                         this.errorMsg = true;
                         return false;
                     }
@@ -171,7 +171,7 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
 
             remove: function(data, index) {
                 data.splice(index, 1)
-                // 可引入ajax 进行删除处理
+                    // 可引入ajax 进行删除处理
             },
 
             // 专属方法
@@ -179,8 +179,8 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
                 添加服务
              */
             ServiceAdd: function() {
-                if(this.addServiceName==='' || this.addServicePrice ==='' ||  this.addServiceContent ===''){
-                     this.errorMsg = true;
+                if (this.addServiceName === '' || this.addServicePrice === '' || this.addServiceContent === '') {
+                    this.errorMsg = true;
                     return false;
                 }
                 var data = {
@@ -209,8 +209,8 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
              * 添加技能
              */
             SKillAdd: function() {
-                if(this.addSkillName===''){
-                     this.errorMsg = true;
+                if (this.addSkillName === '') {
+                    this.errorMsg = true;
                     return false;
                 }
                 var data = {
@@ -230,8 +230,8 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
              * 添加经验
              */
             ExperienceAdd: function() {
-                if(this.addExperienceName==='' || this.addExperienceCompany ==='' ||  this.addExperienceStartMonth ==='' ||  this.addExperienceStartYear ==='' ||  this.addExperienceLastMonth ==='' ||  this.addExperienceLastYear ==='' || this.addExperienceContent === ''){
-                     this.errorMsg = true;
+                if (this.addExperienceName === '' || this.addExperienceCompany === '' || this.addExperienceStartMonth === '' || this.addExperienceStartYear === '' || this.addExperienceLastMonth === '' || this.addExperienceLastYear === '' || this.addExperienceContent === '') {
+                    this.errorMsg = true;
                     return false;
                 }
                 var data = {
@@ -277,8 +277,8 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
              * 添加语言
              */
             LanguageAdd: function() {
-                if(this.addLanguageTitle==='' || this.addLanguageLevel ==='' ){
-                     this.errorMsg = true;
+                if (this.addLanguageTitle === '' || this.addLanguageLevel === '') {
+                    this.errorMsg = true;
                     return false;
                 }
                 var data = {
@@ -301,8 +301,8 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
              * 添加教育
              */
             educationAdd: function() {
-                 if(this.addEducationDegree==='' || this.addEducationSchool ==='' || this.addEducationStartTime==='' || this.addEducationEndTime ===''){
-                     this.errorMsg = true;
+                if (this.addEducationDegree === '' || this.addEducationSchool === '' || this.addEducationStartTime === '' || this.addEducationEndTime === '') {
+                    this.errorMsg = true;
                     return false;
                 }
                 var data = {
@@ -331,8 +331,8 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
              * 添加认证 
              */
             CertificateAdd: function() {
-                if(this.addCertificateTitle==='' || this.addCertificateAuthority ==='' || this.addCertificateMonth==='' || this.addCertificateYear ===''){
-                     this.errorMsg = true;
+                if (this.addCertificateTitle === '' || this.addCertificateAuthority === '' || this.addCertificateMonth === '' || this.addCertificateYear === '') {
+                    this.errorMsg = true;
                     return false;
                 }
                 var data = {
@@ -361,8 +361,8 @@ define(['Vue','VueComponent' ,'../../Public/data/countries.js', '../../Public/da
              * 添加证书
              */
             publishAdd: function() {
-                if(this.addPublishTitle==='' || this.addPublishAgency ==='' || this.addPublishMonth==='' || this.addPublishYear ===''){
-                     this.errorMsg = true;
+                if (this.addPublishTitle === '' || this.addPublishAgency === '' || this.addPublishMonth === '' || this.addPublishYear === '') {
+                    this.errorMsg = true;
                     return false;
                 }
                 var data = {

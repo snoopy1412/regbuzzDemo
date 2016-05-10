@@ -1,0 +1,49 @@
+<!-- head.html -->
+<% include ./publicTpl/head.html %>
+<!-- head.html end-->
+<style>
+body{
+	background-color: #fff;
+}
+h1{
+	font-size: 32px;
+    line-height: 40px;
+}
+h2{
+	font-size: 20px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+img{width:150px;height:150px;border:0;margin-bottom: 10px;margin-top: 10px}
+span{display:block;font-size:12px;line-height:12px;}
+.clean{clear:both;}
+.browser{padding:10px 0;}
+.browser li{width:180px;float:left;list-style:none;}
+</style>
+<body>
+<div class="container">
+<h1>是时候升级你的浏览器了</h1>
+<p>你正在使用 Internet Explorer 的过期版本（IE6、IE7、IE8 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</p>
+<h2>为什么要升级浏览器</h2>
+<p>低版本IE安全隐患严重，在Windows历史上几次大的木马病毒事件都是利用IE漏洞进行传播。自 2014 年 4 月 8 日起，Microsoft 不再为 Windows XP 和 Internet Explorer 8 及以下版本提供相应支持和更新。如果你继续使用这些，你将可能受到病毒、间谍软件和其他恶意软件的攻击，无法确保个人信息的安全。请参阅 <a href="http://windows.microsoft.com/zh-cn/windows/end-support-help">Microsoft 关于 Windows XP 支持已经结束的说明</a> 。</p>
+<div style='padding-top: 50px'></div>
+<div class="divider divider-horizontal">更先进的浏览器</div>
+<p>推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b id="referrer"></b>即可。</p>
+<div class="row text-center">
+	<div class="col-md-4">
+		<a href="https://www.google.com/intl/zh-CN/chrome/browser/index.html?system=true&standalone=1"><img src="./Public/img/update/chrome.png" alt="谷歌浏览器" /> </a>
+		<p>谷歌浏览器<span>Google Chrome</span></p>
+	</div>
+	<div class="col-md-4">
+		<a href="http://www.firefox.com.cn/download/"><img src="./Public/img/update/firefix.png" alt="火狐浏览器" /> </a><p>火狐浏览器<span>Mozilla Firefox</span></p>
+	</div>
+	<div class="col-md-4">
+		<a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"><img src="./Public/img/update/ie.png" alt="IE浏览器" /> </a>
+		<p>IE浏览器<span>Internet Explorer</span></p>
+	</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -46,8 +46,11 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 					}
 
 					// 情况2 ，超过最大值
-					return tools.addVerify(str, 100, '', '超过输入的最大值', '请勿输入非法字符');
-					
+					var verify = tools.addVerify(str, 100, '', '超过输入的最大值', '请勿输入非法字符');
+					if (!verify) {
+						return verify;
+					}
+
 					// 需要上传的数据
 					var submitData = {
 						projectId: projectId,

@@ -16,12 +16,16 @@ define(['jquery', 'tools', '../../../layerInit'], function($, tools) {
 					var loadIndex, status, str = $textarea.val();
 
 					// 验证字符串的有效性
-					return tools.StringValidator(str, {
+					var verify = tools.StringValidator(str, {
 						overSizeNum: 100, // 最大输入值，number
 						noContentMsg: '输入不能为空', // 未填入内容提示
 						overMaxMsg: '超过输入的最大值', //超过最大输入值提示
 						illegalMsg: '请勿输入非法字符'
 					})
+
+					if (!verify) {
+						return verify;
+					}
 
 					// 需要上传的数据
 					var submitData = {

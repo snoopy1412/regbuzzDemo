@@ -1,0 +1,119 @@
+.unread{
+	font-weight: bolder
+}
+.message-item{
+	@extend %clearfix;
+}
+.message-content{
+	.alert{
+		position: relative;
+		margin-bottom: 0;
+		border-bottom: 1px solid #f1f1f1;
+		&:hover{
+			background-color: #f1f1f1;		
+		}
+	}
+}
+.message-item-content{
+	.thumb{
+		width: 40px;
+		float: left;
+		img{
+			width: 100%;
+		}
+	}
+	.desc{
+		margin-left: 50px;
+		display: block;
+	}
+	.name{
+		font-size: 16px;
+		line-height: 21px;
+		display: inline-block;
+		margin-bottom: 4px;
+	}
+	.badge-success{
+		background-color: #a9d86e;
+	}
+	.msg{
+	    font-size: 14px;
+    	line-height: normal;
+    	color: #999;
+    	display: block;
+	}
+}
+
+
+// message-detail
+.message-detail .message .person-img{
+	width: 36px;
+	height: 36px;
+	/*border-radius: 50%;
+	border: 1px solid red;
+	background-color: red;*/
+}
+.message-detail .message .person-message{
+	padding: 12px 8px;
+	border-radius: 4px;
+	box-shadow: 0 2px 10px #e8e8eb;
+}
+
+.message-detail .message-left .person-message{
+	margin-left: 15px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+
+}
+.message-detail .message-left .person-message:before{
+	content: '';
+	position: absolute;
+	height: 0;
+	width: 0;
+	top:6px;
+	left:-10px;
+	overflow: hidden;
+	border-color:#ccc #ccc transparent transparent;
+	border-width: 5px;
+	border-style: solid;
+}
+.message-detail .message-left .person-message:after{
+	content: '';
+	position: absolute;
+	height: 0;
+	top:7px;
+	left:-8px;
+	overflow: hidden;
+	border-color:#fff #fff transparent transparent;
+	border-width: 5px;
+	border-style: solid;
+}
+
+.message-detail .message-right .person-message{
+	margin-right: 15px;
+	background-color: #d7ebfe;
+	border: 1px solid #b7d4ef;
+	position: relative;
+}
+.message-detail .message-right .person-message:before{
+	content: '';
+	position: absolute;
+	height: 0;
+	width: 0;
+	top:6px;
+	right:-10px;
+	overflow: hidden;
+	border-color:#b7d4ef transparent transparent #b7d4ef ;
+	border-width: 5px;
+	border-style: solid;
+}
+.message-detail .message-right .person-message:after{
+	content: '';
+	position: absolute;
+	height: 0;
+	top:7px;
+	right:-8px;
+	overflow: hidden;
+	border-color:#d7ebfe transparent transparent #d7ebfe ;
+	border-width: 5px;
+	border-style: solid;
+}

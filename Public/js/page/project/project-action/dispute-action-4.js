@@ -22,19 +22,25 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 						textareaStr = $textarea.val(),
 						status = false;
 
-					return tools.StringValidator(titleStr, {
+					var titleVerify = tools.StringValidator(titleStr, {
 						overSizeNum: 100, // 最大输入值，number
 						noContentMsg: '标题输入不能为空', // 未填入内容提示
 						overMaxMsg: '标题超过输入的最大值', //超过最大输入值提示
 						illegalMsg: '请勿输入非法字符'
 					})
-					
-					return tools.StringValidator(textareaStr, {
+					if (!titleVerify) {
+						return titleVerify;
+					}
+
+					var textareaVerify = tools.StringValidator(textareaStr, {
 						overSizeNum: 100, // 最大输入值，number
 						noContentMsg: '内容输入不能为空', // 未填入内容提示
 						overMaxMsg: '内容超过输入的最大值', //超过最大输入值提示
 						illegalMsg: '请勿输入非法字符'
 					})
+					if(!textareaVerify){
+						return textareaVerify;
+					}
 
 					// 需要上传的数据
 					var submitData = {

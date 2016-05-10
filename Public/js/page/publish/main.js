@@ -1,37 +1,10 @@
-require(['jquery', 'raty', './page/project/project-action/invite-112', './page/publish/upload', './page/publish/edit', './page/publish/controller'], function($, raty, invite){
-  invite.invite();
-  // 星星评级      
-  $('.grade-item').each(function() {
-    var orginScore = $(this).data('score');
-
-    $(this).raty({
-      readOnly: true,
-      half: true,
-      score: orginScore,
-      precision: true,
-      hints: ['bad', 'poor', 'regular', 'good', 'gorgeous'],
-      path: './Public/img/stars',
-      target: $(this).prev(),
-      targetKeep: true
-    });
-
-  });
-
+require(['jquery',
+  './page/publish/publish-start',
+  './page/publish/publish-result'
+], function($, invite) {
 
   $('.jellybean').click(function() {
     $('.jellybean .jellybean-input').focus();
-  });
-
-  // star    
-  $('.star-bids-user').raty({
-    readOnly: true,
-    half: true,
-    score: 4.3,
-    precision: true,
-    hints: ['bad', 'poor', 'regular', 'good', 'gorgeous'],
-    path: './Public/img/stars',
-    target: '.item-stats-bids-name',
-    targetKeep: true
   });
 
   // 为列表页补充的
