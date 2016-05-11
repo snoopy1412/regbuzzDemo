@@ -1,4 +1,5 @@
-define(['jquery', 'tools', 'layerInit'], function($, tools, layerInit) {
+define(['jquery', 'tools', 'layerInit', 'emoji'], function($, tools, layerInit, emoji) {
+	var emojiObj = emoji.emoji; // 引入emoji工具
 
 	var Message = function(node, options) {
 		this.node = node;
@@ -24,8 +25,8 @@ define(['jquery', 'tools', 'layerInit'], function($, tools, layerInit) {
 			this._renderHeader();
 
 			// 表情相关设置
-			self._initEmoji();
-			self._bindEmojiEvent();
+			emojiObj.renderEmoji(this.emojiContainer);
+			emojiObj.bindEmojiEvent(this.emojiContainer, this.emojiBtn, this.inputBox,false);
 
 			// 主要逻辑
 			this.showChatBox();
@@ -61,7 +62,7 @@ define(['jquery', 'tools', 'layerInit'], function($, tools, layerInit) {
 						"<img src='" + imgUrl + "' alt='' class='header-img'>" +
 						"</a>" +
 						"<div class='header-des pull-left'>" +
-						"<h3 class='name'><a href ='' title='" + name + "'> " + name + " </a><small> - " + position + "</small > </h3><p class ='headline'>" + des +" </p> </div> </header>";
+						"<h3 class='name'><a href ='' title='" + name + "'> " + name + " </a><small> - " + position + "</small > </h3><p class ='headline'>" + des + " </p> </div> </header>";
 					$(self.modalBox).find('.message-main').prepend(html);
 				})
 			} else if (this.type === 2) {
@@ -90,61 +91,6 @@ define(['jquery', 'tools', 'layerInit'], function($, tools, layerInit) {
 			}
 
 		},
-		_initEmoji: function() {
-			var self = this;
-			$(this.emojiContainer).append(self._renderEmoji());
-		},
-		_renderEmoji: function() {
-			var html = '';
-			for (var i = 1; i <= 12; i++) {
-				html += "<li><img src='./Public/img/emoji/" + i + ".gif' title='[emoji:" + i + "]' data-title='[emoji:" + i + "]'/></li>";
-			};
-			html = '<ul>' + html + '</ul>'
-			return html;
-		},
-
-		_bindEmojiEvent: function() {
-			var self = this;
-
-			// 显示表情
-			$(this.emojiBtn).on('click', function(event) {
-				var This = this;
-				self.emojiShow(event, This);
-			})
-
-			// 关闭表情
-			$(document).on('click', function(event) {
-				event.stopPropagation();
-				$(self.emojiContainer).hide();
-			})
-
-			// 表情点击
-			$(self.emojiContainer + ' li').off('click').on('click', function(event) {
-				var This = this;
-				self.emojiClick(This);
-			})
-		},
-		emojiShow: function(event, This) {
-			event.preventDefault();
-			event.stopPropagation();
-			if ($(this.emojiContainer).css('display') === 'none') {
-				var left = $(This).position().left,
-					top = $(This).position().top;
-				$(this.emojiContainer).css({
-					display: 'block',
-					left: left,
-					bottom: 10
-				})
-			} else {
-				$(this.emojiContainer).hide()
-			}
-		},
-		emojiClick: function(This) {
-			var str = $(This).find('img').attr('title'),
-				inputStr = $(this.inputBox).val();
-			inputStr += str;
-			$(this.inputBox).val(inputStr);
-		},
 		showChatBox: function() {
 			var self = this;
 			$(document).on('click', self.node, function(event) {
@@ -161,7 +107,6 @@ define(['jquery', 'tools', 'layerInit'], function($, tools, layerInit) {
 						return false;
 					}
 				}
-
 				self.layer(This);
 			})
 		},
@@ -228,6 +173,8 @@ define(['jquery', 'tools', 'layerInit'], function($, tools, layerInit) {
 			if (!Verify) {
 				return false;
 			}
+			// 先验证，再替换
+			inputStr = emojiObj.emojiResolution(inputStr);
 
 			// 需要上传的数据
 			// userId 可能是单数，可能是负数

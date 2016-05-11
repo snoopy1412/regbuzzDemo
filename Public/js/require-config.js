@@ -28,6 +28,7 @@ require.config({
 
     // 常用工具
     tools: './utilities/tools',
+    emoji:'./utilities/emoji',
 
     // MVVM框架
     Vue: './vendor/vue', // MVVM框架

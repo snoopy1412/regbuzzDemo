@@ -1,0 +1,21 @@
+{
+	"message": [{
+		"spokesmanId": "233",
+		"time": "2016-05-09 0:38",
+		"name": "John Doe",
+		"face": "./Public/img/index/servers/1.jpg",
+		"content": "这个项目的报价差不多有$300,000，你能接受吗？"
+	}, {
+		"spokesmanId": "1",
+		"time": "2016-05-10 1:39",
+		"name": "Aaron Su",
+		"face": "./Public/img/index/servers/2.jpg",
+		"content": "恐怕不能，这个费用有点低了……"
+	}, {
+		"spokesmanId": "233",
+		"time": "2016-05-11 2:52",
+		"name": "John Doe",
+		"face": "./Public/img/index/servers/1.jpg",
+		"content": "那你觉得多少钱合适，事实上我们已经和好几家公司讨论过，这个价格应该是目前最合适的出价，希望你能考虑好！"
+	}]
+}

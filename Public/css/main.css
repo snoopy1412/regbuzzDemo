@@ -12,7 +12,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -11154,22 +11153,69 @@ body {
   color: #999;
   display: block; }
 
+.message-detail-chat {
+  max-width: 720px;
+  border: 1px solid #f1f1f1;
+  padding: 10px;
+  margin: 0 auto; }
+
+.message-detail-header {
+  padding: 10px;
+  background-color: #368CA9;
+  position: relative;
+  border-radius: 2px 2px 0 0; }
+
+.message-detail-title {
+  margin: 0;
+  font-size: 16px;
+  color: #fff; }
+
+.message-detail-delete {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #99cddf; }
+  .message-detail-delete:hover {
+    color: #73bad2; }
+
+.message-detail-content {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 0 0 2px 2px;
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px; }
+
+.message-detail .message {
+  margin-bottom: 20px; }
+
 .message-detail .message .person-img {
   width: 36px;
-  height: 36px;
-  /*border-radius: 50%;
-	border: 1px solid red;
-	background-color: red;*/ }
+  height: 36px; }
+  .message-detail .message .person-img img {
+    width: 100%;
+    height: 100%; }
 
 .message-detail .message .person-message {
   padding: 12px 8px;
   border-radius: 4px;
-  box-shadow: 0 2px 10px #e8e8eb; }
+  max-width: 520px;
+  box-shadow: 0 2px 10px #e8e8eb;
+  position: relative; }
+  .message-detail .message .person-message p {
+    margin-bottom: 5px; }
+  .message-detail .message .person-message .timeago {
+    font-size: 12px;
+    color: #999; }
 
 .message-detail .message-left .person-message {
   margin-left: 15px;
   border: 1px solid #ccc;
   background-color: #fff; }
+  .message-detail .message-left .person-message:hover {
+    background-color: #f1f1f1; }
+    .message-detail .message-left .person-message:hover:after {
+      border-color: #f1f1f1 #f1f1f1 transparent transparent; }
 
 .message-detail .message-left .person-message:before {
   content: '';
@@ -11199,6 +11245,10 @@ body {
   background-color: #d7ebfe;
   border: 1px solid #b7d4ef;
   position: relative; }
+  .message-detail .message-right .person-message:hover {
+    background-color: #e1f0fe; }
+    .message-detail .message-right .person-message:hover:after {
+      border-color: #e1f0fe transparent transparent #e1f0fe; }
 
 .message-detail .message-right .person-message:before {
   content: '';

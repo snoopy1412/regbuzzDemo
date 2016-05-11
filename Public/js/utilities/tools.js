@@ -49,6 +49,7 @@ define(['jquery', 'layerInit'], function($) {
 			}
 
 		},
+
 		bindEvent: function(target, callback) {
 			$(document).on('click', target, function(event) {
 				event.preventDefault();

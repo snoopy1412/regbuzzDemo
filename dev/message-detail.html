@@ -1,5 +1,5 @@
 <!-- head.html -->
-<% include ./publicTpl/head.html %>
+<% include ./publicTpl/head-message.html %>
 <!-- head.html end-->
 <body>
 <!-- header.html -->
@@ -19,40 +19,30 @@
 </div>
 <section class='com-main'>
 <div class="container">
-	<div class="message-detail">
-		
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				与John Doe对话中
+	<div class="loading2">
+		<i></i>
+	</div>
+	<div class="message-detail" style='display: none'>	
+		<div class="message-detail-chat">
+			<header class='message-detail-header'>
+				<h2 class='message-detail-title'>与 John Doe 聊天中</h2>
+				<a href="" class='message-detail-delete'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+			</header><!-- /header -->
+			<div class='message-detail-content'>
+
 			</div>
-			<div class="panel-body">
-				<div class='message-detail-content' style='border: 1px solid #ccc;height: 300px;margin-bottom: 20px;'>
-					 <div class="message message-left clearfix">
-						<a href="" title="" class="person-img fl">	
-							<img src="http://tp4.sinaimg.cn/1642909335/30/22867541466/0" alt="">
-						</a>
-						<div class="person-message fl">
-							1212121
-						</div>
-					</div>
-					<div class="message message-right clearfix">
-						<a href="" title="" class="person-img fr">	
-							<img src="http://tp2.sinaimg.cn/1300766585/30/40014067698/1" alt="">
-						</a>
-						<div class="person-message fr">
-							1212121
-						</div>
+			<div class="emoji-input" style='position: relative;'>
+				<div class="input-group">
+					<input type="text" name="" value="" placeholder="" class='form-control' id='js_char-input'>
+					<div class="input-group-btn">
+						<a href="javascript;'" class='btn btn-secondary' title='表情' id='js_emojiBtn'><i class="fa fa-smile-o" aria-hidden="true"></i> </a>
+						<button type="button" class='btn btn-primary' id='js_message-reply'>回复</button>
 					</div>
 				</div>
-				<div class="input-group">
-					<input type="text" name="" value="" placeholder="" class='form-control'>
-					<div class="input-group-btn">
-						<button type="" class='btn btn-primary'>回复</button>
-					</div>
+				<div id='emoji' class='connection-emoji'>
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 
