@@ -2,6 +2,7 @@ define(['jquery', 'tools', '../../../layerInit'], function($, tools) {
 
 	tools.bindEvent('.action_add', function() {
 		var self = this,
+			status = false,
 			projectId = tools.getData(this).projectId,
 			projectAction = tools.getData(this).projectAction,
 			$textarea = $('#js_111_content');
@@ -13,7 +14,7 @@ define(['jquery', 'tools', '../../../layerInit'], function($, tools) {
 				content: $('.open-waiting-add'),
 				btn: ['Add', 'Cancel'],
 				yes: function(index, layero) { //add的回调
-					var loadIndex, status, str = $textarea.val();
+					var loadIndex, str = $textarea.val();
 
 					// 验证字符串的有效性
 					var verify = tools.StringValidator(str, {

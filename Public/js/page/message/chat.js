@@ -95,7 +95,7 @@ define(['jquery', 'layerInit', 'tools', 'emoji'], function($, layerInit, tools, 
 							"</a>" +
 							"<div class='person-message pull-right'>" +
 							"<p>" + item.content + "</p>" +
-							"<span class='timeago'>" + item.time + "</span>" +
+							"<span class='timeago pull-right'>" + item.time + "</span>" +
 							"</div>" +
 							"</div>";
 						$container.append(html);

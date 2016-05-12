@@ -4,6 +4,7 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 	var resultWidth = tools.getWidth();
 	tools.bindEvent('.action_351', function() {
 		var self = this,
+			status = false,
 			projectId = tools.getData(this).projectId,
 			projectAction = tools.getData(this).projectAction,
 			inputMaxSize = 100,
@@ -34,8 +35,7 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 				},
 				yes: function(index, layero) { //add的回调
 					var loadIndex,
-						str = $textarea.val(),
-						status = false;
+						str = $textarea.val();
 
 					// 错误提示
 					if (evaluatedScore === undefined) { // 情况1 ，未填入字符

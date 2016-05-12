@@ -12,6 +12,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6091,12 +6092,12 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.tabs-bar, .breadcrumb-beauty, .container-fluid--4, .home-heading .history-content-item > li, .profile-info-aside .history li, .setting-section--Info .basic-verify .col-md-4, .connect-list-section, .message-item {
+.tabs-bar, .breadcrumb-beauty, .container-fluid--4, .home-heading .history-content-item > li, .profile-info-aside .history li, .setting-section--Info .basic-verify .col-md-4, .membership-update, .connect-list-section, .message-item {
   zoom: 1; }
-  .tabs-bar:before, .breadcrumb-beauty:before, .container-fluid--4:before, .home-heading .history-content-item > li:before, .profile-info-aside .history li:before, .setting-section--Info .basic-verify .col-md-4:before, .connect-list-section:before, .message-item:before, .tabs-bar:after, .breadcrumb-beauty:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .setting-section--Info .basic-verify .col-md-4:after, .connect-list-section:after, .message-item:after {
+  .tabs-bar:before, .breadcrumb-beauty:before, .container-fluid--4:before, .home-heading .history-content-item > li:before, .profile-info-aside .history li:before, .setting-section--Info .basic-verify .col-md-4:before, .membership-update:before, .connect-list-section:before, .message-item:before, .tabs-bar:after, .breadcrumb-beauty:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .setting-section--Info .basic-verify .col-md-4:after, .membership-update:after, .connect-list-section:after, .message-item:after {
     content: " ";
     display: block; }
-  .tabs-bar:after, .breadcrumb-beauty:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .setting-section--Info .basic-verify .col-md-4:after, .connect-list-section:after, .message-item:after {
+  .tabs-bar:after, .breadcrumb-beauty:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .setting-section--Info .basic-verify .col-md-4:after, .membership-update:after, .connect-list-section:after, .message-item:after {
     clear: both; }
 
 .header .search-form .search-text-response:before, .header .search-form .search-text-response:after, .user-new-content:before, .user-new-content:after, .pubResault-list .answers-item .content:before, .pubResault-list .answers-item .content:after, .m-oFormHelp:before, .m-oFormHelp:after {
@@ -6576,6 +6577,9 @@ h5 {
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0; }
+
+div, p, li, a, span {
+  word-wrap: break-word; }
 
 ul {
   padding: 0;
@@ -8876,6 +8880,14 @@ body {
   .dashboard-article .nav {
     margin-bottom: 20px; }
 
+.dashboard-section-title {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  padding-left: 4px;
+  color: #368CA9;
+  font-weight: bold; }
+
 .home-dynamic .col-md-1, .home-new .col-md-1 {
   padding-left: 0; }
 
@@ -9232,6 +9244,21 @@ body {
   padding-right: 10px; }
 
 /* search for articles end*/
+.hire-modal {
+  background-color: #fff;
+  padding: 10px; }
+
+.hire-projects {
+  max-height: 400px;
+  overflow-y: auto; }
+
+.projects-item {
+  padding: 10px; }
+  .projects-item label {
+    font-weight: normal; }
+  .projects-item:hover {
+    background-color: #f1f1f1; }
+
 .container-profile {
   height: 100%;
   margin-top: 20px; }
@@ -10228,6 +10255,16 @@ body {
     list-style: disc;
     margin-bottom: 10px; }
 
+.help-main .fees-section {
+  margin-bottom: 20px; }
+
+.help-main .help-fees-title {
+  margin-top: 0;
+  line-height: 27px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700; }
+
 .help-main .fees-table {
   text-align: center; }
   .help-main .fees-table th {
@@ -10420,6 +10457,10 @@ body {
     height: auto;
     opacity: 1;
     filter: alpha(opacity=100); }
+
+.topUp-balance {
+  color: #d9534f;
+  font-style: italic; }
 
 .topUp-body-cardholder-name {
   position: relative; }
@@ -10708,7 +10749,7 @@ body {
   clear: both; }
 
 .membership-plans-list > li {
-  width: 25%;
+  width: 50%;
   float: left; }
 
 .membership-plans {
@@ -10750,8 +10791,9 @@ body {
 .membership-plans-title {
   font-weight: 600;
   text-align: center;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 20px;
+  font-size: 2rem;
+  margin-top: 0;
   margin-bottom: 20px; }
 
 .membership-plans-price {
@@ -10782,6 +10824,20 @@ body {
   font-size: 1.3rem;
   line-height: 1.8;
   color: #1f2836; }
+
+.membership-update li {
+  width: 50%;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left; }
+  .membership-update li .membership-plans-price {
+    font-size: 18px; }
+  .membership-update li .membership-plans-duration {
+    margin-bottom: 5px; }
+
+.membership-plans-cta-secondary {
+  text-align: center; }
 
 .order-header h1 {
   margin-top: 0;

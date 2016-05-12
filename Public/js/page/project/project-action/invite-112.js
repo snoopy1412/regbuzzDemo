@@ -3,19 +3,20 @@ define(['jquery', 'Vue', 'tools', '../../../layerInit'], function($, Vue, tools)
 	function invite(options) {
 
 		var defaults = {
-			type:1, //1.任务管理邀请 2.任务发布时邀请
+			type: 1, //1.任务管理邀请 2.任务发布时邀请
 			clickBtn: '.action_112',
 			modalBox: '#open-waiting-invite',
-			getFriendsUrl:'./Public/data/friends.json',
-			submitAjaxUrl:'data.js'
+			getFriendsUrl: './Public/data/friends.json',
+			submitAjaxUrl: 'data.js'
 		}
 
-		var options = $.extend({},defaults,options);
+		var options = $.extend({}, defaults, options);
 
 		// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
 		var resultWidth = tools.getWidth();
 		tools.bindEvent(options.clickBtn, function() {
 			var self = this,
+				status,
 				projectId = tools.getData(this).projectId,
 				projectAction = tools.getData(this).projectAction,
 				inviteVm;
@@ -88,7 +89,7 @@ define(['jquery', 'Vue', 'tools', '../../../layerInit'], function($, Vue, tools)
 					area: [resultWidth, 'auto'],
 					btn: ['Add', 'Cancel'],
 					yes: function(index, layero) { //add的回调
-						var loadIndex, status;
+						var loadIndex;
 
 						// 需要上传的数据
 						var submitData = {
@@ -130,7 +131,7 @@ define(['jquery', 'Vue', 'tools', '../../../layerInit'], function($, Vue, tools)
 	}
 	invite()
 
-	return{
-		invite : invite
+	return {
+		invite: invite
 	}
 })

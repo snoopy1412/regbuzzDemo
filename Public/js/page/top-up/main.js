@@ -1,10 +1,5 @@
-require(['jquery','Vue'],function($,Vue){
-	var vmTopUp = new Vue({
-		el:"#vue-top-up",
-		data:{
-			amount: 240
-		}
-	})
+require(['jquery','./page/top-up/controller'],function($,Vue){
+
 
 $('.topUp-heading-radiobox input').each(function(index,element){
 	$(this).on('change',function(){

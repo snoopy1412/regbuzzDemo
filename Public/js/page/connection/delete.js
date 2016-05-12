@@ -4,7 +4,8 @@ define(['jquery', 'layerInit', 'tools'], function($, layerInit, tools) {
 	$(document).on('click', '.js_connection-delete', function(event) {
 		event.preventDefault();
 
-		var userId, type, submitData, self = this;
+		var userId, type, submitData, self = this,
+			status;
 		if ($(this).data('userid')) {
 			type = 1; // 删除单人
 			userId = $(this).data('userid');
@@ -16,7 +17,7 @@ define(['jquery', 'layerInit', 'tools'], function($, layerInit, tools) {
 			icon: 3
 		}, function(index) {
 			if (type === 1) {
-				var loadIndex, status;
+				var loadIndex;
 
 				// 需要上传的数据
 				var submitData = {
@@ -55,11 +56,11 @@ define(['jquery', 'layerInit', 'tools'], function($, layerInit, tools) {
 				var $checkboxs = $('.connect-list-section').find('.connect-frends-checkbox'),
 					userIds = [];
 				$checkboxs.each(function(i, elem) {
-						if ($(this).prop('checked')) {
-							userIds.push($(this).data('userid'));
-						}
-					})
-				if(!userIds.length){
+					if ($(this).prop('checked')) {
+						userIds.push($(this).data('userid'));
+					}
+				})
+				if (!userIds.length) {
 					layer.alert('还没有选定')
 					return false;
 					// 需要上传的数据

@@ -1,7 +1,8 @@
-define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, datetimepicker,tools) {
+define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, datetimepicker, tools) {
 
 	tools.bindEvent('.action_extend', function() {
 		var self = this,
+			status = false,
 			projectId = tools.getData(this).projectId,
 			projectAction = tools.getData(this).projectAction,
 			layerDom,
@@ -32,8 +33,7 @@ define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, 
 					});
 				},
 				yes: function(index, layero) { //add的回调
-					var loadIndex,
-						status = false;
+					var loadIndex;
 
 					if (!choiceTime) {
 						layer.alert('未选定时间', {

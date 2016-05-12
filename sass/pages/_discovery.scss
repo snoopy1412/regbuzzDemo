@@ -212,3 +212,22 @@
 }
 /* search for articles end*/
 
+
+// hire me
+.hire-modal{
+    background-color: #fff;
+    padding: 10px;
+}
+.hire-projects{
+    max-height: 400px;
+    overflow-y: auto;
+}
+.projects-item{
+    padding: 10px;
+    label{
+        font-weight: normal;
+    }
+    &:hover{
+        background-color: #f1f1f1;
+    }
+}

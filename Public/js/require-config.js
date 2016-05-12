@@ -25,6 +25,7 @@ require.config({
     ellipsis: './components/ellipsis',
     popupConfirm: './components/popupConfirm',
     message: './components/message',
+    hire:'./components/hire',
 
     // 常用工具
     tools: './utilities/tools',

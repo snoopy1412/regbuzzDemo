@@ -1,6 +1,8 @@
 require([
 	'./page/discovery/raty',
 	'./page/discovery/jRange',
+	'./page/discovery/connect',
+	'./page/discovery/hire',
 	'./page/discovery/controller'
 ], function(raty, jRange) {
 	// 全局bootstrap 启用tootip

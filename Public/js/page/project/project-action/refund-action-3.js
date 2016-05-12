@@ -3,6 +3,7 @@ define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, 
 	var resultWidth = tools.getWidth();
 	tools.bindEvent('.action_refund', function() {
 		var self = this,
+			status = false,
 			projectId = $(this).data('projectid'),
 			projectAction = $(this).data('projectacton'),
 			$reason = $('#work-refund-reason'),
@@ -17,7 +18,6 @@ define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, 
 				btn: ['Confirm', 'Cancel'],
 				yes: function(index, layero) { //add的回调
 					var loadIndex,
-						status = false,
 						selectVal = $reason.val(), // 数组
 						addVal = $reasonAdd.val(); //字符串	
 					//情况判断

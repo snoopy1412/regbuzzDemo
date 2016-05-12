@@ -21,7 +21,7 @@ define(['jquery', './chat'], function($, chat) {
 						"</a>" +
 						"<div class='person-message pull-right'>" +
 						"<p>" + item.content + "</p>" +
-						"<span class='timeago'>" + item.time + "</span>" +
+						"<span class='timeago pull-right'>" + item.time + "</span>" +
 						"</div>" +
 						"</div>";
 				} else {

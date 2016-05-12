@@ -2,6 +2,7 @@ define(['jquery', 'tools', '../../../layerInit'], function($, tools) {
 
 	tools.bindEvent('.action_411', function() {
 		var self = this,
+			status = false,
 			projectId = tools.getData().projectId,
 			projectAction = tools.getData().projectAction,
 			$textarea = $('#js_411-content');
@@ -14,8 +15,7 @@ define(['jquery', 'tools', '../../../layerInit'], function($, tools) {
 				btn: ['Add', 'Cancel'],
 				yes: function(index, layero) { //add的回调
 					var loadIndex,
-						str = $textarea.val(),
-						status = false;
+						str = $textarea.val();
 
 					// 验证字符串的有效性
 					var verify = tools.StringValidator(str, {

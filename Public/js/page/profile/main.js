@@ -1,6 +1,7 @@
 require(['jquery',
 	'./page/profile/raty',
 	'./page/profile/crop',
+	'./page/profile/hire',
 	'./page/profile/controller'
 ], function($) {
 

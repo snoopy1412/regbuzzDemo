@@ -4,6 +4,7 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 	var resultWidth = tools.getWidth();
 	tools.bindEvent('.action_dispute', function() {
 		var self = this,
+			status = false,
 			projectId = $(this).data('projectid'),
 			projectAction = $(this).data('projectacton'),
 			$title = $('#js_dispute-title-4'),
@@ -19,8 +20,7 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 				yes: function(index, layero) { //add的回调
 					var loadIndex,
 						titleStr = $title.val(),
-						textareaStr = $textarea.val(),
-						status = false;
+						textareaStr = $textarea.val();
 
 					var titleVerify = tools.StringValidator(titleStr, {
 						overSizeNum: 100, // 最大输入值，number
@@ -38,7 +38,7 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 						overMaxMsg: '内容超过输入的最大值', //超过最大输入值提示
 						illegalMsg: '请勿输入非法字符'
 					})
-					if(!textareaVerify){
+					if (!textareaVerify) {
 						return textareaVerify;
 					}
 

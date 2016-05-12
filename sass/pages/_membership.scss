@@ -13,7 +13,7 @@
 .membership-plans-list{
 	@include clearfix;
 	&>li{
-		width: 25%;
+		width: 50%;
 		float: left;
 	}
 }
@@ -67,7 +67,8 @@
 .membership-plans-title{
     font-weight: 600;
     text-align: center;
-    @include font-size(1.6);
+    @include font-size(2);
+    margin-top: 0;
         margin-bottom: 20px;
 }
 .membership-plans-price{
@@ -97,4 +98,24 @@
     @include font-size(1.3);
     line-height: 1.8;
     color: #1f2836;
+}
+
+.membership-update{
+	@extend %clearfix;
+	li{
+		width: 50%;
+		margin-bottom: 20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		float: left;
+		.membership-plans-price{
+			font-size: 18px;
+		}
+		.membership-plans-duration{
+			margin-bottom: 5px;
+		}
+	}
+}
+.membership-plans-cta-secondary{
+	text-align: center;
 }

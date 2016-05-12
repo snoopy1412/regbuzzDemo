@@ -174,7 +174,7 @@
 										<img src="./Public/img/index/servers/13.jpg" alt="">
 
 										<!-- 已关注的状态 -->
-										<button type="button" class='btn btn-danger btn--save' disabled="true">Connected</button>
+										<button type="button" class='btn btn-danger btn--save' disabled="true" data-followed='1' data-provideid='5'>Followed</button>
 
 									</div>
 									<div class="col-md-8 list-peoples-info">
@@ -199,7 +199,7 @@
 										</p>
 									</div>
 									<div class="col-md-2 list-peoples-item-aside">
-										<a href="" title="" class='btn btn-primary btn--hire'>Hire me </a>
+										<a href="" title="" class='btn btn-primary btn--hire' data-provideid='5'>Hire me </a>
 										<p class='charging-standard'>
 											<sup>$</sup>858
 											<span>USD/hour</span>
@@ -209,8 +209,9 @@
 								<li class="list-results-item row list-peoples-item hoverable">
 									<div class="col-md-2 list-peoples-img">
 										<img src="./Public/img/index/servers/16.jpg" alt="">
-										<!-- 已关注的状态 -->
-										<button type="button" class='btn btn-danger btn--save'>Connecte</button>
+										
+										<!-- 未关注的状态 -->
+										<button type="button" class='btn btn-danger btn--save' data-followed='0' data-provideid='6'>Follow</button>
 									</div>
 									<div class="col-md-8 list-peoples-info">
 										<h3 class='list-item-title list-peoples-item-title'>
@@ -233,7 +234,7 @@
 										</p>
 									</div>
 									<div class="col-md-2 list-peoples-item-aside">
-										<a href="" title="" class='btn btn-primary btn--hire'>Hire me </a>
+										<a href="" title="" class='btn btn-primary btn--hire' data-provideid='6'>Hire me </a>
 										<p class='charging-standard'>
 											<sup>$</sup>858
 											<span>USD/hour</span>
@@ -283,5 +284,15 @@
 	<!-- footer.html -->
 	<% include ./publicTpl/footer.html %>
 	<!-- footer.html end-->
+
+
+	<!-- hire me -->
+	<div class="hire-modal" id='hire-modal'>
+		<div class='loading2'>
+	          <i></i>	        
+		</div>
+		<ul class='hire-projects' style='display: none'>
+		</ul>
+	</div>
 </body>
 </html>
