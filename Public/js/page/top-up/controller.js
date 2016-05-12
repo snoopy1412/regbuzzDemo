@@ -2,7 +2,8 @@ define(['jquery', 'Vue'], function($, Vue) {
 	new Vue({
 		el: "#vue-top-up",
 		data: {
-			topUpAction: [],
+			topUpAction: {},
+			topUpDescription : false,
 			inputAmount: 0, // 输入金额
 			estimatedAmount: 0, //预估金额
 			resultAmount: 0,
@@ -51,7 +52,6 @@ define(['jquery', 'Vue'], function($, Vue) {
 				type: 'get',
 				url: "./Public/data/balance.json",
 				success: function(data) {
-					console.log(data)
 					self.balance = parseFloat(data.balance);
 					self.loading = false;
 				}
@@ -62,24 +62,17 @@ define(['jquery', 'Vue'], function($, Vue) {
 				var name = param[0],
 					val = param[1];
 
-				self.topUpAction.push({
-					name: param[0],
-					val: param[1]
-				})
+				self.topUpAction[param[0]] = param[1]
 			})
 
-			// topupaction
-			$.each(self.topUpAction, function() {
-				if (this.name = 'redirected') {
-					switch (this.val) {
-						case 'membership_subscribe':
-							// ???
-							break;
-						default:
-							break;
-					}
-				}
-			})
+			console.log(self.topUpAction)
+			switch (self.topUpAction.redirected) {
+				case 'membership_subscribe':
+					self.topUpDescription = true;
+					break;
+				default:
+					break;
+			}
 		},
 		computed: {
 			resultAmount: function() {

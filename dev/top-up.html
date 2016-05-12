@@ -14,7 +14,7 @@
           <i></i>	        
 	</div>
 	<div class="row animated fadeIn" v-show='!loading' v-cloak>
-		<div class="alert alert-info" role="alert"><strong>请存入资金</strong>，支付 $93 USD 升级到 入门 会员，立即获得更好的权益！</div>	
+		<div class="alert alert-info" role="alert" v-if='topUpDescription'><strong>请存入资金</strong>，支付 $93 USD 升级到 入门 会员，立即获得更好的权益！</div>	
 		<div class="col-md-8 com-content">
 			<div class="panel panel-default">
 				<div class="panel-heading topUp-heading">
