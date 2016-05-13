@@ -7,7 +7,7 @@
 	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
 	<title>Document</title>
 	<meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<link rel="stylesheet" type="text/css" href="./Public/css/animate.css">
     <link rel="stylesheet" type="text/css" href="./Public/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./Public/css/main.css">
@@ -31,17 +31,17 @@
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button>
+					</button> -->
 					<a class="navbar-brand" href="index.html">
 					<img src='./Public/img/header/logo4.png' height="32" width="123"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" >
+				<div class="navbar" >
 					<form action="" class="navbar-form navbar-left search-form">
 						<div class="form-group">
 							<div class="input-group">
@@ -309,7 +309,7 @@
 			</div>
 		</nav>
 		<!-- 页面导航部分 -->
-		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+		<nav class='nav-side navbar'>
 			<div class='container'>
 				<ul class='nav navbar-nav clearfix'>
 					<li>
@@ -363,17 +363,17 @@
 				</li>
 			</ul>
 			<div class="row">
-				<div class="col-md-9">
+				<div class="col-xs-9">
 					<section class="pub-main">					
 						<div class='pub-content'>
 							<div class="form-horizontal" id='vue-pubController'>
 
 								<!-- 任务基本信息 -->
 								<div class="row pub-item pub-item-base">
-									<h3 class='pub-item-title col-md-12'>Project Basic Information (required*)</h3>
+									<h3 class='pub-item-title col-xs-12'>Project Basic Information (required*)</h3>
 									<div class="form-group">
-										<label for="select-category" class='col-md-3 control-label'>Choose a category</label>
-										<div class="col-md-9">
+										<label for="select-category" class='col-xs-3 control-label'>Choose a category</label>
+										<div class="col-xs-9">
 
 											<!-- 加载二级联动，此组件来自于 components/Linkage.vue -->
 											<linkage v-bind:linkage-data='selectedData'></linkage>
@@ -381,8 +381,8 @@
 										</div>							
 									</div>
 									<div class="form-group">
-										<label for="job-name" class='col-md-3 control-label'>Give your job a name</label>
-										<div class="col-md-9 dropdown">
+										<label for="job-name" class='col-xs-3 control-label'>Give your job a name</label>
+										<div class="col-xs-9 dropdown">
 											<input type="text" name="" value="" placeholder="" class='form-control dropdown-toggle' id='job-name' data-toggle="dropdown" />
 											
 											<!-- prompt -->
@@ -402,8 +402,8 @@
 
 									<!-- 暂时取消 -->
 									<!-- <div class="form-group">
-										<label for="" class='col-md-3'>Job Owner</label>
-										<div class="col-md-9 clearfix radiobox-list">
+										<label for="" class='col-xs-3'>Job Owner</label>
+										<div class="col-xs-9 clearfix radiobox-list">
 											 <label class="c-input c-radio">
 											  <input id="radio1" name="radio" type="radio" checked>
 											  <span class="c-indicator"></span>
@@ -419,8 +419,8 @@
 									
 									<!-- Job Description -->
 									<div class="form-group">
-										<label for="pub-profile-txt" class='col-md-3 control-label'>Job Description</label>
-										<div class="col-md-9">
+										<label for="pub-profile-txt" class='col-xs-3 control-label'>Job Description</label>
+										<div class="col-xs-9">
 											<div data-toggle='dropdown'>
 
 												<!-- 加载数字计数组件，此组件来自于 components/WordCount.vue -->
@@ -443,8 +443,8 @@
 									
 									<!-- 预算 -->
 									<div class="form-group">
-										<label for="pub-budget-txt" class='col-md-3 control-label'>Budget</label>
-										<div class="col-md-9">
+										<label for="pub-budget-txt" class='col-xs-3 control-label'>Budget</label>
+										<div class="col-xs-9">
 								      		<select id="project-budget" name="budget" class='form-control' v-model='selectedBudget'>
 								      			<option value="192">微项目 ($80-240 USD)</option>
 								      			<option value="25">简单的项目 ($240-2000 USD)</option>
@@ -483,8 +483,8 @@
 
 									<!-- Estimated Duration -->
 									<div class="form-group">
-										<label for="estimated" class='col-md-3 control-label'>Estimated Duration</label>
-										<div class="col-md-9">
+										<label for="estimated" class='col-xs-3 control-label'>Estimated Duration</label>
+										<div class="col-xs-9">
 											<select class="form-control form-control-all" id='estimated'>
 											    <option value="" label="Please select...">Please select...</option>
 											    <option value="1" label="More than 6 months">More than 6 months</option>
@@ -501,10 +501,10 @@
 
 								<!-- 附件 -->
 								<div class="row pub-item">
-									<h3 class='pub-item-title col-md-12'>Attachment</h3>
+									<h3 class='pub-item-title col-xs-12'>Attachment</h3>
 									<div class='form-group'>
-										<label for="document" class='col-md-3 control-label'>Attach a document</label>
-										<div class="col-md-9">
+										<label for="document" class='col-xs-3 control-label'>Attach a document</label>
+										<div class="col-xs-9">
 											<!-- <input type="file" id='document'> -->
 												<div id="upload">
 														<div class="btns">
@@ -523,12 +523,12 @@
 
 								<!-- 候选人资质 -->
 								<div class="row pub-item">
-									<h3 class='pub-item-title col-md-12'>Qualifications</h3>
+									<h3 class='pub-item-title col-xs-12'>Qualifications</h3>
 
 									<!-- Marketplace Visibility -->
 									<div class="form-group">
-										<label for="marketplace" class='col-md-3 control-label'>Marketplace Visibility</label>
-										<div class="col-md-9">
+										<label for="marketplace" class='col-xs-3 control-label'>Marketplace Visibility</label>
+										<div class="col-xs-9">
 											<select class='form-control form-control-all' id='marketplace' v-model='selectPublicOrPrivate'>
 										    <option value="public" label="All consultants can find this job" selected>All consultants can find this job</option>
 										    <option value="private" label="Only people I have invited can find this job">Only people I have invited can find this job</option>
@@ -538,8 +538,8 @@
 
 									<!-- language -->
 									<div class="form-group" v-show='!onlyInvite'>
-										<label class='col-md-3 control-label'>Special Language Requirement</label>
-										<div class="col-md-9">
+										<label class='col-xs-3 control-label'>Special Language Requirement</label>
+										<div class="col-xs-9">
 											
 											<!-- 加载jellybean组件，此组件来自于 components/Jellybean.vue -->
 											<!-- <jellybean :origin-data='languageData' :placeholder='placeholder' :jellybean-max=3 :msg-custom='检索失败，换一个关键词试试？'></jellybean> -->
@@ -549,8 +549,8 @@
 									
 									<!-- skill -->
 									<!-- <div class="form-group">
-										<label for="skills" class='col-md-3'>What skills are needed?</label>
-										<div class="col-md-9">
+										<label for="skills" class='col-xs-3'>What skills are needed?</label>
+										<div class="col-xs-9">
 											<div id="jellybean">
 												<ul class='jellybean-container clearfix'>
 													<li class="jellybean-container-item">
@@ -566,10 +566,10 @@
 
 									<!-- Location -->
 									<div class="form-group" v-show='!onlyInvite'>
-										<label for="location" class='col-md-3 control-label'>Candidates Location</label>
-										<div class="col-md-9">
+										<label for="location" class='col-xs-3 control-label'>Candidates Location</label>
+										<div class="col-xs-9">
 											<div class="row row--no-padding">
-												<div class="col-md-6">
+												<div class="col-xs-6">
 													<select class='form-control form-control-all' id='location'>
 													    <option value="" label="Any location">Any location</option>
 													    <option value="3" label="East Asia">East Asia</option>
@@ -580,7 +580,7 @@
 													    <option value="7" label="Western Europe">Western Europe</option>
 													</select>
 												</div>
-												<div class="col-md-6">
+												<div class="col-xs-6">
 													<select class='form-control'>
 														<option value="">Any location</option>
 													</select>
@@ -593,8 +593,8 @@
 
 									<!-- Verification -->
 									<div class="form-group" v-show='!onlyInvite'>
-										<label for="" class='col-md-3 control-label'>Candidates Verification</label>
-										<div class="col-md-9 clearfix radiobox-list">
+										<label for="" class='col-xs-3 control-label'>Candidates Verification</label>
+										<div class="col-xs-9 clearfix radiobox-list">
 											  <label class="c-input c-checkbox">
 											  <input id="radio1" name="checkbox" type="checkbox" checked>
 											  <span class="c-indicator"></span>
@@ -615,8 +615,8 @@
 
 									<!-- feedback -->
 								<!-- 	<div class='form-group'>
-										<label for="feedback-score" class='col-md-3'>Feedback Score</label>
-										<div class="col-md-9">
+										<label for="feedback-score" class='col-xs-3'>Feedback Score</label>
+										<div class="col-xs-9">
 											<select class='form-control form-control-all' id='feedback-score'>
 										    <option value="0" label="Any score" selected="selected">Any score</option>
 										    <option value="3" label="At least 3">At least 3</option>
@@ -630,17 +630,17 @@
 								
 								<!-- 自定义问题 -->
 								<!-- <div class="row pub-item pub-customize">
-									<h3 class='pub-item-title col-md-12'>Customize Requirements</h3>	
+									<h3 class='pub-item-title col-xs-12'>Customize Requirements</h3>	
 									<div class='form-group'>
-										<label for="" class='col-md-3' style='padding-top: 0'>Screening Questions</label>
-										<div class="col-md-9">
+										<label for="" class='col-xs-3' style='padding-top: 0'>Screening Questions</label>
+										<div class="col-xs-9">
 											<span>Add a few questions you'd like your candidates to answer when applying to your job</span>
 											<a href="javascript:;" title="" class='add-questions'>+ add questions</a>
 										</div>
 									</div>						
 									<div class='form-group'>
-										<label for="" class='col-md-3' style='padding-top: 0'>Cover Letter</label>
-										<div class="col-md-9">
+										<label for="" class='col-xs-3' style='padding-top: 0'>Cover Letter</label>
+										<div class="col-xs-9">
 											<span>Ask applicants to write a cover letter introducing themselves.</span>
 											<div class="checkbox-list">
 												 <label class="c-input c-checkbox"  for="cover-letter">
@@ -658,35 +658,35 @@
 
 								<!-- 不公开问题 Private Job-->
 								<!-- <div class="row pub-item">
-									<h3 class='pub-item-title col-md-12'>Private Informations <sub>not public*</sub></h3>	
+									<h3 class='pub-item-title col-xs-12'>Private Informations <sub>not public*</sub></h3>	
 									<div class='form-group'>
-										<label for="" class='col-md-3'>Desciption of Services</label>
-										<div class="col-md-9">
+										<label for="" class='col-xs-3'>Desciption of Services</label>
+										<div class="col-xs-9">
 											<textarea name="" class='form-control'></textarea>
 										</div>
 									</div>						
 									<div class='form-group'>
-										<label for="" class='col-md-3'>Deliverables</label>
-										<div class="col-md-9">
+										<label for="" class='col-xs-3'>Deliverables</label>
+										<div class="col-xs-9">
 											<textarea name="" class='form-control'></textarea>
 										</div>
 									</div>
 									<div class='form-group'>
-										<label for="" class='col-md-3'>Acceptance Criteria</label>
-										<div class="col-md-9">
+										<label for="" class='col-xs-3'>Acceptance Criteria</label>
+										<div class="col-xs-9">
 											<textarea name="" class='form-control'></textarea>
 										</div>
 									</div>
 									<div class='form-group'>
-										<label for="" class='col-md-3'>Document upload</label>
-										<div class="col-md-9">
+										<label for="" class='col-xs-3'>Document upload</label>
+										<div class="col-xs-9">
 											<input type="file" name="" value="" placeholder="">
 										</div>
 									</div>
 								</div> -->
 
 								<div class='form-group mt-20'>
-									<div class='col-sm-offset-3 col-md-9'>
+									<div class='col-sm-offset-3 col-xs-9'>
 										<input type="submit" name="" value="Post Project Now" class='btn btn-primary' style='margin-right:10px'>
 										<label class="c-input c-checkbox" >
 										  <input id="radio2" name="checkbox" type="checkbox" checked='true'>
@@ -699,7 +699,7 @@
 						</div>
 					</section>				
 				</div>
-				<div class="col-md-3">
+				<div class="col-xs-3">
 					<aside class='pub-aside'>
 						<section class='pub-aside-item pub-aside-item-contact'>
 							<h3 class='pub-aside-item-title'>Contact</h3>
@@ -772,9 +772,9 @@
 
 <!-- footer.html -->
 <footer class='public-footer'>
-<div class="container-fluid">
+<div class="container" style='background: #303030;'>
 <div class="row footer-nav">
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Company</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -804,7 +804,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Resource</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -813,7 +813,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Support</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -831,7 +831,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Social</h4>
 		<div class="footer-divider"></div>
 		<ul class='social-icon-list'>
@@ -853,7 +853,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-4 footer-nav-list">
+	<div class="col-xs-4 footer-nav-list">
 		<h4>Message</h4>
 		<div class="footer-divider"></div>
 		<form action="" class='footer-contact'>
@@ -871,7 +871,7 @@
 </div>
 <div class="footer-divider"></div>
 <div class="row footer-bottom">
-	<div class="col-md-6">
+	<div class="col-xs-6">
 		<ul class='footer-brand clearfix'>
 			<li class='footer-brand-logo'>
 				<img src="./Public/img/index/footer-logo.png" alt=""></li>
@@ -880,7 +880,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-6">
+	<div class="col-xs-6">
 		<p class='text-right copyright'>
 			© Copyright 2015 - 2016
 			<a href="" title="">Regbuzz.com</a>

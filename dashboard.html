@@ -7,7 +7,7 @@
 	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
 	<title>Document</title>
 	<meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<link rel="stylesheet" type="text/css" href="./Public/css/animate.css">
     <link rel="stylesheet" type="text/css" href="./Public/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./Public/css/main.css">
@@ -30,17 +30,17 @@
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button>
+					</button> -->
 					<a class="navbar-brand" href="index.html">
 					<img src='./Public/img/header/logo4.png' height="32" width="123"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" >
+				<div class="navbar" >
 					<form action="" class="navbar-form navbar-left search-form">
 						<div class="form-group">
 							<div class="input-group">
@@ -308,7 +308,7 @@
 			</div>
 		</nav>
 		<!-- 页面导航部分 -->
-		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+		<nav class='nav-side navbar'>
 			<div class='container'>
 				<ul class='nav navbar-nav clearfix'>
 					<li>
@@ -349,9 +349,9 @@
 <section class='com-main'>
 	<div class="container container-home" id='vue-home'>
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-xs-9">
 				<header class="row home-heading section">
-					<div class="col-md-7 home-heading-section">
+					<div class="col-xs-7 home-heading-section">
 						<div class="home-name clearfix">
 							<div class="home-img pull-left">
 								<a href=""><img src="./Public/img/index/servers/1.jpg" alt="" class='img-round hoverable' width="110px"></a>
@@ -378,7 +378,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-5 home-heading-section">
+					<div class="col-xs-5 home-heading-section">
 
 					<!-- 加载dashboard组件，此组件来自于 components/homeHistory.vue -->
 					<!-- <homehistory v-bind:history-roles='historyRoles'></homehistory> -->
@@ -400,7 +400,7 @@
 					</div>	
 				</header>
 				<!-- <section class="row home-post">
-					<div class="col-md-12">
+					<div class="col-xs-12">
 						<a href="publish-quick.html" class='home-post-item post'><i class="fa fa-product-hunt"></i><span>Post a Project</span></a>
 					</div>
 				</section> -->
@@ -417,7 +417,7 @@
 					<div class="tab-pane active fade in" id="dashboard-push">
 						<section class="row home-push" id='vue-home-push'>
 							<template v-for='item in pushData' stagger="100">
-								<div class="col-md-4 home-push-item-warp" transition="pushskip">
+								<div class="col-xs-4 home-push-item-warp" transition="pushskip">
 									<section class='home-push-item hoverable'>
 										<header class='home-push-item-header'>
 											<div class="push-handle">
@@ -467,12 +467,12 @@
 				    <!-- <div class="tab-pane fade" id="dashboard-news">
 				    	<section class='row home-new'>
 							<div class="content dashboard-content">
-								<div class="col-md-1">
+								<div class="col-xs-1">
 									<div class="user-img">
 										<a href=""><img src="./Public/img/index/servers/1.jpg" alt="" width="50px"></a>
 									</div>
 								</div>
-								<div class="col-md-11">
+								<div class="col-xs-11">
 									<div class="user-new-content">
 										<div class="header">
 											<h3 class="headline"><a href="" class="miniprofile name">zhonghui su</a> likes this</h3>
@@ -524,12 +524,12 @@
 				    <div class="tab-pane fade" id="dashboard-dynamic">
 				    	<section class='row home-dynamic'>
 							<div class="content">
-								<div class="col-md-1">
+								<div class="col-xs-1">
 									<div class="user-img">
 										<a href=""><img src="./Public/img/index/servers/1.jpg" alt="" width="50px"></a>
 									</div>
 								</div>
-								<div class="col-md-11">
+								<div class="col-xs-11">
 									<div class="user-new-content">
 										<div class="header">
 											<h3 class="headline"><a href="" class="miniprofile name">zhonghui su</a> likes this</h3>
@@ -581,7 +581,7 @@
 				  </div>
 				</div>
 			</div>
-			<div class="col-md-3 home-aside">
+			<div class="col-xs-3 home-aside">
 					<div class="home-aside-section home-aside-account  section">
 						<h3 class='home-aside-title'>Balance</h3>
 						<div class="content">
@@ -620,9 +620,9 @@
 <!-- 页脚部分 -->
 <!-- footer.html -->
 <footer class='public-footer'>
-<div class="container-fluid">
+<div class="container" style='background: #303030;'>
 <div class="row footer-nav">
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Company</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -652,7 +652,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Resource</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -661,7 +661,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Support</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -679,7 +679,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Social</h4>
 		<div class="footer-divider"></div>
 		<ul class='social-icon-list'>
@@ -701,7 +701,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-4 footer-nav-list">
+	<div class="col-xs-4 footer-nav-list">
 		<h4>Message</h4>
 		<div class="footer-divider"></div>
 		<form action="" class='footer-contact'>
@@ -719,7 +719,7 @@
 </div>
 <div class="footer-divider"></div>
 <div class="row footer-bottom">
-	<div class="col-md-6">
+	<div class="col-xs-6">
 		<ul class='footer-brand clearfix'>
 			<li class='footer-brand-logo'>
 				<img src="./Public/img/index/footer-logo.png" alt=""></li>
@@ -728,7 +728,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-6">
+	<div class="col-xs-6">
 		<p class='text-right copyright'>
 			© Copyright 2015 - 2016
 			<a href="" title="">Regbuzz.com</a>

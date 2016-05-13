@@ -26,7 +26,7 @@ body {
     line-height: $line-height-base;
     color: $text-color;
     background-color: $body-bg;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     min-width: 320px;   
 }
 
@@ -117,3 +117,7 @@ div,p,li,a,span{
 }
 
 
+// 禁止响应式
+.container{
+  width: 1170px !important;
+}

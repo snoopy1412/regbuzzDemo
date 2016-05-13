@@ -14,8 +14,8 @@
           <i></i>	        
 	</div>
 	<div class="row animated fadeIn" v-show='!loading' v-cloak>
-		<div class="alert alert-info" role="alert" v-if='topUpDescription'><strong>请存入资金</strong>，支付 $93 USD 升级到 入门 会员，立即获得更好的权益！</div>	
-		<div class="col-md-8 com-content">
+		<div class="alert alert-info" role="alert" v-if='topUpDescriptionShow'><strong>请存入资金</strong>，<span v-text='topUpDescription'></span></div>	
+		<div class="col-xs-8 com-content">
 			<div class="panel panel-default">
 				<div class="panel-heading topUp-heading">
 					<h1 class='topUp-heading-title'>Select Payment Method
@@ -32,7 +32,7 @@
 
 					<!-- 余额 -->
 					<div class="row topUp-body-item topUp-body-paypal active" >
-						<div class="col-md-6">
+						<div class="col-xs-6">
 							<h2 class='topUp-body-title'>
 								Balance : <span class='topUp-balance'><span v-text='balance | currency'></span> USD</span>
 							</h2>
@@ -51,7 +51,7 @@
 
 					<!-- 信用卡 -->
 					<div class="row topUp-body-item topUp-body-credit">
-						<div class="col-md-8">
+						<div class="col-xs-8">
 							<h2 class='topUp-body-title'>What card would you like to pay with?</h2>
 							<form>
 								<div class="form-group">
@@ -83,7 +83,7 @@
 								<div class='form-group'>
 									<label>Expiration Date </label>
 									<div class="row row--no-padding">
-										<div class="col-md-6">
+										<div class="col-xs-6">
 											<select class='form-control'>
 							                    <option selected="" disabled="" value="">Month</option>
 							                    <option value="01">01</option>
@@ -100,7 +100,7 @@
 							                    <option value="12">12</option>
 							                </select>
 										</div>
-										<div class="col-md-6">
+										<div class="col-xs-6">
 											<select class='form-control'>
 							                    <option selected="" disabled="">Year</option>
 							                    <option value="16">16</option>
@@ -134,16 +134,16 @@
 								<div class='form-group topUp-body-security-code'>
 									<label>Security Code(or "CCV" or "CVV") </label>
 									<div class='row row--no-padding'>
-									<div class="col-md-4">
+									<div class="col-xs-4">
 										<input type="text" class='form-control input-lg'>
 									</div>
-									<div class="col-md-8 topUp-body-security-code-des">
+									<div class="col-xs-8 topUp-body-security-code-des">
 										<div class="payment-icon-cc-security"></div>
 										<small class="security-number-help">
 						                    The last 3 digits displayed on the back of your card
 						                </small>
 									</div>
-									<div class="col-md-12">
+									<div class="col-xs-12">
 										<p>You agree to authorize the use of your credit card for this deposit and future payments.</p>
 									</div>
 										
@@ -163,7 +163,7 @@
 
 					<!-- paypal -->
 					<div class="row topUp-body-item topUp-body-paypal" >
-						<div class="col-md-6">
+						<div class="col-xs-6">
 							<h2 class='topUp-body-title'>
 								<img src="./Public/img/register/paypal-logo.png" height="34" width="139">
 							</h2>
@@ -182,7 +182,7 @@
 
 					<!-- stripe -->
 					<div class="row topUp-body-item topUp-body-stripe" >
-						<div class="col-md-6">
+						<div class="col-xs-6">
 							<h2 class='topUp-body-title'>
 								<img src="./Public/img/register/stripe-logo.png" height="27" width="63" alt="">
 							</h2>
@@ -201,7 +201,7 @@
 
 					<!-- 支付宝-->
 					<div class="row topUp-body-item topUp-body-alipay" >
-						<div class="col-md-6">
+						<div class="col-xs-6">
 							<h2 class='topUp-body-title'>
 								<img src="./Public/img/register/alipay-logo.png" height="51" width="120">
 							</h2>
@@ -221,7 +221,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4 com-aside">
+		<div class="col-xs-4 com-aside">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<header class="topUp-aside-body-header table-display">

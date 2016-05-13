@@ -17,15 +17,10 @@ require(['jquery',
 
 	// 内容区域hover显示编辑按钮? 
 	// 移动端没有hover事件
-	$(document).on('mouseover','.profile-info-item',function(){
+	$(document).on('mouseover', '.profile-info-item', function() {
 		$(this).find('.handle').show();
 	})
-	$(document).on('mouseout','.profile-info-item',function(){
+	$(document).on('mouseout', '.profile-info-item', function() {
 		$(this).find('.handle').hide()
 	})
-	// $('.profile-info-item').hover(function() {
-		
-	// }, function() {
-	// 	$(this).find('.handle').hide();
-	// });
 });

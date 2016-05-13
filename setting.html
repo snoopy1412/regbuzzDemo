@@ -7,7 +7,7 @@
 	<meta http-equiv="X-ua-Compatible" content="chrome=1"/>
 	<title>Document</title>
 	<meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<link rel="stylesheet" type="text/css" href="./Public/css/animate.css">
     <link rel="stylesheet" type="text/css" href="./Public/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./Public/css/main.css">
@@ -29,17 +29,17 @@
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
-					</button>
+					</button> -->
 					<a class="navbar-brand" href="index.html">
 					<img src='./Public/img/header/logo4.png' height="32" width="123"></a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" >
+				<div class="navbar" >
 					<form action="" class="navbar-form navbar-left search-form">
 						<div class="form-group">
 							<div class="input-group">
@@ -307,7 +307,7 @@
 			</div>
 		</nav>
 		<!-- 页面导航部分 -->
-		<nav class='nav-side collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+		<nav class='nav-side navbar'>
 			<div class='container'>
 				<ul class='nav navbar-nav clearfix'>
 					<li>
@@ -358,7 +358,7 @@
 <section class='com-main'>
 <div class="container setting-container">
 <div class="row">
-	<div class="col-md-3 com-aside">
+	<div class="col-xs-3 com-aside">
 		<div class="list-group setting-menu">
 			<a href="javascript:;" title="My Info" class='active list-group-item'>
 				<i class="fa fa-user fa-fw fa-lg"></i>&nbsp; 
@@ -390,7 +390,7 @@
 		</div>
 		
 	</div>
-	<div class="col-md-9  com-content">
+	<div class="col-xs-9  com-content">
 		<div class="setting-content">
 			<section class="setting-section setting-section--Info active">
 				<div class="panel panel-default">
@@ -412,7 +412,7 @@
 						</header>
 						<section class="basic-verify">
 							<div class="row">
-								<div class="col-md-4">
+								<div class="col-xs-4">
 									<div class="icon active-icon">
 										<i class="fa fa-envelope-o fa-4x"></i>
 									</div>	
@@ -422,7 +422,7 @@
 										<a href="" title="">修改邮箱</a>
 									</div>
 								</div>
-								<div class="col-md-4">
+								<div class="col-xs-4">
 									<div class="icon active-icon">
 										<i class="fa fa-mobile fa-4x"></i>
 									</div>	
@@ -432,7 +432,7 @@
 										<a href="" title="">修改手机号</a>
 									</div>
 								</div>
-								<div class="col-md-4">
+								<div class="col-xs-4">
 									<div class="icon">
 										<i class="fa fa-user fa-4x"></i>
 									</div>	
@@ -448,7 +448,7 @@
 								<div class='basic-location'>
 									<h2>地址</h2>
 									<div class="row row--no-padding">
-										<div class="col-md-6">
+										<div class="col-xs-6">
 											<div class="form-group">
 												<label for="">
 													国家
@@ -456,7 +456,7 @@
 												<input type="text" class='form-control'>	
 											</div>
 										</div>
-										<div class="col-md-6">
+										<div class="col-xs-6">
 											<div class="form-group">
 												<label for="">
 													城市
@@ -504,20 +504,20 @@
 											<div class="">
 						<h2 class='text-center'>ADD A BILLING METHOD</h2>
 					</div>
-					<div class='col-md-4'>
+					<div class='col-xs-4'>
 						<section class='pay-method pay-method--paypal'>
 							<i class="pay-method-img"></i>
 							<a href="" title="" class='btn btn-primary btn-small'><i class="fa fa-plus"></i> Paypal</a>
 						</section>
 					</div>
-					<div class='col-md-4'>
+					<div class='col-xs-4'>
 						<section class='pay-method pay-method--stripe'>
 							<i class="pay-method-img"></i>
 							<a href="" title="" class='btn btn-primary  btn-small'><i class="fa fa-plus"></i> Stripe</a>
 						</section>
 						
 					</div>
-					<div class='col-md-4'>
+					<div class='col-xs-4'>
 						<section class='pay-method pay-method--alipay'>
 							<i class="pay-method-img"></i>
 							<a href="" title="" class='btn btn-primary  btn-small'><i class="fa fa-plus"></i> alipay</a>
@@ -597,9 +597,9 @@
 
 <!-- footer.html -->
 <footer class='public-footer'>
-<div class="container-fluid">
+<div class="container" style='background: #303030;'>
 <div class="row footer-nav">
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Company</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -629,7 +629,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Resource</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -638,7 +638,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Support</h4>
 		<div class="footer-divider"></div>
 		<ul class='list-unstyled'>
@@ -656,7 +656,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-2 footer-nav-list">
+	<div class="col-xs-2 footer-nav-list">
 		<h4>Social</h4>
 		<div class="footer-divider"></div>
 		<ul class='social-icon-list'>
@@ -678,7 +678,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-4 footer-nav-list">
+	<div class="col-xs-4 footer-nav-list">
 		<h4>Message</h4>
 		<div class="footer-divider"></div>
 		<form action="" class='footer-contact'>
@@ -696,7 +696,7 @@
 </div>
 <div class="footer-divider"></div>
 <div class="row footer-bottom">
-	<div class="col-md-6">
+	<div class="col-xs-6">
 		<ul class='footer-brand clearfix'>
 			<li class='footer-brand-logo'>
 				<img src="./Public/img/index/footer-logo.png" alt=""></li>
@@ -705,7 +705,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="col-md-6">
+	<div class="col-xs-6">
 		<p class='text-right copyright'>
 			© Copyright 2015 - 2016
 			<a href="" title="">Regbuzz.com</a>

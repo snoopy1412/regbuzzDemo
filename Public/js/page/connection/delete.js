@@ -1,6 +1,5 @@
 define(['jquery', 'layerInit', 'tools'], function($, layerInit, tools) {
 
-
 	$(document).on('click', '.js_connection-delete', function(event) {
 		event.preventDefault();
 

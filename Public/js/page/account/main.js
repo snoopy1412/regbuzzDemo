@@ -1,5 +1,4 @@
 require(['jquery', 'datetimepicker'], function($, datetimepicker) {
-
 	$('#datetimepicker6').datetimepicker({
 		format: 'YYYY-MM-DD',
 		useCurrent: false

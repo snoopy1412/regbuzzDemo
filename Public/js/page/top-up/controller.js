@@ -3,7 +3,8 @@ define(['jquery', 'Vue'], function($, Vue) {
 		el: "#vue-top-up",
 		data: {
 			topUpAction: {},
-			topUpDescription : false,
+			topUpDescriptionShow: false,
+			topUpDescription: '',
 			inputAmount: 0, // 输入金额
 			estimatedAmount: 0, //预估金额
 			resultAmount: 0,
@@ -65,11 +66,34 @@ define(['jquery', 'Vue'], function($, Vue) {
 				self.topUpAction[param[0]] = param[1]
 			})
 
-			console.log(self.topUpAction)
+			if (self.topUpAction.redirected) {
+				self.topUpDescriptionShow = true;
+			}
+
+			var memberShipPosition = '';
 			switch (self.topUpAction.redirected) {
-				case 'membership_subscribe':
-					self.topUpDescription = true;
+				case 'membership_subscribe': //会员升级
+					switch (self.topUpAction.memberShipStep) {
+						case '1':
+							memberShipPosition = '一个月会员'
+							break;
+						case '2':
+							memberShipPosition = '三个月会员'
+							break;
+						case '3':
+							memberShipPosition = '六个月会员'
+							break;
+						case '4':
+							memberShipPosition = '十二个月会员'
+							break;
+					}
+
+					self.topUpDescription = '支付 $' + self.topUpAction.memeberShipPrice + ' USD 升级' + memberShipPosition + '，立即获得更好的权益！'
+					self.inputAmount = self.topUpAction.memeberShipPrice;
+
 					break;
+				case 'project_pay':
+					self.topUpDescription = '为项目付款'
 				default:
 					break;
 			}
