@@ -3,85 +3,88 @@
 <!-- head.html end-->
 
 <body>
-<!-- header.html -->
-<% include ./publicTpl/header.html %>
-<!-- header.html end-->
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-            <li>
-              <a href="">Help Center</a>
-            </li>
-            <li>
-              <a href="#">Feedback</a>
-            </li>
-      	</ul>
+<div class="stick-root">
+	<!-- header.html -->
+	<% include ./publicTpl/header.html %>
+	<!-- header.html end-->
+
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+	            <li>
+	              <a href="">Help Center</a>
+	            </li>
+	            <li>
+	              <a href="#">Feedback</a>
+	            </li>
+	      	</ul>
+		</div>
 	</div>
-</div>
-<!-- /header -->
-<section class='com-main'>
-	<div class="container">
-		<div class="help-main">
-				<div class="help-content section">
-					<div class='help-title'>
-				<h1 class='help-title-primary'>
-					Feedback
-				</h1>
-				<p class='help-title-secondary'>
-					Please take a moment to give us your feedback. We will use this information to improve our service.
-				</p>
+	<section class='com-main'>
+		<div class="container">
+			<div class="help-main">
+					<div class="help-content section">
+						<div class='help-title'>
+					<h1 class='help-title-primary'>
+						Feedback
+					</h1>
+					<p class='help-title-secondary'>
+						Please take a moment to give us your feedback. We will use this information to improve our service.
+					</p>
+					</div>
+			<div class="row">
+				<div class="col-xs-7">
+					<form>
+					<div class="form-group">
+						<label for="" class="control-label">Name</label>
+						<input type="text" class='form-control' placeholder='your name'>
+					</div>
+					<div class="form-group">
+						<label for="" class="control-label">Email Address:</label>
+						<input type="text" class='form-control' placeholder='your email'>
+					</div>
+					<div class="form-group">
+					<label for="" class="control-label">Please select your issue category</label>
+					 	<select name="" class='form-control'>
+					 		<option value="">Finding a job</option>
+					 		<option value="">Working with client</option>
+					 		<option value="">Hiring supplier</option>
+					 		<option value="">Working with supplier</option>
+					 		<option value="">Regbuzz site and tools</option>
+					 		<option value="">Account and security</option>
+					 		<option value="">Earnings and payment</option>
+					 		<option value="">Policy violation</option>
+					 		<option value="">Other issue category</option>
+					 	</select>
+					</div>
+					  <div class="form-group">
+					<label for="">Please describe your issue：</label>
+					  <textarea name="" class='form-control' rows="4" placeholder='your describe'></textarea>
+					</div>
+					<div class="form-group">
+					<label for="">Document upload:</label>
+					 	<label class="file" style='display: block'>
+						  <input type="file" id="file">
+						  <span class="file-custom"></span>
+						</label>
+					<!-- <label for="">Please describe your issue：</label>
+					 -->
+					</div>
+					  <hr>
+					 <button type="submit" class="btn btn-primary">Submit</button>
+					</form>
+					</div>
+					
 				</div>
-		<div class="row">
-			<div class="col-xs-7">
-				<form>
-				<div class="form-group">
-					<label for="" class="control-label">Name</label>
-					<input type="text" class='form-control' placeholder='your name'>
-				</div>
-				<div class="form-group">
-					<label for="" class="control-label">Email Address:</label>
-					<input type="text" class='form-control' placeholder='your email'>
-				</div>
-				<div class="form-group">
-				<label for="" class="control-label">Please select your issue category</label>
-				 	<select name="" class='form-control'>
-				 		<option value="">Finding a job</option>
-				 		<option value="">Working with client</option>
-				 		<option value="">Hiring supplier</option>
-				 		<option value="">Working with supplier</option>
-				 		<option value="">Regbuzz site and tools</option>
-				 		<option value="">Account and security</option>
-				 		<option value="">Earnings and payment</option>
-				 		<option value="">Policy violation</option>
-				 		<option value="">Other issue category</option>
-				 	</select>
-				</div>
-				  <div class="form-group">
-				<label for="">Please describe your issue：</label>
-				  <textarea name="" class='form-control' rows="4" placeholder='your describe'></textarea>
-				</div>
-				<div class="form-group">
-				<label for="">Document upload:</label>
-				 	<label class="file" style='display: block'>
-					  <input type="file" id="file">
-					  <span class="file-custom"></span>
-					</label>
-				<!-- <label for="">Please describe your issue：</label>
-				 -->
-				</div>
-				  <hr>
-				 <button type="submit" class="btn btn-primary">Submit</button>
-				</form>
-				</div>
-				
+			</div>
 			</div>
 		</div>
-		</div>
-	</div>
-</section>
+	</section>
+	<div class="stick-root-footer"></div>
+</div>
 
 <!-- 页脚部分 -->
 <!-- footer.html -->

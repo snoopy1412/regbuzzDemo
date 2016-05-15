@@ -6092,12 +6092,12 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-.tabs-bar, .breadcrumb-beauty, .container-fluid--4, .home-heading .history-content-item > li, .profile-info-aside .history li, .setting-section--Info .basic-verify .col-md-4, .membership-update, .connect-list-section, .message-item {
+.tabs-bar, .breadcrumb-beauty, .container-fluid--4, .home-heading .history-content-item > li, .profile-info-aside .history li, .setting-section--Info .basic-verify .col-xs-4, .membership-update, .connect-list-section, .message-item {
   zoom: 1; }
-  .tabs-bar:before, .breadcrumb-beauty:before, .container-fluid--4:before, .home-heading .history-content-item > li:before, .profile-info-aside .history li:before, .setting-section--Info .basic-verify .col-md-4:before, .membership-update:before, .connect-list-section:before, .message-item:before, .tabs-bar:after, .breadcrumb-beauty:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .setting-section--Info .basic-verify .col-md-4:after, .membership-update:after, .connect-list-section:after, .message-item:after {
+  .tabs-bar:before, .breadcrumb-beauty:before, .container-fluid--4:before, .home-heading .history-content-item > li:before, .profile-info-aside .history li:before, .setting-section--Info .basic-verify .col-xs-4:before, .membership-update:before, .connect-list-section:before, .message-item:before, .tabs-bar:after, .breadcrumb-beauty:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .setting-section--Info .basic-verify .col-xs-4:after, .membership-update:after, .connect-list-section:after, .message-item:after {
     content: " ";
     display: block; }
-  .tabs-bar:after, .breadcrumb-beauty:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .setting-section--Info .basic-verify .col-md-4:after, .membership-update:after, .connect-list-section:after, .message-item:after {
+  .tabs-bar:after, .breadcrumb-beauty:after, .container-fluid--4:after, .home-heading .history-content-item > li:after, .profile-info-aside .history li:after, .setting-section--Info .basic-verify .col-xs-4:after, .membership-update:after, .connect-list-section:after, .message-item:after {
     clear: both; }
 
 .header .search-form .search-text-response:before, .header .search-form .search-text-response:after, .user-new-content:before, .user-new-content:after, .pubResault-list .answers-item .content:before, .pubResault-list .answers-item .content:after, .m-oFormHelp:before, .m-oFormHelp:after {
@@ -6110,17 +6110,17 @@ button.close {
 
 /*
 *<div class='com-stick-root'>
-*   <div class='com-stick-content'></div>
+*   <div class='com-stick-root-footer'></div>
 *</div>
 *<div class='com-stick-footer'></div>
 */
-.com-stick-root {
+.com-stick-root, .stick-root {
   clear: both;
   min-height: 100%;
   height: auto !important;
   height: 100%; }
 
-.com-stick-footer {
+.com-stick-footer, .stick-footer {
   clear: both;
   position: relative; }
 
@@ -7993,11 +7993,27 @@ body {
   padding-right: 10px;
   padding-left: 10px; }
 
+html, body {
+  height: 100%; }
+
 .com-stick-root {
   margin-bottom: -100px; }
+  .com-stick-root .com-stick-root-footer {
+    height: 100px; }
 
 .com-stick-footer {
   height: 100px; }
+
+html, body {
+  height: 100%; }
+
+.stick-root {
+  margin-bottom: -487px; }
+  .stick-root .stick-root-footer {
+    height: 487px; }
+
+.stick-footer {
+  height: 487px; }
 
 .com-policy a {
   display: inline-block;
@@ -8734,8 +8750,13 @@ body {
     margin-bottom: 10px;
     background-color: #fff; }
 
+html, body {
+  height: 100%; }
+
 .com-stick-root {
   margin-bottom: -100px; }
+  .com-stick-root .com-stick-root-footer {
+    height: 100px; }
 
 .com-stick-footer {
   height: 100px; }
@@ -8767,7 +8788,6 @@ body {
 
 .reg-warp {
   margin-top: -140px;
-  background-color: #fff;
   border-radius: 4px;
   padding-bottom: 100px; }
 
@@ -8782,7 +8802,8 @@ body {
   padding-top: 60px;
   border: 1px solid #ddd;
   border-top: 0;
-  margin: 0 0 60px 0;
+  margin: 0;
+  background-color: #fff;
   border-radius: 0 0 4px 4px; }
 
 .reg-content {
@@ -9433,6 +9454,7 @@ body {
 
 /* search for articles end*/
 .hire-modal {
+  display: none;
   background-color: #fff;
   padding: 10px; }
 
@@ -10300,29 +10322,29 @@ body {
   margin-bottom: 10px; }
   .setting-section--Info .basic-verify .row {
     border: 1px solid #ddd; }
-  .setting-section--Info .basic-verify .col-md-4 {
+  .setting-section--Info .basic-verify .col-xs-4 {
     border-right: 1px solid #ddd;
     background-color: #fcfcfc;
     padding: 10px; }
-    .setting-section--Info .basic-verify .col-md-4:last-child {
+    .setting-section--Info .basic-verify .col-xs-4:last-child {
       border-right: 0; }
-    .setting-section--Info .basic-verify .col-md-4 .icon {
+    .setting-section--Info .basic-verify .col-xs-4 .icon {
       float: left;
       margin-right: 20px; }
-      .setting-section--Info .basic-verify .col-md-4 .icon .fa {
+      .setting-section--Info .basic-verify .col-xs-4 .icon .fa {
         width: 70px;
         height: 70px;
         background-color: #dfdfdf;
         color: #fff;
         line-height: 70px;
         text-align: center; }
-    .setting-section--Info .basic-verify .col-md-4 .active-icon .fa {
+    .setting-section--Info .basic-verify .col-xs-4 .active-icon .fa {
       background-color: #368CA9; }
-    .setting-section--Info .basic-verify .col-md-4 .content {
+    .setting-section--Info .basic-verify .col-xs-4 .content {
       float: left; }
-      .setting-section--Info .basic-verify .col-md-4 .content p {
+      .setting-section--Info .basic-verify .col-xs-4 .content p {
         margin-bottom: 5px; }
-      .setting-section--Info .basic-verify .col-md-4 .content .content-important {
+      .setting-section--Info .basic-verify .col-xs-4 .content .content-important {
         color: #666; }
 
 .setting-section--Info .basic-info-section {

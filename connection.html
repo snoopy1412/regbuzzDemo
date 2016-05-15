@@ -23,8 +23,9 @@
 <!-- head.html end-->
 
 <body>
-<!-- header.html -->
-	<!-- /header -->
+<div class="stick-root">
+	<!-- header.html -->
+		<!-- /header -->
 	<header class="header" id='vue-header'>
 		<nav class="navbar">
 			<div class="container">
@@ -343,120 +344,123 @@
 			</div>
 		</nav>
 </header>
-<!-- header.html end-->
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-            <li>
-              <a href="#">Connections</a>
-            </li>
-      	</ul>
+	<!-- header.html end-->
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+	            <li>
+	              <a href="#">Connections</a>
+	            </li>
+	      	</ul>
+		</div>
 	</div>
-</div>
-<!-- /header -->
-<section class='com-main'>
-	<div class="container container-connect">
+	<!-- /header -->
+	<section class='com-main'>
+		<div class="container container-connect">
 
-		<section class='connect-content section'>
-			<form action="" class="form-inline connect-form clearfix">
-				<div class="form-group" style='margin-right:10px'>
-					<label for="">Sort by: </label>
-					<select name="" id="" class="form-control">
-						<option value="">Recent Conversation</option>
-						<option value="">Last Name</option>
-						<option value="">First Name</option>
-						<option value="">New</option>
-					</select>
+			<section class='connect-content section'>
+				<form action="" class="form-inline connect-form clearfix">
+					<div class="form-group" style='margin-right:10px'>
+						<label for="">Sort by: </label>
+						<select name="" id="" class="form-control">
+							<option value="">Recent Conversation</option>
+							<option value="">Last Name</option>
+							<option value="">First Name</option>
+							<option value="">New</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="">Filter by: </label>
+						<select name="" id="" class="form-control">
+							<option value="">All Contacts</option>
+							<option value="">Skill</option>
+						</select>
+					</div>
+					<div class="form-group pull-right">
+						<input type="text" class='form-control'>
+						<button type='button' class='btn btn-secondary'>Search</button>
+					</div>
+				</form>
+				<div class="connect-list-action">
+					<label class="c-input c-checkbox" style='margin-right:20px;vertical-align: middle;'>
+					  <input type="checkbox" name='connectionAll'>
+					  <span class="c-indicator"></span>
+					 	 &nbsp;&nbsp;Seclect All
+					</label>
+					<!-- invite按钮目前的设计是从任务管理页面进入的时候才会出现 -->
+					<a href="" class='connect-btn connect-primary js_connection-invite'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+					<a href="" class='connect-btn connect-primary' id='js_connection-message-all'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+					<a href="" class='connect-btn connect-danger js_connection-delete'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
 				</div>
-				<div class="form-group">
-					<label for="">Filter by: </label>
-					<select name="" id="" class="form-control">
-						<option value="">All Contacts</option>
-						<option value="">Skill</option>
-					</select>
+				<div class="connect-list">
+					<ul>
+						<li class='connect-list-section'>
+							<label class="c-input c-checkbox pull-left" style='margin-right:20px'>
+							  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' data-userid='12346'>
+							  <span class="c-indicator"></span>
+							</label>
+							<a href="" class='pull-left'>
+								<img src="./Public/img/index/servers/11.jpg" height="70" width="70" alt="">
+							</a>
+							<div class="body pull-left">
+							  <h3 class="name"><a href="">Michelle Huan</a><small> - Law Consultant</small></h3>
+							  <p class="headline">
+							    <a class="title">Chemical regulatory compliance consultant</a> at <a class="company">Nanjing CIRS</a>
+							  </p>
+							  <a class="location">Nanjing City, China</a>
+							  <P class='skill'>
+							  Skills : 
+							  	<span class="label label-default">GHS</span>
+							  	<span class="label label-default">Chemical</span>
+							  </P>
+							</div>
+							<div class="pull-right">
+								<a href="" class='connect-btn connect-primary js_connection-invite' data-userid='12345'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+								<a href="" class='connect-btn connect-primary js_connection-message' data-userid='12345'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+								<a href="" class='connect-btn connect-danger js_connection-delete'  data-userid='12345'><i class="fa fa-trash-o" aria-hidden="true"></i></a>		
+							</div>
+						</li>
+						<li class='connect-list-section'>
+							<label class="c-input c-checkbox pull-left" style='margin-right:20px'>
+							  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' data-userid='12345'>
+							  <span class="c-indicator"></span>
+							</label>
+							<a href="" class='pull-left'>
+								<img src="./Public/img/index/servers/11.jpg" height="70" width="70" alt="">
+							</a>
+							<div class="body pull-left">
+							  <h3 class="name"><a href="">Michelle Huan</a></h3>
+							  <p class="headline">
+							    <a class="title">Chemical regulatory compliance consultant</a> at <a class="company">Nanjing CIRS</a>
+							  </p>
+							  <a class="location">Nanjing City, China</a>
+							  <P class='skill'>
+							  Skills : 
+							  	<span class="label label-default">GHS</span>
+							  	<span class="label label-default">Chemical</span>
+							  </P>
+							</div>
+							<div class="pull-right">
+								<a href="" class='connect-btn connect-primary js_connection-invite' data-userid='12345'><i class="fa fa-user-plus" aria-hidden="true" ></i></a>
+								<a href="" class='connect-btn connect-primary js_connection-message' data-userid='12345'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+								<a href="" class='connect-btn connect-danger js_connection-delete'  data-userid='12345'><i class="fa fa-trash-o" aria-hidden="true"></i></a>	
+							</div>
+						</li>
+					</ul>
 				</div>
-				<div class="form-group pull-right">
-					<input type="text" class='form-control'>
-					<button type='button' class='btn btn-secondary'>Search</button>
-				</div>
-			</form>
-			<div class="connect-list-action">
-				<label class="c-input c-checkbox" style='margin-right:20px;vertical-align: middle;'>
-				  <input type="checkbox" name='connectionAll'>
-				  <span class="c-indicator"></span>
-				 	 &nbsp;&nbsp;Seclect All
-				</label>
-				<!-- invite按钮目前的设计是从任务管理页面进入的时候才会出现 -->
-				<a href="" class='connect-btn connect-primary js_connection-invite'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
-				<a href="" class='connect-btn connect-primary' id='js_connection-message-all'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-				<a href="" class='connect-btn connect-danger js_connection-delete'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-			</div>
-			<div class="connect-list">
-				<ul>
-					<li class='connect-list-section'>
-						<label class="c-input c-checkbox pull-left" style='margin-right:20px'>
-						  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' data-userid='12346'>
-						  <span class="c-indicator"></span>
-						</label>
-						<a href="" class='pull-left'>
-							<img src="./Public/img/index/servers/11.jpg" height="70" width="70" alt="">
-						</a>
-						<div class="body pull-left">
-						  <h3 class="name"><a href="">Michelle Huan</a><small> - Law Consultant</small></h3>
-						  <p class="headline">
-						    <a class="title">Chemical regulatory compliance consultant</a> at <a class="company">Nanjing CIRS</a>
-						  </p>
-						  <a class="location">Nanjing City, China</a>
-						  <P class='skill'>
-						  Skills : 
-						  	<span class="label label-default">GHS</span>
-						  	<span class="label label-default">Chemical</span>
-						  </P>
-						</div>
-						<div class="pull-right">
-							<a href="" class='connect-btn connect-primary js_connection-invite' data-userid='12345'><i class="fa fa-user-plus" aria-hidden="true"></i></a>
-							<a href="" class='connect-btn connect-primary js_connection-message' data-userid='12345'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-							<a href="" class='connect-btn connect-danger js_connection-delete'  data-userid='12345'><i class="fa fa-trash-o" aria-hidden="true"></i></a>		
-						</div>
-					</li>
-					<li class='connect-list-section'>
-						<label class="c-input c-checkbox pull-left" style='margin-right:20px'>
-						  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' data-userid='12345'>
-						  <span class="c-indicator"></span>
-						</label>
-						<a href="" class='pull-left'>
-							<img src="./Public/img/index/servers/11.jpg" height="70" width="70" alt="">
-						</a>
-						<div class="body pull-left">
-						  <h3 class="name"><a href="">Michelle Huan</a></h3>
-						  <p class="headline">
-						    <a class="title">Chemical regulatory compliance consultant</a> at <a class="company">Nanjing CIRS</a>
-						  </p>
-						  <a class="location">Nanjing City, China</a>
-						  <P class='skill'>
-						  Skills : 
-						  	<span class="label label-default">GHS</span>
-						  	<span class="label label-default">Chemical</span>
-						  </P>
-						</div>
-						<div class="pull-right">
-							<a href="" class='connect-btn connect-primary js_connection-invite' data-userid='12345'><i class="fa fa-user-plus" aria-hidden="true" ></i></a>
-							<a href="" class='connect-btn connect-primary js_connection-message' data-userid='12345'><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-							<a href="" class='connect-btn connect-danger js_connection-delete'  data-userid='12345'><i class="fa fa-trash-o" aria-hidden="true"></i></a>	
-						</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-	</div>
-</section>
+			</section>
+		</div>
+	</section>
+	<div class="stick-root-footer"></div>
+</div>
+
 
 <!-- 页脚部分 -->
 <!-- footer.html -->
-<footer class='public-footer'>
+<footer class='stick-footer public-footer'>
 <div class="container" style='background: #303030;'>
 <div class="row footer-nav">
 	<div class="col-xs-2 footer-nav-list">

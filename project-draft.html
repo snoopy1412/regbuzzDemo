@@ -23,6 +23,7 @@
 <!-- head.html end-->
 
 <body>
+<div class="stick-root">
 <!-- header.html -->
 	<!-- /header -->
 	<header class="header" id='vue-header'>
@@ -361,69 +362,72 @@
 </div>
 <!-- /header -->
 <section class='com-main'>
-<div class="container">
-	
-	<!--草稿  -->
-	<section class='mb-60'>
-		<!-- <h1 class='com-title-h1'>Drafts</h1> -->
-		<div id="toolbar" class="btn-group">
-			<button type="button" class="btn btn-danger">
-				<i class="fa fa-trash-o vertical-middle" aria-hidden="true"></i>&nbsp;&nbsp;<span class='vertical-middle'>Delete Selected </span>
-			</button>
-		</div>
-		<table class="table"  data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
-			<thead>
-			<tr class='active'>
-				<th data-field="state" data-checkbox="true" data-width='4%'></th>
-				<th data-sortable="true" data-width='50%'>Draft Title</th>
-				<th data-sortable="true" data-width='26%'>Type</th>
-				<th data-events="actionEvents" data-width='20%'>Action</th>
-			</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td>
-						<a href="" title="">我是一个示例草稿</a>
-					</td>
-					<td>
-						Project
-					</td>
-					<td>
-						<a href="javascript:;" title="Edit" class='project-action draft-edit'>
-							<i class="fa fa-pencil-square-o"></i>
-						</a>
-						<a href="javascript:;" title="Delete" class='project-action draft-remove'>
-							<i class="fa fa-trash-o"></i>
-						</a>
-					</td>
+	<div class="container">
+		
+		<!--草稿  -->
+		<section class='mb-60'>
+			<!-- <h1 class='com-title-h1'>Drafts</h1> -->
+			<div id="toolbar" class="btn-group">
+				<button type="button" class="btn btn-danger">
+					<i class="fa fa-trash-o vertical-middle" aria-hidden="true"></i>&nbsp;&nbsp;<span class='vertical-middle'>Delete Selected </span>
+				</button>
+			</div>
+			<table class="table"  data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
+				<thead>
+				<tr class='active'>
+					<th data-field="state" data-checkbox="true" data-width='4%'></th>
+					<th data-sortable="true" data-width='50%'>Draft Title</th>
+					<th data-sortable="true" data-width='26%'>Type</th>
+					<th data-events="actionEvents" data-width='20%'>Action</th>
 				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<a href="" title="">我是一个示例草稿</a>
-					</td>
-					<td>
-						Proposal
-					</td>
-					<td>
-						<a href="javascript:;" title="Edit" class='project-action draft-edit'>
-							<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-						</a>
-						<a href="javascript:;" title="Delete"  class='project-action draft-remove'>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</section>
-</div>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td>
+							<a href="" title="">我是一个示例草稿</a>
+						</td>
+						<td>
+							Project
+						</td>
+						<td>
+							<a href="javascript:;" title="Edit" class='project-action draft-edit'>
+								<i class="fa fa-pencil-square-o"></i>
+							</a>
+							<a href="javascript:;" title="Delete" class='project-action draft-remove'>
+								<i class="fa fa-trash-o"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<a href="" title="">我是一个示例草稿</a>
+						</td>
+						<td>
+							Proposal
+						</td>
+						<td>
+							<a href="javascript:;" title="Edit" class='project-action draft-edit'>
+								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+							</a>
+							<a href="javascript:;" title="Delete"  class='project-action draft-remove'>
+								<i class="fa fa-trash-o" aria-hidden="true"></i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</div>
 </section>
+	<div class="stick-root-footer"></div>
+</div>
+
 
 <!-- 页脚部分 -->
 <!-- footer.html -->
-<footer class='public-footer'>
+<footer class='stick-footer public-footer'>
 <div class="container" style='background: #303030;'>
 <div class="row footer-nav">
 	<div class="col-xs-2 footer-nav-list">

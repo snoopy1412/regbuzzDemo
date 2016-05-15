@@ -3,26 +3,26 @@
 <!-- head.html end-->
 <body>
 <link rel="stylesheet" type="text/css" href="./Public/plugins/jRange/jquery.range.css">
+<div class="stick-root">
 	<!-- header.html -->
 	<% include ./publicTpl/header.html %>
 	<!-- header.html end-->
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-	        <li>
-	          <a href=""> Discovery</a>
-	        </li>
-            <li>
-              <a href="#">Find a Provider</a>
-            </li>
-      	</ul>
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+		        <li>
+		          <a href=""> Discovery</a>
+		        </li>
+	            <li>
+	              <a href="#">Find a Provider</a>
+	            </li>
+	      	</ul>
+		</div>
 	</div>
-</div>
-	<section class='com-main com-main--list'>
-		
+	<section class='com-main com-main--list'>	
 		<div class="container" id='vue-list'>	
 			<div class="row mt-10">
 
@@ -280,19 +280,20 @@
 			</div>
 		</div>
 	</section>
-
-	<!-- footer.html -->
-	<% include ./publicTpl/footer.html %>
-	<!-- footer.html end-->
-
-
-	<!-- hire me -->
-	<div class="hire-modal" id='hire-modal'>
-		<div class='loading2'>
-	          <i></i>	        
-		</div>
-		<ul class='hire-projects' style='display: none'>
-		</ul>
+		<div class="stick-root-footer"></div>
 	</div>
+
+<!-- footer.html -->
+<% include ./publicTpl/footer.html %>
+<!-- footer.html end-->
+
+<!-- hire me -->
+<div class="hire-modal" id='hire-modal'>
+	<div class='loading2'>
+          <i></i>	        
+	</div>
+	<ul class='hire-projects' style='display: none'>
+	</ul>
+</div>
 </body>
 </html>

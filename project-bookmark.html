@@ -23,6 +23,7 @@
 <!-- head.html end-->
 
 <body>
+<div class="stick-root">
 <!-- header.html -->
 	<!-- /header -->
 	<header class="header" id='vue-header'>
@@ -361,70 +362,71 @@
 </div>
 <!-- /header -->
 <section class='com-main'>
-<div class="container container-bookmark">
+	<div class="container container-bookmark">
 
-	<div class='bookmark-section'>
-		<div id="toolbar" class="btn-group">
-			<button type="button" class="btn btn-danger">
-				<i class="fa fa-trash-o vertical-middle" aria-hidden="true"></i>&nbsp;&nbsp;<span class='vertical-middle'>Delete Selected </span>
-			</button>
+		<div class='bookmark-section'>
+			<div id="toolbar" class="btn-group">
+				<button type="button" class="btn btn-danger">
+					<i class="fa fa-trash-o vertical-middle" aria-hidden="true"></i>&nbsp;&nbsp;<span class='vertical-middle'>Delete Selected </span>
+				</button>
+			</div>
+			<table class="table" data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
+				<thead>
+				<tr class='active'>
+					<th data-field="state" data-checkbox="true" data-width='4%'></th>
+					<th data-sortable="true" data-width='50%'>Bookmark Title</th>
+					<th data-sortable="true" data-width='26%'>Status</th>
+					<th data-events="actionEvents" data-width='20%'>Action</th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td>
+							<a href="" title="">我是一个示例收藏</a>
+						</td>
+						<td>
+							Waiting for bids
+						</td>
+						<td>
+							<!-- <button type="button" class='btn btn-primary btn-sm'>Detail</button> -->
+							<!-- <button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button> -->
+							<a href="" target="_blank" title="Detail" class='project-action'>
+								<i class="fa fa-folder-open" aria-hidden="true"></i>
+							</a>
+							<a href="" title="Delete"  class='project-action bookmark-remove'>
+								<i class="fa fa-trash-o" aria-hidden="true"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<a href="" title="">我是一个示例收藏</a>
+						</td>
+						<td>
+							Closed
+						</td>
+						<td>
+							<a href="" target="_blank" title="Detail" class='project-action'>
+								<i class="fa fa-folder-open" aria-hidden="true"></i>
+							</a>
+							<a href="" title="Delete"  class='project-action bookmark-remove'>
+								<i class="fa fa-trash-o" aria-hidden="true"></i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>		
 		</div>
-		<table class="table" data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true" data-click-to-select="true" data-toolbar="#toolbar">
-			<thead>
-			<tr class='active'>
-				<th data-field="state" data-checkbox="true" data-width='4%'></th>
-				<th data-sortable="true" data-width='50%'>Bookmark Title</th>
-				<th data-sortable="true" data-width='26%'>Status</th>
-				<th data-events="actionEvents" data-width='20%'>Action</th>
-			</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td>
-						<a href="" title="">我是一个示例收藏</a>
-					</td>
-					<td>
-						Waiting for bids
-					</td>
-					<td>
-						<!-- <button type="button" class='btn btn-primary btn-sm'>Detail</button> -->
-						<!-- <button type="button" class='btn btn-danger btn-sm draft-remove'>Delete</button> -->
-						<a href="" target="_blank" title="Detail" class='project-action'>
-							<i class="fa fa-folder-open" aria-hidden="true"></i>
-						</a>
-						<a href="" title="Delete"  class='project-action bookmark-remove'>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</a>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<a href="" title="">我是一个示例收藏</a>
-					</td>
-					<td>
-						Closed
-					</td>
-					<td>
-						<a href="" target="_blank" title="Detail" class='project-action'>
-							<i class="fa fa-folder-open" aria-hidden="true"></i>
-						</a>
-						<a href="" title="Delete"  class='project-action bookmark-remove'>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>		
 	</div>
-
-</div>
 </section>
+	<div class="stick-root-footer"></div>
+</div>
 
 <!-- 页脚部分 -->
 <!-- footer.html -->
-<footer class='public-footer'>
+<footer class='stick-footer public-footer'>
 <div class="container" style='background: #303030;'>
 <div class="row footer-nav">
 	<div class="col-xs-2 footer-nav-list">

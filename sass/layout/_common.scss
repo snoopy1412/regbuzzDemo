@@ -12,7 +12,11 @@ body{
 }
 
 // 撑满页面
+// register 页面
 @include sticky-footer(100px);
+
+// 其他页面
+@include sticky-footer(487px,'.stick-root','.stick-root-footer','.stick-footer');
 // footer
 .com-policy{
 	a{

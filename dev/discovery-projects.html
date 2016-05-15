@@ -2,25 +2,26 @@
 <% include ./publicTpl/head-discovery.html %>
 <!-- head.html end-->
 <body>
-	<link rel="stylesheet" type="text/css" href="./Public/plugins/jRange/jquery.range.css">
+<link rel="stylesheet" type="text/css" href="./Public/plugins/jRange/jquery.range.css">
+<div class="stick-root">
 	<!-- header.html -->
 	<% include ./publicTpl/header.html %>
 	<!-- header.html end-->
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-	        <li>
-	          <a href=""> Discovery</a>
-	        </li>
-            <li>
-              <a href="#">Find a Project</a>
-            </li>
-      	</ul>
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+		        <li>
+		          <a href=""> Discovery</a>
+		        </li>
+	            <li>
+	              <a href="#">Find a Project</a>
+	            </li>
+	      	</ul>
+		</div>
 	</div>
-</div>
 	<section class='com-main com-main--list'>	
 		
 		<div class="container" id='vue-list'>	
@@ -258,9 +259,10 @@
 			</div>
 		</div>
 	</section>
-
-	<!-- header.html -->
-	<% include ./publicTpl/footer.html %>
-	<!-- header.html end-->
+		<div class="stick-root-footer"></div>
+	</div>
+<!-- header.html -->
+<% include ./publicTpl/footer.html %>
+<!-- header.html end-->
 </body>
 </html>

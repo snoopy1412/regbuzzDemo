@@ -24,8 +24,10 @@
 
 <body>
 <link rel="stylesheet" type="text/css" href="./Public/plugins/datetimepicker/bootstrap-datetimepicker.min.css">
-<!-- header.html -->
-	<!-- /header -->
+
+<div class="stick-root">
+	<!-- header.html -->
+		<!-- /header -->
 	<header class="header" id='vue-header'>
 		<nav class="navbar">
 			<div class="container">
@@ -344,168 +346,166 @@
 			</div>
 		</nav>
 </header>
-<!-- header.html end-->
-
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-            <li>
-              <a href="#">Transaction History</a>
-            </li>
-      	</ul>
+	<!-- header.html end-->
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+	            <li>
+	              <a href="#">Transaction History</a>
+	            </li>
+	      	</ul>
+		</div>
 	</div>
+	<!-- /header -->
+	<section class='com-main'>
+		<!-- 面包屑 -->	
+		<div class="container">	
+			<!-- 主要内容 -->
+			<div class="account-content section">
+					<section class='account-section'>
+								<div class="account-content-heading clearfix" style='margin-bottom: 20px;'>
+									<form action="" method="post" class="form-inline clearfix">
+										<div class="form-group">
+											<label for="">Trading hours: </label>
+											<div class="input-group date" id="datetimepicker6">
+											 	<input type="text"  class="form-control">
+											 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>	 	
+											 </div>
+											-
+											<div class="input-group date" id="datetimepicker7">
+											 	<input type="text"  class="form-control" >
+											 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+											 </div>
+										</div>
+										<div class='form-group' style='padding-left: 20px'>
+											<label for="">Fund flow: </label>
+											<select name="" id="" class="form-control">
+												<option value="" selected>all</option>
+												<option value="">income</option>
+												<option value="">cost</option>
+											</select>
+										</div>
+										<div class="form-group pull-right">
+											<input type="text" class='form-control' placeholder='input your order number'>
+											<button class="btn btn-primary">search</button>
+										</div>
+									</form>
+								</div>
+								<table class="table table-hover table--account">
+									<thead>
+										<tr>
+											<th width="10%">
+												serial number
+											</th>
+											<th width="15%">
+												time
+											</th>
+											<th width="50%">
+												content
+											</th>
+											<th width="5%">
+												money($)
+											</th>
+											<th width="20%">
+												Payment channels
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												2015092300038507
+											</td>
+											<td>
+												<time datetime="2011-01-12">January 12th, 2011</time>
+											</td>
+											<td>
+												订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
+												<br>
+												托管赏金-服务 - 订单号 ：6250482
+											</td>
+											<td>
+												-3750
+											</td>
+											<td>
+												支付宝
+											</td>
+										</tr>
+										<tr>
+											<td>
+												2015092300038507
+											</td>
+											<td>
+												<time datetime="2011-01-12">January 12th, 2011</time>
+											</td>
+											<td>
+												订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
+												<br>
+												托管赏金-服务 - 订单号 ：6250482
+											</td>
+											<td>
+												-3750
+											</td>
+											<td>
+												支付宝
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="account-content-footer clearfix">
+									<p class='pull-left cost-statistics'>
+										共一条数据，累计收入<span class='num'>0</span>元，累计支出<span class='num'>3750</span>元。
+									</p>
+									<nav class='pull-right'>
+									  <ul class="pagination">
+									    <li>
+									      <a href="#" aria-label="Previous">
+									        <span aria-hidden="true">&laquo;</span>
+									      </a>
+									    </li>
+									    <li><a href="#">1</a></li>
+									    <li><a href="#">2</a></li>
+									    <li><a href="#">3</a></li>
+									    <li><a href="#">4</a></li>
+									    <li><a href="#">5</a></li>
+									    <li>
+									      <a href="#" aria-label="Next">
+									        <span aria-hidden="true">&raquo;</span>
+									      </a>
+									    </li>
+									  </ul>
+									</nav>
+								</div>
+								<div class="account-faqs">
+									<h3>
+										FAQs
+									</h3>
+									<dl>
+										<dt>Trading a refund money, back to where go to?</dt>
+										<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+									</dl>
+									<dl>
+										<dt>Trading a refund money, back to where go to?</dt>
+										<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+									</dl>
+									<dl>
+										<dt>Trading a refund money, back to where go to?</dt>
+										<dd>Trading will refund the money according to your payment, back to the original channels</dd>
+									</dl>
+								</div>
+					</section>
+			</div>	
+		</div>
+	</section>
+	<div class="stick-root-footer"></div>
 </div>
-
-<!-- /header -->
-<section class='com-main'>
-	<!-- 面包屑 -->
-	
-	<div class="container">	
-
-		<!-- 主要内容 -->
-		<div class="account-content section">
-				<section class='account-section'>
-							<div class="account-content-heading clearfix" style='margin-bottom: 20px;'>
-								<form action="" method="post" class="form-inline clearfix">
-									<div class="form-group">
-										<label for="">Trading hours: </label>
-										<div class="input-group date" id="datetimepicker6">
-										 	<input type="text"  class="form-control">
-										 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>	 	
-										 </div>
-										-
-										<div class="input-group date" id="datetimepicker7">
-										 	<input type="text"  class="form-control" >
-										 	 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-										 </div>
-									</div>
-									<div class='form-group' style='padding-left: 20px'>
-										<label for="">Fund flow: </label>
-										<select name="" id="" class="form-control">
-											<option value="" selected>all</option>
-											<option value="">income</option>
-											<option value="">cost</option>
-										</select>
-									</div>
-									<div class="form-group pull-right">
-										<input type="text" class='form-control' placeholder='input your order number'>
-										<button class="btn btn-primary">search</button>
-									</div>
-								</form>
-							</div>
-							<table class="table table-hover table--account">
-								<thead>
-									<tr>
-										<th width="10%">
-											serial number
-										</th>
-										<th width="15%">
-											time
-										</th>
-										<th width="50%">
-											content
-										</th>
-										<th width="5%">
-											money($)
-										</th>
-										<th width="20%">
-											Payment channels
-										</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>
-											2015092300038507
-										</td>
-										<td>
-											<time datetime="2011-01-12">January 12th, 2011</time>
-										</td>
-										<td>
-											订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
-											<br>
-											托管赏金-服务 - 订单号 ：6250482
-										</td>
-										<td>
-											-3750
-										</td>
-										<td>
-											支付宝
-										</td>
-									</tr>
-									<tr>
-										<td>
-											2015092300038507
-										</td>
-										<td>
-											<time datetime="2011-01-12">January 12th, 2011</time>
-										</td>
-										<td>
-											订单：<a href="">【UI大促】网站界面美工UI设计（原价300）</a>
-											<br>
-											托管赏金-服务 - 订单号 ：6250482
-										</td>
-										<td>
-											-3750
-										</td>
-										<td>
-											支付宝
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<div class="account-content-footer clearfix">
-								<p class='pull-left cost-statistics'>
-									共一条数据，累计收入<span class='num'>0</span>元，累计支出<span class='num'>3750</span>元。
-								</p>
-								<nav class='pull-right'>
-								  <ul class="pagination">
-								    <li>
-								      <a href="#" aria-label="Previous">
-								        <span aria-hidden="true">&laquo;</span>
-								      </a>
-								    </li>
-								    <li><a href="#">1</a></li>
-								    <li><a href="#">2</a></li>
-								    <li><a href="#">3</a></li>
-								    <li><a href="#">4</a></li>
-								    <li><a href="#">5</a></li>
-								    <li>
-								      <a href="#" aria-label="Next">
-								        <span aria-hidden="true">&raquo;</span>
-								      </a>
-								    </li>
-								  </ul>
-								</nav>
-							</div>
-							<div class="account-faqs">
-								<h3>
-									FAQs
-								</h3>
-								<dl>
-									<dt>Trading a refund money, back to where go to?</dt>
-									<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-								</dl>
-								<dl>
-									<dt>Trading a refund money, back to where go to?</dt>
-									<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-								</dl>
-								<dl>
-									<dt>Trading a refund money, back to where go to?</dt>
-									<dd>Trading will refund the money according to your payment, back to the original channels</dd>
-								</dl>
-							</div>
-				</section>
-		</div>	
-	</div>
-</section>
 
 <!-- 页脚部分 -->
 <!-- footer.html -->
-<footer class='public-footer'>
+<footer class='stick-footer public-footer'>
 <div class="container" style='background: #303030;'>
 <div class="row footer-nav">
 	<div class="col-xs-2 footer-nav-list">

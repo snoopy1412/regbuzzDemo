@@ -57,10 +57,11 @@
 // 固定footer函数,为了简化操作，使用了固定的页面布局结构
 /*
 *<div class='com-stick-root'>
-*   <div class='com-stick-content'></div>
+*   <div class='com-stick-root-footer'></div>
 *</div>
 *<div class='com-stick-footer'></div>
 */
+// 固定底部样式
 %stick-root{
     clear: both;
     min-height: 100%;
@@ -72,15 +73,18 @@
     position: relative;  
 }
 
-@mixin sticky-footer($footer-height) {
-  .com-stick-root {
+@mixin sticky-footer($footer-height, $root-selector: unquote(".com-stick-root"), $root-footer-selector: unquote(".com-stick-root-footer"), $footer-selector: unquote(".com-stick-footer")) {
+  html, body {
+    height: 100%;
+  }
+  #{$root-selector} {
     @extend %stick-root;
     margin-bottom: -$footer-height;
-    .com-stick-content {
-      // height: $footer-height;
+    #{$root-footer-selector} {
+      height: $footer-height;
     }
   }
-  .com-stick-footer {
+  #{$footer-selector} {
     @extend %stick-footer;
     height: $footer-height;
   }

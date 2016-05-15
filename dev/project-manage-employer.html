@@ -2,70 +2,73 @@
 <% include ./publicTpl/head-project.html %>
 <!-- head.html end-->
 <body>
-<!-- header.html -->
-<% include ./publicTpl/header.html %>
-<!-- header.html end-->
+<div class="stick-root">
+	<!-- header.html -->
+	<% include ./publicTpl/header.html %>
+	<!-- header.html end-->
 
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-            <li>
-              <a href=""> Projects</a>
-            </li>
-            <li>
-              <a href="#">发起的任务</a>
-            </li>
-      	</ul>
-	</div>
-</div>
-<section class='com-main'>
-	<div class="container container--proList">
-		<div class="proList-content">
-			
-			<!-- 主要内容  雇主视角-->
-			<section class='proList-section section--employer-view active'>
-				<div class='employer-view'>
-					<!-- 主要内容 -->
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs nav-tabs-custom-blue">
-						<li role="presentation" class="active">
-							<a href="#open-for-bidding" data-toggle="tab">Open for Bidding</a>
-						</li>
-						<li role="presentation">
-							<a href="#order-placing" data-toggle="tab">Order placing</a>
-						</li>
-						<li role="presentation">
-							<a href="#work-in-progress" data-toggle="tab">Work in Progress</a>
-						</li>
-						<li role="presentation">
-							<a href="#past-project" data-toggle="tab">Past Project</a>
-						</li>
-					</ul>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-						
-						<!-- open-for-bidding -->
-						<% include ./projectTpl/e_open-for-bidding.html %>
-
-						<!-- order-placing -->
-						<% include ./projectTpl/e_order-placing.html %>
-
-						<!-- work in progress -->
-						<% include ./projectTpl/e_work-in-progress.html %>
-
-						<!-- past-project -->
-						<% include ./projectTpl/e_past-project.html %>
-						
-					</div>
-				</div>
-			</section>
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+	            <li>
+	              <a href=""> Projects</a>
+	            </li>
+	            <li>
+	              <a href="#">发起的任务</a>
+	            </li>
+	      	</ul>
 		</div>
 	</div>
-</section>
+	<section class='com-main'>
+		<div class="container container--proList">
+			<div class="proList-content">
+				
+				<!-- 主要内容  雇主视角-->
+				<section class='proList-section section--employer-view active'>
+					<div class='employer-view'>
+						<!-- 主要内容 -->
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs nav-tabs-custom-blue">
+							<li role="presentation" class="active">
+								<a href="#open-for-bidding" data-toggle="tab">Open for Bidding</a>
+							</li>
+							<li role="presentation">
+								<a href="#order-placing" data-toggle="tab">Order placing</a>
+							</li>
+							<li role="presentation">
+								<a href="#work-in-progress" data-toggle="tab">Work in Progress</a>
+							</li>
+							<li role="presentation">
+								<a href="#past-project" data-toggle="tab">Past Project</a>
+							</li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							
+							<!-- open-for-bidding -->
+							<% include ./projectTpl/e_open-for-bidding.html %>
+
+							<!-- order-placing -->
+							<% include ./projectTpl/e_order-placing.html %>
+
+							<!-- work in progress -->
+							<% include ./projectTpl/e_work-in-progress.html %>
+
+							<!-- past-project -->
+							<% include ./projectTpl/e_past-project.html %>
+							
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<div class="stick-root-footer"></div>
+</div>
 
 <!-- footer.html -->
 <% include ./publicTpl/footer.html %>

@@ -22,6 +22,7 @@
 </head>
 <!-- head.html end-->
 <body>
+<div class="stick-root">
 <!-- header.html -->
 	<!-- /header -->
 	<header class="header" id='vue-header'>
@@ -356,38 +357,39 @@
 	</div>
 </div>
 <section class='com-main'>
-<div class="container">
-	<div class="loading2">
-		<i></i>
-	</div>
-	<div class="message-detail" style='display: none'>	
-		<div class="message-detail-chat">
-			<header class='message-detail-header'>
-				<h2 class='message-detail-title'>与 John Doe 聊天中</h2>
-				<a href="" class='message-detail-delete'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-			</header><!-- /header -->
-			<div class='message-detail-content'>
+	<div class="container">
+		<div class="loading2">
+			<i></i>
+		</div>
+		<div class="message-detail" style='display: none'>	
+			<div class="message-detail-chat">
+				<header class='message-detail-header'>
+					<h2 class='message-detail-title'>与 John Doe 聊天中</h2>
+					<a href="" class='message-detail-delete'><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+				</header><!-- /header -->
+				<div class='message-detail-content'>
 
-			</div>
-			<div class="emoji-input" style='position: relative;'>
-				<div class="input-group">
-					<input type="text" name="" value="" placeholder="" class='form-control' id='js_char-input'>
-					<div class="input-group-btn">
-						<a href="javascript;'" class='btn btn-secondary' title='表情' id='js_emojiBtn'><i class="fa fa-smile-o" aria-hidden="true"></i> </a>
-						<button type="button" class='btn btn-primary' id='js_message-reply'>回复</button>
-					</div>
 				</div>
-				<div id='emoji' class='connection-emoji'>
+				<div class="emoji-input" style='position: relative;'>
+					<div class="input-group">
+						<input type="text" name="" value="" placeholder="" class='form-control' id='js_char-input'>
+						<div class="input-group-btn">
+							<a href="javascript;'" class='btn btn-secondary' title='表情' id='js_emojiBtn'><i class="fa fa-smile-o" aria-hidden="true"></i> </a>
+							<button type="button" class='btn btn-primary' id='js_message-reply'>回复</button>
+						</div>
+					</div>
+					<div id='emoji' class='connection-emoji'>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</section>
+	<div class="stick-root-footer"></div>
 </div>
 
-</section>
-
 <!-- footer.html -->
-<footer class='public-footer'>
+<footer class='stick-footer public-footer'>
 <div class="container" style='background: #303030;'>
 <div class="row footer-nav">
 	<div class="col-xs-2 footer-nav-list">

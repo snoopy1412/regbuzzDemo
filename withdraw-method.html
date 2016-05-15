@@ -22,6 +22,7 @@
 <!-- head.html end-->
 
 <body>
+<div class="stick-root">
 <!-- header.html -->
 	<!-- /header -->
 	<header class="header" id='vue-header'>
@@ -346,54 +347,57 @@
 
 <!-- /header -->
 <section class='com-main'>
-<div class="container">
-	<div class="panel panel-default">
-		<div class="panel-heading">
-			<h1>Paypal提款</h1>
-		</div>
-		<div class="panel-body">
-			<div class="row">
-				<div class="col-xs-6">
-					<form>
-						<div class="form-group">
-							<label>Paypal电子邮箱账号</label>
-							<input type="text" class='form-control'>
-						</div>
-						<div class="form-group">
-							<label>取款金额</label>
-							<div class="input-group">
-						      <div class="input-group-addon">$</div>
-						      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-						    </div>
-							<p>注意：最小金额$30 USD.最大金额 $10000 USD</p>
-						</div>
-						<div class="form-group">
-							<div class="alert alert-info">
-								<strong>很抱歉，</strong>您没有足够的余额用于取款。
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h1>Paypal提款</h1>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-xs-6">
+						<form>
+							<div class="form-group">
+								<label>Paypal电子邮箱账号</label>
+								<input type="text" class='form-control'>
 							</div>
-						</div>
-						<button class='btn btn-primary'>取款</button>
-					</form>
-				</div>
-				<div class="col-xs-6">
-					<div class="text-center">
-            			<p class="bold">您将收到：</p>
-			            <p style="font-size:24px">$0.00 USD</p>
-			            <div style="font-size:12px; display:none;">
-			                <div>Note: A withdrawal fee of</div> <span id="feeAmount">$0.00 USD</span> is charged
-			            </div>
-			            <div>注意：无取款费</div>
-			        </div>
+							<div class="form-group">
+								<label>取款金额</label>
+								<div class="input-group">
+							      <div class="input-group-addon">$</div>
+							      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+							    </div>
+								<p>注意：最小金额$30 USD.最大金额 $10000 USD</p>
+							</div>
+							<div class="form-group">
+								<div class="alert alert-info">
+									<strong>很抱歉，</strong>您没有足够的余额用于取款。
+								</div>
+							</div>
+							<button class='btn btn-primary'>取款</button>
+						</form>
+					</div>
+					<div class="col-xs-6">
+						<div class="text-center">
+	            			<p class="bold">您将收到：</p>
+				            <p style="font-size:24px">$0.00 USD</p>
+				            <div style="font-size:12px; display:none;">
+				                <div>Note: A withdrawal fee of</div> <span id="feeAmount">$0.00 USD</span> is charged
+				            </div>
+				            <div>注意：无取款费</div>
+				        </div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </section>
+	<div class="stick-root-footer"></div>
+</div>
+
 
 <!-- 页脚部分 -->
 <!-- footer.html -->
-<footer class='public-footer'>
+<footer class='stick-footer public-footer'>
 <div class="container" style='background: #303030;'>
 <div class="row footer-nav">
 	<div class="col-xs-2 footer-nav-list">
