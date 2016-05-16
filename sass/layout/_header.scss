@@ -333,9 +333,8 @@
     }
     .nav-side
     {   
-
         background-color: #3f3f3f;
-        z-index: 2;
+        z-index: 100;
         .navbar-nav>li{
             &>a{
                 height: 50px;

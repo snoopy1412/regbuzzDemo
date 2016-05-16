@@ -58,7 +58,8 @@
 <!-- Add comment -->
 <div id="past-success-comment" style='display: none;padding: 10px'>
 	<div class="form-group">
-		<textarea name="" class='form-control' id='js_411-content' rows='5' cols='100'></textarea>
+		<!-- <textarea name="" class='form-control' id='js_411-content' rows='5' cols='100'></textarea> -->
+		<wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 		<p class='description'>
 			注1：最大输入字符不能超过1000
 		</p>
@@ -76,7 +77,8 @@
 		<div class="form-group">
 			<label for="" class="col-sm-3 control-label">Dispute Description</label>
 			<div class="col-sm-8">
-		      <textarea name="" class='form-control' id="js_dispute-description-4" rows="5"></textarea>
+		      <!-- <textarea name="" class='form-control' id="js_dispute-description-4" rows="5"></textarea> -->
+		      <wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 		    </div>
 		</div>
 	</div>

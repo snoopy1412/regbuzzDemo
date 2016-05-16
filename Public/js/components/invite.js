@@ -1,5 +1,5 @@
-define(['jquery', 'Vue', 'library', 'layerInit'], function($, Vue, library) {
-	alert(1)
+define(['jquery', 'Vue', 'library', 'layerInit'], function($, Vue, library, layerInit) {
+
 	function Invite(node, options) {
 		this.node = node;
 		this.options = $.extend({}, Edit.defaluts, options);
@@ -16,7 +16,6 @@ define(['jquery', 'Vue', 'library', 'layerInit'], function($, Vue, library) {
 	Invite.prototype = {
 		constructor: Message,
 		init: function() {
-			alert(1)
 			var That = this,
 				library = library.action;
 
@@ -147,8 +146,8 @@ define(['jquery', 'Vue', 'library', 'layerInit'], function($, Vue, library) {
 		}
 	}
 
-	return{
-		Invite : Invite
+	return {
+		Invite: Invite
 	}
 
 })

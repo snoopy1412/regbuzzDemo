@@ -2,7 +2,8 @@
 <% include ./publicTpl/head-discovery.html %>
 <!-- head.html end-->
 <body>
-<link rel="stylesheet" type="text/css" href="./Public/plugins/jRange/jquery.range.css">
+<link rel="stylesheet" type="text/css" href="./Public/plugins/rangeSlider/css/ion.rangeSlider.css">
+<link rel="stylesheet" type="text/css" href="./Public/plugins/rangeSlider/css/ion.rangeSlider.skinFlat.css">
 <div class="stick-root">
 	<!-- header.html -->
 	<% include ./publicTpl/header.html %>
@@ -54,10 +55,10 @@
 						<div class="list-aside-item list-aside-item-fixed list-fixed-projects panel panel-default">
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Budget (fixed price)</h4>
-								<div class='form-group' style='margin: 30px 5px'>
-									<input type="hidden" class="slider-input" value='20,40000'/>
+								<div class='form-group'>
+									<input type="text" id='project-budget' name='project-budget' value=''/>
 								</div>
-								<div class='price text-center'>$<span class='budget-min'>20</span> - $<span class='budget-max'>400000</span> </div>
+								<div class='price text-center'>$<span id='project-budget-min'>20</span> - $<span id='project-budget-max'>400000</span> </div>
 							</div>
 						</div>
 
@@ -259,8 +260,8 @@
 			</div>
 		</div>
 	</section>
-		<div class="stick-root-footer"></div>
-	</div>
+	<div class="stick-root-footer"></div>
+</div>
 <!-- header.html -->
 <% include ./publicTpl/footer.html %>
 <!-- header.html end-->

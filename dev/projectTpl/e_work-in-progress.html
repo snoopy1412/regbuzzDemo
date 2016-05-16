@@ -150,7 +150,8 @@
 	<div class="divider divider-horizontal">or</div>
 	<div class="form-group">
 	<label for="work-refund-reason_add">补充退款原因</label>
-		<textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea>
+		<!-- <textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea> -->
+		<wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 	</div>
 </div>
 <!-- work extend end -->
@@ -164,7 +165,8 @@
 	</div>
 	<div class="divider divider-horizontal">服务评价</div>
 	<div class="form-group">
-		<textarea name="" class='form-control' id='js_351-content' rows='5'></textarea>
+		<!-- <textarea name="" class='form-control' id='js_351-content' rows='5'></textarea> -->
+		<wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 	</div>
 </div>			
 <!-- work-payed-reviews end -->

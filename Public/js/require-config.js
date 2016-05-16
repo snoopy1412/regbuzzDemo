@@ -8,7 +8,7 @@ require.config({
     bootstrap: './vendor/bootstrap.min', // bootstrap 插件
 
     // plugins 区域
-    jRange: '../plugins/jRange/jquery.range-min', // 自定义滑竿
+    ionRangeSlider : '../plugins/rangeSlider/ion.rangeSlider.min', // 更强大的滑竿
     summernote: '../plugins/summernote/summernote.min', //第三方富文本编辑器
     WebUploader: '../plugins/webuploader/webuploader', //第三方上传插件
     moment: '../plugins/datetimepicker/moment.min', // 时间选择依赖
@@ -64,8 +64,8 @@ require.config({
     "velocity": {
       deps: ["jquery"]
     },
-    "jRange": {
-      deps: ["jquery"]
+    'ionRangeSlider':{
+      deps:["jquery"]
     },
     "raty": {
       deps: ["jquery"]

@@ -22,10 +22,11 @@
 </head>
 <!-- head.html end-->
 <body>
-<link rel="stylesheet" type="text/css" href="./Public/plugins/jRange/jquery.range.css">
+<link rel="stylesheet" type="text/css" href="./Public/plugins/rangeSlider/css/ion.rangeSlider.css">
+<link rel="stylesheet" type="text/css" href="./Public/plugins/rangeSlider/css/ion.rangeSlider.skinFlat.css">
 <div class="stick-root">
-<!-- header.html -->
-	<!-- /header -->
+	<!-- header.html -->
+		<!-- /header -->
 	<header class="header" id='vue-header'>
 		<nav class="navbar">
 			<div class="container">
@@ -344,406 +345,403 @@
 			</div>
 		</nav>
 </header>
-<!-- header.html end-->
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-	        <li>
-	          <a href=""> Discovery</a>
-	        </li>
-            <li>
-              <a href="#">Find a Provider</a>
-            </li>
-      	</ul>
-	</div>
-</div>
-<section class='com-main com-main--list'>
-	
-	<div class="container" id='vue-list'>	
-		<div class="row mt-10">
-
-			<!-- 侧边栏 -->
-			<!-- public-list.html -->
-			<div class="col-xs-3 com-aside">
-				<aside class='list-aside'>
-
-					<!-- tab -->
-					<section class='list-aside-item list-aside-item-method'>
-						<div class="list-group list-aside-item-method-list">
-						  <a href="#" class="list-group-item">
-						   	<i class="fa fa-search"></i><span>All</span>
-						  </a>
-						  <a href="#" class="list-group-item "><i class="fa fa-suitcase"></i><span>Projects</span></a>
-						  <a href="#" class="list-group-item active"><i class="fa fa-user"></i><span>Providers</span></a>  
-						</div>						
-					</section>
-
-					<!-- 分类 -->
-					<div class="list-aside-item panel panel-default">
-						<div class="panel-body">
-							<h4 class='list-aside-item-title'>Category</h4>
-							<select class='form-control'>
-								<option id="cn1-0" value="">All Categories</option>
-							</select>
-						</div>
-					</div>
-
-					<!-- 技能 -->
-					<div class="list-aside-item panel panel-default">
-						<div class="panel-body">
-							<h4 class='list-aside-item-title'>Skill</h4>
-							<div class="form-group">
-								<input type="text" name="" value="" placeholder="选择技能" class='form-control'>
-							</div>
-						</div>
-					</div>
-
-					<!-- 国家 -->
-					<div class="list-aside-item panel panel-default">
-						<div class="panel-body">
-							<h4 class='list-aside-item-title'>Country</h4>
-							
-							<!-- 加载select2组件，此组件来自于 components/Select2.vue -->
-							<select2 :origin-data='originData'></select2>
-							
-						</div>
-					</div>
-
-					<!-- 预算 -->
-					<div class="list-aside-item list-aside-item-fixed list-fixed-providers panel panel-default">
-						<div class="panel-body ">
-							<h4 class='list-aside-item-title'>时薪</h4>
-							<div class='form-group' style='margin: 30px 5px'>
-								<input type="hidden" class="slider-input" value="20,100" />
-							</div>
-							<div class='price text-center'>$<span class='budget-min'>20</span> - $<span class='budget-max'>100</span> </div>
-							
-						</div>
-					</div>
-
-					<!-- 评分 -->
-					<div class="list-aside-item list-aside-item-grade panel panel-default">
-						<div class="panel-body form-inline">
-							<h4 class='list-aside-item-title'>评分</h4>
-							<span class="list-grade-choose"></span>
-						</div>
-					</div>
-
-					<!-- 语言 -->
-					<div class="list-aside-item list-aside-item-language panel panel-default"  id='vue-list-languages'>
-						<div class="panel-body">
-							<h4 class='list-aside-item-title'>Language</h4>
-							<ul class='checkbox-list'>		
-								<li class="checkbox" v-for='language in languagesData |limitBy maxSize'>
-						        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
-									  <input type="checkbox" id='{{language.abbr}}'>
-									  <span class="c-indicator"></span>
-									  <span v-text='language.text'></span>
-									</label>
-								</li>
-							</ul>
-							<a href="javascript:;" title="more" @click='isShowLanguages = !isShowLanguages'><span v-text='toggleText'></span> <i class="fa" :class="{'fa-angle-down':!isShowLanguages,'fa-angle-up':isShowLanguages}"></i></a>
-						</div>
-					</div>
-
-					<!-- 在线 -->
-					<div class="list-aside-item list-aside-item-online panel panel-default">
-						<div class="panel-body">
-							<h4 class='list-aside-item-title'>在线</h4>
-							<ul class='checkbox-list'>
-								<li class="checkbox">
-						        	<label class="c-input c-checkbox">
-									  <input type="checkbox">
-									  <span class="c-indicator"></span>
-									  Online providers only
-									</label>
-								</li>
-							</ul>
-						</div>
-					</div>
-					
-					
-				</aside>
-			</div>
-			<!-- public-list.html end-->
-
-			<!-- 主要内容部分 -->
-			<div class="col-xs-9 com-content">
-				<!-- 搜索框 -->
-				<form class="list-search clearfix">
-					<div class="input-group">
-						<input type="text" name="" value="" placeholder="" class='form-control'>
-						<div class='input-group-btn'>
-							<button type="" class='btn btn-primary'>search</button>
-						</div>
-					</div>
-				</form>	
-				<article class='list-main'>
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<section class='list-bar'>
-							<div class="row">
-								<div class="col-xs-4">
-									<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
-								</div>
-								<div class="col-xs-8">
-									<div class="select-menu form-inline">		
-										<label>
-											Sort by :
-										</label>
-										<select class="form-control">
-										   <option value="">发布时间</option>
-											  <option value="">截止时间</option>
-											  <option value="">竞标者人数</option>
-											  <option value="">价格</option>
-										</select>
-								    </div>
-								</div>
-							</div>									
-						</section>
-					</div>
-					<div class="panel-body">
-						<section class="list-results clearfix">
-							<ul class="list-peoples list-unstyled">
-							<li class="list-results-item row list-peoples-item hoverable">
-								<div class="col-xs-2 list-peoples-img">
-									<img src="./Public/img/index/servers/13.jpg" alt="">
-
-									<!-- 已关注的状态 -->
-									<button type="button" class='btn btn-danger btn--save' disabled="true" data-followed='1' data-provideid='5'>Followed</button>
-
-								</div>
-								<div class="col-xs-8 list-peoples-info">
-									<h3 class='list-item-title list-peoples-item-title'>
-									<a href="" title="">Aaron Su</a>
-									</h3>
-									<p class='list-peoples-position'>
-										GHS Consultant in <a href="" title="">CIRS</a>
-									</p>
-									
-									<p class='list-peoples-item-bref'> Augmented reality app programmer for Android & iOS.</p>
-									<div class='list-peoples-item-grade clearfix'>
-										<div class="grade-item vertical-middle pull-left" data-score='4.5'></div>
-										 <a href='' class='vertical-middle'>33 Reviews</a>     			
-									</div>
-									<p class='list-peoples-item-skills'>
-										<a href="" title="" class='label label-default'>GHS</a>
-										<a href='' class='label label-default'>Chemical</a>
-										<a href='' class='label label-default'>HSF</a>
-										<a href='' class='label label-default'>REACH</a>
-										<a href='' class='label label-default'>English</a>
-									</p>
-								</div>
-								<div class="col-xs-2 list-peoples-item-aside">
-									<a href="" title="" class='btn btn-primary btn--hire' data-provideid='5'>Hire me </a>
-									<p class='charging-standard'>
-										<sup>$</sup>858
-										<span>USD/hour</span>
-									</p>
-								</div>
-							</li>
-							<li class="list-results-item row list-peoples-item hoverable">
-								<div class="col-xs-2 list-peoples-img">
-									<img src="./Public/img/index/servers/16.jpg" alt="">
-									
-									<!-- 未关注的状态 -->
-									<button type="button" class='btn btn-danger btn--save' data-followed='0' data-provideid='6'>Follow</button>
-								</div>
-								<div class="col-xs-8 list-peoples-info">
-									<h3 class='list-item-title list-peoples-item-title'>
-									<a href="" title="">Steven Jobs</a>
-									</h3>
-									<p class='list-peoples-position'>
-										GHS Consultant in <a href="" title="">CIRS</a>
-									</p>
-									<p class='list-peoples-item-bref'>I am in to design browser compatible SharePoint sites (Master Pages, CSS, Page Layouts), customizing (Content Management) and development of custom solutions for SharePoint (Web Parts, Events, Workflows etc). Experienced in all the SharePoint versions and find experience details below,1. SharePoint 2013 & Office 3 ...</p>
-									<div class='list-peoples-item-grade clearfix'>		
-										<div class="grade-item vertical-middle pull-left" data-score='3.5' data-userid='123'></div>
-										 <a href='' class='vertical-middle'>33 Reviews</a>     			
-									</div>
-									<p class='list-peoples-item-skills'>
-										<a href="" title="" class='label label-default'>GHS</a>
-										<a href='' class='label label-default'>Chemical</a>
-										<a href='' class='label label-default'>HSF</a>
-										<a href='' class='label label-default'>REACH</a>
-										
-									</p>
-								</div>
-								<div class="col-xs-2 list-peoples-item-aside">
-									<a href="" title="" class='btn btn-primary btn--hire' data-provideid='6'>Hire me </a>
-									<p class='charging-standard'>
-										<sup>$</sup>858
-										<span>USD/hour</span>
-									</p>
-								</div>
-							</li>
-						</ul>
-						</section>
-					<nav class='text-center'>
-						<ul class="pagination">
-							<li class="disabled">
-								<a href="#" aria-label="Previous">
-									<span>&lt; Previous</span>
-								</a>
-							</li>
-							<li class="active">
-								<a href="#">1</a>
-							</li>
-							<li>
-								<a href="#">2</a>
-							</li>
-							<li>
-								<a href="#">3</a>
-							</li>
-							<li>
-								<a href="#">4</a>
-							</li>
-							<li>
-								<a href="#">5</a>
-							</li>
-							<li>
-								<a href="#" aria-label="Next">
-									<span>Next &gt;</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-					</div>
-				</div>
-
-				</article>
-			</div> 
+	<!-- header.html end-->
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+		        <li>
+		          <a href=""> Discovery</a>
+		        </li>
+	            <li>
+	              <a href="#">Find a Provider</a>
+	            </li>
+	      	</ul>
 		</div>
 	</div>
-</section>
+	<section class='com-main com-main--list'>	
+		<div class="container" id='vue-list'>	
+			<div class="row mt-10">
+
+				<!-- 侧边栏 -->
+				<!-- public-list.html -->
+				<div class="col-xs-3 com-aside">
+					<aside class='list-aside'>
+
+						<!-- tab -->
+						<section class='list-aside-item list-aside-item-method'>
+							<div class="list-group list-aside-item-method-list">
+							  <a href="#" class="list-group-item">
+							   	<i class="fa fa-search"></i><span>All</span>
+							  </a>
+							  <a href="#" class="list-group-item "><i class="fa fa-suitcase"></i><span>Projects</span></a>
+							  <a href="#" class="list-group-item active"><i class="fa fa-user"></i><span>Providers</span></a>  
+							</div>						
+						</section>
+
+						<!-- 分类 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Category</h4>
+								<select class='form-control'>
+									<option id="cn1-0" value="">All Categories</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- 技能 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Skill</h4>
+								<div class="form-group">
+									<input type="text" name="" value="" placeholder="选择技能" class='form-control'>
+								</div>
+							</div>
+						</div>
+
+						<!-- 国家 -->
+						<div class="list-aside-item panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Country</h4>
+								
+								<!-- 加载select2组件，此组件来自于 components/Select2.vue -->
+								<select2 :origin-data='originData'></select2>
+								
+							</div>
+						</div>
+
+						<!-- 预算 -->
+						<div class="list-aside-item list-aside-item-fixed list-fixed-providers panel panel-default">
+							<div class="panel-body ">
+								<h4 class='list-aside-item-title'>时薪</h4>
+								<div class='form-group'>
+									<input type="text" id='provider-budget' name='provider-budget' value=''/>
+								</div>
+								<div class='price text-center'>$<span id='provider-budget-min'>20</span> - $<span id='provider-budget-max'>100</span> </div>
+								
+							</div>
+						</div>
+
+						<!-- 评分 -->
+						<div class="list-aside-item list-aside-item-grade panel panel-default">
+							<div class="panel-body form-inline">
+								<h4 class='list-aside-item-title'>评分</h4>
+								<span class="list-grade-choose"></span>
+							</div>
+						</div>
+
+						<!-- 语言 -->
+						<div class="list-aside-item list-aside-item-language panel panel-default"  id='vue-list-languages'>
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>Language</h4>
+								<ul class='checkbox-list'>		
+									<li class="checkbox" v-for='language in languagesData |limitBy maxSize'>
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
+										  <input type="checkbox" id='{{language.abbr}}'>
+										  <span class="c-indicator"></span>
+										  <span v-text='language.text'></span>
+										</label>
+									</li>
+								</ul>
+								<a href="javascript:;" title="more" @click='isShowLanguages = !isShowLanguages'><span v-text='toggleText'></span> <i class="fa" :class="{'fa-angle-down':!isShowLanguages,'fa-angle-up':isShowLanguages}"></i></a>
+							</div>
+						</div>
+
+						<!-- 在线 -->
+						<div class="list-aside-item list-aside-item-online panel panel-default">
+							<div class="panel-body">
+								<h4 class='list-aside-item-title'>在线</h4>
+								<ul class='checkbox-list'>
+									<li class="checkbox">
+							        	<label class="c-input c-checkbox">
+										  <input type="checkbox">
+										  <span class="c-indicator"></span>
+										  Online providers only
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						
+					</aside>
+				</div>
+				<!-- public-list.html end-->
+
+				<!-- 主要内容部分 -->
+				<div class="col-xs-9 com-content">
+					<!-- 搜索框 -->
+					<form class="list-search clearfix">
+						<div class="input-group">
+							<input type="text" name="" value="" placeholder="" class='form-control'>
+							<div class='input-group-btn'>
+								<button type="" class='btn btn-primary'>search</button>
+							</div>
+						</div>
+					</form>	
+					<article class='list-main'>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<section class='list-bar'>
+								<div class="row">
+									<div class="col-xs-4">
+										<p class='result'><strong>1,407</strong> results for <strong>aaron</strong></p>	
+									</div>
+									<div class="col-xs-8">
+										<div class="select-menu form-inline">		
+											<label>
+												Sort by :
+											</label>
+											<select class="form-control">
+											   <option value="">发布时间</option>
+												  <option value="">截止时间</option>
+												  <option value="">竞标者人数</option>
+												  <option value="">价格</option>
+											</select>
+									    </div>
+									</div>
+								</div>									
+							</section>
+						</div>
+						<div class="panel-body">
+							<section class="list-results clearfix">
+								<ul class="list-peoples list-unstyled">
+								<li class="list-results-item row list-peoples-item hoverable">
+									<div class="col-xs-2 list-peoples-img">
+										<img src="./Public/img/index/servers/13.jpg" alt="">
+
+										<!-- 已关注的状态 -->
+										<button type="button" class='btn btn-danger btn--save' disabled="true" data-followed='1' data-provideid='5'>Followed</button>
+
+									</div>
+									<div class="col-xs-8 list-peoples-info">
+										<h3 class='list-item-title list-peoples-item-title'>
+										<a href="" title="">Aaron Su</a>
+										</h3>
+										<p class='list-peoples-position'>
+											GHS Consultant in <a href="" title="">CIRS</a>
+										</p>
+										
+										<p class='list-peoples-item-bref'> Augmented reality app programmer for Android & iOS.</p>
+										<div class='list-peoples-item-grade clearfix'>
+											<div class="grade-item vertical-middle pull-left" data-score='4.5'></div>
+											 <a href='' class='vertical-middle'>33 Reviews</a>     			
+										</div>
+										<p class='list-peoples-item-skills'>
+											<a href="" title="" class='label label-default'>GHS</a>
+											<a href='' class='label label-default'>Chemical</a>
+											<a href='' class='label label-default'>HSF</a>
+											<a href='' class='label label-default'>REACH</a>
+											<a href='' class='label label-default'>English</a>
+										</p>
+									</div>
+									<div class="col-xs-2 list-peoples-item-aside">
+										<a href="" title="" class='btn btn-primary btn--hire' data-provideid='5'>Hire me </a>
+										<p class='charging-standard'>
+											<sup>$</sup>858
+											<span>USD/hour</span>
+										</p>
+									</div>
+								</li>
+								<li class="list-results-item row list-peoples-item hoverable">
+									<div class="col-xs-2 list-peoples-img">
+										<img src="./Public/img/index/servers/16.jpg" alt="">
+										
+										<!-- 未关注的状态 -->
+										<button type="button" class='btn btn-danger btn--save' data-followed='0' data-provideid='6'>Follow</button>
+									</div>
+									<div class="col-xs-8 list-peoples-info">
+										<h3 class='list-item-title list-peoples-item-title'>
+										<a href="" title="">Steven Jobs</a>
+										</h3>
+										<p class='list-peoples-position'>
+											GHS Consultant in <a href="" title="">CIRS</a>
+										</p>
+										<p class='list-peoples-item-bref'>I am in to design browser compatible SharePoint sites (Master Pages, CSS, Page Layouts), customizing (Content Management) and development of custom solutions for SharePoint (Web Parts, Events, Workflows etc). Experienced in all the SharePoint versions and find experience details below,1. SharePoint 2013 & Office 3 ...</p>
+										<div class='list-peoples-item-grade clearfix'>		
+											<div class="grade-item vertical-middle pull-left" data-score='3.5' data-userid='123'></div>
+											 <a href='' class='vertical-middle'>33 Reviews</a>     			
+										</div>
+										<p class='list-peoples-item-skills'>
+											<a href="" title="" class='label label-default'>GHS</a>
+											<a href='' class='label label-default'>Chemical</a>
+											<a href='' class='label label-default'>HSF</a>
+											<a href='' class='label label-default'>REACH</a>
+											
+										</p>
+									</div>
+									<div class="col-xs-2 list-peoples-item-aside">
+										<a href="" title="" class='btn btn-primary btn--hire' data-provideid='6'>Hire me </a>
+										<p class='charging-standard'>
+											<sup>$</sup>858
+											<span>USD/hour</span>
+										</p>
+									</div>
+								</li>
+							</ul>
+							</section>
+						<nav class='text-center'>
+							<ul class="pagination">
+								<li class="disabled">
+									<a href="#" aria-label="Previous">
+										<span>&lt; Previous</span>
+									</a>
+								</li>
+								<li class="active">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">5</a>
+								</li>
+								<li>
+									<a href="#" aria-label="Next">
+										<span>Next &gt;</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+						</div>
+					</div>
+
+					</article>
+				</div> 
+			</div>
+		</div>
+	</section>
 	<div class="stick-root-footer"></div>
 </div>
 
-
 <!-- footer.html -->
 <footer class='stick-footer public-footer'>
-<div class="container" style='background: #303030;'>
-<div class="row footer-nav">
-	<div class="col-xs-2 footer-nav-list">
-		<h4>Company</h4>
-		<div class="footer-divider"></div>
-		<ul class='list-unstyled'>
-			<li>
-				<a href="">About</a>
-			</li>
-			<li>
-				<a href="">Contact</a>
-			</li>
-			<li>
-				<a href="">Jobs</a>
-			</li>
-			<li>
-				<a href="">Team</a>
-			</li>
-			<li>
-				<a href="">Press releases</a>
-			</li>
-			<li>
-				<a href="">Testimonials</a>
-			</li>
-			<li>
-				<a href="">Terms of Service</a>
-			</li>
-			<li>
-				<a href="">Privacy Policy</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-2 footer-nav-list">
-		<h4>Resource</h4>
-		<div class="footer-divider"></div>
-		<ul class='list-unstyled'>
-			<li>
-				<a href="">Videos</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-2 footer-nav-list">
-		<h4>Support</h4>
-		<div class="footer-divider"></div>
-		<ul class='list-unstyled'>
-			<li>
-				<a href="">Questions</a>
-			</li>
-			<li>
-				<a href="">Blogs</a>
-			</li>
-			<li>
-				<a href="">Language support</a>
-			</li>
-			<li>
-				<a href="">FAQ</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-2 footer-nav-list">
-		<h4>Social</h4>
-		<div class="footer-divider"></div>
-		<ul class='social-icon-list'>
-			<li class='social-icon'>
-				<span class='fa fa-linkedin'></span>
-				<a href="" title='Linkedin'>linkedin</a>
-			</li>
-			<li class='social-icon'>
-				<span class='fa fa-twitter'></span>
-				<a href="" title='twitter'>twitter</a>
-			</li>
-			<li class='social-icon'>
-				<span class='fa fa-facebook-official'></span>
-				<a href="" title='Facebook'>facebook</a>
-			</li>
-			<li class='social-icon'>
-				<span class='fa fa-google-plus'></span>
-				<a href="" title='Google+'>google+</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-4 footer-nav-list">
-		<h4>Message</h4>
-		<div class="footer-divider"></div>
-		<form action="" class='footer-contact'>
-			<div class="form-group">
-				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
-			<div class="form-group">
-				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
-			<div class="form-group">
-				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+	<div class="container" style='background: #303030;'>
+		<div class="row footer-nav">
+			<div class="col-xs-2 footer-nav-list">
+				<h4>Company</h4>
+				<div class="footer-divider"></div>
+				<ul class='list-unstyled'>
+					<li>
+						<a href="">About</a>
+					</li>
+					<li>
+						<a href="">Contact</a>
+					</li>
+					<li>
+						<a href="">Jobs</a>
+					</li>
+					<li>
+						<a href="">Team</a>
+					</li>
+					<li>
+						<a href="">Press releases</a>
+					</li>
+					<li>
+						<a href="">Testimonials</a>
+					</li>
+					<li>
+						<a href="">Terms of Service</a>
+					</li>
+					<li>
+						<a href="">Privacy Policy</a>
+					</li>
+				</ul>
 			</div>
-			<div class="form-group">
-				<input type="submit" value='Submit' class='btn btn-secondary'></div>
-		</form>
+			<div class="col-xs-2 footer-nav-list">
+				<h4>Resource</h4>
+				<div class="footer-divider"></div>
+				<ul class='list-unstyled'>
+					<li>
+						<a href="">Videos</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-2 footer-nav-list">
+				<h4>Support</h4>
+				<div class="footer-divider"></div>
+				<ul class='list-unstyled'>
+					<li>
+						<a href="">Questions</a>
+					</li>
+					<li>
+						<a href="">Blogs</a>
+					</li>
+					<li>
+						<a href="">Language support</a>
+					</li>
+					<li>
+						<a href="">FAQ</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-2 footer-nav-list">
+				<h4>Social</h4>
+				<div class="footer-divider"></div>
+				<ul class='social-icon-list'>
+					<li class='social-icon'>
+						<span class='fa fa-linkedin'></span>
+						<a href="" title='Linkedin'>linkedin</a>
+					</li>
+					<li class='social-icon'>
+						<span class='fa fa-twitter'></span>
+						<a href="" title='twitter'>twitter</a>
+					</li>
+					<li class='social-icon'>
+						<span class='fa fa-facebook-official'></span>
+						<a href="" title='Facebook'>facebook</a>
+					</li>
+					<li class='social-icon'>
+						<span class='fa fa-google-plus'></span>
+						<a href="" title='Google+'>google+</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-4 footer-nav-list">
+				<h4>Message</h4>
+				<div class="footer-divider"></div>
+				<form action="" class='footer-contact'>
+					<div class="form-group">
+						<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+					<div class="form-group">
+						<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+					<div class="form-group">
+						<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+					</div>
+					<div class="form-group">
+						<input type="submit" value='Submit' class='btn btn-secondary'></div>
+				</form>
+			</div>
+		</div>
+		<div class="footer-divider"></div>
+		<div class="row footer-bottom">
+			<div class="col-xs-6">
+				<ul class='footer-brand clearfix'>
+					<li class='footer-brand-logo'>
+						<img src="./Public/img/index/footer-logo.png" alt=""></li>
+					<li class='footer-brand-content'>
+						<p>The best product compliance platform</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-6">
+				<p class='text-right copyright'>
+					© Copyright 2015 - 2016
+					<a href="" title="">Regbuzz.com</a>
+				</p>
+			</div>
+		</div>
 	</div>
-</div>
-<div class="footer-divider"></div>
-<div class="row footer-bottom">
-	<div class="col-xs-6">
-		<ul class='footer-brand clearfix'>
-			<li class='footer-brand-logo'>
-				<img src="./Public/img/index/footer-logo.png" alt=""></li>
-			<li class='footer-brand-content'>
-				<p>The best product compliance platform</p>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-6">
-		<p class='text-right copyright'>
-			© Copyright 2015 - 2016
-			<a href="" title="">Regbuzz.com</a>
-		</p>
-	</div>
-</div>
-</div>
 </footer>
 <!-- footer.html end-->
-
 
 <!-- hire me -->
 <div class="hire-modal" id='hire-modal'>

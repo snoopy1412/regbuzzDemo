@@ -1,4 +1,8 @@
-define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, datetimepicker, tools) {
+define(['jquery', 
+	'datetimepicker', 
+	'tools', 
+	'../../../layerInit'
+	], function($, datetimepicker, tools) {
 	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
 	var resultWidth = tools.getWidth();
 	tools.bindEvent('.action_refund', function() {
@@ -79,6 +83,7 @@ define(['jquery', 'datetimepicker', 'tools', '../../../layerInit'], function($, 
 					tools.cancel(self);
 					$reason.val('');
 					$reasonAdd.val('');
+					$reasonAdd.focus();
 				}
 			})
 		})

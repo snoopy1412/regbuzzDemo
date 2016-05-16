@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   entry: './components/index.js',
   output: {
-    path: './static',
-    publicPath: '/static/',
+    path: './Public/static',
+    publicPath: '/Public/static/',
     filename: 'vue-component.js'
   },
   resolve: {

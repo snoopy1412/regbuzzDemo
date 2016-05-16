@@ -17,7 +17,7 @@ define(['jquery', 'layerInit'], function($, layerInit) {
 					},
 					beforeSend: function() {
 						$(_this).prop('disabled', true);
-						$(_this).prepend('<i class="fa fa-refresh fa-spin"></i> ')
+						$(_this).prepend('<i class="fa fa-spinner fa-spin"></i> ')
 					},
 					success: function(data) {
 						if (data === 'true') {

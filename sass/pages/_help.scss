@@ -27,30 +27,66 @@
 		color:#fff;
 	}
 }
+
+@keyframes help-card-scale {
+	0% {
+		transform:scale(1)
+	}
+	50%{
+		transform:scale(1.2)
+	}
+	100% {
+		transform:scale(1)
+	}
+}
+.help-panel-card{
+	&:hover{
+		i{
+			animation: help-card-scale 0.75s;
+		}
+	}
+}
 .help-panel-card-faqs{
 	background-color: #1bbc9d;
+	&:hover{
+		background-color:darken(#1bbc9d,10%);
+	}
 }
 .help-panel-card-guidance{
 	background-color: #e84c3d;
+	&:hover{
+		background-color:darken(#e84c3d,10%);
+	}	
 }
 .help-panel-card-fees{
 	background-color: #96a6a6;
+	&:hover{
+		background-color:darken(#96a6a6,10%);
+	}	
 }
 .help-panel-card-works{
 	background-color: #3598dc;
+	&:hover{
+		background-color:darken(#3598dc,10%);
+	}	
 }
 .help-panel-card-feedback{
 	background-color: #9c59b8;
+	&:hover{
+		background-color:darken(#9c59b8,10%);
+	}	
 }
 .help-panel-card-agreement{
 	background-color: #34495d;
+	&:hover{
+		background-color:darken(#34495d,10%);
+	}	
 }
-// .help-panel-card-contact{
-	
-// }
+
 
 .help-main{
-	// guidance
+
+// guidance
 	.guidance-content{
 		h3{
 			font-size: 14px;
@@ -70,7 +106,7 @@
 		}
 	}
 	
-	// fee
+// fee
 	.fees-section{
 		margin-bottom: 20px;
 	}
@@ -206,6 +242,21 @@
 			font-size: 1.6rem;
 			margin-top: 20px;
 		}
+	}
+
+	// feedback
+	.help-feedback-form{
+		.errors{
+			color: $brand-danger;			
+		}
+		.form-control-feedback{
+			display: none;
+		}
+		.has-error label {
+          & ~ .form-control-feedback {
+            display: block;
+          }
+        }
 	}
 }
 

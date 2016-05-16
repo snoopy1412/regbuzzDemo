@@ -3,78 +3,77 @@
 <!-- head.html end-->
 <body>
 <div class="stick-root">
-<!-- header.html -->
-<% include ./publicTpl/header.html %>
-<!-- header.html end-->
-
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-            <li>
-              <a href=""> Projects</a>
-            </li>
-            <li>
-              <a href="#">参与的任务</a>
-            </li>
-      	</ul>
-	</div>
-</div>
-<section class='com-main'>
-	<div class="container container--proList">
-		<!-- <header class='proList-header clearfix'>
-			<div class="regbuzzToggle pull-right">
-		        <input id="employerView_option" type="radio" value="employer" name="usertype_option" checked="true">
-		        <label for="employerView_option"> 
-		            Employer
-		        </label>
-		        <input id="providerView_option" type="radio" value="provider" name="usertype_option">
-		        <label for="providerView_option" >
-		            Provider
-		        </label>
-		    </div>
-		</header> -->
-		<div class="proList-content">
-			
-			<section class='proList-section section--provider-view'>
-				<!-- 威客身份 -->
-				<div class="provider-view">
-					  <!-- Nav tabs -->
-					  <ul class="nav nav-tabs nav-tabs-custom-blue">
-						    <li role="presentation" class="active">
-						    	<a href="#active-bids" data-toggle="tab">Active Bids</a>
-		                	</li>
-		                	 <li role="presentation">
-						    	<a href="#order-placing-provider" data-toggle="tab">Order Placing</a>
-		                	</li>
-						    <li role="presentation">
-						   	 	<a href="#current-work" data-toggle="tab">Current Work</a>
-						    </li>
-						    <li role="presentation">
-					   		 	<a href="#past-work" data-toggle="tab">Past Work</a>
-		                    </li>
-					  </ul>
-					  <div class="tab-content">
-							
-						<!-- active-bids -->
-						<% include ./projectTpl/p_active-bids.html %>
-							
-						<!-- order-placing-provider -->
-						<% include ./projectTpl/p_order-placing.html %>
-
-						<!-- current-work -->
-						<% include ./projectTpl/p_current-work.html %>
-
-						<!-- past-work -->
-						<% include ./projectTpl/p_past-work.html %>	
-					  </div>
-				</div>				
-			</section>
+	<!-- header.html -->
+	<% include ./publicTpl/header.html %>
+	<!-- header.html end-->
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+	            <li>
+	              <a href=""> Projects</a>
+	            </li>
+	            <li>
+	              <a href="#">参与的任务</a>
+	            </li>
+	      	</ul>
 		</div>
 	</div>
-</section>
+	<section class='com-main'>
+		<div class="container container--proList">
+			<!-- <header class='proList-header clearfix'>
+				<div class="regbuzzToggle pull-right">
+			        <input id="employerView_option" type="radio" value="employer" name="usertype_option" checked="true">
+			        <label for="employerView_option"> 
+			            Employer
+			        </label>
+			        <input id="providerView_option" type="radio" value="provider" name="usertype_option">
+			        <label for="providerView_option" >
+			            Provider
+			        </label>
+			    </div>
+			</header> -->
+			<div class="proList-content">
+				
+				<section class='proList-section section--provider-view'>
+					<!-- 威客身份 -->
+					<div class="provider-view">
+						  <!-- Nav tabs -->
+						  <ul class="nav nav-tabs nav-tabs-custom-blue">
+							    <li role="presentation" class="active">
+							    	<a href="#active-bids" data-toggle="tab">Active Bids</a>
+			                	</li>
+			                	 <li role="presentation">
+							    	<a href="#order-placing-provider" data-toggle="tab">Order Placing</a>
+			                	</li>
+							    <li role="presentation">
+							   	 	<a href="#current-work" data-toggle="tab">Current Work</a>
+							    </li>
+							    <li role="presentation">
+						   		 	<a href="#past-work" data-toggle="tab">Past Work</a>
+			                    </li>
+						  </ul>
+						  <div class="tab-content">
+								
+							<!-- active-bids -->
+							<% include ./projectTpl/p_active-bids.html %>
+								
+							<!-- order-placing-provider -->
+							<% include ./projectTpl/p_order-placing.html %>
+
+							<!-- current-work -->
+							<% include ./projectTpl/p_current-work.html %>
+
+							<!-- past-work -->
+							<% include ./projectTpl/p_past-work.html %>	
+						  </div>
+					</div>				
+				</section>
+			</div>
+		</div>
+	</section>
 	<div class="stick-root-footer"></div>
 </div>
 

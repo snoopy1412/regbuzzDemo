@@ -2,6 +2,8 @@ define(function(require) {
 	var hashChange = require('./hash-change'); //引入hash-change , bootstrap的tab事件本身无法保存相应的tab-pane
 	hashChange.hashChange.init();
 
+	require('./project-controller/add-controller');
+
 	// 公共
 	require('./project-action/cancel-action');
 	require('./project-action/quit-action');

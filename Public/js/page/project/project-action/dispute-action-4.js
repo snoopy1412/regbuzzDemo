@@ -79,6 +79,7 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 				cancel: function(index) { //cancel回调
 					$title.val('');
 					$textarea.val('');
+					$textarea.focus();
 					tools.cancel(self);
 				}
 			})

@@ -1,63 +1,51 @@
-define(['jquery', 'jRange'], function($, jRange) {
+define(['jquery', 'ionRangeSlider'], function($, ionRangeSlider) {
 	var init = function() {
-		// slider 
-		var fixedWidth = $('.list-aside-item-fixed .panel-body').width() - 10;
 
-		$('.list-fixed-projects .slider-input').jRange({
-			from: 20,
-			to: 400000,
-			step: 1,
-			scale: [],
-			format: '%s',
-			theme: 'theme-blue',
-			width: fixedWidth,
-			showLabels: false,
-			isRange: true,
-			onstatechange: function() {
-				$('.list-fixed-projects .budget-min').html($('.back-bar .low').eq(1).html());
-				$('.list-fixed-projects .budget-max').html($('.back-bar .high').eq(1).html());
+		// discovery-projects
+		$('#project-budget').ionRangeSlider({
+			min: 20,
+			max: 400000,
+			grid: true,
+			type: "double",
+			prettify_separator: ",",
+			hide_min_max: true,
+			hide_from_to: true,
+			prefix: "$",
+			onChange: function(data) {
+				var $min = $('#project-budget-min'),
+					$max = $('#project-budget-max');
+				$min.text(data.from);
+				$max.text(data.to);
 			},
+			onFinish: function(data) {
+				// 如果是ajax的方式，在此调用
+			}
 		});
 
-		$('.list-fixed-projects .slider-input').jRange('setValue', '20,400000');
-		$('.list-fixed-providers .slider-input').jRange({
-			from: 20,
-			to: 100,
-			step: 1,
-			scale: [],
-			format: '%s',
-			theme: 'theme-blue',
-			width: fixedWidth,
-			showLabels: false,
-			isRange: true,
-			onstatechange: function() {
-				$('.list-fixed-providers .budget-min').html($('.back-bar .low').eq(1).html());
-				$('.list-fixed-providers .budget-max').html($('.back-bar .high').eq(1).html());
+		// discovery-projects
+		$('#provider-budget').ionRangeSlider({
+			min: 20,
+			max: 100,
+			grid: true,
+			type: "double",
+			prettify_separator: ",",
+			hide_min_max: true,
+			hide_from_to: true,
+			prefix: "$",
+			onChange: function(data) {
+				var $min = $('#provider-budget-min'),
+					$max = $('#provider-budget-max');
+				$min.text(data.from);
+				$max.text(data.to);
+			},
+			onFinish: function(data) {
+				// 如果是ajax的方式，在此调用
 			}
 		});
 
 
-		$('.list-fixed-projects .slider-input').jRange('setValue', '20,100');
-		$('.list-fixed-questions .slider-input').jRange({
-			from: 20,
-			to: 140,
-			step: 1,
-			scale: [],
-			format: '%s',
-			theme: 'theme-blue',
-			width: fixedWidth,
-			showLabels: false,
-			isRange: true,
-			onstatechange: function() {
-				$('.list-fixed-questions .budget-min').html($('.back-bar .low').eq(1).html());
-				$('.list-fixed-questions .budget-max').html($('.back-bar .high').eq(1).html());
-			}
-		});
-
-		$('.list-fixed-questions .slider-input').jRange('setValue', '20,140');
 	}
-
-return {
-	init : init
-}
+	return {
+		init: init
+	}
 })

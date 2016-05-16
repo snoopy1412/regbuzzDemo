@@ -1,7 +1,6 @@
 define(['jquery', 'Vue', 'tools', '../../../layerInit'], function($, Vue, tools) {
 
 	function invite(options) {
-
 		var defaults = {
 			type: 1, //1.任务管理邀请 2.任务发布时邀请
 			clickBtn: '.action_112',
@@ -72,7 +71,6 @@ define(['jquery', 'Vue', 'tools', '../../../layerInit'], function($, Vue, tools)
 							}
 						}
 						this.resultList = arr;
-
 					},
 					bbb: function(index) {
 						this.friendsList[index].status = "0";

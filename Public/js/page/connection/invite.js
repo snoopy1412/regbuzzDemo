@@ -35,9 +35,7 @@ define(['jquery', 'layerInit', 'tools'], function($, layerInit, tools) {
 							loadIndex = tools.beforeSend();
 						},
 						success: function(data) {
-							tools.success(self, data, index, '已发出邀请', '邀请失败', function() {
-								window.location.reload();
-							})
+							tools.success(self, data, index, '已发出邀请', '邀请失败')
 						},
 						complete: function() {
 							layer.close(loadIndex);

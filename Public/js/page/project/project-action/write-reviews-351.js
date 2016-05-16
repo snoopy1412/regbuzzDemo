@@ -1,4 +1,8 @@
-define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tools) {
+define(['jquery', 
+	'raty', 
+	'tools', 
+	'../../../layerInit'
+	], function($, raty, tools) {
 
 	// 获得屏幕的宽度（主要是为了满足自适应情况下的考虑）
 	var resultWidth = tools.getWidth();
@@ -91,6 +95,7 @@ define(['jquery', 'raty', 'tools', '../../../layerInit'], function($, raty, tool
 				},
 				cancel: function(index) { //cancel回调
 					$textarea.val('');
+					$textarea.focus();
 					tools.cancel(self);
 				}
 			})

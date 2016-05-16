@@ -23,8 +23,8 @@
 <!-- head.html end-->
 <body>
 <div class="stick-root">
-<!-- header.html -->
-	<!-- /header -->
+	<!-- header.html -->
+		<!-- /header -->
 	<header class="header" id='vue-header'>
 		<nav class="navbar">
 			<div class="container">
@@ -343,52 +343,52 @@
 			</div>
 		</nav>
 </header>
-<!-- header.html end-->
+	<!-- header.html end-->
 
-<div class='breadcrumb-beauty-warp'>
-	<div class="container">
-		<ul class='breadcrumb-beauty'>
-            <li>
-              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
-            </li>
-            <li>
-              <a href=""> Projects</a>
-            </li>
-            <li>
-              <a href="#">发起的任务</a>
-            </li>
-      	</ul>
+	<div class='breadcrumb-beauty-warp'>
+		<div class="container">
+			<ul class='breadcrumb-beauty'>
+	            <li>
+	              <a href=""><i class="fa fa-home fa-lg"></i> Dashboard</a>
+	            </li>
+	            <li>
+	              <a href=""> Projects</a>
+	            </li>
+	            <li>
+	              <a href="#">发起的任务</a>
+	            </li>
+	      	</ul>
+		</div>
 	</div>
-</div>
-<section class='com-main'>
-	<div class="container container--proList">
-		<div class="proList-content">
-			
-			<!-- 主要内容  雇主视角-->
-			<section class='proList-section section--employer-view active'>
-				<div class='employer-view'>
-					<!-- 主要内容 -->
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs nav-tabs-custom-blue">
-						<li role="presentation" class="active">
-							<a href="#open-for-bidding" data-toggle="tab">Open for Bidding</a>
-						</li>
-						<li role="presentation">
-							<a href="#order-placing" data-toggle="tab">Order placing</a>
-						</li>
-						<li role="presentation">
-							<a href="#work-in-progress" data-toggle="tab">Work in Progress</a>
-						</li>
-						<li role="presentation">
-							<a href="#past-project" data-toggle="tab">Past Project</a>
-						</li>
-					</ul>
+	<section class='com-main' id='project-manage-employer'>
+		<div class="container container--proList">
+			<div class="proList-content">
+				
+				<!-- 主要内容  雇主视角-->
+				<section class='proList-section section--employer-view active'>
+					<div class='employer-view'>
+						<!-- 主要内容 -->
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs nav-tabs-custom-blue">
+							<li role="presentation" class="active">
+								<a href="#open-for-bidding" data-toggle="tab">Open for Bidding</a>
+							</li>
+							<li role="presentation">
+								<a href="#order-placing" data-toggle="tab">Order placing</a>
+							</li>
+							<li role="presentation">
+								<a href="#work-in-progress" data-toggle="tab">Work in Progress</a>
+							</li>
+							<li role="presentation">
+								<a href="#past-project" data-toggle="tab">Past Project</a>
+							</li>
+						</ul>
 
-					<!-- Tab panes -->
-					<div class="tab-content">
-						
-						<!-- open-for-bidding -->
+						<!-- Tab panes -->
+						<div class="tab-content">
+							
 							<!-- open-for-bidding -->
+								<!-- open-for-bidding -->
 	<div class="tab-pane active" id="open-for-bidding">
 		<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
 		<thead>
@@ -442,9 +442,11 @@
 	<!-- open -for-bidding 交互 -->
 
 	<!-- add 操作 -->
-		<div class="open-waiting-add" style='display: none;padding: 10px;padding-bottom: 0'>
+		<div class="open-waiting-add" id='open-waiting-add' style='display: none;padding: 10px;padding-bottom: 0'>
 			<div class="form-group">
-				<textarea name="" class='form-control' id='js_111_content' rows='5' cols="100"></textarea>
+				<!-- <textarea name="" class='form-control' id='js_111_content' rows='5' cols="100"></textarea> -->
+				
+				<wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 				<p class='description'>
 					注1：最大输入字符不能超过1000
 				</p>
@@ -458,7 +460,7 @@
 			<div class="invite-friends">
 				<h4 class='invite-title'>好友列表</h4>
 				<ul class='firends-item-warp'>
-
+				
 				<li v-if='loadingMsg'>{{loadingMsg}}</li>
 					<template v-for='item in friendsList' v-if='firnedsList.length'>
 						<li class='firends-item' v-if='item.status === "0"'>
@@ -483,8 +485,8 @@
 	<!-- invite end -->
 	<!-- open-for-bidding end -->
 
-						<!-- order-placing -->
-						 <!-- order-placing -->
+							<!-- order-placing -->
+							 <!-- order-placing -->
 <div class="tab-pane" id="order-placing">
 	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
 		<thead>
@@ -552,8 +554,8 @@
 <!-- order-placing end -->
 
 
-						<!-- work in progress -->
-						<link rel="stylesheet" type="text/css" href="./Public/plugins/datetimepicker/bootstrap-datetimepicker.min.css">
+							<!-- work in progress -->
+							<link rel="stylesheet" type="text/css" href="./Public/plugins/datetimepicker/bootstrap-datetimepicker.min.css">
 
 <div class="tab-pane" id="work-in-progress">
 	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
@@ -705,7 +707,8 @@
 	<div class="divider divider-horizontal">or</div>
 	<div class="form-group">
 	<label for="work-refund-reason_add">补充退款原因</label>
-		<textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea>
+		<!-- <textarea name="" class='form-control' rows="5" id='work-refund-reason_add'></textarea> -->
+		<wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 	</div>
 </div>
 <!-- work extend end -->
@@ -719,13 +722,14 @@
 	</div>
 	<div class="divider divider-horizontal">服务评价</div>
 	<div class="form-group">
-		<textarea name="" class='form-control' id='js_351-content' rows='5'></textarea>
+		<!-- <textarea name="" class='form-control' id='js_351-content' rows='5'></textarea> -->
+		<wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 	</div>
 </div>			
 <!-- work-payed-reviews end -->
 
-						<!-- past-project -->
-						<div class="tab-pane" id="past-project">
+							<!-- past-project -->
+							<div class="tab-pane" id="past-project">
 	<table class='table' data-toggle="table" data-sort-name="stargazers_count" data-sort-order="desc" data-search="true" data-show-refresh="true" data-pagination="true">
 		<thead>
 			<tr class='active'>
@@ -785,7 +789,8 @@
 <!-- Add comment -->
 <div id="past-success-comment" style='display: none;padding: 10px'>
 	<div class="form-group">
-		<textarea name="" class='form-control' id='js_411-content' rows='5' cols='100'></textarea>
+		<!-- <textarea name="" class='form-control' id='js_411-content' rows='5' cols='100'></textarea> -->
+		<wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 		<p class='description'>
 			注1：最大输入字符不能超过1000
 		</p>
@@ -803,7 +808,8 @@
 		<div class="form-group">
 			<label for="" class="col-sm-3 control-label">Dispute Description</label>
 			<div class="col-sm-8">
-		      <textarea name="" class='form-control' id="js_dispute-description-4" rows="5"></textarea>
+		      <!-- <textarea name="" class='form-control' id="js_dispute-description-4" rows="5"></textarea> -->
+		      <wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 		    </div>
 		</div>
 	</div>
@@ -811,134 +817,134 @@
 <!-- past-dispute end -->
 
 
-						
+							
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
 	<div class="stick-root-footer"></div>
 </div>
 
 <!-- footer.html -->
 <footer class='stick-footer public-footer'>
-<div class="container" style='background: #303030;'>
-<div class="row footer-nav">
-	<div class="col-xs-2 footer-nav-list">
-		<h4>Company</h4>
-		<div class="footer-divider"></div>
-		<ul class='list-unstyled'>
-			<li>
-				<a href="">About</a>
-			</li>
-			<li>
-				<a href="">Contact</a>
-			</li>
-			<li>
-				<a href="">Jobs</a>
-			</li>
-			<li>
-				<a href="">Team</a>
-			</li>
-			<li>
-				<a href="">Press releases</a>
-			</li>
-			<li>
-				<a href="">Testimonials</a>
-			</li>
-			<li>
-				<a href="">Terms of Service</a>
-			</li>
-			<li>
-				<a href="">Privacy Policy</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-2 footer-nav-list">
-		<h4>Resource</h4>
-		<div class="footer-divider"></div>
-		<ul class='list-unstyled'>
-			<li>
-				<a href="">Videos</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-2 footer-nav-list">
-		<h4>Support</h4>
-		<div class="footer-divider"></div>
-		<ul class='list-unstyled'>
-			<li>
-				<a href="">Questions</a>
-			</li>
-			<li>
-				<a href="">Blogs</a>
-			</li>
-			<li>
-				<a href="">Language support</a>
-			</li>
-			<li>
-				<a href="">FAQ</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-2 footer-nav-list">
-		<h4>Social</h4>
-		<div class="footer-divider"></div>
-		<ul class='social-icon-list'>
-			<li class='social-icon'>
-				<span class='fa fa-linkedin'></span>
-				<a href="" title='Linkedin'>linkedin</a>
-			</li>
-			<li class='social-icon'>
-				<span class='fa fa-twitter'></span>
-				<a href="" title='twitter'>twitter</a>
-			</li>
-			<li class='social-icon'>
-				<span class='fa fa-facebook-official'></span>
-				<a href="" title='Facebook'>facebook</a>
-			</li>
-			<li class='social-icon'>
-				<span class='fa fa-google-plus'></span>
-				<a href="" title='Google+'>google+</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-4 footer-nav-list">
-		<h4>Message</h4>
-		<div class="footer-divider"></div>
-		<form action="" class='footer-contact'>
-			<div class="form-group">
-				<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
-			<div class="form-group">
-				<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
-			<div class="form-group">
-				<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+	<div class="container" style='background: #303030;'>
+		<div class="row footer-nav">
+			<div class="col-xs-2 footer-nav-list">
+				<h4>Company</h4>
+				<div class="footer-divider"></div>
+				<ul class='list-unstyled'>
+					<li>
+						<a href="">About</a>
+					</li>
+					<li>
+						<a href="">Contact</a>
+					</li>
+					<li>
+						<a href="">Jobs</a>
+					</li>
+					<li>
+						<a href="">Team</a>
+					</li>
+					<li>
+						<a href="">Press releases</a>
+					</li>
+					<li>
+						<a href="">Testimonials</a>
+					</li>
+					<li>
+						<a href="">Terms of Service</a>
+					</li>
+					<li>
+						<a href="">Privacy Policy</a>
+					</li>
+				</ul>
 			</div>
-			<div class="form-group">
-				<input type="submit" value='Submit' class='btn btn-secondary'></div>
-		</form>
+			<div class="col-xs-2 footer-nav-list">
+				<h4>Resource</h4>
+				<div class="footer-divider"></div>
+				<ul class='list-unstyled'>
+					<li>
+						<a href="">Videos</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-2 footer-nav-list">
+				<h4>Support</h4>
+				<div class="footer-divider"></div>
+				<ul class='list-unstyled'>
+					<li>
+						<a href="">Questions</a>
+					</li>
+					<li>
+						<a href="">Blogs</a>
+					</li>
+					<li>
+						<a href="">Language support</a>
+					</li>
+					<li>
+						<a href="">FAQ</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-2 footer-nav-list">
+				<h4>Social</h4>
+				<div class="footer-divider"></div>
+				<ul class='social-icon-list'>
+					<li class='social-icon'>
+						<span class='fa fa-linkedin'></span>
+						<a href="" title='Linkedin'>linkedin</a>
+					</li>
+					<li class='social-icon'>
+						<span class='fa fa-twitter'></span>
+						<a href="" title='twitter'>twitter</a>
+					</li>
+					<li class='social-icon'>
+						<span class='fa fa-facebook-official'></span>
+						<a href="" title='Facebook'>facebook</a>
+					</li>
+					<li class='social-icon'>
+						<span class='fa fa-google-plus'></span>
+						<a href="" title='Google+'>google+</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-4 footer-nav-list">
+				<h4>Message</h4>
+				<div class="footer-divider"></div>
+				<form action="" class='footer-contact'>
+					<div class="form-group">
+						<input type="text" name="" value="" placeholder="Name" class='form-control'></div>
+					<div class="form-group">
+						<input type="text" name="" value="" placeholder="Telephone" class='form-control'></div>
+					<div class="form-group">
+						<textarea name="" placeholder='Remarks' class='form-control' rows="3"></textarea>
+					</div>
+					<div class="form-group">
+						<input type="submit" value='Submit' class='btn btn-secondary'></div>
+				</form>
+			</div>
+		</div>
+		<div class="footer-divider"></div>
+		<div class="row footer-bottom">
+			<div class="col-xs-6">
+				<ul class='footer-brand clearfix'>
+					<li class='footer-brand-logo'>
+						<img src="./Public/img/index/footer-logo.png" alt=""></li>
+					<li class='footer-brand-content'>
+						<p>The best product compliance platform</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-6">
+				<p class='text-right copyright'>
+					© Copyright 2015 - 2016
+					<a href="" title="">Regbuzz.com</a>
+				</p>
+			</div>
+		</div>
 	</div>
-</div>
-<div class="footer-divider"></div>
-<div class="row footer-bottom">
-	<div class="col-xs-6">
-		<ul class='footer-brand clearfix'>
-			<li class='footer-brand-logo'>
-				<img src="./Public/img/index/footer-logo.png" alt=""></li>
-			<li class='footer-brand-content'>
-				<p>The best product compliance platform</p>
-			</li>
-		</ul>
-	</div>
-	<div class="col-xs-6">
-		<p class='text-right copyright'>
-			© Copyright 2015 - 2016
-			<a href="" title="">Regbuzz.com</a>
-		</p>
-	</div>
-</div>
-</div>
 </footer>
 <!-- footer.html end-->
 

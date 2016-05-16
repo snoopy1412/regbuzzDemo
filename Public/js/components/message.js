@@ -21,12 +21,9 @@ define(['jquery', 'tools', 'layerInit', 'emoji'], function($, tools, layerInit, 
 			var self = this;
 			this._getDom();
 
-			// 根据类型不同，渲染头部
-			this._renderHeader();
-
 			// 表情相关设置
 			emojiObj.renderEmoji(this.emojiContainer);
-			emojiObj.bindEmojiEvent(this.emojiContainer, this.emojiBtn, this.inputBox,false);
+			emojiObj.bindEmojiEvent(this.emojiContainer, this.emojiBtn, this.inputBox, false);
 
 			// 主要逻辑
 			this.showChatBox();
@@ -44,43 +41,45 @@ define(['jquery', 'tools', 'layerInit', 'emoji'], function($, tools, layerInit, 
 				this.userIds = [];
 			}
 		},
-		_renderHeader: function() {
-			var userId = $(this.node).data('userid'),
-				self = this;
+		_renderHeader: function(userId) {
+			var self = this;
 			if (this.type === 1) {
-				$.get('data.js', {
-					userId: userId
-				}, function(data) {
-					var imgUrl = './Public/img/index/servers/4.jpg',
-						name = 'Michelle Huan',
-						position = 'Law Consultant',
-						des = 'Chemical regulatory compliance consultant at Nanjing CIRS';
+				var $avatorImg = $('#avator_' + userId),
+					$avatorName = $('#avator_name_' + userId),
+					$avatorPosition = $('#avator_position_' + userId),
+					$avatorDescription = $('#avator_description_' + userId),
+					$avatorCompany = $("#avator_company_" + userId);
+				var imgUrl = $avatorImg.prop('src'),
+					name = $avatorName.text(),
+					position = $avatorPosition.text(),
+					des = $avatorDescription.text() + $avatorCompany.text();
 
-					// 写死是为了模拟
-					var html = "<header class='message-header-private'>" +
-						"<a href='' class='header-img-warp'>" +
-						"<img src='" + imgUrl + "' alt='' class='header-img'>" +
-						"</a>" +
-						"<div class='header-des pull-left'>" +
-						"<h3 class='name'><a href ='' title='" + name + "'> " + name + " </a><small> - " + position + "</small > </h3><p class ='headline'>" + des + " </p> </div> </header>";
-					$(self.modalBox).find('.message-main').prepend(html);
-				})
+				// 写死是为了模拟
+				var html = "<header class='message-header-private'>" +
+					"<a href='' class='header-img-warp'>" +
+					"<img src='" + imgUrl + "' alt='' class='header-img'>" +
+					"</a>" +
+					"<div class='header-des pull-left'>" +
+					"<h3 class='name'><a href ='' title='" + name + "'> " + name + " </a><small> - " + position + "</small > </h3><p class ='headline'>" + des + " </p> </div> </header>";
+				$(self.modalBox).find('.message-main').prepend(html);
+
 			} else if (this.type === 2) {
-				$.get('data.js', {
-					userId: userId
-				}, function(data) {
-
-					var names = ['Michelle Huan', 'Aaron Su', 'Christine Cormons'],
-						size = names.length,
-						html = '';
-
-					for (var i = 0; i < names.length; i++) {
-						html += "<span><a href=''>" + names[i] + "</a></span>";
-					}
-					// 写死是为了模拟
-					var template = "<header class='message-header-all'>" + "<p class='firends'>Message to " + html + "等" + size + "人" + "</p>" + "</header>";
-					$(self.modalBox).find('.message-main').prepend(template);
+				console.log(userId)
+				var names = [],
+					html = '',
+					size = 0;
+				$.each(userId, function() {
+					names.push($('#avator_name_' + this).text())
 				})
+				size = names.length;
+
+				for (var i = 0; i < names.length; i++) {
+					html += "<span><a href=''>" + names[i] + "</a></span>";
+				}
+				// 写死是为了模拟
+				var template = "<header class='message-header-all'>" + "<p class='firends'>Message to " + html + "等" + size + "人" + "</p>" + "</header>";
+				$(self.modalBox).find('.message-main').prepend(template);
+
 			}
 		},
 		_destroyHeader: function() {
@@ -96,12 +95,20 @@ define(['jquery', 'tools', 'layerInit', 'emoji'], function($, tools, layerInit, 
 			$(document).on('click', self.node, function(event) {
 				event.preventDefault();
 				var This = this;
+				self.userIds = [];
+
+				if (self.type === 1) {
+					var userId = $(this).data('userid');
+					self._renderHeader(userId);
+				}
+
 				if (self.type === 2) {
 					self.$checkboxs.each(function(i, elem) {
 						if ($(this).prop('checked')) {
 							self.userIds.push($(this).data('userid'));
 						}
 					})
+					self._renderHeader(self.userIds);
 					if (!self.userIds.length) {
 						layer.alert('还没有选定')
 						return false;
@@ -210,6 +217,7 @@ define(['jquery', 'tools', 'layerInit', 'emoji'], function($, tools, layerInit, 
 		},
 		cancel: function(This) {
 			$(this.inputBox).val('');
+			this._destroyHeader();
 			tools.cancel(This);
 		}
 	}

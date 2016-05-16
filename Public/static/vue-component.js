@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/static/";
+/******/ 	__webpack_require__.p = "/Public/static/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -527,8 +527,8 @@
 		value: true
 	});
 	// <template>
-	// 	<div class='words-count'>
-	// 		<textarea class='form-control words-input' :rows="rowsNum" v-model='inputText'></textarea>
+	// 	<div class='words-count' :class="{'has-error': isOverMax}">
+	// 		<textarea class='form-control words-input' :rows="rowsNum" :cols=colsNum v-model='inputText' :id='wordsCountId'></textarea>
 	// 		<div class='words-count-area'>
 	// 			<span class='current-words' :class="{'overmax':isOverMax}" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>
 	// 		</div>
@@ -549,8 +549,13 @@
 			rowsNum: {
 				type: Number,
 				default: 5
+			},
+			colsNum: {
+				type: Number
+			},
+			wordsCountId: {
+				type: String
 			}
-	
 		},
 		data: function data() {
 			return {
@@ -601,7 +606,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class='words-count'>\n\t<textarea class='form-control words-input' :rows=\"rowsNum\" v-model='inputText'></textarea>\n\t<div class='words-count-area'>\n\t\t<span class='current-words' :class=\"{'overmax':isOverMax}\" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>\n\t</div>\n</div>\n";
+	module.exports = "\n<div class='words-count' :class=\"{'has-error': isOverMax}\">\n\t<textarea class='form-control words-input' :rows=\"rowsNum\" :cols=colsNum v-model='inputText' :id='wordsCountId'></textarea>\n\t<div class='words-count-area'>\n\t\t<span class='current-words' :class=\"{'overmax':isOverMax}\" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>\n\t</div>\n</div>\n";
 
 /***/ },
 /* 11 */

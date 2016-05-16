@@ -42,9 +42,10 @@
 </div>
 
 <!-- add 操作 -->
-	<div class="open-waiting-add" style='display: none;padding: 10px;padding-bottom: 0'>
+	<div class="open-waiting-add" id='open-waiting-add' style='display: none;padding: 10px;padding-bottom: 0'>
 		<div class="form-group">
-			<textarea name="" class='form-control' id='js_111_content' rows='5' cols="100"></textarea>
+			<!-- <textarea name="" class='form-control' id='js_111_content' rows='5' cols="100"></textarea> -->
+			<wordcount v-bind:total-count='totalCount' :cols-num='colsNum' :words-count-id='wordsCountId'></wordcount>
 			<p class='description'>
 				注1：最大输入字符不能超过1000
 			</p>
