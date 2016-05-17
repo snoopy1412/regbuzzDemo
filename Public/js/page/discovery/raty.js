@@ -1,4 +1,7 @@
-define(['jquery', 'raty'], function($, raty) {
+define(function(require) {
+
+	var $ = require('jquery'),
+		raty = require('raty');
 
 	var init = function() {
 		// 左侧raty 

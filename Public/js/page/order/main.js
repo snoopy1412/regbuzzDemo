@@ -1,4 +1,9 @@
-require(['jquery', './page/order/controller'], function($) {
+define(function(require) {
+
+  var $ = require('jquery');
+
+  require('./controller');
+
   // order
   // +Add Deliverables
   $('#add-deliverables').on('click', function() {

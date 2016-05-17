@@ -1,4 +1,4 @@
-require([
-	'./page/message/initMessage',
-	'./page/message/chat'
-], function() {})
+define(function(require) {
+	require('./initMessage');
+	require('./chat');
+})

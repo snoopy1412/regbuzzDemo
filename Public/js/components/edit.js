@@ -1,6 +1,8 @@
-define(function() {
-	function Edit(start,options) {
-		this.options = $.extend({},Edit.defaluts,options);
+define(function(require) {
+	var $ = require('jquery');
+
+	function Edit(start, options) {
+		this.options = $.extend({}, Edit.defaluts, options);
 		switch (start) {
 			case 'string':
 				this.start = $(start);
@@ -13,7 +15,7 @@ define(function() {
 				break;
 		}
 		this.show = $('.js-show', this.start);
-		this.hide = $('.js-hide', this.start);		
+		this.hide = $('.js-hide', this.start);
 		this.edit = this.start.find(this.options.editEl);
 		this.delete = this.start.find(this.options.deleteEl);
 		this.text = this.start.find(this.options.textEl);
@@ -38,14 +40,14 @@ define(function() {
 		this.init();
 	}
 	Edit.defaluts = {
-		editEl:'.js-edit-edit',
-		deleteEl :'.js-edit-delete',
-		textEl:'.js-edit-text',
-		svaeEl:'.js-edit-save',
-		cancelEl:'.js-edit-cancel',
-		textareaEl:'.js-edit-textarea',
-		hoverColor:'',
-		isDelete:false
+		editEl: '.js-edit-edit',
+		deleteEl: '.js-edit-delete',
+		textEl: '.js-edit-text',
+		svaeEl: '.js-edit-save',
+		cancelEl: '.js-edit-cancel',
+		textareaEl: '.js-edit-textarea',
+		hoverColor: '',
+		isDelete: false
 	};
 
 	Edit.prototype = {
@@ -53,23 +55,23 @@ define(function() {
 		init: function() {
 			this.hover();
 			this.editData();
-			if(this.options.isDelete){
+			if (this.options.isDelete) {
 				this.deleteData();
-			}	 
+			}
 		},
-		hover:function(){
+		hover: function() {
 			var _this = this;
-			if(this.options.hoverColor){	
-				this.edit.hover(function(){
-					_this.edit.each(function(){
-						$(this).css('background-color',_this.options.hoverColor);
+			if (this.options.hoverColor) {
+				this.edit.hover(function() {
+					_this.edit.each(function() {
+						$(this).css('background-color', _this.options.hoverColor);
 					});
-				},function(){
-					_this.edit.each(function(){
-						$(this).css('background-color','transparent');
+				}, function() {
+					_this.edit.each(function() {
+						$(this).css('background-color', 'transparent');
 					});
-				});					
-			}		
+				});
+			}
 		},
 		editData: function() {
 			var _this = this;
@@ -111,7 +113,7 @@ define(function() {
 
 			// 隐藏与展现
 			this._showHidden(this.show, this.hide);
-		},		
+		},
 		cancelData: function() {
 			var _this = this;
 			this.cancel.on('click', function(event) {
@@ -126,14 +128,14 @@ define(function() {
 			// 隐藏与展现
 			this._showHidden(this.show, this.hide);
 		},
-		deleteData:function(){
+		deleteData: function() {
 			var _this = this;
-			this.delete.on('click',function(event){
+			this.delete.on('click', function(event) {
 				var that = this;
-				_this.deleteFn(that,event);
+				_this.deleteFn(that, event);
 			});
 		},
-		deleteFn: function(that,event){
+		deleteFn: function(that, event) {
 			this._default(event);
 			this.start.remove();
 		}
@@ -143,7 +145,7 @@ define(function() {
 	$.fn.extend({
 		edit: function(options) {
 			this.each(function(i, item) {
-				new Edit(this,options);
+				new Edit(this, options);
 			});
 			return this;
 		}

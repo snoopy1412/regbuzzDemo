@@ -1,4 +1,4 @@
-define(['velocity'],function(velocity) {
+define(['jquery','velocity'],function($,velocity) {
 
 	/**
 	 * PopoverCustom

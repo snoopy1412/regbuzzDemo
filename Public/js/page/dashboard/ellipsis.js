@@ -1,4 +1,8 @@
-define(['jquery', 'ellipsis'], function($, ellipsis) {
+define(function(require) {
+
+	var $ = require('jquery'),
+		ellipsis = require('ellipsis');
+
 	var ellipsis = function() {
 		// 溢出隐藏，省略号
 		$(".home-push-des").ellipsis({
@@ -10,6 +14,6 @@ define(['jquery', 'ellipsis'], function($, ellipsis) {
 		})
 	}
 	return {
-		ellipsis : ellipsis
+		ellipsis: ellipsis
 	}
 })

@@ -1,5 +1,9 @@
-require(['./page/dashboard/ellipsis', // 省略号溢出隐藏
-	'./page/dashboard/controller' // 控制器集合
-], function(ellipsis) {
+define(function(require) {
+
+	var $ = require('jquery'),
+		ellipsis = require('./ellipsis');
+
 	ellipsis.ellipsis();
+
+	require('./controller');
 });

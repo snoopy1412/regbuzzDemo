@@ -1,7 +1,6 @@
-require(['jquery',
-  './page/publish/publish-start',
-  './page/publish/publish-result'
-], function($, invite) {
+define(function(require) {
+
+  var $ = require('jquery');
 
   $('.jellybean').click(function() {
     $('.jellybean .jellybean-input').focus();
@@ -19,4 +18,9 @@ require(['jquery',
       );
     content.append(html);
   })
+
+  require('./publish-start');
+
+  require('./publish-result');
+
 });

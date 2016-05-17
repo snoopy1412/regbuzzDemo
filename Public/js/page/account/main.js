@@ -1,4 +1,7 @@
-require(['jquery', 'datetimepicker'], function($, datetimepicker) {
+define(function(require) {
+	var $ = require('jquery'),
+		datetimepicker = require('datetimepicker');
+
 	$('#datetimepicker6').datetimepicker({
 		format: 'YYYY-MM-DD',
 		useCurrent: false
@@ -14,4 +17,4 @@ require(['jquery', 'datetimepicker'], function($, datetimepicker) {
 	$("#datetimepicker7").on("dp.change", function(e) {
 		$('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
 	});
-});
+})

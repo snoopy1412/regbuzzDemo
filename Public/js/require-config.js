@@ -8,7 +8,7 @@ require.config({
     bootstrap: './vendor/bootstrap.min', // bootstrap 插件
 
     // plugins 区域
-    ionRangeSlider : '../plugins/rangeSlider/ion.rangeSlider.min', // 更强大的滑竿
+    ionRangeSlider: '../plugins/rangeSlider/ion.rangeSlider.min', // 更强大的滑竿
     summernote: '../plugins/summernote/summernote.min', //第三方富文本编辑器
     WebUploader: '../plugins/webuploader/webuploader', //第三方上传插件
     moment: '../plugins/datetimepicker/moment.min', // 时间选择依赖
@@ -25,11 +25,11 @@ require.config({
     ellipsis: './components/ellipsis',
     popupConfirm: './components/popupConfirm',
     message: './components/message',
-    hire:'./components/hire',
+    hire: './components/hire',
 
     // 常用工具
     tools: './utilities/tools',
-    emoji:'./utilities/emoji',
+    emoji: './utilities/emoji',
 
     // MVVM框架
     Vue: './vendor/vue', // MVVM框架
@@ -46,47 +46,35 @@ require.config({
   },
   // waitSeconds: 0,
   shim: {
+    "jquery": {
+      exports: 'jquery'
+    },
     "bootstrap": {
-      deps: ["jquery"]
+      deps: ["jquery"],
+      exports: 'bootstrap'
     },
     'layer': {
-      deps: ['jquery']
+      deps: ['jquery'],
+      exports: 'layer'
     },
     "bootstrapTable": {
-      deps: ['jquery']
-    },
-    "check": {
-      deps: ['jquery']
-    },
-    "ellipsis": {
-      deps: ['jquery']
+      deps: ['jquery'],
+      exports: 'bootstrapTable'
     },
     "velocity": {
-      deps: ["jquery"]
+      deps: ["jquery"],
+      exports: 'velocity'
     },
-    'ionRangeSlider':{
-      deps:["jquery"]
+    'ionRangeSlider': {
+      deps: ["jquery"],
+      exports: 'ionRangeSlider'
     },
     "raty": {
-      deps: ["jquery"]
-    },
-    "popoverCustom": {
-      deps: ["jquery"]
-    },
-    'popupConfirm': {
-      deps: ["jquery", 'layer']
-    },
-    'message': {
-      deps: ['jquery']
-    },
-    'wysiwyg': {
-      deps: ['jquery']
+      deps: ["jquery"],
+      exports: 'raty'
     },
     'VueComponent': {
       exports: 'VueComponent'
     }
   }
 });
-
-require(['./page/header/main']);
-// require(['./layerInit']);

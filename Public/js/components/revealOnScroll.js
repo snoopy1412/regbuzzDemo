@@ -1,5 +1,6 @@
-define(function() {
+define(function(require) {
 
+	var $ = require('jquery');
 	/**
 	 * RevealOnScroll
 	 * 该函数用于网页滚动时，元素的渐变出现效果，需要在页面对应元素配置

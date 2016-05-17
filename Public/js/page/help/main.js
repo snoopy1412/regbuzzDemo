@@ -1,4 +1,4 @@
-require(['jquery', 'bootstrap', 'Vue', 'vueValidator'], function($, bootstrap, Vue, vueValidator) {
+define(['jquery', 'bootstrap', 'Vue', 'vueValidator'], function($, bootstrap, Vue, vueValidator) {
 
 	$('.fees-advice').popover();
 

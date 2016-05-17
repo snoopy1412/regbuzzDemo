@@ -1,9 +1,7 @@
-require(['jquery',
-	'./page/profile/raty',
-	'./page/profile/crop',
-	'./page/profile/hire',
-	'./page/profile/controller'
-], function($) {
+define(function(require) {
+
+	var $ = require('jquery');
+
 
 	// 头部编辑区域hover高亮处理
 	$('.edit-start').hover(function() {
@@ -23,4 +21,9 @@ require(['jquery',
 	$(document).on('mouseout', '.profile-info-item', function() {
 		$(this).find('.handle').hide()
 	})
+
+	require('./raty');
+	require('./crop');
+	require('./hire');
+	require('./controller');
 });

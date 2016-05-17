@@ -1,4 +1,6 @@
-define(['jquery', 'layerInit'], function($, layerInit) {
+define(function(require) {
+	var $ = require('jquery'),
+		layerInit = require('layerInit');
 	var $followBtn = $('[data-followed="0"]');
 	$followBtn.data('canClick', true);
 	$followBtn.each(function() {

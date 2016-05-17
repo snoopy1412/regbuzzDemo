@@ -1,4 +1,8 @@
-define(['jquery', 'layerInit', 'tools'], function($, layerInit, tools) {
+define(function(require) {
+
+	var $ = require('jquery'),
+		layerInit = require('layerInit'),
+		tools = require('tools');
 
 	$(document).on('click', '.js_connection-invite', function(event) {
 		event.preventDefault();

@@ -1,4 +1,4 @@
-require(['jquery', 'layerInit'], function($, layerInit) {
+define(['jquery', 'layerInit'], function($, layerInit) {
 
 	$(document).on('click', '.btn-block', function(event) {
 

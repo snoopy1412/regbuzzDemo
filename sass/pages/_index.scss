@@ -56,18 +56,23 @@ $header-height : 60px ;
         margin-right: 0;
     }
 
-    .dropdown-menu{
-        border-radius: 2px;
-      background-color: $gray-darker;
-      background-color: rgba($gray-darker, .8);
-        a{
-           
-            color:#ddd;
-            padding-top: 6px;
-            padding-bottom: 6px;
+    .nav{
+        .open .dropdown-menu{
+            border: 1px solid $gray-darker;
+            border-radius: 2px;
+            background-color: $gray-darker;
+            background-color: rgba($gray-darker, .8);
+            a{
+               
+                color:#ddd;
+                padding-top: 6px;
+                padding-bottom: 6px;
 
-        }
+            }
+        }        
     }
+
+
     .drop-menu-popover{
         display: none;
         left:100%;

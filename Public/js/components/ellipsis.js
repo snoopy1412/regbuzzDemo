@@ -1,4 +1,4 @@
-define(['jquery'], function() {
+define(['jquery'], function($) {
 	function Ellipsis(node, options) {
 		this.node = node;
 		this.options = $.extend({}, Ellipsis.default, options);

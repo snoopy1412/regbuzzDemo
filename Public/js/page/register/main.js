@@ -1,4 +1,4 @@
-require(['jquery','Vue','vueValidator'],function($,Vue,vueValidator) {
+define(['jquery','Vue','vueValidator'],function($,Vue,vueValidator) {
   
 // var validate = $('.reg-form').validate({
 //     rules: {

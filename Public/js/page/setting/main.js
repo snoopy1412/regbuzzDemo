@@ -1,4 +1,4 @@
-require(['jquery'],function($){
+define(['jquery'],function($){
   // 点击切换step,仅作为模拟使用
   $('.setting-menu a').each(function(index,item){
     $(this).click(function(){

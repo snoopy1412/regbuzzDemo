@@ -5,36 +5,71 @@
   baseUrl: './Public/js', //相对于appDir，代表要查找js文件的起始文件夹，下文所有文件路径的定义都是基于这个baseUrl的
   mainConfigFile: './Public/js/require-config.js',
   modules: [ //要优化的模块
+    //First set up the common build layer.
     {
-      name: './page/account/main'
+      //module names are relative to baseUrl
+      name: '../js/require-config',
+      include:['jquery','bootstrap','Vue']
     }, {
-      name: './page/connection/main'
+      name: './page/account',
+      include: ['./page/account/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/dashboard/main'
+      name: './page/connection',
+      include: ['./page/connection/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/discovery/main'
+      name: './page/dashboard',
+      include: ['./page/dashboard/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/header/main'
+      name: './page/discovery',
+      include: ['./page/discovery/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/help/main'
+      name: './page/help',
+      include: ['./page/help/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/index/main'
+      name: './page/index',
+      include: ['./page/index/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/membership/main'
+      name: './page/membership',
+      include: ['./page/membership/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/message/main'
+      name: './page/message',
+      include: ['./page/message/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/order/main'
+      name: './page/order',
+      include: ['./page/order/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/profile/main'
+      name: './page/profile',
+      include: ['./page/profile/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/project/main'
+      name: './page/project',
+      include: ['./page/project/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/register/main'
+      name: './page/publish',
+      include: ['./page/publish/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/setting/main'
+      name: './page/register',
+      include: ['./page/register/main'],
+      exclude: ['../js/require-config']
     }, {
-      name: './page/top-up/main'
+      name: './page/setting',
+      include: ['./page/setting/main'],
+      exclude: ['../js/require-config']
+    }, {
+      name: './page/top-up',
+      include: ['./page/top-up/main'],
+      exclude: ['../js/require-config']
     } //说白了就是各页面的入口文件，相对baseUrl的路径，也是省略后缀“.js”
   ],
 
