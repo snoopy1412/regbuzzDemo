@@ -23,6 +23,8 @@
 				</span>
 			</li>
 		</ul>
+		<!-- 隐藏域，上传选中的语言的id -->
+		<input type="hidden" name="{{hiddenName}}" value="{{choiceIds}}">
 	</div>
 </template>
 
@@ -48,7 +50,6 @@
 			  jellybeanMaxError : false
 			}
 		},	
-
 		computed : {
 			select2IsHide : function(){
 				if(!this.jellybeanMaxError){
@@ -86,6 +87,7 @@
 					this.select2List.push({
 						text: self.resultData[isIndex].text,
 						local: self.resultData[isIndex].local,
+						id:self.resultData[isIndex].id,
 						index: isIndex
 					});
 

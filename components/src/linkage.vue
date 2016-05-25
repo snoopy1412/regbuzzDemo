@@ -20,10 +20,29 @@
 				type : String,
 				default : 'Please select...'
 			},
-			linkageData : {
-				type : Array,
-				require : true		
+			dataUrl:{
+				type:String,
+				require:true
 			}
+		},
+		data() {
+			return {
+				linkageData:[]
+			}
+		},
+		ready:function(){
+			var self = this;
+			$.ajax({
+				type: 'GET',
+				url: self.dataUrl,
+				success: function(data) {
+					var data = data.data;
+					self.linkageData = data;
+				},
+				error: function(state) {
+					console.log('数据加载失败')
+				}
+			})
 		},
 		computed : {
 

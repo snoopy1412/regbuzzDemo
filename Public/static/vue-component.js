@@ -141,10 +141,30 @@
 				type: String,
 				default: 'Please select...'
 			},
-			linkageData: {
-				type: Array,
+			dataUrl: {
+				type: String,
 				require: true
 			}
+		},
+		data: function data() {
+			return {
+				linkageData: []
+			};
+		},
+	
+		ready: function ready() {
+			var self = this;
+			$.ajax({
+				type: 'GET',
+				url: self.dataUrl,
+				success: function success(data) {
+					var data = data.data;
+					self.linkageData = data;
+				},
+				error: function error(state) {
+					console.log('数据加载失败');
+				}
+			});
 		},
 		computed: {
 	
@@ -672,7 +692,6 @@
 			};
 		},
 	
-	
 		computed: {
 			select2IsHide: function select2IsHide() {
 				if (!this.jellybeanMaxError) {
@@ -710,6 +729,7 @@
 					this.select2List.push({
 						text: self.resultData[isIndex].text,
 						local: self.resultData[isIndex].local,
+						id: self.resultData[isIndex].id,
 						index: isIndex
 					});
 	
@@ -748,6 +768,8 @@
 	// 				</span>
 	// 			</li>
 	// 		</ul>
+	// 		<!-- 隐藏域，上传选中的语言的id -->
+	// 		<input type="hidden" name="{{hiddenName}}" value="{{choiceIds}}">
 	// 	</div>
 	// </template>
 	//
@@ -771,13 +793,17 @@
 	
 	var select2Mixin = {
 		props: {
-			originData: {
-				type: Array,
+			dataUrl: {
+				type: String,
 				require: true
+			},
+			hiddenName: {
+				type: String
 			}
 		},
 		data: function data() {
 			return {
+				originData: [],
 				select2IsHide: false,
 				select2SearchText: '',
 				resultData: [],
@@ -788,13 +814,44 @@
 	
 		created: function created() {
 			var self = this;
-			this.originData.forEach(function (element) {
-				self.resultData.push((0, _assign2.default)({}, element, {
-					isForbid: false
-				}));
+			$.ajax({
+				type: 'GET',
+				url: self.dataUrl,
+				success: function success(data) {
+					var data = data.data;
+					self.originData = data;
+	
+					self.originData.forEach(function (element) {
+						self.resultData.push((0, _assign2.default)({}, element, {
+							isForbid: false
+						}));
+					});
+				},
+				error: function error(state) {
+					console.log('数据加载失败');
+				}
+			});
+		},
+		ready: function ready() {
+			var self = this;
+	
+			$(window).on('click', function (event) {
+				event.stopPropagation();
+				if (self.select2IsHide) {
+					self.select2IsHide = false;
+					self.select2SearchText = '';
+				}
 			});
 		},
 		computed: {
+			choiceIds: function choiceIds() {
+				var array = this.select2List,
+				    ids = [];
+				for (var i = 0; i < array.length; i++) {
+					ids.push(array[i].id);
+				}
+				return ids;
+			},
 			select2SearchResult: function select2SearchResult() {
 				var self = this,
 				    newArr = [],
@@ -818,18 +875,6 @@
 				return newArr;
 			}
 		},
-		ready: function ready() {
-			var self = this;
-	
-			$(window).on('click', function (event) {
-				event.stopPropagation();
-				if (self.select2IsHide) {
-					self.select2IsHide = false;
-					self.select2SearchText = '';
-				}
-			});
-		},
-	
 		methods: {
 			remove2SelectList: function remove2SelectList(index) {
 				var originIndex = this.select2List[index].index;
@@ -1076,7 +1121,7 @@
 /* 29 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"jellybean\" :class=\"{'error':jellybeanMaxError}\">\n\t<ul class='jellybean-container clearfix'>\n\t\t<li class=\"jellybean-container-item\" v-for='item in select2List' track-by=\"$index\">\n\t\t\t<span class=\"jellybean-suggest-show\">\n\t\t\t\t<span class=\"value\" v-text='item.text'></span>\n\t\t\t\t<button type=\"button\" class=\"remove\" @click='remove2SelectList($index)'>×</button>\n\t\t\t</span>\n\t\t</li>\n\t\t<li class=\"jellybean-container-item\">\n\t\t\t<span class=\"jellybean-suggest-input\">\n\t\t\t\t<input type=\"text\" class=\"jellybean-input\" :placeholder=\"placeholder\" v-model='select2SearchText' debounce=\"500\" @click.stop>\t\t\t\t\t\n\t\t\t\t<ul class='jellybean-result' :class=\"{'show':select2IsHide}\" v-cloak>\t\t\t\t\t\n\t\t\t\t\t<li v-for='item in select2SearchResult' track-by=\"$index\" v-if='!promptMessage'>\n\t\t\t\t\t\t<a href=\"javascript:;\" :title=\"item.text\" class=\"jellybean-result-link\" v-html='item.text | highlight select2SearchText' @click='Add2Select2List(item.text)'>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\t\t\n\t\t\t\t\t<li v-if='promptMessage'>\n\t\t\t\t\t\t<span class='jellybean-result-link jellybean-result-error text-center' v-text='msgCustom'>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</span>\n\t\t</li>\n\t</ul>\n</div>\n";
+	module.exports = "\n<div class=\"jellybean\" :class=\"{'error':jellybeanMaxError}\">\n\t<ul class='jellybean-container clearfix'>\n\t\t<li class=\"jellybean-container-item\" v-for='item in select2List' track-by=\"$index\">\n\t\t\t<span class=\"jellybean-suggest-show\">\n\t\t\t\t<span class=\"value\" v-text='item.text'></span>\n\t\t\t\t<button type=\"button\" class=\"remove\" @click='remove2SelectList($index)'>×</button>\n\t\t\t</span>\n\t\t</li>\n\t\t<li class=\"jellybean-container-item\">\n\t\t\t<span class=\"jellybean-suggest-input\">\n\t\t\t\t<input type=\"text\" class=\"jellybean-input\" :placeholder=\"placeholder\" v-model='select2SearchText' debounce=\"500\" @click.stop>\t\t\t\t\t\n\t\t\t\t<ul class='jellybean-result' :class=\"{'show':select2IsHide}\" v-cloak>\t\t\t\t\t\n\t\t\t\t\t<li v-for='item in select2SearchResult' track-by=\"$index\" v-if='!promptMessage'>\n\t\t\t\t\t\t<a href=\"javascript:;\" :title=\"item.text\" class=\"jellybean-result-link\" v-html='item.text | highlight select2SearchText' @click='Add2Select2List(item.text)'>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\t\t\n\t\t\t\t\t<li v-if='promptMessage'>\n\t\t\t\t\t\t<span class='jellybean-result-link jellybean-result-error text-center' v-text='msgCustom'>\n\t\t\t\t\t\t</span>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t</span>\n\t\t</li>\n\t</ul>\n\t<!-- 隐藏域，上传选中的语言的id -->\n\t<input type=\"hidden\" name=\"{{hiddenName}}\" value=\"{{choiceIds}}\">\n</div>\n";
 
 /***/ },
 /* 30 */
@@ -1142,10 +1187,10 @@
 	      var isIndex = $.inArray(str, newArr);
 	
 	      if (isIndex !== -1) {
-	        this.select2CheckedNames.push(self.resultData[isIndex].text);
 	        this.select2List.push({
 	          text: self.resultData[isIndex].text,
 	          short: self.resultData[isIndex].short,
+	          id: self.resultData[isIndex].id,
 	          index: isIndex
 	        });
 	        this.resultData[isIndex].isForbid = true;
@@ -1178,12 +1223,14 @@
 	// 		<ul class='checkbox-list'>		
 	// 			<li class="checkbox" v-for='item in select2List' v-cloak>
 	// 	        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{item.text}}" for="{{item.short}}" @mouseup='remove2SelectList($index)'>
-	// 				  <input type="checkbox" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames'>
+	// 				  <input type="checkbox" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames' checked="true">
 	// 				  <span class="c-indicator"></span>
 	// 				  <span v-text='item.text'></span>
 	// 				</label>
 	// 			</li>
 	// 		</ul>
+	// 		<!-- 隐藏域，上传选中的语言的id -->
+	// 		<input type="hidden" name="{{hiddenName}}" value="{{choiceIds}}">
 	// 	</div> 								
 	// </template>
 	//
@@ -1193,7 +1240,7 @@
 /* 32 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"select2\">\n\t<div class=\"select2\">\n\t\t<a href=\"javascript:;\" title=\"select\" class='select2-choice' @click.stop='select2IsHide = !select2IsHide'>\n\t\t\tAny Location\n\t\t\t<i class=\"fa\" :class=\"{'fa-angle-down':!select2IsHide,'fa-angle-up':select2IsHide}\"></i>\n\t\t</a>\n\t\t<div class='select2-drop' :class=\"{'select2-drop-hide':!select2IsHide , 'select2-drop-show':select2IsHide}\" v-cloak>\n\t\t\t<div class='select2-search'>\n\t\t\t\t<input type=\"text\" name=\"\" value=\"\" placeholder=\"\" class='form-control' v-model='select2SearchText' @click.stop>\n\t\t\t</div>\n\t\t\t<ul class='select2-content'>\n\t\t\t\t<li v-for='country in select2SearchResult' track-by=\"$index\">\n\t\t\t\t\t<a href=\"javascript:;\" :title=\"country.text\" v-html='country.text | highlight select2SearchText' @click='Add2Select2List(country.text)'>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n\t<ul class='checkbox-list'>\t\t\n\t\t<li class=\"checkbox\" v-for='item in select2List' v-cloak>\n        \t<label class=\"c-input c-checkbox\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"{{item.text}}\" for=\"{{item.short}}\" @mouseup='remove2SelectList($index)'>\n\t\t\t  <input type=\"checkbox\" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames'>\n\t\t\t  <span class=\"c-indicator\"></span>\n\t\t\t  <span v-text='item.text'></span>\n\t\t\t</label>\n\t\t</li>\n\t</ul>\n</div> \t\t\t\t\t\t\t\t\n";
+	module.exports = "\n<div id=\"select2\">\n\t<div class=\"select2\">\n\t\t<a href=\"javascript:;\" title=\"select\" class='select2-choice' @click.stop='select2IsHide = !select2IsHide'>\n\t\t\tAny Location\n\t\t\t<i class=\"fa\" :class=\"{'fa-angle-down':!select2IsHide,'fa-angle-up':select2IsHide}\"></i>\n\t\t</a>\n\t\t<div class='select2-drop' :class=\"{'select2-drop-hide':!select2IsHide , 'select2-drop-show':select2IsHide}\" v-cloak>\n\t\t\t<div class='select2-search'>\n\t\t\t\t<input type=\"text\" name=\"\" value=\"\" placeholder=\"\" class='form-control' v-model='select2SearchText' @click.stop>\n\t\t\t</div>\n\t\t\t<ul class='select2-content'>\n\t\t\t\t<li v-for='country in select2SearchResult' track-by=\"$index\">\n\t\t\t\t\t<a href=\"javascript:;\" :title=\"country.text\" v-html='country.text | highlight select2SearchText' @click='Add2Select2List(country.text)'>\n\t\t\t\t\t</a>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n\t<ul class='checkbox-list'>\t\t\n\t\t<li class=\"checkbox\" v-for='item in select2List' v-cloak>\n        \t<label class=\"c-input c-checkbox\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"{{item.text}}\" for=\"{{item.short}}\" @mouseup='remove2SelectList($index)'>\n\t\t\t  <input type=\"checkbox\" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames' checked=\"true\">\n\t\t\t  <span class=\"c-indicator\"></span>\n\t\t\t  <span v-text='item.text'></span>\n\t\t\t</label>\n\t\t</li>\n\t</ul>\n\t<!-- 隐藏域，上传选中的语言的id -->\n\t<input type=\"hidden\" name=\"{{hiddenName}}\" value=\"{{choiceIds}}\">\n</div> \t\t\t\t\t\t\t\t\n";
 
 /***/ },
 /* 33 */

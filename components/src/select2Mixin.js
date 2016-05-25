@@ -1,12 +1,16 @@
 const select2Mixin = {
 	props: {
-		originData: {
-			type: Array,
+		dataUrl: {
+			type: String,
 			require: true
+		},
+		hiddenName: {
+			type: String
 		}
 	},
 	data() {
 		return {
+			originData: [],
 			select2IsHide: false,
 			select2SearchText: '',
 			resultData: [],
@@ -16,13 +20,44 @@ const select2Mixin = {
 	},
 	created: function() {
 		var self = this;
-		this.originData.forEach(function(element) {
-			self.resultData.push(Object.assign({}, element, {
-				isForbid: false
-			}));
+		$.ajax({
+			type: 'GET',
+			url: self.dataUrl,
+			success: function(data) {
+				var data = data.data;
+				self.originData = data;
+
+				self.originData.forEach(function(element) {
+					self.resultData.push(Object.assign({}, element, {
+						isForbid: false
+					}));
+				});
+			},
+			error: function(state) {
+				console.log('数据加载失败')
+			}
+		})
+	},
+	ready: function() {
+		var self = this;
+
+		$(window).on('click', function(event) {
+			event.stopPropagation();
+			if (self.select2IsHide) {
+				self.select2IsHide = false;
+				self.select2SearchText = '';
+			}
 		});
 	},
 	computed: {
+		choiceIds: function() {
+			var array = this.select2List,
+				ids = [];
+			for (var i = 0; i < array.length; i++) {
+				ids.push(array[i].id)
+			}
+			return ids;
+		},
 		select2SearchResult: function() {
 			var self = this,
 				newArr = [],
@@ -46,18 +81,6 @@ const select2Mixin = {
 			return newArr;
 		}
 	},
-	ready: function() {
-		var self = this;
-
-		$(window).on('click', function(event) {
-			event.stopPropagation();
-			if (self.select2IsHide) {
-				self.select2IsHide = false;
-				self.select2SearchText = '';
-			}
-		});
-	},
-
 	methods: {
 		remove2SelectList: function(index) {
 			var originIndex = this.select2List[index].index;

@@ -35,7 +35,7 @@ require.config({
     Vue: './vendor/vue', // MVVM框架
     VueStrap: './vendor/vue-strap.min', //类似bootstrap组件
     vueValidator: './vendor/vue-validator.min', //Vue 验证插件,
-    VueComponent: '../static/vue-component', // 自定义Vue 组件,
+    VueComponent: '../static/vue-component', // 自定义Vue 组件, 引入这个组件前必须引入jquery,因为未把jquery打包入这个组件中，会造成体积偏大
     VueGlobalFilter: './vue-globalfilter', //全局过滤器,
 
     // layerInit

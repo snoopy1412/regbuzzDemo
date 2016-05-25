@@ -1,4 +1,4 @@
-define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
+define(['jquery', 'Vue', 'VueComponent'], function($, Vue, VueComponent) {
 
 	var homehistory = VueComponent.homehistory;
 	var currentIndex;
@@ -9,67 +9,82 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
 			homehistory: homehistory
 		},
 		data: {
+			loading: true,
 			userId: 1,
 			pushData: [],
 			saveHide: false,
 			isLoad: false
 		},
 		ready: function() {
-			// 模拟$.ajax
-			this.pushData = [{
-				projectId: 23, // 项目id
-				category: { // 项目分类
-					first: 'GHS',
-					sub: 'SDS'
-				},
-				favoriteUsersIds: [], // 收藏人id
-				title: 'Expert Joomla Web Developer - CiviCRM a Plus!', // 项目标题
-				price: { // 项目价格
-					num: 100000,
-					currency: 'USD'
-				},
-				remaining: '5', //剩余时间
+			var self = this;
+			$.ajax({
+					type: 'GET',
+					url: '../../../Public/data/dashboard/pushProjects.json',
+					success: function(data) {
+						self.loading = false;
+						self.pushData = filterData(data.data, self.userId, 3);
+					},
+					error: function(msg) {
+						console.log(msg)
+					}
+				})
+				// 模拟$.ajax
 
-				// 项目描述
-				description: 'I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item'
-			}, {
-				projectId: 23, //模拟
-				category: {
-					first: 'GHS',
-					sub: 'SDS'
-				},
-				favoriteUsersIds: [],
-				title: 'Expert Joomla Web Developer - CiviCRM a Plus!',
-				price: {
-					num: 100000,
-					currency: 'USD'
-				},
-				remaining: '5',
-				description: 'I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item'
-			}, {
-				projectId: 23, //模拟
-				category: {
-					first: 'GHS',
-					sub: 'SDS'
-				},
-				favoriteUsersIds: [],
-				title: 'Expert Joomla Web Developer - CiviCRM a Plus!',
-				price: {
-					num: 100000,
-					currency: 'USD'
-				},
-				remaining: '5',
-				description: 'I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item'
-			}];
+			// this.pushData = [{
+			// 	projectId: 23, // 项目id
+			// 	category: { // 项目分类
+			// 		first: 'GHS',
+			// 		sub: 'SDS'
+			// 	},
+			// 	favoriteUsersIds: [], // 收藏人id
+			// 	title: 'Expert Joomla Web Developer - CiviCRM a Plus!', // 项目标题
+			// 	price: { // 项目价格
+			// 		num: 100000,
+			// 		currency: 'USD'
+			// 	},
+			// 	remaining: '5', //剩余时间
+
+			// 	// 项目描述
+			// 	description: 'I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item'
+			// }
 		},
 		methods: {
 			favorite: function(index, event) {
 				// 收藏操作
-				var favoriteUsersIds = this.pushData[index].favoriteUsersIds;
-				if (favoriteUsersIds.indexOf(this.userId) === -1) {
-					this.saveHide = true;
+				var self = this,
+					favoriteUsersIds = this.pushData[index].favoriteUsersIds,
+					checkInArray = $.inArray(self.userId, favoriteUsersIds);
+
+				if (checkInArray !== -1) {
+					return false;
 				}
-				this.pushData[index].favoriteUsersIds.push(this.userId); // 是否需要储存，还是只在当前页面储存，状态如何维持？
+
+				// 在这个位置需要考虑ajax修改数据中的favoriteUsersIds的值，理论上应该是post请求
+				// 这里只是模拟
+
+				// 需要传递的数据,post到后台后，可以将userId添入该项目的里面的favoriteUsersIds
+				var submitData = {
+					userId: self.userId,
+					projectId: self.pushData[index].projectId
+				}
+
+				$.ajax({
+					type: 'GET',
+					url: '../../../Public/data/dashboard/pushProjects.json',
+					data: submitData,
+					success: function(data) {
+
+						// 弹出窗口
+						self.saveHide = true;
+
+						// 同时，本地数据favorite也变色表示
+						self.pushData[index].favoriteUsersIds.push(self.userId);
+					},
+					error: function(state) {
+						console.log(state)
+					}
+
+				})
 			},
 			changePush: function() {
 				var self = this;
@@ -77,56 +92,54 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
 				// 首先需要把isLoad 改变状态
 				this.isLoad = true;
 
-				// 第二步是进行数据的获取,应该是一次ajax操作，此处模拟
-				var timer = setTimeout(function() {
-					if (self.isLoad) {
-						// 这里进行关键性操作
-
-						// 模拟随机字符串，仅仅做模拟用
-						/*
-						 ** randomWord 产生任意长度随机字母数字组合
-						 ** randomFlag-是否任意长度 min-任意长度最小位[固定位数] max-任意长度最大位
-						 */
-						function randomWord(randomFlag, min, max) {
-							var str = "",
-								range = min,
-								arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-
-							// 随机产生
-							if (randomFlag) {
-								range = Math.round(Math.random() * (max - min)) + min;
-							}
-							for (var i = 0; i < range; i++) {
-								pos = Math.round(Math.random() * (arr.length - 1));
-								str += arr[pos];
-							}
-							return str;
+				// 重新获取数据
+				if (self.isLoad) {
+					$.ajax({
+						type: 'GET',
+						url: '../../../Public/data/dashboard/pushProjects.json',
+						success: function(data) {
+							self.pushData = filterData(data.data, self.userId, 3);
+						},
+						complete: function() {
+							self.isLoad = false;
+						},
+						error: function(msg) {
+							console.log(msg)
 						}
+					})
 
-						self.pushData = [];
-						for (var i = 0; i < 3; i++) {
-							self.pushData.push({
-								projectId: 23, //模拟
-								category: {
-									first: 'GHS',
-									sub: 'CHEMICAL'
-								},
-								favoriteUsersIds: [], // 收藏人id
-								title: randomWord(true, 10, 30),
-								price: {
-									num: 100000,
-									currency: 'USD'
-								},
-								remaining: '5',
-								description: 'I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item											I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item'
-							})
-						}
-						self.isLoad = false;
-					}
+				}
 
-				}, 1000)
+
 			}
 		}
 	});
 
+
+	/**
+	 * [filterData description]
+	 * @param  {[array]} originData  [数据源]
+	 * @param  {[number]} userid     [本机用户id]
+	 * @param  {[number]} count      [获得范围]
+	 * @return {[array]}             [筛选后的数据]
+	 */
+	function filterData(originData, userid, count) {
+		var newArr = originData,
+			resultArr = [];
+
+		// 筛选出内部未被本机用户收藏标记的数据,生成新数组
+		$.each(newArr, function() {
+			var bBtn = $.inArray(userid, this.favoriteUsersIds);
+			if (bBtn === -1) {
+				resultArr.push(this);
+			}
+		})
+
+		// 打乱顺序
+		var resultArr = resultArr.sort(function(a, b) {
+			return Math.random() - 0.5
+		})
+
+		return resultArr.slice(0, count)
+	}
 });

@@ -405,7 +405,8 @@
 								<h4 class='list-aside-item-title'>Country</h4>
 								
 								<!-- 加载select2组件，此组件来自于 components/Select2.vue -->
-								<select2 :origin-data='originData'></select2>
+								<!-- 为了有可能是同步提交服务器的方式上传，在组件里面集成 了一个input[type=hidden]，需要指明其 name 即:hidden-name  -->
+								<select2 :data-url='CountriesDataUrl' :hidden-name='hiddenName'></select2>
 								
 							</div>
 						</div>

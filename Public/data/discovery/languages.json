@@ -1,0 +1,102 @@
+{
+	"data": [{
+			"id":1,
+			"local": "Bahasa Indonesia",
+			"text": "Bahasa Indonesia",
+			"abbr": "ID"
+		}, {"id":2,
+			"local": "Bahasa Malaysia",
+			"text": "Malay",
+			"abbr": "MS"
+		}, {"id":3,
+			"local": "Čeština",
+			"text": "Czech",
+			"abbr": "CS"
+		}, {"id":4,
+			"local": "Dansk",
+			"text": "Danish",
+			"abbr": "DA"
+		}, {"id":5,
+			"local": "Deutsch",
+			"text": "German",
+			"abbr": "DE"
+		}, {"id":6,
+			"local": "English",
+			"text": "English",
+			"abbr": "EN"
+		}, {"id":7,
+			"local": "Español",
+			"text": "Spanish",
+			"abbr": "ES"
+		},
+		{"id":8,
+			"local": "正體中文",
+			"text": "Chinese(Traditional)",
+			"abbr": "ZH-TW"
+		}, {"id":9,
+			"local": "Français",
+			"text": "French",
+			"abbr": "FR"
+		}, {"id":10,
+			"local": "한국어",
+			"text": "Korean",
+			"abbr": "KO"
+		}, {"id":11,
+			"local": "Italiano",
+			"text": "Italian",
+			"abbr": "IT"
+		}, {"id":12,
+			"local": "简体中文",
+			"text": "Chinese(Simplified)",
+			"abbr": "ZH-CN"
+		}, {"id":13,
+			"local": "Nederlands",
+			"text": "Dutch",
+			"abbr": "NL"
+		}, {"id":14,
+			"local": "日本語",
+			"text": "Japanese",
+			"abbr": "JA"
+		}, {"id":15,
+			"local": "Norsk",
+			"text": "Norwegian",
+			"abbr": "NO"
+		}, {"id":16,
+			"local": "Polski",
+			"text": "Polish",
+			"abbr": "PL"
+		}, {"id":17,
+			"local": "Português",
+			"text": "Portuguese",
+			"abbr": "PT"
+		}, {"id":18,
+			"local": "Română",
+			"text": "Romanian",
+			"abbr": "RO"
+		}, {"id":19,
+			"local": "Русский",
+			"text": "Russian",
+			"abbr": "RU"
+		}, {"id":20,
+			"local": "Svenska",
+			"text": "Swedish",
+			"abbr": "SV"
+		}, {"id":21,
+			"local": "Tagalog",
+			"text": "Tagalog",
+			"abbr": "TL"
+		}, {"id":22,
+			"local": "ภาษาไทย",
+			"text": "Thai",
+			"abbr": "TH"
+		}, {"id":23,
+			"local": "Türkçe",
+			"text": "Turkish",
+			"abbr": "TR"
+		}, {"id":24,
+			"local": "العربية",
+			"text": "Arabic",
+			"abbr": "AR"
+		}
+	]
+}

@@ -1,4 +1,5 @@
-define(['Vue', 'VueComponent', '../../Public/data/countries.js', '../../Public/data/profile/country.js', '../../Public/data/profile/position.js', '../../Public/data/profile/summary.js', '../../Public/data/profile/price.js', '../../Public/data/profile/services.js', '../../Public/data/profile/skills.js', '../../Public/data/profile/experience.js', '../../Public/data/profile/language.js', '../../Public/data/profile/educations.js', '../../Public/data/profile/certificate.js', '../../Public/data/profile/publish.js'], function(Vue, VueComponent) {
+define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
+    Vue.config.debug = true
     var wordcount = VueComponent.wordcount;
 
     var profileUserVm = new Vue({
@@ -9,6 +10,7 @@ define(['Vue', 'VueComponent', '../../Public/data/countries.js', '../../Public/d
         data: {
             loading: true,
             errorMsg: false,
+            loadMax: 0,
             /**
              * 页面数据初始化
              * @type {Array}
@@ -16,16 +18,16 @@ define(['Vue', 'VueComponent', '../../Public/data/countries.js', '../../Public/d
             countries: [],
 
             // location 数据
-            countryData: {},
+            countryData: [],
 
             // position 数据
-            positionData: {},
+            positionData: [],
 
             // summary 数据
-            summaryData: {},
+            summaryData: [],
 
             // price 数据
-            priceData: {},
+            priceData: [],
 
             //  services 数据
             servicesData: [],
@@ -94,46 +96,145 @@ define(['Vue', 'VueComponent', '../../Public/data/countries.js', '../../Public/d
 
         },
         created: function() {
-            this.countries = countriesData;
-
-            // location 数据
-            this.countryData = countryData;
-
-            // position 数据
-            this.positionData = positionData;
-
-            // summary 数据
-            this.summaryData = summaryData;
-
-            // price 数据
-            this.priceData = priceData;
-
-            //  services 数据
-            this.servicesData = servicesData;
-
-            // skill 数据
-            this.skillsData = skillsData;
-
-            // experience 数据
-            this.experienceData = experienceData;
-
-            // language 数据
-            this.languageData = languageData;
-
-            // education 数据
-            this.educationsData = educationsData;
-
-            // certificate 数据
-            this.certificateData = certificateData;
-
-            // publish 数据
-            this.publishData = publishData;
-
-            // 初始化模拟  模拟加载
             var self = this;
-            setTimeout(function() {
-                self.loading = false;
-            }, 2000)
+
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/discovery/languages.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.countries = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/country.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.countryData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/position.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.positionData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/summary.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.summaryData = data.data
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/price.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.priceData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/services.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.servicesData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/skills.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.skillsData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/experience.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.experienceData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/language.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.languageData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/educations.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.educationsData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/certificate.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.certificateData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+            $.ajax({
+                type: 'GET',
+                url: '../../../Public/data/profile/publish.json',
+                success: function(data) {
+                    self.loadMax++;
+                    self.publishData = data.data;
+                },
+                error: function(state) {
+                    console.log(state)
+                }
+            })
+        },
+        computed: {
+            loading: function() {
+               return this.loadMax >= 12 ? false : true
+            }
         },
         methods: {
 

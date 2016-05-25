@@ -346,7 +346,10 @@
 <!-- header.html end-->
 	<section class='com-main'>
 		<div class="container container-home" id='vue-home'>
-			<div class="row">
+			<div  :class="{'loading2': loading }" v-if='loading'>
+		          <i></i>	        
+			</div>
+			<div class="row" v-if='!loading'>
 				<div class="col-xs-9">
 					<header class="row home-heading section">
 						<div class="col-xs-7 home-heading-section">

@@ -20,12 +20,14 @@
 		<ul class='checkbox-list'>		
 			<li class="checkbox" v-for='item in select2List' v-cloak>
 	        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{item.text}}" for="{{item.short}}" @mouseup='remove2SelectList($index)'>
-				  <input type="checkbox" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames'>
+				  <input type="checkbox" id='{{item.short}}' value='{{item.text}}' v-model='select2CheckedNames' checked="true">
 				  <span class="c-indicator"></span>
 				  <span v-text='item.text'></span>
 				</label>
 			</li>
 		</ul>
+		<!-- 隐藏域，上传选中的语言的id -->
+		<input type="hidden" name="{{hiddenName}}" value="{{choiceIds}}">
 	</div> 								
 </template>
 
@@ -50,10 +52,10 @@
        var isIndex = $.inArray(str, newArr);
 
        if (isIndex !== -1) {
-         this.select2CheckedNames.push(self.resultData[isIndex].text);
          this.select2List.push({
            text: self.resultData[isIndex].text,
            short: self.resultData[isIndex].short,
+           id:self.resultData[isIndex].id,
            index: isIndex
          });
          this.resultData[isIndex].isForbid = true;

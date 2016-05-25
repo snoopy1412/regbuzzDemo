@@ -38,7 +38,7 @@
 										<div class="col-xs-9">
 
 											<!-- 加载二级联动，此组件来自于 components/Linkage.vue -->
-											<linkage v-bind:linkage-data='selectedData'></linkage>
+											<linkage v-bind:data-url='categoryDataUrl'></linkage>
 
 										</div>							
 									</div>
@@ -204,8 +204,8 @@
 										<div class="col-xs-9">
 											
 											<!-- 加载jellybean组件，此组件来自于 components/Jellybean.vue -->
-											<!-- <jellybean :origin-data='languageData' :placeholder='placeholder' :jellybean-max=3 :msg-custom='检索失败，换一个关键词试试？'></jellybean> -->
-											<jellybean :origin-data='languageData' :placeholder='placeholder' :jellybean-max=3 msg-custom='检索失败，换一个关键词试试？'></jellybean>
+											<!-- 已集成隐藏域，可用于form提交 -->
+											<jellybean :data-url='languageDataUrl' :placeholder='placeholder' :jellybean-max=3 msg-custom='检索失败，换一个关键词试试？' :hidden-name='hiddenName'></jellybean>
 										</div>
 									</div>
 									

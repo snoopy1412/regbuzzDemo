@@ -1,9 +1,8 @@
-define(['Vue', 
-	'VueComponent', 
-	'VueGlobalFilter', 
-	'../../../Public/data/languages.js', 
-	'../../../Public/data/linkage.js', ], function(Vue, VueComponent) {
-
+define(['Vue',
+	'VueComponent',
+	'VueGlobalFilter'
+], function(Vue, VueComponent) {
+	// category.json
 	var linkage = VueComponent.linkage,
 		wordcount = VueComponent.wordcount,
 		jellybean = VueComponent.jellybean;
@@ -17,6 +16,13 @@ define(['Vue',
 			jellybean: jellybean
 		},
 		data: {
+			// 两级联动
+			categoryDataUrl: '../../../Public/data/publish/category.json',
+
+			// 选择语言
+			languageDataUrl: '../../../Public/data/discovery/languages.json',
+			hiddenName: 'choiceLanguagesIds',
+
 			// 数据初始化
 			selectedData: [],
 			languageData: [],
@@ -31,7 +37,7 @@ define(['Vue',
 
 			// 是否只有邀请的人可以看到任务
 			onlyInvite: false,
-			selectPublicOrPrivate:''
+			selectPublicOrPrivate: ''
 
 		},
 
@@ -47,18 +53,9 @@ define(['Vue',
 				var child = this.$refs.profile;
 				return child.select2List.length;
 			},
-			onlyInvite:function(){
+			onlyInvite: function() {
 				return this.selectPublicOrPrivate === 'public' ? false : true
 			}
-		},
-
-		created: function() {
-
-			// linkage的动态数据加载
-			this.selectedData = linkageData;
-
-			// jellybean的动态数据加载
-			this.languageData = languagesData;
 		}
 	})
 

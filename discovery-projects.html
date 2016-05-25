@@ -399,13 +399,13 @@
 						</div>
 
 						<!-- 语言 -->
-						<div class="list-aside-item list-aside-item-language panel panel-default"  id='vue-list-languages'>
+						<div class="list-aside-item list-aside-item-language panel panel-default">
 							<div class="panel-body">
 								<h4 class='list-aside-item-title'>Language</h4>
 								<ul class='checkbox-list'>		
 									<li class="checkbox" v-for='language in languagesData |limitBy maxSize'>
-							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}">
-										  <input type="checkbox" id='{{language.abbr}}'>
+							        	<label class="c-input c-checkbox" data-toggle="tooltip" data-placement="right" title="{{language.local}}" for="{{language.abbr}}" @click='ajaxLanguage'>
+										  <input type="checkbox" id='{{language.abbr}}' value='{{language.abbr}}' v-model="checkedLanguages" name='checkedLanguages[]'>
 										  <span class="c-indicator"></span>
 										  <span v-text='language.text'></span>
 										</label>
@@ -421,7 +421,8 @@
 								<h4 class='list-aside-item-title'>Location</h4>
 
 								<!-- 加载select2组件，此组件来自于 components/Select2.vue -->
-								<select2 :origin-data='originData'></select2>
+								<!-- 为了有可能是同步提交服务器的方式上传，在组件里面集成 了一个input[type=hidden]，需要指明其 name 即:hidden-name  -->
+								<select2 :data-url='CountriesDataUrl' :hidden-name='hiddenName'></select2>
 							</div>
 						</div>
 

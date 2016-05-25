@@ -1,6 +1,6 @@
 var webpack = require('webpack')
 var path = require('path')
-
+var ignoreFiles = new webpack.IgnorePlugin(/\.\/jquery-1.11.2.min.js$/);
 module.exports = {
   entry: './components/index.js',
   output: {
@@ -8,6 +8,7 @@ module.exports = {
     publicPath: '/Public/static/',
     filename: 'vue-component.js'
   },
+  plugins: [ignoreFiles],
   resolve: {
     root: path.resolve('./')
   },

@@ -48,7 +48,7 @@
 							 		</div>
 
 								 	<section class='profile-info--person-register text-center'>
-								 		<div class="location">
+								 		<div class="location" v-for='countryData in countryData'>
 								 			<div class='edit-start' v-show='countryData.hideOrigin'>
 								 				<span class='edit-text' v-on:click='hide(countryData)'>
 													<span v-text="countryData.result.city | capitalize"></span>
@@ -88,7 +88,7 @@
 							 		</li>
 
 							 		<!-- 职位 -->
-							 		<li>
+							 		<li v-for='positionData in positionData'>
 								 		<div class='edit-start' v-show='positionData.hideOrigin'>
 								 			<strong class='major edit-text' v-text="positionData.result.position | capitalize"  v-on:click='hide(positionData)'></strong>
 								 			<a href="javascript:;" title="edit" class='edit-handle' v-on:click='hide(positionData)'><i class="fa fa-pencil"></i></a>
@@ -106,7 +106,7 @@
 							 		<!-- 职位结束 -->
 
 							 		<!-- 自我介绍 -->
-							 		<li>
+							 		<li v-for= 'summaryData in summaryData'>
 							 			<div class='edit-start' v-show='summaryData.hideOrigin'>
 								 			<span class='summary edit-text pull-left' v-text="summaryData.result.summary | capitalize" v-on:click='hide(summaryData)'></span>
 								 			<a href="javascript:;" title="edit" class='edit-handle pull-left' v-on:click='hide(summaryData)'><i class="fa fa-pencil"></i></a>
@@ -870,7 +870,7 @@
 					<section class='profile-info-aside'>
 						<!-- 雇佣 -->
 						<div class='profile-info-aside-item hire section'>
-					 		<div class='mb-5'>
+					 		<div class='mb-5' v-for='priceData in priceData'>
 					 			<div class='edit-start' v-show='priceData.hideOrigin'>
 						 			<span class="membership-plans-price">
 			                            <span class='edit-text edit' v-on:click='hide(priceData)' v-text="priceData.result.price | currency "></span><span class='price-unit'>USD/hr</span>
