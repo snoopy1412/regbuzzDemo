@@ -233,7 +233,7 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
         },
         computed: {
             loading: function() {
-               return this.loadMax >= 12 ? false : true
+                return this.loadMax >= 12 ? false : true
             }
         },
         methods: {
@@ -242,25 +242,28 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
             hide: function(data) {
                 data.hideOrigin = false;
             },
-            save: function(data) {
+            save: function(data, url) {
                 for (key in data.result) {
                     var text = data.result[key].trim();
                     if (text === '') {
                         this.errorMsg = true;
                         return false;
                     }
-                    data.origin[key] = data.result[key];
+
+                    // 不同的url对应不同的数据请求
+                    var resultUrl = url;
+
+                    //应该是post请求，这里模拟，在后台更新数据 
+                    $.ajax({
+                        type: 'GET',
+                        url: resultUrl,
+                        success: function(response) {
+                            // 后台更新成功后，本地数据也更新
+                            data.origin[key] = data.result[key];
+                            data.hideOrigin = true;
+                        }
+                    })
                 }
-
-                // 可以引入ajax
-                // var data = data.result,
-                //     url = "";
-
-                // $.post(url,data,function(data){
-                //     // 提示成功
-                // });
-
-                data.hideOrigin = true;
             },
             cancel: function(data) {
                 for (key in data.origin) {
@@ -270,9 +273,20 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                 data.hideOrigin = true;
             },
 
-            remove: function(data, index) {
-                data.splice(index, 1)
-                    // 可引入ajax 进行删除处理
+            remove: function(data, index, url) {
+
+                // 可引入ajax 进行删除处理
+                var resultUrl = url;
+
+                //应该是post请求，这里模拟，在后台更新数据 
+                $.ajax({
+                    type: 'GET',
+                    url: resultUrl,
+                    success: function(response) {
+                        // 后台更新成功后，本地数据也更新
+                        data.splice(index, 1)
+                    }
+                })
             },
 
             // 专属方法
@@ -280,6 +294,7 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                 添加服务
              */
             ServiceAdd: function() {
+                var self = this;
                 if (this.addServiceName === '' || this.addServicePrice === '' || this.addServiceContent === '') {
                     this.errorMsg = true;
                     return false;
@@ -297,19 +312,32 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                     },
                     hideOrigin: true
                 };
+                // post请求，此次get是模拟,url是模拟
+                $.ajax({
+                    url: '../../../Public/data/profile/services.json',
+                    type: 'get',
+                    data: data,
+                    success: function(response) {
+                        // self.servicesData = response.data; 准确的
 
-                this.servicesData.push(data);
+                        // 模拟
+                        self.servicesData.push(data);
 
-                // 清空表单
-                this.addServiceName = '';
-                this.addServicePrice = '';
-                this.addServiceContent = '';
+                        // 清空表单
+                        self.addServiceName = '';
+                        self.addServicePrice = '';
+                        self.addServiceContent = '';
+                    }
+                })
+
+
             },
 
             /**
              * 添加技能
              */
             SKillAdd: function() {
+                var self = this;
                 if (this.addSkillName === '') {
                     this.errorMsg = true;
                     return false;
@@ -323,14 +351,27 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                     },
                     hideOrigin: true
                 };
-                this.skillsData.push(data);
-                this.addSkillName = '';
+                // post请求，此次get是模拟,url是模拟
+                $.ajax({
+                    url: '../../../Public/data/profile/skills.json',
+                    type: 'get',
+                    data: data,
+                    success: function(response) {
+                        // self.servicesData = response.data; 准确的
+
+                        // 模拟
+                        self.skillsData.push(data);
+                        self.addSkillName = '';
+                    }
+                })
+
             },
 
             /**
              * 添加经验
              */
             ExperienceAdd: function() {
+                var self = this;
                 if (this.addExperienceName === '' || this.addExperienceCompany === '' || this.addExperienceStartMonth === '' || this.addExperienceStartYear === '' || this.addExperienceLastMonth === '' || this.addExperienceLastYear === '' || this.addExperienceContent === '') {
                     this.errorMsg = true;
                     return false;
@@ -364,20 +405,35 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                     },
                     hideOrigin: true
                 };
-                this.experienceData.push(data);
-                this.addExperienceName = '';
-                this.addExperienceCompany = '';
-                this.addExperienceStartMonth = '';
-                this.addExperienceStartYear = '';
-                this.addExperienceLastMonth = '';
-                this.addExperienceLastYear = '';
-                this.addExperienceContent = '';
+
+                // post请求，此次get是模拟,url是模拟
+                $.ajax({
+                    url: '../../../Public/data/profile/experience.json',
+                    type: 'get',
+                    data: data,
+                    success: function(response) {
+                        // self.skillsData = response.data; 准确的
+
+                        // 模拟
+                        self.skillsData.push(data);
+                        self.experienceData.push(data);
+                        self.addExperienceName = '';
+                        self.addExperienceCompany = '';
+                        self.addExperienceStartMonth = '';
+                        self.addExperienceStartYear = '';
+                        self.addExperienceLastMonth = '';
+                        self.addExperienceLastYear = '';
+                        self.addExperienceContent = '';
+                    }
+                })
+
             },
 
             /**
              * 添加语言
              */
             LanguageAdd: function() {
+                var self = this;
                 if (this.addLanguageTitle === '' || this.addLanguageLevel === '') {
                     this.errorMsg = true;
                     return false;
@@ -393,15 +449,29 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                     },
                     hideOrigin: true
                 };
-                this.languageData.push(data);
-                this.addLanguageTitle = '';
-                this.addLanguageLevel = '';
+
+                // post请求，此次get是模拟,url是模拟
+                $.ajax({
+                    url: '../../../Public/data/profile/language.json',
+                    type: 'get',
+                    data: data,
+                    success: function(response) {
+                        // self.languageData = response.data; 准确的
+
+                        // 模拟
+                        self.languageData.push(data);
+                        self.addLanguageTitle = '';
+                        self.addLanguageLevel = '';
+                    }
+                })
+
             },
 
             /**
              * 添加教育
              */
             educationAdd: function() {
+                var self = this;
                 if (this.addEducationDegree === '' || this.addEducationSchool === '' || this.addEducationStartTime === '' || this.addEducationEndTime === '') {
                     this.errorMsg = true;
                     return false;
@@ -421,17 +491,30 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                     },
                     hideOrigin: true
                 };
-                this.educationsData.push(data);
-                this.addEducationDegree = '';
-                this.addEducationSchool = '';
-                this.addEducationStartTime = '';
-                this.addEducationEndTime = '';
+                // post请求，此次get是模拟,url是模拟
+                $.ajax({
+                    url: '../../../Public/data/profile/educations.json',
+                    type: 'get',
+                    data: data,
+                    success: function(response) {
+                        // self.educationsData = response.data; 准确的
+
+                        // 模拟
+                        self.educationsData.push(data);
+                        self.addEducationDegree = '';
+                        self.addEducationSchool = '';
+                        self.addEducationStartTime = '';
+                        self.addEducationEndTime = '';
+                    }
+                })
+
             },
 
             /**
              * 添加认证 
              */
             CertificateAdd: function() {
+                var self = this;
                 if (this.addCertificateTitle === '' || this.addCertificateAuthority === '' || this.addCertificateMonth === '' || this.addCertificateYear === '') {
                     this.errorMsg = true;
                     return false;
@@ -451,17 +534,29 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                     },
                     hideOrigin: true
                 };
-                this.certificateData.push(data);
-                this.addCertificateTitle = '';
-                this.addCertificateAuthority = '';
-                this.addCertificateMonth = '';
-                this.addCertificateYear = '';
+                // post请求，此次get是模拟,url是模拟
+                $.ajax({
+                    url: '../../../Public/data/profile/certificate.json',
+                    type: 'get',
+                    data: data,
+                    success: function(response) {
+                        // self.certificateData = response.data; 准确的
+
+                        // 模拟
+                        self.certificateData.push(data);
+                        self.addCertificateTitle = '';
+                        self.addCertificateAuthority = '';
+                        self.addCertificateMonth = '';
+                        self.addCertificateYear = '';
+                    }
+                })
             },
 
             /**
              * 添加证书
              */
             publishAdd: function() {
+                var self = this;
                 if (this.addPublishTitle === '' || this.addPublishAgency === '' || this.addPublishMonth === '' || this.addPublishYear === '') {
                     this.errorMsg = true;
                     return false;
@@ -481,11 +576,23 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                     },
                     hideOrigin: true
                 };
-                this.publishData.push(data);
-                this.addPublishTitle = '';
-                this.addPublishAgency = '';
-                this.addPublishMonth = '';
-                this.addPublishYear = '';
+                // post请求，此次get是模拟,url是模拟
+                $.ajax({
+                    url: '../../../Public/data/profile/certificate.json',
+                    type: 'get',
+                    data: data,
+                    success: function(response) {
+                        // self.publishData = response.data; 准确的
+
+                        // 模拟
+                        self.publishData.push(data);
+                        self.addPublishTitle = '';
+                        self.addPublishAgency = '';
+                        self.addPublishMonth = '';
+                        self.addPublishYear = '';
+                    }
+                })
+
             }
 
         }

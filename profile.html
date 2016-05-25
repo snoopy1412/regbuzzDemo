@@ -410,7 +410,7 @@
 										  	 		</div>
 										  	 	</div>
 										  	 	<div>
-										  	 		<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(countryData)'>保存</a>
+										  	 		<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(countryData,'data.js')">保存</a>
 										  	 		<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(countryData)'>取消</a>
 										  	 	</div>
 									  	 	</div>
@@ -435,7 +435,7 @@
 												<input type='text' class='form-control' v-model='positionData.result.position' placeholder="input your position"/>
 											</div>
 											<div class='form-group'>
-												<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(positionData)'>Save</a>
+												<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(positionData,'data.js')">Save</a>
 								  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(positionData)'>Cancel</a>
 											</div>
 								 		</div>
@@ -455,7 +455,7 @@
 												<!-- <textarea class='form-control' v-model='summaryData.result.summary' placeholder="input your summary" rows='10'></textarea> -->
 											</div>
 											<div class='form-group'>
-												<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(summaryData)'>Save</a>
+												<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(summaryData,'data.js')">Save</a>
 								  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(summaryData)'>Cancel</a>
 											</div>
 								 		</div>
@@ -483,7 +483,7 @@
 								<section class='skills'>
 									<a href="javascript:;" class='skills-item' v-for='skill in skillsData'>
 										<span class='skills-title' v-text='skill.result.name'></span>
-										<i class="remove fa fa-times" @click='remove(skillsData,$index)'></i>
+										<i class="remove fa fa-times" v-on:click="remove(skillsData,$index,'data.js')"></i>
 									</a>
 								</section>						
 								<a title="Add Skills" class='btn btn-secondary btn-block' data-toggle="modal" data-target="#js-profile-skills"><i class="fa fa-plus"></i> Add Skills</a>
@@ -502,7 +502,7 @@
 												<a href="javascript:;" title="" class='edit' v-on:click='hide(experience)'>
 													<i class='fa fa-pencil'></i>
 												</a>
-												<a href="javascript:;" class='delete' v-on:click="remove(experienceData,$index)">
+												<a href="javascript:;" class='delete' v-on:click="remove(experienceData,$index,'data.js')">
 													<i class='fa fa-trash-o'></i>
 												</a>
 											</span>
@@ -569,7 +569,7 @@
 											<textarea  v-model='experience.result.content' rows='5' class='form-control'  placeholder="Input your content"></textarea>
 										</div>
 										<div class="form-group text-right">
-											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(experience)'>Save</a>
+											<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(experience,'data.js')">Save</a>
 							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(experience)'>Cancel</a>
 										</div>
 									</div>
@@ -591,7 +591,7 @@
 												<a href="javascript:;" title="" class='edit' v-on:click='hide(language)'>
 													<i class='fa fa-pencil'></i>
 												</a>
-												<a href="javascript:;" class='delete' v-on:click="remove(languageData,$index)">
+												<a href="javascript:;" class='delete' v-on:click="remove(languageData,$index,'data.js')">
 													<i class='fa fa-trash-o'></i>
 												</a>
 											</span>
@@ -612,7 +612,7 @@
 											</select>
 										</div>
 										<div class="form-group text-right">
-											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(language)'>Save</a>
+											<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(language,'data.js')">Save</a>
 							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(language)'>Cancel</a>
 										</div>
 									</div>
@@ -634,7 +634,7 @@
 												<a href="javascript:;" title="" class='edit' v-on:click='hide(education)'>
 													<i class='fa fa-pencil'></i>
 												</a>
-												<a href="javascript:;" class='delete' v-on:click="remove(educationsData,$index)">
+												<a href="javascript:;" class='delete' v-on:click="remove(educationsData,$index,'data.js')">
 													<i class='fa fa-trash-o'></i>
 												</a>
 											</span>
@@ -667,7 +667,7 @@
 											</div>
 										</div>
 										<div class='form-group text-right'>
-											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(education)'>Save</a>
+											<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(education,'data.js')">Save</a>
 							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(education)'>Cancel</a>
 										</div>
 										
@@ -690,7 +690,7 @@
 												<a href="javascript:;" title="" class='edit' v-on:click='hide(certificate)'>
 													<i class='fa fa-pencil'></i>
 												</a>
-												<a href="javascript:;" class='delete' v-on:click="remove(certificateData,$index)">
+												<a href="javascript:;" class='delete' v-on:click="remove(certificateData,$index,'data.js')">
 													<i class='fa fa-trash-o'></i>
 												</a>
 											</span>
@@ -733,7 +733,7 @@
 											</div>
 										</div>
 										<div class="form-group text-right">
-											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(certificate)'>Save</a>
+											<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(certificate,'data.js')">Save</a>
 							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(certificate)'>Cancel</a>
 										</div>
 									</div>
@@ -755,7 +755,7 @@
 												<a href="javascript:;" title="" class='edit' v-on:click='hide(publish)'>
 													<i class='fa fa-pencil'></i>
 												</a>
-												<a href="javascript:;" class='delete' v-on:click="remove(publishData,$index)">
+												<a href="javascript:;" class='delete' v-on:click="remove(publishData,$index,'data.js')">
 													<i class='fa fa-trash-o'></i>
 												</a>
 											</span>
@@ -798,7 +798,7 @@
 											</div>
 										</div>
 										<div class="form-group text-right">
-											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(publish)'>Save</a>
+											<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(publish,'data.js')">Save</a>
 							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(publish)'>Cancel</a>
 										</div>
 									</div>
@@ -824,7 +824,7 @@
 												<a href="javascript:;" title="" class='edit' v-on:click='hide(service)' v-show='service.hideOrigin'>
 													<i class='fa fa-pencil'></i>
 												</a>
-												<a href="javascript:;" class='delete' v-on:click="remove(servicesData,$index)" v-show='service.hideOrigin'>
+												<a href="javascript:;" class='delete' v-on:click="remove(servicesData,$index,'data.js')" v-show='service.hideOrigin'>
 													<i class='fa fa-trash-o'></i>
 												</a>
 											</span>
@@ -849,7 +849,7 @@
 											<textarea name="" placeholder="Input your service content" class='form-control' rows='5' v-model='service.result.content'></textarea>
 										</div>
 										<div class="form-group text-right">
-											<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(service)'>Save</a>
+											<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(service,'data.js')">Save</a>
 							  	 			<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(service)'>Cancel</a>
 										</div>
 									</div>
@@ -1223,7 +1223,7 @@
 										</div>
 									</div>
 									<div class='form-group text-right'>
-										<a href="javascript:;" title="" class='btn btn-primary' v-on:click='save(priceData)'>Save</a>
+										<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(priceData,'data.js')">Save</a>
 							  	 		<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(priceData)'>Cancel</a>
 									</div>
 						 		</div>
