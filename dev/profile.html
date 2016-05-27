@@ -62,7 +62,7 @@
 										  	 		<label for="" class="col-sm-3 control-label">国家</label>
 										  	 		<div class="col-sm-8">
 										  	 			<select name="" class='form-control' v-model='countryData.result.country'>
-										  	 				<option v-for='country in countries' v-bind:value='country.text' v-text="country.text"></option>
+										  	 				<option v-for='country in countries' v-bind:value='country.id' v-text="country.text"></option>
 										  	 			</select>
 										  	 		</div>
 										  	 	</div>
@@ -187,18 +187,18 @@
 											<div class='row row--no-padding'>
 												<div class="col-xs-3">
 											      	<select class='form-control' v-model='experience.result.startMonth'>
-												      	<option value="January">January</option>
-												      	<option value="February">February</option>
-												      	<option value="March">March</option>
-												      	<option value="April">April</option>
-												      	<option value="May">May</option>
-												      	<option value="June">June</option>
-												      	<option value="July">July</option>
-												      	<option value="August">August</option>
-												      	<option value="September">September</option>
-												      	<option value="October">October</option>
-												      	<option value="November">November</option>
-												      	<option value="December">December</option>
+												      	<option value="1">January</option>
+												      	<option value="2">February</option>
+												      	<option value="3">March</option>
+												      	<option value="4">April</option>
+												      	<option value="5">May</option>
+												      	<option value="6">June</option>
+												      	<option value="7">July</option>
+												      	<option value="8">August</option>
+												      	<option value="9">September</option>
+												      	<option value="10">October</option>
+												      	<option value="11">November</option>
+												      	<option value="12">December</option>
 											      	</select>
 												</div>
 												<div class='col-xs-2'>
@@ -209,18 +209,18 @@
 												</div>
 												<div class="col-xs-3">
 													<select name="startDateMonth" class='form-control' v-model='experience.result.endMonth'>
-												      	<option value="January">January</option>
-												      	<option value="February">February</option>
-												      	<option value="March">March</option>
-												      	<option value="April">April</option>
-												      	<option value="May">May</option>
-												      	<option value="June">June</option>
-												      	<option value="July">July</option>
-												      	<option value="August">August</option>
-												      	<option value="September">September</option>
-												      	<option value="October">October</option>
-												      	<option value="November">November</option>
-												      	<option value="December">December</option>
+												      	<option value="1">January</option>
+												      	<option value="2">February</option>
+												      	<option value="3">March</option>
+												      	<option value="4">April</option>
+												      	<option value="5">May</option>
+												      	<option value="6">June</option>
+												      	<option value="7">July</option>
+												      	<option value="8">August</option>
+												      	<option value="9">September</option>
+												      	<option value="10">October</option>
+												      	<option value="11">November</option>
+												      	<option value="12">December</option>
 											      	</select>	
 												</div>
 												<div class='col-xs-2'>
@@ -267,11 +267,11 @@
 										</div>
 										<div class="form-group">
 											<select class='form-control' v-model='language.result.level'>
-												<option >Elementary proficiency</option>
-												<option >Limited working proficiency</option>
-												<option >Professional working proficiency</option>
-												<option >Full professional proficiency</option>
-												<option >Native or bilingual proficiency</option>
+												<option value='1'>Elementary proficiency</option>
+												<option value='2'>Limited working proficiency</option>
+												<option value='3'>Professional working proficiency</option> value='1'
+												<option value='4'>Full professional proficiency</option>
+												<optio value='5'>Native or bilingual proficiency</option>
 											</select>
 										</div>
 										<div class="form-group text-right">
@@ -374,18 +374,18 @@
 											<div class="row row--no-padding">
 												<div class="col-xs-3">
 													<select class='form-control' v-model='certificate.result.month'>
-														<option value="January">January</option>
-												      	<option value="February">February</option>
-												      	<option value="March">March</option>
-												      	<option value="April">April</option>
-												      	<option value="May">May</option>
-												      	<option value="June">June</option>
-												      	<option value="July">July</option>
-												      	<option value="August">August</option>
-												      	<option value="September">September</option>
-												      	<option value="October">October</option>
-												      	<option value="November">November</option>
-												      	<option value="December">December</option>
+														<option value="1">January</option>
+												      	<option value="2">February</option>
+												      	<option value="3">March</option>
+												      	<option value="4">April</option>
+												      	<option value="5">May</option>
+												      	<option value="6">June</option>
+												      	<option value="7">July</option>
+												      	<option value="8">August</option>
+												      	<option value="9">September</option>
+												      	<option value="10">October</option>
+												      	<option value="11">November</option>
+												      	<option value="12">December</option>
 													</select>
 												</div>
 												<div class="col-xs-2">
@@ -439,18 +439,18 @@
 											<div class="row row--no-padding">
 												<div class="col-xs-3">
 													<select class='form-control' v-model='publish.result.month'>
-														<option value="January">January</option>
-												      	<option value="February">February</option>
-												      	<option value="March">March</option>
-												      	<option value="April">April</option>
-												      	<option value="May">May</option>
-												      	<option value="June">June</option>
-												      	<option value="July">July</option>
-												      	<option value="August">August</option>
-												      	<option value="September">September</option>
-												      	<option value="October">October</option>
-												      	<option value="November">November</option>
-												      	<option value="December">December</option>
+														<option value="1">January</option>
+												      	<option value="2">February</option>
+												      	<option value="3">March</option>
+												      	<option value="4">April</option>
+												      	<option value="5">May</option>
+												      	<option value="6">June</option>
+												      	<option value="7">July</option>
+												      	<option value="8">August</option>
+												      	<option value="9">September</option>
+												      	<option value="10">October</option>
+												      	<option value="11">November</option>
+												      	<option value="12">December</option>
 													</select>
 												</div>
 												<div class="col-xs-2">
@@ -529,26 +529,26 @@
 										<div class='form-group'>
 											<label for="">排序</label>
 											<select class='form-control'>
-												<option value="">最新评论</option>
-												<option value="">评分由高到低</option>
-												<option value="">评分由低到高</option>
+												<option value="1">最新评论</option>
+												<option value="2">评分由高到低</option>
+												<option value="3">评分由低到高</option>
 											</select>
 										</div>
 										<div class="form-group">
 											<label for="">查看</label>
 											<select name="" class='form-control'>
-												<option value="">全部(151)</option>
-												<option value="">过去三个月(0)</option>
-												<option value="">过去六个月(3)</option>
+												<option value="0">全部(151)</option>
+												<option value="1">过去三个月(0)</option>
+												<option value="2">过去六个月(3)</option>
 											</select>
 										</div>
 										<div class="form-group">
 											<label for="">每页评价数</label>
 											<select name="" class='form-control'>
-												<option value="">10</option>
-												<option value="">20</option>
-												<option value="">50</option>
-												<option value="">100</option>}
+												<option value="10">10</option>
+												<option value="20">20</option>
+												<option value="50">50</option>
+												<option value="100">100</option>}
 												option
 											</select>
 										</div>
@@ -559,7 +559,7 @@
 										<form action="">
 											<div class="form-group">
 												<select class='form-control'>
-													<option value="">通过技能筛选评价</option>
+													<option value="1">通过技能筛选评价</option>
 												</select>
 											</div>
 										</form>
@@ -1087,18 +1087,18 @@
 					<div class='row row--no-padding'>
 						<div class="col-xs-3">
 					      	<select name="startDateMonth" class='form-control' v-model='addExperienceStartMonth'>
-						      	<option value="January" selected>January</option>
-						      	<option value="February">February</option>
-						      	<option value="March">March</option>
-						      	<option value="April">April</option>
-						      	<option value="May">May</option>
-						      	<option value="June">June</option>
-						      	<option value="July">July</option>
-						      	<option value="August">August</option>
-						      	<option value="September">September</option>
-						      	<option value="October">October</option>
-						      	<option value="November">November</option>
-						      	<option value="December">December</option>
+						      	<option value="1" selected>January</option>
+						      	<option value="2">February</option>
+						      	<option value="3">March</option>
+						      	<option value="4">April</option>
+						      	<option value="5">May</option>
+						      	<option value="6">June</option>
+						      	<option value="7">July</option>
+						      	<option value="8">August</option>
+						      	<option value="9">September</option>
+						      	<option value="10">October</option>
+						      	<option value="11">November</option>
+						      	<option value="12">December</option>
 					      	</select>
 						</div>
 						<div class='col-xs-2'>
@@ -1109,18 +1109,18 @@
 						</div>
 						<div class="col-xs-3">
 							<select name="startDateMonth" class='form-control' v-model='addExperienceLastMonth'>
-								<option value="January" selected>January</option>
-								<option value="February">February</option>
-								<option value="March">March</option>
-								<option value="April">April</option>
-								<option value="May">May</option>
-								<option value="June">June</option>
-								<option value="July">July</option>
-								<option value="August">August</option>
-								<option value="September">September</option>
-								<option value="October">October</option>
-								<option value="November">November</option>
-								<option value="December">December</option>
+								<option value="1" selected>January</option>
+								<option value="2">February</option>
+								<option value="3">March</option>
+								<option value="4">April</option>
+								<option value="5">May</option>
+								<option value="6">June</option>
+								<option value="7">July</option>
+								<option value="8">August</option>
+								<option value="9">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
 					      	</select>	
 						</div>
 						<div class='col-xs-2'>
@@ -1160,11 +1160,11 @@
 				</div>
 				 <div class="form-group">
 					<select class='form-control' v-model='addLanguageLevel'>
-						<option selected>Elementary proficiency</option>
-						<option>Limited working proficiency</option>
-						<option>Professional working proficiency</option>
-						<option>Full professional proficiency</option>
-						<option>Native or bilingual proficiency</option>
+						<option value='1' selected>Elementary proficiency</option>
+						<option value='2'>Limited working proficiency</option>
+						<option value='3'>Professional working proficiency</option>
+						<option value='4'>Full professional proficiency</option>
+						<option value='5'>Native or bilingual proficiency</option>
 					</select>
 				</div>
 		      </div>
@@ -1253,18 +1253,18 @@
 					<div class="col-xs-3">
 						<select class='form-control' v-model='addCertificateMonth'>
 							<option value="" selected="selected">Month...</option>
-							<option value="January">January</option>
-					      	<option value="February">February</option>
-					      	<option value="March">March</option>
-					      	<option value="April">April</option>
-					      	<option value="May">May</option>
-					      	<option value="June">June</option>
-					      	<option value="July">July</option>
-					      	<option value="August">August</option>
-					      	<option value="September">September</option>
-					      	<option value="October">October</option>
-					      	<option value="November">November</option>
-					      	<option value="December">December</option>
+							<option value="1">January</option>
+					      	<option value="2">February</option>
+					      	<option value="3">March</option>
+					      	<option value="4">April</option>
+					      	<option value="5">May</option>
+					      	<option value="6">June</option>
+					      	<option value="7">July</option>
+					      	<option value="8">August</option>
+					      	<option value="9">September</option>
+					      	<option value="10">October</option>
+					      	<option value="11">November</option>
+					      	<option value="12">December</option>
 						</select>
 					</div>
 					<div class="col-xs-2">
@@ -1313,18 +1313,18 @@
 					<div class="col-xs-3">
 						<select class='form-control' v-model='addPublishMonth'>
 							<option value="" selected="selected">Month...</option>
-							<option value="January">January</option>
-					      	<option value="February">February</option>
-					      	<option value="March">March</option>
-					      	<option value="April">April</option>
-					      	<option value="May">May</option>
-					      	<option value="June">June</option>
-					      	<option value="July">July</option>
-					      	<option value="August">August</option>
-					      	<option value="September">September</option>
-					      	<option value="October">October</option>
-					      	<option value="November">November</option>
-					      	<option value="December">December</option>
+							<option value="1">January</option>
+					      	<option value="2">February</option>
+					      	<option value="3">March</option>
+					      	<option value="4">April</option>
+					      	<option value="5">May</option>
+					      	<option value="6">June</option>
+					      	<option value="7">July</option>
+					      	<option value="8">August</option>
+					      	<option value="9">September</option>
+					      	<option value="10">October</option>
+					      	<option value="11">November</option>
+					      	<option value="12">December</option>
 						</select>
 					</div>
 					<div class="col-xs-2">
