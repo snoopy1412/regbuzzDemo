@@ -359,7 +359,7 @@
 	</div>
 	<section class='com-main'>
 		<div class="container container-profile"  id='vue-profile-user'>
-			<div  :class="{'loading2': loading }" v-if='loading'>
+			<div :class="{'loading2': loading }" v-if='loading'>
 		          <i></i>	        
 			</div>
 			
@@ -388,9 +388,9 @@
 								 		<div class="location" v-for='countryData in countryData'>
 								 			<div class='edit-start' v-show='countryData.hideOrigin'>
 								 				<span class='edit-text' v-on:click='hide(countryData)'>
-													<span v-text="countryData.result.city | capitalize"></span>
+													<span v-text="countryData.origin.city | capitalize"></span>
 													&nbsp;&nbsp;
-													<span v-text="countryData.result.country | capitalize"></span>
+													<span v-text="countryData.origin.country | capitalize"></span>
 								 				</span>
 								 				<a href="javascript:;" title="edit" class='edit-handle' v-on:click='hide(countryData)'><i class="fa fa-pencil"></i></a>
 								 			</div>
@@ -398,8 +398,10 @@
 										  	 	<div class="form-group">
 										  	 		<label for="" class="col-sm-3 control-label">国家</label>
 										  	 		<div class="col-sm-8">
-										  	 			<select name="" class='form-control' v-model='countryData.result.country'>
-										  	 				<option v-for='country in countries' v-bind:value='country.id' v-text="country.text"></option>
+										  	 			<select name="" class='form-control'  v-on:change="getSelectedHtml(countryData.result,'country',$event)" v-model='countryData.result.id'>
+										  	 				<optgroup label='Select country……'>
+										  	 					<option v-for='country in countries' v-bind:value='country.id' v-text="country.text"></option>
+										  	 				</optgroup>
 										  	 			</select>
 										  	 		</div>
 										  	 	</div>
@@ -410,8 +412,8 @@
 										  	 		</div>
 										  	 	</div>
 										  	 	<div>
-										  	 		<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(countryData,'data.js')">保存</a>
-										  	 		<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(countryData)'>取消</a>
+										  	 		<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(countryData,'data.js',countryData.result.country,countries)">保存</a>
+										  	 		<a href="javascript:;" title="" class='btn btn-link' v-on:click='cancel(countryData,countryData.result.country,countries)'>取消</a>
 										  	 	</div>
 									  	 	</div>
 								 		</div>
@@ -427,7 +429,7 @@
 							 		<!-- 职位 -->
 							 		<li v-for='positionData in positionData'>
 								 		<div class='edit-start' v-show='positionData.hideOrigin'>
-								 			<strong class='major edit-text' v-text="positionData.result.position | capitalize"  v-on:click='hide(positionData)'></strong>
+								 			<strong class='major edit-text' v-text="positionData.origin.position | capitalize"  v-on:click='hide(positionData)'></strong>
 								 			<a href="javascript:;" title="edit" class='edit-handle' v-on:click='hide(positionData)'><i class="fa fa-pencil"></i></a>
 								 		</div>
 								 		<div class='text-right' v-show='!positionData.hideOrigin' v-cloak>
@@ -445,7 +447,7 @@
 							 		<!-- 自我介绍 -->
 							 		<li v-for= 'summaryData in summaryData'>
 							 			<div class='edit-start' v-show='summaryData.hideOrigin'>
-								 			<span class='summary edit-text pull-left' v-text="summaryData.result.summary | capitalize" v-on:click='hide(summaryData)'></span>
+								 			<span class='summary edit-text pull-left' v-text="summaryData.origin.summary | capitalize" v-on:click='hide(summaryData)'></span>
 								 			<a href="javascript:;" title="edit" class='edit-handle pull-left' v-on:click='hide(summaryData)'><i class="fa fa-pencil"></i></a>
 							 			</div>						 			
 								 		<div class='text-right' v-show='!summaryData.hideOrigin' v-cloak>
@@ -497,7 +499,7 @@
 								<section class="profile-info-item experience-item" v-for='experience in experienceData'>
 									<div v-show='experience.hideOrigin'>
 										<h4 class='profile-info-item-position experience-item-position'>
-											<span v-text='experience.result.position | capitalize'></span>
+											<span v-text='experience.origin.position | capitalize'></span>
 											<span class='handle'>
 												<a href="javascript:;" title="" class='edit' v-on:click='hide(experience)'>
 													<i class='fa fa-pencil'></i>
@@ -507,11 +509,11 @@
 												</a>
 											</span>
 										</h4>
-										<strong class='profile-info-item-company experience-item-company' v-text='experience.result.company | capitalize'></strong>
+										<strong class='profile-info-item-company experience-item-company' v-text='experience.origin.company | capitalize'></strong>
 										<div class='profile-info-item-time experience-item-time'>
-											<span v-text='experience.result.startMonth + "&nbsp;" + experience.result.startYear'></span> - <span v-text='experience.result.endMonth + "&nbsp;" + experience.result.endYear'></span>
+											<span v-text='experience.origin.startMonth + "&nbsp;" + experience.origin.startYear'></span> - <span v-text='experience.origin.endMonth + "&nbsp;" + experience.origin.endYear'></span>
 										</div>
-										<p class='profile-info-item-brief experience-item-brief' v-text='experience.result.content'></p>									
+										<p class='profile-info-item-brief experience-item-brief' v-text='experience.origin.content'></p>									
 									</div>
 									<div v-show='!experience.hideOrigin' v-cloak> 
 										<div class="form-group">
@@ -523,50 +525,34 @@
 										<div class="form-group">
 											<div class='row row--no-padding'>
 												<div class="col-xs-3">
-											      	<select class='form-control' v-model='experience.result.startMonth'>
-												      	<option value="1">January</option>
-												      	<option value="2">February</option>
-												      	<option value="3">March</option>
-												      	<option value="4">April</option>
-												      	<option value="5">May</option>
-												      	<option value="6">June</option>
-												      	<option value="7">July</option>
-												      	<option value="8">August</option>
-												      	<option value="9">September</option>
-												      	<option value="10">October</option>
-												      	<option value="11">November</option>
-												      	<option value="12">December</option>
+											      	<select class='form-control' v-on:change="getSelectedHtml(experience.result,'startMonth',$event)" v-model='experience.result.startMonthId'>
+											      	<option v-for='item in monthsData' :value='item.id' v-text='item.text'></option>
 											      	</select>
 												</div>
 												<div class='col-xs-2'>
-													<input type="text" class='form-control' placeholder='year' v-model='experience.result.startYear'>
+													<select class='form-control' v-model='experience.result.startYear'>
+															<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
+													</select>
+													<!-- <input type="number" class='form-control' placeholder='year' v-model='experience.result.startYear' number> -->
 												</div>
 												<div class="col-xs-1 text-center"> 
 													<span style='display:block;padding:6px 0;'>-</span> 
 												</div>
 												<div class="col-xs-3">
-													<select name="startDateMonth" class='form-control' v-model='experience.result.endMonth'>
-												      	<option value="1">January</option>
-												      	<option value="2">February</option>
-												      	<option value="3">March</option>
-												      	<option value="4">April</option>
-												      	<option value="5">May</option>
-												      	<option value="6">June</option>
-												      	<option value="7">July</option>
-												      	<option value="8">August</option>
-												      	<option value="9">September</option>
-												      	<option value="10">October</option>
-												      	<option value="11">November</option>
-												      	<option value="12">December</option>
+													<select name="startDateMonth" class='form-control' v-on:change="getSelectedHtml(experience.result,'endMonth',$event)" v-model='experience.result.endMonthId'>
+												      	<option v-for='item in monthsData' v-bind:value='item.id' v-text='item.text'></option>
 											      	</select>	
 												</div>
 												<div class='col-xs-2'>
-													<input type="text" class='form-control' placeholder='year'  v-model='experience.result.endYear'>
+													<select class='form-control' v-model='experience.result.endYear'>
+														<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
+													</select>
+													<!-- <input type="number" class='form-control' placeholder='year'  v-model='experience.result.endYear' number> -->
 												</div>
 											</div>
 										</div>
 										<div class="form-group">
-											<textarea  v-model='experience.result.content' rows='5' class='form-control'  placeholder="Input your content"></textarea>
+											<textarea v-model='experience.result.content' rows='5' class='form-control'  placeholder="Input your content"></textarea>
 										</div>
 										<div class="form-group text-right">
 											<a href="javascript:;" title="" class='btn btn-primary' v-on:click="save(experience,'data.js')">Save</a>
@@ -603,12 +589,12 @@
 											<input type="text" v-model='language.result.title' placeholder="" class='form-control'>
 										</div>
 										<div class="form-group">
-											<select class='form-control' v-model='language.result.level'>
-												<option value='1'>Elementary proficiency</option>
-												<option value='2'>Limited working proficiency</option>
-												<option value='3'>Professional working proficiency</option> value='1'
-												<option value='4'>Full professional proficiency</option>
-												<optio value='5'>Native or bilingual proficiency</option>
+											<select class='form-control' v-model='language.result.levelId' v-on:change="getSelectedHtml(language.result,'level',$event)">
+												<option value='0'>Elementary proficiency</option>
+												<option value='1'>Limited working proficiency</option>
+												<option value='2'>Professional working proficiency</option>
+												<option value='3'>Full professional proficiency</option>
+												<option value='4'>Native or bilingual proficiency</option>
 											</select>
 										</div>
 										<div class="form-group text-right">
@@ -710,24 +696,14 @@
 										<div class="form-group">
 											<div class="row row--no-padding">
 												<div class="col-xs-3">
-													<select class='form-control' v-model='certificate.result.month'>
-														<option value="1">January</option>
-												      	<option value="2">February</option>
-												      	<option value="3">March</option>
-												      	<option value="4">April</option>
-												      	<option value="5">May</option>
-												      	<option value="6">June</option>
-												      	<option value="7">July</option>
-												      	<option value="8">August</option>
-												      	<option value="9">September</option>
-												      	<option value="10">October</option>
-												      	<option value="11">November</option>
-												      	<option value="12">December</option>
+													<select class='form-control' v-model='certificate.result.monthId' v-on:change="getSelectedHtml(certificate.result,'month',$event)">
+														<option v-for='item in monthsData' v-bind:value='item.id' v-text='item.text'></option>
 													</select>
 												</div>
 												<div class="col-xs-2">
 														<select type="singleselect" class='form-control' v-model='certificate.result.year'>
-															<option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option>
+															<option value="" selected>Year……</option>
+															<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
 														</select>
 												</div>
 											</div>
@@ -775,24 +751,14 @@
 										<div class="form-group">
 											<div class="row row--no-padding">
 												<div class="col-xs-3">
-													<select class='form-control' v-model='publish.result.month'>
-														<option value="1">January</option>
-												      	<option value="2">February</option>
-												      	<option value="3">March</option>
-												      	<option value="4">April</option>
-												      	<option value="5">May</option>
-												      	<option value="6">June</option>
-												      	<option value="7">July</option>
-												      	<option value="8">August</option>
-												      	<option value="9">September</option>
-												      	<option value="10">October</option>
-												      	<option value="11">November</option>
-												      	<option value="12">December</option>
+													<select class='form-control' v-model='publish.result.monthId' v-on:change="getSelectedHtml(publish.result,'month',$event)">
+														<option v-for='item in monthsData' v-bind:value='item.id' v-text='item.text'></option>
 													</select>
 												</div>
 												<div class="col-xs-2">
 														<select type="singleselect" class='form-control' v-model='publish.result.year'>
-															<option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option>
+															<option value='' selected>Year……</option>
+															<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
 														</select>
 												</div>
 											</div>
@@ -886,7 +852,7 @@
 												<option value="20">20</option>
 												<option value="50">50</option>
 												<option value="100">100</option>}
-												option
+												
 											</select>
 										</div>
 									</form>
@@ -1423,45 +1389,33 @@
 					</label>
 					<div class='row row--no-padding'>
 						<div class="col-xs-3">
-					      	<select name="startDateMonth" class='form-control' v-model='addExperienceStartMonth'>
-						      	<option value="1" selected>January</option>
-						      	<option value="2">February</option>
-						      	<option value="3">March</option>
-						      	<option value="4">April</option>
-						      	<option value="5">May</option>
-						      	<option value="6">June</option>
-						      	<option value="7">July</option>
-						      	<option value="8">August</option>
-						      	<option value="9">September</option>
-						      	<option value="10">October</option>
-						      	<option value="11">November</option>
-						      	<option value="12">December</option>
+					      	<select name="startDateMonth" class='form-control' v-model='addExperienceStartMonthId' @change="getSelectedHtmlForAdd('addExperienceStartMonth',$event)">
+					      		<option value="" selected="selected">Month...</option>
+						      	<option v-for='item in monthsData' v-bind:value='item.id' v-text='item.text'></option>
 					      	</select>
 						</div>
 						<div class='col-xs-2'>
-							<input type="text" class='form-control' placeholder='year' v-model='addExperienceStartYear'>
+
+							<select class='form-control' v-model='addExperienceStartYear'>
+								<option value="" selected="selected">Year...</option>
+								<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
+							</select>
 						</div>
 						<div class="col-xs-1 text-center"> 
 							<span style='display:block;padding:6px 0;'>-</span> 
 						</div>
 						<div class="col-xs-3">
-							<select name="startDateMonth" class='form-control' v-model='addExperienceLastMonth'>
-								<option value="1" selected>January</option>
-								<option value="2">February</option>
-								<option value="3">March</option>
-								<option value="4">April</option>
-								<option value="5">May</option>
-								<option value="6">June</option>
-								<option value="7">July</option>
-								<option value="8">August</option>
-								<option value="9">September</option>
-								<option value="10">October</option>
-								<option value="11">November</option>
-								<option value="12">December</option>
+							<select name="startDateMonth" class='form-control' v-model='addExperienceLastMonthId' @change="getSelectedHtmlForAdd('addExperienceLastMonth',$event)">
+								<option value="" selected="selected">Month...</option>
+								<option v-for='item in monthsData' v-bind:value='item.id' v-text='item.text'></option>
 					      	</select>	
 						</div>
 						<div class='col-xs-2'>
-							<input type="text" class='form-control' placeholder='year' v-model='addExperienceLastYear'>
+							
+							<select class='form-control' v-model='addExperienceLastYear'>
+								<option value="" selected="selected">Year...</option>
+								<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
+							</select>
 						</div>
 					</div>
 				</div>
@@ -1496,12 +1450,12 @@
 					<input type="text" class='form-control' placeholder ='Language Name' v-model='addLanguageTitle'>	
 				</div>
 				 <div class="form-group">
-					<select class='form-control' v-model='addLanguageLevel'>
-						<option value='1' selected>Elementary proficiency</option>
-						<option value='2'>Limited working proficiency</option>
-						<option value='3'>Professional working proficiency</option>
-						<option value='4'>Full professional proficiency</option>
-						<option value='5'>Native or bilingual proficiency</option>
+					<select class='form-control' v-model='addLanguageLevelId' @change="getSelectedHtmlForAdd('addLanguageLevel',$event)">
+						<option value='0' selected>Elementary proficiency</option>
+						<option value='1'>Limited working proficiency</option>
+						<option value='2'>Professional working proficiency</option>
+						<option value='3'>Full professional proficiency</option>
+						<option value='4'>Native or bilingual proficiency</option>
 					</select>
 				</div>
 		      </div>
@@ -1541,13 +1495,15 @@
 				<div class='row row--no-padding'>
 					<div class="col-xs-2">
 						<select class='form-control' v-model='addEducationStartTime'>
-							<option value="2016" selected="true">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option><option value="1904">1904</option><option value="1903">1903</option><option value="1902">1902</option><option value="1901">1901</option><option value="1900">1900</option>
+							<option value='' selected>Year……</option>
+							<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
 						</select>
 					</div>
 					<div class="col-xs-1 text-center"> <span style='display:block;padding:6px 0;'>-</span> </div>
 					<div class="col-xs-2">
 						<select class='form-control' v-model='addEducationEndTime'>
-							<option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016" selected="true">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option><option value="1904">1904</option><option value="1903">1903</option><option value="1902">1902</option><option value="1901">1901</option><option value="1900">1900</option>
+							<option value='' selected>Year……</option>
+							<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
 						</select>	
 					</div>
 				</div>
@@ -1588,25 +1544,16 @@
 				</label>
 				<div class="row row--no-padding">
 					<div class="col-xs-3">
-						<select class='form-control' v-model='addCertificateMonth'>
+						<select class='form-control' v-model='addCertificateMonthId' @change="getSelectedHtmlForAdd('addCertificateMonth',$event)">
 							<option value="" selected="selected">Month...</option>
-							<option value="1">January</option>
-					      	<option value="2">February</option>
-					      	<option value="3">March</option>
-					      	<option value="4">April</option>
-					      	<option value="5">May</option>
-					      	<option value="6">June</option>
-					      	<option value="7">July</option>
-					      	<option value="8">August</option>
-					      	<option value="9">September</option>
-					      	<option value="10">October</option>
-					      	<option value="11">November</option>
-					      	<option value="12">December</option>
+							<option v-for='item in monthsData' v-bind:value='item.id' v-text='item.text'></option>
 						</select>
 					</div>
 					<div class="col-xs-2">
 						<select class='form-control' v-model='addCertificateYear'>
-							<option value="" selected="selected">Year...</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option>
+
+							<option value="" selected="selected">Year...</option>
+							<option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
 						</select>
 					</div>
 					
@@ -1648,25 +1595,14 @@
 				</label>
 				<div class="row row--no-padding">
 					<div class="col-xs-3">
-						<select class='form-control' v-model='addPublishMonth'>
+						<select class='form-control' v-model='addPublishMonthId' @change="getSelectedHtmlForAdd('addPublishMonth',$event)">
 							<option value="" selected="selected">Month...</option>
-							<option value="1">January</option>
-					      	<option value="2">February</option>
-					      	<option value="3">March</option>
-					      	<option value="4">April</option>
-					      	<option value="5">May</option>
-					      	<option value="6">June</option>
-					      	<option value="7">July</option>
-					      	<option value="8">August</option>
-					      	<option value="9">September</option>
-					      	<option value="10">October</option>
-					      	<option value="11">November</option>
-					      	<option value="12">December</option>
+							<option v-for='item in monthsData' v-bind:value='item.id' v-text='item.text'></option>
 						</select>
 					</div>
 					<div class="col-xs-2">
 						<select class='form-control' v-model='addPublishYear'>
-							<option value="" selected="selected">Year...</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option>
+							<option value="" selected="selected">Year...</option><option v-for='yearsData in yearsData' :vaule='yearsData.value' v-text='yearsData.text'></option>
 						</select>
 					</div>
 				</div>

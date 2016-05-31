@@ -1,4 +1,11 @@
-define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
+define(function(require) {
+    var Vue = require('Vue'),
+        VueComponent = require('VueComponent'),
+        $ = require('jquery');
+        
+        require('./months');
+        require('./years');
+
     Vue.config.debug = true
     var wordcount = VueComponent.wordcount;
 
@@ -66,8 +73,10 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
             // 经验
             addExperienceName: '',
             addExperienceCompany: '',
+            addExperienceStartMonthId: '',
             addExperienceStartMonth: '',
             addExperienceStartYear: '',
+            addExperienceLastMonthId: '',
             addExperienceLastMonth: '',
             addExperienceLastYear: '',
             addExperienceContent: '',
@@ -75,6 +84,7 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
             // 语言
             addLanguageTitle: '',
             addLanguageLevel: '',
+            addLanguageLevelId: '',
 
             // 教育
             addEducationDegree: '',
@@ -86,21 +96,26 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
             addCertificateTitle: '',
             addCertificateAuthority: '',
             addCertificateMonth: '',
+            addCertificateMonthId: '',
             addCertificateYear: '',
 
             // 证书
             addPublishTitle: '',
             addPublishAgency: '',
             addPublishMonth: '',
+            addPublishMonthId: '',
             addPublishYear: '',
 
+            // options
+            monthsData: monthsData,
+            yearsData: yearsData
         },
         created: function() {
             var self = this;
 
             $.ajax({
                 type: 'GET',
-                url: '../../../Public/data/discovery/languages.json',
+                url: '../../../Public/data/discovery/countries.json',
                 success: function(data) {
                     self.loadMax++;
                     self.countries = data.data;
@@ -242,34 +257,56 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
             hide: function(data) {
                 data.hideOrigin = false;
             },
+            getSelectedHtml: function(selectedModel, string, event) {
+
+                // 获得选中的值
+                var selectedIndex = $(event.target)[0].selectedIndex;
+                var text = $(event.target)[0].options[selectedIndex].text;
+
+                // 赋值给所属的model
+                selectedModel[string] = text;
+
+            },
+            getSelectedHtmlForAdd: function(str, event) {
+                // 获得选中的值
+                var selectedIndex = $(event.target)[0].selectedIndex;
+                var text = $(event.target)[0].options[selectedIndex].text;
+
+                this[str] = text;
+            },
             save: function(data, url) {
+                var self = this;
+
                 for (key in data.result) {
-                    var text = data.result[key].trim();
+                    var text = String(data.result[key]).trim();
                     if (text === '') {
                         this.errorMsg = true;
                         return false;
                     }
-
-                    // 不同的url对应不同的数据请求
-                    var resultUrl = url;
-
-                    //应该是post请求，这里模拟，在后台更新数据 
-                    $.ajax({
-                        type: 'GET',
-                        url: resultUrl,
-                        success: function(response) {
-                            // 后台更新成功后，本地数据也更新
-                            data.origin[key] = data.result[key];
-                            data.hideOrigin = true;
-                        }
-                    })
                 }
+
+                // 不同的url对应不同的数据请求
+                var resultUrl = url;
+
+                //应该是post请求，这里模拟，在后台更新数据 
+                $.ajax({
+                    type: 'GET',
+                    url: resultUrl,
+                    success: function(response) {
+                        // 后台更新成功后，本地数据也更新
+                        for (key in data.result) {
+                            data.origin[key] = data.result[key];
+                        }
+                        data.hideOrigin = true;
+                    }
+                })
+
             },
             cancel: function(data) {
+                var self = this;
                 for (key in data.origin) {
                     data.result[key] = data.origin[key];
                 }
-
                 data.hideOrigin = true;
             },
 
@@ -372,36 +409,32 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
              */
             ExperienceAdd: function() {
                 var self = this;
-                if (this.addExperienceName === '' || this.addExperienceCompany === '' || this.addExperienceStartMonth === '' || this.addExperienceStartYear === '' || this.addExperienceLastMonth === '' || this.addExperienceLastYear === '' || this.addExperienceContent === '') {
+                if (this.addExperienceName === '' || this.addExperienceCompany === '' || this.addExperienceStartMonthId === '' || this.addExperienceStartYear === '' || this.addExperienceLastMonthId === '' || this.addExperienceLastYear === '' || this.addExperienceContent === '') {
                     this.errorMsg = true;
                     return false;
                 }
                 var data = {
                     origin: {
-                        position: this.addExperienceName,
-                        company: this.addExperienceCompany,
-                        startTime: {
-                            month: this.addExperienceStartMonth,
-                            year: this.addExperienceStartYear
-                        },
-                        lastTime: {
-                            month: this.addExperienceLastMonth,
-                            year: this.addExperienceLastYear
-                        },
-                        content: this.addExperienceContent
+                        position: self.addExperienceName,
+                        company: self.addExperienceCompany,
+                        startMonth: self.addExperienceStartMonth,
+                        startMonthId: self.addExperienceStartMonthId,
+                        startYear: self.addExperienceStartYear,
+                        endMonth: self.addExperienceLastMonth,
+                        endMonthId: self.addExperienceLastMonthId,
+                        endYear: self.addExperienceLastYear,
+                        content: self.addExperienceContent
                     },
                     result: {
-                        position: this.addExperienceName,
-                        company: this.addExperienceCompany,
-                        startTime: {
-                            month: this.addExperienceStartMonth,
-                            year: this.addExperienceStartYear
-                        },
-                        lastTime: {
-                            month: this.addExperienceLastMonth,
-                            year: this.addExperienceLastYear
-                        },
-                        content: this.addExperienceContent
+                        position: self.addExperienceName,
+                        company: self.addExperienceCompany,
+                        startMonth: self.addExperienceStartMonth,
+                        startMonthId: self.addExperienceStartMonthId,
+                        startYear: self.addExperienceStartYear,
+                        endMonth: self.addExperienceLastMonth,
+                        endMonthId: self.addExperienceLastMonthId,
+                        endYear: self.addExperienceLastYear,
+                        content: self.addExperienceContent
                     },
                     hideOrigin: true
                 };
@@ -415,7 +448,6 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                         // self.skillsData = response.data; 准确的
 
                         // 模拟
-                        self.skillsData.push(data);
                         self.experienceData.push(data);
                         self.addExperienceName = '';
                         self.addExperienceCompany = '';
@@ -434,18 +466,20 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
              */
             LanguageAdd: function() {
                 var self = this;
-                if (this.addLanguageTitle === '' || this.addLanguageLevel === '') {
+                if (this.addLanguageTitle === '' || this.addLanguageLevelId === '') {
                     this.errorMsg = true;
                     return false;
                 }
                 var data = {
                     origin: {
                         title: this.addLanguageTitle,
-                        level: this.addLanguageLevel
+                        level: this.addLanguageLevel,
+                        levelId: this.addLanguageLevelId
                     },
                     result: {
                         title: this.addLanguageTitle,
-                        level: this.addLanguageLevel
+                        level: this.addLanguageLevel,
+                        levelId: this.addLanguageLevelId
                     },
                     hideOrigin: true
                 };
@@ -515,7 +549,7 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
              */
             CertificateAdd: function() {
                 var self = this;
-                if (this.addCertificateTitle === '' || this.addCertificateAuthority === '' || this.addCertificateMonth === '' || this.addCertificateYear === '') {
+                if (this.addCertificateTitle === '' || this.addCertificateAuthority === '' || this.addCertificateMonthId === '' || this.addCertificateYear === '') {
                     this.errorMsg = true;
                     return false;
                 }
@@ -524,12 +558,14 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                         title: this.addCertificateTitle,
                         agency: this.addCertificateAuthority,
                         month: this.addCertificateMonth,
+                        monthId: this.addCertificateMonthId,
                         year: this.addCertificateYear
                     },
                     result: {
                         title: this.addCertificateTitle,
                         agency: this.addCertificateAuthority,
                         month: this.addCertificateMonth,
+                        monthId: this.addCertificateMonthId,
                         year: this.addCertificateYear
                     },
                     hideOrigin: true
@@ -557,7 +593,7 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
              */
             publishAdd: function() {
                 var self = this;
-                if (this.addPublishTitle === '' || this.addPublishAgency === '' || this.addPublishMonth === '' || this.addPublishYear === '') {
+                if (this.addPublishTitle === '' || this.addPublishAgency === '' || this.addPublishMonthId === '' || this.addPublishYear === '') {
                     this.errorMsg = true;
                     return false;
                 }
@@ -566,12 +602,14 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
                         title: this.addPublishTitle,
                         agency: this.addPublishAgency,
                         month: this.addPublishMonth,
+                        monthId: this.addPublishMonthId,
                         year: this.addPublishYear
                     },
                     result: {
                         title: this.addPublishTitle,
                         agency: this.addPublishAgency,
                         month: this.addPublishMonth,
+                        monthId: this.addPublishMonthId,
                         year: this.addPublishYear
                     },
                     hideOrigin: true
@@ -598,4 +636,15 @@ define(['Vue', 'VueComponent'], function(Vue, VueComponent) {
         }
     })
 
+    function inData(id, data) {
+        // data的结构为对象数组
+        var size = data.length,
+            result = '';
+        for (var i = 0; i < size; i++) {
+            if (data[i].id === id) {
+                result = data[i].text;
+            }
+        }
+        return result;
+    }
 });

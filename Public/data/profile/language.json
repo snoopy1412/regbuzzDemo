@@ -1,24 +1,27 @@
 {
 	"data": [{
-			"origin": {
-				"title": "Chinese",
-				"level": "Native or bilingual proficiency"
-			},
-			"result": {
-				"title": "Chinese",
-				"level": "Native or bilingual proficiency"
-			},
-			"hideOrigin": true
-		}, {
-			"origin": {
-				"title": "English",
-				"level": "Professional working proficiency"
-			},
-			"result": {
-				"title": "English",
-				"level": "Professional working proficiency"
-			},
-			"hideOrigin": true
-		}
-	]
+		"origin": {
+			"title": "Chinese",
+			"level": "Native or bilingual proficiency",
+			"levelId": 4
+		},
+		"result": {
+			"title": "Chinese",
+			"level": "Native or bilingual proficiency",
+			"levelId": 4
+		},
+		"hideOrigin": true
+	}, {
+		"origin": {
+			"title": "English",
+			"level": "Professional working proficiency",
+			"levelId": 2
+		},
+		"result": {
+			"title": "English",
+			"level": "Professional working proficiency",
+			"levelId": 2
+		},
+		"hideOrigin": true
+	}]
 }
