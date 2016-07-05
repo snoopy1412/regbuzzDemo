@@ -2,9 +2,9 @@ define(function(require) {
     var Vue = require('Vue'),
         VueComponent = require('VueComponent'),
         $ = require('jquery');
-        
-        require('./months');
-        require('./years');
+
+    require('./months');
+    require('./years');
 
     Vue.config.debug = true
     var wordcount = VueComponent.wordcount;
@@ -118,6 +118,9 @@ define(function(require) {
                 url: '../../../Public/data/discovery/countries.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.countries = data.data;
                 },
                 error: function(state) {
@@ -129,6 +132,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/country.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.countryData = data.data;
                 },
                 error: function(state) {
@@ -140,6 +146,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/position.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.positionData = data.data;
                 },
                 error: function(state) {
@@ -151,6 +160,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/summary.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.summaryData = data.data
                 },
                 error: function(state) {
@@ -162,6 +174,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/price.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.priceData = data.data;
                 },
                 error: function(state) {
@@ -173,6 +188,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/services.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.servicesData = data.data;
                 },
                 error: function(state) {
@@ -184,6 +202,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/skills.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.skillsData = data.data;
                 },
                 error: function(state) {
@@ -195,7 +216,7 @@ define(function(require) {
                 url: '../../../Public/data/profile/experience.json',
                 success: function(data) {
                     self.loadMax++;
-                    self.experienceData = data.data;
+                    self.experienceData = getTrueData(data.data);
                 },
                 error: function(state) {
                     console.log(state)
@@ -206,6 +227,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/language.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.languageData = data.data;
                 },
                 error: function(state) {
@@ -217,6 +241,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/educations.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.educationsData = data.data;
                 },
                 error: function(state) {
@@ -228,6 +255,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/certificate.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.certificateData = data.data;
                 },
                 error: function(state) {
@@ -239,6 +269,9 @@ define(function(require) {
                 url: '../../../Public/data/profile/publish.json',
                 success: function(data) {
                     self.loadMax++;
+                    $.each(data.data, function(i, v) {
+                        data.data[i].hideOrigin = true;
+                    })
                     self.publishData = data.data;
                 },
                 error: function(state) {
@@ -252,6 +285,9 @@ define(function(require) {
             }
         },
         methods: {
+            bbb:function(){
+                this.summaryData[0].result.summary = '12121212'
+            },
 
             // 公用方法
             hide: function(data) {
@@ -304,6 +340,7 @@ define(function(require) {
             },
             cancel: function(data) {
                 var self = this;
+
                 for (key in data.origin) {
                     data.result[key] = data.origin[key];
                 }
@@ -647,4 +684,33 @@ define(function(require) {
         }
         return result;
     }
+
+    /**
+     * [从ajax获得的值需要经过特殊的处理，才能成为文档交互需要的格式，即将数据分为origin和result两部分]
+     * @param  {[array]} data [从ajax获得的数组格式的数据]
+     * @return {[type]}      [返回处理完毕的数组]
+     */
+    function getTrueData(data) {
+        var arr = [];
+        $.each(data, function(i, v) {
+            var origin = {},
+                result = {},
+                hideOrigin;
+
+            hideOrigin = true;
+
+            for (var key in this) {
+                origin[key] = this[key];
+                result[key] = this[key];
+            }
+
+            arr.push({
+                hideOrigin: hideOrigin,
+                origin: origin,
+                result: result
+            })
+        })
+        return arr;
+    }
+
 });

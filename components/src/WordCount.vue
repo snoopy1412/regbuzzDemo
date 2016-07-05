@@ -1,6 +1,6 @@
 <template>
 	<div class='words-count' :class="{'has-error': isOverMax}">
-		<textarea class='form-control words-input' :rows="rowsNum" :cols=colsNum v-model='inputText' :id='wordsCountId'></textarea>
+		<textarea class='form-control words-input' :rows="rowsNum" :cols=colsNum v-model='inputText' :id='wordsCountId' :name='wordsName'></textarea>
 		<div class='words-count-area'>
 			<span class='current-words' :class="{'overmax':isOverMax}" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>
 		</div>
@@ -27,6 +27,9 @@
 			},
 			wordsCountId:{
 				type: String
+			},
+			wordsName:{
+				type:String
 			}
 		},
 		data(){

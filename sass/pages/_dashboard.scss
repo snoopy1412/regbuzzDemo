@@ -448,6 +448,47 @@
 	}
 }
 
-	
+// to do list
+.todoList-list{
+	margin-bottom: 20px;
+}
+.todoList-task{
+	display: inline-block;
 
+	margin-left: 5px;
+	// padding-right: 40px;
+	font-weight: normal;
+	width: 280px;
+	white-space:nowrap;  //不换行
+	overflow:hidden;
+	text-overflow:ellipsis; // 溢出省略号
+}
+.todoList-time{
+	display: block;
+	padding-left: 5px;
+	color:#ccc;
+	font-weight: normal;font-size: 12px;
+	font-style: italic;
+}
+.todoList-item{
+	@extend %clearfix;
+	margin-bottom: 6px;
+}
+.todoList-item-content{
+	padding-top: 2px;
+	vertical-align: middle;
+
+	.c-indicator{
+		top:5px;
+	}
+}
+.todoList-undeline{
+	text-decoration: line-through;
+	&:hover,&:hover,&:focus{
+		text-decoration: line-through;		
+	}
+	& + time{
+		text-decoration: line-through;
+	}
+}
 

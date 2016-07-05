@@ -13,7 +13,7 @@
 		          <i></i>	        
 			</div>
 			<div class="row" v-if='!loading'>
-				<div class="col-xs-9">
+				<div class="col-xs-8 no-padding">
 					<header class="row home-heading section">
 						<div class="col-xs-7 home-heading-section">
 							<div class="home-name clearfix">
@@ -245,8 +245,8 @@
 					  </div>
 					</div>
 				</div>
-				<div class="col-xs-3 home-aside">
-						<div class="home-aside-section home-aside-account  section">
+				<div class="col-xs-4 home-aside">
+						<div class="home-aside-section home-aside-account section">
 							<h3 class='home-aside-title'>Balance</h3>
 							<div class="content">
 								<ul class='balance-amount clearfix'>
@@ -266,7 +266,9 @@
 								</div>						
 							</div>
 						</div>				
-						<div class="home-aside-section home-aside-test section">
+
+						<!-- 测试 -->
+						<!-- <div class="home-aside-section home-aside-test section">
 							<h3 class='home-aside-title'>测试</h3>
 							<div class="content">
 								<ul class="fa-ul">
@@ -274,6 +276,33 @@
 									<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
 									<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
 								</ul>
+							</div>
+						</div> -->
+
+						<!-- to do list -->
+						<div class="home-aside-section home-aside-todo section">
+							<h3 class='home-aside-title'>To do List</h3>
+							<div class="todoList">
+								<ul class='todoList-list'>
+								<!--link的class  todoList-undeline -->
+									<li class='todoList-item' v-for='item in todoData'>
+										<label class="c-input c-checkbox todoList-item-content pull-left" @click='completeTodo($index,item.todoId,$event)'>
+										  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' :checked='item.isComplete === 0? false : true'>
+										  <span class="c-indicator"></span>
+										  <a href="#" class='todoList-task' :class="{'todoList-undeline': item.isComplete === 0? false : true}"  v-text='item.todoContent' :title='item.todoContent' ></a><time class='todoList-time' v-text='item.todoTime'></time>   
+										</label>
+										<button type='button' class='btn btn-primary-outline btn-sm pull-right todoList-item-delete' :data-id="item.todoId"  @click='deleteTodo($index,$event)'>X</button>
+									</li>
+								</ul>
+								<div class='todo-addArea'>
+									<div class="form-group">
+										<input type="text" name="" class='form-control' placeholder="typing a newthing to do" v-model='addTodoData'>
+									</div>
+									<div class="form-group">
+										<button type='button' class='btn btn-secondary btn-block' @click='addTodo($event)'>添加</button>
+									</div>
+								</div>
+								
 							</div>
 						</div>
 				</div>

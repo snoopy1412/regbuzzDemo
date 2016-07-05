@@ -9,8 +9,7 @@
 			"title": "Chinese",
 			"level": "Native or bilingual proficiency",
 			"levelId": 4
-		},
-		"hideOrigin": true
+		}
 	}, {
 		"origin": {
 			"title": "English",
@@ -21,7 +20,6 @@
 			"title": "English",
 			"level": "Professional working proficiency",
 			"levelId": 2
-		},
-		"hideOrigin": true
+		}
 	}]
 }

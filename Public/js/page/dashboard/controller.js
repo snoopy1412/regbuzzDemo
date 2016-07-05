@@ -13,16 +13,31 @@ define(['jquery', 'Vue', 'VueComponent'], function($, Vue, VueComponent) {
 			userId: 1,
 			pushData: [],
 			saveHide: false,
-			isLoad: false
+			isLoad: false,
+
+			// todo 
+			todoData: [],
+			addTodoData: ''
 		},
 		ready: function() {
 			var self = this;
 			$.ajax({
-					type: 'GET',
-					url: '../../../Public/data/dashboard/pushProjects.json',
+				type: 'GET',
+				url: '../../../Public/data/dashboard/pushProjects.json',
+				success: function(data) {
+					self.loading = false;
+					self.pushData = filterData(data.data, self.userId, 3);
+				},
+				error: function(msg) {
+					console.log(msg)
+				}
+			})
+
+			$.ajax({
+					type: "GET",
+					url: '../../../Public/data/dashboard/todoList.json',
 					success: function(data) {
-						self.loading = false;
-						self.pushData = filterData(data.data, self.userId, 3);
+						self.todoData = data.data;
 					},
 					error: function(msg) {
 						console.log(msg)
@@ -109,8 +124,117 @@ define(['jquery', 'Vue', 'VueComponent'], function($, Vue, VueComponent) {
 					})
 
 				}
+			},
 
+			// todo 
+			completeTodo: function(index, id, event) {
+				event.preventDefault();
 
+				if (this.todoData[index].isComplete === 0) {
+					this.todoData[index].isComplete = 1;
+				} else if (this.todoData[index].isComplete === 1) {
+					this.todoData[index].isComplete = 0;
+				}
+
+				var isComplete = this.todoData[index].isComplete,
+					todoId = id,
+					self = this;
+
+				$.ajax({
+					type: 'get',
+					url: '../../../Public/data/dashboard/todoList.json',
+					data: {
+						isComplete: isComplete,
+						todoId: todoId
+					},
+					success: function(data) {
+						// 重新赋值
+						// self.todoData = data.data
+					},
+					error: function(msg) {
+						console.log(msg)
+					}
+				})
+			},
+			deleteTodo: function(index, event) {
+				var self = this,
+					todoId = $(event.target).data('id');
+
+				// 加了开关
+				if (!event.target.isDelete) {
+					event.target.isDelete = true;
+				}
+
+				if (event.target.isDelete) {
+					$.ajax({
+						type: 'get',
+						url: '../../../Public/data/dashboard/todoList.json',
+						data: {
+							todoId: todoId
+						},
+						success: function(data) {
+							// 重新赋值
+							// self.todoData = data.data
+
+							// 模拟
+							self.todoData.splice(index, 1);
+						},
+						complete: function() {
+							event.target.isDelete = true;
+						},
+						error: function(msg) {
+							console.log(msg)
+						}
+					})
+				}
+			},
+			addTodo: function(event) {
+				event.preventDefault();
+
+				// 加了开关
+				if (!event.target.isAdd) {
+					event.target.isAdd = true;
+				}
+				if (event.target.isAdd && this.addTodoData) {
+					event.target.isAdd = false;
+					var self = this,
+						date = +new Date(), // 需要后台转换
+						isComplete = 0,
+						content = this.addTodoData;
+
+					var sumbitData = {
+						todoContent: content,
+						todoTime: date,
+						isComplete: isComplete
+					}
+					$.ajax({
+						type: 'get', // 理论上是一次post请求
+						url: '../../../Public/data/dashboard/todoList.json',
+						data: sumbitData,
+						success: function(data) {
+							// 理论上是一次重新赋值的情况,正确
+							// self.todoData = data.data;
+
+							// 模拟
+							var analogueData = {
+								"todoId": 3,
+								"todoContent": "添加十个任务，并随时跟踪他的进展",
+								"todoTime": "2016-06-13 9:11",
+								"isComplete": 0
+							}
+							self.todoData.push(analogueData)
+
+							// v-model 为 0 
+							self.addTodoData = '';
+						},
+						error: function(msg) {
+							alert('添加失败！')
+						},
+						complete: function() {
+							event.target.isAdd = true;
+						}
+					})
+				}
 			}
 		}
 	});

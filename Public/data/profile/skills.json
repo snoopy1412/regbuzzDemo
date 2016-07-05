@@ -6,8 +6,7 @@
             },
             "result": {
                 "name": "GHS"
-            },
-            "hideOrigin": true
+            }
         },
         {
             "origin": {
@@ -15,8 +14,7 @@
             },
             "result": {
                 "name": "Chemical"
-            },
-            "hideOrigin": true
+            }
         },
         {
             "origin": {
@@ -24,8 +22,7 @@
             },
             "result": {
                 "name": "Consult"
-            },
-            "hideOrigin": true
+            }
         }
     ]
 }

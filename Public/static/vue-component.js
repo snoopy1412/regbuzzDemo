@@ -100,9 +100,9 @@
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "e:\\regbuzzDemo\\components\\src\\Linkage.vue"
+	  var id = "./Linkage.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -209,9 +209,9 @@
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "e:\\regbuzzDemo\\components\\src\\WordCount.vue"
+	  var id = "./WordCount.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -235,8 +235,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./WordCount.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?sourceMap!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./WordCount.vue");
+			module.hot.accept("!!./../../node_modules/.npminstall/css-loader/0.23.1/css-loader/index.js?sourceMap!./../../node_modules/.npminstall/vue-loader/8.5.2/vue-loader/lib/style-rewriter.js!./../../node_modules/.npminstall/sass-loader/3.2.0/sass-loader/index.js!./../../node_modules/.npminstall/vue-loader/8.5.2/vue-loader/lib/selector.js?type=style&index=0!./WordCount.vue", function() {
+				var newContent = require("!!./../../node_modules/.npminstall/css-loader/0.23.1/css-loader/index.js?sourceMap!./../../node_modules/.npminstall/vue-loader/8.5.2/vue-loader/lib/style-rewriter.js!./../../node_modules/.npminstall/sass-loader/3.2.0/sass-loader/index.js!./../../node_modules/.npminstall/vue-loader/8.5.2/vue-loader/lib/selector.js?type=style&index=0!./WordCount.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -548,7 +548,7 @@
 	});
 	// <template>
 	// 	<div class='words-count' :class="{'has-error': isOverMax}">
-	// 		<textarea class='form-control words-input' :rows="rowsNum" :cols=colsNum v-model='inputText' :id='wordsCountId'></textarea>
+	// 		<textarea class='form-control words-input' :rows="rowsNum" :cols=colsNum v-model='inputText' :id='wordsCountId' :name='wordsName'></textarea>
 	// 		<div class='words-count-area'>
 	// 			<span class='current-words' :class="{'overmax':isOverMax}" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>
 	// 		</div>
@@ -574,6 +574,9 @@
 				type: Number
 			},
 			wordsCountId: {
+				type: String
+			},
+			wordsName: {
 				type: String
 			}
 		},
@@ -626,7 +629,7 @@
 /* 10 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class='words-count' :class=\"{'has-error': isOverMax}\">\n\t<textarea class='form-control words-input' :rows=\"rowsNum\" :cols=colsNum v-model='inputText' :id='wordsCountId'></textarea>\n\t<div class='words-count-area'>\n\t\t<span class='current-words' :class=\"{'overmax':isOverMax}\" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>\n\t</div>\n</div>\n";
+	module.exports = "\n<div class='words-count' :class=\"{'has-error': isOverMax}\">\n\t<textarea class='form-control words-input' :rows=\"rowsNum\" :cols=colsNum v-model='inputText' :id='wordsCountId' :name='wordsName'></textarea>\n\t<div class='words-count-area'>\n\t\t<span class='current-words' :class=\"{'overmax':isOverMax}\" v-text='currentCount'></span> / <span class='total-words' v-text='totalCount'></span>\n\t</div>\n</div>\n";
 
 /***/ },
 /* 11 */
@@ -646,9 +649,9 @@
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "e:\\regbuzzDemo\\components\\src\\Jellybean.vue"
+	  var id = "./Jellybean.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1141,9 +1144,9 @@
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "e:\\regbuzzDemo\\components\\src\\Select2.vue"
+	  var id = "./Select2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -1260,9 +1263,9 @@
 	}
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), true)
+	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "e:\\regbuzzDemo\\components\\src\\homeHistory.vue"
+	  var id = "./homeHistory.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
