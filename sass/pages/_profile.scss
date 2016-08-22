@@ -189,6 +189,22 @@
     &:hover{
         color : #ddd;
     }
+    &:after{
+        content:"\f030";
+        font-family: 'FontAwesome';
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-size: 4em;
+        display: inline-block;
+        position: absolute;
+        width: 56px;
+        height: 56px;  
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        margin:auto;
+    }
 }
 .profile-avatar-loading{
     z-index: 99999;
@@ -197,6 +213,7 @@
         color:#ccc;
     }
 }
+
 .profile-avatar-error{
     position: absolute;
     display: none;
@@ -209,6 +226,14 @@
     color:#fff;
     text-align: center;
 }
+
+.webuploader-pick{
+    background-color: transparent;
+}
+.webuploader-pick-hover{
+    background-color: transparent;
+}
+
 .profile-info--person-register
 {
     padding-top: 10px;

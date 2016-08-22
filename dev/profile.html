@@ -45,7 +45,7 @@
 							 		<div class='profile-avatar'>
 							 			<img src="./Public/img/index/servers/13.jpg" alt="Aaron Su" width="100%">
 							 			<span class='profile-avatar-error'>上传失败！</span>
-							 			<a title="change your avatar" class='profile-avatar-mask profile-avatar-upload' data-toggle="modal" data-target="#person-avatar-crop"><i class="fa fa-camera fa-4x"></i></a>
+							 			<a title="change your avatar" class='profile-avatar-mask profile-avatar-upload' id='profile-avatar-upload'></a>
 							 			<a title="loading..." class='profile-avatar-mask profile-avatar-loading' ><i class="fa-4x fa fa-spinner fa-spin"></i></a>
 							 		</div>
 
@@ -1284,55 +1284,7 @@
 		    </div>
 		  </div>
 		</div>
-
-		<!-- 裁剪-->
-		<div class="modal fade" id="person-avatar-crop" tabindex="-1">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Edit Photo</h4>
-				</div>
-				<div class="modal-body">
-					<p>Make sure you're looking your best...</p>
-					<section class="modal-profile-avatar-upload" style="padding-left: 15px;padding-right: 15px">
-						<div class="row" id='person-avatar-preview'>
-							<div class="col-xs-12 has-border-right">
-								<p>Choose a Photo <small>You can upload a JPEG, GIF, or PNG file (File size limit is 8 MB).</small>	</p>
-								<div id="filePicker" style="width: 160px;height: 31px;">Choose a Photo</div>
-									
-									<div class="img-crop-comgtainer">
-										<div class="img-crop">
-									
-									</div>
-									</div>
-									
-								
-							</div>
-
-<!-- 							<div class="col-xs-6">
-								<div class="img-preview-origin">
-									
-								</div>
-								<div class='img-preview-size'>
-									<ul>
-										<li></li>
-										<li></li>
-										<li></li>
-									</ul>
-								</div>
-							</div> -->
-						</div>
-					</section>
-
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" id='upload-avator'>upload</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal" id='upload-resize'>cancel</button>
-				</div>
-		    </div>
-		  </div>
-		</div>		
+	
 	</div>
 	</section>
 	<div class="stick-root-footer"></div>

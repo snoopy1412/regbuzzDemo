@@ -285,7 +285,7 @@ define(function(require) {
             }
         },
         methods: {
-            bbb:function(){
+            bbb: function() {
                 this.summaryData[0].result.summary = '12121212'
             },
 

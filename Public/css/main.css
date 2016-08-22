@@ -9649,6 +9649,21 @@ html, body {
   background-color: rgba(0, 0, 0, 0.5); }
   .profile-avatar-upload:hover {
     color: #ddd; }
+  .profile-avatar-upload:after {
+    content: "\f030";
+    font-family: 'FontAwesome';
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-size: 4em;
+    display: inline-block;
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto; }
 
 .profile-avatar-loading {
   z-index: 99999;
@@ -9667,6 +9682,12 @@ html, body {
   background-color: rgba(217, 83, 79, 0.8);
   color: #fff;
   text-align: center; }
+
+.webuploader-pick {
+  background-color: transparent; }
+
+.webuploader-pick-hover {
+  background-color: transparent; }
 
 .profile-info--person-register {
   padding-top: 10px; }
@@ -9889,6 +9910,9 @@ html, body {
   .note-editor .form-group {
     margin-left: 0;
     margin-right: 0; }
+
+#picker .webuploader-pick {
+  background-color: #368CA9; }
 
 .pub-language-list {
   background-color: #fff; }
