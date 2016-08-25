@@ -4,6 +4,4 @@ define(function(require) {
 		ellipsis = require('./ellipsis');
 
 	ellipsis.ellipsis();
-
-	require('./controller');
 });

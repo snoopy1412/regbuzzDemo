@@ -2,7 +2,6 @@ define(function(require) {
 
   var $ = require('jquery');
 
-  require('./controller');
 
   // order
   // +Add Deliverables

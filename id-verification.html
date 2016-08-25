@@ -47,10 +47,10 @@
 								<div class="input-group-btn">
 								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search fa-fw" :class='defaultSearch.class'></i><span class="caret"></span></button>
 								        <ul class="dropdown-menu search-select-response">
-								          <li v-for='search in searchList'><a href="javascript:;" v-on:click='choiseSearch($index)'><i class="fa fa-fw" :class='search.class'></i>&nbsp;{{search.text}}</a></li>
+								          <li><a href="javascript:;"><i class="fa fa-fw fa-search"></i>&nbsp;All</a></li><li><a href="javascript:;"><i class="fa fa-fw fa-suitcase"></i>&nbsp;Projects</a></li><li><a href="javascript:;"><i class="fa fa-fw fa-user"></i>&nbsp;Providers</a></li>
 								        </ul>
 						      	</div>
-								<input type="text" name="" value="" :placeholder="defaultSearch.placeholder" class='form-control' style='min-width: 350px'  data-toggle="dropdown">
+								<input type="text" name="" value="" placeholder="Search for projects, providers,questions,articles..." class='form-control' style='min-width: 350px'  data-toggle="dropdown">
 								<div class='dropdown-menu search-text-response'>
 									<ul class='list-unstyled'>
 										<li class='search-text-response-title clearfix'>
@@ -346,23 +346,7 @@
   <!-- header.html end-->
   <section class='com-main'>
     <div class="container idverify-container">
-      <!-- <div class="modal fade" id='verification-statement'>
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
-            </div>
-            <div class="modal-body">
-              内容
-            </div>
-            <div class="modal-footer">
-               <button type="button" class="btn btn-primary">Agree</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
+
 
       <div class="panel panel-default">
         <div class="panel-heading">

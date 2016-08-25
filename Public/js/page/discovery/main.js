@@ -13,5 +13,4 @@ define(function(require) {
 
 	require('./connect');
 	require('./hire');
-	require('./controller');
 });

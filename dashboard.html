@@ -47,10 +47,10 @@
 								<div class="input-group-btn">
 								        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search fa-fw" :class='defaultSearch.class'></i><span class="caret"></span></button>
 								        <ul class="dropdown-menu search-select-response">
-								          <li v-for='search in searchList'><a href="javascript:;" v-on:click='choiseSearch($index)'><i class="fa fa-fw" :class='search.class'></i>&nbsp;{{search.text}}</a></li>
+								          <li><a href="javascript:;"><i class="fa fa-fw fa-search"></i>&nbsp;All</a></li><li><a href="javascript:;"><i class="fa fa-fw fa-suitcase"></i>&nbsp;Projects</a></li><li><a href="javascript:;"><i class="fa fa-fw fa-user"></i>&nbsp;Providers</a></li>
 								        </ul>
 						      	</div>
-								<input type="text" name="" value="" :placeholder="defaultSearch.placeholder" class='form-control' style='min-width: 350px'  data-toggle="dropdown">
+								<input type="text" name="" value="" placeholder="Search for projects, providers,questions,articles..." class='form-control' style='min-width: 350px'  data-toggle="dropdown">
 								<div class='dropdown-menu search-text-response'>
 									<ul class='list-unstyled'>
 										<li class='search-text-response-title clearfix'>
@@ -346,10 +346,8 @@
 <!-- header.html end-->
 	<section class='com-main'>
 		<div class="container container-home" id='vue-home'>
-			<div  :class="{'loading2': loading }" v-if='loading'>
-		          <i></i>	        
-			</div>
-			<div class="row" v-if='!loading'>
+			
+			<div class="row">
 				<div class="col-xs-8 no-padding">
 					<header class="row home-heading section">
 						<div class="col-xs-7 home-heading-section">
@@ -380,9 +378,6 @@
 							</div>
 						</div>
 						<div class="col-xs-5 home-heading-section">
-
-						<!-- 加载dashboard组件，此组件来自于 components/homeHistory.vue -->
-						<!-- <homehistory v-bind:history-roles='historyRoles'></homehistory> -->
 							<div class="home-history text-right">
 								  <div class="history-content tab-content">
 							 		 <ul class='history-content-item history-content-employer'>
@@ -400,46 +395,31 @@
 							</div>
 						</div>	
 					</header>
-					<!-- <section class="row home-post">
-						<div class="col-xs-12">
-							<a href="publish-quick.html" class='home-post-item post'><i class="fa fa-product-hunt"></i><span>Post a Project</span></a>
-						</div>
-					</section> -->
 					<div class="dashboard-article">
 						<h2 class='dashboard-section-title'>项目推送</h2>
-					  <!-- <ul class="nav nav-tabs nav-tabs-custom-blue" role="tablist">
-					    <li role="presentation" class="active"><a href="#dashboard-push" aria-controls="home" role="tab" data-toggle="tab">项目推送</a></li> -->
-
-					    <!-- 一版隐藏 -->
-					    <!-- <li role="presentation"><a href="#dashboard-news" aria-controls="profile" role="tab" data-toggle="tab">新消息</a></li>
-					    <li role="presentation"><a href="#dashboard-dynamic" aria-controls="messages" role="tab" data-toggle="tab">我的动态</a></li> -->
-					  <!-- </ul> -->
 					  <div class="tab-content">
 						<div class="tab-pane active fade in" id="dashboard-push">
 							<section class="row home-push" id='vue-home-push'>
-								<template v-for='item in pushData' stagger="100">
 									<div class="col-xs-4 home-push-item-warp" transition="pushskip">
 										<section class='home-push-item hoverable'>
 											<header class='home-push-item-header'>
 												<div class="push-handle">
-													<a href="javascript:;" title='Favorite' class='favorite' :class="{'isFavorite' : item.favoriteUsersIds.indexOf(userId)!== -1 }" @click='favorite($index,$event)'><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
-													<!-- 
-													<a href="javascript:;" title='Skip' class='skip' @click='pushSkip($index,$event)'><i class='fa fa-times'></i>&nbsp;&nbsp;Skip</a> -->
+													<a href="javascript:;" title='Favorite' class='favorite isFavorite' ><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
 												</div>
 												<div class='push-warp-label'>
-													<span class="label label-info" v-text='item.category.first'></span> - <span class="label label-info" v-text='item.category.sub'></span>
+													<span class="label label-info">GHS</span> - <span class="label label-info">SDS</span>
 												</div>
 												<h3 class="home-push-title">
-													<a href="" class='transition-link' v-text='item.title'></a>
+													<a href="" class='transition-link'>【总监设计】高端LOGO设计/企业/组织/互联网/标志/商标</a>
 												</h3>
 											</header>
 											<div class='home-push-item-content'>
 												<p class='home-push-state'> 
-													<span class='text-left'><i class="fa fa-money fa-fw"></i>&nbsp;<i v-text='item.price.num | currency'></i> <i v-text='item.price.currency'></i></span>
-													<span class='text-right'><i class="fa fa-calendar-o fa-fw"></i>&nbsp;<i v-text='item.remaining'></i> days left</span>
+													<span class='text-left'><i class="fa fa-money fa-fw"></i>&nbsp;<i>1,000</i> <i>USD</i></span>
+													<span class='text-right'><i class="fa fa-calendar-o fa-fw"></i>&nbsp;<i>5</i> days left</span>
 												</p>
 												<div class='home-push-des'>
-													<p v-text='item.description'></p>
+													<p>I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item</p>
 												</div>
 											</div>
 											<footer class='home-push-item-footer'>
@@ -449,136 +429,77 @@
 											</footer>
 										</section>
 									</div>
-								</template>
+									<div class="col-xs-4 home-push-item-warp" transition="pushskip">
+										<section class='home-push-item hoverable'>
+											<header class='home-push-item-header'>
+												<div class="push-handle">
+													<a href="javascript:;" title='Favorite' class='favorite' ><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
+												</div>
+												<div class='push-warp-label'>
+													<span class="label label-info">GHS</span> - <span class="label label-info">SDS</span>
+												</div>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>【总监设计】高端LOGO设计/企业/组织/互联网/标志/商标</a>
+												</h3>
+											</header>
+											<div class='home-push-item-content'>
+												<p class='home-push-state'> 
+													<span class='text-left'><i class="fa fa-money fa-fw"></i>&nbsp;<i>1,000</i> <i>USD</i></span>
+													<span class='text-right'><i class="fa fa-calendar-o fa-fw"></i>&nbsp;<i>5</i> days left</span>
+												</p>
+												<div class='home-push-des'>
+													<p>I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item</p>
+												</div>
+											</div>
+											<footer class='home-push-item-footer'>
+												<a href='' class='home-push-states'>
+													<i class="fa fa-search-plus fa-fw"></i>&nbsp;Detail
+												</a>
+											</footer>
+										</section>
+									</div>
+									<div class="col-xs-4 home-push-item-warp" transition="pushskip">
+										<section class='home-push-item hoverable'>
+											<header class='home-push-item-header'>
+												<div class="push-handle">
+													<a href="javascript:;" title='Favorite' class='favorite' ><i class="fa fa-star"></i>&nbsp;&nbsp;Favorite</a>
+												</div>
+												<div class='push-warp-label'>
+													<span class="label label-info">GHS</span> - <span class="label label-info">SDS</span>
+												</div>
+												<h3 class="home-push-title">
+													<a href="" class='transition-link'>【总监设计】高端LOGO设计/企业/组织/互联网/标志/商标</a>
+												</h3>
+											</header>
+											<div class='home-push-item-content'>
+												<p class='home-push-state'> 
+													<span class='text-left'><i class="fa fa-money fa-fw"></i>&nbsp;<i>1,000</i> <i>USD</i></span>
+													<span class='text-right'><i class="fa fa-calendar-o fa-fw"></i>&nbsp;<i>5</i> days left</span>
+												</p>
+												<div class='home-push-des'>
+													<p>I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item I need a new website. I need you to design and build my online store. I will be selling clothes, front page will have pics and brief info of clothes then once the click item will go to next specific webpage for individual item</p>
+												</div>
+											</div>
+											<footer class='home-push-item-footer'>
+												<a href='' class='home-push-states'>
+													<i class="fa fa-search-plus fa-fw"></i>&nbsp;Detail
+												</a>
+											</footer>
+										</section>
+									</div>
 							</section>
 							<div class="btn-group pull-right">
-								<button type="button" class='btn btn-primary' :disabled='isLoad' @click='changePush'><i class="fa fa-refresh vertical-middle" :class="{'fa-spin':isLoad}"></i><span class='vertical-middle'>&nbsp;&nbsp;换一组</span></button>
+								<button type="button" class='btn btn-primary'><i class="fa fa-refresh vertical-middle"></i><span class='vertical-middle'>&nbsp;&nbsp;换一组</span></button>
 							</div>
 							<div class="alert alert-success text-center animated bounceIn save-message" v-show='saveHide' v-cloak style='width: 200px;margin:0 auto;position: fixed;top: 200px;left: 0;right: 0;'>
 								<i class="fa fa-check-square-o fa-2x vertical-middle"></i>
 								&nbsp;
 								<span class='vertical-middle'>保存成功</span>
-								<button type="button" class="close" @click='saveHide = false'>
+								<button type="button" class="close">
 									<span aria-hidden="true">×</span>
 								</button>
 							</div>
 						</div>
-
-						<!-- 一版隐藏 -->
-					    <!-- <div class="tab-pane fade" id="dashboard-news">
-					    	<section class='row home-new'>
-								<div class="content dashboard-content">
-									<div class="col-xs-1">
-										<div class="user-img">
-											<a href=""><img src="./Public/img/index/servers/1.jpg" alt="" width="50px"></a>
-										</div>
-									</div>
-									<div class="col-xs-11">
-										<div class="user-new-content">
-											<div class="header">
-												<h3 class="headline"><a href="" class="miniprofile name">zhonghui su</a> likes this</h3>
-											</div>
-											<article class='detail'>
-												<div class="author">
-													<a href="" class="image company small-actor-image"><img alt="South China Morning Post SCMP" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAcdAAAAJDAyY2U4ZWQwLWJjYmMtNGU2ZC04N2UwLWM2MGJlN2UxMzFkMw.png" width="40" height="40"></a>
-													<a href="" title="" class='author-name'>South China Morning Post SCMP</a>
-													<button type="button" class='btn btn-primary-outline btn-sm pull-right waves-effect waves-light'>follow</button>
-												</div>
-												<p class='overview'>
-													Drama at Hong Kong airport: a Chinese national accused of bludgeoning his two nephews to death in the U.S and described as 'armed and dangerous' was grabbed by police on his way to the mainland to avoid arrest.
-												</p>
-												<div class="side-article">
-													<a href="" class="side-content-image"  target="_blank">
-														<div class="image-container">
-															<img src="https://media.licdn.com/media-proxy/ext?w=180&amp;h=110&amp;f=c&amp;hash=NOuCvQsdsQ9TD%2FQdKo0EODzsqyI%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VKunUlU0R8s8OCCokL_905TQJGTBmX3CmD2vsrWOSu8OticPfv98R4Jfi4B2Ac3efDoBWK9S8Cjcte-KokylMqwYMi7YgJJO0xn0yYfvZ5pbVZ8tJCiUO6oMmNNg-lZIH7sNuykPgdvWWgzpbiKL4TZeAVIigWzRNXgHsl6Vr5w9ZIUyU5S-MTRG8Fj-sFN_zBB2lE">
-														</div>
-													</a>
-													<div class="side-content-description">
-														<div class="content">
-															<a href="" class="snippet-link" data-trk="article-title" target="_blank">
-																<h4>‘Armed and dangerous’ double-murder suspect arrested in dramatic swoop at Hong Kong airport</h4>
-																<p class="snippet-container">
-																	Chinese national accused of bludgeoning two nephews to death in Los Angeles grabbed by Hong Kong po…
-																</p>
-															</a>
-														</div>
-													</div>
-												</div>
-												<div class='detail-footer'>
-													<a href="">Unlike</a>
-													<span class="zg-bull zu-autohide">•</span>
-													<a href="" title="">Comment</a>
-													<span class="zg-bull zu-autohide">•</span>
-													<a href="" title="">Share</a>
-													<span class="zg-bull zu-autohide">•</span>
-													<a href="" title="" class='likes'>
-														<i class="fa fa-thumbs-o-up"></i>
-														10
-													</a>
-												</div>
-											</article>
-										</div>
-									</div>
-								</div>
-							</section>
-					    </div>
-					    <div class="tab-pane fade" id="dashboard-dynamic">
-					    	<section class='row home-dynamic'>
-								<div class="content">
-									<div class="col-xs-1">
-										<div class="user-img">
-											<a href=""><img src="./Public/img/index/servers/1.jpg" alt="" width="50px"></a>
-										</div>
-									</div>
-									<div class="col-xs-11">
-										<div class="user-new-content">
-											<div class="header">
-												<h3 class="headline"><a href="" class="miniprofile name">zhonghui su</a> likes this</h3>
-											</div>
-											<article class='detail'>
-												<div class="author">
-													<a href="" class="image company small-actor-image"><img alt="South China Morning Post SCMP" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAcdAAAAJDAyY2U4ZWQwLWJjYmMtNGU2ZC04N2UwLWM2MGJlN2UxMzFkMw.png" width="40" height="40"></a>
-													<a href="" title="" class='author-name'>South China Morning Post SCMP</a>
-													<button type="button" class='btn btn-primary-outline btn-sm pull-right'>follow</button>
-												</div>
-												<p class='overview'>
-													Drama at Hong Kong airport: a Chinese national accused of bludgeoning his two nephews to death in the U.S and described as 'armed and dangerous' was grabbed by police on his way to the mainland to avoid arrest.
-												</p>
-												<div class="side-article">
-													<a href="" class="side-content-image"  target="_blank">
-														<div class="image-container">
-															<img src="https://media.licdn.com/media-proxy/ext?w=180&amp;h=110&amp;f=c&amp;hash=NOuCvQsdsQ9TD%2FQdKo0EODzsqyI%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta9Er0VKunUlU0R8s8OCCokL_905TQJGTBmX3CmD2vsrWOSu8OticPfv98R4Jfi4B2Ac3efDoBWK9S8Cjcte-KokylMqwYMi7YgJJO0xn0yYfvZ5pbVZ8tJCiUO6oMmNNg-lZIH7sNuykPgdvWWgzpbiKL4TZeAVIigWzRNXgHsl6Vr5w9ZIUyU5S-MTRG8Fj-sFN_zBB2lE">
-														</div>
-													</a>
-													<div class="side-content-description">
-														<div class="content">
-															<a href="" class="snippet-link" data-trk="article-title" target="_blank">
-																<h4>‘Armed and dangerous’ double-murder suspect arrested in dramatic swoop at Hong Kong airport</h4>
-																<p class="snippet-container">
-																	Chinese national accused of bludgeoning two nephews to death in Los Angeles grabbed by Hong Kong po…
-																</p>
-															</a>
-														</div>
-													</div>
-												</div>
-												<div class='detail-footer'>
-													<a href="">Unlike</a>
-													<span class="zg-bull zu-autohide">•</span>
-													<a href="" title="">Comment</a>
-													<span class="zg-bull zu-autohide">•</span>
-													<a href="" title="">Share</a>
-													<span class="zg-bull zu-autohide">•</span>
-													<a href="" title="" class='likes'>
-														<i class="fa fa-thumbs-o-up"></i>
-														10
-													</a>
-												</div>
-											</article>
-										</div>
-									</div>
-								</div>	
-					    	</section>
-					    </div> -->
 					  </div>
 					</div>
 				</div>
@@ -604,39 +525,35 @@
 							</div>
 						</div>				
 
-						<!-- 测试 -->
-						<!-- <div class="home-aside-section home-aside-test section">
-							<h3 class='home-aside-title'>测试</h3>
-							<div class="content">
-								<ul class="fa-ul">
-									<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
-									<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
-									<li class='test-item'><a href=""><i class='fa-li fa fa-check-square'></i>通过美国英语考试 - 等级 1 (+19%)</a></li>
-								</ul>
-							</div>
-						</div> -->
-
 						<!-- to do list -->
 						<div class="home-aside-section home-aside-todo section">
 							<h3 class='home-aside-title'>To do List</h3>
 							<div class="todoList">
 								<ul class='todoList-list'>
 								<!--link的class  todoList-undeline -->
-									<li class='todoList-item' v-for='item in todoData'>
-										<label class="c-input c-checkbox todoList-item-content pull-left" @click='completeTodo($index,item.todoId,$event)'>
-										  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' :checked='item.isComplete === 0? false : true'>
+									<li class='todoList-item'>
+										<label class="c-input c-checkbox todoList-item-content pull-left">
+										  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox' checked>
 										  <span class="c-indicator"></span>
-										  <a href="#" class='todoList-task' :class="{'todoList-undeline': item.isComplete === 0? false : true}"  v-text='item.todoContent' :title='item.todoContent' ></a><time class='todoList-time' v-text='item.todoTime'></time>   
+										  <a href="#" class='todoList-task todoList-undeline' title='添加一个任务，并随时跟踪他的进展'>添加一个任务，并随时跟踪他的进展</a><time class='todoList-time'>2016-06-12 9:11</time>   
 										</label>
-										<button type='button' class='btn btn-primary-outline btn-sm pull-right todoList-item-delete' :data-id="item.todoId"  @click='deleteTodo($index,$event)'>X</button>
+										<button type='button' class='btn btn-primary-outline btn-sm pull-right todoList-item-delete'>X</button>
+									</li>
+									<li class='todoList-item'>
+										<label class="c-input c-checkbox todoList-item-content pull-left">
+										  <input type="checkbox" name='connectionBox' class='connect-frends-checkbox'>
+										  <span class="c-indicator"></span>
+										  <a href="#" class='todoList-task' title='You will work with a Bermuda-based technology firm to enhance and maintain existing Web sites built with Joomla and integrated with CiviCRM. *** You must answer each of the screening questions below to be considered for this job *** About You'>You will work with a Bermuda-based technology firm to enhance and maintain existing Web sites built with Joomla and integrated with CiviCRM. *** You must answer each of the screening questions below to be considered for this job *** About You</a><time class='todoList-time'>2016-06-11 10:11</time>   
+										</label>
+										<button type='button' class='btn btn-primary-outline btn-sm pull-right todoList-item-delete'>X</button>
 									</li>
 								</ul>
 								<div class='todo-addArea'>
 									<div class="form-group">
-										<input type="text" name="" class='form-control' placeholder="typing a newthing to do" v-model='addTodoData'>
+										<input type="text" name="" class='form-control' placeholder="typing a newthing to do">
 									</div>
 									<div class="form-group">
-										<button type='button' class='btn btn-secondary btn-block' @click='addTodo($event)'>添加</button>
+										<button type='button' class='btn btn-secondary btn-block'>添加</button>
 									</div>
 								</div>
 								
